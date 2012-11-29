@@ -11,8 +11,6 @@ Creación de un paquete de tema
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 

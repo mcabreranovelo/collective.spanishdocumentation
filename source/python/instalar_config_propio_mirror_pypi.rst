@@ -11,8 +11,6 @@ Instalar y configurar su propio repositorio de PyPI
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 Este manual intenta ayudar a como implementar un servidor espejo (mirror) de paquetes 
 Egg Python del servidor central ``PyPI`` local en su organización.
 

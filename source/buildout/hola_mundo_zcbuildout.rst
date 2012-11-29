@@ -11,8 +11,6 @@ Hola mundo en zc.buildout
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

@@ -6,8 +6,6 @@
 GenericSetup y Perfiles
 =======================
 
-.. contents :: :local:
-
 Introducción
 ============
 

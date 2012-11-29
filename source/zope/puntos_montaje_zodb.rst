@@ -6,9 +6,6 @@
 Configurar puntos de montajes para Data.fs separadas
 ====================================================
 
-.. contents :: :local:
-
-
 El montaje de un sitio Plone con la base de datos objetos **Data.fs** separadas puede ser muy útil si se
 están ejecutando varios sitios Plone en una sola instancia de Zope.
 

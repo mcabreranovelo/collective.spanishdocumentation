@@ -11,8 +11,6 @@ Rotar archivos .log de Zope
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

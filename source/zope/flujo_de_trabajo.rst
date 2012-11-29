@@ -6,8 +6,6 @@
 Flujo de trabajo
 ================
 
-.. contents :: :local:
-
 Introducción
 ============
 

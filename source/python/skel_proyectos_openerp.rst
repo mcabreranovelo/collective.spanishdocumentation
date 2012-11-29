@@ -11,8 +11,6 @@ Esqueletos de proyectos OpenERP
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 Introducción
 ============
 

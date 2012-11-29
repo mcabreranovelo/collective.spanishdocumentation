@@ -11,8 +11,6 @@ Configurar Zope y Plone como un demonio / servicio
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

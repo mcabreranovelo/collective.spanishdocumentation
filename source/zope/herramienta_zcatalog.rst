@@ -6,8 +6,6 @@
 ZCatalog
 ========
 
-.. contents :: :local:
-
 Uso del ZCatalog de Zope
 ========================
 

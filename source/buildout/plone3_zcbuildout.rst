@@ -11,8 +11,6 @@ Buildout y Plone 3
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

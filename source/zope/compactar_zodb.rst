@@ -11,8 +11,6 @@
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 ¿En que consta compactar la ZODB?
 =================================
 

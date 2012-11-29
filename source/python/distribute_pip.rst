@@ -11,8 +11,6 @@ Distribute y PIP
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 .. _que_es_distribute:
 
 ¿Qué es Distribute?

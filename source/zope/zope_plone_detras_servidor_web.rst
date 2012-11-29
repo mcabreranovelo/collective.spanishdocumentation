@@ -13,8 +13,6 @@ Ejecutando Zope y Plone detrás de un Servidor Web
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar un servidor Web en frente del servidor Zope/Plone.
 
-.. contents :: :local:
-
 ¿Por que detrás de un Servidor Web?
 ===================================
 

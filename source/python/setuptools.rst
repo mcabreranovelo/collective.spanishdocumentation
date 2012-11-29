@@ -11,8 +11,6 @@ Setuptools y EasyInstall
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 .. _que_es_setuptools:
 
 ¿Qué es Setuptools?

@@ -11,8 +11,6 @@ Programar tareas con crontab
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

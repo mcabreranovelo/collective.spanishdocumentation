@@ -4,8 +4,6 @@
 Buildout para instalar de todas las partes de un sitio
 ======================================================
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

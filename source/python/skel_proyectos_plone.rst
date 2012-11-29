@@ -11,8 +11,6 @@ Esqueletos de proyectos Zope/Plone
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 Introducción
 ============
 

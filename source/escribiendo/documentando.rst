@@ -1,10 +1,10 @@
 .. -*- coding: utf-8 -*-
 
+.. _documentando:
+
 =========================
 Procesos de documentación
 =========================
-
-.. contents :: :local:
 
 Obtener y compilar la documentación
 ===================================

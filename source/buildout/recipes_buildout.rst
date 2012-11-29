@@ -11,8 +11,6 @@ Récipes Buildout
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 Descripción general
 ===================
 

@@ -11,8 +11,6 @@ Configuraciones generales
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 La siguientes son configuraciones adicionales al servidor Zope que son de gran utilidad:
 
 Zona horaria

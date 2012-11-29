@@ -11,8 +11,6 @@ Configurar Zope como un servidor WebDAV
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

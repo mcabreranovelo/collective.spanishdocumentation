@@ -11,8 +11,6 @@ Esqueletos de proyectos Python
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 Introducción
 ============
 

@@ -6,8 +6,6 @@
 Zope Page Templates
 ===================
 
-.. contents :: :local:
-
 ¿Qué es un Page Template de Zope?
 =================================
 

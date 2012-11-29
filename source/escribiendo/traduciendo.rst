@@ -1,10 +1,10 @@
 .. -*- coding: utf-8 -*-
 
+.. _traduciendo:
+
 ==========================
 Traducciones de contenidos
 ==========================
-
-.. contents :: :local:
 
 Términos básicos
 ================

@@ -16,8 +16,6 @@ la información básica para la instalación de Plone en Windows, OS X, Linux, B
 (distribución de software Berkeley) y prácticamente cualquier otra
 plataforma.
 
-.. contents :: :local:
-
 .. _1_guia_instalacion:
 
 1. Guía rápida de Instalación

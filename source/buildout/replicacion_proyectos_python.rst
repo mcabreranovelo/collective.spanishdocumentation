@@ -11,8 +11,6 @@ Replicación de proyectos Python
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 .. _que_es_zcbuildout:
 
 ¿Qué es zc.buildout?

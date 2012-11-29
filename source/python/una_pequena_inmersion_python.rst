@@ -11,8 +11,6 @@ Inmersión al modo interactivo de Python
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 Descripción general
 ===================
 

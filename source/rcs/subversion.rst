@@ -11,8 +11,6 @@ Control de versiones utilizando Subversion
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 

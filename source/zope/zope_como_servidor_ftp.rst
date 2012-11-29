@@ -11,8 +11,6 @@ Configurar Zope como un servidor FTP
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 

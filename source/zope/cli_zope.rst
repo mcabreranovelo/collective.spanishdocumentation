@@ -11,8 +11,6 @@ Comando de control de Zope
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Descripción general
 ===================
 
