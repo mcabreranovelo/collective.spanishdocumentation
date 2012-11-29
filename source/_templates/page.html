@@ -1,0 +1,124 @@
+{#
+  Elimina el numero de la versión del titulo HTML de la documentación
+#}
+{%- set docstitle = "Documentación en Castellano de Plone" %}
+
+{% extends "!page.html" %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{{ pathto('_static/plone.js', 1) }}"></script>
+{% endblock %}
+
+{#
+  Elimina el numero de la versión desde las barras de rutas arriba y bajo
+#}
+{%- block rootrellink %}
+    <li><a href="{{ pathto(master_doc) }}">Inicio {{ reldelim1 }}</a></li>
+{%- endblock %}
+
+{% block header %}
+<div style="display: none" id="dragon-warning">
+
+    <div id="dragons-are-coming">
+        <span class="itwillhurt">
+            ☠
+        </span>
+        <b>Beyond this point lie the ancient dragons</b>
+        <span class="itwillhurt">
+            ☠
+        </span>
+    </div>
+
+    <p>
+        This section of <b><a href="http://plone.org">Plone content management system</a></b> Developer Documentation is no longer under active maintance.
+        The section is included as the reference for older technologies (Plone 2.x, Plone 3.x).
+        Some of the practices described in this documents may still work, but are not recommended
+        to be used in your active Plone development. Use at your own risk.
+    </p>
+
+    <p>
+        If you arrived at this page by a web search we recommend to also see the
+        <a href="http://developer.plone.org">Plone Developer Documentation front page</a> .
+    </p>
+
+</div>
+{{ super() }}
+{% endblock %}
+
+
+{#
+  Agrega una ventana emergente HTML de ayuda al Editor.
+#}
+
+{% block footer %}
+{{ super() }}
+
+<div id="editor-trap">
+      <h3>Editar este documento</h3>
+
+      <p>
+        El código fuente de este archivo esta hospedado en GitHub. Todos pueden
+        actualizar y corregir errores en este documento con unos clic -
+        sin necesidad de descargar.
+      </p>
+
+      <ol>
+
+        <li>
+          Valla a
+        <a href="https://github.com/collective/collective.spanishdocumentation/blob/master/source/{{ pagename }}.rst">
+          {{ title }}
+        </a> en GitHub.
+      </li>
+
+      <li>
+          Presione el botón <b>Fork</b>. Este creara su propia copia personal de la documentación.
+      </li>
+
+      <li>
+        <b>Edite</b> los archivos usando el editor de texto de GitHub desde su navegador Web
+      </li>
+
+      <li>
+        Rellene en la caja de texto <b>Commit message</b> al final de la pagina indicando <i>por que</i>
+        usted realizo estos cambios. Presione el botón <b>Propose file change</b> próximo a ese cuando allá finalizado.
+      </li>
+
+
+      <li>
+        Luego diríjase a la página <i>Send a pull request</i> (no será necesario rellenar ningún texto adicional). Sólo tiene que pulsar el botón <b>Send pull request</b>.
+      </li>
+
+      <li>
+        Sus cambios ahora sera consultados para un revisor dentro de la pestaña <a href="https://github.com/collective/collective.spanishdocumentation/pulls">Pull requests</a> del proyecto en Github.
+      </li>
+      </ol>
+
+      <p>
+        Para mas información básica acerca de como actualizar este manual
+        y referencia a sintaxis Sphinx, por favor consulte la guía <a href="https://plone-spanish-docs.readthedocs.org/en/latest/escribiendo/index.html">
+        Escribiendo y actualizando el manual</a>.
+      </p>
+
+  </div>
+
+{#
+  Habilite seguimiento de Google Analytics en la documentaciones.
+
+#}
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36645888-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+{% endblock %}
