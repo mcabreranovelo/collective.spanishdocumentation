@@ -6,12 +6,12 @@
 Creando instancias adicional de debug
 =====================================
 
-Es posible que desee mantener su buildout.cfg para producción y sincronizar 
+Es posible que desee mantener su ``buildout.cfg`` para producción y sincronizar 
 la configuración de desarrollo de forma automática como sea posible.
 
-Una buena idea es utilizar buildout.cfg misma en cada entorno. Si con cosas condicionales, 
-como poner el modo de depuración activo, como es requerido, usted puede ampliar las
-secciones buildout, que a su vez crear "Zopes adicionales" bajo carpeta bin/ 
+Una buena idea es utilizar ``buildout.cfg`` misma en cada entorno. Si con cosas 
+condicionales, como poner el modo de depuración activo, como es requerido, usted 
+puede ampliar las secciones buildout, que a su vez crear **Instancias Zope adicionales** 
 con la siguiente configuración:
 
 .. code-block:: cfg
@@ -24,15 +24,14 @@ con la siguiente configuración:
   debug-mode = off
   verbose-security = off
 
-  ...
+Y crea su instancia Debug Zope, con la siguiente configuración:
 
-  environment=
-      PTS_LANGUAGES=en es pt
+.. code-block:: cfg
 
   # Crear un script lanzado el cual iniciará una 
   # instancia Zope en modo debug
   [debug-instance]
-  # Extend the main production instance
+  # Extiende la instancia principal de producción
   <= instance
 
   # Aquí sobre escribes configuraciones especifica 
@@ -47,11 +46,11 @@ Y ahora usted puede iniciar si instancia de **desarrollo** Zope como:
 
   ./bin/debug-instance fg
 
-Y su instancia principal de Zope stays en modo de producción: 
+Y su instancia principal de Zope permanece en modo de producción: 
 
 .. code-block:: sh
 
-  ./bin/instance
+  ./bin/instance start
 
 .. note::
 

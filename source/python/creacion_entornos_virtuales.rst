@@ -11,8 +11,6 @@ Creación de entornos virtuales Python
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents:: :local:
-
 .. _que_es_virtualenv:
 
 ¿Qué es virtualenv?
@@ -142,12 +140,12 @@ ejecutando los siguientes comandos:
     $ cd $HOME ; mkdir ./virtualenv ; cd virtualenv
 
 
-Crear entorno virtual del Python 2.6 de tu sistema al directorio
+Crear entorno virtual del Python 2.7 de tu sistema al directorio
 ``~/virtualenv`` del usuario, ejecutando el siguiente comando: 
 
 .. code-block:: sh
 
-    $ virtualenv --no-site-packages --python=/usr/bin/python2.6 python2.6
+    $ virtualenv --python=/usr/bin/python2.7 python2.7
 
 Usar distribute en virtualenv
 -----------------------------
@@ -157,7 +155,7 @@ ejecutar el siguiente comando:
 
 .. code-block:: sh
  
-    $ virtualenv --distribute --no-site-packages python2.6
+    $ virtualenv --distribute --python=/usr/bin/python2.7 python2.7
 
 .. note::
 
@@ -175,11 +173,11 @@ comando:
 
 .. code-block:: sh
 
-    $ source ./python2.6/bin/activate
+    $ source ./python2.7/bin/activate
 
 Hasta este momento tiene activada el entorno virtual usted puede verificar
 esto debido a que su shell de comando inicia con el siguiente prefijo
-**(python2.6)**, entiendo que este prefijo es el nombre de entorno virtual que
+**(python2.7)**, entiendo que este prefijo es el nombre de entorno virtual que
 usted acaba de activar.
 
 Aquí ya puede usar herramientas como :ref:`easy_install <easyinstall_setuptools>` 
@@ -200,7 +198,7 @@ forma:
 
 .. code-block:: sh
 
-    (python2.6)$ deactivate
+    (python2.7)$ deactivate
 
 De esta forma ya puedes realizar operaciones de shell fuera del entorno virtual.
 
@@ -213,8 +211,8 @@ Aprovechamiento
 ===============
 
 El trabajar con la herramienta le permite tener varios entornos aislados de
-pruebas tanto en la misma versión de Python 2.6 como en diversas versiones
-Python, como por ejemplo Python 2.5 y Python 2.6, entre otras más ventajas.
+pruebas tanto en la misma versión de Python 2.7 como en diversas versiones
+Python, como por ejemplo Python 2.4 y Python 2.7, entre otras más ventajas.
 
 
 Referencias
