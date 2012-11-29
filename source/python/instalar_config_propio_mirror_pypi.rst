@@ -3,7 +3,7 @@
 .. _instalar_config_propio_mirror_pypi:
 
 ===================================================
-Instalar y configurar su propio repositorio de PyP­I­
+Instalar y configurar su propio repositorio de PyPI
 ===================================================
 
 :Autor(es): Leonardo J. Caballero G.
@@ -183,6 +183,7 @@ comando:
 .. code-block:: sh
 
   # mkdir -p /home/pypimirror/paquetes
+
 
 Este será el directorio en donde iremos a mantener nuestros paquetes
 procedentes de PyPI, los archivos de registros (*.log) y temporales podemos
