@@ -17,8 +17,3 @@ Un manual para administradores y creadores de contenido en Plone.
    proximos_pasos.rst
    creditos.rst
 
-Índices y tablas
-================
-
-* :ref:`genindex`
-* :ref:`search`

@@ -310,14 +310,3 @@ Otros recursos
    links
    presentaciones
 
-
-   
-Índices y tablas
-================
-
-* :ref:`genindex`
-..
-  * :ref:`modindex`
-  
-* :ref:`search`
-
