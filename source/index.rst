@@ -141,7 +141,7 @@ básicos.
 .. _Python: http://www.python.org/
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    python/una_pequena_inmersion_python
 
@@ -155,7 +155,7 @@ entorno de instalación Python aislado al Python de su sistema operativo, por
 eso está sección que se dedica a explicar sus casos de uso.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    python/creacion_entornos_virtuales
 
@@ -288,31 +288,27 @@ comunes en aplicaciones web con Plone.
    
    plone/tutoriales/index
 
-Otros recursos
---------------
-
-.. toctree::
-   :maxdepth: 2
-
-   glosario
-   links
-   presentaciones
-
 
 Acerca de esta documentación
 ----------------------------
 
-Instrucciones acerca de esta documentación.
+Guía de instrucciones y estilos para el 
+mantenimiento de esta documentación.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   acerca
-   copyright
-   licencia
-..
-   documentando
-   traduciendo
+   escribiendo/index
+
+Otros recursos
+--------------
+
+.. toctree::
+   :maxdepth: 1
+
+   glosario
+   links
+   presentaciones
 
 
    
@@ -320,6 +316,8 @@ Instrucciones acerca de esta documentación.
 ================
 
 * :ref:`genindex`
-* :ref:`modindex`
+..
+  * :ref:`modindex`
+  
 * :ref:`search`
 
