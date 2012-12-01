@@ -14,17 +14,25 @@
 ¿En que consta compactar la ZODB?
 =================================
 
-@TODO
+.. todo::
+    Definir este concepto.
 
 
 Compactar la ZODB con una tarea de crontab
 ------------------------------------------
 
-@TODO
-
+.. todo::
+    Definir este concepto.
 
 Referencias
 ===========
 
-- @TODO.
+- `How do I pack the ZODB?`_.
+- `Regular database packing`_.
 
+.. todo::
+    Definir referencias mas usadas.
+
+
+.. _How do I pack the ZODB?: http://plone.org/documentation/faq/how-do-i-pack-the-zodb
+.. _Regular database packing: http://developer.plone.org/hosting/zope.html#regular-database-packing
