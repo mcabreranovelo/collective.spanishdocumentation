@@ -183,6 +183,7 @@ comando:
   # mkdir -p /home/pypimirror/paquetes
 
 
+
 Este será el directorio en donde iremos a mantener nuestros paquetes
 procedentes de PyPI, los archivos de registros (*.log) y temporales podemos
 mantenerlos en el directorio ``/home/pypimirror``, ahora tenemos que crear el
@@ -447,6 +448,16 @@ los paquetes y coloque lo siguiente:
 
 Guarde los cambios y ahora de esta forma cada ves que se ejecuta buildout
 busca inicialmente este repositorio ;)
+
+
+Descarga el código fuente
+=========================
+
+Puede descargar este ejemplo de configuración con el siguiente ­comando:
+
+.. code-block:: sh
+
+  $ git clone git://github.com/macagua/macagua.buildout.pypimirror.git
 
 Ver también
 ===========
