@@ -16,10 +16,7 @@ Esta es la traducción al Español del articulo `Testing in Plone`_.
 En este tutorial se explica cómo escribir código mejor y más seguro para
 darle un aspecto más profesional. Así es, es hora de escribir pruebas, para
 todo lo que haga. No se preocupe, no es aburrido ni complicado, sólo tiene
-que aprender cómo.
-
-.. contents :: :local:
-
+que aprender a cómo hacerlo.
 
 Introducción
 ============

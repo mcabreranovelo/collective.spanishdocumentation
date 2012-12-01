@@ -13,8 +13,6 @@ En esta articulo busca explicar la instalación de módulos y complementos adici
 a Plone 3 y Plone 4, además de no ser una guía paso a paso simplemente es una referencias 
 sobre las diversas formas de hacer esto.
 
-.. contents :: :local:
-
 ¿Cómo agrego productos específicos al sitio Plone?
 ==================================================
 
