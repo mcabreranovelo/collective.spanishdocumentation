@@ -20,7 +20,7 @@ cunado los usuarios visitan un sitio Plone.
 2.  Entonces convierta esta a un archivo .ico de 16x16  (Yo uso 
     `GIMP para crear los iconos`_)
 3.  Coloque el archivo **favicon.ico** dentro de su carpeta 
-    **{raiz_sitio}/portal_skins/custom/** a través de la interfaz de Plone en 
+    **/portal_skins/custom/** a través de la interfaz de Plone en 
     :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_skins --> custom`
     estando en este directorio, haga clic en la lista desplegable ubicada a mano derecha debajo de las
     pestañas de navegación de la *Interfaz de Administración de Zope*,
