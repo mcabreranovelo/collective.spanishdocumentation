@@ -23,9 +23,9 @@ desarrollos específicos.
 ¿Qué es PasteScript?
 --------------------
 
-Es una herramienta de linea de comando basada en plugins que le 
-permiten crear estructuras de paquetes de proyectos Python ademas sirve aplicaciones 
-web, con configuraciones basadas en `paste.deploy`_.
+Es una herramienta de linea de comando basada en plugins que le permiten crear 
+estructuras de paquetes de proyectos Python ademas sirve aplicaciones web, con 
+configuraciones basadas en `paste.deploy`_.
 
 Instalación
 ===========
@@ -156,7 +156,7 @@ comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/trunk/src/mini-tutoriales/mipaquetepython mipaquetepython
+  $ svn co https://svn.plone.org/svn/collective/spanishdocs/tags/0.1rc/src/mini-tutoriales/mipaquetepython/ mipaquetepython
 
 
 Esqueletos en diversos proyectos Python
@@ -197,7 +197,11 @@ A continuación se muestran algunos esqueletos útiles:
 Recomendaciones
 ===============
 
-Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas paster y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas instrucciones para lograr con éxito la tarea deseada.
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o 
+plantillas paster y Buildout simplemente seleccione cual esqueleto va a 
+utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP 
+(como se explico anteriormente) y siga sus respectivas instrucciones para 
+lograr con éxito la tarea deseada.
 
 Referencias
 ===========
