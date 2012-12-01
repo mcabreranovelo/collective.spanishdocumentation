@@ -14,10 +14,24 @@ Apariencias, temas, pieles en Plone
 Introducción
 ============
 
-Existen diversos enfoques de realizar temas y pieles y sus respectivas herramientas para crear apariencias personalizadas en Plone. Cada una ha resultado como respuesta a momento históricos en el desarrollo Plone y por consiguiente se describirá a continuación:
+Existen diversos enfoques de realizar temas y pieles y sus respectivas herramientas para 
+crear apariencias personalizadas en Plone. Cada una ha resultado como respuesta a momento 
+históricos en el desarrollo Plone y por consiguiente se describirá a continuación:
+
+Referencias
+===========
 
 .. toctree::
    :maxdepth: 1
 
     Traducción oficial de la Referencias de Temas en Plone <referencias_temas/index>
     Motor de temas y plantillas Deliverance <deliverance/index>
+    
+Tutoriales
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+    Cambiar el favicon.ico por defecto de Plone <cambiar_favicon_default>
+    
