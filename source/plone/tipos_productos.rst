@@ -50,6 +50,8 @@ La estructura del código que se recomienda incluye las siguientes partes:
       
     Para crear este producto consulte el articulo :ref:`Creación de un producto de configuración <producto_policy>`.
 
+.. _productos_plone_theme:
+
   Producto de tema (plone theme)
     Incluye uno o más productos que definan un "skin" de Plone que especifique
     la presentación visual del sitio. Cada uno puede incluir:
