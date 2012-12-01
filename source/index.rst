@@ -289,8 +289,20 @@ comunes en aplicaciones web con Plone.
    plone/tutoriales/index
 
 
+Otros recursos
+==============
+
+.. toctree::
+   :maxdepth: 1
+
+   glosario
+   links
+   presentaciones
+
+
+============================
 Acerca de esta documentación
-----------------------------
+============================
 
 Guía de instrucciones y estilos para el 
 mantenimiento de esta documentación.
@@ -299,14 +311,4 @@ mantenimiento de esta documentación.
    :maxdepth: 1
 
    escribiendo/index
-
-Otros recursos
---------------
-
-.. toctree::
-   :maxdepth: 1
-
-   glosario
-   links
-   presentaciones
 
