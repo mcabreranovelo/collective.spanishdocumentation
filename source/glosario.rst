@@ -17,6 +17,9 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
     PyPI
         Es el servidor central de paquetes Egg Python.
     
+    Cheese shop
+        Ver :term:`PyPI`.
+    
     buildout
         En la herramienta buildout, es un conjunto de partes que describe como ensamblar una aplicación.
     
@@ -95,7 +98,13 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         Zope (ZMI) de `su instalación`_ donde deben acceder con las credenciales del
         usuario Administrador de Zope. Muchas veces el producto simplemente no hay
         que instalarlo por que se agregar automáticamente.
-      
+    
+    Instalación de Zope
+        El software propio del servidor de aplicaciones.
+    
+    Instancia de Zope
+        Un directorio específico que contiene una configuración completa de Zope.
+     
 .. _Third-Party Products: http://plone.org/documentation/kb/add-ons/tutorial-all-pages
 .. _Products.CMFPlone: http://pypi.python.org/pypi/Products.CMFPlone
 .. _sitio web de PEAK: http://peak.telecommunity.com/DevCenter/setuptools
