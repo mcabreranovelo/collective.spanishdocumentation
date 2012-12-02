@@ -11,7 +11,12 @@ Creando Temas con Diazo
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
+¿Qué es Diazo?
+==============
+
+ * Es la nueva manera de crear temas para el Plone.
+ * Permite aplicar cualquier HTML en Plone.
+ * Es un motor de temas.
 
 ¿Como funciona?
 ===============
@@ -21,13 +26,6 @@ Creando Temas con Diazo
  * Este concepto se basa en la técnica de programación `Screen scraping`_.
 
  * Se implementa de forma sencilla en Plone usando el motor de temas `Diazo`_ y el producto `plone.app.theming`_.
-
-¿Qué es Diazo?
-==============
-
- * Es la nueva manera de crear temas para el Plone.
- * Permite aplicar cualquier HTML en Plone.
- * Es un motor de temas.
 
 Requisitos
 ==========

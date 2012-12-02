@@ -11,8 +11,6 @@ Crear gráficas a partir de datos de un tipo de contenido
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 

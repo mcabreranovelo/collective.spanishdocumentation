@@ -11,8 +11,6 @@ Utilizando formularios z3c.form en Plone
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 
@@ -62,7 +60,7 @@ comentarios, que luego se ampliará y se mostrará dentro de un Viewlet.
 Más información
 ---------------
 
-Puede encontrar más información en las páginas de PyPI de los paquetes
+Puede encontrar más información en las páginas de :term:`PyPI`: de los paquetes
 `plone.z3cform`_ y `plone.app.z3cform`_.
 
 El nuevo `Plone Developers Manual`_ también proporciona `documentación para

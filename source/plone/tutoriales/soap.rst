@@ -11,8 +11,6 @@ Obtener direcciones de manejo con SOAP
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 

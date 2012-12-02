@@ -11,8 +11,6 @@ Traducir un documento a otro idioma automáticamente
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 

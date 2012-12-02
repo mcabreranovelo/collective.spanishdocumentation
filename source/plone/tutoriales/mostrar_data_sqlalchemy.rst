@@ -11,8 +11,6 @@ Presentar información de una base de datos relacional
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Introducción
 ============
 

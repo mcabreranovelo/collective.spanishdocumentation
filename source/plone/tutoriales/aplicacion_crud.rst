@@ -11,8 +11,6 @@ Base de datos SQL y Plone
 :Lanzamiento: |version|
 :Fecha: |today|
 
-.. contents :: :local:
-
 Existen muchos mecanismos de conexión a base de datos SQL desde Plone CMS, 
 en este articulo se enfoca en la amplia usada librería `SQLAlchemy`_ y 
 sus mecanismos de integración.

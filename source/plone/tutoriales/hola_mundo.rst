@@ -6,8 +6,6 @@
 Hola Mundo en Plone 3
 =====================
 
-.. contents :: :local:
-
 Introducción
 ============
 
@@ -206,7 +204,7 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ svn co https://svn.plone.org/svn/collective/spanishdocs/tags/0.1rc/src/mini-tutoriales/collective.mydemoapp/ collective.mydemoapp
+  $ git clone https://github.com/macagua/collective.mydemoapp.git collective.mydemoapp
 
 
 Conclusiones
