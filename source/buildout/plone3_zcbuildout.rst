@@ -27,30 +27,9 @@ de paquetes de Python (http://www.python.org/pypi).
 Algunos términos importantes
 ============================
 
-.. glossary::
-
-  Paquete de Python.
-    Básicamente, una carpeta con código Python que contiene un archivo
-    ``__init__.py``.
-
-  Huevo (Python egg).
-    Un mecanismo para empaquetar y distribuir paquetes de Python.
-
-  Instalación de Zope.
-    El software propio del servidor de aplicaciones.
-
-  Instancia de Zope.
-    Un directorio específico que contiene una configuración completa de Zope.
-
-  Producto de Zope.
-    Un paquete de Python especial para extender Zope.
-
-  easy_install.
-    Un script de línea de comando que permite instalar a través de la red
-    paquetes del PYPI.
-
-  Cheese shop (PYPI).
-    Un repositorio de paquetes de Python.
+Hay que entender varios conceptos antes de continuar tales como :term:`Paquete Python`, 
+:term:`paquetes Egg`, :term:`Cheese shop`, :term:`Producto Zope`, :term:`Instalación de Zope`,  
+:term:`Instancia de Zope` y :ref:`easy_install <que_es_easyinstall>`.
 
 
 Requisitos previos

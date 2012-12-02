@@ -32,19 +32,11 @@ Estas son sus principales características:
 - Es fácil trabajar con los formatos de paquetes eggs.
 
 
-Vocabulario
------------
+Terminología
+------------
 
-.. glossary::
-
-  buildout
-    Un conjunto de partes que describe como ensamblar una aplicación.
-
-  part
-    Un conjunto opciones que le permite a usted construir una pieza de la aplicación.
-
-  recipe
-    El software usado para crear una parte basada en sus opciones. 
+Hay que entender varios conceptos antes de continuar tales como :term:`buildout`, 
+:term:`part` y :term:`recipe`.
 
 
 Instalación

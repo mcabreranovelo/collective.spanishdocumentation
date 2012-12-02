@@ -23,7 +23,7 @@ Instalación
 ===========
 
 Los récipes son siempre instalado como un paquete eggs de Python. Ellos pueden 
-ser descargados desde un servidor de paquetes, como el Python Package Index (PyPI), 
+ser descargados desde un servidor de paquetes, como el Python Package Index (:term:`PyPI`), 
 otro ellos pueden ser desarrollados como parte de un proyecto usando un 
 ``paquete egg de desarrollo``. este es un tipo especial de ``paquete egg`` que se
 instala como un vínculo de huevo que contiene el nombre de un directorio de
