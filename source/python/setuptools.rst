@@ -23,7 +23,7 @@ funcionar.
 
 Entre sus características principales están:
 
-* Por defecto, utiliza PyPI para buscar los paquetes, lo que permite acceso
+* Por defecto, utiliza :term:`PyPI` para buscar los paquetes, lo que permite acceso
   inmediato e instalación transparente de miles de paquetes.
 
 * Permite crear Python Eggs, que son paquetes de Python empaquetados en un
@@ -95,7 +95,7 @@ Ejemplos de uso
 El programa ``easy_install`` ofrece varias formas de uso, para instalar los paquetes
 de diversas fuentes.
 
-**Ejemplo 1.** Instalar un paquete por nombre, buscando en PyPI la versión más
+**Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más
 reciente: 
 
 .. code-block:: sh

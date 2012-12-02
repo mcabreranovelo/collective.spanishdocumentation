@@ -85,8 +85,8 @@ paquete ``Debian``, debe instalar los requisitos previos con el siguiente comand
 .. note::
 
   A veces es mejor instalar la versión más reciente del paquete ``virtualenv``
-  desde el repositorio PyPI, debido que siempre la versión de Debian no esta 
-  actualizada con respecto a la versión publicada en el repositorio PyPI. 
+  desde el repositorio :term:`PyPI`, debido que siempre la versión de Debian no esta 
+  actualizada con respecto a la versión publicada en el repositorio :term:`PyPI`. 
 
 
 Instalación con Setuptools
@@ -100,7 +100,7 @@ con ``Setuptools``, debe instalar los requisitos previos con el siguiente comand
     # aptitude install libc6-dev python-dev python-setuptools
 
 Luego debe instalar la versión más reciente del paquete ``virtualenv``
-desde el repositorio PyPI, entonces debe instalar con el siguiente comando: 
+desde el repositorio :term:`PyPI`, entonces debe instalar con el siguiente comando: 
 
 .. code-block:: sh
 
@@ -118,7 +118,7 @@ con ``Distribute``, debe instalar los requisitos previos con el siguiente comand
     # aptitude install libc6-dev python-dev python-distribute python-pip
 
 Luego debe instalar la versión más reciente del paquete ``virtualenv``
-desde el repositorio PyPI, entonces debe instalar con el siguiente comando: 
+desde el repositorio :term:`PyPI`, entonces debe instalar con el siguiente comando: 
 
 .. code-block:: sh
 

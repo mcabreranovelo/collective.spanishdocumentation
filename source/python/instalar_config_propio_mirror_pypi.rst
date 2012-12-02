@@ -12,7 +12,7 @@ Instalar y configurar su propio repositorio de PyPI
 :Fecha: |today|
 
 Este manual intenta ayudar a como implementar un servidor espejo (mirror) de paquetes 
-Egg Python del servidor central ``PyPI`` local en su organización.
+Egg Python del servidor central :term:`PyPI` local en su organización.
 
 .. toctree::
    :maxdepth: 1
@@ -51,14 +51,14 @@ En el caso de ubuntu la lista también es larga y abarca países de la A a la Z.
 Repositorio de PyPI
 -------------------
 
-En el caso de Python existe el sistema de ``paquetes Egg`` y estos se disponen para ser 
+En el caso de Python existe el sistema de :term:`paquetes Egg` y estos se disponen para ser 
 distribuidos como aplicaciones y librerías Python en un repositorio principal dispuesto por la 
 fundación Python en la siguiente dirección:
 
 -   http://pypi.python.org/simple/
 
 Que no es mas que la interfaz que consultan la herramientas :ref:`easy_install <que_es_easyinstall>` / :ref:`pip <que_es_pip>` 
-para realizar las instalaciones de ``paquetes Egg``.
+para realizar las instalaciones de :term:`paquetes Egg`.
 
 Este repositorio principal posee sus mirror o espejos como se listan a continuación:
 
@@ -103,10 +103,10 @@ disponibles a continuación:
 
 -   http://kambing.ui.ac.id/pypi/
 
-Ahora si usted desea tener su propio servidor espejo del servidor PyPI por un tema de 
-mayor eficiencia en los recursos de ancho de banda local de su organización, pues bien 
-requiere tener servidor espejo de sus paquetes privados, entonces necesita instalar el 
-paquete ``z3c.pypimirror``.
+Ahora si usted desea tener su propio servidor espejo del servidor :term:`PyPI` por un 
+tema de mayor eficiencia en los recursos de ancho de banda local de su organización, 
+pues bien requiere tener servidor espejo de sus paquetes privados, entonces necesita 
+instalar el paquete ``z3c.pypimirror``.
 
 Instalando z3c.pypimirror
 =========================
@@ -160,7 +160,7 @@ Instalando con buildout
 -----------------------
 
 Existe un :ref:`proyecto buildout <que_es_zcbuildout>` disponible que automatiza todo el proceso de instalación 
-y configuración de tu propio repositorio PyPI, se realiza con los siguientes ­comandos:
+y configuración de tu propio repositorio :term:`PyPI`, se realiza con los siguientes ­comandos:
 
 .. code-block:: sh
 
@@ -172,7 +172,7 @@ Configurando z3c.pypimirror
 ===========================
 
 Después de ejecutar la instalación comando anterior, tenemos que configurar 
-nuestro repositorio PyPI, para eso hay crear un usuario en el sistema llamado
+nuestro repositorio :term:`PyPI`, para eso hay crear un usuario en el sistema llamado
 ``pypimirror`` es un criterio, en el directorio **home** de usuario pypimirror, 
 es en donde pretendo centralizar los paquetes, archivos de registros (.log) 
 y entre otros... entonces cree una carpeta el nombre de paquetes con el siguiente 
@@ -185,7 +185,7 @@ comando:
 
 
 Este será el directorio en donde iremos a mantener nuestros paquetes
-procedentes de PyPI, los archivos de registros (*.log) y temporales podemos
+procedentes de :term:`PyPI`, los archivos de registros (*.log) y temporales podemos
 mantenerlos en el directorio ``/home/pypimirror``, ahora tenemos que crear el
 fichero de configuración, lo llamé ``pypimirror.cfg``, tendrá la siguiente
 configuración:
@@ -262,7 +262,7 @@ un detalle importante durante la configuración es que en la variable
 **package_matches**, se indique para descargar los espacios de nombre de
 paquetes **zope**, **plone**, **Products** y **collective**, de siendo así
 mismo el propio paquete z3c.pypimirror lo cual de esta forma estaría siendo
-descartado, así que para conseguir cualquier paquete desde PyPI, usted puede
+descartado, así que para conseguir cualquier paquete desde :term:`PyPI`, usted puede
 comentar las lineas y decir como se muestra a continuación:
 
 .. code-block:: cfg
@@ -274,8 +274,8 @@ comentar las lineas y decir como se muestra a continuación:
     #   collective.*
        *.*
 
-Ahora que tenemos nuestro repositorio PyPI debidamente configurado, para
-iniciar la replicación del repositorio de PyPI, ejecute el siguiente comando:
+Ahora que tenemos nuestro repositorio :term:`PyPI` debidamente configurado, para
+iniciar la replicación del repositorio de :term:`PyPI`, ejecute el siguiente comando:
 
 .. code-block:: sh
 

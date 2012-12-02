@@ -168,7 +168,7 @@ Ejemplos de uso de PIP
 El script ``pip`` ofrece varias formas de uso, para instalar los paquetes de
 diversas fuentes:
 
-**Ejemplo 1.** Instalar un paquete por nombre, buscando en PyPI la versión más reciente: 
+**Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más reciente: 
 
 .. code-block:: sh
 
