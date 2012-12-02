@@ -27,62 +27,12 @@ apariencia visual o temas distinto a la predeterminada, o agregar un foro de
 discusión, integrar con otros servicios como *Bases de Datos*, *LDAP*, *Lista
 de correo*, entre otros.
 
-Módulos / Complementos / Agregados adicionales
-----------------------------------------------
+Terminología
+------------
 
-Hay que entender varios conceptos antes de continuar:
-
-.. glossary::
-
-  Paquete Python
-    Es un termino generalmente usando para describir un módulo Python. en el
-    más básico nivel, un paquete es un directorio que contiene un archivo
-    ``__init__.py`` y algún código Python.
-
-  Productos
-    Es una terminología usada por la comunidad Zope / Plone asociada a
-    cualquier implementación de módulos / complementos y agregados que amplíen la
-    funcionalidad por defecto que ofrece Zope/Plone. También son conocidos como
-    *"Productos de terceros"* del Ingles `Third-Party Products`_.
-
-  Producto Zope
-    Es un tipo especial de paquete Python usado para extender Zope. En las
-    antiguas versiones de Zope, todos los productos eran carpetas que se ubican
-    dentro de una carpeta especial llamada ``Products`` de una instancia Zope;
-    estos tendrían un nombre de módulo Python que empiezan por "**Products.**".
-    Por ejemplo, el núcleo de Plone es un producto llamado CMFPlone, conocido en
-    Python como `Products.CMFPlone`_.
-
-  Producto Plone
-    Es un tipo especial de paquete Zope usado para extender las funcionalidades
-    de Plone. Se puede decir que son productos que su ámbito de uso es solo en el
-    desde la interfaz gráfica de Plone.
-
-  Paquete Egg de Python
-    Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
-    un archivo ``setup.py`` con metadata (como el nombre del autor y la correo
-    electrónico y información sobre el licenciamiento), como las dependencias del
-    paquete. La herramienta del ``setuptools``, es la librería Python que permite
-    usar el mecanismo de paquetes egg, esta es capaz de encontrar y descargar
-    automáticamente las dependencias de los paquetes Egg que se instale. Incluso
-    es posible que dos paquetes Egg diferentes necesiten utilizar simultáneamente
-    diferentes versiones de la misma dependencia. El formato de paquetes Eggs
-    también soportan una función llamada ``entry points``, una especie de
-    mecanismo genérico de plug-in. Mucha más detalle sobre este tema se encuentra
-    disponible en el `sitio web de PEAK`_.
-
-  Collective
-    Es un repositorio de código comunitario, para Productos Plone y productos
-    de terceros, y es un sitio muy útil para buscar la ultima versión de código
-    fuente del producto para cientos de productos de terceros a Plone. Los
-    desarrolladores de nuevos productos de Plone son animados a compartir su
-    código a través de Collective para que otros puedan encontrarlo, usarlo, y
-    contribuir con correcciones / mejoras. Si usted quiere publicar un nuevo
-    producto en el repositorio Collective de Plone necesita `obtener acceso de
-    escritura al repositorio`_ y `crear su estructura básica de repositorio`_
-    para su producto. Para consultar el repositorio en forma Web en el siguiente
-    `enlace`_.
-
+Hay que entender varios conceptos antes de continuar tales como :term:`Paquete Python`, 
+:term:`Productos`, :term:`Producto Zope`, :term:`Producto Plone`, :term:`paquetes Egg` 
+y :term:`Collective`.
 
 Tipos de productos disponibles
 ==============================
@@ -135,7 +85,7 @@ Al momento de buscar que producto a instalar, proceda de la siguiente forma:
     seleccionar los nombres de paquetes eggs y agregarlo en la sección
     ``eggs`` y ``zcml`` respectivamente.
 -   Si no esta disponible ni `Add-on Product Releases`_ del sitio
-    Plone.org ni en el sitio `Python Package Index (PyPI)`_, consulte el
+    Plone.org ni en el sitio Python Package Index (:term:`PyPI`), consulte el
     `repositorio SVN Collective`_ y debe realizar un ``svn checkout`` al
     directorio ``trunk/`` o al directorio ``tags/`` del producto de la
     versión estable que necesita utilizar dentro del directorio ``./src/``
