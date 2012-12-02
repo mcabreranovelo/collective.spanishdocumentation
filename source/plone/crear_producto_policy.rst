@@ -57,12 +57,14 @@ de paquete para Plone proporcionado por paster:
 
 A continuación, paster realiza algunas preguntas para personalizar la
 generación del paquete. La primera es si deseamos contestar todas las
-preguntas (all) o solo algunas (easy). Contestemos `all`::
+preguntas (all) o solo algunas (easy). Contestemos `all`.
 
 Después nos pregunta el los nombres del paquete Namespace (primera parte del
 nombre pasado al template) y el nombre del paquete (segunda parte). Como los
 valores por omisión son los mismos que pasamos arriba, basta presiona la
-tecla `enter`::
+tecla `enter`.
+
+.. code-block:: sh
 
     Enter namespace_package (Namespace package (like plone)) ['plone']: cliente1
     Enter package (The package contained namespace package (like example)) ['example']: policy
@@ -71,23 +73,27 @@ tecla `enter`::
     #. el espacio de nombres se usa para poder agrupar varios paquetes bajo un mismo nombre
     #. el nombre del paquete en sí
     
-Siempre debe ser True para funcionar en Zope 2::
-    
+Siempre debe ser True para funcionar en Zope 2.
+
+.. code-block:: sh
+
     Enter zope2product (Are you creating a Zope 2 Product?) [False]: True
     
 La versión del paquete se utiliza en el :menuselection:`Configuración del sitio --> Productos adicionales` 
-para mostrar al usuario la versión instalada del producto ::
+para mostrar al usuario la versión instalada del producto.
+
+.. code-block:: sh
 
     Enter version (Version) ['1.0']: 0.1
 
 Después, se pide una corta descripción del paquete; este y los datos que siguen son para los 
-metadatos del proyecto en el PyPI.
+metadatos del proyecto en el :term:`PyPI`:.
 
 .. tip::
     los metadatos del paquete es para definir un perfil de registro para subir el paquete a un 
     repositorio como el Python Package Index.
 
-::
+.. code-block:: sh
 
     Enter description (One-line description of the package) ['']: Plone site policy for Cliente1 website
     Enter long_description (Multi-line description (in reST)) ['']: a Plone site policy package for Cliente1 website
@@ -98,7 +104,10 @@ metadatos del proyecto en el PyPI.
     Enter license_name (License name) ['GPL']:
     
 Finalmente, esta ultima pregunta siempre ocupara el valor por defecto, debe ser ``False`` 
-para funcionar bien en Zope 2::
+para funcionar bien en Zope 2.
+
+.. code-block:: sh
+
     Enter zip_safe (True/False: if the package can be distributed as a .zip file) [False]:
     Creating template basic_namespace
     ...
