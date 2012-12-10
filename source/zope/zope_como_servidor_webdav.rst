@@ -173,6 +173,8 @@ WebDAV con Plone a través de GNOME
 .. image:: ./images/access-server-webdav-from-gnome4.png
   :alt: WebDAV con Plone a través de GNOME
   :align: center
+  :width: 800pt
+  :height: 471pt
 
 
 Referencias
