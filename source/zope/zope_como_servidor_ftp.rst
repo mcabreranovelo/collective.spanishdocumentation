@@ -127,6 +127,8 @@ conexión con los siguientes datos:
 .. image:: ./images/FTP4Plone.png
   :alt: Cliente FTP conectado a un sitio Plone
   :align: center
+  :width: 800pt
+  :height: 500pt
 
 **Figura 1: Cliente FTP conectado a un sitio Plone**
 
