@@ -4,8 +4,9 @@
 
 .. _requerimientos_sistema:
 
+====================================
 ­­Requerimientos de sistema de Plone
-==================================
+====================================
 
 :Traductor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com

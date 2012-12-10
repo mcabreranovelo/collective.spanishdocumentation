@@ -366,23 +366,32 @@ servidores:
 
   main
     el servidor web Nginx que puede correr en el puerto principal
+
   cache
     un cache Varnish configurado para servir un sitio Plone
+
   transform
     un servidor web Nginx que realiza transformaciones
+
   balancer
     un cluster de HAproxy que balancea los clientes ZEO
+
   instance1
     Cliente de ZEO 1
+
   instance2
     Cliente de ZEO 2
+
   instance3
     Cliente de ZEO 3
+
   instance4
     Cliente de ZEO 4
+
   instance-debug
     un cliente ZEO que no forma parte del cluster y esta siempre en modo de
     desarrollo
+
   zeoserver
     un servidor ZEO para la base de datos de Zope común
 

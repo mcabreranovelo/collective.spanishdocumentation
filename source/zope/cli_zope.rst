@@ -78,7 +78,7 @@ Para salir de la consola interactiva ejecute la siguiente instrucción:
 .. code-block:: python
 
   >>> quit
-Use quit() or Ctrl-D (i.e. EOF) to exit
+  Use quit() or Ctrl-D (i.e. EOF) to exit
 
 
 Iniciar la instancia Zope en modo servicio / demonio

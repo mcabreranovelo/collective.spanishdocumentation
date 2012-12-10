@@ -181,14 +181,12 @@ comando:
 .. code-block:: sh
 
   # mkdir -p /home/pypimirror/paquetes
+  
 
-
-
-Este será el directorio en donde iremos a mantener nuestros paquetes
-procedentes de :term:`PyPI`, los archivos de registros (*.log) y temporales podemos
-mantenerlos en el directorio ``/home/pypimirror``, ahora tenemos que crear el
-fichero de configuración, lo llamé ``pypimirror.cfg``, tendrá la siguiente
-configuración:
+Este será el directorio en donde iremos a mantener nuestros paquetes procedentes de 
+:term:`PyPI`, los archivos de registros (\*.log) y temporales podemos mantenerlos en 
+el directorio ``/home/pypimirror``, ahora tenemos que crear el fichero de configuración, 
+lo llamé ``pypimirror.cfg``, tendrá la siguiente configuración:
 
 .. code-block:: cfg
 
