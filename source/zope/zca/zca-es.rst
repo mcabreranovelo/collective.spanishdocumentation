@@ -12,7 +12,7 @@ Arquitectura de Componentes de Zope
                     <http://www.lulu.com/content/1561045>`_
 :PDF en linea: `http://www.muthukadan.net/docs/zca.pdf
                   <http://www.muthukadan.net/docs/zca.pdf>`_
-:Traductor(es): Lorenzo Gil Sanchez <lgs@sicem.biz> ; Leonardo J. Caballero G. <leonardocaballero@gmail.com> 2011
+:Traductor(es): Lorenzo Gil Sanchez <lgs@sicem.biz> ; Leonardo J. Caballero G. <leonardocaballero@gmail.com> 2011, 2012
 :URL en español: `http://www.muthukadan.net/docs/zca-es.pdf
                   <http://www.muthukadan.net/docs/zca-es.pdf>`_
 
@@ -559,6 +559,7 @@ el concepto de interfaces. Las interfaces son una de las bases de los
 componentes de Zope, por tanto entender el concepto y uso de interfaces
 es muy importante.
 
+.. _zca_interfaces:
 
 Interfaces
 ----------
@@ -731,7 +732,7 @@ Considera este ejemplo, aquí ``Anfitrion`` implementa ``IAnfitrion``::
 
   Si te preguntas como funciona la función ``implements``, consulta
   el mensaje del blog de James Henstridge
-   (http://blogs.gnome.org/jamesh/2005/09/08/python-class-advisors/) .
+  (http://blogs.gnome.org/jamesh/2005/09/08/python-class-advisors/).
   En la sección del adaptador, verás una función ``adapts``, que
   funciona de forma similar.
 
@@ -1867,6 +1868,8 @@ Referencia
 
 .. note::
 
+    This chapter is not yet completed. Please send your suggestions !
+
 Attribute
 ~~~~~~~~~
 
@@ -2007,7 +2010,7 @@ Usando esta clase, usted puede definir atributos normalesen una interfaz.
 
  - Firma: `Attribute(name, doc='')`
 
- - Ver también: `Interface`_
+ - Ver también: :ref:`Interface <zca_interfaces>`
 
 Ejemplo::
 
