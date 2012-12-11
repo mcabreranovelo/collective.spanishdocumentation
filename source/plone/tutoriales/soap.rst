@@ -182,6 +182,6 @@ librerías ``z3c.soap`` y ``Zolera``. Para mayor información:
 Referencia
 ==========
 
-- `Obtener direcciones de manejo con SOAP`_ desde la comunidad Plone Mexico.
+- `Obtener direcciones de manejo con SOAP`_ desde la comunidad Plone México.
 
 .. _Obtener direcciones de manejo con SOAP: http://www.plone.mx/docs/mini_soap.html
