@@ -14,10 +14,18 @@
 ¿En que consta compactar la ZODB?
 =================================
 
-Compactar la ZODB remueve las versiones de objetos viejos. Similar a un VACUUM en PostgreSQL.
+Sólo la naturaleza de la agregación de la ZODB hace que la base de datos 
+crezca continuamente, incluso si sólo editar la información existente y 
+no añade ningún nuevo contenido. Para asegurarse de que el disco duro de 
+su servidor no se llene rápidamente, usted necesita compactar la ZODB 
+automática y regularmente.
 
-.. todo::
-    Terminar este concepto.
+Los beneficios son los siguientes:
+
+-    Compactando la ZODB remueve las versiones de objetos viejos, así que una vez que se hace, ya no se puede deshacer.
+-    Puede haber un poco de ventaja en el rendimiento.
+-    Hay beneficios en el tamaño de la base de datos con respecto al espacio de almacenamiento físico del disco duro.
+-    Compactar la ZODB es similar a un VACUUM en PostgreSQL.
 
 Compactar la ZODB con tareas crontab
 ------------------------------------
