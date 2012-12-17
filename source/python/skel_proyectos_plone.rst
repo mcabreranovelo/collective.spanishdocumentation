@@ -40,7 +40,7 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
   - `grokproject`_, Script that sets up a grok project directory,
     installs Zope 3 and grok and creates a template for a grok application.
 
-
+.. _instalacion_zopeskel:
 
 Instalación
 ===========
