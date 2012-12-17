@@ -172,83 +172,92 @@ Un ejemplo de un buildout funcional se muestra a continuación:
 
 .. code-block:: cfg
 
-  # definicion de las partes que va a tener el buildout, cada parte es una
-  # sección de configuración y generalmente utiliza una receta específica
-  [buildout]
-  parts =
-      zope2
-      productdistros
-      instance
-      zopepy
-
-  # ligas adicionales a pypi.python.org donde pueden encontrarse eggs
-  find-links =
-      http://dist.plone.org
-      http://download.zope.org/ppix/
-      http://download.zope.org/distribution/
-      http://effbot.org/downloads
-
-  # Agregar eggs adicionales aquí
-  # elementtree es requerido por Plone
-  eggs =
-      elementtree
+    # definición de las partes que va a tener el buildout, cada parte es una
+    # sección de configuración y generalmente utiliza una receta específica
+    [buildout]
     
-  # Por cada paquete en desarrollo (dentro de src) se debe agregar una línea
-  # e.g.: develop = src/my.package
-  develop =
-
-  # Esta receta instala zope 2. Para usar la misma url que requiere plone se
-  # utiliza ${plone:zope2-url}. Es posible referirse con esta sintaxis a
-  # cualquier variable de una de las partes, así: ${parte:variable}
-  [zope2]
-  recipe = plone.recipe.zope2install
-  url = ${plone:zope2-url}
-
-  # Ligas a distribuciones de productos tradicionales de Zope.
-  # En nested-packages se pone el nombre del archivo (sin path) cuando
-  # una distribución incluye varios productos.
-  [productdistros]
-  recipe = plone.recipe.distros
-  urls =
-  nested-packages =
-  version-suffix-packages = 
-
-  # esta receta inicializa la instancia de zope y utiliza los datos de las
-  # respuestas que se dieron al crear el buildout
-  [instance]
-  recipe = plone.recipe.zope2instance
-  zope2-location = ${zope2:location}
-  user = admin:admin
-  http-address = 8080
-  debug-mode = on
-  verbose-security = on
-
-  # Aquí se deben listar todos los eggs que zope debe poder ver
-  # incluyendo los de desarrollo que se definen arriba
-  # e.g. eggs = ${buildout:eggs} ${plone:eggs} my.package
-  eggs =
-      Plone
-      ${buildout:eggs}
-      ${plone:eggs}
-
-  # Activar la inicialización de zcml de los paquetes que lo requieran
-  # e.g. zcml = my.package my.other.package
-  zcml = 
-
-  # Directorios donde zope buscará productos
-  products =
-      ${buildout:directory}/products
-      ${productdistros:location}
-      ${plone:products}
-
-  # Interpreté de python generado con todos los paquetes activados en 
-  # el path
-  [zopepy]
-  recipe = zc.recipe.egg
-  eggs = ${instance:eggs}
-  interpreter = zopepy
-  extra-paths = ${zope2:location}/lib/python
-  scripts = zopepy
+    newest = false
+    
+    parts =
+        zope2
+        productdistros
+        instance
+        zopepy
+    
+    extends = http://dist.plone.org/release/3.3.6/versions.cfg
+    
+    # ligas adicionales a pypi.python.org donde pueden encontrarse eggs
+    find-links =
+        http://dist.plone.org/release/3.3.6
+        http://dist.plone.org/thirdparty/
+        
+    versions = versions
+    
+    # Agregar eggs adicionales aquí elementtree es requerido por Plone
+    eggs =
+        elementtree
+        PIL
+    
+    # Por cada paquete en desarrollo (dentro de src) se debe agregar una línea
+    # e.g.: develop = src/my.package
+    develop =
+    #    src/my.package
+    
+    # Esta receta instala zope 2. Para usar la misma url que requiere plone se
+    # utiliza ${versions:zope2-url}. Es posible referirse con esta sintaxis a
+    # cualquier variable de una de las partes, así: ${parte:variable}
+    [zope2]
+    recipe = plone.recipe.zope2install
+    url = ${versions:zope2-url}
+    
+    # Ligas a distribuciones de productos tradicionales de Zope.
+    # En nested-packages se pone el nombre del archivo (sin path) cuando
+    # una distribución incluye varios productos.
+    [productdistros]
+    recipe = plone.recipe.distros
+    urls = 
+    nested-packages =
+    version-suffix-packages = 
+    
+    # esta receta inicializa la instancia de zope y utiliza los datos de las
+    # respuestas que se dieron al crear el buildout
+    [instance]
+    recipe = plone.recipe.zope2instance
+    zope2-location = ${zope2:location}
+    user = admin:admin
+    http-address = 8080
+    debug-mode = on
+    verbose-security = on
+    
+    # Aquí se deben listar todos los eggs que zope debe poder ver
+    # incluyendo los de desarrollo que se definen arriba
+    # e.g. eggs = ${buildout:eggs} my.package
+    eggs =
+        Plone
+        ${buildout:eggs}
+    #    my.package
+    
+    # Activar la inicialización de zcml de los paquetes que lo requieran
+    # e.g. zcml = my.package my.other.package
+    zcml = 
+    #    my.package
+    
+    # Directorios donde zope buscará productos
+    products =
+        ${buildout:directory}/products
+        ${productdistros:location}
+    
+    # Interpreté de python generado con todos los paquetes activados en 
+    # el path
+    [zopepy]
+    recipe = zc.recipe.egg
+    eggs = ${instance:eggs}
+    interpreter = zopepy
+    extra-paths = ${zope2:location}/lib/python
+    scripts = zopepy
+    
+    [versions]
+    zope.testing = 3.8.7
 
 En los comentarios en el código se explican las secciones del buildout.
 
