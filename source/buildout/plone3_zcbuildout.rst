@@ -143,27 +143,50 @@ Directorios creados
 -------------------
 
 .. glossary::
+    :sorted:
 
-  bin/
-    Ejecutables de buildout y producidos por las partes.
+    bin/
+        Ejecutables de buildout y producidos por las partes.
 
-  eggs/
-    Los eggs obtenidos e instalados de PYPI.
+    bin/buildout
+        Script de zc.buildout.
 
-  downloads/
-    Software adicional descargado. 
+    bin/instance
+        Script de arranque de la instancia Zope.
 
-  var/
-    Logs y archivo de ZODB de Zope (buildout nunca sobre escribe estos archivos).
+    bin/repozo
+        Script de ``repozo``, es una herramienta que puede ser 
+        usado para crear un respaldo completo de la ZODB.
 
-  src/
-    Código fuente de nuestros desarrollos.
+    bin/zopepy
+        Script para hacer inmersiones interactivas de Python en 
+        el contexto de la instalación Zope / Plone.
 
-  products/
-    Productos tradicionales de zope.
+    eggs/
+        Los eggs obtenidos e instalados de PyPI.
 
-  parts/
-    Todo el código, configuración y datos manejados por buildout.
+    downloads/
+        Software adicional descargado.
+
+    src/
+        Código fuente de nuestros desarrollos.
+
+    products/
+        Productos tradicionales de zope.
+
+    parts/
+        Todo el código, configuración y datos manejados por buildout.
+
+    var/
+        Logs y archivo de ZODB de Zope (buildout nunca sobre escribe estos archivos).
+
+    var/filestorage
+        Contiene archivos de ZODB de Zope tales como ``Data.fs``, ``Data.fs.index``, 
+        ``Data.fs.lock`` y ``Data.fs.tmp`` de su sitio web Plone.
+
+    var/log
+        Contiene archivos de Logs de Zope tales como ``instance.log`` (archivo de errores) 
+        y ``instance-Z2.log`` (archivo de acceso).
 
 Descripción de este ejemplo
 ---------------------------
