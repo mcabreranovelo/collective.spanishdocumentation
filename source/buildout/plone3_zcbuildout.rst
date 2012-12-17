@@ -15,7 +15,7 @@ Descripción general
 ===================
 
 Una herramienta para administrar, a través de un archivo de configuración
-declaratoria, las partes y componentes de un desarrollo con Python.  Dichas
+declaratoria, las partes y componentes de un desarrollo con Python. Dichas
 partes no están limitadas a componentes o código Python.
 
 La parte más poderosa de buildout es que puede extenderse con el uso de
@@ -31,6 +31,7 @@ Hay que entender varios conceptos antes de continuar tales como :term:`Paquete P
 :term:`paquetes Egg`, :term:`Cheese shop`, :term:`Producto Zope`, :term:`Instalación de Zope`,  
 :term:`Instancia de Zope` y :ref:`easy_install <que_es_easyinstall>`.
 
+.. _buildout_plone3_requisitos:
 
 Requisitos previos
 ------------------
@@ -39,19 +40,48 @@ Existen instrucciones detalladas para la instalación de requisitos, pero en
 general se necesita lo siguiente:
 
 * Python 2.4.x.
-* Python setuptools (easy_install)
-* Para Zope, ZopeSkel (egg).
+* Instalar :ref:`entornos virtuales de Python <creacion_entornos_virtuales>` para aislar a su instalación de la del sistema.
+* El Python :ref:`paquete Setuptools <que_es_setuptools>` (:ref:`easy_install <que_es_easyinstall>`).
+* Para instalar instancias Zope / sitios Plone, es necesario el paquete :term:`Egg` de :ref:`ZopeSkel <instalacion_zopeskel>`.
 * Para Plone, Python Imaging Library (PIL) instalado en ese Python.
 
+Instalando entornos virtuales de Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para esto consulte los diversos :ref:`modos de instalación <instalacion_virtualenv>` 
+de entornos virtuales de Python.
+
+Instalando Setuptools
+~~~~~~~~~~~~~~~~~~~~~
+
+Para esto consulte los diversos :ref:`modos de instalación <instalacion_easyinstall>` 
+de setuptools y easy_install.
+
+
+Instalando ZopeSkel
+~~~~~~~~~~~~~~~~~~~
+
+Para esto consulte los diversos :ref:`modos de instalación <instalacion_zopeskel>` 
+de ZopeSkel.
+
+Instalando dependencias en distribuciones basadas en Debian GNU/Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para para distribuciones basadas en Debian GNU/Linux, debe instalar los
+requisitos previos con el siguiente comando:
+
+.. code-block:: sh
+
+  # aptitude install python2.4-dev python2.4-imaging python-profiler python2.4-setuptools libc6-dev
 
 Creación de un buildout
 =======================
 
-Se puede generar un buildout utilizando un template de paster:
+Se puede generar un buildout utilizando un template de :ref:`paster <que_es_pastescript>`:
 
 .. code-block:: sh
 
-  $ paster create -t plone3_buildout unam.buildout
+  $ paster create -t plone3_buildout buildout.plone3
 
 El template hace varias preguntas:
 
@@ -61,9 +91,9 @@ El template hace varias preguntas:
     ZopeSkel#plone3_buildout  A buildout for Plone 3 projects
 
     Variables:
-      egg:      unam.buildout
-      package:  unam.buildout
-      project:  unam.buildout
+      egg:      buildout.plone3
+      package:  buildout.plone3
+      project:  buildout.plone3
 
     Enter zope2_install (Path to Zope 2 installation; leave blank to fetch one) ['']:
     <si ya se tiene una instalación de Zope se puede usar poniendo aquí el path>
@@ -98,7 +128,7 @@ mismo python con que se desea trabajar:
 
 .. code-block:: sh
 
-  $ cd unam.buildout
+  $ cd buildout.plone3
   $ python2.4 bootstrap.py
   ...
   ...
@@ -124,7 +154,7 @@ Directorios creados
     Software adicional descargado. 
 
   var/
-    Logs y archivo de ZODB de Zope (buildout nunca sobreescribe estos archivos).
+    Logs y archivo de ZODB de Zope (buildout nunca sobre escribe estos archivos).
 
   src/
     Código fuente de nuestros desarrollos.
@@ -223,10 +253,32 @@ Un ejemplo de un buildout funcional se muestra a continuación:
 En los comentarios en el código se explican las secciones del buildout.
 
 
+Descarga código fuente
+======================
+
+Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
+
+.. code-block:: sh
+
+  $ git clone https://github.com/plone-ve/buildout.plone3.git
+
+
 Artículos relacionados
 ======================
 
-.. seealso:: Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
+.. seealso:: 
+
+    Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
+
+    .. raw:: html
+
+        <p>Vídeo tutorial llamado <b>Using buildout to install Zope and Plone</b> en Ingles</p>
+        
+        <div style="margin-top:10px;" align="center">
+          <iframe width="560" height="315" src="http://www.youtube.com/embed/zZBE0uu5pGg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <p>creado por WebLion at Penn State, activistas de <a href="http://ploneedu.org" target="_target" title="PloneEdu"><b>PloneEdu.org</a></b></p>
 
 
 Referencias
