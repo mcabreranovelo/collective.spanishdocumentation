@@ -187,7 +187,7 @@ Algunas de las herramientas recomendadas
 ========================================
 
 Emacs : usted puede agregar a emacs el módulo `rst.el
-<http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el>`_
+<http://docutils.sourceforge.net/tools/editors/emacs/rst.el>`_
 que añade un par de comandos y la sintaxis de la documentación a los escritores 
 simpatizantes de Sphinx y reStructuredText.
 
@@ -207,7 +207,7 @@ dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 .. _collective: https://github.com/collective/
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
-.. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
+.. _rst.el: http://docutils.sourceforge.net/tools/editors/emacs/rst.el
 .. _Python documentation: http://docs.python.org/
 .. _Zope documentation: http://docs.zope.org/zope2/index.html
 .. _Plone Developer Documentation: http://collective-docs.plone.org/
