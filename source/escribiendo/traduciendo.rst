@@ -20,7 +20,7 @@ Existe una serie de terminologías que debe conocer para entender el proceso de 
     software de tipo textual, también llamados herramienta de localización.
 
   Memorias de traducción    
-    Según el termino `Memorias de traducción en Wikipedia <http://es.wikipedia.org/wiki/Memoria_de_traducción>`_, 
+    Según el termino `Memorias de traducción en Wikipedia <http://es.wikipedia.org/wiki/Memoria_de_traduccion>`_, 
     Las memorias de traducción son almacenes compuestos de textos originales en una lengua alineados con 
     su traducción en otra(s). Esta definición de memorias de traducción coincide literalmente con una de las
     definiciones más aceptadas de corpus lingüístico de tipo paralelo (Baker, 1995). Por esto se puede 
@@ -40,7 +40,7 @@ Existe una serie de terminologías que debe conocer para entender el proceso de 
     simplificar el intercambio de datos y estimular, de esta manera, la innovación tecnológica (Gómez, 2001).
 
   Terminología
-    Según el termino `Terminología en Wikipedia <http://es.wikipedia.org/wiki/Terminología>`_, La terminología 
+    Según el termino `Terminología en Wikipedia <http://es.wikipedia.org/wiki/Terminologia>`_, La terminología 
     es un campo de estudio interdisciplinario que se nutre de un conjunto específico de conocimientos 
     conceptualizado en otras disciplinas (lingüística, ciencia del conocimiento, ciencias de la información y 
     ciencias de la comunicación). La palabra terminología se utiliza también para hacer referencia tanto a la 
@@ -48,13 +48,13 @@ Existe una serie de terminologías que debe conocer para entender el proceso de 
     como al vocabulario del campo de una especialidad en particular.
 
   Gestor de terminología
-    Según el termino `Gestor de terminología en Wikipedia <http://es.wikipedia.org/wiki/Gestores_de_terminología>`_, 
+    Según el termino `Gestor de terminología en Wikipedia <http://es.wikipedia.org/wiki/Gestores_de_terminologia>`_, 
     Un gestor de terminología, también llamado gestor de bases terminológicas, es un programa de software compuesto 
     de una base de datos extensible que permite la gestión —creación, extracción y modificación de los datos por 
     parte de los usuarios.
 
   Extractores de terminología
-    Según el termino `Extractores de terminología en Wikipedia <http://es.wikipedia.org/wiki/Extractores_de_terminología>`_, 
+    Según el termino `Extractores de terminología en Wikipedia <http://es.wikipedia.org/wiki/Extractores_de_terminologia>`_, 
     son herramientas que permiten la identificación y extracción de candidatos a términos de los textos explorados. 
     Estas herramientas están abocadas a generar material para las bases terminológicas y que requieren del análisis y 
     evaluación del usuario para la inclusión definitiva en la base de datos.
