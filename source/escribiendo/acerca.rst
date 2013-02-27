@@ -20,12 +20,13 @@ miembros de la comunidad Plone Conosur. A continuación se listan los documentos
 traducidos hasta el momento:
 
 * Carlos de la Guardia, el creador del original *Mejores Practicas de Plone* 
-  de la comunidad Plone Mexico y escritor de mucho del contenido original;
-* El proyecto `Docutils <http://docutils.sf.net/>`_ por la creacion de 
-  reStructuredText y de la suite Docutils;
+  de la comunidad Plone Mexico y escritor de mucho del contenido original.
+
+* El proyecto `Docutils`_ por la creacion de reStructuredText y de la suite Docutils;
 
 Es sólo con los aportes y contribuciones de la comunidad Python / Plone
 es que tiene tan maravillosa documentación - ¡Gracias!
 
 .. _reStructuredText: http://docutils.sf.net/rst.html
 .. _Sphinx: http://sphinx.pocoo.org/
+.. _Docutils: http://docutils.sf.net/
