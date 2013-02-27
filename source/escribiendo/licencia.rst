@@ -10,12 +10,13 @@ Historia y licencia
 Historia de la documentación
 ============================
 
-En Enero 2008 miembros de la comunidad `Plone Conosur`_ crea la iniciativa llamada 
-`Traducciones Plone`_ en el sitio CoActivate.org con la intención recoger 
-toda la documentación que hasta el momento que este traducida al Español.
+En Enero 2008 miembros de la comunidad `Plone Conosur`_ crea la iniciativa 
+llamada `Traducciones Plone`_ en el sitio CoActivate.org con la intención 
+recoger toda la documentación que hasta el momento que este traducida al 
+Español.
 
-En `Noviembre de 2010`_, como iniciativa de `Carlos de la Guardia`_ publica una serie de 
-documentación en Español, llamada como `Mejores Practicas de Plone`_, 
+En `Noviembre de 2010`_, como iniciativa de `Carlos de la Guardia`_ publica 
+una serie de documentación en Español, llamada como `Mejores Practicas de Plone`_, 
 esta es resultado de la que en busca de promover la documentación en Español, 
 desde entonces esta documentación es mantenida por miembros de la comunidad 
 Plone Español.
@@ -30,6 +31,12 @@ su código fue publicado en `collective.spanishdocumentation`_ y su publico
 mediante el servicio `read the docs`_ en  la web.
 
 Gracias a todos los voluntarios adicionales quienes han trabajado para hacer esto posible.
+
+Licencia
+========
+
+.. todo::
+    Por definir licenciamiento global.
 
 .. _Plone Conosur: http://plone.org/countries/conosur/
 .. _Traducciones Plone: http://www.coactivate.org/projects/traducciones-plone
