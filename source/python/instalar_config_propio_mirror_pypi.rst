@@ -211,7 +211,7 @@ Para lograr esta instalación se debe ejecutar con los siguientes ­comandos:
   $ source ./bin/activate
   $ python bootstrap.py
   $ ./bin/buildout -vvvN
-  $ desactivate
+  $ deactivate
 
 Al finalizar estos comando debería tener los siguientes archivos:
 
@@ -275,7 +275,8 @@ el siguiente comando:
 
 Manual
 ------
-La instalación manual, el :ref:`paquete Egg <que_es_z3cpypimirror>`, usted requiere 
+
+Con la instalación manual del :ref:`paquete Egg <que_es_z3cpypimirror>`, usted requiere 
 hacer manualmente las tareas descritas con la :ref:`configuración buildout <instalacion_asistida_buildout>`.
 A continuación se muestra dos formas como puede instalar el paquete:
 
