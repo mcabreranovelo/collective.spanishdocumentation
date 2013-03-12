@@ -6,6 +6,11 @@
 Zope Page Templates
 ===================
 
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 ¿Qué es un Page Template de Zope?
 =================================
 
@@ -255,6 +260,6 @@ Macros de página completa
 Referencias
 ===========
 
--   `Zope Page Templates`_ desde la comunidad Plone Mexico.
+-   `Zope Page Templates`_ desde la comunidad Plone México.
 
 .. _Zope Page Templates: http://www.plone.mx/docs/zpt.html

@@ -2,9 +2,14 @@
 
 .. _instancia_zope_debug:
 
-=====================================
-Creando instancias adicional de debug
-=====================================
+==============================================
+Creando instancia Zope adicional de depuración
+==============================================
+
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
 
 Es posible que desee mantener su ``buildout.cfg`` para producción y sincronizar 
 la configuración de desarrollo de forma automática como sea posible.

@@ -6,6 +6,11 @@
 GenericSetup y Perfiles
 =======================
 
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 Introducción
 ============
 
@@ -274,7 +279,7 @@ Otros Consejos
 Referencias
 ===========
 
-- `GenericSetup y Perfiles`_.
+- `GenericSetup y Perfiles`_ desde la comunidad Plone México.
 - `Generic Setup Quick Reference`_.
 
 .. _GenericSetup y Perfiles: http://www.plone.mx/docs/gs.html

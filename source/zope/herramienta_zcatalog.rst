@@ -6,6 +6,11 @@
 ZCatalog
 ========
 
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 Uso del ZCatalog de Zope
 ========================
 
@@ -63,7 +68,7 @@ Metadata
 * En la metadata de catálogo se dan de alta los nombres de los campos de los
   objetos indexados que se quieran almacenar en el catálogo.
 * Se recomienda utilizar objetos pequeños como metadata.
-* Esta información será incluída en los resultados de la búsqueda.
+* Esta información será incluida en los resultados de la búsqueda.
 
 Resultados de una búsqueda
 ==========================
@@ -125,6 +130,6 @@ Otros datos acerca del ZCatalog
 Referencias
 ===========
 
--   `ZCatalog`_ desde la comunidad Plone Mexico.
+-   `ZCatalog`_ desde la comunidad Plone México.
 
 .. _ZCatalog: http://www.plone.mx/docs/zcatalog.html

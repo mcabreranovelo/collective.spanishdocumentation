@@ -6,6 +6,11 @@
 Flujo de trabajo
 ================
 
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 Introducción
 ============
 
@@ -222,6 +227,6 @@ discuten a continuación.
 Referencias
 ===========
 
--   `Flujo de trabajo`_ desde la comunidad Plone Mexico.
+-   `Flujo de trabajo`_ desde la comunidad Plone México.
 
 .. _Flujo de trabajo: http://www.plone.mx/docs/workflow.html

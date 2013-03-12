@@ -128,6 +128,6 @@ usted probablemente quiera agregar un usuario adicional ``admin2``.
 Referencias
 ===========
 
--   `Plone Hosting`_
+-   `Plone Hosting`_.
 
 .. _Plone Hosting: http://collective-docs.readthedocs.org/en/latest/hosting/
