@@ -175,7 +175,7 @@ dependencias en su sistema operativo como las que se muestran a continuación:
 
 .. code-block:: sh
 
-  # aptitude install python-setuptools python-dev build-essential
+  # aptitude install build-essential python-dev python-setuptools python-pip mercurial
 
 Instalación
 ===========
