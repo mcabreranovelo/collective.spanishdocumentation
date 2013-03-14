@@ -11,6 +11,8 @@ Setuptools y EasyInstall
 :Lanzamiento: Python 4 o versiones superiores
 :Fecha: 14 de Marzo de 2013
 
+Este articulo explica como instalar paquetes Python con ``setuptools`` y ``EasyInstall``.
+
 .. _que_es_setuptools:
 
 ¿Qué es Setuptools?
@@ -39,17 +41,19 @@ Entre sus características principales están:
 ====================
 
 `easy_install`_, es una herramienta que se basa en `Setuptools` para automáticamente 
-encontrar y descargar desde internet las dependencias, para instalarlas o actualizarlas 
-al momento de construir, que además esta herramienta es capaz de bajar de internet las 
-dependencias utilizando HTTP, FTP, Subversion o SourceForge. 
+encontrar y descargar desde Internet las dependencias, para instalarlas o actualizarlas 
+al momento de construir, que además esta herramienta es capaz de bajar de Internet las 
+dependencias utilizando HTTP, FTP, sistema de control de versiones como *Subversion*, 
+*Git*, *Mercurial*, entre otros o desde forjas como *SourceForge.net*, *Launchpad.net*, 
+*Github.com*, *Bitbucket.org*, etc.
 
 .. _instalacion_easyinstall:
 
 Instrucciones de Instalación
 ============================
 
-Siempre existen más de dos formas de instalar :term:`Paquetes Python` con setuptools y
-easy_install ;)
+Siempre existen más de dos formas de instalar :term:`Paquetes Python` con **setuptools** y
+**easy_install** ;)
 
 Instalación manual
 ------------------
@@ -61,7 +65,7 @@ operativo como las que se muestran a continuación:
 
   # aptitude install build-essential python-dev
 
-La instalación es muy sencilla, solo se necesita bajar de internet el
+La instalación es muy sencilla, solo se necesita bajar de Internet el
 archivo `ez_setup.py`_ y ejecutarlo con el Python que se desea utilizar, 
 con los siguientes comandos: 
 
@@ -93,7 +97,17 @@ Ejemplos de uso
 ===============
 
 El programa ``easy_install`` ofrece varias formas de uso, para instalar los paquetes
-de diversas fuentes.
+de diversas fuentes, como se describe a continuación con los siguientes ejemplos:
+
+.. tip::
+    
+    Para poder utilizar el ``easy_install``, primero debe instalar ``setuptools``. 
+    Si utiliza :ref:`virtualenv <que_es_virtualenv>`, una copia del ``easy_install`` 
+    será automáticamente instalados en cada entorno virtual que usted crea. 
+    
+    ``easy_install`` se puede complementar con ``virtualenv``, y se recomienda que lo 
+    utilice para :ref:`aislar a la instalación <creacion_entornos_virtuales>` de los 
+    :term:`paquetes Egg`.
 
 **Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más
 reciente: 
@@ -169,11 +183,14 @@ la siguiente manera:
 
     $ easy_install "ZopeSkel==2.21.2"
 
-Una vez instalado, ``ZopeSkel`` se utiliza mediante el comando de sistema ``paster``,
-pasando la opción ``create``. ZopeSkel ofrece una buena variedad de esqueletos
-para diversos tipos de proyectos, como temas visuales, componentes de Plone,
-buildouts o tipos de contenido con Archetypes. Para ver las opciones
-disponibles, se utiliza la opción ``--list-templates``:
+Una vez instalado, ofrece una buena variedad de esqueletos para diversos 
+tipos de proyectos, como temas visuales, componentes de Plone, buildouts, 
+tipos de contenido con Archetypes o entre otros mas. 
+
+Se utiliza mediante el comando de sistema ``paster``, pasando la opción 
+``create`` para crear un proyecto y la opción ``--list-templates`` ver 
+las diversas plantillas de proyectos disponibles para crear, como se 
+muestra a continuación:
 
 .. code-block:: sh
 
@@ -201,6 +218,28 @@ disponibles, se utiliza la opción ``--list-templates``:
       zope_app:           Package that contains a Zope application
       zope_deploy:        (Paste) deployment of a Zope application
 
+Para mas información de las opciones disponibles de ``ZopeSkel``, ejecute el siguiente comando:
+
+.. code-block:: sh
+
+    $ paster --help
+      Usage: paster [paster_options] COMMAND [command_options]
+      
+      Options:
+        --version         show program's version number and exit
+        --plugin=PLUGINS  Add a plugin to the list of commands (plugins are Egg
+                          specs; will also require() the Egg)
+        -h, --help        Show this help message
+      
+      Commands:
+        create       Create the file layout for a Python distribution
+        help         Display help
+        make-config  Install a package and create a fresh config file/directory
+        points       Show information about entry points
+        post         Run a request for the described application
+        request      Run a request for the described application
+        serve        Serve the described application
+        setup-app    Setup an application, given a config file
 
 Referencia
 ==========

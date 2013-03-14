@@ -11,6 +11,8 @@ Distribute y pip
 :Lanzamiento: Python 4 o versiones superiores
 :Fecha: 14 de Marzo de 2013
 
+Este articulo explica como instalar paquetes Python con ``Distribute`` y ``pip``.
+
 .. _que_es_distribute:
 
 ¿Qué es Distribute?
@@ -172,12 +174,12 @@ diversas fuentes:
 
 .. tip::
     
-    Para poder utilizar el pip, primero debe instalar ``setuptools`` o ``distribute``. 
+    Para poder utilizar el ``pip``, primero debe instalar ``setuptools`` o ``distribute``. 
     Si utiliza :ref:`virtualenv <que_es_virtualenv>`, una copia del ``pip`` será automáticamente 
     instalados en cada entorno virtual que usted crea. 
     
     ``pip`` se puede complementar con ``virtualenv``, y se recomienda que lo utilice para 
-    :ref:`aislar a su instalación <creacion_entornos_virtuales>` de :term:`paquetes Egg`.
+    :ref:`aislar a la instalación <creacion_entornos_virtuales>` de los :term:`paquetes Egg`.
 
 **Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más reciente: 
 
