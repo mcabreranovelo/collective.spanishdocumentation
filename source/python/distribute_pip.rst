@@ -195,13 +195,13 @@ diversas fuentes:
 
 .. code-block:: sh
 
-    $ pip install -i http://pypi.misitio.org/simple SQLObject
+    $ pip install -i http://pypi.ejemplo.com/simple SQLObject
 
 **Ejemplo 4.** Descargar e instalar una distribución de código fuente: 
 
 .. code-block:: sh
 
-    $ pip install http://example.com/path/to/MyPackage-1.2.3.tgz
+    $ pip install http://ejemplo.com/ruta/a/MiPaquete-1.2.3.tgz
 
 **Ejemplo 5.** Instalar un paquete con una versión especifica: 
 
