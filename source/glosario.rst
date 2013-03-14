@@ -45,7 +45,7 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         Ver :term:`PyPI`.
     
     PyPI
-        Del Ingles Python Package Index, es el servidor central de paquetes Egg Python 
+        Del Ingles Python Package Index, es el servidor central de :term:`paquetes Egg` Python 
         ubicado en la dirección http://pypi.python.org/pypi/.
     
     buildout
@@ -61,6 +61,7 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         en sus opciones.
     
     Paquete Python
+    Paquetes Python
         Es un termino generalmente usando para describir un módulo Python. en el
         más básico nivel, un paquete es un directorio que contiene un archivo
         ``__init__.py`` y algún código Python.
@@ -90,6 +91,7 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         usuario Administrador de Zope. Muchas veces el producto simplemente no hay
         que instalarlo por que se agregar automáticamente.
 
+    paquete Egg
     paquetes Egg
         Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
         un archivo ``setup.py`` con metadata (como el nombre del autor y la correo
