@@ -8,8 +8,8 @@ Setuptools y EasyInstall
 
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Lanzamiento: Python 4 o versiones superiores
+:Fecha: 14 de Marzo de 2013
 
 .. _que_es_setuptools:
 
@@ -17,17 +17,17 @@ Setuptools y EasyInstall
 ===================
 
 `Setuptools`_, es una colección de mejoras para el módulo distutils de Python,
-que permiten a un desarrollador construir y distribuir paquetes de Python de
-forma sencilla, en especial cuando dependen de otros paquetes de Python para
-funcionar. 
+que permiten a un desarrollador construir y distribuir :term:`Paquetes Python` 
+de forma sencilla, en especial cuando dependen de otros :term:`Paquetes Python` 
+para funcionar. 
 
 Entre sus características principales están:
 
 * Por defecto, utiliza :term:`PyPI` para buscar los paquetes, lo que permite acceso
   inmediato e instalación transparente de miles de paquetes.
 
-* Permite crear Python Eggs, que son paquetes de Python empaquetados en un
-  sólo archivo para su distribución.
+* Permite crear :term:`paquetes Egg` Python, que son :term:`Paquetes Python` 
+  empaquetados en un sólo archivo para su distribución.
 
 * Incluye archivos de configuración y todos los archivos que forman parte del
   directorio de trabajo, sin necesidad de listarlos individualmente o crear
@@ -38,17 +38,17 @@ Entre sus características principales están:
 ¿Qué es EasyInstall?
 ====================
 
-`easy_install`_, es una herramienta que se basa en `Setuptools` para automáticamente encontrar y 
-descargar desde internet las dependencias, para instalarlas o actualizarlas 
-al momento de construir, que además esta herramienta es capaz de bajar 
-de internet las dependencias utilizando HTTP, FTP, Subversion o SourceForge. 
+`easy_install`_, es una herramienta que se basa en `Setuptools` para automáticamente 
+encontrar y descargar desde internet las dependencias, para instalarlas o actualizarlas 
+al momento de construir, que además esta herramienta es capaz de bajar de internet las 
+dependencias utilizando HTTP, FTP, Subversion o SourceForge. 
 
 .. _instalacion_easyinstall:
 
 Instrucciones de Instalación
 ============================
 
-Siempre existen más de dos formas de instalar paquetes en Python setuptools y
+Siempre existen más de dos formas de instalar :term:`Paquetes Python` con setuptools y
 easy_install ;)
 
 Instalación manual
@@ -109,23 +109,23 @@ los enlaces encontrados en una "página de descargas":
 
     $ easy_install -f http://pythonpaste.org/package_index.html SQLObject
 
-**Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o tu repositorio de paquetes Egg privado: 
+**Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o su repositorio de :term:`paquetes Egg` privado: 
 
 .. code-block:: sh
 
-    $ pip install -i http://pypi.misitio.org/simple SQLObject
+    $ easy_install -i http://pypi.ejemplo.com/simple SQLObject
 
 **Ejemplo 4.** Descargar e instalar una distribución de código fuente: 
 
 .. code-block:: sh
 
-    $ easy_install http://example.com/path/to/MyPackage-1.2.3.tgz
+    $ easy_install http://ejemplo.com/ruta/a/MiPaquete-1.2.3.tgz
 
-**Ejemplo 5.** Instalar un Python .egg ya descargado: 
+**Ejemplo 5.** Instalar un :term:`paquete Egg` ya descargado: 
 
 .. code-block:: sh
 
-    $ easy_install /my_downloads/OtherPackage-3.2.1-py2.3.egg
+    $ easy_install ./Descargas/OtroPaquete-3.2.1-py2.7.egg
 
 **Ejemplo 6.** Instalar un paquete con una versión especifica: 
 
@@ -133,7 +133,7 @@ los enlaces encontrados en una "página de descargas":
 
     $ easy_install "ZopeSkel==2.21.2"
 
-**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente de PyPI: 
+**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente de :term:`PyPI`: 
 
 .. code-block:: sh
 
@@ -155,16 +155,19 @@ Utilización con Zope/Plone
 ==========================
 
 El mecanismo más moderno para la instalación de distribuciones de Zope y
-Plone, llamado buildout, hace uso de ``easy_install`` para obtener e instalar
-todas las dependencias. Adicionalmente, existe una herramienta llamada
-ZopeSkel que permite crear fácilmente "esqueletos" de distintos tipos de
-proyectos de Zope y Plone, mediante una herramienta llamada ``paster`` y un
-sistema de plantillas. Es recomendado instalar esta última herramienta para
-proyectos nuevos, de la siguiente manera:
+Plone, llamado :ref:`buildout <que_es_zcbuildout>`, formalmente 
+:ref:`zc.buildout <que_es_zcbuildout>`, hace uso de ``easy_install`` para 
+obtener e instalar todas las dependencias. 
+
+Adicionalmente, existe una herramienta llamada ZopeSkel que permite crear 
+fácilmente "esqueletos" de distintos tipos de proyectos de Zope y Plone, 
+mediante una herramienta llamada ``paster`` y un sistema de plantillas. 
+Es recomendado instalar esta última herramienta para proyectos nuevos, de 
+la siguiente manera:
 
 .. code-block:: sh
 
-    $ easy_install ZopeSkel
+    $ easy_install "ZopeSkel==2.21.2"
 
 Una vez instalado, ``ZopeSkel`` se utiliza mediante el comando de sistema ``paster``,
 pasando la opción ``create``. ZopeSkel ofrece una buena variedad de esqueletos

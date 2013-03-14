@@ -3,13 +3,13 @@
 .. _distribute_pip:
 
 ================
-Distribute y PIP
+Distribute y pip
 ================
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Lanzamiento: Python 4 o versiones superiores
+:Fecha: 14 de Marzo de 2013
 
 .. _que_es_distribute:
 
@@ -76,59 +76,61 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
 
 .. _que_es_pip:
 
-¿Qué es PIP?
+¿Qué es pip?
 ============
 
-`pip`_ es una herramienta para instalar y administrar paquetes Python, como
-los que podemos encontrar en el Índice de Paquetes de Python - `PyPI`_. Esta
-herramienta es el remplazo para la famosa herramienta :ref:`easy_install <que_es_easyinstall>`. 
-En su mayoría se utiliza las mismas técnicas para encontrar los paquetes, por lo
-que los paquetes que se instalaban usando la herramienta easy_install deben
-ser instalables con la herramienta pip también. Esto significa que usted
-puede utilizar ``pip install SomePackage`` en lugar de ``easy_install
-SomePackage``.
+`pip`_ es una herramienta para instalar y administrar :term:`Paquetes Python`, 
+como los que podemos encontrar en el Índice de Paquetes de Python - :term:`PyPI`. 
+Esta herramienta es el remplazo para la famosa herramienta :ref:`easy_install <que_es_easyinstall>`. 
 
-Para poder utilizar el pip, primero debe instalar ``setuptools`` o
-``distribute``. Si utiliza :ref:`virtualenv <que_es_virtualenv>`, 
-una copia del pip será automáticamente instalados en cada entorno 
-virtual que usted crea. pip se puede complementar con ``virtualenv``, 
-y se recomienda que lo utilice 
-:ref:`para aislar a su instalación <creacion_entornos_virtuales>`.
+En su mayoría se utiliza las mismas técnicas para encontrar los paquetes, por 
+lo que los paquetes que se instalaban usando la herramienta ``easy_install`` 
+deben ser instalables con la herramienta ``pip`` también. Esto significa que 
+usted puede utilizar ``pip install AlgunPaquete`` en lugar de ``easy_install AlgunPaquete``.
 
-
-Pip comparado con easy_install
+pip comparado con easy_install
 ------------------------------
 
 ``pip`` tiene por objeto mejorar el easy_install. Algunas de las mejoras son:
 
 -   Todos los paquetes se descargan antes de iniciar la instalación. Una
     instalación parcialmente completada no se produce como resultado.
+    
 -   Tiene cuidado de presentar una salida útil en la consola.
--   Las razones de las acciones de instalación se le aplica un
-    seguimiento. Por ejemplo, si un paquete se está instalando, pip sigue la
-    pista de por qué ese paquete era necesario.
+    
+-   Las razones de las acciones de instalación se le aplica un seguimiento. 
+    Por ejemplo, si un paquete se está instalando, ``pip`` sigue la pista de 
+    por qué ese paquete era necesario.
+    
 -   Los mensajes de error debe ser útil.
+    
 -   El código fuente es relativamente conciso y coherente, por lo que es
     más fácil de usar mediante programación.
+    
 -   Los paquetes no tienen que ser instaladas como archivos de huevo, que
-    pueden ser instalados en forma plana (mientras cuida la metadata de
-    paquete egg).
+    pueden ser instalados en forma plana (mientras cuida la *metadata* de
+    :term:`paquetes Egg`).
+    
 -   Ofrece soporte nativo para otros sistemas de control de versiones
     (Git, Mercurial y Bazaar)
+    
 -   Tiene un mecanismo de desinstalación de paquetes.
+    
 -   Fácil de definir conjuntos de requerimientos y reproducir de forma
     fiable un conjunto de paquetes.
 
 
-PIP no hacer todo lo que se easy_install. En concreto:
+pip no hacer todo lo que se easy_install. En concreto:
 ------------------------------------------------------
 
 -   No se puede instalar a partir de huevos. Sólo se instala desde el
     código fuente. (En el futuro será bueno si se pudiera instalar los
     binarios de Windows EXE o MSI -.. pero instalar paquetes binarios para
     otras plataformas no es una prioridad).
+    
 -   No entiende la sección *SetupTools Extras* (como package[test]). Esto
     podría ser agregado eventualmente.
+    
 -   Es incompatible con algunos paquetes que tienen muchas
     personalizaciones  ``distutils`` o  ``setuptools`` en sus archivos
     setup.py.
@@ -138,8 +140,8 @@ PIP no hacer todo lo que se easy_install. En concreto:
 Instrucciones de Instalación
 ============================
 
-Siempre existen más de dos formas de instalar paquetes en Python Distribute y
-PIP ;)
+Siempre existen más de dos formas de instalar paquetes Python con ``Distribute`` 
+y ``pip`` ;)
 
 Para ambas es recomendable que instale ciertas dependencias en su sistema
 operativo como las que se muestran a continuación: 
@@ -148,13 +150,13 @@ operativo como las que se muestran a continuación:
 
   # aptitude install python-setuptools python-dev build-essential
 
-Para instalar Distribute ejecute el siguiente comando: 
+Para instalar ``Distribute`` ejecute el siguiente comando: 
 
 .. code-block:: sh
 
   # easy_install -U distribute
 
-También para instalar PIP ejecute el siguiente comando: 
+También para instalar ``pip`` ejecute el siguiente comando: 
 
 .. code-block:: sh
 
@@ -162,11 +164,20 @@ También para instalar PIP ejecute el siguiente comando:
 
 .. _uso_pip:
 
-Ejemplos de uso de PIP
+Ejemplos de uso de pip
 ======================
 
 El script ``pip`` ofrece varias formas de uso, para instalar los paquetes de
 diversas fuentes:
+
+.. tip::
+    
+    Para poder utilizar el pip, primero debe instalar ``setuptools`` o ``distribute``. 
+    Si utiliza :ref:`virtualenv <que_es_virtualenv>`, una copia del ``pip`` será automáticamente 
+    instalados en cada entorno virtual que usted crea. 
+    
+    ``pip`` se puede complementar con ``virtualenv``, y se recomienda que lo utilice para 
+    :ref:`aislar a su instalación <creacion_entornos_virtuales>` de :term:`paquetes Egg`.
 
 **Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más reciente: 
 
@@ -180,7 +191,7 @@ diversas fuentes:
 
     $ pip install -f http://pythonpaste.org/package_index.html SQLObject
 
-**Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o tu repositorio de paquetes Egg privado: 
+**Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o su repositorio de :term:`paquetes Egg` privados: 
 
 .. code-block:: sh
 
@@ -213,7 +224,7 @@ Un ejemplo del archivo :file:`pip_requirement.txt` puede ser el siguiente: ::
     PyYAML
     south
 
-**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente de PyPI: 
+**Ejemplo 7.** Actualizar un paquete ya instalado con la versión más reciente de :term:`PyPI`: 
 
 .. code-block:: sh
 
@@ -225,7 +236,7 @@ Un ejemplo del archivo :file:`pip_requirement.txt` puede ser el siguiente: ::
 
     $ pip search plonetheme-*
 
-**Ejemplo 9.** Para remover un paquete egg 
+**Ejemplo 9.** Para remover un :term:`paquete Egg` 
 
 .. code-block:: sh
 
@@ -245,8 +256,9 @@ ejecutando el siguiente comando:
 Distribute en zc.buildout
 =========================
 
-Puede usar Distribute en zc.buildout, habilitando el uso de este por medio de
-un parámetro adicional en su archivo bootstrap.py de la siguiente manera: 
+Puede usar Distribute en :ref:`zc.buildout <que_es_zcbuildout>`, habilitando 
+el uso de este por medio de un parámetro adicional en su archivo ``bootstrap.py`` 
+de la siguiente manera: 
 
 .. code-block:: sh
 
@@ -255,33 +267,37 @@ un parámetro adicional en su archivo bootstrap.py de la siguiente manera:
 
 .. _pip_buildout:
 
-PIP en zc.buildout
+pip en zc.buildout
 ==================
 
-Existen varias estrategias para integrar PIP en zc.buildout, a continuación
-se describen algunas formas:
+Existen varias estrategias para integrar ``pip`` en :ref:`zc.buildout <que_es_zcbuildout>`, 
+a continuación se describen algunas formas:
 
-`gp.recipe.pip`_, ese paquete es un recipe de zc.buildout el cual permite
-instalar paquete python usando pip. A continuación se explica un ejemplo de
-configuración zc.buildout con este récipe se puede usar:
+`gp.recipe.pip`_, ese paquete es un recipe de ``zc.buildout`` el cual permite
+instalar :term:`Paquete Python` usando ``pip``. A continuación se explica un ejemplo de
+configuración ``zc.buildout`` con este récipe se puede usar:
 
-1.  El récipe agrega un :ref:`virtualenv <que_es_virtualenv>` en el directorio  parts/ de su
-    instalación buildout, entonces genera este binario para generar un
-    scripts  ejecutable Python. Así que tienes un área de pruebas **limpia**
-    de instalaciones previas.
+1.  El récipe agrega un :ref:`virtualenv <que_es_virtualenv>` en el directorio 
+    ``parts/`` de su instalación buildout, entonces genera este binario para 
+    generar un scripts  ejecutable Python. Así que tienes un área de pruebas 
+    **limpia** de instalaciones previas.
+    
 2.  El récipe esta basado en `zc.recipe.egg#scripts`_ para que pueda
-    compartir sus paquetes eggs entre buildouts como de costumbre.
+    compartir sus :term:`paquetes Egg` entre buildouts como de costumbre.
+    
 3.  Por supuesto, usted puede instalar algunos archivos .pybundle .
-4.  Usted puede construir paquetes desde un repositorio SVN con la opción
-    editables .
-5.  Cada linea encontrada en la opción ``install`` es la última parte de un
-    comando de ``pip``. Esta le permitirá a usted construir paquetes eggs con
-    sus dependencias. Por ejemplo, instalar la librería `lxml`_ en un área de
-    prueba pura, sin tener  instalado libxml2 y libxslt, usted  necesita
-    tener instalado Cython y con esta línea de comando  ``python setup.py
-    install --static-deps`` para instalar lxml.
 
-A continuación un ejemplo de configuración zc.buildout:
+4.  Usted puede construir paquetes desde un repositorio SVN con la opción
+    editables.
+    
+5.  Cada linea encontrada en la opción ``install`` es la última parte de un
+    comando de ``pip``. Esta le permitirá a usted construir :term:`paquetes Egg` 
+    con sus dependencias. Por ejemplo, instalar la librería `lxml`_ en un 
+    área de prueba pura, sin tener instalado ``libxml2`` y ``libxslt``, 
+    usted necesita tener instalado ``Cython`` y con esta línea de comando 
+    ``python setup.py install --static-deps`` para instalar `lxml`_.
+
+A continuación un ejemplo de configuración :ref:`zc.buildout <que_es_zcbuildout>`:
 
 .. code-block:: cfg
 
@@ -306,10 +322,10 @@ A continuación un ejemplo de configuración zc.buildout:
         pyquery
     
 
-Otra forma de usar pip es a través de una extensión zc.buildout llamada
-`gp.vcsdevelop`_, para hacer checkout de paquetes eggs desde varios
-`sistemas de control de versiones`_. A continuación se muestra un ejemplo de
-configuración zc.buildout con esta extensión:
+Otra forma de usar ``pip`` es a través de una extensión :ref:`zc.buildout <que_es_zcbuildout>` 
+llamada `gp.vcsdevelop`_, para hacer checkout de :term:`paquetes Egg` desde 
+varios `sistemas de control de versiones`_. A continuación se muestra un 
+ejemplo de configuración ``zc.buildout`` con esta extensión:
 
 .. code-block:: cfg
 
@@ -350,7 +366,6 @@ Referencias
 .. _haga clic aquí: http://blip.tv/file/get/Pycon-PyCon2011PackagingFromDistutilsToDistutils2191.mp4
 .. _clic aquí: http://pycon.blip.tv/file/4880990
 .. _pip: http://pypi.python.org/pypi/pip
-.. _PyPI: http://pypi.python.org/pypi
 .. _gp.recipe.pip: http://pypi.python.org/pypi/gp.recipe.pip
 .. _zc.recipe.egg#scripts: http://pypi.python.org/pypi/zc.recipe.egg#id23
 .. _lxml: http://codespeak.net/lxml/
