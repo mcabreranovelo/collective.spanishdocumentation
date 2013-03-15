@@ -4,7 +4,7 @@
 Documentación comunitaria de Plone en Español
 =============================================
 
-Repositorio de documentación aportado por las comunidades Plone Mexico, 
+Repositorio de documentación aportado por las comunidades Plone México, 
 Plone Venezuela y Plone Conosur.
 
 .. contents :: :local:
@@ -19,7 +19,8 @@ el siguiente comando: ::
 
   $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
-Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com "`collective.spanishdocumentation`_" o simplemente solo desea obtener y compilar 
+Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com 
+"`collective.spanishdocumentation`_" o simplemente solo desea obtener y compilar 
 esta documentación ejecute el siguiente comando: ::
 
   $ git clone https://github.com/collective/collective.spanishdocumentation.git collective.spanishdocumentation
@@ -33,7 +34,6 @@ Crear entorno virtual de Python para reconstruir este proyecto: ::
   $ source virtualenv/sphinx/bin/activate
   
 Ahora puede generar la documentación de HTML, con los siguiente comandos: ::
-
 
   (sphinx)$ cd collective.spanishdocumentation/
   (sphinx)$ python bootstrap.py
@@ -124,15 +124,17 @@ depende del nivel de anidamiento del archivo en la estructura general de
 documento. Para generar el HTML, no es un problema, pero en LaTeX limita
 la superposición de las secciones a 6 niveles.
 
-Contribuciones SVN
-==================
+Contribuciones al repositorio
+=============================
 
 Wow, estás contento con tu excelente trabajo. Y le gustaría compartirlo con
 todo el mundo. Al igual que cuando "contribuidor" de código fuente, las pruebas
 unitarias no deben mostrar ningún error, compruebe en primer lugar:
 
 * Que el comando ``make html`` no genere ningún error o advertencia.
+
 * Que su redacción no posea ningún error de ortografía.
+
 * Los enlaces de hipertexto que se ha agregado o cambiado (glosario, enlaces
   externos explícitos, referencias a las secciones, ...) funcionan correctamente.
 
@@ -180,9 +182,9 @@ Ejemplos de documentación en Sphinx
 * `Python documentation`_
 * `Zope documentation`_
 * `Plone Developer Documentation`_
+* `Plone Italian Documentation`_
+* `Plone User German Manual`_
 * `D:YAML documentation`_
-
-
 
 FAQ
 ===
@@ -194,6 +196,15 @@ no se actualiza cuando compilo el documento.
 a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
 dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 
+Estatus de Calidad
+==================
+
+.. image:: https://travis-ci.org/collective/collective.spanishdocumentation.png?branch=master
+   :target: http://travis-ci.org/collective/collective.spanishdocumentation
+   :align: left
+   :alt: collective.spanishdocumentation travis-ci build status
+
+¿Tiene alguna idea?, ¿Encontro un error? Por favor, hagalo saber registrando un `ticket de soporte`_.
 
 .. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
@@ -201,5 +212,8 @@ dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 .. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
 .. _Python documentation: http://docs.python.org/
 .. _Zope documentation: http://docs.zope.org/zope2/index.html
-.. _Plone Developer Documentation: http://collective-docs.plone.org/
+.. _Plone Developer Documentation: http://developer.plone.org/
+.. _Plone Italian Documentation: http://documentazione-plone.rtfd.org/
+.. _Plone User German Manual: http://plone-4-benutzerhandbuch.rtfd.org/
 .. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
+.. _ticket de soporte: https://github.com/collective/collective.spanishdocumentation/issues
