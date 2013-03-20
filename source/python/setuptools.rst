@@ -9,7 +9,7 @@ Setuptools y EasyInstall
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
 :Lanzamiento: Python 4 o versiones superiores
-:Fecha: 14 de Marzo de 2013
+:Fecha: 20 de Marzo de 2013
 
 Este articulo explica como instalar paquetes Python con ``setuptools`` y ``EasyInstall``.
 
