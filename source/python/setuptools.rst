@@ -116,12 +116,12 @@ reciente:
 
     $ easy_install SQLObject
 
-**Ejemplo 2.** Instalar o actualizar un paquete por nombre y versión utilizando
-los enlaces encontrados en una "página de descargas": 
+**Ejemplo 2.** Instalar o actualizar un paquete por nombre y versión utilizando una 
+dirección URL donde encontradas en una "página de descargas": 
 
 .. code-block:: sh
 
-    $ easy_install -f http://pythonpaste.org/package_index.html SQLObject
+    $ easy_install -f http://dist.plone.org/packages/ 'Pillow==1.7.3'
 
 **Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o su repositorio de :term:`paquetes Egg` privado: 
 
