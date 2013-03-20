@@ -9,7 +9,7 @@ Distribute y pip
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Lanzamiento: Python 4 o versiones superiores
-:Fecha: 14 de Marzo de 2013
+:Fecha: 20 de Marzo de 2013
 
 Este articulo explica como instalar paquetes Python con ``Distribute`` y ``pip``.
 
@@ -19,15 +19,15 @@ Este articulo explica como instalar paquetes Python con ``Distribute`` y ``pip``
 ===================
 
 `Distribute`_ es un conjunto de mejoras en el módulo de la biblioteca
-estándar de Python: ``distutils`` (para Python 2.3.5 y hasta en la mayoría de
+estándar de Python: `distutils`_ (para Python 2.3.5 y hasta en la mayoría de
 las plataformas, plataformas de 64 bits requieren como mínimo de Python 2.4)
 que le permite crear con más facilidad la distribución de paquetes de Python,
 en especial los que tienen las dependencias de otros paquetes.
 
 ``Distribute`` se creó porque el :ref:`paquete Setuptools <que_es_setuptools>` 
-ya no se mantiene. Los paquetes de terceros, es probable que requieran setuptools, 
-que es proporcionado por el paquete ``Distribute``. Por lo tanto, en cualquier
-momento si los paquetes dependen del :ref:`paquete Setuptools <que_es_setuptools>`, 
+actualmente ya no se mantiene. Los paquetes de terceros, es probable que requieran 
+``setuptools``, que es proporcionado por el paquete ``Distribute``. Por lo tanto, 
+en cualquier momento si los paquetes dependen del :ref:`paquete Setuptools <que_es_setuptools>`, 
 ``Distribute`` intervendrá para decir que ya ofrece el módulo de ``setuptools``.
 
 .. image:: ./pip_distribute.png
@@ -38,17 +38,21 @@ Estado actual del Empaquetamiento en Python
 -------------------------------------------
 
 El módulo ``distutils`` es parte de la `librería estándar`_ de Python y aun
-lo será hasta la versión Python 3.3. El módulo ``distutils`` será
-descontinuado en Python 3.3. El módulo ``distutils2`` (note el número dos)
-tendrá compatible hacia atrás para Python 2.4 en adelante; y será parte de la
-`librería estándar`_ en Python 3.3.
+lo será hasta la versión Python 3.3. 
+
+.. note::
+    El módulo ``distutils`` será descontinuado en Python 3.3. 
+
+El módulo ``distutils2`` (note el número **dos**) tendrá compatibilidad hacia
+atrás hasta Python 2.4 en adelante; y será parte de la `librería estándar`_ 
+en Python 3.3.
 
 El módulo ``distutils`` provee las bases para empaquetar aplicaciones Python.
 Desafortunadamente, el módulo ``distutils`` está plagado de problemas, razón
-por la cual un pequeño grupo de desarrolladores de Python están trabajando en
-``distutils2``. Sin embargo, hasta ``distutils2`` este completado, se
-recomienda que en el desarrollado o el uso paquete ``distutils`` puro o el
-paquete ``Distribute`` para empaquetar software Python.
+por la cual un pequeño grupo de programadores de Python están trabajando en
+``distutils2``. Sin embargo, hasta que ``distutils2`` este completado, se
+recomienda que en el desarrollador pueda usar tanto el paquete ``distutils`` o 
+el paquete ``Distribute`` para empaquetar software Python.
 
 Al mismo tiempo, si un paquete requiere el :ref:`paquete Setuptools <que_es_setuptools>`, 
 la recomendación es que instale el paquete ``Distribute``, el cual provee una versión más 
@@ -73,7 +77,7 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
   hacer más fácil la vida para todo el mundo (usuarios, administradores de
   paquetes de Sistemas operativos, programadores, etc.).
 
-  Para descargar el vídeo `haga clic aquí`_ (Tamaño 294 mb) y para ver por
+  Para descargar el vídeo `haga clic aquí`_ (**Tamaño 294 mb**) y para ver por
   vídeo Stream haga `clic aquí`_.
 
 .. _que_es_pip:
@@ -82,18 +86,34 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
 ============
 
 `pip`_ es una herramienta para instalar y administrar :term:`Paquetes Python`, 
-como los que podemos encontrar en el Índice de Paquetes de Python - :term:`PyPI`. 
-Esta herramienta es el remplazo para la famosa herramienta :ref:`easy_install <que_es_easyinstall>`. 
+como los que puede encontrar en el Índice de Paquetes de Python - :term:`PyPI`. 
 
-En su mayoría se utiliza las mismas técnicas para encontrar los paquetes, por 
-lo que los paquetes que se instalaban usando la herramienta ``easy_install`` 
-deben ser instalables con la herramienta ``pip`` también. Esto significa que 
-usted puede utilizar ``pip install AlgunPaquete`` en lugar de ``easy_install AlgunPaquete``.
+.. tip::
+    Esta herramienta es el remplazo para la famosa herramienta 
+    :ref:`easy_install <que_es_easyinstall>`. 
+
+En su mayoría, ``pip`` utiliza las mismas técnicas para encontrar los paquetes, 
+por lo que los paquetes que se instalaban usando la herramienta ``easy_install`` 
+también deben ser instalables con la herramienta ``pip``. 
+
+Esto significa que usted puede utilizar con el siguiente comando: 
+
+.. code-block:: sh
+
+    $ pip install AlgunPaquete 
+
+En lugar del tradicional comando usado con la herramienta ``easy_install`` como 
+se describe a continuación:
+
+.. code-block:: sh
+
+    $ easy_install AlgunPaquete
+
 
 pip comparado con easy_install
 ------------------------------
 
-``pip`` tiene por objeto mejorar el easy_install. Algunas de las mejoras son:
+``pip`` ofrece mejoras a la herramienta ``easy_install``. Algunas de las mejoras son:
 
 -   Todos los paquetes se descargan antes de iniciar la instalación. Una
     instalación parcialmente completada no se produce como resultado.
@@ -104,14 +124,10 @@ pip comparado con easy_install
     Por ejemplo, si un paquete se está instalando, ``pip`` sigue la pista de 
     por qué ese paquete era necesario.
     
--   Los mensajes de error debe ser útil.
+-   Los mensajes de error debe ser útiles.
     
 -   El código fuente es relativamente conciso y coherente, por lo que es
     más fácil de usar mediante programación.
-    
--   Los paquetes no tienen que ser instaladas como archivos de huevo, que
-    pueden ser instalados en forma plana (mientras cuida la *metadata* de
-    :term:`paquetes Egg`).
     
 -   Ofrece soporte nativo para otros sistemas de control de versiones
     (Git, Mercurial y Bazaar)
@@ -120,12 +136,16 @@ pip comparado con easy_install
     
 -   Fácil de definir conjuntos de requerimientos y reproducir de forma
     fiable un conjunto de paquetes.
+    
+-   Los paquetes no tienen que ser instalados como :term:`paquetes Egg`, que
+    pueden ser instalados en forma plana (mientras cuida la *metadata* de
+    :term:`paquetes Egg`).
 
 
-pip no hacer todo lo que se easy_install. En concreto:
-------------------------------------------------------
+pip no hace todo lo que se easy_install. En concreto:
+-----------------------------------------------------
 
--   No se puede instalar a partir de huevos. Sólo se instala desde el
+-   No se puede instalar a partir de :term:`paquetes Egg`. Sólo se instala desde el
     código fuente. (En el futuro será bueno si se pudiera instalar los
     binarios de Windows EXE o MSI -.. pero instalar paquetes binarios para
     otras plataformas no es una prioridad).
@@ -133,9 +153,8 @@ pip no hacer todo lo que se easy_install. En concreto:
 -   No entiende la sección *SetupTools Extras* (como package[test]). Esto
     podría ser agregado eventualmente.
     
--   Es incompatible con algunos paquetes que tienen muchas
-    personalizaciones  ``distutils`` o  ``setuptools`` en sus archivos
-    setup.py.
+-   Es incompatible con algunos paquetes que tienen muchas personalizaciones
+    ``distutils`` o ``setuptools`` en sus archivos :file:`setup.py`.
 
 .. _instalacion_pip:
 
@@ -145,12 +164,17 @@ Instrucciones de Instalación
 Siempre existen más de dos formas de instalar paquetes Python con ``Distribute`` 
 y ``pip`` ;)
 
-Para ambas es recomendable que instale ciertas dependencias en su sistema
-operativo como las que se muestran a continuación: 
+Requerimientos previos
+----------------------
+Es necesario que instale ciertas dependencias en su sistema operativo como las que 
+se muestran a continuación: 
 
 .. code-block:: sh
 
-  # aptitude install python-setuptools python-dev build-essential
+  # aptitude install build-essential python-dev python-setuptools
+
+Instalación con Paquetes Egg
+----------------------------
 
 Para instalar ``Distribute`` ejecute el siguiente comando: 
 
@@ -166,10 +190,21 @@ También para instalar ``pip`` ejecute el siguiente comando:
 
 .. _uso_pip:
 
+Instalación en sistemas Debian
+------------------------------
+
+La instalación en sistemas Debian es recomendable que instale ciertas dependencias 
+en su sistema operativo como las que se muestran a continuación: 
+
+.. code-block:: sh
+
+  # aptitude install build-essential python-dev python-pip
+
+
 Ejemplos de uso de pip
 ======================
 
-El script ``pip`` ofrece varias formas de uso, para instalar los paquetes de
+La herramienta ``pip`` ofrece varias formas de uso, para instalar los paquetes de
 diversas fuentes:
 
 .. tip::
@@ -181,7 +216,7 @@ diversas fuentes:
     ``pip`` se puede complementar con ``virtualenv``, y se recomienda que lo utilice para 
     :ref:`aislar a la instalación <creacion_entornos_virtuales>` de los :term:`paquetes Egg`.
 
-**Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más reciente: 
+**Ejemplo 1.** Instalar un paquete su nombre en su versión más reciente, buscando en :term:`PyPI`: 
 
 .. code-block:: sh
 
@@ -191,7 +226,7 @@ diversas fuentes:
 
 .. code-block:: sh
 
-    $ pip install -f http://pythonpaste.org/package_index.html SQLObject
+    $ pip install -f http://dist.plone.org/packages/ 'Pillow==1.7.3'
 
 **Ejemplo 3.** Instalar o actualizar un paquete desde su propio :ref:`replica del repositorio PyPI <creando_propio_repositorio_pypi>` o su repositorio de :term:`paquetes Egg` privados: 
 
@@ -211,13 +246,13 @@ diversas fuentes:
 
     $ pip install 'ZopeSkel==2.21.2'
 
-**Ejemplo 6.** Instalar todas las dependencias de mi proyecto Python usando un archivo de dependencias requeridas para instalar: 
+**Ejemplo 6.** Instalar todas las dependencias de su proyecto Python usando un archivo de dependencias requeridas para instalar: 
 
 .. code-block:: sh
 
-    $ pip install -r ./pip_requirement.txt
+    $ pip install -r ./requirements.txt
 
-Un ejemplo del archivo :file:`pip_requirement.txt` puede ser el siguiente: ::
+Un ejemplo del archivo :file:`requirements.txt` puede ser el siguiente: ::
 
     python-ldap
     django
@@ -287,17 +322,18 @@ configuración ``zc.buildout`` con este récipe se puede usar:
 2.  El récipe esta basado en `zc.recipe.egg#scripts`_ para que pueda
     compartir sus :term:`paquetes Egg` entre buildouts como de costumbre.
     
-3.  Por supuesto, usted puede instalar algunos archivos .pybundle .
+3.  Por supuesto, usted puede instalar algunos archivos **.pybundle**.
 
 4.  Usted puede construir paquetes desde un repositorio SVN con la opción
-    editables.
+    ``editables``.
     
 5.  Cada linea encontrada en la opción ``install`` es la última parte de un
     comando de ``pip``. Esta le permitirá a usted construir :term:`paquetes Egg` 
     con sus dependencias. Por ejemplo, instalar la librería `lxml`_ en un 
     área de prueba pura, sin tener instalado ``libxml2`` y ``libxslt``, 
     usted necesita tener instalado ``Cython`` y con esta línea de comando 
-    ``python setup.py install --static-deps`` para instalar `lxml`_.
+    ``python setup.py install --static-deps`` para instalar para instalar el 
+    paquete `lxml`_.
 
 A continuación un ejemplo de configuración :ref:`zc.buildout <que_es_zcbuildout>`:
 
@@ -359,8 +395,9 @@ Referencias
 -   `Combine zc.buildout and pip benefits`_.
 
 .. _Distribute: http://packages.python.org/distribute
+.. _distutils: http://docs.python.org/3/library/distutils.html
 .. _librería estándar: http://guide.python-distribute.org/glossary.html#term-standard-library
-.. _paquete original de Setuptools: http://guide.python-distribute.org/distribute_info_
+.. _paquete original de Setuptools: http://pypi.python.org/pypi/setuptools/
 .. _futuro: http://guide.python-distribute.org/future.html
 .. _Futuro del Empaquetado: http://guide.python-distribute.org/future.html
 .. _PyCon 2011 - Packaging, from Distutils to Distutils2: http://us.pycon.org/2011/schedule/presentations/81/
