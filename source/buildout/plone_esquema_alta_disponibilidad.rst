@@ -4,6 +4,11 @@
 Buildout para instalar de todas las partes de un sitio
 ======================================================
 
+:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+:Lanzamiento: |version|
+:Fecha: |today|
+
 Descripción general
 ===================
 
