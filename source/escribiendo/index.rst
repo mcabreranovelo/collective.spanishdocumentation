@@ -1,9 +1,10 @@
 .. -*- coding: utf-8 -*-
 
+.. _escribiendo_index:
 
-===================================
-Guía de mantenimiento documentación
-===================================
+===========================================
+Guía de mantenimiento de esta documentación
+===========================================
 
 Instrucciones acerca de esta documentación.
 
