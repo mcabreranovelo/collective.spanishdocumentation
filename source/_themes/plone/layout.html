@@ -1,47 +1,66 @@
 {% extends 'basic/layout.html' %}
 <!-- $Id$ -->
 {% block extrahead %}
+<!-- TODO -->
 {% endblock %}
 
 {% block relbar1 %}
 <!--[if lte IE 6]>
-<style type="text/css">
-#ie6msg{border:3px solid #090; margin:8px 0; background:#cfc; color:#000;}
-#ie6msg h4{margin:8px; padding:0;}
-#ie6msg p{margin:8px; padding:0;}
-#ie6msg p a.getie8{font-weight:bold; color:#006;}
-#ie6msg p a.ie6expl{font-weight:normal; color:#006;}
-</style>
-<div id="ie6msg">
-<h4>¿Sabía usted que su navegador no está actualizado?</h4>
-<p>Si el diseño de esta página web parece feo, eso es porque en realidad estás 
-usando un navegador desactualizado. Y nos volveremos a poner ningún esfuerzo para 
-proporcionar una buena distribución a los usuarios de IE6.</p>
-<p>Para obtener la mejor experiencia posible utilizar nuestra página web le 
-recomendamos que actualice su navegador a una versión más reciente. La versión 
-actual es <a class="getie8" href="http://upgradeie.s3.amazonaws.com/eng/index.html">Internet Explorer 8</a>. 
-La actualización es gratuita. Si usted está usando un PC en el trabajo debe ponerse 
-en contacto con el administrador de TI.</p>
-<p>Si quieres también puedes probar algunos otros navegadores web populares como <a class="ie6expl"
-href="http://getfirefox.com">Firefox</a>, <a class="ie6expl"
-href="http://www.google.com/chrome">Chrome</a>, <a class="ie6expl"
-href="http://www.opera.com">Opera</a>, o <a class="ie6expl"
-href="http://www.apple.com/safari/download/">Safari</a></p>
-</div>
+  <style type="text/css" media="screen">
+  #ie6msg {
+    border:3px solid #090;
+    margin:8px 0;
+    background:#cfc;
+    color:#000;
+  }
+  #ie6msg h4 {
+    margin:8px;
+    padding:0;
+  }
+  #ie6msg p {
+    margin:8px;
+    padding:0;
+  }
+  #ie6msg p a.getie8 {
+    font-weight:bold;
+    color:#006;
+  }
+  #ie6msg p a.ie6expl {
+    font-weight:normal;
+    color:#006;
+  }
+  </style>
+  
+  <div id="ie6msg">
+    <h4>¿Sabía usted que su navegador no está actualizado?</h4>
+    <p>Si el diseño de esta página web parece feo, eso es porque en realidad estás 
+    usando un navegador desactualizado. Y nos volveremos a poner ningún esfuerzo para 
+    proporcionar una buena distribución a los usuarios de IE6.</p>
+    <p>Para obtener la mejor experiencia posible utilizar nuestra página web le 
+    recomendamos que actualice su navegador a una versión más reciente. La versión 
+    actual es <a class="getie8" href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-8" 
+    target="_blank">Internet Explorer 8</a>. 
+    La actualización es gratuita. Si usted está usando un PC en el trabajo debe ponerse 
+    en contacto con el administrador de TI.</p>
+    <p>Si quieres también puedes probar algunos otros navegadores web populares como <a class="ie6expl"
+    href="http://getfirefox.com" target="_blank">Firefox</a>, <a class="ie6expl"
+    href="http://www.google.com/chrome" target="_blank">Chrome</a>, <a class="ie6expl"
+    href="http://www.opera.com" target="_blank">Opera</a>, o <a class="ie6expl"
+    href="http://www.apple.com/safari/download/" target="_blank">Safari</a></p>
+  </div>
 <![endif]-->
+
 {{ super() }}
 {% endblock %}
 
 {% block sidebarlogo %}
-<div class="logo">
-    <a id="logo-link" href="{{ pathto(master_doc) }}">
-        <img src="{{ pathto('_static/logo.png', 1) }}" alt="Documentación en Español de Plone"/>
-    </a>
-    <div id="logo-tagline">
-        Documentación en Español de Plone
-    </div>
-    <div style="clear: both"><!-- --></div>
-</div>
+          <div class="logo">
+            <a id="logo-link" href="{{ pathto(master_doc) }}">
+              <img src="{{ pathto('_static/plone-logo-40.png', 1) }}" alt="Documentación en Español de Plone" />
+            </a>
+            <div id="logo-tagline">en Español</div>
+            <div style="clear: both"><!-- --></div>
+          </div>
 {% endblock %}
 
 {% block footer %}
