@@ -40,8 +40,8 @@ Inicializar el proyecto
 
   $ python bootstrap.py
 
-Ahora el nuevo directorio ``tareas-crontab`` es un proyecto zc.buildout. El archivo de
-configuración predeterminado de buildout es ``buildout.cfg``. Después de la
+Ahora el nuevo directorio :file:`tareas-crontab` es un proyecto zc.buildout. El archivo de
+configuración predeterminado de buildout es :file:`buildout.cfg`. Después de la
 inicialización, tendrá el siguiente contenido:
 
 .. code-block:: cfg
