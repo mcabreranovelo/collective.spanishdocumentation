@@ -1,7 +1,7 @@
 {#
   Elimina el numero de la versión del titulo HTML de la documentación
 #}
-{%- set docstitle = "Documentación en Español de Plone" %}
+{%- set docstitle = "Documentación de Plone en Español" %}
 
 {% extends "!page.html" %}
 
@@ -53,7 +53,7 @@
 {% block footer %}
 {{ super() }}
 
-<div id="editor-trap">
+    <div id="editor-trap">
       <h3>Editar este documento</h3>
 
       <p>
@@ -86,21 +86,22 @@
 
 
       <li>
-        Luego diríjase a la página <i>Send a pull request</i> (no será necesario rellenar ningún texto adicional). Sólo tiene que pulsar el botón <b>Send pull request</b>.
+        Luego diríjase a la página <i>Send a pull request</i> (no será necesario rellenar ningún texto adicional). 
+        Sólo tiene que pulsar el botón <b>Send pull request</b>.
       </li>
 
       <li>
         Sus cambios ahora sera consultados para un revisor dentro de la pestaña <a href="https://github.com/collective/collective.spanishdocumentation/pulls">Pull requests</a> del proyecto en Github.
       </li>
       </ol>
-
+    
       <p>
         Para mas información básica acerca de como actualizar este manual
         y referencia a sintaxis Sphinx, por favor consulte la guía <a href="https://plone-spanish-docs.readthedocs.org/en/latest/escribiendo/index.html">
         Escribiendo y actualizando el manual</a>.
       </p>
-
-  </div>
+    
+    </div>
 
 {#
   Habilite seguimiento de Google Analytics en la documentaciones.
