@@ -1,4 +1,6 @@
 @import url('default.css');
+@import url('basic.css');
+
 body {
     font: 100% Arial, FreeSans, sans-serif;
     background: White;
@@ -158,4 +160,28 @@ a:visited:hover {
     vertical-align: top;
 }
 
+/* -- admonitions ----------------------------------------------------------- */
 
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+div.admonition dt {
+    font-weight: bold;
+}
+
+div.admonition dl {
+    margin-bottom: 0;
+}
+
+p.admonition-title {
+    margin: 0px 10px 5px 0px;
+    font-weight: bold;
+}
+
+div.body p.centered {
+    text-align: center;
+    margin-top: 25px;
+}

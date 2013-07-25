@@ -5,15 +5,6 @@ if (document.location.protocol == 'http:') {
 }
 
 /**
- * Give warnings about old documentation by detecting them in URL
- */
-function summonDragons() {
-    if(window.location.href.indexOf("/old/") >= 0) {
-        $("#dragon-warning").show();
-    }
-}
-
-/**
  * Make sure we get redirected to developer.ploen.org
  *
  */
@@ -37,6 +28,15 @@ function preferPrimaryDomain() {
         window.location = href;
     }
     */
+}
+
+/**
+ * Give warnings about old documentation by detecting them in URL
+ */
+function summonDragons() {
+    if(window.location.href.indexOf("/old/") >= 0) {
+        $("#dragon-warning").show();
+    }
 }
 
 
