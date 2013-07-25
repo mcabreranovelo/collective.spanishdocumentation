@@ -92,6 +92,29 @@ Al momento de buscar que producto a instalar, proceda de la siguiente forma:
     y luego configurarlo como se describe previamente en la sección llamada
     **Agregando un paquete "desarrollo"**.
 
+Funcionamiento
+==============
+La herramienta ``zc.buildout`` funciona en base a los siguientes pasos ilustrados e 
+descritos a continuación:
+ 
+.. image:: ./como_instalar_addons_plone.png
+  :alt: Como instalar Add ons en Plone
+  :align: center
+  :width: 640pt
+  :height: 454pt
+  :target: ../../_images/como_instalar_addons_plone.png
+
+#. Las configuraciones se efectúan en el archivo :ref:`buildout.cfg <buildout_cfg>`.
+
+#. Luego de editar sus configuraciones ejecute el comando ``bin/buildout``.
+
+#. Entonces ``zc.buildout`` consulta dentro :term:`Python Package Index` 
+   para comprobar la existencia del paquetes a descargar.
+
+#. Descarga los :term:`paquetes Egg` (archivos .egg / .tar.gz) y sus dependencias que estén publicados en :term:`PyPI`.
+
+#. Finalmente se encarga de instalar como producto/paquete disponible para ser habilitar / deshabilitar 
+   en su :term:`Instancia de Zope` en cualquier de sus sitios Plone.
 
 Ejemplo de uso
 ==============
