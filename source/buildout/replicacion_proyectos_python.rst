@@ -41,12 +41,39 @@ Hay que entender varios conceptos antes de continuar tales como :term:`buildout`
 
 Instalación
 ===========
-Puedes instalar zc.buildout usando :ref:`pip <que_es_pip>` (es recomendable 
+Puedes instalar ``zc.buildout`` usando :ref:`pip <que_es_pip>` (es recomendable 
 hacerlo dentro de un :ref:`entorno virtual <creacion_entornos_virtuales>`):
 
 .. code-block:: sh
 
   $ pip install zc.buildout
+
+
+Funcionamiento
+==============
+La herramienta ``zc.buildout`` funciona en base a los siguientes pasos ilustrados e 
+descritos a continuación:
+ 
+.. image:: ./como_instalar_python_egg.png
+  :alt: Como instalar Paquetes Egg Python
+  :align: center
+  :width: 640pt
+  :height: 454pt
+  :target: ../_images/como_instalar_python_egg.png
+
+#. Las configuraciones se efectúan en el archivo :ref:`buildout.cfg <buildout_cfg>`.
+
+#. Luego de editar sus configuraciones ejecute el comando :file:`bin/buildout`.
+
+#. Entonces ``zc.buildout`` consulta dentro :term:`Python Package Index` 
+   para comprobar la existencia del paquetes a descargar.
+
+#. Descarga los :term:`paquetes Egg` (archivos .egg / .tar.gz) y sus dependencias que 
+   estén publicados en :term:`PyPI`.
+
+#. Finalmente se encarga de instalar en el :term:`PYTHONPATH` el(los) paquete(s) 
+   para estar disponible desde una :ref:`consola interactiva Python <python_introspeccion>` 
+   o para ser usado en sus códigos fuentes Python.
 
 
 Configuraciones genéricas
@@ -59,7 +86,7 @@ Buildout, para esto debe ejecutar los siguientes comandos:
   $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{eggs,downloads,zope}
   $ nano $HOME/.buildout/default.cfg
 
-Luego de crear el archivo ``default.cfg`` defina algunas configuraciones de 
+Luego de crear el archivo :file:`default.cfg` defina algunas configuraciones de 
 usuario predeterminadas para cualquier parte de su configuración :term:`buildout`:
 
 .. code-block:: cfg
@@ -71,22 +98,25 @@ usuario predeterminadas para cualquier parte de su configuración :term:`buildou
 
 .. note::
 
-  Esto solamente proveerá valores predeterminados, ¡estos no sobreescribirán 
+  Esto solamente proveerá valores predeterminados, ¡estos no sobrescribirán 
   las configuraciones en su configuraciones buildout!
 
 
 Creación de proyectos buildout
 ==============================
-Ahora crea una nueva configuración zc.buildout así:
+Ahora crea una nueva configuración ``zc.buildout`` así:
 
 .. code-block:: sh
 
   $ mkdir mibuildout ; cd mibuildout
   $ buildout init
 
-Ahora el nuevo directorio ``mibuildout`` es un proyecto **buildout**. El archivo de
-configuración predeterminado del buildout es ``buildout.cfg`` . Después de la
-inicialización, tendrá el siguiente contenido:
+Ahora el nuevo directorio ``mibuildout`` es un proyecto **buildout**.
+
+.. _buildout_cfg:
+
+El archivo de configuración predeterminado del buildout es :file:`buildout.cfg`. 
+Después de la inicialización, tendrá el siguiente contenido:
 
 .. code-block:: cfg
 
