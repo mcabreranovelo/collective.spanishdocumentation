@@ -298,7 +298,7 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Artículos relacionados
 ======================
 
-.. seealso:: 
+.. seealso::
 
     Artículos sobre :ref:`replicación de proyectos Python <python_buildout>`.
 
