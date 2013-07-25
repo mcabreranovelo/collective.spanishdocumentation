@@ -10,6 +10,8 @@ Buildout y Plone 3
 :Correo(s): leonardocaballero@gmail.com
 :Lanzamiento: |version|
 :Fecha: |today|
+    
+.. tag:: [plone3 plone3.3 Plone_3] versiones Plone 3
 
 Descripción general
 ===================

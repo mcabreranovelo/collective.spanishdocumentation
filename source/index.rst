@@ -200,17 +200,17 @@ se apoya fuertemente en setuptools, que permite instalar paquetes de Python
 a través de Internet. Es recomendable utilizar buildout para cualquier proyecto 
 de Plone que se quiera emprender.
 
-.. toctree::
-   :maxdepth: 1
+.. hlist::
+   :columns: 3
 
-   buildout/replicacion_proyectos_python
-   buildout/hola_mundo_zcbuildout
-   buildout/recipes_buildout
-   buildout/programar_tareas_crontab
-   buildout/rotar_archivos_log
-   buildout/plone3_zcbuildout
-   buildout/plone_esquema_alta_disponibilidad
-
+   * `Replicación de proyectos Python <buildout/replicacion_proyectos_python>`_.
+   * `Hola mundo en zc.buildout <buildout/hola_mundo_zcbuildout>`_.
+   * `Récipes Buildout <buildout/recipes_buildout>`_.
+   * `Programar tareas con crontab <buildout/programar_tareas_crontab>`_.
+   * `Rotar archivos .log de Zope <buildout/rotar_archivos_log>`_.
+   * `Buildout y Plone 3 <buildout/plone3_zcbuildout>`_.
+   * `Buildout para instalar de todas las partes de un sitio <buildout/plone_esquema_alta_disponibilidad>`_.
+   
 
 Administración de Zope
 ======================
@@ -219,20 +219,21 @@ Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar
 tareas de hospedaje y administrativa para un servidor de aplicación Zope / 
 sitio de Plone.
 
-.. toctree::
-   :maxdepth: 1
+.. hlist::
+   :columns: 2
 
-   zope/cli_zope
-   zope/configuraciones_generales
-   zope/configurar_zope_como_demonio
-   zope/zope_como_servidor_ftp
-   zope/zope_como_servidor_webdav
-   zope/puntos_montaje_zodb
-   zope/compactar_zodb
-   zope/importar_exportar_plone
-   zope/instancia_debug_zope
-   zope/zope_plone_detras_servidor_web
-   
+   * `Zope Management Interface - ZMI <zope/zmi>`_.
+   * `Comando de control de Zope <zope/cli_zope>`_.
+   * `Configuraciones generales <zope/configuraciones_generales>`_.
+   * `Configurar Zope y Plone como un demonio / servicio <zope/configurar_zope_como_demonio>`_.
+   * `Configurar Zope como un servidor FTP <zope/zope_como_servidor_ftp>`_.
+   * `Configurar Zope como un servidor WebDAV <zope/zope_como_servidor_webdav>`_.
+   * `Configurar puntos de montajes para Data.fs separadas <zope/puntos_montaje_zodb>`_.
+   * `¿Como compactar la ZODB de sitio Plone? <zope/compactar_zodb>`_.
+   * `Importar y exportar contenido desde el ZMI <zope/importar_exportar_plone>`_.
+   * `Creando instancia Zope adicional de depuración <zope/instancia_debug_zope>`_.
+   * `Ejecutando Zope y Plone detrás de un Servidor Web <zope/zope_plone_detras_servidor_web>`_.
+
 
 Administración de Plone
 =======================
@@ -297,7 +298,7 @@ Otros recursos
 
    glosario
    links
-   presentaciones
+   presentaciones/index
 
 
 ============================

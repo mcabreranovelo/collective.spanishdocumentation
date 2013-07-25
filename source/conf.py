@@ -25,6 +25,9 @@ sys.path.append(os.path.abspath('.'))
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.doctest',
               'sphinx.ext.todo',
+              'sphinxcontrib.slide',
+              'sphinxcontrib.taglist',
+              'sphinxcontrib.recentpages',
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -138,7 +141,7 @@ html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['localtoc.html', 'searchbox.html', 'plone.html'],
+   '**': ['localtoc.html', 'searchbox.html', 'recentpages.html', 'plone.html'],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
@@ -197,10 +200,13 @@ latex_documents = [
 #latex_preamble = ''
 
 # Documents to append as an appendix to all manuals.
-#latex_appendices = []
+latex_appendices = ['glosario', 'escribiendo/acerca', 'escribiendo/licencia', 'escribiendo/copyright']
+
+# Get LaTeX to handle Unicode correctly
+latex_elements = {'inputenc': r'\usepackage[utf8x]{inputenc}'}
 
 # If false, no module index is generated.
-#latex_use_modindex = True
+latex_use_modindex = True
 
 pdf_documents = [
     ('index', u'documentacion_espanol_plone', 
@@ -211,3 +217,8 @@ pdf_extensions = ['vectorpdf']
 
 # http://sphinx.pocoo.org/latest/ext/todo.html#confval-todo_include_todos
 todo_include_todos = True
+
+# http://pypi.python.org/pypi/sphinxcontrib-recentpages/
+recentpages_sidebar = True
+recentpages_sidebar_pages = 10
+
