@@ -6,10 +6,14 @@
 Glosario
 ========
 
-A continuación una serie de terminos usados en las tecnologías Python / Zope / Plone
+A continuación una serie de términos usados en las tecnologías Python / Zope / Plone
 
 .. glossary ::
     :sorted:
+    
+    buildout
+        En la herramienta buildout, es un conjunto de partes que describe como ensamblar 
+        una aplicación.
     
     Cheese shop
         Ver :term:`PyPI`.
@@ -36,10 +40,21 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
     
     Egg
         Ver :term:`paquetes Egg`.
+    
+    Instalación de Zope
+        El software propio del servidor de aplicaciones.
+    
+    Instancia de Zope
+        Un directorio específico que contiene una configuración completa del 
+        servidor Zope.
+
+   local command
+       Una clase `Paste`_ la cual provee funcionalidad adicional a una estructura 
+       de esqueleto de proyecto que ha sido generada.
 
     PYTHONPATH
         Una lista de nombre de directorios, que contiene librerías Python, con la misma 
-        sintaxis como la variable ``PATH`` del shell de su sistema.
+        sintaxis como la declarativa ``PATH`` del shell del sistema operativo.
     
     Python Package Index
         Ver :term:`PyPI`.
@@ -47,10 +62,6 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
     PyPI
         Del Ingles Python Package Index, es el servidor central de :term:`paquetes Egg` Python 
         ubicado en la dirección http://pypi.python.org/pypi/.
-    
-    buildout
-        En la herramienta buildout, es un conjunto de partes que describe como ensamblar 
-        una aplicación.
     
     part
         En la herramienta buildout, es un conjunto opciones que le permite a usted 
@@ -60,6 +71,9 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         En la herramienta buildout, es el software usado para crear una parte basada 
         en sus opciones.
     
+   paquete
+        Ver :term:`Paquete Python`.
+
     Paquete Python
     Paquetes Python
         Es un termino generalmente usando para describir un módulo Python. en el
@@ -83,8 +97,8 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         antiguas versiones de Zope, todos los productos eran carpetas que se ubican
         dentro de una carpeta especial llamada ``Products`` de una instancia Zope;
         estos tendrían un nombre de módulo Python que empiezan por "**Products.**".
-        Por ejemplo, el núcleo de Plone es un producto llamado CMFPlone, conocido en
-        Python como `Products.CMFPlone`_.
+        Por ejemplo, el núcleo de Plone es un producto llamado ``CMFPlone``, conocido 
+        en Python como `Products.CMFPlone`_.
 
         Este tipo de productos esta disponibles desde la interfaz administrativa de
         Zope (ZMI) de `su instalación`_ donde deben acceder con las credenciales del
@@ -105,6 +119,31 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         mecanismo genérico de plug-in. Mucha más detalle sobre este tema se encuentra
         disponible en el `sitio web de PEAK`_.
         
+   esqueleto
+       Los archivos y carpetas recreados por un usuario el cual los genero ejecutando 
+       alguna plantilla ``templer`` (``PasteScript``).
+   
+   estructura
+       1) Una clase Python la cual controla la generación de un árbol de carpetas 
+       que contiene archivos.
+   
+       2) Una unidad de carpetas y archivos proveídos por el sistema ``templer`` para ser 
+       usado en una plantilla o plantillas. Las estructuras proporcionan recursos 
+       estáticos compartidos, que pueden ser utilizados por cualquier paquete en 
+       el sistema de ``templer``.
+
+       Las estructuras diferencian de las plantillas en que no proporcionan las :term:`vars`.
+   
+   plantilla
+       1) Una clase Python la cual controla la generación de un esqueleto. Las 
+       plantillas contiene una lista de variables para obtener la respuesta de un 
+       usuario. Las plantillas son ejecutadas con el comando ``templer`` suministrando 
+       el nombre de la plantilla como un argumento ``templer basic_namespace my.package``.
+   
+       2) Los archivos y carpetas proveídas un paquete ``templer`` como contenido a ser 
+       generado. Las respuestas proporcionadas por un usuario en respuesta a las variables 
+       se utilizan para rellenar los marcadores de posición en este contenido.
+
     Temas / Apariencias
         Por lo general si un producto de Tema esta bien diseñado y implementado
         debe aplicarse de una ves al momento de instalarlo. En caso que no se aplique
@@ -119,13 +158,18 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
         **Agregar elemento** en el sitio Plone. Opcionalmente algunos productos
         instalan un panel de control del producto que puede acceder a este en la
         sección `Configuración de Productos Adicionales`_.
-    
-    Instalación de Zope
-        El software propio del servidor de aplicaciones.
-    
-    Instancia de Zope
-        Un directorio específico que contiene una configuración completa del 
-        servidor Zope.
+
+   var
+   vars
+   variable
+   variables
+       1) Una pregunta que debe ser respondida por el usuario cuando esta generando una 
+       estructura de esqueleto de proyecto usando el sistema de plantilla ``templer``. En este 
+       caso una variable (var) es una descripción de la información requerida, texto de 
+       ayuda y reglas de validación para garantizar la entrada de usuario correcta.
+
+       2) Una declarativa cuyo valor puede ser variable o constante dentro de un programa 
+       Python o en el sistema operativo.
      
     ZCML-slug
         Los así llamados "ZCML-slugs", era configuraciones que estaban destinados 
@@ -147,3 +191,4 @@ A continuación una serie de terminos usados en las tecnologías Python / Zope /
 .. _Configuración de Productos Adicionales: http://localhost:8080/Plone/prefs_install_products_form
 .. _su instalación: http://localhost:8080/manage
 .. _z3c.autoinclude: http://pypi.python.org/pypi/z3c.autoinclude
+.. _Paste: http://pythonpaste.org/
