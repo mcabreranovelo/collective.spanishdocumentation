@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% set title = 'Descarga' %}
+
+{% if daily is defined %}
+  {% set dlbase = pathto('archives', 1) %}
+{% else %}
+  {% set dlbase = 'http://media.readthedocs.org' %}
+  {% set nameproject = 'plone-spanish-docs' %}
+{% endif %}
+
+{% block body %}
+          <h1>Descarga la documentación Plone en Español {{ release }}</h1>
+
+          {% if last_updated %}<p><b>&uacute;ltima actualizaci&oacute;n fue: {{ last_updated }}.</b></p>{% endif %}
+
+          <p>Para descargar un archivo que contenga todos los documentos para esta versión de 
+          Plone en uno solo de varios formatos, siguiendo uno de los enlaces en esta tabla. Los números 
+          en la tabla son el tamaño de la descarga de los archivos en megabytes.</p>
+          
+          <table class="docutils" align="center">
+            <tr><th>Versión</th><th>Formato</th><th>Descarga</th></tr>
+            <tr>
+              <td rowspan="3">Plone {{ release }}</td>
+              <td>Epub</td>
+              <td><a href="{{ dlbase }}/epub/{{ nameproject }}/latest/{{ nameproject }}.epub">Tamaño 8.5 MB</a></td>
+            </tr>
+            <tr>
+              <td>PDF (Tamaño de pagina A4)</td>
+              <td><a href="{{ dlbase }}/pdf/{{ nameproject }}/latest/{{ nameproject }}.pdf">Tamaño 9.4 MB</a></td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td><a href="{{ dlbase }}/htmlzip/{{ nameproject }}/latest/{{ nameproject }}.zip">Tamaño 22.3 MB</a></td>
+            </tr>
+            <tr>
+              <td rowspan="3">Plone 3.3.x</td>
+              <td>Epub</td>
+              <td><a href="{{ dlbase }}/epub/{{ nameproject }}/3.3.6/{{ nameproject }}.epub">Tamaño 8.5 MB</a></td>
+            </tr>
+            <tr>
+              <td>PDF (Tamaño de pagina A4)</td>
+              <td><a href="{{ dlbase }}/pdf/{{ nameproject }}/3.3.6/{{ nameproject }}.pdf">Tamaño 9.4 MB</a></td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td><a href="{{ dlbase }}/htmlzip/{{ nameproject }}/3.3.6/{{ nameproject }}.zip">Tamaño 22.3 MB</a></td>
+            </tr>
+          </table>
+
+          <p>Esos archivos contienen todos los contenidos en la documentación.</p>
+
+          <h2>Desempaquetar</h2>
+
+          <p>Los usuarios Unix podrían descargar los archivos .tar.bz2; esos son archivos comprimidos 
+          en tar y puede ser manipulado de la forma usual usando el programa tar y the bzip2. El programa 
+          de descompresión <a href="http://www.info-zip.org">InfoZIP</a> puede ser utilizado para manejar 
+          los archivos ZIP si lo desea. Los archivos .tar.bz2 proporcionar la mejor compresión y más rápidos 
+          tiempos de descarga.</p>
+
+          <p>Los usuarios de Windows pueden usar los archivos ZIP ya que son habituales en que
+          plataforma. Estos son creados en Unix usando el programa de compresión InfoZIP.</p>
+
+          <h2>Problemas</h2>
+
+          <p>Si usted tiene comentarios o sugerencias de la documentación de Plone, por favor enviar
+          un correo electrónico a <a href="mailto:usuarios-plone@lists.plone.org">usuarios-plone@lists.plone.org</a>.</p>
+          
+{% endblock %}
