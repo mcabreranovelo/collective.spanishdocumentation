@@ -32,7 +32,7 @@ En la actualidad existen varios tipos de paquetes de software para Linux
 de los cuales dos son los principales formatos de paquetes los **.rpm** 
 de Redhat Linux y los archivos **.deb** de Debian GNU/Linux, con estos 
 formatos se pueden descargar, instalar, configurar y dejar listo un paquete 
-de software para que usted solo lo ejecutes y lo utilices.
+de software para que usted solo lo ejecute y lo utilice.
 
 Una parte importante que va de la mano del sistema de paquetes, es el 
 repositorio de software y es, en pocas palabras, un sitio (lugares / 
@@ -49,7 +49,8 @@ alojados por empresas, otros por universidades, gobiernos, etc.
 
 -   http://www.debian.org/mirror/list
 
-En el caso de Ubuntu Linux la lista también es larga y abarca países de la A a la Z.
+En el caso de Ubuntu Linux la lista también es larga y abarca países de la letra 
+"A" a la letra "Z".
 
 -   https://launchpad.net/ubuntu/+archivemirrors
 
@@ -57,7 +58,7 @@ Para gestionar los ``paquetes Deb`` es necesario usar las herramientas
 ``dpkg``, ``apt`` / ``aptitude`` las cuales usan estos repositorio 
 para descargar dichos paquetes.
 
-La lista publica de mirrors de Fedora Linux también es larga y abarca países.
+La lista pública de mirrors de Fedora Linux también es larga y abarca países.
 
 -   http://mirrors.fedoraproject.org/publiclist
 
