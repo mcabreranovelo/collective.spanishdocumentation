@@ -10,8 +10,8 @@
 
 :Traductor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Lanzamiento: Plone 3.x, Plone 4.x
+:Fecha: 17 de junio de 2013
 
 En esta es una traducción del articulo llamado `Plone system requirements`_.
 
@@ -98,8 +98,8 @@ Requisitos mínimos de hardware
 Hardware recomendado
 ~~~~~~~~~~~~~~~~~~~~
 
--   512 MB o más RAM por cada sitio Plone.
--   2 GB o más de espacio de disco duro.
+-   2 GB o más RAM por cada sitio Plone.
+-   40 GB o más de espacio de disco duro.
 
 .. note::
     Plone `escala`_ fácilmente. Si está desarrollando un sitio de alto tráfico, 
