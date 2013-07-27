@@ -221,7 +221,7 @@ Estatus de Calidad
 .. _Plone Developer Documentation: http://developer.plone.org/
 .. _Plone 4 User Manual: https://plone-user-manual.readthedocs.org/
 .. _Plone Italian Documentation: http://documentazione-plone.rtfd.org/
-.. _Plone: worfklow e sicurezza: https://plone-worfklow-e-sicurezza.readthedocs.org/
+.. _Plone\: worfklow e sicurezza: https://plone-worfklow-e-sicurezza.readthedocs.org/
 .. _Plone User German Manual: http://plone-4-benutzerhandbuch.rtfd.org/
 .. _Chinese documentation: https://github.com/jianaijun/collective.chinesedocumentation
 .. _UPCnet Gestió de Continguts Docs: http://documentacio.readthedocs.org/
