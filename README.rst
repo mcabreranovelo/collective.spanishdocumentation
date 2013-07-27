@@ -17,13 +17,13 @@ en GitHub.com "`collective.spanishdocumentation`_". Si usted tiene una
 credenciales en este servidor y desea convertirse en un colaborador ejecute 
 el siguiente comando: ::
 
-  $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git clone git@github.com:collective/collective.spanishdocumentation.git
 
 Si usted no tiene las credenciales de acceso al repositorio Git en GitHub.com 
 "`collective.spanishdocumentation`_" o simplemente solo desea obtener y compilar 
 esta documentación ejecute el siguiente comando: ::
 
-  $ git clone https://github.com/collective/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git clone https://github.com/collective/collective.spanishdocumentation.git
 
 Crear entorno virtual de Python para reconstruir este proyecto: ::
 
@@ -144,12 +144,12 @@ Imágenes
 Aparte de las capturas de pantalla - ¡Uy, lo siento - las capturas de pantalla!, 
 las imágenes Sphinx se inserta en el documento debe ir acompañada de su versión
 "Fuente" en un formato público interoperables, y para que el editor pueda abrir
-el archivo fuente que este disponible. Las imágenes deben estar preferentemente en el formato
-PNG.
+el archivo fuente que este disponible. Las imágenes deben estar preferentemente 
+en el formato PNG.
 
 Además, durante cada inserción o cambio de imagen, usted **debe**
-verificar y ajustar si es necesario la representación PDF, a sabiendas de las limitaciones
-la imagen a tamaño del papel final.
+verificar y ajustar si es necesario la representación PDF, a sabiendas de las 
+limitaciones la imagen a tamaño del papel final.
 
 **Ejemplo :** ::
 
@@ -181,10 +181,15 @@ Ejemplos de documentación en Sphinx
 
 * `Python documentation`_
 * `Zope documentation`_
+* `Process for Plone core's development`_
 * `Plone Developer Documentation`_
+* `Plone 4 User Manual`_
 * `Plone Italian Documentation`_
+* `Plone: worfklow e sicurezza`_
 * `Plone User German Manual`_
-* `D:YAML documentation`_
+* `UPCnet Gestió de Continguts Docs`_
+* `@lpmayos documentation`_
+* `Web and Mobile documentation`_
 
 FAQ
 ===
@@ -204,16 +209,22 @@ Estatus de Calidad
    :align: left
    :alt: collective.spanishdocumentation travis-ci build status
 
-¿Tiene alguna idea?, ¿Encontro un error? Por favor, hagalo saber registrando un `ticket de soporte`_.
+¿Tiene alguna idea?, ¿Encontró un error? Por favor, hágalo saber registrando un `ticket de soporte`_.
 
 .. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
 .. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
 .. _Python documentation: http://docs.python.org/
-.. _Zope documentation: http://docs.zope.org/zope2/index.html
+.. _Zope documentation: http://docs.zope.org/
+.. _Process for Plone core's development: https://buildoutcoredev.readthedocs.org/
 .. _Plone Developer Documentation: http://developer.plone.org/
+.. _Plone 4 User Manual: https://plone-user-manual.readthedocs.org/
 .. _Plone Italian Documentation: http://documentazione-plone.rtfd.org/
+.. _Plone: worfklow e sicurezza: https://plone-worfklow-e-sicurezza.readthedocs.org/
 .. _Plone User German Manual: http://plone-4-benutzerhandbuch.rtfd.org/
-.. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
+.. _Chinese documentation: https://github.com/jianaijun/collective.chinesedocumentation
+.. _UPCnet Gestió de Continguts Docs: http://documentacio.readthedocs.org/
+.. _@lpmayos documentation: https://documentation.readthedocs.org/
+.. _Web and Mobile documentation: https://web-and-mobile.readthedocs.org/
 .. _ticket de soporte: https://github.com/collective/collective.spanishdocumentation/issues
