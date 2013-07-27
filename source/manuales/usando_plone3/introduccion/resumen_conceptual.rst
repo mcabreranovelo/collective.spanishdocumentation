@@ -22,7 +22,7 @@ computadora del cliente. La palabra *contenido* es usada en un sentido
 general ya que usted puede publicar distintos tipos de información,
 incluyendo:
 
-.. figure:: images/content_types_into_plone.png
+.. figure:: ../images/content_types_into_plone.png
     :align: center
     :alt: Tipos de contenidos dentro de Plone
 
@@ -34,7 +34,7 @@ archivo que pueda ser subido o creado en un sitio web. El contenido también
 puede subirse desde una computadora local, además, Plone le permite crear
 *carpetas* para organizar el contenido y crear una estructura de navegación:
 
-.. image:: images/content_is_added_to_folders.png
+.. image:: ../images/content_is_added_to_folders.png
     :align: center
     :alt: Contenido es agregado en carpetas
 
@@ -47,14 +47,14 @@ Si se deseara agregar contenido sobre mariposas, por ejemplo, se puede crear
 una carpeta llamada "Mariposas" y luego agregar texto a una pagina dentro de
 la carpeta:
 
-.. image:: images/butterflies_folder_text.png
+.. image:: ../images/butterflies_folder_text.png
     :alt: Texto de Carpeta Mariposas
     :align: center
 
 
 También se pueden agregar algunas imágenes a la carpeta:
 
-.. image:: images/butterflies_folder.png
+.. image:: ../images/butterflies_folder.png
     :alt: Carpeta Mariposas
     :align: center
 
@@ -64,7 +64,7 @@ tipos, incluyendo sub-carpetas. Luego de agregar algunos reportes y vídeos a
 la carpeta Mariposas, el contenido debería estar organizado como se muestra a
 continuación, con dos sub-carpetas dentro de la carpeta Mariposas:
 
-.. image:: images/folders_within_folders.png
+.. image:: ../images/folders_within_folders.png
     :alt: Carpeta en carpeta
     :align: center
 
@@ -77,7 +77,7 @@ típico existe como una instalación de Plone instalada en un servidor web. El
 servidor web puede estar en cualquier sitio, usualmente en una compañía de
 hospedaje con una "pila" de computadoras dedicadas a realizar la tarea:
 
-.. image:: images/server_rack.png
+.. image:: ../images/server_rack.png
     :alt: Rack del servidor
     :align: center
 
@@ -92,7 +92,7 @@ servidor.
 
 Simplifiquemos el diagrama que muestra como se interactúa con Plone:
 
-.. image:: images/client_to_server_simple.png
+.. image:: ../images/client_to_server_simple.png
     :alt: Del cliente al servidor
     :align: center
 
@@ -106,13 +106,13 @@ sitio misitio.com. Usted escribe www.misitio.com en su navegador web. Luego
 presiona la tecla Enter, la siguiente secuencia de eventos es llevada a cabo
 entre el navegador y el servidor de www.misitio.com:
 
-.. image:: images/client_request.png
+.. image:: ../images/client_request.png
     :alt: Solicitud del cliente
     :align: center
 
 Luego el software Plone responde:
 
-.. image:: images/server_response.png
+.. image:: ../images/server_response.png
     :alt: Respuesta del servidor
     :align: center
 
@@ -132,7 +132,7 @@ Pero regresemos a la interacción entre la computadora del usuario y el
 servidor. El navegador web "suministra" (traduce) este HTML para que pueda
 ver la pagina web resultante:
 
-.. image:: images/my_site_served.png
+.. image:: ../images/my_site_served.png
     :alt: Mi sitio servido
     :align: center
 
@@ -141,7 +141,7 @@ Así que cuando ve su pagina web de mariposas, puede decidir si cambiarla o
 agregarle contenido. Además en cualquier momento se puede subir fotos,
 documentos, etc:
 
-.. image:: images/plone_donut.png
+.. image:: ../images/plone_donut.png
     :alt: 
     :align: center
 
@@ -149,7 +149,7 @@ documentos, etc:
 Luego que hace sus cambios y hace clic en "Guardar", la nueva versión de la
 pagina web se mostrara a cualquiera que visite el sitio:
 
-.. image:: images/plone_donut_full.png
+.. image:: ../images/plone_donut_full.png
     :alt: 
     :align: center
 

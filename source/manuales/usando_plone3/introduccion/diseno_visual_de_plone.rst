@@ -15,7 +15,7 @@ algunos ejemplos de diseño.
 diseño consistente para la apariencia por defecto de Plone. El diseño por
 defecto generalmente se parece a lo siguiente:
 
-.. image:: images/plone-default-design-areas.png
+.. image:: ../images/plone-default-design-areas.png
     :alt: Áreas de diseño por defecto de Plone
     :align: center
 
@@ -41,7 +41,7 @@ sitio web Plone.
 Usaremos el diseño por defecto de Plone como ejemplo de una división típica
 de pantalla:
 
-.. image:: images/plonedefaultareaslabeled.png
+.. image:: ../images/plonedefaultareaslabeled.png
     :alt: Áreas por defecto de etiquetada de Plone
     :align: center
 
@@ -55,7 +55,7 @@ variados para describir el diseño real del sitio, como por ejemplo, los
 A modo de ejemplo, se seleccionara tres sitios para comparar tomados de la
 `lista de sitios web Plone`_:
 
-.. image:: images/akamaidesign.png
+.. image:: ../images/akamaidesign.png
     :alt: Diseño de Akamai
     :align: center
 
@@ -71,7 +71,7 @@ La columna derecha contiene una serie de "portlets." El pie de pagina posee
 un menú horizontal con las mismas opciones del encabezado convenientemente.
 Por ultimo, a la derecha hay una columna con opciones de zoom.
 
-.. image:: images/discoverdesign.png
+.. image:: ../images/discoverdesign.png
     :alt: Diseño de Discover Magazine
     :align: center
 
@@ -90,7 +90,7 @@ sistema sofisticado de almacenamiento, y Python un excelente lenguaje de
 programación que facilita mucho "cableado" inteligente de flujo de texto y
 gráficos en el sitio web.
 
-.. image:: images/smealdesign.png
+.. image:: ../images/smealdesign.png
     :alt: Diseño de Penn State University's Smeal College of Business
     :align: center
 

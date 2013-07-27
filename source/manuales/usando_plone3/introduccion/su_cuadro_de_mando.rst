@@ -21,7 +21,7 @@ colocados. La siguiente captura de pantalla muestra lo que el usuario
 Elizabeth Smith podrá ver luego de iniciar sesión y hacer clic en su nombre
 en la parte superior derecha para ir a su área personal:
 
-.. image:: images/dashboard.png
+.. image:: ../images/dashboard.png
     :alt: 
     :align: center
 
@@ -33,7 +33,7 @@ Porlets que ya han sido asignados.. El cuadro de control de arriba esta
 vacío, porque aquí no hay contenido disponible para mostrar en los Portlets
 de este nuevo sitio web. Aquí están los Portlets por defecto:
 
-.. image:: images/dashboardedit.png
+.. image:: ../images/dashboardedit.png
     :alt: 
     :align: center
 

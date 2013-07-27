@@ -53,7 +53,7 @@ Navegación de usuario anónimo
      iniciado sesión, y el usuario esta navegando de forma anónima, como se
      muestra en la siguiente figura de un sitio Plone nuevo:
 
-     .. image:: images/plonemain3.png
+     .. image:: ../images/plonemain3.png
        :alt: Navegación de un sitio Plone como usuario anónimo
        :align: center
 
@@ -80,7 +80,7 @@ Actividad web autenticada (registrado)
      verde particular. En la siguiente figura, el usuario John Smith ha
      iniciado sesión dentro de un nuevo sitio web Plone:
 
-    .. image:: images/plonemain3_002.png
+    .. image:: ../images/plonemain3_002.png
       :alt: Navegación de un sitio Plone como usuario registrado
       :align: center
 
@@ -124,7 +124,7 @@ donde tiene tales privilegios, en la parte superior del contenido se deben
 visualizar pestañas de color verde con los nombres *Contenidos*, *Vista*,
 *Editar*, Reglas, *Compartir*, e *Historia*:
 
-.. image:: images/editstriptabs.png
+.. image:: ../images/editstriptabs.png
     :alt: Pestañas
     :align: center
 
@@ -151,7 +151,7 @@ otra, de todas maneras aquí están las descripciones para ayudarlo a empezar:
 Debajo de las pestañas en la parte baja del encabezado verde puede ver varios
 menús *Mostrar, Agregar elemento y Estado*:
 
-.. image:: images/editstripmenus.png
+.. image:: ../images/editstripmenus.png
     :alt: Menús
     :align: center
 

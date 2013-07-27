@@ -13,7 +13,7 @@ Cuando usted visita un sitio web Plone de forma anónima o se la ha dado la
 dirección web para mantenimiento del sitio, aparecerá un botón *Entrar*
 similar al siguiente:
 
-.. image:: images/log-in.png
+.. image:: ../images/log-in.png
     :alt: Entrar
     :align: center
 
@@ -21,7 +21,7 @@ similar al siguiente:
 Luego de hacer clic en el botón *Entrar*, vera un panel donde debe escribir
 el nombre de usuario y contraseña:
 
-.. image:: images/loginform.png
+.. image:: ../images/loginform.png
     :alt: Panel inicio de sección
     :align: center
 

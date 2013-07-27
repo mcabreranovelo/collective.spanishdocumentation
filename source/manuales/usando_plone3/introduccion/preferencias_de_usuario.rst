@@ -15,14 +15,14 @@ Luego de iniciar sesión, su nombre completo sera colocado en la parte derecha
 del encabezado. Haga clic en su nombre para ir a su área personal llamada
 cuadro de mando:
 
-.. image:: images/loggedinstrip.png
+.. image:: ../images/loggedinstrip.png
     :alt: Nombre completo del usuario
     :align: center
 
 
 Usted podrá ver su *panel cuadro de mando*:
 
-.. image:: images/dashboardjohnsmith.png
+.. image:: ../images/dashboardjohnsmith.png
     :alt: Panel cuadro de mando
     :align: center
 
@@ -41,7 +41,7 @@ todo correctamente listado. La pestaña *Editar* del perfil o el enlace de
 *Preferencias Personales* discutido anteriormente, mostraran el panel de "mis
 preferencias":
 
-.. image:: images/dashboardpersonalprefs.png
+.. image:: ../images/dashboardpersonalprefs.png
     :alt: Preferencias Personales
     :align: center
 
