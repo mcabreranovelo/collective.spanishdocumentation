@@ -92,9 +92,9 @@ usuario predeterminadas para cualquier parte de su configuración :term:`buildou
 .. code-block:: cfg
 
   [buildout]
-  eggs-directory = /path/to/home/.buildout/eggs
-  download-cache = /path/to/home/.buildout/downloads
-  zope-directory = /path/to/home/.buildout/zope
+  eggs-directory = /ruta/absoluta/al/home/del/usuario/.buildout/eggs
+  download-cache = /ruta/absoluta/al/home/del/usuario/.buildout/downloads
+  zope-directory = /ruta/absoluta/al/home/del/usuario/.buildout/zope
 
 .. note::
 
