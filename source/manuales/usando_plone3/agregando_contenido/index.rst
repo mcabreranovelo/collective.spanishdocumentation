@@ -10,6 +10,7 @@ Como agregar tipos de contenidos básicos a sitios web Plone
 
 .. toctree::
     :maxdepth: 2
+    :numbered:
 
     agregando_nuevo_contenido
     agregando_carpetas

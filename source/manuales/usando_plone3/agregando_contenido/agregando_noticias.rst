@@ -54,11 +54,3 @@ Ver un vídeo sobre como `agregar una noticia`_ en Plone 2.
 
 .. _agregar una noticia: http://media.plone.org/LearnPlone/Creating%20a%20News%20Item.swf
 
-
-Créditos de esta traducción
----------------------------
-
-.. sectionauthor:: Emanuel Sartor <emanuel@menttes.com>
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <leonardocaballero@gmail.com>,
