@@ -3,13 +3,13 @@
 .. _compactar_zodb:
 
 =======================================
-¿Como compactar la ZODB de sitio Plone?
+¿Cómo compactar la ZODB de sitio Plone?
 =======================================
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 28 de Julio de 2013
 
 ¿En que consta compactar la ZODB?
 =================================
@@ -66,7 +66,7 @@ usar el script llamado `zeopack` que ofrece esta instalación para que cada cier
 realice tareas de compactar la ZODB, a continuación un ejemplo de configuración:
 
 .. tip::
-    Un script zeopack sera generado para usted en el directorio bin del proyecto buildout, 
+    Un script ``zeopack`` sera generado para usted en el directorio bin del proyecto buildout, 
     a menos que usted cambien eso con la opción ``zeopack-script-name``, en este caso el script 
     sera llamado como el nombre que usted especifique en este parámetro. 
 
@@ -116,8 +116,8 @@ archivo ``buildout.cfg`` como se muestra a continuación:
      </clock-server>  
 
 Ejecute de nuevo el buildout y luego inicie el servidor Zope, entonces diríjase al 
-raíz de Zope desde la ZMI, y cree un "Script(Python)" con el id ``pack_it_all`` y 
-agregue en su contenido algo como esto:
+raíz de Zope desde la :ref:`ZMI <que_es_zmi>`, y cree un "Script(Python)" con el 
+id ``pack_it_all`` y agregue en su contenido algo como esto:
 
 .. code-block:: python
 
@@ -139,8 +139,8 @@ Referencias
 
 - `How do I pack the ZODB?`_.
 - `Regular database packing`_.
-- `What is the suggested way to cron-automate ZODB packs for a production Plone instance?`_
-- `Automatically Pack The ZODB`_
+- `What is the suggested way to cron-automate ZODB packs for a production Plone instance?`_.
+- `Automatically Pack The ZODB`_.
 
 .. _How do I pack the ZODB?: http://plone.org/documentation/faq/how-do-i-pack-the-zodb
 .. _Regular database packing: http://developer.plone.org/hosting/zope.html#regular-database-packing

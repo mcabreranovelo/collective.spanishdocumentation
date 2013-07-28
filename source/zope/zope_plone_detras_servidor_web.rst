@@ -8,8 +8,8 @@ Ejecutando Zope y Plone detrás de un Servidor Web
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 28 de Julio de 2013
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar un servidor Web en frente del servidor Zope/Plone.
 

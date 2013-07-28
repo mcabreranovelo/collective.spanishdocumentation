@@ -8,8 +8,8 @@ Configurar Zope y Plone como un demonio / servicio
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 28 de Julio de 2013
 
 Descripción general
 ===================
@@ -27,15 +27,20 @@ Términos básicos
 .. glossary::
 
   Demonio / Servicio
-    Es un tipo especial de proceso informático no interactivo, es decir, que se ejecuta un programa en segundo plano en vez de ser controlado
-    directamente por el usuario. Este tipo de programas se ejecutan de forma continua (infinita), vale decir, que aunque se intente cerrar o 
-    matar el proceso, este continuará en ejecución o se reiniciará automáticamente. Todo esto sin intervención de terceros y sin dependencia 
-    de consola alguna.
+    Es un tipo especial de proceso informático no interactivo, es decir, que se ejecuta un 
+    programa en segundo plano en vez de ser controlado directamente por el usuario. Este 
+    tipo de programas se ejecutan de forma continua (infinita), vale decir, que aunque se 
+    intente cerrar o matar el proceso, este continuará en ejecución o se reiniciará 
+    automáticamente. Todo esto sin intervención de terceros y sin dependencia de consola 
+    alguna.
 
     Los demonios suelen tener las siguientes características:
 
     * No disponen de una "interfaz" directa con el usuario, ya sea gráfica o textual.
-    * No hacen uso de la entradas y salidas estándar para comunicar errores o registrar su funcionamiento, sino que usan archivos del sistema en zonas especiales (``/var/log/`` en los `UNIX`_ más modernos) o utilizan otros demonios especializados en dicho registro como el `syslogd`_.
+    * No hacen uso de la entradas y salidas estándar para comunicar errores o registrar su 
+      funcionamiento, sino que usan archivos del sistema en zonas especiales (``/var/log/`` 
+      en los `UNIX`_ más modernos) o utilizan otros demonios especializados en dicho registro 
+      como el `syslogd`_.
 
 
 Paso a paso

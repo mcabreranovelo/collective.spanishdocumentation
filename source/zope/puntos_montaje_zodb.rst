@@ -8,25 +8,26 @@ Configurar puntos de montajes para Data.fs separadas
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 28 de Julio de 2013
 
-El montaje de un sitio Plone con la base de datos objetos **Data.fs** separadas puede ser muy útil si se
-están ejecutando varios sitios Plone en una sola instancia de Zope.
+El montaje de un sitio Plone con la base de datos objetos **Data.fs** 
+separadas puede ser muy útil si se están ejecutando varios sitios Plone 
+en una sola instancia de Zope.
 
 
 ¿Por qué?
 =========
 
-Esto significa que usted puede tomar ese sitio y moverlo a otro lugar, o
-migrarlo, sin afectar a nadie más. También puede restaurarlo sólo este sitio
-si ocurre algo desastroso.
+Esto significa que usted puede tomar ese sitio y moverlo a otro lugar, 
+o migrarlo, sin afectar a nadie más. También puede restaurarlo sólo 
+este sitio si ocurre algo desastroso.
 
-¿Que es un punto de montaje ZODB?
+¿Qué es un punto de montaje ZODB?
 ----------------------------------
 
-Es la capacidad de montar diferentes bases de datos de objetos Zope - ZODB separadas,
-y así poder definir parámetros específicos para cada ZODB.
+Es la capacidad de montar diferentes bases de datos de objetos Zope - 
+ZODB separadas, y así poder definir parámetros específicos para cada ZODB.
 
 
 Casos de usos
@@ -46,14 +47,19 @@ instalación con un punto de montaje para un ZODB.
 1.  Crear una instancia Plone en una máquina de desarrollo en alguna
     parte. Debe ser la misma versión de Plone de su versión de producción
     (por ejemplo, Plone 3.3.6 o la que sea).
+
 2.  Elimine el sitio por defecto de Plone que creado en esta instancia y
     crear un nuevo sitio Plone - le da un **identificador**. (Es posible que
     desee agregar un usuario administrador para el sitio en este punto).
+
 3.  :ref:`Compacte la base de datos <compactar_zodb>` y detenga la instancia.
+
 4.  Copie el archivo *Data.fs* de esta instancia en un directorio con el
     mismo **identificador** como el sitio que ha creado.
+
 5.  Acceda a este directorio creado en la carpeta *var/filestorage* en su
     instancia de producción.
+
 6.  Utilice el récipe de zc.buildout llamado
     `collective.recipe.filestorage`_ en su configuración buildout para crear
     los puntos de montaje (donde las piezas se muestra una lista de los
@@ -70,12 +76,14 @@ instalación con un punto de montaje para un ZODB.
 
 7.  Detenga el servidor Zope de producción y ejecute de nuevo su
     buildout.
-8.  Iniciar el servidor Zope de producción, acceda a través de la **ZMI** 
+
+8.  Iniciar el servidor Zope de producción, acceda a través de la :ref:`ZMI <que_es_zmi>`
     y utilice la lista desplegable en la parte superior derecha y seleccione 
     la opción **Plone site** para crear un sitio Plone nuevo con el mismo 
     **identificador** como su sitio de montaje.
     A continuación, elimine este sitio (sí, yo sé que es raro, pero es algo
     que tiene que ver con el nivel superior de carpetas **acl_users**).
+
 9.  Utilice la lista desplegable en la parte superior derecha y seleccione 
     la opción **ZODB mount points** para crear un nuevo punto de montaje 
     de ZODB. Usted debe ver a sus **puntos de montaje** listo para crearlos.
@@ -84,7 +92,10 @@ instalación con un punto de montaje para un ZODB.
 Establecer nuevos puntos de montajes
 ------------------------------------
 
-Utilizando el récipe de zc.buildout llamado `collective.recipe.filestorage`_ es muy facil ya que solo necesita agregar una nueva linea en su configuración buildout, cada linea representa un punto de montaje para cada sitios, a continuación se muestra un ejemplo de esto:
+Utilizando el récipe de zc.buildout llamado `collective.recipe.filestorage`_ 
+es muy fácil ya que solo necesita agregar una nueva linea en su configuración 
+buildout, cada linea representa un punto de montaje para cada sitios, a continuación 
+se muestra un ejemplo de esto:
 
 .. code-block:: cfg
   
@@ -97,7 +108,8 @@ Utilizando el récipe de zc.buildout llamado `collective.recipe.filestorage`_ es
       cliente-2-sitio-web/Data
       cliente-3-blog/Data
 
-Luego debe guardar los cambios y ejecutar de nuevo el script buildout, con el siguiente comando:
+Luego debe guardar los cambios y ejecutar de nuevo el script buildout, con el 
+siguiente comando:
 
 .. code-block:: sh
   
@@ -149,11 +161,12 @@ requiera almacenar objetos de gran tamaño en la ZODB.
 -----------------------
 
 Nunca copiar y pegar objetos entre los puntos de montajes de sus sitios.
-Usted puede hacer esto a través de la ZMI y es muy tentador. Zope simplemente
-copia un puntero al objeto, no el objeto en sí mismo, así que cuando el
-objeto se elimina en la base de datos de origen, se obtiene una referencia
-pendiente y, finalmente, base de datos de errores poskey en el base de datos
-destino muestra una serie de errores horribles para arreglar.
+Usted puede hacer esto a través de la :ref:`ZMI <que_es_zmi>` y es muy 
+tentador. Zope simplemente copia un puntero al objeto, no el objeto en sí 
+mismo, así que cuando el objeto se elimina en la base de datos de origen, 
+se obtiene una referencia pendiente y, finalmente, base de datos de errores 
+poskey en el base de datos destino muestra una serie de errores horribles 
+para arreglar.
 
 Eso también puede ser un gran dolor, porque el error, probablemente no
 aparecerá hasta que usted compacte su base de datos de origen, que pueden ser

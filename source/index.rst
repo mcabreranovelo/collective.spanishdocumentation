@@ -222,18 +222,17 @@ sitio de Plone.
 .. hlist::
    :columns: 2
 
-   * `Zope Management Interface - ZMI <zope/zmi>`_.
-   * `Comando de control de Zope <zope/cli_zope>`_.
-   * `Configuraciones generales <zope/configuraciones_generales>`_.
-   * `Configurar Zope y Plone como un demonio / servicio <zope/configurar_zope_como_demonio>`_.
-   * `Configurar Zope como un servidor FTP <zope/zope_como_servidor_ftp>`_.
-   * `Configurar Zope como un servidor WebDAV <zope/zope_como_servidor_webdav>`_.
-   * `Configurar puntos de montajes para Data.fs separadas <zope/puntos_montaje_zodb>`_.
-   * `¿Como compactar la ZODB de sitio Plone? <zope/compactar_zodb>`_.
-   * `Importar y exportar contenido desde el ZMI <zope/importar_exportar_plone>`_.
-   * `Creando instancia Zope adicional de depuración <zope/instancia_debug_zope>`_.
-   * `Ejecutando Zope y Plone detrás de un Servidor Web <zope/zope_plone_detras_servidor_web>`_.
-
+   * :ref:`Zope Management Interface - ZMI <zmi>`.
+   * :ref:`Comando de control de Zope <linea_comando_zope>`.
+   * :ref:`Configuraciones generales <configuraciones_generales>`.
+   * :ref:`Configurar Zope y Plone como un demonio / servicio <configurar_zope_como_demonio>`.
+   * :ref:`Configurar Zope como un servidor FTP <zope_como_ftp>`.
+   * :ref:`Configurar Zope como un servidor WebDAV <zope_como_webdav>`.
+   * :ref:`Configurar puntos de montajes para Data.fs separadas <puntos_montaje_zodb>`.
+   * :ref:`¿Cómo compactar la ZODB de sitio Plone? <compactar_zodb>`.
+   * :ref:`Importar y exportar contenido desde el ZMI <importar_exportar_data>`.
+   * :ref:`Creando instancia Zope adicional de depuración <instancia_zope_debug>`.
+   * :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
 
 Administración de Plone
 =======================

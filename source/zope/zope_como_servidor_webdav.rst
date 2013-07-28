@@ -8,8 +8,8 @@ Configurar Zope como un servidor WebDAV
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 28 de Julio de 2013
 
 Descripción general
 ===================
@@ -140,17 +140,22 @@ Definir parámetros de conexión al WebDAV
 
 - ***Tipo de Servidor:*** Debe definir el tipo de servidor al cual se
   va a conectar en nuestro caso WebDAV (HTTP).
+
 - ***Servidor:*** la dirección pública o privada para conectarse al
   servidor WebDAV, en nuestro caso es ***127.0.0.1***.
-- ***Puerto:*** el n?mero del puerto para conectarse al servidor
+
+- ***Puerto:*** el numero del puerto para conectarse al servidor
   WebDAV, en nuestro caso es ***8280***.
+
 - ***Carpeta:*** es la ruta relativa al directorio raíz de Zope desde
   tendrá acceso a los archivos del sitio Plone, en nuestro caso es el
   nombre de mi sitio llamado ***Plone***.
+
 - ***Usuario:*** el nombre del usuario de Zope/Plone para conectarse al
   servidor WebDAV, en nuestro caso es ***admin***, (usuario por defecto de
   administración Zope). Si es quieres definir otro usuario para subir
   archivos WebDAV debes otorgar los permisos de WebDAV.
+
 - ***Nombre de la conexión:*** el nombre del icono de la conexión en el
   escritorio y sistema de archivos de GNOME, en nuestro caso es ***Mi Sitio
   Plone 3***.
@@ -181,10 +186,10 @@ WebDAV con Plone a través de GNOME
 Referencias
 ===========
 
-- `Authoring Content with WebDAV and FTP`_
-- `Managing Zope Objects Using External Tools`_
-- `Using WebDAV`_
-- `More WebDAV`_
+- `Authoring Content with WebDAV and FTP`_.
+- `Managing Zope Objects Using External Tools`_.
+- `Using WebDAV`_.
+- `More WebDAV`_.
 
 .. _WebDAV: http://es.wikipedia.org/wiki/WebDAV
 .. _Authoring Content with WebDAV and FTP: http://www.zope.org/Documentation/Articles/WebDAV%20
