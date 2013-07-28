@@ -22,6 +22,7 @@ Como agregar tipos de contenidos básicos a sitios web Plone
     agregando_noticias
     definiendo_propiedades_basicas
     restringiendo_tipos_en_carpeta
+    preparando_imagenes_para_la_web
 
 Créditos de esta traducción
 ---------------------------
