@@ -8,8 +8,8 @@ Un manual para administradores y creadores de contenido en Plone.
 .. toctree::
    :maxdepth: 2
 
-   introduccion.rst
-   agregando_contenido.rst
+   introduccion/index.rst
+   agregando_contenido/index.rst
    administrando_contenido.rst
    colaboracion_y_flujo_trabajo.rst
    usando_colecciones.rst
