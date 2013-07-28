@@ -388,13 +388,12 @@ todos los objetos actualmente indexados. Precaución el Borrado del catálogo
 eliminará todas las entradas. El registro de progreso de cada N objetos re-indexado 
 al registro Zope (establecido en 0 para deshabilitar el registro).
 
-**Clear and Rebuild:** Con esta tarea se Borrar y Reconstrucción se eliminarán todas 
-las entradas del catálogo, y luego caminar todo el portal en busca de objetos de 
-contenido que deben ser indexados en el catálogo y el índice de ellos. Haciendo esto 
-eliminará las entradas inapropiados del catálogo de portal (scripts, plantillas) y 
-conservar todo el contenido indexado. Esto puede tomar mucho tiempo, pero es la forma 
-correcta de reconstruir un catálogo que ha tenido indebidamente objetos añadidos o 
-eliminados.
+**Clear and Rebuild:** con esta tarea se se eliminarán todas las entradas del catálogo, 
+y luego caminar todo el portal en busca de objetos de contenido que deben ser indexados 
+en el catálogo y el índice de ellos. Haciendo esto eliminará las entradas inapropiados 
+del catálogo de portal (scripts, plantillas) y conservar todo el contenido indexado. 
+Esto puede tomar mucho tiempo, pero es la forma correcta de reconstruir un catálogo que 
+ha tenido indebidamente objetos añadidos o eliminados.
 
 temp_folder
 -----------
@@ -403,7 +402,7 @@ Temporary Folders son las carpetas que almacenan sus contenidos "en memoria",
 en la misma forma como un disco RAM. El contenido de una carpeta temporal se pierden 
 al apagar.
 
-Por defecto, Zope creará una carpeta temporal llamada "temp_folder" en la raíz de todas 
+Por defecto, Zope creará una carpeta temporal llamada ``temp_folder`` en la raíz de todas 
 las instalaciones de Zope. Esta carpeta temporal será utilizada por la maquinaria Zope 
 sesiones, pero puede ser utilizado para otros propósitos.
 
