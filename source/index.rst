@@ -201,15 +201,15 @@ a través de Internet. Es recomendable utilizar buildout para cualquier proyecto
 de Plone que se quiera emprender.
 
 .. hlist::
-   :columns: 3
+   :columns: 2
 
-   * `Replicación de proyectos Python <buildout/replicacion_proyectos_python>`_.
-   * `Hola mundo en zc.buildout <buildout/hola_mundo_zcbuildout>`_.
-   * `Récipes Buildout <buildout/recipes_buildout>`_.
-   * `Programar tareas con crontab <buildout/programar_tareas_crontab>`_.
-   * `Rotar archivos .log de Zope <buildout/rotar_archivos_log>`_.
-   * `Buildout y Plone 3 <buildout/plone3_zcbuildout>`_.
-   * `Buildout para instalar de todas las partes de un sitio <buildout/plone_esquema_alta_disponibilidad>`_.
+   * :ref:`Replicación de proyectos Python <python_buildout>`.
+   * :ref:`Hola mundo en zc.buildout <buildout_holamundo>`.
+   * :ref:`Récipes Buildout <recipe_buildout>`.
+   * :ref:`Programar tareas con crontab <buildout_crontab>`.
+   * :ref:`Rotar archivos .log de Zope <buildout_logrotate>`.
+   * :ref:`Buildout para instalar de todas las partes de un sitio <plone_esquema_alta_disponibilidad>`.
+   * :ref:`Buildout y Plone 3 <buildout_plone3>`.
    
 
 Administración de Zope
