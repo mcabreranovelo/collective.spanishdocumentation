@@ -8,8 +8,7 @@ Replicación de proyectos Python
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Fecha: 31 de Julio de 2013
 
 .. _que_es_zcbuildout:
 

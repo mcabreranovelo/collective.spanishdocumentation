@@ -8,15 +8,15 @@ Rotar archivos .log de Zope
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Fecha: 31 de Julio de 2013
 
 Descripción general
 ===================
 
-Este es una configuración básica de :ref:`zc.buildout <python_buildout>` que explica como configurar 
-tarea de `crontab`_  de `rotación de archivos log`_, para esto usará la misma configuración 
-del paquete Zope en Debian GNU/Linux que entenderá el programa ``crontab`` para realizar esta tarea.
+Este es una configuración básica de :ref:`zc.buildout <python_buildout>` que explica 
+como configurar tarea de `crontab`_  de `rotación de archivos log`_, para esto usará 
+la misma configuración del paquete Zope en Debian GNU/Linux que entenderá el programa 
+``crontab`` para realizar esta tarea.
 
 Instalación
 ===========
@@ -54,7 +54,8 @@ Y debe agrega la siguiente configuración al archivo ``logrotate.conf.tmpl`` :
   }
 
 
-Cree un archivo de configuración ``logrotate.cfg`` y agregue nuevas secciones como se muestra a continuación:
+Cree un archivo de configuración ``logrotate.cfg`` y agregue nuevas secciones como se 
+muestra a continuación:
 
 .. code-block:: cfg
 
@@ -77,15 +78,16 @@ Cree un archivo de configuración ``logrotate.cfg`` y agregue nuevas secciones c
   times = 0 6 * * *
   command = /usr/sbin/logrotate --state ${buildout:directory}/var/logrotate.status ${logrotate:output}
 
-Luego edite su archivo de configuración ``buildout.cfg`` y agregue en la declarativa `extends` la siguiente linea:
+Luego edite su archivo de configuración ``buildout.cfg`` y agregue en la declarativa 
+``extends`` la siguiente linea:
 
 .. code-block:: cfg
 
   extends = 
     logrotate.cfg
 
-Ahora ejecuta el comando ``buildout`` con el argumento ``-v`` (verbose mode), esto ayudará a que
-muestre todo los detalles de la construcción del mismo.
+Ahora ejecuta el comando ``buildout`` con el argumento ``-v`` (verbose mode), esto 
+ayudará a que muestre todo los detalles de la construcción del mismo.
 
 .. code-block:: sh
 

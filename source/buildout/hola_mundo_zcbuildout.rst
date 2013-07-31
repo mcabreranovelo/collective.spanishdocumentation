@@ -8,16 +8,15 @@ Hola mundo en zc.buildout
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Fecha: 31 de Julio de 2013
 
 Descripción general
 ===================
 
-Este es una configuración básica de :ref:`buildout <python_buildout>` que explica como generar un
-programa típico `Hola Mundo`_ en Bash script llamado **"hola"** dentro del
-directorio ``bin/`` local a tu entorno de desarrollo y otorgar permisos
-necesarios para la ejecución de este programa.
+Este es una configuración básica de :ref:`buildout <python_buildout>` que 
+explica como generar un programa típico `Hola Mundo`_ en Bash script llamado 
+**"hola"** dentro del directorio ``bin/`` local a tu entorno de desarrollo y 
+otorgar permisos necesarios para la ejecución de este programa.
 
 
 Instalación
@@ -43,8 +42,8 @@ Inicializar el proyecto
   $ buildout init
 
 Ahora el nuevo directorio holamundo es un proyecto buildout. El archivo de
-configuración predeterminado de este proyecto es ``buildout.cfg``. Después de la
-inicialización, tendrá el siguiente contenido:
+configuración predeterminado de este proyecto es ``buildout.cfg``. Después 
+de la inicialización, tendrá el siguiente contenido:
 
 .. code-block:: cfg
 

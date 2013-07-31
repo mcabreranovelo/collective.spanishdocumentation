@@ -8,8 +8,7 @@ Récipes Buildout
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Fecha: 31 de Julio de 2013
 
 Descripción general
 ===================
@@ -22,14 +21,14 @@ Una parte del Buildout es creado por un récipe.
 Instalación
 ===========
 
-Los récipes son siempre instalado como un paquete eggs de Python. Ellos pueden 
+Los récipes son siempre instalado como un :term:`paquetes Egg` de Python. Ellos pueden 
 ser descargados desde un servidor de paquetes, como el Python Package Index (:term:`PyPI`), 
 otro ellos pueden ser desarrollados como parte de un proyecto usando un 
-``paquete egg de desarrollo``. este es un tipo especial de ``paquete egg`` que se
+``paquete egg de desarrollo``. este es un tipo especial de :term:`paquete Egg` que se
 instala como un vínculo de huevo que contiene el nombre de un directorio de
 origen.
 
-Los paquetes eggs de desarrollo no tienen que ser empaquetados para
+Los :term:`paquetes Egg` de desarrollo no tienen que ser empaquetados para
 distribución para ser usados y se puede modificar en en sitio, lo cual es
 especialmente útil cuando se están desarrollando.
 
