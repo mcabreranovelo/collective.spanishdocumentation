@@ -8,28 +8,28 @@ Configurar Zope como un servidor FTP
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 01 de Agosto de 2013
 
 Descripción general
 ===================
 
+**FTP**, significa en Ingles **File Transfer Protocol**, es decir, 
+Protocolo de Transferencia de Archivos. Este protocolo es usado para 
+trasferir archivos desde un computador a otro. Muchos editores de 
+texto y editores HTML soportan protocolo FTP.
+
 Zope tiene a disposición su propio servidor FTP, usted solo necesita
 activarlo y configurarlo.
-
-**FTP**, significa en Ingles File Transfer Protocol, es decir, Protocolo de
-Transferencia de Archivos. Este protocolo es usado para trasferir archivos
-desde un computador a otro. Muchos editores de texto y editores HTML soportan
-protocolo FTP.
 
 Configuración
 =============
 
-La forma más adecuada de configuración del servidor FTP de Zope va a depender
-del tipo de instalación de Zope/Plone realizada:
+La forma más adecuada de configuración del servidor FTP de Zope va a 
+depender del tipo de instalación de Zope/Plone realizada:
 
-Primero que nada detenga la instancia del servicio de Zope con el siguiente
-comando: 
+Primero que nada detenga la instancia del servicio de Zope con el 
+siguiente comando: 
 
 .. code-block:: sh
 
@@ -38,16 +38,17 @@ comando:
 Instalaciones No-Buildout
 -------------------------
 
-Para instalaciones basadas en paquetes de distros, instalador de MS Windos,
-entre otros que no soporte Buildout:
+Para instalaciones de Zope / Plone basadas en sistema de paquetes para 
+distribuciones Linux, instalador de MS Windows, que no soporte Buildout 
+debe realizar la siguiente configuraciones:
 
-Debe modificar su archivo de configuración zope.conf con el siguiente comando:
+Modifique archivo de configuración ``zope.conf`` con el siguiente comando:
 
 .. code-block:: sh
 
   vim $INSTANCE_HOME/etc/zope.conf
 
-Y luego asigna la siguiente definición:
+Y luego le asigna la siguiente definición:
 
 .. code-block:: cfg
 
@@ -63,23 +64,18 @@ Instalaciones con Buildout
 Para instalaciones de Zope/Plone basadas en Buildout, se configura de la
 siguiente forma:
 
-
-Debe modificar su archivo de configuración buildout.cfg con el siguiente comando:
+Debe modificar su archivo de configuración ``buildout.cfg`` con el 
+siguiente comando:
 
 .. code-block:: sh
 
-  vim DIRECTORIO_INSTALACION/buildout.cfg
+  vim /ruta/absoluta/al/directorio/de/instalacion/buildout.cfg
 
-Y luego busca la tarea llamada "[instance]" dentro de tu configuración
-buildout de asigna la siguiente definición:
+Y luego busque la sección llamada ``[instance]`` dentro de tu configuración
+buildout para asignar la siguiente definición:
 
 .. code-block:: cfg
 
-  [instance]
-  recipe = plone.recipe.zope2instance
-  
-  ...
-  
   zope-conf-additional =
     <ftp-server>
         # valid key is "address"
@@ -109,30 +105,49 @@ siguiente comando:
   ...
   2010-03-23 10:45:59 INFO Zope Ready to handle requests
 
+Desde aquí, simplemente acceda a conectarse por el cliente FTP que
+disponga, para este caso se demuestra la conexión usando el cliente 
+**gFTP** de la siguiente forma:
 
-Desde allí, simplemente apunte su manipular un cliente FTP definiendo la
-conexión con los siguientes datos:
+.. tip::
 
-- ***Dirección IP:*** la dirección pública o privada para conectarse al
-  servidor FTP, en nuestro caso es ***127.0.0.1***.
+    Esto implica que requiere tener instalado gFTP en su sistema operativo 
+    o otro cliente FTP alternativo.
 
-- ***Puerto:*** el número del puerto para conectarse al servidor FTP,
-  en nuestro caso es ***8021***.
-- ***Usuario:*** el nombre del usuario de Zope/Plone para conectarse al
-  servidor FTP, en nuestro caso es ***admin***, (usuario por defecto de
+- **Servidor:** la dirección pública o privada para conectarse al
+  servidor FTP, en nuestro caso es **127.0.0.1**.
+
+- **Puerto:** el número del puerto para conectarse al servidor FTP,
+  en nuestro caso es **8021**.
+  
+- **Usuario:** el nombre del usuario de Zope/Plone para conectarse al
+  servidor FTP, en nuestro caso es **admin**, (usuario por defecto de
   administración Zope). Si es quieres definir otro usuario para subir
   archivos FTP debes otorgar los permisos de FTP.
-- ***Contraseña:*** la contraseña del usuario de Zope/Plone.
+  
+- **Contraseña:** la contraseña del usuario de Zope/Plone.
+
+  .. warning::
+
+      Justo al lado derecho del campo de contraseña hay una lista de 
+      selección simple donde debe seleccionar la opción **FTP**, para 
+      establecer que tipo de conexión desea establecer.
+
+.. note::
+    Para establecer la conexión presiona la tecla **Enter** o hace clic en 
+    el botón ubicado justo al lado izquierdo del campo **Servidor**.
 
 .. image:: ./images/FTP4Plone.png
   :alt: Cliente FTP conectado a un sitio Plone
   :align: center
-  :width: 800pt
-  :height: 500pt
+  :width: 640pt
+  :height: 400pt
   :target: ../_images/FTP4Plone.png
 
 **Figura 1: Cliente FTP conectado a un sitio Plone**
 
+De esta forma puede subir archivos de forma masiva usando este protocolo
+de transferencia con Zope / Plone.
 
 Referencias
 ===========
