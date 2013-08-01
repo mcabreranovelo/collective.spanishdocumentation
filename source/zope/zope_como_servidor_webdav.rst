@@ -9,19 +9,19 @@ Configurar Zope como un servidor WebDAV
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 01 de Agosto de 2013
 
 Descripción general
 ===================
 
-Zope tiene a disposición su propio servidor WebDAV, usted solo necesita
-activarlo y configurarlo.
-
 `WebDAV`_, es un protocolo relativamente nuevo de Internet basado
 en el protocolo subyacente de la Web, el HTTP. DAV significa en Ingles
-Distributed Authoring and Versioning. Porque es relativamente nuevo es
+**Distributed Authoring and Versioning**. Porque es relativamente nuevo es
 posible qu no sea soportado por muchos editores de texto y editores HTML como
 es el caso del protocolo FTP.
+
+Para este caso el servidor Zope tiene a disposición su propio servidor WebDAV, 
+usted solo necesita activarlo y configurarlo.
 
 Configuración
 =============
@@ -39,17 +39,17 @@ comando:
 Instalaciones No-Buildout
 -------------------------
 
-Para instalaciones basadas en paquetes de distros, instalador de MS Windos,
-entre otros que no soporte Buildout:
+Para instalaciones de Zope / Plone basadas en sistema de paquetes para 
+distribuciones Linux, instalador de MS Windows, que no soporte Buildout 
+debe realizar la siguiente configuraciones:
 
-
-Modifica tu archivo zope.conf con el siguiente comando:
+Modifique archivo de configuración ``zope.conf`` con el siguiente comando:
 
 .. code-block:: sh
 
   vim $INSTANCE_HOME/etc/zope.conf
 
-Y luego asigna la siguiente definición:
+Y luego asigne la siguiente definición:
 
 .. code-block:: cfg
 
@@ -66,21 +66,17 @@ Instalaciones con Buildout
 Para instalaciones de Zope/Plone basadas en Buildout, se configura de la
 siguiente forma:
 
-Modifica tu archivo buildout.cfg con el siguiente comando:
+Debe modificar su archivo de configuración ``buildout.cfg`` con el 
+siguiente comando:
 
 .. code-block:: sh
 
-  vim DIRECTORIO_INSTALACION/buildout.cfg
+  vim /ruta/absoluta/al/directorio/de/instalacion/buildout.cfg
 
-Y luego busca la tarea llamada "[instance]" dentro de tu configuración
-buildout de asigna la siguiente definición:
+Y luego busque la sección llamada ``[instance]`` dentro de tu configuración
+buildout para asignar la siguiente definición:
 
 .. code-block:: cfg
-
-  [instance]
-  recipe = plone.recipe.zope2instance
-
-  ...
 
   zope-conf-additional =
       <webdav-source-server>
@@ -96,8 +92,8 @@ Ejecución del servidor WebDAV
 =============================
 
 Luego guarde los cambios y inicie de nuevo la instancia del servicio de
-Zope en modo depuración para verificar que inicio el servidor WebDAV, con el
-siguiente comando:
+Zope en modo depuración para verificar que inicio el servidor WebDAV, 
+con el siguiente comando:
 
 .. code-block:: sh
 
@@ -116,64 +112,76 @@ siguiente comando:
    2010-03-23 10:45:59 INFO Zope Ready to handle requests
 
 
-Desde aquí, simplemente accedemos a conectarse por el cliente WebDAV que
+Desde aquí, simplemente acceda a conectarse por el cliente WebDAV que
 dispone el Navegador Nautilius de GNOME de la siguiente forma:
 
-Acceda desde el menú principal llamado "Lugares": ::
-
-  Lugares -> Carpeta personal
-
-Luego haga clic en  el menú principal llamado "Archivo"
+Acceda desde el menú principal llamado "Lugares" :menuselection:`Lugares --> Carpeta personal`. 
+Luego haga clic en  el menú principal llamado :menuselection:`Archivo --> Conectar con el servidor...`.
 
 .. image:: ./images/access-server-webdav-from-gnome0.png
   :alt: Conectar con el servidor WebDAV
   :align: center
+  :width: 350px
+  :height: 342px
 
-Archivo -> Conectar con el servidor...
+**Figura 1: Conectar con el servidor WebDAV**
+
+Seguidamente le mostrara una ventana de configuración de conexión.
 
 .. image:: ./images/access-server-webdav-from-gnome1.png
   :alt: Definir parámetros de conexión al WebDAV
   :align: center
+  :width: 561px
+  :height: 345px
+
+**Figura 2: Definir parámetros de conexión al WebDAV**
 
 Definir parámetros de conexión al WebDAV
 
 
-- ***Tipo de Servidor:*** Debe definir el tipo de servidor al cual se
+- **Tipo de Servidor:** Debe definir el tipo de servidor al cual se
   va a conectar en nuestro caso WebDAV (HTTP).
 
-- ***Servidor:*** la dirección pública o privada para conectarse al
-  servidor WebDAV, en nuestro caso es ***127.0.0.1***.
+- **Servidor:** la dirección pública o privada para conectarse al
+  servidor WebDAV, en nuestro caso es **127.0.0.1**.
 
-- ***Puerto:*** el numero del puerto para conectarse al servidor
-  WebDAV, en nuestro caso es ***8280***.
+- **Puerto:** el numero del puerto para conectarse al servidor
+  WebDAV, en nuestro caso es **8280**.
 
-- ***Carpeta:*** es la ruta relativa al directorio raíz de Zope desde
+- **Carpeta:** es la ruta relativa al directorio raíz de Zope desde
   tendrá acceso a los archivos del sitio Plone, en nuestro caso es el
-  nombre de mi sitio llamado ***Plone***.
+  nombre de mi sitio llamado **Plone**.
 
-- ***Usuario:*** el nombre del usuario de Zope/Plone para conectarse al
-  servidor WebDAV, en nuestro caso es ***admin***, (usuario por defecto de
+- **Usuario:** el nombre del usuario de Zope/Plone para conectarse al
+  servidor WebDAV, en nuestro caso es **admin**, (usuario por defecto de
   administración Zope). Si es quieres definir otro usuario para subir
   archivos WebDAV debes otorgar los permisos de WebDAV.
 
-- ***Nombre de la conexión:*** el nombre del icono de la conexión en el
-  escritorio y sistema de archivos de GNOME, en nuestro caso es ***Mi Sitio
-  Plone 3***.
+- **Nombre de la conexión:** el nombre del icono de la conexión en el
+  escritorio y sistema de archivos de GNOME, en nuestro caso es **Mi Sitio
+  Plone 3**.
 
-Luego haga clic en el icono de acceso al WebDAV llamado ***Mi Sitio Plone
-3***.
+Luego haga clic en el icono de acceso al WebDAV llamado **Mi Sitio Plone 3**.
 
 .. image:: ./images/access-server-webdav-from-gnome2.png
   :alt: Icono de acceso al WebDAV
   :align: center
+  :width: 244px
+  :height: 86px
+
+**Figura 3: Icono de acceso al WebDAV**
 
 Ahora tiene que colocar contraseña de conexión
 
 .. image:: ./images/access-server-webdav-from-gnome3.png
   :alt: Colocar contraseña de conexión
   :align: center
+  :width: 533px
+  :height: 315px
 
-WebDAV con Plone a través de GNOME
+**Figura 4: Colocar contraseña de conexión**
+
+Y así de esta forma puede usar WebDAV con Plone a través de GNOME.
 
 .. image:: ./images/access-server-webdav-from-gnome4.png
   :alt: WebDAV con Plone a través de GNOME
@@ -182,6 +190,7 @@ WebDAV con Plone a través de GNOME
   :height: 471pt
   :target: ../_images/access-server-webdav-from-gnome4.png
   
+**Figura 5: WebDAV con Plone a través de GNOME**
 
 Referencias
 ===========
