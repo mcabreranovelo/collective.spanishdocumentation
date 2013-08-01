@@ -43,7 +43,6 @@ Todas esta documentación es licencia por:
 
 * Copyright © 2012 - 2013 Documentación oficial de Plone por `Leonardo J. Caballero G. <leonardocaballero@gmail.com>`_. Todos los derechos reservados.
 
-
 -------
 
 Ver :ref:`historia_licencia` para información completa sobre los términos y licencia.
