@@ -9,7 +9,7 @@
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 31 de Julio de 2013
+:Fecha: 01 de Agosto de 2013
 
 ¿En que consta compactar la ZODB?
 =================================
@@ -76,7 +76,7 @@ Usando ZEO y zc.buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Si tu instalación es un :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` y usando 
-:ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado `zeopack` 
+:ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado ``zeopack`` 
 que ofrece esta instalación para que cada cierto tiempo realice tareas de 
 compactar la ZODB, a continuación un ejemplo de configuración:
 
@@ -127,13 +127,33 @@ archivo ``buildout.cfg`` como se muestra a continuación:
         method /pack_it_all
         period 86400
         user admin
-        password password
+        password SU-CONTRASEÑA
         host localhost
      </clock-server>  
 
-Ejecute de nuevo el buildout y luego inicie el servidor Zope, entonces diríjase al 
-raíz de Zope desde la :ref:`ZMI <que_es_zmi>`, y cree un "Script(Python)" con el 
-id ``pack_it_all`` y agregue en su contenido algo como esto:
+Ejecute de nuevo el buildout y luego inicie el servidor Zope, entonces diríjase 
+al raíz de Zope desde la :ref:`ZMI <que_es_zmi>`, del lado derecha elija de la 
+lista de selección la opción **Script (Python)** y haga clic en el botón **Add**, 
+como se ilustra a continuación:
+
+.. image:: ./images/zmi_select_to_add_script_python.jpg
+  :alt: Agregar "Script (Python)" desde la Zope Management Interface - ZMI
+  :align: center
+  :width: 314px
+  :height: 310px
+  :target: ../_images/zmi_select_to_add_script_python.jpg
+
+Entonces en el campo **Id** coloque ``pack_it_all``, luego haga clic en el botón 
+**Add and Edit**, como se ilustra a continuación: 
+
+.. image:: ./images/zmi_add_script_python.jpg
+  :alt: Detalle del "Script (Python)" desde la Zope Management Interface - ZMI
+  :align: center
+  :width: 431px
+  :height: 195px
+  :target: ../_images/zmi_add_script_python.jpg
+
+Seguidamente agregue el siguiente contenido al script:
 
 .. code-block:: python
 
@@ -143,11 +163,15 @@ id ``pack_it_all`` y agregue en su contenido algo como esto:
   for name in names:
     if name != 'temporary':
       dbs[name].manage_pack(days=3)
-      print "packed %s" % name
+      print "packed database %s" % name
     
   return printed
-  
-Con esto se compactara la ZODB cada tres días.
+
+Para guardar esta modificación haga clic al botón **Save Changes**, para probar 
+el funcionamiento del script puede hacer clic en la pestaña **Test** para verificar 
+su funcionamiento, de igual forma con las configuraciones del producto ``Products.ClockServer`` 
+descrita en la declarativa ``zope-conf-additional`` dentro de su sección ``instance`` 
+se programa la tarea la cual compactara la ZODB cada tres (3) días.
 
 
 Referencias
