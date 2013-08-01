@@ -8,6 +8,7 @@ Programar tareas con crontab
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
+:Compatible con: Python 2.4 o versiones superiores
 :Fecha: 31 de Julio de 2013
 
 Descripción general
@@ -20,8 +21,8 @@ tareas con `crontab`_ locales al usuario efectivo del proyecto.
 Instalación
 ===========
 
-Puedes instalar zc.buildout usando :ref:`pip <que_es_pip>` (es recomendable hacerlo dentro de
-un :ref:`entorno virtual <creacion_entornos_virtuales>`):
+Puedes instalar zc.buildout usando :ref:`pip <que_es_pip>` (es recomendable 
+hacerlo dentro de un :ref:`entorno virtual <creacion_entornos_virtuales>`):
 
 .. code-block:: sh
 
@@ -39,9 +40,9 @@ Inicializar el proyecto
 
   $ python bootstrap.py
 
-Ahora el nuevo directorio :file:`tareas-crontab` es un proyecto zc.buildout. El archivo de
-configuración predeterminado de buildout es :file:`buildout.cfg`. Después de la
-inicialización, tendrá el siguiente contenido:
+Ahora el nuevo directorio :file:`tareas-crontab` es un proyecto zc.buildout. 
+El archivo de configuración predeterminado de buildout es :file:`buildout.cfg`. 
+Después de la inicialización, tendrá el siguiente contenido:
 
 .. code-block:: cfg
 
@@ -65,8 +66,8 @@ Puedes cambiarlo a:
   command = ${buildout:bin-directory}/instance restart
 
 
-Ahora ejecuta el comando buildout disponible dentro del directorio
-``tareas-crontab/bin`` con el argumento -v (verbose mode), esto ayudará a que
+Ahora ejecuta el comando ``buildout`` disponible dentro del directorio
+``tareas-crontab/bin`` con el argumento ``-v`` (verbose mode), esto ayudará a que
 muestre todo los detalles de la construcción del mismo:
 
 .. code-block:: sh
@@ -86,7 +87,7 @@ Ejecute el programa Bash script generado con el siguiente comando:
 
 
 Y de esta forma se ha generado la tarea del ``crontab`` que reinicia 
-la instancia de Zope diariamente a ls `3 am`.
+la instancia de Zope diariamente a las `3 am`.
 
 
 Descarga código fuente

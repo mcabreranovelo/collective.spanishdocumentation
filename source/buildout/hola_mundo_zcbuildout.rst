@@ -8,6 +8,7 @@ Hola mundo en zc.buildout
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
+:Compatible con: Python 2.4 o versiones superiores
 :Fecha: 31 de Julio de 2013
 
 Descripción general
@@ -41,7 +42,7 @@ Inicializar el proyecto
 
   $ buildout init
 
-Ahora el nuevo directorio holamundo es un proyecto buildout. El archivo de
+Ahora el nuevo directorio ``holamundo`` es un proyecto buildout. El archivo de
 configuración predeterminado de este proyecto es ``buildout.cfg``. Después 
 de la inicialización, tendrá el siguiente contenido:
 
@@ -76,15 +77,15 @@ Puedes cambiarlo a:
   command = chmod u+x ${hola-mundo:output}
 
 
-Ahora ejecuta el comando buildout con el argumento ``-v`` (verbose mode), esto ayudará a que
-muestre todo los detalles de la construcción del mismo. 
+Ahora ejecuta el comando ``buildout`` con el argumento ``-v`` (verbose mode), 
+esto ayudará a que muestre todo los detalles de la construcción del mismo. 
 
 .. code-block:: sh
 
   $ ./bin/buildout -v
 
-Esto creará un nuevo programa Bash script dentro del directorio ``bin/hola``. Ejecute 
-el programa Bash script generado con el siguiente comando:
+Esto creará un nuevo programa Bash script dentro del directorio ``bin/hola``. 
+Ejecute el programa Bash script generado con el siguiente comando:
 
 .. code-block:: sh
 
@@ -108,8 +109,8 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Conclusiones
 ============
 
-Este ejemplo intenta mostrar las capacidades del :ref:`zc.buildout <que_es_zcbuildout>` como
-herramienta alternativa al `Makefile`_ y al `Apache Ant`_.
+Este ejemplo intenta mostrar las capacidades del :ref:`zc.buildout <que_es_zcbuildout>` 
+como herramienta alternativa al `Makefile`_ y al `Apache Ant`_.
 
 
 Artículos relacionados

@@ -8,6 +8,7 @@ Récipes Buildout
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
+:Compatible con: Python 2.4 o versiones superiores
 :Fecha: 31 de Julio de 2013
 
 Descripción general
@@ -128,12 +129,12 @@ Python/Zope/Plone:
   un script zope para hacer copias de seguridad de ``Data.fs``.
 
 - `plone.recipe.apache`_, es un récipe buildout para compilar,
-  instalar un servidor Web Apache desde los archivos fuentes con la
+  instalar un `servidor Web Apache`_ desde los archivos fuentes con la
   configuración adecuada.
 
-- `zest.recipe.mysql`_, es un récipe buildout para definir una base de datos MySQL.
+- `zest.recipe.mysql`_, es un récipe buildout para definir una base de datos `MySQL`_.
 
-- `z3c.recipe.ldap`_, es un récipe buildout para desplegar una servidor OpenLDAP.
+- `z3c.recipe.ldap`_, es un récipe buildout para desplegar una servidor `OpenLDAP`_.
 
 
 Récipes disponibles
@@ -156,14 +157,17 @@ Referencias
 
 - `Gestión de proyectos con Buildout`_ desde la comunidad Plone Venezuela.
 
-.. _collective.recipe.plonesite: http://pypi.python.org/pypi/collective.recipe.plonesite
-.. _collective.recipe.backup: http://pypi.python.org/pypi/collective.recipe.backup
-.. _plone.recipe.apache: http://pypi.python.org/pypi/plone.recipe.apache
-.. _z3c.recipe.ldap: http://pypi.python.org/pypi/z3c.recipe.ldap
-.. _collective.recipe.updateplone: http://pypi.python.org/pypi/collective.recipe.updateplone
-.. _zest.recipe.mysql: http://pypi.python.org/pypi/zest.recipe.mysql
 .. _plone.recipe.command: http://pypi.python.org/pypi/plone.recipe.command
+.. _collective.recipe.plonesite: http://pypi.python.org/pypi/collective.recipe.plonesite
+.. _collective.recipe.updateplone: http://pypi.python.org/pypi/collective.recipe.updateplone
 .. _mr.developer: http://pypi.python.org/pypi/mr.developer
+.. _collective.recipe.backup: http://pypi.python.org/pypi/collective.recipe.backup
+.. _servidor Web Apache: http://httpd.apache.org/
+.. _plone.recipe.apache: http://pypi.python.org/pypi/plone.recipe.apache
+.. _MySQL: http://www.mysql.com/
+.. _zest.recipe.mysql: http://pypi.python.org/pypi/zest.recipe.mysql
+.. _OpenLDAP: http://es.wikipedia.org/wiki/OpenLDAP
+.. _z3c.recipe.ldap: http://pypi.python.org/pypi/z3c.recipe.ldap
 .. _Lista de récipes Buildout:  http://www.buildout.org/docs/recipelist.html
 .. _Récipes Buidout disponibles en PYPI: http://pypi.python.org/pypi?:action=search&term=recipe+buildout&submit=search
 .. _Gestión de proyectos con Buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout

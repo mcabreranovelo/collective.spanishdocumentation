@@ -8,6 +8,7 @@ Replicación de proyectos Python
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
+:Compatible con: Python 2.4 o versiones superiores
 :Fecha: 31 de Julio de 2013
 
 .. _que_es_zcbuildout:
@@ -28,7 +29,7 @@ Estas son sus principales características:
 - Basado en Python.
 - Orientado a desarrollador.
 - Se puede replicar.
-- Es fácil trabajar con los formatos de paquetes eggs.
+- Es fácil trabajar con los formatos de :term:`paquetes Egg`.
 
 
 Terminología
@@ -135,7 +136,7 @@ Puedes cambiarlo a:
   interpreter = python
   eggs = zope.component
 
-Ahora ejecuta el comando buildout disponible dentro del directorio
+Ahora ejecuta el comando ``buildout`` disponible dentro del directorio
 ``mibuildout/bin`` sin ningún argumento. Esto creará un nuevo interprete Python
 dentro del directorio ``mibuildout/bin``:
 
