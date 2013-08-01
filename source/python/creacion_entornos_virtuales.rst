@@ -8,8 +8,8 @@ Creación de entornos virtuales Python
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Python 2.4 o versiones superiores
+:Fecha: 01 de Agosto de 2013
 
 .. _que_es_virtualenv:
 
@@ -69,7 +69,8 @@ Modos de Instalación
 ====================
 
 Para instalar paquete ``virtualenv`` en su sistema puede instalarlo con 
-``Setuptools``, ``Distribute`` para paquete Egg o por sistema paquete Debian
+:ref:`Setuptools <que_es_setuptools>`, :ref:`Distribute <que_es_distribute>` 
+para :term:`paquete Egg` o por sistema paquete Debian
 
 
 Instalación con paquete Debian 
@@ -93,7 +94,8 @@ Instalación con Setuptools
 --------------------------
 
 Para instalar ``virtualenv`` en distribuciones basadas en Debian GNU/Linux 
-con ``Setuptools``, debe instalar los requisitos previos con el siguiente comando: 
+con :ref:`Setuptools <que_es_setuptools>`, debe instalar los requisitos previos 
+con el siguiente comando: 
 
 .. code-block:: sh
 
@@ -111,7 +113,8 @@ Instalación con Distribute
 --------------------------
 
 Para instalar ``virtualenv`` en distribuciones basadas en Debian GNU/Linux 
-con ``Distribute``, debe instalar los requisitos previos con el siguiente comando: 
+con :ref:`Distribute <que_es_distribute>`, debe instalar los requisitos previos 
+con el siguiente comando: 
 
 .. code-block:: sh
 
@@ -181,7 +184,7 @@ esto debido a que su shell de comando inicia con el siguiente prefijo
 usted acaba de activar.
 
 Aquí ya puede usar herramientas como :ref:`easy_install <easyinstall_setuptools>` 
-o :ref:`pip <que_es_pip>` para instalar paquetes Egg....
+o :ref:`pip <que_es_pip>` para instalar :term:`paquetes Egg`....
 
 .. note::
 
@@ -191,7 +194,7 @@ o :ref:`pip <que_es_pip>` para instalar paquetes Egg....
 
 
 Desactivar el entorno virtual
------------------------------
+=============================
 
 Cuando termine de usar el entorno virtual puede desactivarlo de la siguiente
 forma: 
