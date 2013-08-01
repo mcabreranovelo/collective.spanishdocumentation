@@ -9,7 +9,7 @@ Distribute y pip
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Python 2.4 o versiones superiores
-:Fecha: 20 de Marzo de 2013
+:Fecha: 01 de Agosto de 2013
 
 Este articulo explica como instalar paquetes Python con ``Distribute`` y ``pip``.
 
@@ -31,8 +31,12 @@ en cualquier momento si los paquetes dependen del :ref:`paquete Setuptools <que_
 ``Distribute`` intervendrá para decir que ya ofrece el módulo de ``setuptools``.
 
 .. image:: ./pip_distribute.png
-  :align: center
   :alt: Move from Setuptools to Distribute
+  :align: center
+  :width: 409px
+  :height: 307px
+  :target: ../_images/pip_distribute.png
+
 
 Estado actual del Empaquetamiento en Python
 -------------------------------------------
@@ -67,6 +71,10 @@ información, por favor, consulte el `Futuro del Empaquetado`_.
 .. image:: ./state_of_packaging.jpg
   :alt: El estado actual de Empaquetado en Python
   :align: center
+  :width: 537px
+  :height: 307px
+  :target: ../_images/state_of_packaging.jpg
+
 
 .. note::
 
