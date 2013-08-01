@@ -9,7 +9,7 @@
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 31 de Julio de 2013
 
 ¿En que consta compactar la ZODB?
 =================================
@@ -22,10 +22,15 @@ automática y regularmente.
 
 Los beneficios son los siguientes:
 
--    Compactando la ZODB remueve las versiones de objetos viejos, así que una vez que se hace, ya no se puede deshacer.
--    Puede haber un poco de ventaja en el rendimiento.
--    Hay beneficios en el tamaño de la base de datos con respecto al espacio de almacenamiento físico del disco duro.
--    Compactar la ZODB es similar a un VACUUM en PostgreSQL.
+- Compactando la ZODB remueve las versiones de objetos viejos, así que una 
+  vez que se hace, ya no se puede deshacer.
+  
+- Puede haber un poco de ventaja en el rendimiento.
+
+- Hay beneficios en el tamaño de la base de datos con respecto al espacio de 
+  almacenamiento físico del disco duro.
+
+- Compactar la ZODB es similar a un VACUUM en PostgreSQL.
 
 Compactar la ZODB con tareas crontab
 ------------------------------------
@@ -56,19 +61,30 @@ realice tareas de compactar la ZODB, a continuación un ejemplo de configuració
   recipe = z3c.recipe.usercrontab
   times = 0 0 1 * * 
   command = ${buildout:bin-directory}/bin/zodbpack
-  
+
+.. tip::
+    En el comando ``wget`` contiene dos parámetros ``--user`` y ``--password`` 
+    deben tener asignado el nombre del usuario y contraseña Administrador Zope 
+    de su instalación.
+    
+    El parámetro ``--post-data`` define los días para el cual compactara la ZODB 
+    
+    En el caso de que use :ref:`puntos de montajes <puntos_montaje_zodb>` debe 
+    indicar la ruta en la dirección URL del comando ``wget``.
 
 Usando ZEO y zc.buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Si tu instalación es un :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` y usando :ref:`zc.buildout <que_es_zcbuildout>` puede 
-usar el script llamado `zeopack` que ofrece esta instalación para que cada cierto tiempo 
-realice tareas de compactar la ZODB, a continuación un ejemplo de configuración:
+Si tu instalación es un :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` y usando 
+:ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado `zeopack` 
+que ofrece esta instalación para que cada cierto tiempo realice tareas de 
+compactar la ZODB, a continuación un ejemplo de configuración:
 
 .. tip::
-    Un script ``zeopack`` sera generado para usted en el directorio bin del proyecto buildout, 
-    a menos que usted cambien eso con la opción ``zeopack-script-name``, en este caso el script 
-    sera llamado como el nombre que usted especifique en este parámetro. 
+    Un script ``zeopack`` sera generado para usted en el directorio bin del 
+    proyecto buildout, a menos que usted cambien eso con la opción 
+    ``zeopack-script-name``, en este caso el script sera llamado como el 
+    nombre que usted especifique en este parámetro. 
 
 .. code-block:: cfg
 
@@ -98,7 +114,7 @@ Compactando sin crontab
 Existe otra forma de realizar tareas de compactar la ZODB automáticamente 
 sin usar tareas crontab.
 
-Para esto agregue el producto `Products.ClockServer`_ en su seccion ``egg`` 
+Para esto agregue el producto `Products.ClockServer`_ en su sección ``egg`` 
 en su archivo ``buildout.cfg``. 
 
 Además agregue la siguiente configuración en la sección ``instance`` en su 
