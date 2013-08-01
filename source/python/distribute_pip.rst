@@ -8,7 +8,7 @@ Distribute y pip
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: Python 4 o versiones superiores
+:Compatible con: Python 2.4 o versiones superiores
 :Fecha: 20 de Marzo de 2013
 
 Este articulo explica como instalar paquetes Python con ``Distribute`` y ``pip``.

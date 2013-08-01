@@ -8,8 +8,8 @@ Esqueletos de proyectos Zope/Plone
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3 y Plone 4
+:Fecha: 31 de Julio de 2013
 
 Introducción
 ============
@@ -21,6 +21,10 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
 
 - **Esqueletos de proyectos Plone**:
 
+  .. note::
+      `Plone`_, Además de ser un sistema de gestión de contenidos, es como un Framework 
+      para desarrollo de aplicaciones, mas NO es de propósito general.
+
   - `ZopeSkel`_, es una colección de esqueletos para crear
     automáticamente paquetes e instancias en Zope.
 
@@ -29,17 +33,27 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
 
 - **Esqueletos de proyectos Zope**:
 
-  - `zopeproject`_, Tools and scripts for creating development
-    sandboxes for web applications that primarily use Zope.
+  .. note::
+      `Zope`_,  es un entorno de desarrollo para la creación de sitios web 
+      dinámicos y/o aplicaciones web escrito en el lenguaje de programación 
+      :ref:`Python <python_index>`.
+
+  - `zopeproject`_, Herramientas y scripts para la creación de entornos de 
+    pruebas de desarrollo para aplicaciones Web que usen principalmente Zope.
 
 
 - **Esqueletos de proyectos Grok**:
 
+  .. note::
+      `Grok`_, es un Framework para desarrollo de aplicaciones en Zope 3.
+
   - `grokcore.startup`_,  Soporte a Paster para proyectos Grok.
   
-  - `grokproject`_, Script that sets up a grok project directory,
-    installs Zope 3 and grok and creates a template for a grok application.
-
+  - `grokproject`_, Script que instala un directorio de proyecto instalando 
+    ``Zope 3`` con el framework ``grok``, además creando un plantilla para una 
+    aplicación ``grok``.
+  
+  
 .. _instalacion_zopeskel:
 
 Instalación
@@ -330,31 +344,28 @@ Esto es muy útil cuando requieres trabajar con un equipo de desarrolladores a l
 Recomendaciones
 ===============
 
-Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas paster y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas instrucciones para lograr con éxito la tarea deseada.
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos 
+(plantillas ``paster``) y Buildout simplemente seleccione cual esqueleto 
+va a utilizar para su desarrollo y proceso a instalarlo con 
+:ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` 
+(como se explico anteriormente) y siga sus respectivas instrucciones para 
+lograr con éxito la tarea deseada.
 
-.. seealso:: Articulos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
+.. seealso:: Artículos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
 
 Referencias
 ===========
 
 - `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_ desde la comunidad Plone Venezuela.
 
-.. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
-.. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel
-.. _django-harness: http://pypi.python.org/pypi/django-harness
-.. _lfc-skel: http://pypi.python.org/pypi/lfc-skel/
+.. _Plone: http://plone.org/
 .. _ZopeSkel: http://pypi.python.org/pypi/ZopeSkel
 .. _zopeskel.dexterity: http://pypi.python.org/pypi/zopeskel.dexterity/
+.. _Zope: http://zope.org/
 .. _zopeproject: http://pypi.python.org/pypi/zopeproject/
+.. _Grok: http://grok.zope.org/
 .. _grokcore.startup: http://pypi.python.org/pypi/grokcore.startup
 .. _grokproject: http://pypi.python.org/pypi/grokproject/
-.. _Pylons: http://pypi.python.org/pypi/Pylons/1.0
-.. _PylonsTemplates: http://pypi.python.org/pypi/PylonsTemplates/
-.. _BlastOff: http://pypi.python.org/pypi/BlastOff/
-.. _CherryPaste: http://pypi.python.org/pypi/CherryPaste
-.. _TracLegosScript: http://trac-hacks.org/wiki/TracLegosScript
-.. _trac_project: http://trac-hacks.org/browser/traclegosscript/anyrelease/example/oss
-.. _Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
 .. _A collection of skeletons for quickstarting projects with Ingeniweb products: http://pypi.python.org/pypi/IngeniSkel/
 .. _ifPeople's Additional templates for paster: http://pypi.python.org/pypi/ifpeople.pastertemplates/
 .. _Paster templates for standard NiteoWeb Plone projects: http://pypi.python.org/pypi/zopeskel.niteoweb/
@@ -365,3 +376,4 @@ Referencias
 .. _Quintagroup theme template for Plone 3 with nested namespace: http://pypi.python.org/pypi/quintagroup.themetemplate/
 .. _Project templates creating Web and Mobile themes for Plone: http://pypi.python.org/pypi/gomobile.templates/
 .. _Zopeskel template for plone.app.theming based theme development: https://github.com/hexagonit/hexagonit.themeskel
+.. _Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout

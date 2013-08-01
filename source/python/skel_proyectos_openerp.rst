@@ -8,20 +8,21 @@ Esqueletos de proyectos OpenERP
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Probado con Python 2.6 o versiones superiores
+:Fecha: 31 de Julio de 2013
 
 Introducción
 ============
 
-`OpenERP`_, es un sistema ERP y CRM. Tiene componentes separados en esquema Cliente-servidor. 
-Dispone de interfaces XML-RPC, y SOAP. Emplea a Postgresql como sistema manejador de bases de 
-datos y ha sido programado con Python, lo cual permite que su adecuación e implantación sea 
-limpia y pueda tener una curva bastante menor que otras soluciones ERP existentes. 
+`OpenERP`_, es un sistema ERP y CRM. Tiene componentes separados en esquema 
+Cliente-servidor. Dispone de interfaces XML-RPC, y SOAP. Emplea a Postgresql 
+como sistema manejador de bases de datos y ha sido programado con Python, lo 
+cual permite que su adecuación e implantación sea limpia y pueda tener una 
+curva de adopción bastante menor que otras soluciones ERP existentes. 
 
-Entonces para su desarrollo existen una serie de colecciones de plantillas *esqueletos* de módulos 
-y temas basados en :ref:`Paster <skel_python>`, para proyectos que permiten iniciar rápidamente 
-el desarrollo en OpenERP.
+Entonces para su desarrollo existen una serie de colecciones de plantillas 
+*esqueletos* de módulos y temas basados en :ref:`Paster <skel_python>`, para 
+proyectos que permiten iniciar rápidamente el desarrollo en OpenERP.
 
 Requerimientos previos
 ======================
@@ -34,7 +35,8 @@ Se requiere instalar las siguientes dependencias con el siguiente comando:
 Instalación
 ===========
 
-Dentro de su entorno virtual activado debe instalar el paquete `openerp_bootstrap`_, ejecutando el siguiente comando: 
+Dentro de su entorno virtual activado debe instalar el paquete `openerp_bootstrap`_, 
+ejecutando el siguiente comando: 
 
 .. code-block:: sh
 
@@ -60,7 +62,7 @@ tiene disponible para usa, ejecutando el siguiente comando:
       openerp_theme:      Template for creating a basic openerp theme skeleton
       paste_deploy:       A web application deployed through paste.deploy
 
-Usted puede usar el comando paster para crear paquetes Python. 
+Usted puede usar el comando ``paster`` para crear paquetes Python. 
 
 .. code-block:: sh
 
@@ -220,9 +222,10 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Recomendaciones
 ===============
 
-Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas ``paster`` 
-y Buildout simplemente seleccione cual esqueleto va a utilizar para su desarrollo y proceso a 
-instalarlo con Easy Install o PIP (como se explico anteriormente) y siga sus respectivas 
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas 
+``paster`` y Buildout simplemente seleccione cual esqueleto va a utilizar para su 
+desarrollo y proceso a instalarlo con :ref:`easy_install <que_es_easyinstall>` o 
+:ref:`PIP <que_es_pip>` (como se explico anteriormente) y siga sus respectivas 
 instrucciones para lograr con éxito la tarea deseada.
 
 .. seealso:: Artículos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
