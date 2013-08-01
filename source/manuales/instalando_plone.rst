@@ -8,8 +8,8 @@ Instalación de Plone
 
 :Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
 :Correo(s): lsumoza@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 31 de Julio de 2013
 
 En esta es una traducción del articulo llamado `Installing Plone`_ donde se ofrece 
 la información básica para la instalación de Plone en Windows, OS X, Linux, BSD
@@ -166,7 +166,7 @@ Asistente de instalación de Plone
     se inicie automáticamente con el inicio de Windows.
     
     .. note::
-        esto se puede cambiar en cualquier momento ejecutando ``bin\\instance.exe remove`` 
+        esto se puede cambiar en cualquier momento ejecutando ``bin\instance.exe remove`` 
         en su directorio de instalación o si desea ejecutar Plone después de que la
         instalación haya culminado.
 
@@ -180,7 +180,7 @@ continuación ejecutar:
 
 .. code-block:: sh
 
-    bin/instance.exe fg
+    bin\instance.exe fg
 
 o mediante el uso del Controlador GUI (interfaz gráfica de usuario) de Plone.
 
@@ -191,13 +191,13 @@ o detenerlo. Ahora si usted decide hacer de Plone un servicio ejecute:
 
 .. code-block:: sh
 
-    bin/instance.exe install
+    bin\instance.exe install
 
 Del mismo modo, para la desinstalación ejecute: 
 
 .. code-block:: sh
 
-    bin/instance.exe remove
+    bin\instance.exe remove
 
 Una vez que usted haya iniciado una instancia de Plone, la puede ver
 visitando http://localhost:8080/ en su navegador web. Si no se carga,
@@ -424,6 +424,7 @@ configuración de Zope:
     Enterprise Objects) le permite tener varios procesos de clientes Zope (o
     servidores separados) que comparten una base común de datos de objetos de
     procesos de servidores.
+    
 -   Una instancia autónoma de Zope.
 
 
@@ -438,14 +439,17 @@ ventajas para el uso de producción y también desarrollo.
     balanceo de cargas, clientes independientes y procesos de servidores
     pueden distribuir mejor las cargas en servidores modernos multi-núcleo.
     Con un proxy de balanceo de carga, mejores resultados son posibles.
+    
 -   La capacidad de ejecutar scripts contra un sitio en producción. Usted
     puede usar ``zopectl run`` para ejecutar scripts en alguno de los clientes
     mientras que otros sirven el sitio a internet.
+    
 -   Mejor depuración. Usted puede correr un cliente en modo depuración
     mientras que el resto corre en modo producción. De esta manera puede
     mejorar los diagnósticos para la instancia de depuración. También podrá
     usar herramientas de introspección como Clouseau y el comando ``zopectl debug`` 
     en contra de un sitio en producción.
+    
 -   Usted puede reservar un cliente para acceso administrativo (tendrá su
     propio puerto). Luego si usted tiene un incremento súbito en la demanda
     del sitio antes de que esté listo, podrá realizar cambios a través del
@@ -477,7 +481,7 @@ los siguientes instalados:
 
     Idealmente debería tener también las librerías *libssl* y *readline*, 
     y los encabezados de desarrollo cargados (usualmente los paquetes 
-    libssl-dev y readline-dev). Realmente estos no son requeridas, pero 
+    *libssl-dev* y *readline-dev*). Realmente estos no son requeridas, pero 
     agregan una funcionalidad deseable. *libssl* se requiere para usar TLS 
     (Seguridad de la Capa de Transporte) con su servidor de correo electrónico, 
     lo cual puede ser vital si este no es local. Para detalles lea el 
@@ -551,7 +555,7 @@ Revisando su instalación
 
 Si su instalación fue exitosa, trate de iniciarla siguiendo las instrucciones
 que se muestran al final del proceso de instalación (o en el archivo
-README.txt que está en el directorio de instalación). Los problemas de
+``README.txt`` que está en el directorio de instalación). Los problemas de
 arranque no son comunes pero de vez en cuando aparecen; la causa más común es
 que otros procesos ya están usando el puerto 8080 (o uno o más de los puertos
 8100, 8080 y 8081 si está usando ZEO). Si es así, puede detener o eliminar
@@ -565,10 +569,9 @@ y navegando a http://localhost:8080/. (Si esta haciendo la prueba en otra
 computadora, substituya el nombre (ip o url) de su servidor host por
 "localhost".)
 
-Se debería mostrar un mensaje de bienvenida de Zope. Un sitio de prueba
-debería estar disponible en http://localhost:8080/Plone, y la Interfaz de
-Administración de Zope (Zope Management Interface -ZMI) en
-http://localhost:8080/manage
+Se debería mostrar un mensaje de bienvenida de Zope. Un sitio de prueba debería 
+estar disponible en http://localhost:8080/Plone, y la :ref:`Interfaz de Administración de Zope <zmi>` 
+(Zope Management Interface -ZMI) en http://localhost:8080/manage
 
 Si aparentemente Zope está ejecutándose, pero no puede conectarse, compruebe
 si tal vez un cortafuegos (firewall) está emplazado y bloqueando la conexión.
@@ -681,27 +684,71 @@ manera siguen siendo útiles para usted.
 Puede agregar la siguientes opciones a su línea de comando ``install.sh`` para un
 control más refinado de su instalación:
 
---target=pathname
-    Úsela para especificar rutas de nivel superior para las instalaciones. 
-    Las instancias de Plone y Python se construirán dentro de este directorio.
-
---user=user-name
-    En una instalación root, define el usuario efectivo para ejecutar la instancia. 
-    Por defecto es el usuario "plone". Ignorado para las instalaciones no-root.
-
---with-python=/fullpathtopython2.x
+``--with-python=/full/path/to/python-2.7``
     Si usted ya tiene una construcción Python adecuada para ejecutar Zope/Plone, 
     lo puede especificar aquí. :ref:`virtualenv <que_es_virtualenv>` se usara para 
     crear un entorno aislado de Python para la instalación. La librería del sistema 
-    de su sitio no se tocara. Se requiere Python 2.4 para Plone 3.x, y Python 2.6 
-    para Plone 4. Su Python debe satisfacer las necesidades de Plone, y el 
-    instalador pondrá a prueba el soporte para las librerías zlib, *libssl* y xml 
-    antes de construir para ellas.
+    de su sitio no se tocara. 
+    
+    Se requiere Python 2.4 para Plone 3.x, y Python 2.6 / Python 2.7 para Plone 4.     
+    Su Python debe satisfacer las necesidades de Plone, y el instalador pondrá a prueba 
+    el soporte para las librerías zlib, *libssl* y *xml* antes de construir para ellas.
+    
+    Ruta absoluta al Python 2.7 que usted dese usar con el entorno virtual Plone 
+    a ser usado para la instalación aislada.
+    
+``--build-python``
+    Si usted no tiene un Python adecuado disponible, el instalador construir 
+    uno para usted si usted define esta opción. Requiere acceso a Internet 
+    para descargar fuentes de Python.
 
---password=InstancePassword
+``--password=InstancePassword``
     Si no se especifica, una contraseña aleatoria sera generada.
 
---without-ssl
+``--target=pathname``
+    Úsela para especificar rutas de nivel superior para las instalaciones. 
+    Las instancias de Plone y Python se construirán dentro de este directorio.
+
+``--clients=client-count``
+    Use con el método de instalación zeo para especificar el numero de clientes 
+    Zope que usted desea crear. Por defecto son 2.
+
+``--instance=instance-name``
+    Se utiliza para especificar el nombre de la instancia de operación que se 
+    creará. Este será creado en el directorio de destino. El valor predeterminado 
+    es ``zinstance`` para el método de instalación **standalone**, ``zeocluster`` para 
+    el método de instalación **ZEO**.
+
+``--daemon-user=user-name``
+    En una instalación en modo servidor, establece el usuario efectivo de la gestión del
+    instancia. El valor predeterminado es 'plone_daemon'. Ignorado para las instalaciones 
+    modo ``no-root``.
+
+``--user=user-name``
+    En una instalación root, define el usuario efectivo para ejecutar la instancia. 
+    Por defecto es el usuario "plone". Ignorado para las instalaciones no-root.
+
+``--owner=owner-name``
+    En una instalación en modo servidor, establece la propiedad total de 
+    la instalación. El valor predeterminado es 'buildout_user'. Este es el 
+    ID de usuario que se debe emplear para ejecutar buildout o hacer src o 
+    cambios en los productos. Ignorado para las instalaciones modo ``no-root``.
+
+``--group=group-name``
+    En una instalación en modo servidor, establece el grupo eficaz para el demonio y
+    usuarios de buildout. El valor predeterminado es 'plone_group'. Ignorado para las 
+    instalaciones modo ``no-root``.
+
+``--template=template-name``
+    Especifica el nombre del archivo de plantilla ``buildout.cfg``. El archivo de plantilla 
+    debe estar en el subdirectorio ``buildout_templates``. El valor predeterminado 
+    es ``buildout.cfg``.
+
+``--static-lxml``
+    Fuerza a incorporar dependencias estáticas de ``libxml2`` y ``libxslt``. 
+    Requiere acceso a Internet para descargar los componentes.
+
+``--without-ssl``
     Las librerías de desarrollo SSL (generalmente OpenSSL) se necesitan al construir 
     Python para que soporten SSL (protocolo de capa de conexión segura) y TLS (protocolo 
     para seguridad de la capa de transporte). Sin ellas Plone no podrá utilizar TLS en 
@@ -710,14 +757,14 @@ control más refinado de su instalación:
     para indicarle al instalador que usted sabe lo que esta haciendo y que desea continuar 
     sin las SSL.
 
---without-lxml
+``--without-lxml``
     ``lxml``, un wrapper (empaquetador) de Python para ``libxml2`` y ``libxslt``, no es 
     requerido para Plone 4.1. Pero se necesita por algunos programas populares adicionales 
     como plone.app.theming. A menos que usted especifique esta opción, el instalador tratara 
     de construir ``lxml`` con las librerías estáticas ``libxml2`` y ``libxslt``. Puede que 
     esto no funcione en todas las plataformas.
 
---nobuildout 
+``--nobuildout``
     Saltar la ejecución de ``bin/buildout``. Usted debería saber que esta haciendo. El uso 
     principal para esta opción se refiere a cuando usted desea que el instalador Unificado 
     junte todas las piezas, para luego activar su propio archivo buildout.cfg.
@@ -729,23 +776,23 @@ instalador y hacer un enlace directamente a ellas. En el caso de que esto no
 sea lo que quiere, use las siguientes opciones de líneas de comando para
 ajustar este comportamiento.
 
-**--libz=auto|yes|no**
+``--libz=auto|yes|no``
 
-**--libjpeg=auto|yes|no**
+``--libjpeg=auto|yes|no``
 
-**--readline=auto|yes|no**
+``--readline=auto|yes|no``
 
-auto
+``auto``
      Tener este programa determina si necesita o no la librería instalada. 
      Si es necesaria, sera instalada en ``$PLONE_HOME``. Esta es el 
      comportamiento por defecto.
 
-yes
+``yes``
     para forzar la instalación en ``$PLONE_HOME`` (o ``$LOCAL_HOME``) para 
     enlaces estáticos, incluso si una copia en el sistema de la librería 
     esta disponible.
 
-no
+``no``
     para no forzar la instalación de la librería.
 
 
@@ -762,27 +809,27 @@ requeridos para la ejecución:
 
 .. code-block:: sh
 
-    sudo apt-get install build-essential
-    sudo apt-get install libssl-dev
-    sudo apt-get install libxml2-dev
-    sudo apt-get install libxslt1-dev
-    sudo apt-get install libbz2-dev
-    sudo apt-get install zlib1g-dev
+    $ sudo apt-get install build-essential
+    $ sudo apt-get install libssl-dev
+    $ sudo apt-get install libxml2-dev
+    $ sudo apt-get install libxslt1-dev
+    $ sudo apt-get install libbz2-dev
+    $ sudo apt-get install zlib1g-dev
 
 En vez de permitir al instalador usar su propios paquetes, es muy conveniente
 usar los paquetes del sistema para librerías comunes.
 
 .. code-block:: sh
 
-    sudo apt-get install libjpeg62-dev
-    sudo apt-get install libreadline-gplv2-dev
+    $ sudo apt-get install libjpeg62-dev
+    $ sudo apt-get install libreadline-gplv2-dev
 
 Y si usted quiere habilitar la anexión de documentos de Word y PDF:
 
 .. code-block:: sh
 
-    sudo apt-get install wv
-    sudo apt-get install poppler-utils
+    $ sudo apt-get install wv
+    $ sudo apt-get install poppler-utils
 
 
 .. _28_notas_plataforma:
@@ -863,55 +910,56 @@ Para resolver esto haga lo siguiente:
 
 1. Se necesita que las locaciones de todas las dependencias se ubiquen en Solaris:
 
- (a) gcc - /usr/local/bin/gcc (gcc-3.4.6 proveniente de www.sunfreeware.com - por defecto en solaris 10 es /opt/sfw/bin/gcc)
- (b) g++ - /usr/local/bin/g++ (Instalado con gcc-3.4.6 - por defecto en solaris 10 = /opt/sfw/bin/g++)
- (c) gmake - /opt/sfw/bin/gmake
- (d) gtar - /usr/sfw/bin/gtar
- (e) gzip - /usr/bin/gzip
- (f) bzip2 - /usr/bin/bzip2
+ (a) gcc - ``/usr/local/bin/gcc`` (gcc-3.4.6 proveniente de http://www.sunfreeware.com - por defecto en solaris 10 es ``/opt/sfw/bin/gcc``)
+ (b) g++ - ``/usr/local/bin/g++`` (Instalado con gcc-3.4.6 - por defecto en solaris 10 = ``/opt/sfw/bin/g++``)
+ (c) gmake - ``/opt/sfw/bin/gmake``
+ (d) gtar - ``/usr/sfw/bin/gtar``
+ (e) gzip - ``/usr/bin/gzip``
+ (f) bzip2 - ``/usr/bin/bzip2``
 
-Además ``install.sh`` usa el comando shell ``whoami`` , el cual en Solaris se encuentra en:
+ .. tip::
+     Además ``install.sh`` usa el comando shell ``whoami`` , el cual en Solaris se encuentra en:
 
- (g) whoami - /usr/ucb/whoami
+ (g) whoami - ``/usr/ucb/whoami``
 
 2. Garantice que todas las Rutas anteriores se encuentren en la ruta del sistema: 
 
-.. code-block:: sh
+  .. code-block:: sh
 
-        PATH=$PATH:/opt/sfw/bin:/usr/sfw/bin:/usr/ucb:/usr/ccs/bin
-        export PATH
+      PATH=$PATH:/opt/sfw/bin:/usr/sfw/bin:/usr/ucb:/usr/ccs/bin
+      export PATH
 
-(Si /usr/ccs/bin no es agregado, la compilación de Python fallara con "gmake:ar: Command not found".)
-
+  (Si ``/usr/ccs/bin`` no es agregado, la compilación de Python fallara con "gmake:ar: Command not found".)
+ 
 3. Debido a que el interruptor -e no esta presente en el shell Bourne de Solaris, 
-el script ``install.sh``, y todos los otros scripts, este se debe cambiar a bash: 
+   el script ``install.sh``, y todos los otros scripts, este se debe cambiar a bash: 
 
-.. code-block:: sh
+  .. code-block:: sh
 
-        #!/usr/bin/bash
+      #!/usr/bin/bash
 
 4. El script ``install.sh`` utiliza el comando shell ``which`` para localizar el software 
-que necesita para la construcción. Para garantizar que las versiones correctas del software 
-fueron utilizadas (en lugar de las predeterminadas de Solaris), ``install.sh`` fue modificado 
-explícitamente para definir las locaciones de cada pieza del software: 
+   que necesita para la construcción. Para garantizar que las versiones correctas del software 
+   fueron utilizadas (en lugar de las predeterminadas de Solaris), ``install.sh`` fue modificado 
+   explícitamente para definir las locaciones de cada pieza del software: 
 
-.. code-block:: sh
+  .. code-block:: sh
 
-        GCC=/usr/local/bin/gcc
-        GPP=/usr/local/bin/g++
-        GNU_MAKE=/opt/sfw/bin/gmake
-        GNU_TAR=/usr/sfw/bin/gtar
-        GUNZIP=/usr/bin/gunzip
-        BUNZIP2=/usr/bin/bunzip2
+      GCC=/usr/local/bin/gcc
+      GPP=/usr/local/bin/g++
+      GNU_MAKE=/opt/sfw/bin/gmake
+      GNU_TAR=/usr/sfw/bin/gtar
+      GUNZIP=/usr/bin/gunzip
+      BUNZIP2=/usr/bin/bunzip2
 
 
 5. Durante la construcción se necesitan ambas librerías: "libssl" y "readline". 
-Agréguelas a la ruta de la librería del sistema. 
+   Agréguelas a la ruta de la librería del sistema. 
 
-.. code-block:: sh
+  .. code-block:: sh
 
-        LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/ssl/lib:/opt/sfw/lib
-        export LD_LIBRARY_PATH
+      LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/ssl/lib:/opt/sfw/lib
+      export LD_LIBRARY_PATH
 
 Para mas información: `http://www.eng.ox.ac.uk/Plone/solaris/plone-installation`_
 
@@ -1274,7 +1322,7 @@ Plone Site" (Agregar nuevo sitio Plone) cerca del final de la pagina. Tomara
 unos segundos crear su sitio Plone
 
 Después de que su sitio se haya creado puede acceder a el mediante esta URL:
-*http://localhost:8080/Plone*, donde "Plone" es la identificación de su
+http://localhost:8080/Plone, donde "Plone" es la identificación de su
 sitio.
 
 Referencias
