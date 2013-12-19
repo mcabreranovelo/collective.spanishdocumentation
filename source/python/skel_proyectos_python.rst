@@ -9,7 +9,7 @@ Esqueletos de proyectos Python
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Python 2.4 o versiones superiores
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Introducción
 ============
@@ -249,7 +249,7 @@ Referencias
 .. _zopeproject: http://pypi.python.org/pypi/zopeproject/
 .. _grokcore.startup: http://pypi.python.org/pypi/grokcore.startup
 .. _grokproject: http://pypi.python.org/pypi/grokproject/
-.. _Pylons: http://pypi.python.org/pypi/Pylons/1.0
+.. _Pylons: http://pypi.python.org/pypi/Pylons/
 .. _PylonsTemplates: http://pypi.python.org/pypi/PylonsTemplates/
 .. _BlastOff: http://pypi.python.org/pypi/BlastOff/
 .. _CherryPy: http://pypi.python.org/pypi/CherryPy
