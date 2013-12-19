@@ -9,7 +9,7 @@ Replicación de proyectos Python
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Python 2.4 o versiones superiores
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 .. _que_es_zcbuildout:
 
@@ -25,11 +25,87 @@ Características
 ---------------
 Estas son sus principales características:
 
-- Permite definición de buildouts de forma declarativa.
-- Basado en Python.
-- Orientado a desarrollador.
-- Se puede replicar.
-- Es fácil trabajar con los formatos de :term:`paquetes Egg`.
+- **Basado en Python**, es una utilidad escrita en el lenguaje de programación Python, 
+  esto le permite agregar nuevas extensiones vía módulos a la herramienta.
+
+- **Sintaxis declarativa**, permite definición de configuraciones buildout de forma 
+  declarativa, basada en el formato .INI de Windows, es decir, clave = valor, haciendo 
+  esto una ventaja a las otras herramientas de auto-construcción de proyectos ya que su 
+  sintaxis es de fácil entendimiento ya que esta es un lenguaje de configuración 
+  de alto nivel.
+  
+  .. code-block:: ini
+    
+    ; last modified 1 April 2001 by John Doe
+    [owner]
+    name = John Doe
+    organization = Acme Widgets Inc.
+    
+    [database]
+    ; use IP address in case network name resolution is not working
+    server = 192.0.2.62
+    port = 143
+    file = "payroll.dat"
+
+  Este sistema de autoconstrucción es súper sencillo de escribir esta basado en la 
+  configuraciones de archivo .ini de Windows es decir "clave =  valor" mas adicionalmente 
+  ofrece el concepto de los recetas te permite usar tareas predefinidas para construir 
+  un servidor Zope, instalar un servidor de MySQL o PostgreSQL, o instalando lenguaje 
+  de programación como Python, PHP en fin. 
+
+- **Facilita el dia a dia del trabajo**, Orientado a desarrollador y administradores de sistemas.
+
+- **Se puede replicar**, eso quiere decir que puedes configurar Que instalar, y como configurar 
+  cosas en tu proyecto con la finalidad de agilizar el despliegue de proyectos en entornos de 
+  desarrollo, pruebas y producción.
+    
+- **Integración con sistema de paquetes**, es fácil trabajar con los formatos de :term:`paquetes Egg`.
+
+
+¿Por que usar zc.buildout?
+==========================
+
+Para entender por que es de utilidad zc.buildout hay que conocer las cosas que 
+conllevaron a su creación de herramienta hace unos años atrás la instalación de 
+aplicaciones en Python que tenias muchas dependencias era un dolor de cabeza ya 
+que tenia que instalar manualmente las dependencias en tu sistema para poder 
+iniciar la instalación de tu aplicación, entonces la solución en ese momento fue 
+crear un paquete de tipo ``bundle`` el cual consistía en un archivo comprimido 
+con todos los módulos que son necesario compilar o instalar en el PYTHONPATH de 
+tu interprete ``Python``.
+
+Ventajas:
+
+- En su momento no existía paquetes Egg Python ni mecanismos de solución de dependencias 
+  y esto facilitaba la solución de dependencias necesarias para su instalación.
+
+Desventajas:
+
+- Era casi imposible actualizar las librerías prácticamente tenias dos opciones: 
+  primero aplicabas parches a las librerías o segundo hacer una instalación que 
+  incluya los parches de seguridad y mueves la data hacia allá.
+
+Entonces paulatinamente la comunidad de Zope le fue natural que crearan un sistema de 
+autoconstrucción como Makefile o Apache Ant pero basado en Python que le ayuda a reconstruir 
+sus instalaciones, entonces para esto crearon `Buildout`_.
+
+En ejemplo típico de `Plone en entornos de producción`_ no solo es Plone, sino un cacheo de 
+contenidos, balanceo de cargas, motor de plantillas, servidor Web y todo esto se puede 
+construir con Buildout.
+
+Hasta puedes usar buildout para construir una `instalación LAMP`_ en este caso un ejemplo de 
+como instalar Wordpress.
+
+Como dice mi amigo Francsico Palm "Buildout, es un Makefile con esteroides" :D
+
+Desde la adopción de Plone de buildout se ha simplificado la instalaciones de Plone y se ha 
+creado todo un sistema de replicacion de entornos de trabajos al cual puedes acceder actualizaciones 
+de módulos Python de forma mas sencilla a nivel administrativo.
+
+Progresivamente fue natural que buildout implementara soporte a paquetes Egg Python, esto impulsado 
+por la fundación Python como una norma de crear aplicaciones distribuibles baja su filosofía de módulos 
+y paquetes. Esto causo que Zope siendo un paquete bundle se separa en muchos paquetes Egg Python y fue 
+algo natural que Plone también ;)
 
 
 Terminología
@@ -191,3 +267,8 @@ Referencias
 .. _zc.buildout: http://pypi.python.org/pypi/zc.buildout/
 .. _zope.component: http://pypi.python.org/pypi/zope.component
 .. _zc.recipe.egg: http://pypi.python.org/pypi/zc.recipe.egg
+.. _Buildout: http://www.buildout.org/
+.. _Plone en entornos de producción: http://plone-spanish-docs.readthedocs.org/es/latest/buildout/plone_esquema_alta_disponibilidad.html
+.. _instalación LAMP: http://docs.pythonpackages.com/en/latest/hosted-configs/wordpress.html
+.. _formato .INI: http://es.wikipedia.org/wiki/INI_%28extensi%C3%B3n_de_archivo%29
+
