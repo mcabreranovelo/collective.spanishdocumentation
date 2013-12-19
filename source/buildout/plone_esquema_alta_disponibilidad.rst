@@ -9,7 +9,7 @@ Buildout para instalar de todas las partes de un sitio
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -73,7 +73,7 @@ un servidor adicional de Nginx que ejecuta las reglas de los temas:
 Zope y ZEO
 ==========
 
-La construcción de ``Zope`` y el servidor de ``ZEO`` utilizan asímismo sus propias
+La construcción de ``Zope`` y el servidor de ``ZEO`` utilizan así mismo sus propias
 recetas. Algunas declaraciones es mejor definirlas como variables para poder
 reutilizarlas en otras partes del buildout sin tener que definirlas más de una
 vez. Estas definiciones de variables constan de una cadena encerrada entre
@@ -299,27 +299,25 @@ para iniciar y detener los servicios, así como consultar su status y logs:
     password = ${supervisor-settings:password}
     serverurl = http://${hosts:supervisor}:${ports:supervisor}
     programs =
-       10 zeo     ${zeoserver:location}/bin/runzeo
-                      true ${users:zope}
-       20 instance1 ${buildout:directory}/parts/instance1/bin/runzope 
-                      true ${users:zope}
-       20 instance2 ${buildout:directory}/parts/instance2/bin/runzope
-                      true ${users:zope}
-       20 instance3 ${buildout:directory}/parts/instance3/bin/runzope
-                      true ${users:zope}
-       20 instance4 ${buildout:directory}/parts/instance4/bin/runzope
-                      true ${users:zope}
-       30 balancer ${buildout:directory}/bin/haproxy
-          [-f ${buildout:directory}/production/balancer.conf -db]
-          true ${users:balancer}
-       40 transform ${nginx-build:location}/sbin/nginx
-          [-c ${buildout:directory}/production/transform.conf]
-          true ${users:transform}
-       50 cache ${buildout:directory}/bin/cache
-          true ${users:cache}
-       60 main ${nginx-build:location}/sbin/nginx
-          [-c ${buildout:directory}/production/main.conf]
-          true
+    #  Prio Name      Program                                      Params
+       10   zeo     ${zeoserver:location}/bin/runzeo true ${users:zope}
+       20   instance1 ${buildout:directory}/parts/instance1/bin/runzope true ${users:zope}
+       20   instance2 ${buildout:directory}/parts/instance2/bin/runzope true ${users:zope}
+       20   instance3 ${buildout:directory}/parts/instance3/bin/runzope true ${users:zope}
+       20   instance4 ${buildout:directory}/parts/instance4/bin/runzope true ${users:zope}
+       30   balancer ${buildout:directory}/bin/haproxy [-f ${buildout:directory}/production/balancer.conf -db] true ${users:balancer}
+       40   transform ${nginx-build:location}/sbin/nginx [-c ${buildout:directory}/production/transform.conf] true ${users:transform}
+       50   cache ${buildout:directory}/bin/cache true ${users:cache}
+       60   main ${nginx-build:location}/sbin/nginx [-c ${buildout:directory}/production/main.conf] true
+    
+    eventlisteners =
+    # Check every 60 seconds that no child process has exceeded. it's like a RSS memory quota
+    MemoryMonitor TICK_60 ${buildout:bin-directory}/memmon [-p instance1=200MB -p instance2=200MB -p instance3=200MB -p instance4=200MB -m macagua+leonardocaballero@gmail.com]
+    # Check every 60 seconds whether the plone instance is alive
+    HttpOk1 TICK_60 ${buildout:bin-directory}/httpok [-p instance1 -t 20 http://127.0.0.1:${ports:instance1}/${plone-sites:main}]
+    HttpOk2 TICK_60 ${buildout:bin-directory}/httpok [-p instance2 -t 20 http://127.0.0.1:${ports:instance2}/${plone-sites:main}]
+    HttpOk3 TICK_60 ${buildout:bin-directory}/httpok [-p instance3 -t 20 http://127.0.0.1:${ports:instance3}/${plone-sites:main}]
+    HttpOk4 TICK_60 ${buildout:bin-directory}/httpok [-p instance4 -t 20 http://127.0.0.1:${ports:instance4}/${plone-sites:main}]
 
 Rotar archivos con logrotate
 ============================
