@@ -9,7 +9,7 @@ Setuptools y EasyInstall
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
 :Lanzamiento: Python 4 o versiones superiores
-:Fecha: 20 de Marzo de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Este articulo explica como instalar paquetes Python con ``setuptools`` y ``EasyInstall``.
 
@@ -32,7 +32,7 @@ Entre sus características principales están:
   empaquetados en un sólo archivo para su distribución.
 
 * Incluye archivos de configuración y todos los archivos que forman parte del
-  directorio de trabajo, sin necesidad de listarlos individualmente o crear
+  directorio de trabajo, sin necesidad de listar cada uno individualmente o crear
   archivos de manifiesto.
 
 .. _que_es_easyinstall:
@@ -67,7 +67,7 @@ operativo como las que se muestran a continuación:
 
 La instalación es muy sencilla, solo se necesita bajar de Internet el
 archivo `ez_setup.py`_ y ejecutarlo con el Python que se desea utilizar, 
-con los siguientes comandos: 
+con los siguientes comando: 
 
 .. code-block:: sh
 
