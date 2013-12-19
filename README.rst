@@ -77,7 +77,7 @@ Si su editor de texto favorito no reconoce esta codificación
      .. -*- coding: utf-8 -*-
 
 
-Desplazamientos y indentaciones
+Desplazamientos e indentaciones
 ===============================
 
 El uso del carácter de tabulación en el texto fuente para las distintas
