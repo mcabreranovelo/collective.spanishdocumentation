@@ -18,7 +18,7 @@ La documentación licenciada con `Creative Commons Atribución-NoComercial-Compa
   * Compartir - copiar, distribuir, ejecutar y comunicar públicamente la obra.
   * Hacer obras derivadas.
 
-.. figure:: ../_static/ccommons.png
+.. figure:: ./ccommons.png
    :alt: logotipo Creative Commons
    :target: http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es
 
