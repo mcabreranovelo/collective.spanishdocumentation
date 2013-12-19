@@ -220,7 +220,7 @@ tareas de hospedaje y administrativa para un servidor de aplicación Zope /
 sitio de Plone.
 
 .. hlist::
-   :columns: 2
+   :columns: 3
 
    * :ref:`Zope Management Interface - ZMI <zmi>`.
    * :ref:`Comando de control de Zope <linea_comando_zope>`.
@@ -228,6 +228,7 @@ sitio de Plone.
    * :ref:`Configurar Zope y Plone como un demonio / servicio <configurar_zope_como_demonio>`.
    * :ref:`Configurar Zope como un servidor FTP <zope_como_ftp>`.
    * :ref:`Configurar Zope como un servidor WebDAV <zope_como_webdav>`.
+   * :ref:`Zope Object Database - ZODB <que_es_zodb>`.
    * :ref:`Configurar puntos de montajes para Data.fs separadas <puntos_montaje_zodb>`.
    * :ref:`¿Cómo compactar la ZODB de sitio Plone? <compactar_zodb>`.
    * :ref:`Importar y exportar contenido desde el ZMI <importar_exportar_data>`.
