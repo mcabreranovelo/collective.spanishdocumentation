@@ -2,19 +2,18 @@
 
 .. _zmi:
 
-===============================
 Zope Management Interface - ZMI
 ===============================
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 .. _que_es_zmi:
 
 ¿Qué es la ZMI?
-===============
+---------------
 
 Zope dispone de una interfaz administrativa accesible desde la Web, 
 por medio de la presente url http://localhost:8080/manage o accediendo 
@@ -35,14 +34,14 @@ una vista dentro de la jerarquía de objetos de Zope.
 .. _herramienta_plone_zmi:
 
 Herramientas de Plone en la ZMI
-===============================
+-------------------------------
 
 Plone ofrece herramientas persistente en la ZMI que representan una acción 
 realizada a un objeto Plone. A continuación describo algunas de esas 
 herramientas:
 
 Control Panel
--------------
+.............
 
 Esta herramienta proporciona facilidades de administración centralizadas de Zope. 
 En el Panel de control, puede reiniciar y apagar Zope, acceder a información de 
@@ -60,7 +59,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
   :target: ../_images/zmi_control_panel.jpg
 
 Database Management
-~~~~~~~~~~~~~~~~~~~~
+:::::::::::::::::::
 
 Esta herramienta le permite acceder a los controles de la base de datos de Zope. 
 Los base de datos Zope almacena los objetos. Aquí puede gestionar el tamaño de la 
@@ -78,7 +77,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 
 
 Debug Information
-~~~~~~~~~~~~~~~~~
+:::::::::::::::::
 
 Esta herramienta le permite hacer depuración de Zope Online.
 
@@ -88,13 +87,21 @@ productos encontrar fugas de memoria en sus productos, así como Zope sí mismo.
 Puede obtener la siguiente información:
 
 -  La versión de Zope.
+
 -  La versión de Python.
+
 -  El nombre de plataforma del sistema.
+
 -  La ruta del sistema de archivos de la base de software Zope, add-on software y archivos de datos.
+
 -  El número de ID (identificación) del proceso de Zope (si está disponible en su plataforma).
+
 -  La longitud del tiempo en que ha estado funcionando Zope.
+
 -  Las rutas de los módulos de Python búsquedas (sys.path).
+
 -  El tope de refcounts, que incluyen una tabla con los cambios realizados desde * la última instantánea.
+
 -  Las conexiones abiertas de objetos de base de datos.
 
 La versión de Zope, la versión de Python, y el nombre de plataforma del sistema 
@@ -115,7 +122,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_acl_users:
 
 acl_users
----------
+.........
 
 ``acl_users`` es una carpeta objeto que usa "plugins" que pueden implementarse 
 con varias interfaces de autenticación de usuario (por ejemplo LDAP y OpenID) 
@@ -138,7 +145,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_quickinstaller:
 
 portal_quickinstaller
----------------------
+.....................
 
 Rápidamente volver a instalar, desinstalar complementos. A menudo, más rápido 
 y más ligero que carga equivalente panel de control de Plone.
@@ -155,7 +162,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_setup:
 
 portal_setup
-------------
+............
 
 Algunos sitios web Plone muy grandes y complejos pueden romperse si lo que queramos 
 o añadir / quitar / instalar add-ons. A menudo es más seguro para ejecutar una sólo 
@@ -175,7 +182,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_actions:
 
 portal_actions
---------------
+..............
 
 Configura las diversos acciones disponible a que si estarán visibles/presentes o no.
 
@@ -191,7 +198,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_skins:
 
 portal_skins
-------------
+............
 
 ``portal_skins`` es una herramienta persistente en el directorio raíz del sitio 
 Plone la cual ofrece funciones para administrar capas de skin.
@@ -199,9 +206,11 @@ Plone la cual ofrece funciones para administrar capas de skin.
 Permite: 
 
 - Ver las carpetas de skins que están instaladas. 
+
 - Vea el orden de las capas de la skins (vía la pestaña de propiedades). 
+
 - También puede editar las plantillas, hojas de estilo y javascript en 
-    los directorios de skins. 
+  los directorios de skins. 
     
     .. tip::
         No lo recomiendo! Pero útil para la depuración.
@@ -218,7 +227,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_view_customizations:
 
 portal_view_customizations
---------------------------
+..........................
 
 La herramienta ``portal_view_customizations`` le mostrara los registros de viewlet 
 (y los administradores de viewlet allí registrados). Al igual que con vistas, puede 
@@ -238,7 +247,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_javascripts:
 
 portal_javascripts
-------------------
+..................
 
 Los Javascripts de Plone son administrado por el registro de recursos portal_javascripts en la ZMI.
 
@@ -272,7 +281,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_css:
 
 portal_css
-----------
+..........
 
 En Plone, la mayoría de los archivos CSS son gestionados por la herramienta 
 ``portal_css`` través del ZMI. Las plantillas de página aún puede importar 
@@ -294,7 +303,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_workflow:
 
 portal_workflow
----------------
+...............
 
 Un workflow provee una forma lógica de administrar contenido dentro 
 de un sitio Plone. Inicialmente se dispone de dos workflows, workflow 
@@ -324,7 +333,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 .. _zmi_portal_catalog:
 
 portal_catalog
---------------
+..............
 
 ``Zcatalog`` provee un mecanismo poderoso de indexación y búsqueda en la base 
 de datos Zope denominado ZCatalog. Es un wrapper de Zcatalog que provee índices 
@@ -384,9 +393,16 @@ Accede a tu ZMI de tu sitio Plone :menuselection:`Configuración del Sitio --> I
 **Catalog Maintenance:** con esta tarea realizas la actualización del catálogo, 
 el cual actualizará todos los registros del catálogo y eliminar registros no 
 válidos. Para ello, en la limpieza de todos los índices y volver a catalogar 
-todos los objetos actualmente indexados. Precaución el Borrado del catálogo 
-eliminará todas las entradas. El registro de progreso de cada N objetos re-indexado 
-al registro Zope (establecido en 0 para deshabilitar el registro).
+todos los objetos actualmente indexados. 
+
+.. warning:: 
+   
+   La eliminación del catálogo eliminará todas las entradas. Si desea realizar esta 
+   tarea presione el botón **Clear Catalog**.
+   
+   El registro de los progresos por cada N objetos re-indexado al registro Zope (esta 
+   definido en 0 para deshabilitar el registro). Para activar esta funcionalidad debe 
+   cambiar el valor a 1 y presione el botón **Change**.
 
 **Clear and Rebuild:** con esta tarea se se eliminarán todas las entradas del catálogo, 
 y luego caminar todo el portal en busca de objetos de contenido que deben ser indexados 
@@ -395,8 +411,38 @@ del catálogo de portal (scripts, plantillas) y conservar todo el contenido inde
 Esto puede tomar mucho tiempo, pero es la forma correcta de reconstruir un catálogo que 
 ha tenido indebidamente objetos añadidos o eliminados.
 
+.. _zmi_portal_migration:
+
+portal_migration
+----------------
+
+Provee una interfaz gráfica que le permite actualizar cada sitio Plone a las ultimas versiones 
+disponible en su sistema de archivos:
+
+Permite:
+
+- Actualizar su sitio Plone a las ultimas versiones disponible en su sistema de archivos.
+
+- Ejecutar la actualización e imprimirla sin afectar ningún cambio dentro de la ZODB, 
+  ideal para hacer pruebas de la actualización antes de aplicarla.
+
+Esta herramienta le permite aplicar los cambios dentro de cada sitio Plone que hospeda 
+dentro de su instancia Zope, esto significa que aunque usted allá actualizo los cambios 
+e instalado en su sistema de archivos parches de seguridad o migrado a una nueva versión 
+de Plone, están no son aplicadas automáticamente en cada ZODB de sus sitios desplegados.
+
+Para mas detalle consulte la herramienta en :menuselection:`Interfaz de Administración de Zope --> portal_migration`.
+
+.. image:: ./images/zmi_portal_migration.png
+  :alt: portal_catalog - ZMI
+  :align: center
+  :width: 486px
+  :height: 393px
+  :target: ../_images/zmi_portal_migration.png
+
+
 temp_folder
------------
+...........
 
 Temporary Folders son las carpetas que almacenan sus contenidos "en memoria", 
 en la misma forma como un disco RAM. El contenido de una carpeta temporal se pierden 
@@ -416,7 +462,7 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
   :target: ../_images/zmi_temp_folder.png
 
 Referencias
-===========
+...........
 
 -   `Using the Zope Management Interface`_.
 -   `Anatomía de Plone`_ de la empresa menttes.
