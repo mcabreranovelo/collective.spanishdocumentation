@@ -45,6 +45,12 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     
     Egg
         Ver :term:`paquetes Egg`.
+
+    Catalog
+    Catálogo
+        Es un índice interno de los contenidos dentro de Plone para que se pueda buscar. 
+        El objetivo del catálogo es que sea accesible a través de la :ref:`ZMI <que_es_zmi>` 
+        a través de la herramienta :ref:`portal_catalog <zmi_portal_catalog>`.
     
     Instalación de Zope
         El software propio del servidor de aplicaciones.
@@ -83,7 +89,7 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     Paquetes Python
         Es un termino generalmente usando para describir un módulo Python. en el
         más básico nivel, un paquete es un directorio que contiene un archivo
-        ``__init__.py`` y algún código Python.
+        :file:`__init__.py` y algún código Python.
     
     Productos
         Es una terminología usada por la comunidad Zope / Plone asociada a
@@ -113,12 +119,14 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     paquete Egg
     paquetes Egg
         Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
-        un archivo ``setup.py`` con metadata (como el nombre del autor y la correo
+        un archivo :file:`setup.py` con metadata (como el nombre del autor y la correo
         electrónico y información sobre el licenciamiento), como las dependencias del
-        paquete. La herramienta del ``setuptools``, es la librería Python que permite
+        paquete. 
+        La herramienta del :ref:`setuptools <que_es_setuptools>`, es la librería Python que permite
         usar el mecanismo de paquetes egg, esta es capaz de encontrar y descargar
-        automáticamente las dependencias de los paquetes Egg que se instale. Incluso
-        es posible que dos paquetes Egg diferentes necesiten utilizar simultáneamente
+        automáticamente las dependencias de los paquetes Egg que se instale. 
+
+        Incluso es posible que dos paquetes Egg diferentes necesiten utilizar simultáneamente
         diferentes versiones de la misma dependencia. El formato de paquetes Eggs
         también soportan una función llamada ``entry points``, una especie de
         mecanismo genérico de plug-in. Mucha más detalle sobre este tema se encuentra
@@ -175,7 +183,16 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
              
         2) Una declarativa cuyo valor puede ser variable o constante dentro de un programa 
         Python o en el sistema operativo.
-    
+
+    Workflow
+    Flujo de trabajo
+    Flujo de trabajos
+        Es una forma muy poderosa de imitar los procesos de negocio de su organización, es también 
+        la forma en se manejan la configuración de seguridad de Plone.
+
+    ZCatalog
+        Ver :term:`Catalog`.
+
     ZCML-slug
         Los así llamados "ZCML-slugs", era configuraciones que estaban destinados 
         a enlazar dentro de un directorio una configuración especial en una 
