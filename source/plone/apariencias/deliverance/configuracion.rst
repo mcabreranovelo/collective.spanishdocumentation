@@ -4,9 +4,9 @@
 
 .. _deliverance_configuracion:
 
-=============
-Configuración
-=============
+===========================
+Configuraciones adicionales
+===========================
 
 Para aplicar las reglas con ``Deliverance`` debemos hacerlo en el archivo ``rules.xml`` 
 y esto consiste en configurar el puerto que servirá como fuente de contenido, y el puerto 
