@@ -168,6 +168,6 @@ Referencias
 .. _zest.recipe.mysql: http://pypi.python.org/pypi/zest.recipe.mysql
 .. _OpenLDAP: http://es.wikipedia.org/wiki/OpenLDAP
 .. _z3c.recipe.ldap: http://pypi.python.org/pypi/z3c.recipe.ldap
-.. _Lista de récipes Buildout:  http://www.buildout.org/docs/recipelist.html
+.. _Lista de récipes Buildout:  http://www.buildout.org/en/latest/docs/recipelist.html
 .. _Récipes Buidout disponibles en PYPI: http://pypi.python.org/pypi?:action=search&term=recipe+buildout&submit=search
 .. _Gestión de proyectos con Buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
