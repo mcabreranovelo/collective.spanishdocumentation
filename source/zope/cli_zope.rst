@@ -2,20 +2,19 @@
 
 .. _linea_comando_zope:
 
-==========================
 Comando de control de Zope
 ==========================
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
-===================
+-------------------
 
-El comando para las tareas de Zope tasks es ``./bin/instance`` en su instalaciones 
-Plone basada en configuraciones buildout.
+El comando para las tareas de Zope tasks es :command:`./bin/instance` en su 
+instalaciones Plone basada en configuraciones buildout.
 
 Para mostrar la lista de comandos disponible ejecute el siguiente comando: 
 
@@ -40,12 +39,12 @@ Para mostrar la lista de comandos disponible ejecute el siguiente comando:
       the last configuration file is used.
 
 
-Para instalaciones antiguas de Plone, el comando es ``zopectl``.
+Para instalaciones antiguas de Plone, el comando es :command:`zopectl`.
 
 Iniciar la instancia Zope en modo foreground
-============================================
+--------------------------------------------
 
-En este modo se ejecuta el servidor Zope *foreground* y tiene un alias *fg*
+En este modo se ejecuta el servidor Zope *foreground* y tiene un alias ``fg``
 
 .. code-block:: sh
 
@@ -54,7 +53,7 @@ En este modo se ejecuta el servidor Zope *foreground* y tiene un alias *fg*
 Para cancelar este modo de ejecución use **Ctrl-C** (ej. EOF) para salir.
 
 Iniciar la instancia Zope en modo debug
-=======================================
+---------------------------------------
 
 En este modo se ejecuta el servidor Zope en modo *depuración* para inspeccionar su 
 base de datos objeto manualmente usando el shell interactivo de Python, con el 
@@ -82,7 +81,7 @@ Para salir de la consola interactiva ejecute la siguiente instrucción:
 
 
 Iniciar la instancia Zope en modo servicio / demonio
-====================================================
+----------------------------------------------------
 
 En este modo se ejecuta el servidor Zope *demonio* en este modo se utiliza para 
 entornos de producción, ejecute con el siguiente comando:
@@ -94,7 +93,7 @@ entornos de producción, ejecute con el siguiente comando:
 
 
 Detener la instancia Zope en modo servicio / demonio
-====================================================
+----------------------------------------------------
 
 Para esto debió previamente iniciado el servidor Zope *en modo servicio / demonio* 
 
@@ -105,9 +104,9 @@ Para esto debió previamente iniciado el servidor Zope *en modo servicio / demon
 
 
 Agregando usuarios desde la linea de comandos
-=============================================
+---------------------------------------------
 
-Usted necesita hacer esto cuando usted olvido la contraseña del usuario 'admin' 
+Usted necesita hacer esto cuando usted olvido la contraseña del usuario ``admin`` 
 de Zope o la base de datos esta dañada.
 
 Agregar usuario con permisos de Administración en Zope: 
@@ -126,8 +125,8 @@ usted probablemente quiera agregar un usuario adicional ``admin2``.
 
 
 Referencias
-===========
+...........
 
 -   `Plone Hosting`_.
 
-.. _Plone Hosting: http://collective-docs.readthedocs.org/en/latest/hosting/
+.. _Plone Hosting: http://developer.plone.org/hosting/
