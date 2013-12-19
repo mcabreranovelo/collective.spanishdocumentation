@@ -1,6 +1,6 @@
 .. -*- coding: utf-8 -*-
 
-.. todos_docs:
+.. _todos_docs:
 
 =======================================
 Lista de TODO generados automaticamente
@@ -15,6 +15,8 @@ La siguiente lista es generada automaticamente desde las directivas
   ..:doc:`writing </introduction/writing>`.
 
 Ver http://sphinx.pocoo.org/ext/todo.html para mas detalles.
+
+.. _lista_todos_docs:
 
 Elementos TODO
 ==============
