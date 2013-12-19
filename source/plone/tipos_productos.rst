@@ -2,17 +2,17 @@
 
 .. _desarrollar_productos:
 
-==========================================
-Desarrollar diversos productos con Plone 3
-==========================================
+========================================
+Desarrollar diversos productos con Plone
+========================================
 
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 19 de Diciembre de 2013
 
 En esta articulo busca explicar los tipos desarrollos de productos / módulos 
-disponibles para Plone 3.
+disponibles para Plone.
 
 Introducción
 ============
@@ -39,13 +39,19 @@ La estructura del código que se recomienda incluye las siguientes partes:
     generales de manejo de sitios Plone de una organización y puede incluir:
 
       * Configuraciones del sitio y propiedades de navegación.
+
       * Productos propios y de terceros que deben instalarse automáticamente
         con el sitio.
+
       * Configuraciones de viewlets.
+
       * Estructura inicial de contenido del sitio.
+
       * Pasos adicionales a la instalación del producto, como creación de
         cuentas de usuarios y contenido personalizado.
+
       * Portlets utilizados en el sitio.
+
       * Flujo de trabajos generales de la organización.
       
     Para crear este producto consulte el articulo :ref:`Creación de un producto de configuración <producto_policy>`.
@@ -57,10 +63,15 @@ La estructura del código que se recomienda incluye las siguientes partes:
     la presentación visual del sitio. Cada uno puede incluir:
 
       * Estilos de CSS.
+
       * Archivos de Javascript.
+
       * Archivos de Imágenes.
+
       * Plantillas de Plone modificados.
+
       * Plantillas originales del tema.
+
       * Vistas y viewlets especiales.
       
     Para crear este producto consulte el articulo :ref:`Creación de un paquete de tema <producto_tema>`.
@@ -70,10 +81,15 @@ La estructura del código que se recomienda incluye las siguientes partes:
     la base del sitio web.
 
       * Definición de tipos y campos.
+
       * Flujo de trabajos específicos para un tipo de contenido.
+
       * Vistas y viewlets especiales para un tipo de contenido.
+
       * Imágenes y estilos propios del contenido.
+
       * Portlets propios del contenido.
+
       * Índices y metadatos del catálogo para cada tipo utilizado.
 
   Productos de apoyo
@@ -81,15 +97,18 @@ La estructura del código que se recomienda incluye las siguientes partes:
     asociadas al contenido.
 
       * Utilerías (herramientas tipo *portal_xxx*).
+
       * Portlets generales.
+
       * Vistas y viewlets especiales.
+
       * Funcionalidades que extiendan Plone.
 
 
 Referencia
 ==========
 
-- `Desarrollo avanzado de sitios con Plone 3`_ desde la comunidad Plone Mexico.
+- `Desarrollo avanzado de sitios con Plone 3`_ desde la comunidad Plone México.
 
 .. _Desarrollo avanzado de sitios con Plone 3: http://www.plone.mx/docs/productos.html
 
