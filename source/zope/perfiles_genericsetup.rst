@@ -8,44 +8,46 @@ GenericSetup y Perfiles
 
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 19 de Diciembre de 2013
 
 Introducción
 ============
 
-GenericSetup es un mecanismo basado en XML para importar y exportar
-configuraciones de sitios Plone.
+GenericSetup es un mecanismo basado en XML para importar y exportar configuraciones 
+de sitios Plone.
 
-Se utiliza principalmente para modificar la configuración de un sitio al
-momento de instalar un producto. Entre otras cosas permite:
+Se utiliza principalmente para modificar la configuración de un sitio al momento de 
+instalar un producto. Entre otras cosas permite:
 
-* Registrar CSS en el ``portal_css``.
-* Registrar Javascript en el ``portal_javascript``.
+* Registrar los archivos CSS en el :ref:`portal_css <zmi_portal_css>`.
+
+* Registrar los archivos Javascript en el :ref:`portal_javascript <zmi_portal_javascripts>`.
+
 * Modificar los valores de diversas propiedades del sitio en el ``portal_properties``.
+
 * Registrar portlets
-* Registrar índices de búsqueda del ``portal_catalog``.
+
+* Registrar índices de búsqueda del :ref:`portal_catalog <zmi_portal_catalog>`.
+
 * Y mas...
 
-Usualmente los archivos de configuración para GenericSetup se guardan bajo la
-carpeta ``profiles/default`` dentro del producto.
+Usualmente los archivos de configuración para GenericSetup se guardan bajo la carpeta 
+:file:`profiles/default` dentro del producto.
 
-Toda la configuración que puede realizarse a través del panel de control de
-Plone y del ZMI, como por ejemplo el orden de los viewlets elegido en
-``/@@manage-viewlets``, puede guardarse y ser reutilizada mediante un perfil de
-GenericSetup.
+Toda la configuración que puede realizarse a través del panel de control de Plone y del 
+:ref:`ZMI <que_es_zmi>`, como por ejemplo el orden de los viewlets elegido en ``/@@manage-viewlets``, 
+puede guardarse y ser reutilizada mediante un perfil de GenericSetup.
 
-No es necesario editar manualmente los archivos XML del perfil de
-``GenericSetup``, pues siempre es posible modificar la configuración de Plone
-desde el sitio y después exportarla completa o en partes a XML. La herramienta
-``portal_setup`` en el ZMI permite exportar, importar y generar copias de las
-configuraciones.
+No es necesario editar manualmente los archivos XML del perfil de ``GenericSetup``, pues 
+siempre es posible modificar la configuración de Plone desde el sitio y después exportarla 
+completa o en partes a XML. La herramienta :ref:`portal_setup <zmi_portal_setup>` en el 
+:ref:`ZMI <que_es_zmi>` permite exportar, importar y generar copias de las configuraciones.
 
-Modificar los archivos de configuración en XML de un producto no ocasiona
-cambios inmediatos en el sitio de Plone, aun reiniciando el servidor. La
-configuración `real` del portal se almacena en la ZODB, por lo que es
-necesario reimportar los perfiles desde ``portal_setup`` o reinstalar el
-producto en cuestión desde el panel de control de Plone. Solo en ese momento
+Modificar los archivos de configuración en XML de un producto no ocasiona cambios inmediatos 
+en el sitio de Plone, aun reiniciando el servidor. La configuración `real` del portal se almacena 
+en la ZODB, por lo que es necesario reimportar los perfiles desde :ref:`portal_setup <zmi_portal_setup>` 
+o reinstalar el producto en cuestión desde el panel de control de Plone. Solo en ese momento
 sera modificada la configuración.
 
 .. note::
@@ -77,29 +79,39 @@ Términos importantes
     Para usuarios de Plone este es el perfil ``plone`` desde el producto ``CMFPlone``.
 
   perfil de extensión
-    Un perfil extensión es un conjunto de información de configuración que extiende 
-    el perfil base. Las mayoría de los productos define al menos un perfil de extensión
-    para definir sus producto.
+    Un perfil extensión es un conjunto de información de configuración 
+    que extiende el perfil base. Las mayoría de los productos define al 
+    menos un perfil de extensión para definir sus producto.
 
   perfil de versión
-    El perfil de versión puede definirse en el archivo ``metadata.xml``. Este le dice al
-    programa ``GenericSetup`` cual es la versión actual del perfil.
+    El perfil de versión puede definirse en el archivo :file:`metadata.xml`. 
+    Este le dice al programa ``GenericSetup`` cual es la versión actual del perfil.
 
   pasos de importar
-    Del Ingles ``import steps``, son los pasos de importar que le dice al programa GenericSetup como leer la configuración exportada para un perfil dado y aplicarlo en su sitio.
+    Del Ingles ``import steps``, son los pasos de importar que le dice al 
+    programa GenericSetup como leer la configuración exportada para un perfil 
+    dado y aplicarlo en su sitio.
 
   pasos de exportar
-    Del Ingles ``export steps``, son los pasos de exportar que le dice al programa ``GenericSetup`` como exportar la actual configuración de su sitio.
+    Del Ingles ``export steps``, son los pasos de exportar que le dice al 
+    programa ``GenericSetup`` como exportar la actual configuración de su 
+    sitio.
 
   manipulador de instalación
-    Del Ingles ``setup handler``, un manipulador de instalación es un termino dado a un paso de importar que ejecuta algún código de personalización Python. Este es otra forma de crear un paso de importar.
+    Del Ingles ``setup handler``, un manipulador de instalación es un termino 
+    dado a un paso de importar que ejecuta algún código de personalización Python. 
+    Este es otra forma de crear un paso de importar.
 
   pasos de actualizar
-    Del Ingles ``upgrade step``, un paso de actualizar da a usted la habilidad para actualizar el código desde una versión del perfil a otro. Esto es muy útil This is useful for one time changes that need to be made between versions.
+    Del Ingles ``upgrade step``, un paso de actualizar da a usted la habilidad 
+    para actualizar el código desde una versión del perfil a otro. Esto es útil 
+    para uno cambios de tiempo que necesitan ser hecho entre las versiones.
 
   snapshot
-    Un ``snapshot`` puede tomar la configuración actual en el ``portal_setup``.
-    Este puede después ser usada para comparar a otro ``snapshot`` o perfil. Esto puede ser útil cuando usted hace cambios a su sitio y quiere saber como afecta a su perfil.
+    Un ``snapshot`` puede tomar la configuración actual en el :ref:`portal_setup <zmi_portal_setup>`.
+    Este puede después ser usada para comparar a otro ``snapshot`` o perfil. 
+    Esto puede ser útil cuando usted hace cambios a su sitio y quiere saber 
+    como afecta a su perfil.
 
 Referenciando a Perfiles
 ========================
@@ -116,7 +128,9 @@ Un ejemplo podría ser el perfil desde el producto CMFPlone:
 
   profile-Products.CMFPlone:plone
 
-Esta es la sintaxis que es usada para dependencias en el archivo  metadata.xml. Por ejemplo, si usted siempre quiere ejecutar por defecto la dependencia ‘my.dependency’ antes de su perfil, usted podría usar:
+Esta es la sintaxis que es usada para dependencias en el archivo :file:`metadata.xml`. 
+Por ejemplo, si usted siempre quiere ejecutar por defecto la dependencia 'my.dependency' 
+antes de su perfil, usted podría usar:
 
 .. code-block:: text
 
@@ -131,13 +145,13 @@ Esta es la sintaxis que es usada para dependencias en el archivo  metadata.xml. 
 Creación de un perfil
 =====================
 
-Un perfil se declara utilizando la directriz <genericsetup> en el archivo
-``configure.zcml`` del producto. El instalador de Plone importara la
+Un perfil se declara utilizando la directriz ``<genericsetup>`` en el archivo
+:file:`configure.zcml` del producto. El instalador de Plone importara la
 configuración almacenada en el perfil llamado ``default``, pero es posible
 declarar otros perfiles con diferentes nombres e importarlos por separado, por
 ejemplo para ejecutar pruebas.
 
-Los archivos XML del perfil se colocan en el directorio ``profiles/default``
+Los archivos XML del perfil se colocan en el directorio :file:`profiles/default`
 dentro del producto.
 
 .. code-block:: xml
@@ -167,19 +181,21 @@ Mas información sobre ejecutar steps:
 
 Generación de Contenido
 =======================
-El programa ``GenericSetup`` le permite a usted importar y exportar contenido por la forma llamada ``structure``. Allí puede haber muchos archivos que controlan como este trabaja:
+El programa ``GenericSetup`` le permite a usted importar y exportar contenido 
+por la forma llamada ``structure``. Allí puede haber muchos archivos que controlan 
+como este trabaja:
 
 .. glossary::
 
   .objects
-    El archivo ``.objects`` contiene una lista de objeto IDs 
+    El archivo :file:`.objects` contiene una lista de objeto IDs 
     y su ``portal_types`` que la estructura necesita crear 
     los objetos. Los IDs también listan dentro de la estructura de 
     carpeta con más información acerca de cual crear. Por defecto 
     todos los elementos listados serán removido y se agregaran 
     de nuevo.
 
-    Ejemplo de un archivo ``.objects`` que toma desde el perfil ``Products.CMFPlone:plone``:
+    Ejemplo de un archivo :file:`.objects` que toma desde el perfil ``Products.CMFPlone:plone``:
 
       .. code-block:: ini
 
@@ -187,12 +203,12 @@ El programa ``GenericSetup`` le permite a usted importar y exportar contenido po
         front-page,Document
 
   .preserve
-    El archivo ``.preserve`` es una lista de IDs que, si están 
+    El archivo :file:`.preserve` es una lista de IDs que, si están 
     presente, no debería ser removido. Este podría ser usado 
     si usted conoce el perfil que puede ser ejecutado otra ves 
     y posiblemente remover su contenido.
 
-    El archivo ``.preserve`` típicamente contiene información que ``GenericSetup``
+    El archivo :file:`.preserve` típicamente contiene información que ``GenericSetup``
     usará para cuidar dos objetos existentes:
 
       .. code-block:: ini
@@ -201,10 +217,11 @@ El programa ``GenericSetup`` le permite a usted importar y exportar contenido po
         Members
 
   .delete
-    El archivo ``.delete`` es una lista de IDs que puede ser 
+    El archivo :file:`.delete` es una lista de IDs que puede ser 
     borrado desde el sitio.
 
-    Al igual que el archivo ``.preserve``, el archivo ``.delete`` usan la misma sintaxis. El siguiente podría ser valido para borrar dos objetos:
+    Al igual que el archivo :file:`.preserve`, el archivo :file:`.delete` usan la misma 
+    sintaxis. El siguiente podría ser valido para borrar dos objetos:
 
       .. code-block:: ini
 
@@ -212,9 +229,12 @@ El programa ``GenericSetup`` le permite a usted importar y exportar contenido po
         Members
 
   .properties
-    El archivo ``.properties`` típicamente contiene información que ``GenericSetup`` utilizará para crear la carpeta en la que reside. Esto le permite la exportación a estar representados en una jerarquía como lo es en el sitio.
+    El archivo :file:`.properties` típicamente contiene información que ``GenericSetup`` 
+    utilizará para crear la carpeta en la que reside. Esto le permite la exportación a estar 
+    representados en una jerarquía como lo es en el sitio.
 
-    Ejemplo de un archivo ``.properties`` tomada desde el perfil de ``Products.CMFPlone:plone`` para la carpeta ``Members``:
+    Ejemplo de un archivo :file:`.properties` tomada desde el perfil de ``Products.CMFPlone:plone`` 
+    para la carpeta ``Members``:
 
       .. code-block:: ini
 
@@ -249,7 +269,7 @@ Instalación un perfil desde Python
 ==================================
 
 Para instalar un perfil desde Python, por ejemplo para pruebas, se puede
-llamar por su nombre, en el formato *profile-${product_name}:${profile_id}*
+llamar por su nombre, en el formato ``profile-${product_name}:${profile_id}``
 
 Ejemplo:
 
@@ -269,11 +289,14 @@ producto.
 Otros Consejos
 ==============
 
-* Cuando instale un producto de tercero, siempre debe asegurarse de tener un respaldo de su sitio.
+* Cuando instale un producto de tercero, siempre debe asegurarse de tener un respaldo 
+  de su sitio.
 
-* Pruebe la instalación del producto en un entorno local antes de aplicarlo en el entorno de producción.
+* Pruebe la instalación del producto en un entorno local antes de aplicarlo en el entorno 
+  de producción.
 
-* Cuando escriba un manipulador de instalación de un perfil especifico como **importVarious**, asegúrese que ellos solamente ejecute el perfil usando ``context.readDataFile``.
+* Cuando escriba un manipulador de instalación de un perfil especifico como **importVarious**, 
+  asegúrese que ellos solamente ejecute el perfil usando ``context.readDataFile``.
 
 
 Referencias

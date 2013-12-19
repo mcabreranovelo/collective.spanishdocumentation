@@ -8,22 +8,27 @@ Zope Page Templates
 
 :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
 :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 19 de Diciembre de 2013
 
 ¿Qué es un Page Template de Zope?
 =================================
 
 * Herramienta para generar HTML dinámico.
+
 * Pensado para permitir a diseñadores y desarrolladores trabajar en conjunto.
+
 * Utiliza etiquetas de HTML con atributos extra.
+
 * Permite utilización de macros para reutilizar templates.
 
 Principios regidores de los ZPT
 ===============================
 
 * Permitir al diseñador trabajar con sus herramientas de edición.
+
 * Poder visualizar la página en edición tal como se verá en el sitio (WYSIWYG).
+
 * Mantener el código separado de los templates.
 
 Funcionamiento de los templates
@@ -35,10 +40,17 @@ Funcionamiento de los templates
 
       <h1 tal:content="context/title">Título del template</h1>
 
-* Se presenta como: <h1>Biblioteca del Congreso Nacional de Chile</h1>
+* Se presenta como:
+
+.. code-block:: html
+
+      <h1>Biblioteca del Congreso Nacional de Chile</h1>
+
 * Los templates utilizan el lenguaje TAL (Template Attribute Language).
+
 * Las instrucciones de TAL se indican como atributos dentro de las etiquetas
   de HTML normales.
+
 * Todas las instrucciones comienzan con tal: y son ignoradas por editores
   visuales.
 
@@ -58,20 +70,20 @@ Primer page template
 Tipos de expresiones
 --------------------
 
-* Expresiones Path, que siguen un camino a partir de un objeto inicial hasta
+* `Expresiones Path`, que siguen un camino a partir de un objeto inicial hasta
   un resultado:
   
 .. code-block:: html
 
        <p tal:content="context/objectValues"></p>
 
-* Expresiones Python, que evalúan una expresión en Python:
+* `Expresiones Python`, que evalúan una expresión en Python:
   
 .. code-block:: html
 
         <p tal:content="python:context.objectValues(['Folder'])"></p>
 
-* Expresiones String, que permiten insertar cadenas de texto con iterpolación
+* `Expresiones String`, que permiten insertar cadenas de texto con iterpolación
   simple:
   
 .. code-block:: html
@@ -81,7 +93,7 @@ Tipos de expresiones
 Insertar texto
 ==============
 
-Tal:content nos permite sustituir el texto completo de un tag de HTML. Si
+``tal:content`` le permite sustituir el texto completo de un tag de HTML. Si
 queremos insertar texto dentro de una frase, la práctica común es utilizar la
 etiqueta span para colocar el texto de reemplazo:
 
@@ -93,7 +105,7 @@ etiqueta span para colocar el texto de reemplazo:
 Repetición de estructuras
 =========================
 
-Repeat nos permite repetir una etiqueta, de manera similar a un ciclo for:
+``tal:repeat`` le permite repetir una etiqueta, de manera similar a un ciclo ``for``:
 
 .. code-block:: html
 
@@ -113,7 +125,7 @@ Repeat nos permite repetir una etiqueta, de manera similar a un ciclo for:
 Etiquetas condicionales
 =======================
 
-Condition nos permite evaluar una condición y mostrar o no un tag dependiendo
+``tal:condition`` le permite evaluar una condición y mostrar o no un tag dependiendo
 de si es falsa o verdadera:
 
 .. code-block:: html
@@ -150,7 +162,9 @@ Macros
 Para reutilización de templates:
 
 * Definen una parte de la página que puede ser usada en otros templates.
+
 * Permiten insertar elementos dinámicos dentro de los macros.
+
 * Utilizados ampliamente por Plone.
 
 Definición de un macro
@@ -158,8 +172,10 @@ Definición de un macro
 
 * Se definen utilizando atributos, en un lenguaje llamado METAL (Macro
   Expansion Tag Attribute Language).
-* Puden definirse varios dentro de un template, dentro de cualquier etiqueta.
-* Se almacenan dentro del atibuto 'macros' de la página:
+
+* Pueden definirse varios dentro de un template, dentro de cualquier etiqueta.
+
+* Se almacenan dentro del atributo 'macros' de la página:
 
 .. code-block:: html
 
@@ -172,8 +188,10 @@ Uso de un macro
 
 * El atributo use-macro se incluye dentro de cualquier etiqueta de HTML con el
   macro apropiado.
+
 * La etiqueta donde se incluye es completamente reemplazada por el código del
   macro.
+
 * El macro se identifica con una expresión de tipo path:
 
 .. code-block:: html

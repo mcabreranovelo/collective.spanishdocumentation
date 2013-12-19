@@ -9,9 +9,9 @@ Configurar puntos de montajes para Data.fs separadas
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
-El montaje de un sitio Plone con la base de datos objetos **Data.fs** 
+El montaje de un sitio Plone con la base de datos objetos :file:`Data.fs` 
 separadas puede ser muy útil si se están ejecutando varios sitios Plone 
 en una sola instancia de Zope.
 
@@ -27,7 +27,8 @@ este sitio si ocurre algo desastroso.
 ----------------------------------
 
 Es la capacidad de montar diferentes bases de datos de objetos Zope - 
-ZODB separadas, y así poder definir parámetros específicos para cada ZODB.
+:ref:`ZODB <que_es_zodb>` separadas, y así poder definir parámetros 
+específicos para cada :ref:`ZODB <que_es_zodb>`.
 
 
 Casos de usos
@@ -41,7 +42,7 @@ Establecer puntos de montaje a una instalación predeterminada
 -------------------------------------------------------------
 
 Este es el procedimiento para cambiar una configuración predeterminada en una
-instalación con un punto de montaje para un ZODB.
+instalación con un punto de montaje para un :ref:`ZODB <que_es_zodb>`.
 
 
 1.  Crear una instancia Plone en una máquina de desarrollo en alguna
@@ -54,16 +55,15 @@ instalación con un punto de montaje para un ZODB.
 
 3.  :ref:`Compacte la base de datos <compactar_zodb>` y detenga la instancia.
 
-4.  Copie el archivo *Data.fs* de esta instancia en un directorio con el
+4.  Copie el archivo :file:`Data.fs` de esta instancia en un directorio con el
     mismo **identificador** como el sitio que ha creado.
 
-5.  Acceda a este directorio creado en la carpeta *var/filestorage* en su
+5.  Acceda a este directorio creado en la carpeta :file:`var/filestorage` en su
     instancia de producción.
 
-6.  Utilice el récipe de zc.buildout llamado
-    `collective.recipe.filestorage`_ en su configuración buildout para crear
-    los puntos de montaje (donde las piezas se muestra una lista de los
-    identificador de nombres de sitio):
+6.  Utilice el récipe de zc.buildout llamado `collective.recipe.filestorage`_ 
+    en su configuración buildout para crear los puntos de montaje (donde las piezas 
+    se muestra una lista de los identificador de nombres de sitio):
 
     .. code-block:: cfg
 
@@ -86,7 +86,7 @@ instalación con un punto de montaje para un ZODB.
 
 9.  Utilice la lista desplegable en la parte superior derecha y seleccione 
     la opción **ZODB mount points** para crear un nuevo punto de montaje 
-    de ZODB. Usted debe ver a sus **puntos de montaje** listo para crearlos.
+    de :ref:`ZODB <que_es_zodb>`. Usted debe ver a sus **puntos de montaje** listo para crearlos.
 
 
 Establecer nuevos puntos de montajes
@@ -121,7 +121,7 @@ Hacer copias de seguridad con Data.fs separadas
 
 Al hacer copias de seguridad es un poco complejo usando las
 herramientas generadas por el buildout del `Instalador Unificado`_ (por
-el hecho de que cada Data.fs esta en su propio directorio), pero este
+el hecho de que cada :file:`Data.fs` esta en su propio directorio), pero este
 punto trabaja en su configuración buildout de la siguiente forma:
 
 .. code-block:: cfg
@@ -141,21 +141,21 @@ problemas al establecer puntos de montajes:
 Problemas de memoria
 --------------------
 
-El uso de archivos separados Data.fs requiere mucha memoria, en la que cada
-Data.fs, en cada cliente, se creará un objeto cache en la memoria RAM. Usted
+El uso de archivos separados :file:`Data.fs` requiere mucha memoria, en la que cada
+:file:`Data.fs`, en cada cliente, se creará un objeto cache en la memoria RAM. Usted
 puede reducir el número de objetos almacenados para todas las bases de datos
 a la vez en la parte de los puntos de montaje de su buildout, utilizando la
 opción de tamaño **zodb-cache**. Alternativamente, usted puede definir el
-número de objetos de un Data.fs particular usando una configuración adicional
+número de objetos de un :file:`Data.fs` particular usando una configuración adicional
 buildout con el prefijo **filestorage_**.
 
 Ver el récipe `collective.recipe.filestorage`_ para más
 detalles.
 
-En versiones posteriores ZODB, también es posible controlar el tamaño de la
-memoria, en bytes, en lugar de números de los objetos. Usted también puede
-buscar en el almacenamiento de blob (en el sistema de archivos) para cuando
-requiera almacenar objetos de gran tamaño en la ZODB.
+En versiones posteriores :ref:`ZODB <que_es_zodb>`, también es posible controlar 
+el tamaño de la memoria, en bytes, en lugar de números de los objetos. Usted 
+también puede buscar en el almacenamiento de blob (en el sistema de archivos) 
+para cuando requiera almacenar objetos de gran tamaño en la :ref:`ZODB <que_es_zodb>`.
 
 ¡Nunca jamás haga esto!
 -----------------------
@@ -174,9 +174,9 @@ muy pocos días después de que en realidad se elimino el objeto - y por
 supuesto que usted necesita para hacer un roll back en la base de datos de
 origen (la cual no aparecerá dañada), sino la base de datos de destino.
 
-Creo que las versiones posteriores de ZODB tienen algún tipo de bandera o
-marca "flag" que establezcan para evitar que esto no suceda, pero me gustaría
-tener cuidado.
+Creo que las versiones posteriores de :ref:`ZODB <que_es_zodb>` tienen algún 
+tipo de bandera o marca "flag" que establezcan para evitar que esto no suceda, 
+pero me gustaría tener cuidado.
 
 Referencias
 ===========

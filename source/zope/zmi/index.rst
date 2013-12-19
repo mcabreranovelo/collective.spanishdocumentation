@@ -24,12 +24,12 @@ no es fácil, ni tampoco lo protegerá de hacer cosas de novato.
 Dicha herramienta se llama Zope Management Interface - ZMI esta representa 
 una vista dentro de la jerarquía de objetos de Zope. 
 
-.. image:: ./images/zmi.png
+.. image:: ./zmi.png
   :alt: Zope Management Interface - ZMI
   :align: center
   :width: 465px
   :height: 283px
-  :target: ../_images/zmi.png
+  :target: ../../_images/zmi.png
 
 .. _herramienta_plone_zmi:
 
@@ -51,12 +51,12 @@ Los :term:`Productos Zope` se encuentran dentro del Panel de control.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> Control_Panel`.
 
-.. image:: ./images/zmi_control_panel.jpg
+.. image:: ./zmi_control_panel.jpg
   :alt: Control_Panel - ZMI
   :align: center
   :width: 471px
   :height: 258px
-  :target: ../_images/zmi_control_panel.jpg
+  :target: ../../_images/zmi_control_panel.jpg
 
 Database Management
 :::::::::::::::::::
@@ -68,12 +68,12 @@ de la caché de base de datos de Zope.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> Control_Panel --> Database`.
 
-.. image:: ./images/zmi_database_management.png
+.. image:: ./zmi_database_management.png
   :alt: Database Management - ZMI
   :align: center
   :width: 461px
   :height: 181px
-  :target: ../_images/zmi_database_management.png
+  :target: ../../_images/zmi_database_management.png
 
 
 Debug Information
@@ -98,9 +98,9 @@ Puede obtener la siguiente información:
 
 -  La longitud del tiempo en que ha estado funcionando Zope.
 
--  Las rutas de los módulos de Python búsquedas (sys.path).
+-  Las rutas de los módulos de Python búsquedas (``sys.path``).
 
--  El tope de refcounts, que incluyen una tabla con los cambios realizados desde * la última instantánea.
+-  El tope de ``refcounts``, que incluyen una tabla con los cambios realizados desde * la última instantánea.
 
 -  Las conexiones abiertas de objetos de base de datos.
 
@@ -112,12 +112,12 @@ de la web.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> Control_Panel --> DebugInfo`.
 
-.. image:: ./images/zmi_debugifo.png
+.. image:: ./zmi_debugifo.png
   :alt: DebugInfo - ZMI
   :align: center
   :width: 700px
   :height: 331px
-  :target: ../_images/zmi_debugifo.png
+  :target: ../../_images/zmi_debugifo.png
 
 .. _zmi_acl_users:
 
@@ -135,12 +135,12 @@ Sólo puede tener una ``User Folder`` por carpeta. Las ``User Folder`` siempre t
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> acl_users`.
 
-.. image:: ./images/zmi_acl_users.png
+.. image:: ./zmi_acl_users.png
   :alt: acl_users - ZMI
   :align: center
   :width: 639px
   :height: 307px
-  :target: ../_images/zmi_acl_users.png
+  :target: ../../_images/zmi_acl_users.png
 
 .. _zmi_portal_quickinstaller:
 
@@ -152,12 +152,12 @@ y más ligero que carga equivalente panel de control de Plone.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller`.
 
-.. image:: ./images/zmi_portal_quickinstaller.png
+.. image:: ./zmi_portal_quickinstaller.png
   :alt: portal_quickinstaller - ZMI
   :align: center
   :width: 540px
   :height: 290px
-  :target: ../_images/zmi_portal_quickinstaller.png
+  :target: ../../_images/zmi_portal_quickinstaller.png
 
 .. _zmi_portal_setup:
 
@@ -167,17 +167,17 @@ portal_setup
 Algunos sitios web Plone muy grandes y complejos pueden romperse si lo que queramos 
 o añadir / quitar / instalar add-ons. A menudo es más seguro para ejecutar una sólo 
 específica actualización GenericSetup. Por ejemplo, si se ha añadido un nuevo portlet, 
-en lugar de importar el específico (``portlets.xml``) paso a través de portal_setup 
-(la pestaña de import), y luego volver a instalar todo el producto.
+en lugar de importar el específico (:file:`portlets.xml`) paso a través de portal_setup 
+(la pestaña de ``import``), y luego volver a instalar todo el producto.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup`.
 
-.. image:: ./images/zmi_portal_setup.png
+.. image:: ./zmi_portal_setup.png
   :alt: portal_setup - ZMI
   :align: center
   :width: 799px
   :height: 309px
-  :target: ../_images/zmi_portal_setup.png
+  :target: ../../_images/zmi_portal_setup.png
 
 .. _zmi_portal_actions:
 
@@ -188,12 +188,12 @@ Configura las diversos acciones disponible a que si estarán visibles/presentes 
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_actions`.
 
-.. image:: ./images/zmi_portal_actions.png
+.. image:: ./zmi_portal_actions.png
   :alt: portal_actions - ZMI
   :align: center
   :width: 800px
   :height: 321px
-  :target: ../_images/zmi_portal_actions.png
+  :target: ../../_images/zmi_portal_actions.png
 
 .. _zmi_portal_skins:
 
@@ -217,12 +217,12 @@ Permite:
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_skins`. 
 
-.. image:: ./images/zmi_portal_skins.png
+.. image:: ./zmi_portal_skins.png
   :alt: portal_skins - ZMI
   :align: center
   :width: 800px
   :height: 380px
-  :target: ../_images/zmi_portal_skins.png
+  :target: ../../_images/zmi_portal_skins.png
 
 .. _zmi_portal_view_customizations:
 
@@ -237,19 +237,19 @@ la vista @@manage-viewlets, por ejemplo, como http://localhost:8080/plone/@@mana
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_view_customizations`. 
 
-.. image:: ./images/zmi_portal_view_customizations.png
+.. image:: ./zmi_portal_view_customizations.png
   :alt: portal_view_customizations - ZMI
   :align: center
   :width: 728px
   :height: 372px
-  :target: ../_images/zmi_portal_view_customizations.png
+  :target: ../../_images/zmi_portal_view_customizations.png
 
 .. _zmi_portal_javascripts:
 
 portal_javascripts
 ..................
 
-Los Javascripts de Plone son administrado por el registro de recursos portal_javascripts en la ZMI.
+Los Javascripts de Plone son administrado por el registro de recursos ``portal_javascripts`` en la ZMI.
 
 Permite automáticamente:
 
@@ -261,22 +261,22 @@ Permite automáticamente:
 
 -  Soporte a comentario adicionales pata el navegador Internet Explorer.
 
-Entonces los Javascripts usan portal_javascripts para registrarse en el sitio Plone de las siguientes formas:
+Entonces los Javascripts usan ``portal_javascripts`` para registrarse en el sitio Plone de las siguientes formas:
 
--  A través de la Web usando la herramienta portal_javascripts en la ZMI.
+-  A través de la Web usando la herramienta ``portal_javascripts`` en la ZMI.
 
--  Usando el archivo jsregistry.xml de GenericSetup el cual al ejecutarse 
+-  Usando el archivo :file:`jsregistry.xml` de GenericSetup el cual al ejecutarse 
    (y cada ves que se ejecute de nuevo) cuando se utiliza el instalador 
    ``add-on`` en el panel de control.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_javascripts`. 
 
-.. image:: ./images/zmi_portal_javascripts.png
+.. image:: ./zmi_portal_javascripts.png
   :alt: portal_javascripts - ZMI
   :align: center
   :width: 766px
   :height: 431px
-  :target: ../_images/zmi_portal_javascripts.png
+  :target: ../../_images/zmi_portal_javascripts.png
 
 .. _zmi_portal_css:
 
@@ -285,7 +285,7 @@ portal_css
 
 En Plone, la mayoría de los archivos CSS son gestionados por la herramienta 
 ``portal_css`` través del ZMI. Las plantillas de página aún puede importar 
-archivos CSS directamente, pero la portal_css hace la compresión de archivos 
+archivos CSS directamente, pero la ``portal_css`` hace la compresión de archivos 
 CSS y los fusiona automáticamente.
 
 Básicamente lo mismo que :ref:`portal_javascripts <zmi_portal_javascripts>` 
@@ -293,50 +293,50 @@ pero para hojas de estilos.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_css`. 
 
-.. image:: ./images/zmi_portal_css.png
+.. image:: ./zmi_portal_css.png
   :alt: portal_css - ZMI
   :align: center
   :width: 766px
   :height: 431px
-  :target: ../_images/zmi_portal_css.png
+  :target: ../../_images/zmi_portal_css.png
 
 .. _zmi_portal_workflow:
 
 portal_workflow
 ...............
 
-Un workflow provee una forma lógica de administrar contenido dentro 
-de un sitio Plone. Inicialmente se dispone de dos workflows, workflow 
-por defecto y el workflow de carpetas. El workflow por defecto establece 
-los estados y transiciones para cada tipo de contenido excepto las carpetas 
-que poseen su propio workflow.
+Un Flujo de trabajo o también conocido como :term:`Workflow` le provee una forma 
+lógica de administrar contenido dentro de un sitio Plone. Inicialmente se dispone 
+de dos Flujo de trabajo, Flujo de trabajo por defecto y el Flujo de trabajo de carpetas. 
+El flujo de trabajo por defecto establece los estados y transiciones para cada tipo de contenido 
+excepto las carpetas que poseen su propio Flujo de trabajo.
 
 Permite: 
 
-- Asociar Content Types y workflows.
+- Asociar :term:`Tipos de contenidos` y :term:`Workflow`.
 
-- Modificar Workflows existentes.
+- Modificar :term:`Workflow` existentes.
 
-- Crear un nuevo workflow.
+- Crear un nuevo :term:`Workflow`.
 
-- Personalizar las configuraciones de seguridad de workflows dados.
+- Personalizar las configuraciones de seguridad de :term:`Workflow` dados.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_workflow`.
 
-.. image:: ./images/zmi_portal_workflow.png
+.. image:: ./zmi_portal_workflow.png
   :alt: portal_workflow - ZMI
   :align: center
   :width: 766px
   :height: 431px
-  :target: ../_images/zmi_portal_workflow.png
+  :target: ../../_images/zmi_portal_workflow.png
 
 .. _zmi_portal_catalog:
 
 portal_catalog
 ..............
 
-``Zcatalog`` provee un mecanismo poderoso de indexación y búsqueda en la base 
-de datos Zope denominado ZCatalog. Es un wrapper de Zcatalog que provee índices 
+Provee un mecanismo poderoso de indexación y búsqueda en la :ref:`ZODB <que_es_zodb>` 
+denominado :term:`Zcatalog`. Es una clase envoltorio (wrapper) de Zcatalog que provee índices 
 adicionales, metadatos y políticas específicas para las operaciones de un sitio Plone.
 
 Permite:
@@ -365,12 +365,12 @@ actualizar el inventario objeto agregando, actualización de los objetos, o borr
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_catalog`.
 
-.. image:: ./images/zmi_portal_catalog.png
+.. image:: ./zmi_portal_catalog.png
   :alt: portal_catalog - ZMI
   :align: center
   :width: 742px
   :height: 288px
-  :target: ../_images/zmi_portal_catalog.png
+  :target: ../../_images/zmi_portal_catalog.png
 
 **¿Cómo actualizar el índice de objetos de la ZODB con Zcatalog?**
 
@@ -379,16 +379,17 @@ Para mas detalle consulte la herramienta en :menuselection:`Configuración del S
 
 .. warning::
 
-    Por precaución has un respaldo de tu ZODB en ``var/filestorage/Data.*``
+    Por precaución haga un respaldo de tu :ref:`ZODB <que_es_zodb>` en ubicada por defecto 
+    en el directorio :file:`var/filestorage/Data.*`
 
 Accede a tu ZMI de tu sitio Plone :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_catalog --> Advanced` allí encontrara las siguientes opciones:
 
-.. image:: ./images/zmi_portal_catalog_Advanced.png
+.. image:: ./zmi_portal_catalog_Advanced.png
   :alt: portal_catalog - Advanced - ZMI
   :align: center
   :width: 742px
   :height: 288px
-  :target: ../_images/zmi_portal_catalog_Advanced.png
+  :target: ../../_images/zmi_portal_catalog_Advanced.png
 
 **Catalog Maintenance:** con esta tarea realizas la actualización del catálogo, 
 el cual actualizará todos los registros del catálogo y eliminar registros no 
@@ -414,7 +415,7 @@ ha tenido indebidamente objetos añadidos o eliminados.
 .. _zmi_portal_migration:
 
 portal_migration
-----------------
+................
 
 Provee una interfaz gráfica que le permite actualizar cada sitio Plone a las ultimas versiones 
 disponible en su sistema de archivos:
@@ -423,28 +424,29 @@ Permite:
 
 - Actualizar su sitio Plone a las ultimas versiones disponible en su sistema de archivos.
 
-- Ejecutar la actualización e imprimirla sin afectar ningún cambio dentro de la ZODB, 
+- Ejecutar la actualización e imprimirla sin afectar ningún cambio dentro de la :ref:`ZODB <que_es_zodb>`, 
   ideal para hacer pruebas de la actualización antes de aplicarla.
 
 Esta herramienta le permite aplicar los cambios dentro de cada sitio Plone que hospeda 
 dentro de su instancia Zope, esto significa que aunque usted allá actualizo los cambios 
 e instalado en su sistema de archivos parches de seguridad o migrado a una nueva versión 
-de Plone, están no son aplicadas automáticamente en cada ZODB de sus sitios desplegados.
+de Plone, están no son aplicadas automáticamente en cada :ref:`ZODB <que_es_zodb>` de sus 
+sitios desplegados.
 
 Para mas detalle consulte la herramienta en :menuselection:`Interfaz de Administración de Zope --> portal_migration`.
 
-.. image:: ./images/zmi_portal_migration.png
-  :alt: portal_catalog - ZMI
+.. image:: ./zmi_portal_migration.png
+  :alt: portal_migration - ZMI
   :align: center
   :width: 486px
   :height: 393px
-  :target: ../_images/zmi_portal_migration.png
+  :target: ../../_images/zmi_portal_migration.png
 
 
 temp_folder
 ...........
 
-Temporary Folders son las carpetas que almacenan sus contenidos "en memoria", 
+``Temporary Folders`` son las carpetas que almacenan sus contenidos "en memoria", 
 en la misma forma como un disco RAM. El contenido de una carpeta temporal se pierden 
 al apagar.
 
@@ -454,12 +456,12 @@ sesiones, pero puede ser utilizado para otros propósitos.
 
 Para mas detalle consulte la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> temp_folder`.
 
-.. image:: ./images/zmi_temp_folder.png
+.. image:: ./zmi_temp_folder.png
   :alt: temp_folder - ZMI
   :align: center
   :width: 540px
   :height: 154px
-  :target: ../_images/zmi_temp_folder.png
+  :target: ../../_images/zmi_temp_folder.png
 
 Referencias
 ...........

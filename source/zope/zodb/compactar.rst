@@ -9,20 +9,19 @@
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 01 de Agosto de 2013
+:Fecha: 19 de Diciembre de 2013
 
 ¿En que consta compactar la ZODB?
 =================================
 
-Sólo la naturaleza de la agregación de la ZODB hace que la base de datos 
-crezca continuamente, incluso si sólo editar la información existente y 
-no añade ningún nuevo contenido. Para asegurarse de que el disco duro de 
-su servidor no se llene rápidamente, usted necesita compactar la ZODB 
-automática y regularmente.
+Sólo la naturaleza de la agregación de la :ref:`ZODB <que_es_zodb>` hace que la base de datos 
+crezca continuamente, incluso si sólo editar la información existente y no añade ningún nuevo 
+contenido. Para asegurarse de que el disco duro de su servidor no se llene rápidamente, usted 
+necesita compactar la :ref:`ZODB <que_es_zodb>` automática y regularmente.
 
 Los beneficios son los siguientes:
 
-- Compactando la ZODB remueve las versiones de objetos viejos, así que una 
+- Compactando la :ref:`ZODB <que_es_zodb>` remueve las versiones de objetos viejos, así que una 
   vez que se hace, ya no se puede deshacer.
   
 - Puede haber un poco de ventaja en el rendimiento.
@@ -30,12 +29,12 @@ Los beneficios son los siguientes:
 - Hay beneficios en el tamaño de la base de datos con respecto al espacio de 
   almacenamiento físico del disco duro.
 
-- Compactar la ZODB es similar a un VACUUM en PostgreSQL.
+- Compactar la :ref:`ZODB <que_es_zodb>` es similar a un VACUUM en PostgreSQL.
 
 Compactar la ZODB con tareas crontab
 ------------------------------------
 Para esto utilizaremos configuraciones para :ref:`programar tareas con crontab <buildout_crontab>` 
-para el compactación de la ZODB.
+para el compactación de la :ref:`ZODB <que_es_zodb>`.
 
 A continuación se describen dos ejemplos útiles:
 
@@ -44,7 +43,8 @@ Usando Zope standalone y zc.buildout
 
 Si tu instalación es una :ref:`Zope standalone <ser-zeo-o-no-ser-zeo>` y estas usando 
 :ref:`zc.buildout <que_es_zcbuildout>` debes crearte un script que cada cierto tiempo 
-realice tareas de compactar la ZODB, a continuación un ejemplo de configuración:
+realice tareas de compactar la :ref:`ZODB <que_es_zodb>`, a continuación un ejemplo de 
+configuración:
 
 .. code-block:: cfg
   
@@ -63,25 +63,25 @@ realice tareas de compactar la ZODB, a continuación un ejemplo de configuració
   command = ${buildout:bin-directory}/bin/zodbpack
 
 .. tip::
-    En el comando ``wget`` contiene dos parámetros ``--user`` y ``--password`` 
+    En el comando :command:`wget` contiene dos parámetros ``--user`` y ``--password`` 
     deben tener asignado el nombre del usuario y contraseña Administrador Zope 
     de su instalación.
     
-    El parámetro ``--post-data`` define los días para el cual compactara la ZODB 
+    El parámetro ``--post-data`` define los días para el cual compactara la :ref:`ZODB <que_es_zodb>` 
     
     En el caso de que use :ref:`puntos de montajes <puntos_montaje_zodb>` debe 
-    indicar la ruta en la dirección URL del comando ``wget``.
+    indicar la ruta en la dirección URL del comando :command:`wget`.
 
 Usando ZEO y zc.buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Si tu instalación es un :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` y usando 
-:ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado ``zeopack`` 
+:ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado :command:`zeopack` 
 que ofrece esta instalación para que cada cierto tiempo realice tareas de 
-compactar la ZODB, a continuación un ejemplo de configuración:
+compactar la :ref:`ZODB <que_es_zodb>`, a continuación un ejemplo de configuración:
 
 .. tip::
-    Un script ``zeopack`` sera generado para usted en el directorio bin del 
+    Un script :command:`zeopack` sera generado para usted en el directorio bin del 
     proyecto buildout, a menos que usted cambien eso con la opción 
     ``zeopack-script-name``, en este caso el script sera llamado como el 
     nombre que usted especifique en este parámetro. 
@@ -106,19 +106,19 @@ compactar la ZODB, a continuación un ejemplo de configuración:
 .. tip::
     Si le gustaría usar este script para compactar un :ref:`punto de montaje <puntos_montaje_zodb>` 
     diferente, usted necesitara especificar el parámetro ``-S nombre_punto_montaje``. 
-    Usted puede especificar la opción ``-B`` para no usar el por defecto directorio ``blob``.
+    Usted puede especificar la opción ``-B`` para no usar el directorio por defecto :file:`blob`.
 
 Compactando sin crontab
 -----------------------
 
-Existe otra forma de realizar tareas de compactar la ZODB automáticamente 
+Existe otra forma de realizar tareas de compactar la :ref:`ZODB <que_es_zodb>` automáticamente 
 sin usar tareas crontab.
 
 Para esto agregue el producto `Products.ClockServer`_ en su sección ``egg`` 
-en su archivo ``buildout.cfg``. 
+en su archivo :file:`buildout.cfg`. 
 
 Además agregue la siguiente configuración en la sección ``instance`` en su 
-archivo ``buildout.cfg`` como se muestra a continuación:
+archivo :file:`buildout.cfg` como se muestra a continuación:
 
 .. code-block:: cfg
 
@@ -136,22 +136,22 @@ al raíz de Zope desde la :ref:`ZMI <que_es_zmi>`, del lado derecha elija de la
 lista de selección la opción **Script (Python)** y haga clic en el botón **Add**, 
 como se ilustra a continuación:
 
-.. image:: ./images/zmi_select_to_add_script_python.jpg
+.. image:: ./zmi_select_to_add_script_python.jpg
   :alt: Agregar "Script (Python)" desde la Zope Management Interface - ZMI
   :align: center
   :width: 314px
   :height: 310px
-  :target: ../_images/zmi_select_to_add_script_python.jpg
+  :target: ../../_images/zmi_select_to_add_script_python.jpg
 
 Entonces en el campo **Id** coloque ``pack_it_all``, luego haga clic en el botón 
 **Add and Edit**, como se ilustra a continuación: 
 
-.. image:: ./images/zmi_add_script_python.jpg
+.. image:: ./zmi_add_script_python.jpg
   :alt: Detalle del "Script (Python)" desde la Zope Management Interface - ZMI
   :align: center
   :width: 431px
   :height: 195px
-  :target: ../_images/zmi_add_script_python.jpg
+  :target: ../../_images/zmi_add_script_python.jpg
 
 Seguidamente agregue el siguiente contenido al script:
 
@@ -171,7 +171,7 @@ Para guardar esta modificación haga clic al botón **Save Changes**, para proba
 el funcionamiento del script puede hacer clic en la pestaña **Test** para verificar 
 su funcionamiento, de igual forma con las configuraciones del producto ``Products.ClockServer`` 
 descrita en la declarativa ``zope-conf-additional`` dentro de su sección ``instance`` 
-se programa la tarea la cual compactara la ZODB cada tres (3) días.
+se programa la tarea la cual compactara la :ref:`ZODB <que_es_zodb>` cada tres (3) días.
 
 
 Referencias

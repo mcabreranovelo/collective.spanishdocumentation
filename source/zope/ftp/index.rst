@@ -9,7 +9,7 @@ Configurar Zope como un servidor FTP
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 01 de Agosto de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -42,7 +42,7 @@ Para instalaciones de Zope / Plone basadas en sistema de paquetes para
 distribuciones Linux, instalador de MS Windows, que no soporte Buildout 
 debe realizar la siguiente configuraciones:
 
-Modifique archivo de configuración ``zope.conf`` con el siguiente comando:
+Modifique archivo de configuración :file:`zope.conf` con el siguiente comando:
 
 .. code-block:: sh
 
@@ -64,7 +64,7 @@ Instalaciones con Buildout
 Para instalaciones de Zope/Plone basadas en Buildout, se configura de la
 siguiente forma:
 
-Debe modificar su archivo de configuración ``buildout.cfg`` con el 
+Debe modificar su archivo de configuración :file:`buildout.cfg` con el 
 siguiente comando:
 
 .. code-block:: sh
@@ -137,12 +137,12 @@ disponga, para este caso se demuestra la conexión usando el cliente
     Para establecer la conexión presiona la tecla **Enter** o hace clic en 
     el botón ubicado justo al lado izquierdo del campo **Servidor**.
 
-.. image:: ./images/FTP4Plone.png
+.. image:: ./access_server_ftp4plone.png
   :alt: Cliente FTP conectado a un sitio Plone
   :align: center
   :width: 640pt
   :height: 400pt
-  :target: ../_images/FTP4Plone.png
+  :target: ../../_images/access_server_ftp4plone.png
 
 **Figura 1: Cliente FTP conectado a un sitio Plone**
 

@@ -9,7 +9,7 @@ Configurar Zope y Plone como un demonio / servicio
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -37,8 +37,9 @@ Términos básicos
     Los demonios suelen tener las siguientes características:
 
     * No disponen de una "interfaz" directa con el usuario, ya sea gráfica o textual.
+
     * No hacen uso de la entradas y salidas estándar para comunicar errores o registrar su 
-      funcionamiento, sino que usan archivos del sistema en zonas especiales (``/var/log/`` 
+      funcionamiento, sino que usan archivos del sistema en zonas especiales (:file:`/var/log/` 
       en los `UNIX`_ más modernos) o utilizan otros demonios especializados en dicho registro 
       como el `syslogd`_.
 
@@ -56,7 +57,7 @@ de instalación al directorio de arranque de los servicios (demonios) con el sig
 
   # ln -s /usr/local/Plone/zinstance/bin/plonectl /etc/init.d/plonectl
 
-Otorgue permisos de ejecución al scrtip con el siguiente comando: 
+Otorgue permisos de ejecución al script con el siguiente comando: 
 
 .. code-block:: sh
 

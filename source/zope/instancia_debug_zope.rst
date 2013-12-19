@@ -9,13 +9,13 @@ Creando instancia Zope adicional de depuración
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 28 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
-Es posible que desee mantener su ``buildout.cfg`` para producción 
+Es posible que desee mantener su :file:`buildout.cfg` para producción 
 y sincronizar la configuración de desarrollo de forma automática 
 como sea posible.
 
-Una buena idea es utilizar ``buildout.cfg`` misma en cada entorno. 
+Una buena idea es utilizar :file:`buildout.cfg` misma en cada entorno. 
 Si con cosas condicionales, como poner el modo de depuración activo, 
 como es requerido, usted puede ampliar las secciones buildout, que a 
 su vez crear **Instancias Zope adicionales** con la siguiente configuración:

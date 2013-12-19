@@ -13,10 +13,10 @@ Comando de control de Zope
 Descripción general
 -------------------
 
-El comando para las tareas de Zope tasks es :command:`./bin/instance` en su 
+El comando para las tareas de Zope es :command:`./bin/instance` en su 
 instalaciones Plone basada en configuraciones buildout.
 
-Para mostrar la lista de comandos disponible ejecute el siguiente comando: 
+Para mostrar la lista de comando disponible ejecute el siguiente comando: 
 
 .. code-block:: sh
 
@@ -103,8 +103,8 @@ Para esto debió previamente iniciado el servidor Zope *en modo servicio / demon
   . daemon process stopped
 
 
-Agregando usuarios desde la linea de comandos
----------------------------------------------
+Agregando usuarios desde la linea de comando
+--------------------------------------------
 
 Usted necesita hacer esto cuando usted olvido la contraseña del usuario ``admin`` 
 de Zope o la base de datos esta dañada.
