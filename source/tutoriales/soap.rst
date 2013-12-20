@@ -8,8 +8,8 @@ Obtener direcciones de manejo con SOAP
 
 :Autor(es): Carlos de la Guardia
 :Correo(s): carlos.delaguardia@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3
+:Fecha: 19 de Diciembre de 2013
 
 Introducción
 ============
@@ -26,9 +26,9 @@ Requisitos previos
 ==================
 
 Una librería de Python que permite conectarse a servicios web de un manera
-sencilla se llama *suds* y esta disponible en `PYPI <http://pypi.python.org/pypi/suds>`_.
+sencilla se llama `suds <http://pypi.python.org/pypi/suds>`_ y esta disponible en :term:`PyPI`.
 Utilizaremos esta librería para nuestra pequeña aplicación. Si utilizamos Plone
-con buildout (como debe ser), simplemente debemos agregar *suds* a la
+con buildout (como debe ser), simplemente debemos agregar ``suds`` a la
 sección de *eggs* del buildout:
 
 .. code-block:: cfg
@@ -43,7 +43,7 @@ Vista Python
 ============
 
 El código de la vista es muy sencillo. Primero importamos la clase *Client*
-de suds, junto con lo necesario para crear una vista en Plone.
+de ``suds``, junto con lo necesario para crear una vista en Plone.
 
 .. code-block:: python
 
@@ -52,7 +52,7 @@ de suds, junto con lo necesario para crear una vista en Plone.
     from Products.Five import BrowserView
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-A continuación podemos definir la vista. El método *__init__* y la
+A continuación podemos definir la vista. El método ``__init__`` y la
 asignación del template se hacen de la manera usual:
 
 .. code-block:: python
@@ -84,12 +84,12 @@ mostramos la forma vacía.
             return self.template()
 
 El método que llama al servicio es la parte importante del código. Primero,
-asignamos a *url* la dirección del servicio web al que vamos a conectarnos,
+asignamos a dirección *url* la dirección del servicio web al que vamos a conectarnos,
 que debe ser un recurso de tipo WSDL. En este caso utilizamos uno que
 devuelve la ruta a seguir entre dos direcciones, pero por supuesto es posible
 conectarse a cualquier otro servicio SOAP si se tiene la dirección correcta.
 
-Para llamar al servicio, creamos una instancia del cliente, pasándole la url
+Para llamar al servicio, creamos una instancia del cliente, pasándole la dirección url
 como parámetro. Después, llamamos el servicio deseado con los parámetros
 requeridos. En este caso el servicio se llama *GetDirections* y recibe las
 dos direcciones. Lo que nos regresa es una lista de pasos a seguir, con
@@ -110,9 +110,9 @@ Template ZPT
 
 El template es muy simple. Mostramos primero la forma, incluyendo los valores
 de las direcciones si ya se han envíado. Después verificamos con
-*tal:condition* si hay instrucciones de manejo presentes en la vista y en
-caso afirmativo las mostramos en una table, utilizando *tal:repeat*. Los
-atributos *value* y *_distanceToTravel* están definidos en la especificación
+``tal:condition`` si hay instrucciones de manejo presentes en la vista y en
+caso afirmativo las mostramos en una table, utilizando ``tal:repeat``. Los
+atributos ``value`` y ``_distanceToTravel`` están definidos en la especificación
 del servicio.
 
 .. code-block:: html
@@ -153,7 +153,7 @@ Configuración
 =============
 
 Lo único que hace falta para hacer funcionar el servicio es agregar la vista
-en el archivo *configure.zcml* del producto:
+en el archivo :file:`configure.zcml` del producto:
 
 .. code-block:: xml
 

@@ -8,8 +8,8 @@ Crear gráficas a partir de datos de un tipo de contenido
 
 :Autor(es): Carlos de la Guardia
 :Correo(s): carlos.delaguardia@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3.3.x
+:Fecha: 19 de Diciembre de 2013
 
 Introducción
 ============
@@ -22,7 +22,7 @@ Requisitos previos
 ==================
 
 Para definir el tipo de contenido, agregaremos dos productos a la sección
-de eggs del buildout, que nos permitirán utilizar una tabla para capturar 
+de ``eggs`` del buildout, que nos permitirán utilizar una tabla para capturar 
 la información y seleccionar el color de la gráfica:
 
 .. code-block:: cfg
@@ -181,4 +181,3 @@ Referencia
 - `Crear gráficas a partir de datos de un tipo de contenido`_ desde la comunidad Plone México.
 
 .. _Crear gráficas a partir de datos de un tipo de contenido: http://www.plone.mx/docs/mini_gcharts.html
-

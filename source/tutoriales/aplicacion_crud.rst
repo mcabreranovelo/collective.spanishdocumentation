@@ -8,8 +8,8 @@ Base de datos SQL y Plone
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 19 de Diciembre de 2013
 
 Existen muchos mecanismos de conexión a base de datos SQL desde Plone CMS, 
 en este articulo se enfoca en la amplia usada librería `SQLAlchemy`_ y 
@@ -29,7 +29,7 @@ del estándar SQL.
 Del ingles `ZSQL Methods`_, los métodos ZSQL son un objeto similar a un 
 método `DTML`_ de `Zope`_ o scripts de Python especializados para su uso 
 con bases de datos relacionales. Son la forma más fácil de conectar 
-`RDBMS`_ en Zope. Contiene comandos SQL y DTML en combinación.
+`RDBMS`_ en Zope. Contiene comando SQL y DTML en combinación.
 
 Productos disponibles en Plone
 ==============================
@@ -37,10 +37,16 @@ Productos disponibles en Plone
 Existen varios productos disponibles para integrar `SQLAlchemy`_ con 
 Plone como se describen a continuación:
 
- * `Alchemist`_, utiliza la librería `SQLAlchemy`_, :ref:`Zope 3 component architecture <zca-es>`, y Zope 3 formlib/schema/widgets le permite el desarrollo rápido de aplicaciones orientadas a base de datos objetos con Zope 2, Zope 3, y Plone.
+ * `Alchemist`_, utiliza la librería `SQLAlchemy`_, :ref:`Zope 3 component architecture <zca-es>`, y 
+   Zope 3 formlib / schema / widgets le permite el desarrollo rápido de aplicaciones orientadas a 
+   base de datos objetos con Zope 2, Zope 3, y Plone.
+
  * `collective.saconnect`_, es una panel de control Plone para configurar la conexión `SQLAlchemy`_.
+
  * `collective.lead`_, este es otro paquete de integración transaccional SQLAlchemy/Zope2.
- * `z3c.saconfig`_, ofrece una simple pero flexible forma de configurar un ámbito de sesión de `SQLAlchemy`_ soportada usando la :ref:`Zope component architecture <zca-es>`.
+
+ * `z3c.saconfig`_, ofrece una simple pero flexible forma de configurar un ámbito de sesión de 
+   `SQLAlchemy`_ soportada usando la :ref:`Zope component architecture <zca-es>`.
  
 En el producto elegido para esta labor es ``z3c.saconfig`` a continuación 
 se describe su configuración:
@@ -48,15 +54,18 @@ se describe su configuración:
 Configuración
 =============
 
- * La configuración de la conexión se realiza en el fichero configure.zcml. 
+ * La configuración de la conexión se realiza en el fichero :file:`configure.zcml`.
+
  * Se usan la utilidad global y utilidad local.
- * Pueden ser configuradas como conexiones globales - por una instancia de Zope. 
+
+ * Pueden ser configuradas como conexiones globales - por una instancia de Zope.
+
  * O locales para cada sitio Plone.
  
 Configuración ZCML
 ==================
 
-A continuación un ejemplo del archivo ``configure.zcml``:
+A continuación un ejemplo del archivo :file:`configure.zcml`:
 
 .. code-block:: xml
 
@@ -68,7 +77,7 @@ A continuación un ejemplo del archivo ``configure.zcml``:
 Configuración del paquete
 =========================
 
-A continuación un ejemplo del archivo ``config.py``:
+A continuación un ejemplo del archivo :file:`config.py`:
 
 .. code-block:: python
 
@@ -83,7 +92,7 @@ A continuación un ejemplo del archivo ``config.py``:
 Interfaces del paquetes
 =======================
 
-A continuación un ejemplo del archivo ``interfaces.py``:
+A continuación un ejemplo del archivo :file:`interfaces.py`:
 
 .. code-block:: python
 
@@ -125,7 +134,7 @@ A continuación un ejemplo del archivo ``interfaces.py``:
 Mapeo objeto-relacional de la tabla
 ===================================
 
-A continuación un ejemplo del archivo ``models.py``:
+A continuación un ejemplo del archivo :file:`models.py`:
 
 .. code-block:: python
 
@@ -152,7 +161,7 @@ A continuación un ejemplo del archivo ``models.py``:
 Formulario CRUD
 ===============
 
-El objetivo general de z3c.form y hacer que el desarrollo de formularios lo más 
+El objetivo general de ``z3c.form`` y hacer que el desarrollo de formularios lo más 
 simples posible, mientras que proporciona hooks para permitir la personalización 
 de los formularios en cualquier nivel de acuerdo a las necesidades reales de 
 los diferentes casos de uso. 
@@ -259,14 +268,15 @@ Postgresql a través de SQLAlchemy.
 Creación de las tablas
 ======================
 
-A continuación se demuestra un ejemplo del archivo ``import_steps.xml`` 
+A continuación se demuestra un ejemplo del archivo :file:`import_steps.xml` 
 para la creación de las tablas:
 
 Perfil de importación Generic Setup
 -----------------------------------
 
  * La creación de las tablas se lleva a cabo al disparar el perfil de importación del producto.
- * El archivo **import_steps.xml**
+
+ * El archivo :file:`import_steps.xml`.
 
 .. code-block:: xml
 
@@ -283,7 +293,7 @@ Perfil de importación Generic Setup
 Lanzador del perfil de importación
 ----------------------------------
 
-A continuación un ejemplo del archivo ``setuphandlers.py``:
+A continuación un ejemplo del archivo :file:`setuphandlers.py`:
 
 .. code-block:: python
 
@@ -307,13 +317,17 @@ Artículos relacionados
 
 .. seealso:: 
 
-    Artículos sobre :ref:`Presentar información de una base de datos relacional <mostrar_data_sqlalchemy>` y :ref:`Utilizando formularios z3c.form en Plone <utilizando_z3cform>`.
+    Artículos sobre :ref:`Presentar información de una base de datos relacional <mostrar_data_sqlalchemy>` 
+    y :ref:`Utilizando formularios z3c.form en Plone <utilizando_z3cform>`.
 
 Referencias
 ===========
  * :ref:`Presentar información de una base de datos relacional <mostrar_data_sqlalchemy>`.
+
  * https://github.com/pythonbrasil/apyb.members
+
  * http://www.slideshare.net/simplesconsultoria/sqlalchemy-e-plone-no-more-zsql-methods
+
  * http://www.slideshare.net/rudaporto/formulrios-para-plone-um-passeio-pelo-framework-z3cform
  
 .. _SQLAlchemy: http://www.sqlalchemy.org/

@@ -8,8 +8,8 @@ Utilizando formularios z3c.form en Plone
 
 :Traductor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 19 de Diciembre de 2013
 
 Introducción
 ============
@@ -33,7 +33,7 @@ es una capa muy delgada que encapsula el paquete `z3c.form`_.
 Los formularios que usted va hacer con `plone.app.z3cform`_ son esencialmente
 los mismos formularios Zope 3 puros construido con el paquete `z3c.form`_. No
 hay cláusulas secretas o hacks especiales de Zope 2 y Plone (cosas como
-*self.context.aq_inner*).
+``self.context.aq_inner``).
 
 El paquete `z3c.form`_ viene con una excelente `documentación`_.
 
@@ -196,9 +196,9 @@ Creación de paquete Python para un formulario z3c.form
 
 Ahora cree un nuevo paquete de Python que contiene un simple formulario.
 
-Para crear un nuevo paquete de Python, ir al directorio ``src/`` de su entorno
+Para crear un nuevo paquete de Python, ir al directorio :file:`src/` de su entorno
 buildout y permita que el script paster haga el trabajo por usted, con los
-siguientes comandos:
+siguientes comando:
 
 .. code-block:: sh
 
@@ -288,7 +288,7 @@ Ahora agregue el paquete ``plone.app.z3cform`` como una dependencia a su paquete
 recién creado Python. A su vez, el paquete se descargará automáticamente como
 ``plone.z3cform`` dependencia ``plone.app.z3cform``:
 
-``src/example.z3cformtutorial/setup.py``
+:file:`src/example.z3cformtutorial/setup.py`
 
   .. code-block:: python
 
@@ -390,7 +390,7 @@ Como último paso, es necesario envolver el formulario en una página por defect
 
 
 Colocando todos estos pasos previos juntos, en un archivo llamado
-``comment.py`` debe aparecer como el siguiente mensaje:
+:file:`comment.py` debe aparecer como el siguiente mensaje:
 
 .. code-block:: python
 
@@ -420,7 +420,7 @@ Para conocer mas detalles del **schema** de ``z3c.form``, consulte el
 siguiente enlace `http://docs.zope.org/z3c.form/browser/README.html`_.
 
 Una única cosa que falta por hacer para usar este formulario y es registrar
-en el archivo configure.zcml de su paquete:
+en el archivo :file:`configure.zcml` de su paquete:
 
 .. code-block:: xml
 
@@ -464,7 +464,7 @@ Ahora es debe mostrar el formulario de comentarios dentro de un Viewlet en
 Plone.
 
 A fin de mostrar el formulario de comentarios dentro de un Viewlet,
-primeramente debe crea un nuevo archivo llamado ``commentviewlet.py`` que
+primeramente debe crea un nuevo archivo llamado :file:`commentviewlet.py` que
 contiene un Viewlet que tendrá una page template asociado y un título:
 
 .. code-block:: python
@@ -489,7 +489,7 @@ actualizar el ``request`` definiendo un método ``update`` de la siguiente forma
         self.form.update()
 
 
-Considerando las importaciones necesarias, el archivo ``commentviewlet.py``
+Considerando las importaciones necesarias, el archivo :file:`commentviewlet.py`
 debe verse como el siguiente:
 
 .. code-block:: python
@@ -515,7 +515,7 @@ debe verse como el siguiente:
           self.form = CommentForm(aq_inner(self.context), self.request)
           self.form.update()
 
-En seguida, cree una nueva page template llamado ``commentviewlet.pt`` para
+En seguida, cree una nueva page template llamado :file:`commentviewlet.pt` para
 mostrar el formulario llamando y el método **render** del formulario:
 
 .. code-block:: html
@@ -526,7 +526,7 @@ mostrar el formulario llamando y el método **render** del formulario:
   </div>
 
 Una única cosa que falta por hacer es registrar el nuevo Viewlet en su
-archivo ``configure.zcml`` de la siguiente forma:
+archivo :file:`configure.zcml` de la siguiente forma:
 
 .. code-block:: xml
 
@@ -554,8 +554,8 @@ comentarios en: ::
 OBS: plone.z3cform >= 0.6.0
 ---------------------------
 
-Si usted está usando el paquete plone.z3cform >= 0.6.0, el formulario de
-comentarios precisa fornecer una interfaz IWrappedForm, de lo contrario Plone
+Si usted está usando el paquete ``plone.z3cform >= 0.6.0``, el formulario de
+comentarios precisa fornecer una interfaz ``IWrappedForm``, de lo contrario Plone
 levantará una excepción de "maximum recursion error". Adicione el siguiente
 código en con la marca ``### copy ... ###`` para hacer al formulario que 
 funcione en todas las versiones de plone.z3cform:

@@ -8,8 +8,8 @@ Traducir un documento a otro idioma automáticamente
 
 :Autor(es): Carlos de la Guardia
 :Correo(s): carlos.delaguardia@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3.3.x
+:Fecha: 19 de Diciembre de 2013
 
 Introducción
 ============
@@ -41,7 +41,7 @@ Vista Python
 ============
 
 La vista es muy simple. Únicamente agregamos un método para traducir el texto
-utilizando goopytrans.
+utilizando ``goopytrans``.
 
 .. code-block:: python
 
@@ -112,4 +112,3 @@ Referencia
 - `Traducir un documento a otro idioma automáticamente`_ desde la comunidad Plone México.
 
 .. _Traducir un documento a otro idioma automáticamente: http://www.plone.mx/docs/mini_translate.html
-

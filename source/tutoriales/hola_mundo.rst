@@ -6,6 +6,11 @@
 Hola Mundo en Plone 3
 =====================
 
+:Autor(es): Leonardo J. Caballero G.
+:Correo(s): leonardocaballero@gmail.com
+:Compatible con: Plone 3.3.x
+:Fecha: 19 de Diciembre de 2013
+
 Introducción
 ============
 
@@ -26,8 +31,8 @@ hacerlo dentro de un :ref:`entorno virtual <creacion_entornos_virtuales>`):
     $ pip install 'ZopeSkel==2.21.2'
 
 Debe crear una configuración :ref:`zc.buildout <buildout_plone3>` para una 
-instancia de Zope para Plone 3 usando el comando ``paster``, 
-ejecutando los siguientes comandos:
+instancia de Zope para Plone 3 usando el comando :command:`paster`, 
+ejecutando los siguientes comando:
 
 .. code-block:: sh
 
@@ -43,8 +48,8 @@ Más opciones con el siguiente comando:
 
     $ paster create --list-template
 
-Cree un :ref:`Plone Theme <producto_tema>` en su carpeta ``src/`` dentro de su proyecto 
-plone 3 llamado ``plone3.buildout``, con los siguientes comandos:
+Cree un :ref:`Plone Theme <producto_tema>` en su carpeta :file:`src/` dentro de su proyecto 
+plone 3 llamado ``plone3.buildout``, con los siguientes comando:
 
 .. code-block:: sh
 
@@ -52,8 +57,8 @@ plone 3 llamado ``plone3.buildout``, con los siguientes comandos:
     $ paster create --template plone3_theme collective.mydemoapp
 
 
-Acceder a la carpeta ``browser/`` de su paquete ``collective.mydemoapp`` 
-y cree un archivo python con el nombre ``hello.py``
+Acceder a la carpeta :file:`browser/` de su paquete ``collective.mydemoapp`` 
+y cree un archivo Python con el nombre :file:`hello.py`
 
 .. code-block:: sh
 
@@ -67,7 +72,7 @@ Más opciones con el siguiente comando:
     $ paster addcontent --list-all
 
 
-Edite su Vista controladora en el archivo ``hello.py`` de la siguiente forma:
+Edite su Vista controladora en el archivo :file:`hello.py` de la siguiente forma:
 
 .. code-block:: python
 
@@ -86,7 +91,7 @@ Edite su Vista controladora en el archivo ``hello.py`` de la siguiente forma:
             return "hello word"
 
 
-Edite su configuración ZCML en el ``configure.zcml`` de la siguiente forma:
+Edite su configuración ZCML en el :file:`configure.zcml` de la siguiente forma:
 
 .. code-block:: xml
 
@@ -98,7 +103,7 @@ Edite su configuración ZCML en el ``configure.zcml`` de la siguiente forma:
        />
 
 
-Edite su configuración Buildout en el ``buildout.cfg`` de la siguiente forma:
+Edite su configuración Buildout en el :file:`buildout.cfg` de la siguiente forma:
 
 .. code-block:: cfg
 
@@ -159,8 +164,8 @@ Ejemplo de un viewlet básico
               self.computed_value = 'Hello world'
               self.company = 'Plone Fundation'
 
-- Renombra el archivo plantilla viewlet ubicado en ``browser/viewlet.pt`` a 
-  ``browser/myviewlet.pt`` y si es necesario edite el código python acorde a 
+- Renombra el archivo plantilla viewlet ubicado en :file:`browser/viewlet.pt` a 
+  :file:`browser/myviewlet.pt` y si es necesario edite el código Python acorde a 
   la plantilla viewlet.
 
   .. code-block:: html
@@ -171,7 +176,7 @@ Ejemplo de un viewlet básico
       </div>
 
 - Edite la clase y la plantilla asegurándose que cumpla lo que necesita.
-- Asegúrese que su viewlet este correctamente registrado en el ``browser/configure.zcml``.
+- Asegúrese que su viewlet este correctamente registrado en el :file:`browser/configure.zcml`.
 
   .. code-block:: xml
 
@@ -184,15 +189,17 @@ Ejemplo de un viewlet básico
           />
 
 - Si usted necesito que aparezca en un orden especifico dentro de un viewlet manager, 
-  entonces edite ``profiles/default/viewlets.xml`` acordemente.
+  entonces edite :file:`profiles/default/viewlets.xml` acordemente.
+  
 - Reinicie su instancia Zope, ejecutando el siguiente comando:
 
   .. code-block:: sh
 
       $ ./bin/buildout -vN
 
-- Si usted edito algún archivo en la carpeta ``profiles/default/``, debe reiniciar su 
+- Si usted edito algún archivo en la carpeta :file:`profiles/default/`, debe reiniciar su 
   paquete.
+
 - Una ves que este feliz con su implementación viewlet, remueva cualquier documentación 
   relacionada en su clase y plantilla viewlet.
 

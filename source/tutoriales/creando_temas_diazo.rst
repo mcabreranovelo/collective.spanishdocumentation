@@ -8,30 +8,35 @@ Creando Temas con Diazo
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 3, Plone 4
+:Fecha: 19 de Diciembre de 2013
 
 ¿Qué es Diazo?
 ==============
 
  * Es la nueva manera de crear temas para el Plone.
+
  * Permite aplicar cualquier HTML en Plone.
+ 
  * Es un motor de temas.
 
 ¿Como funciona?
 ===============
 
- * Con un simple XML usted substituye elementos de su 'template' o 'plantilla' html por contenido generado por el Plone.
+ * Con un simple XML usted substituye elementos de su 'template' o 'plantilla' html por 
+   contenido generado por el Plone.
 
  * Este concepto se basa en la técnica de programación `Screen scraping`_.
 
- * Se implementa de forma sencilla en Plone usando el motor de temas `Diazo`_ y el producto `plone.app.theming`_.
+ * Se implementa de forma sencilla en Plone usando el motor de temas `Diazo`_ y el producto 
+   `plone.app.theming`_.
 
 Requisitos
 ==========
+ 
+ * Plone 4.2 o superior.
 
  * Plone 4.1.x y `plone.app.theming`_
- * Plone 4.2
 
 
 Instalación
@@ -40,7 +45,7 @@ Instalación
 El paquete ``plone.app.theming`` trabaja con Plone 4.1 o superior.
 
 Para instalar ``plone.app.theming`` dentro de su instancia Plone, ubique el archivo 
-``buildout.cfg`` en el directorio de su instancia Plone en el sistema de archivo, 
+:file:`buildout.cfg` en el directorio de su instancia Plone en el sistema de archivo, 
 y ábralo con un editor de texto. Ubique la sección que luce así:
 
 .. code-block:: cfg
@@ -74,7 +79,7 @@ especifica algunas nuevas versiones de paquetes a instalar vía la dirección UR
 Buildout manipulara esto por ti.
 
 El próximo paso es agregar el paquete ``plone.app.theming`` en la sección "eggs"
-del archivo ``buildout.cfg``. Vea que por defecto la sección luce así:
+del archivo :file:`buildout.cfg`. Vea que por defecto la sección luce así:
 
 .. code-block:: cfg
 
@@ -94,7 +99,7 @@ aparte, de la siguiente forma:
 Una ves que tenga esas lineas agregadas en su archivo de configuración, es tiempo de 
 ejecutar el script buildout, y el agregara e instalara en su sistema ``plone.app.theming`` 
 por usted. Vaya a la linea de comando, y desde el directorio raíz de su instancia Plone 
-(el mismo directorio donde esta localizado su buildout.cfg) ejecute buildout 
+(el mismo directorio donde esta localizado su :file:`buildout.cfg`) ejecute buildout 
 de la siguiente forma:
 
 .. code-block:: sh
@@ -158,7 +163,7 @@ los archivos de su tema:
 Creando el archivo index.html
 .............................
 
-Puede crear el archivo ``index.html`` con los siguientes comandos:
+Puede crear el archivo :file:`index.html` con los siguientes comando:
 
 .. code-block:: sh
 
@@ -186,7 +191,7 @@ Debe al menos tener la estructura HTML siguiente:
 Creando el archivo rules.xml
 ............................
 
-Puede crear el archivo ``rules.xml`` con los siguientes comandos:
+Puede crear el archivo :file:`rules.xml` con los siguientes comando:
 
 .. code-block:: sh
 
@@ -243,8 +248,11 @@ Para probar el paquete de tema diazo que lleva hecho hasta ahora puede
 seguir los siguientes pasos:
 
  * Crear un archivo ZIP con su carpeta del tema.
+
  * Agregue al sitio Plone
+
     * :menuselection:`Configuración del sitio --> Diazo Theme`. 
+    
     * Haga clic en la pestaña 'Import Theme' y agregue a su archivo.
     
 Es importante destacar que la página de configuración diazo no son 
@@ -323,13 +331,13 @@ A continuación el siguiente ejemplo:
 Se utiliza para combinar los valores de atributos, especialmente usado para 
 combinar las clases CSS.
 
- * Si el tema tiene en su etiqueta body de esta manera:
+ * Si el tema tiene en su etiqueta ``body`` de esta manera:
 
     .. code-block:: xml
 
         <body class="alpha beta">
 
- * Y el contenido posee una etiqueta body como:
+ * Y el contenido posee una etiqueta ``body`` como:
 
     .. code-block:: xml
 
@@ -348,17 +356,17 @@ Orden de ejecución
 El motor Diazo ejecutará las reglas según un orden propio y no necesariamente 
 en el orden escrito. No hay necesidad de decorar, pero es bueno que sea señalado:
 
-1º lugar: <before>
+1º lugar: ``<before>``
 
-2º lugar: <drop />
+2º lugar: ``<drop />``
 
-3º lugar: <replace> 
+3º lugar: ``<replace>``
 
-4º lugar: Reglas que usan attributes.
+4º lugar: Reglas que usan ``attributes``.
 
-5º lugar: Reglas usando "theme-children" 
+5º lugar: Reglas usando ``"theme-children"`` 
 
-6º y último lugar: <after /> 
+6º y último lugar: ``<after />``
 
 Tema mas completo
 =================
@@ -384,4 +392,3 @@ Referencias
 .. _Construindo temas para Plone com Diazo: http://www.slideshare.net/simplesconsultoria/constuindo-temas-para-plone-com-diazo
 .. _Simples Consultoria: http://www.simplesconsultoria.com.br/
 .. _Diazo documentation: http://docs.diazo.org/en/latest/index.html
-
