@@ -4153,16 +4153,20 @@ Alpha2 - Released May 25, 2005
       [tiran]
 
       PLIP 77: Constrain addable types on a per-folder basis
-      - New menu item "settings" on "add new item" drop-down to select
-        which items to display, and how.
-        [optilude]
+      
+    - New menu item "settings" on "add new item" drop-down to select
+      which items to display, and how.
+      [optilude]
 
       PLIP 78: "Display" menu to select default view of a folder
-      - Enable TemplateMixin and fix its UI (in ATContentTypes)
-      - Add a "display" drop-down where these can be chosen
-      - On folderish items, an option "select item" - shows browser, select
-        default_page.
-        [optilude] [davconvent]
+
+    - Enable TemplateMixin and fix its UI (in ATContentTypes)
+
+    - Add a "display" drop-down where these can be chosen
+
+    - On folderish items, an option "select item" - shows browser, select
+      default_page.
+      [optilude] [davconvent]
 
     - Cleaned up listMetaTypes by moving the payload into PloneTool and
       cleaning up the code.

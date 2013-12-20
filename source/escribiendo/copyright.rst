@@ -22,13 +22,21 @@ Todas esta documentación es licencia por:
 * Copyright © 2008 iniciativa `traducciones plone`_ de la comunidad `Plone Conosur`_. Todos los derechos reservados.
 
   * Roberto Allende <rallende@menttes.com>.
+
   * Emanuel Sartor <emanuel@menttes.com>.
+
   * Israel Saeta Pérez <dukebody@gmail.com>.
+
   * Carlos de la Guardia <carlos.delaguardia@gmail.com>.
+
   * Hugo Salgado <hsalgado@vulcano.cl>.
+
   * Victor Terán <vteran93@yahoo.es>.
+
   * Luis Sumoza <lsumoza@gmail.com>.
+
   * Leonardo J. Caballero G. <leonardocaballero@gmail.com>.
+
   * José Subero <arawako@gmail.com>.
 
 * Copyright © 2010 Mejores Practicas de Plone de la comunidad `Plone Conosur`_. Todos los derechos reservados.
@@ -38,7 +46,9 @@ Todas esta documentación es licencia por:
 * Copyright © 2010-2012 Documentación sobre Plone de la `Fundación Cenditel`_. Todos los derechos reservados.
 
   * Victor Terán <vteran93@yahoo.es>.
+
   * Luis Sumoza <lsumoza@gmail.com>.
+
   * Leonardo J. Caballero G. <leonardocaballero@gmail.com>.
 
 * Copyright © 2012 - 2013 Documentación oficial de Plone por `Leonardo J. Caballero G. <leonardocaballero@gmail.com>`_. Todos los derechos reservados.

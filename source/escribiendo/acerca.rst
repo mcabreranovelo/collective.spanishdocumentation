@@ -1,10 +1,12 @@
 .. -*- coding: utf-8 -*-
 
-.. acerca_docs:
+.. _acerca_docs:
 
 =========================
 Acerca esta documentación
 =========================
+
+.. _historia_licencia:
 
 Sus comienzos
 =============
@@ -33,7 +35,7 @@ Gracias a todos los voluntarios adicionales quienes han trabajado para hacer est
 
 -------
 
-.. acerca_plone:
+.. _acerca_plone:
 
 Plone y el logo Plone
 =====================
@@ -42,7 +44,7 @@ Plone® y el logotipo de Plone son marcas registradas por la `Fundación Plone`_
 
 Plone® and the Plone Logo are registered trademarks of the `Plone Foundation`_.
 
-.. acerca_autores:
+.. _acerca_autores:
 
 Autores
 =======
@@ -52,13 +54,21 @@ Todas esta documentación es licencia por:
 * Copyright © 2008 iniciativa `traducciones plone`_ de la comunidad `Plone Conosur`_. Todos los derechos reservados.
 
   * Roberto Allende <rallende@menttes.com>.
+
   * Emanuel Sartor <emanuel@menttes.com>.
+  
   * Israel Saeta Pérez <dukebody@gmail.com>.
+  
   * Carlos de la Guardia <carlos.delaguardia@gmail.com>.
+  
   * Hugo Salgado <hsalgado@vulcano.cl>.
+  
   * Victor Terán <vteran93@yahoo.es>.
+  
   * Luis Sumoza <lsumoza@gmail.com>.
+  
   * Leonardo J. Caballero G. <leonardocaballero@gmail.com>.
+  
   * José Subero <arawako@gmail.com>.
 
 * Copyright © 2010 Mejores Practicas de Plone de la comunidad `Plone Conosur`_. Todos los derechos reservados.
