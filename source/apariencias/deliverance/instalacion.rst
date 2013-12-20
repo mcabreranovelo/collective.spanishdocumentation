@@ -96,7 +96,7 @@ Este le preguntara algunas preguntas:
     El host que Deliverance servirá.  Nota ``localhost`` (o 127.0.0.1) significa que usted puede solamente conectarse desde la maquina misma.  Si usted quiere que sea visible externamente use 0.0.0.0.
 
 ``proxy_host``:
-    Esta es la ubicación donde todas las peticiones iran.  ``http://localhost:8080`` es el mas comun por defecto para los servidores.  Usted puede también dar un host remoto y una ruta, como ``http://mysite.com/blog``.
+    Esta es la ubicación donde todas las peticiones irán. ``http://localhost:8080`` es el mas común por defecto para los servidores.  Usted puede también dar un host remoto y una ruta, como ``http://mysite.com/blog``.
 
 ``proxy_rewrite_links``:
     Si usted es el proxy a un sitio que en realidad no esperan que seas proxy a la misma ves, los enlaces probablemente se romperá. Usted puede dar como respuesta Y aquí para activar la reescritura de enlace. No es 100% perfecto (por ejemplo, los enlaces puestos en Javascript), pero puede ser bueno para la experimentación.
@@ -105,7 +105,7 @@ Este le preguntara algunas preguntas:
     La contraseña a acceder a la consola de logging.  El nombre de usuario es siempre ``admin``.  Usted puede agregar o actualizar los inicio de sesiones mas tarde.
 
 ``theme_url``:
-    Si usted quiere basar su tema en una pagina existente, usted puede dar la dirección URL de la pagina aqui. Se obtendrá la página y todo el CSS e imágenes de esta página, por lo que a nivel local se pueden editar. De lo contrario un tema sumamente sencilla se otorgara al momento de la instalación.
+    Si usted quiere basar su tema en una pagina existente, usted puede dar la dirección URL de la pagina aquí. Se obtendrá la página y todo el CSS e imágenes de esta página, por lo que a nivel local se pueden editar. De lo contrario un tema sumamente sencilla se otorgara al momento de la instalación.
 
 Una ves que usted allá ingresado esos valores, instalara una básica estructura con un archivo :file:`etc/deliverance.xml` para la configuración, y el tema en el archivo :file:`theme/theme.html`.
 
@@ -115,7 +115,7 @@ Acceda al directorio creado, con el siguiente comando:
 
     $ cd deliverance.examples.basic/
 
-Luego usted descarge el archivo :file:`bootstrap.py`, con el siguiente comando:
+Luego usted descargue el archivo :file:`bootstrap.py`, con el siguiente comando:
 
 .. code-block:: console
 
@@ -127,7 +127,7 @@ Cree un archivo llamado :file:`buildout.cfg`
 
     $ vim buildout.cfg
 
-Y agrege la siguiente configuracion:
+Y agregue la siguiente configuración:
 
 .. code-block:: cfg
 
@@ -237,7 +237,7 @@ Acceda al directorio creado, con el siguiente comando:
 
     $ cd deliverance.examples.plone/
 
-Luego usted descarge el archivo :file:`bootstrap.py`, con el siguiente comando:
+Luego usted descargue el archivo :file:`bootstrap.py`, con el siguiente comando:
 
 .. code-block:: console
 
@@ -249,7 +249,7 @@ Cree un archivo llamado :file:`buildout.cfg`
 
     $ vim buildout.cfg
 
-Y agrege la siguiente configuracion:
+Y agregue la siguiente configuración:
 
 .. code-block:: cfg
 
@@ -310,7 +310,7 @@ Usted debe iniciar la instancia Zope, con el siguiente comando:
 
     $ ./bin/instance start
 
-Y para finzalizar, sin importar la plantilla usada para crear la configuración, 
+Y para finalizar, sin importar la plantilla usada para crear la configuración, 
 igualmente debe ejecutar manualmente el ``servidor proxy`` Deliverance, puede 
 hacerlo ejecutando el siguiente comando:
 
@@ -323,9 +323,11 @@ hacerlo ejecutando el siguiente comando:
 
 Como puede ver le esta indicando que Deliverance esta siendo servido por la 
 dirección URL http://localhost:5000/ aplicando su estilo y tema HTML al contenido 
-como se define en la archivo :file:`deliverance.xml`
+como se define en la archivo :file:`deliverance.xml`.
 
-Para acceder a la consola depuración de iniciar sesión por la dirección URL http://localhost:5000/.deliverance/login y luego acceder a la dirección URL http://localhost:5000/?deliv_log
+Para acceder a la consola depuración de iniciar sesión por la dirección URL 
+http://localhost:5000/.deliverance/login y luego acceder a la dirección URL 
+http://localhost:5000/?deliv_log
 
 Las configuraciones de esta instalación pueden descargarse ejecutando 
 el siguiente comando:

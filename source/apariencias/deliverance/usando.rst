@@ -18,13 +18,17 @@ como se describe a continuación:
 
 #. Preparar los archivos ``HTML/CSS`` de su tema.
 
-#. Debe colocar los archivos en una carpeta, normalmente dentro del proyecto ``Deliverance`` llamada ``static``.
+#. Debe colocar los archivos en una carpeta, normalmente dentro del proyecto 
+   ``Deliverance`` llamada ``static``.
 
-#. Identificar los selectores ``CSS`` de los elementos en el sitio/aplicación Web como fuente de datos que se desea mapear al tema estático.
+#. Identificar los selectores ``CSS`` de los elementos en el sitio / aplicación 
+   Web como fuente de datos que se desea mapear al tema estático.
 
-#. Identificar los selectores ``CSS`` dentro del tema que servirán como marcadores de posición para los elementos dinámicos traídos desde la fuente de contenidos.
+#. Identificar los selectores ``CSS`` dentro del tema que servirán como marcadores 
+   de posición para los elementos dinámicos traídos desde la fuente de contenidos.
 
-#. Crear un archivo de reglas que integre los elementos de la fuente de contenido en los marcadores de posición del tema.
+#. Crear un archivo de reglas que integre los elementos de la fuente de contenido 
+   en los marcadores de posición del tema.
 
 #. Configurar el ``servidor host`` al ``Proxy inverso`` de ``Deliverance``.
 
@@ -40,7 +44,7 @@ Para mas información sobre su uso consultar este `tutorial`_.
 
 Como ya se ha mencionado anteriormente Deliverance utiliza selectores ``CSS`` para mapear 
 elementos desde una fuente de contenidos dinámicos que bien pueden ser ``CMS`` como 
-(Plone, Joomla, Django entre otros) o archivos HTML locales/estáticos previamente guardados 
+(Plone, Joomla, Django entre otros) o archivos HTML locales / estáticos previamente guardados 
 o como por ejemplo este documento. Se puede hacer uso de las reglas con los identificadores 
 ``CSS`` o bien usando expresiones ``Xpath`` en el caso de que el elemento no tenga un 
 identificador ``CSS``.
@@ -82,9 +86,9 @@ navegador una con la fuente de contenido http://localhost:8080 y otra con
 el ``tema`` http://localhost:5000
    
 Luego de realizar estos pasos ya se puede empezar a aplicar las reglas para ello 
-debemos modificar el archivo ``rules.xml``, se puede hacer modificándolo directamente 
+debemos modificar el archivo :file:`rules.xml`, se puede hacer modificándolo directamente 
 y para ver los cambios solo se debe actualizar la pagina http://localhost:5000 
-presionando ``f5`` o dando clic en el navegador, también se pueden ver y aplicar las 
+presionando ``F5`` o dando clic en el navegador, también se pueden ver y aplicar las 
 reglas desde la consola de depuración de deliverance http://localhost:5000/?deliv_log 
 o bien reiniciando el servicio para visualizarlos
 

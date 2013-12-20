@@ -10,7 +10,10 @@ Deliverance
 :Lanzamiento: |version|
 :Fecha: |today|
 
-`Deliverance`_ es una herramienta para hacer temas/apariencias `HTML`_, aplicando un estilo consistente a aplicaciones y los archivos que son estáticos, independientemente de cómo se implementan, y separando de todo el sitio del sistema del plantillas y estilos del nivel de aplicación.
+`Deliverance`_ es una herramienta para hacer temas /apariencias `HTML`_, aplicando 
+un estilo consistente a aplicaciones y los archivos que son estáticos, independientemente 
+de cómo se implementan, y separando de todo el sitio del sistema del plantillas y estilos 
+del nivel de aplicación.
 
 .. toctree::
    :maxdepth: 2

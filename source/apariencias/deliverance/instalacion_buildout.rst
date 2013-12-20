@@ -8,7 +8,7 @@ Instalando con buildout
 =======================
 
 Si estas usando zc.buildout, usted puede usar la siguiente configuración 
-dentro de ``buildout.cfg`` como punto de arranque. Este asegura que el 
+dentro de :file:`buildout.cfg` como punto de arranque. Este asegura que el 
 script de consola ``deliverance-proxy`` esté instalado, lo cual es importante 
 si usted necesita ejecutar manualmente el `servidor proxy`_ Deliverance:
 
@@ -99,14 +99,14 @@ Usted debería ver algo como esto:
     Generated script '/home/user/deliverancedemo/bin/paster'.
     Generated script '/home/user/deliverancedemo/bin/deliverance-proxy'.
 
-Una ves instalado, usted debería buscar el script ``deliverance-proxy`` en el directorio ``bin``.
+Una ves instalado, usted debería buscar el script :command:`deliverance-proxy` en el directorio :file:`bin`.
 
 
 Creando una configuración
 -------------------------
 
-Luego de finalizar la intalación correctamente debe tener disponible 
-en el script ``bin/paster`` el cual tiene disponible dos plantillas 
+Luego de finalizar la instalación correctamente debe tener disponible 
+en el script :command:`bin/paster` el cual tiene disponible dos plantillas 
 PasteScript para construir sitios con configuraciones Deliverance, 
 para comprobar esto ejecute el siguiente comando:
 
@@ -132,7 +132,7 @@ la primera le permite crear una configuración básica para la instalación del
 servidor proxy Deliverance y la segunda permite crear una configuración especifica 
 de Plone con un servidor proxy Deliverance.
 
-A continuación se demostra cada creación de cada una de las plantillas Paster descritas 
+A continuación se demuestra cada creación de cada una de las plantillas Paster descritas 
 anteriormente, con el siguiente comando:
 
 .. code-block:: console
@@ -209,7 +209,7 @@ Usted debe iniciar la instancia Zope, con el siguiente comando:
 
     $ ./bin/instance start
 
-Y para finzalizar, sin importar la plantilla usada para crear la configuración, 
+Y para finalizar, sin importar la plantilla usada para crear la configuración, 
 igualmente debe ejecutar manualmente el `servidor proxy`_ Deliverance, puede 
 hacerlo ejecutando el siguiente comando:
 
@@ -222,9 +222,11 @@ hacerlo ejecutando el siguiente comando:
 
 Como puede ver le esta indicando que Deliverance esta siendo servido por la 
 dirección URL http://localhost:5000/ aplicando su estilo y tema HTML al contenido 
-como se define en la archivo deliverance.xml
+como se define en la archivo :file:`deliverance.xml`.
 
-Para acceder a la consola depuración de iniciar sesión por la dirección URL http://localhost:5000/.deliverance/login y luego acceder a la dirección URL http://localhost:5000/?deliv_log
+Para acceder a la consola depuración de iniciar sesión por la dirección URL 
+http://localhost:5000/.deliverance/login y luego acceder a la dirección URL 
+http://localhost:5000/?deliv_log
 
 .. _Deliverance: http://pypi.python.org/pypi/Deliverance
 .. _DeliveranceDemo: http://svn.plone.org/svn/collective/deliverancedemo/trunk/

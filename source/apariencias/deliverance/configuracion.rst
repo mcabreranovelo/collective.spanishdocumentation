@@ -8,7 +8,7 @@
 Configuraciones adicionales
 ===========================
 
-Para aplicar las reglas con ``Deliverance`` debemos hacerlo en el archivo ``rules.xml`` 
+Para aplicar las reglas con ``Deliverance`` debemos hacerlo en el archivo :file:`rules.xml` 
 y esto consiste en configurar el puerto que servirá como fuente de contenido, y el puerto 
 donde se verán los cambios y el efecto de las reglas de Deliverance. Para aplicar las reglas 
 hay que seleccionar la ruta y crear una clase.
@@ -200,7 +200,7 @@ colocada dentro de la carpeta correspondiente.
 
 Para este caso se crea un Proxy con una clase y se le indica la dirección 
 donde se encontrara el ``HTML``, para este ejemplo dentro del directorio raíz 
-del proyecto se creo una carpeta llamada ``local``:
+del proyecto se creo una carpeta llamada :file:`local`:
 
 .. code-block:: xml
 
@@ -240,4 +240,3 @@ El archivo de reglas por consiguiente queda de esta manera
     
     </rule>
     </ruleset>
-

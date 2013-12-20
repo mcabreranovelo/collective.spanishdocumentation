@@ -7,7 +7,7 @@
 Instalación como middleware WSGI
 ================================
 
-Una de las caracteristicas de ``Deliverance`` es que soporta ejecución con un `middleware WSGI`_.
+Una de las características de ``Deliverance`` es que soporta ejecución con un `middleware WSGI`_.
 
 Conceptos básicos
 -----------------
@@ -15,14 +15,14 @@ Conceptos básicos
 .. glossary:
 
   WSGI 
-    Es una Interfaz de Entrasa de Servidor, del Ingles `Web Server Gateway Interface`. 
+    Es una Interfaz de Entrada de Servidor, del Ingles `Web Server Gateway Interface`. 
     Esto es una especificación para servidores web y servidores de aplicación para 
     comunicarse con aplicaciones web (aunque también se puede utilizar para más que eso). 
-    Este es un estandar Python, descrito en detalles en `PEP 333`_.
+    Este es un estándar Python, descrito en detalles en `PEP 333`_.
 
 
 Entonces si usted quiere usar el filtro `middleware WSGI`_, debe agregar esta configuración 
-zc.buildout a su archivo ``buildout.cfg``, a continuación un ejemplo:
+zc.buildout a su archivo :file:`buildout.cfg`, a continuación un ejemplo:
 
 .. code-block:: cfg
 
@@ -50,7 +50,7 @@ zc.buildout a su archivo ``buildout.cfg``, a continuación un ejemplo:
         PasteScript
         PasteDeploy
 
-Además debe crea el archivo ``proxy.ini`` en el directorio de su proyecto 
+Además debe crea el archivo :file:`proxy.ini` en el directorio de su proyecto 
 zc.buidlout con el siguiente comando:
 
 .. code-block:: console
@@ -107,7 +107,8 @@ siguiente comando:
     $ ./bin/buildout -vN
 
 Al finalizar la construcción de su proyecto más archivos se agregan a los 
-scripts disponibles en el directorio ``bin/``, incluyendo ``bin/paster``, ``bin/deliverance-proxy``. 
+scripts disponibles en el directorio :file:`bin/`, incluyendo :command:`bin/paster`, 
+:command:`bin/deliverance-proxy`. 
 
 Una ves terminada la instalación puede iniciar el arranque del mismo con el siguiente comando:
 

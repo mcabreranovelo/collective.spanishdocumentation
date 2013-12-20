@@ -45,7 +45,7 @@ Componentes de Deliverance
       y `proxy inverso`_.
 
    Tema
-      Este contiene los estilos e información de diagramación/presentación de contenidos que se 
+      Este contiene los estilos e información de diagramación / presentación de contenidos que se 
       quiere aplicar al contenido. Este puede ser un sitio Web dinámico o un archivo estático, 
       especificado a través de una dirección ``URL``. El **tema** en si es una pagina ``HTML`` 
       con poco código en ella. Es simplemente un ejemplo de lo que debería ser la pagina, lo que 
@@ -60,27 +60,34 @@ Componentes de Deliverance
 Los atributos en cada regla contienen identificadores `CSS`_ o expresiones `XPath`_ que describen 
 secciones en el tema y contenido en la cual ejecutara la regla.
 
-¿Por que Deliverance?
+¿Por qué Deliverance?
 =====================
 - Muchas veces el diseño Web ya existe dentro de la organización.
+
 - Mantiene la separación entre la presentación y el contenido.
+
 - Rendimiento y flexibilidad.
+
 - Porque permite trabajar sin un lenguaje de programación (para usuarios no-programadores).
+
 - Debido a su concepto puede ser usado por diseñadores, integradores, desarrolladores, usuarios.
 
 Conocimiento necesario
 ======================
-Es recomendable poseer conocimiento en las siguientes conceptos/tecnologías/herramientas: 
+Es recomendable poseer conocimiento en las siguientes conceptos / tecnologías / herramientas: 
 
 * Lenguaje de marcado de Hipertexto ``HTML``.
+
 * Lenguaje de estilos en Cascada ``CSS``.
+
 * La extensión del navegador Web Mozilla Firefox llamada ``Firebug``.
+
 * Uso de un editor simple de archivos ``XML``.
 
 Beneficios
 ==========
-- Los diseñadores Web no necesitan aprender el sistema manejador de contenidos ``CMS``, el 
-  ``Framework`` o sistema de temas de un sitio/aplicación Web.
+- Los diseñadores Web no necesitan aprender el sistema de gestión de contenidos ``CMS``, el 
+  ``Framework`` o sistema de temas de un sitio / aplicación Web.
 
 - Se puede unificar el diseño de múltiples aplicaciones Web con un diseño unificado aplicado 
   a wikis, blogs, contenido estático ``HTML``, entre otros.

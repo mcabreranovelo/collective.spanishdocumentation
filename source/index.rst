@@ -55,7 +55,7 @@ agilicen nuestro desarrollo.
 .. toctree::
    :maxdepth: 1
 
-   plone/apariencias/index
+   apariencias/index
    Realizando pruebas en Plone 3 <plone/haciendo_pruebas/index>
 
 
@@ -304,7 +304,7 @@ comunes en aplicaciones web con Plone.
 .. toctree::
    :maxdepth: 2
    
-   plone/tutoriales/index
+   tutoriales/index
 
 
 Otros recursos
