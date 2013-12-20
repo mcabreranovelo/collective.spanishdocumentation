@@ -9,7 +9,7 @@ Programar tareas con crontab
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Python 2.4 o versiones superiores
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -66,8 +66,8 @@ Puedes cambiarlo a:
   command = ${buildout:bin-directory}/instance restart
 
 
-Ahora ejecuta el comando ``buildout`` disponible dentro del directorio
-``tareas-crontab/bin`` con el argumento ``-v`` (verbose mode), esto ayudará a que
+Ahora ejecuta el comando :command:`buildout` disponible dentro del directorio
+:file:`tareas-crontab/bin` con el argumento ``-v`` `(verbose mode)`, esto ayudará a que
 muestre todo los detalles de la construcción del mismo:
 
 .. code-block:: sh
@@ -86,7 +86,7 @@ Ejecute el programa Bash script generado con el siguiente comando:
   # END /home/macagua/Plone/zinstance [restart-zope-daily]
 
 
-Y de esta forma se ha generado la tarea del ``crontab`` que reinicia 
+Y de esta forma se ha generado la tarea del :command:`crontab` que reinicia 
 la instancia de Zope diariamente a las `3 am`.
 
 

@@ -25,8 +25,8 @@ Características
 ---------------
 Estas son sus principales características:
 
-- **Basado en Python**, es una utilidad escrita en el lenguaje de programación Python, 
-  esto le permite agregar nuevas extensiones vía módulos a la herramienta.
+- **Basado en Python**, es una utilidad escrita en el lenguaje de programación 
+  Python, esto le permite agregar nuevas extensiones vía módulos a la herramienta.
 
 - **Sintaxis declarativa**, permite definición de configuraciones buildout de forma 
   declarativa, basada en el formato .INI de Windows, es decir, clave = valor, haciendo 
@@ -47,13 +47,13 @@ Estas son sus principales características:
     port = 143
     file = "payroll.dat"
 
-  Este sistema de autoconstrucción es súper sencillo de escribir esta basado en la 
+  Este sistema de auto-construcción es súper sencillo de escribir esta basado en la 
   configuraciones de archivo .ini de Windows es decir "clave =  valor" mas adicionalmente 
   ofrece el concepto de los recetas te permite usar tareas predefinidas para construir 
   un servidor Zope, instalar un servidor de MySQL o PostgreSQL, o instalando lenguaje 
   de programación como Python, PHP en fin. 
 
-- **Facilita el dia a dia del trabajo**, Orientado a desarrollador y administradores de sistemas.
+- **Facilita el día a día del trabajo**, Orientado a desarrollador y administradores de sistemas.
 
 - **Se puede replicar**, eso quiere decir que puedes configurar Que instalar, y como configurar 
   cosas en tu proyecto con la finalidad de agilizar el despliegue de proyectos en entornos de 
@@ -86,8 +86,8 @@ Desventajas:
   incluya los parches de seguridad y mueves la data hacia allá.
 
 Entonces paulatinamente la comunidad de Zope le fue natural que crearan un sistema de 
-autoconstrucción como Makefile o Apache Ant pero basado en Python que le ayuda a reconstruir 
-sus instalaciones, entonces para esto crearon `Buildout`_.
+auto-construcción como :file:`Makefile` o Apache Ant pero basado en Python que le ayuda 
+a reconstruir sus instalaciones, entonces para esto crearon `Buildout`_.
 
 En ejemplo típico de `Plone en entornos de producción`_ no solo es Plone, sino un cacheo de 
 contenidos, balanceo de cargas, motor de plantillas, servidor Web y todo esto se puede 
@@ -99,7 +99,7 @@ como instalar Wordpress.
 Como dice mi amigo Francsico Palm "Buildout, es un Makefile con esteroides" :D
 
 Desde la adopción de Plone de buildout se ha simplificado la instalaciones de Plone y se ha 
-creado todo un sistema de replicacion de entornos de trabajos al cual puedes acceder actualizaciones 
+creado todo un sistema de replicación de entornos de trabajos al cual puedes acceder actualizaciones 
 de módulos Python de forma mas sencilla a nivel administrativo.
 
 Progresivamente fue natural que buildout implementara soporte a paquetes Egg Python, esto impulsado 
@@ -155,7 +155,7 @@ descritos a continuación:
 Configuraciones genéricas
 =========================
 Usted puede agregar las configuraciones genéricas para todos sus proyectos 
-Buildout, para esto debe ejecutar los siguientes comandos:
+Buildout, para esto debe ejecutar los siguientes comando:
 
 .. code-block:: sh
 
@@ -174,7 +174,7 @@ usuario predeterminadas para cualquier parte de su configuración :term:`buildou
 
 .. note::
 
-  Esto solamente proveerá valores predeterminados, ¡estos no sobrescribirán 
+  Esto solamente proveerá valores predeterminados, ¡éstos no sobrescribirán 
   las configuraciones en su configuraciones buildout!
 
 
@@ -187,7 +187,7 @@ Ahora crea una nueva configuración ``zc.buildout`` así:
   $ mkdir mibuildout ; cd mibuildout
   $ buildout init
 
-Ahora el nuevo directorio ``mibuildout`` es un proyecto **buildout**.
+Ahora el nuevo directorio :file:`mibuildout` es un proyecto **buildout**.
 
 .. _buildout_cfg:
 
@@ -212,16 +212,16 @@ Puedes cambiarlo a:
   interpreter = python
   eggs = zope.component
 
-Ahora ejecuta el comando ``buildout`` disponible dentro del directorio
-``mibuildout/bin`` sin ningún argumento. Esto creará un nuevo interprete Python
-dentro del directorio ``mibuildout/bin``:
+Ahora ejecuta el comando :command:`buildout` disponible dentro del directorio
+:file:`mibuildout/bin` sin ningún argumento. Esto creará un nuevo interprete 
+Python dentro del directorio :file:`mibuildout/bin`:
 
 .. code-block:: sh
 
   $ ./bin/buildout
 
 Esto creará un nuevo intérprete Python dentro del directorio
-``mibuildout/bin``:
+:file:`mibuildout/bin`:
 
 .. code-block:: sh
 
@@ -234,8 +234,8 @@ Y luego tendrá a disposición en su :term:`PYTHONPATH` el paquete que instalo
 
   >>> import zope.component
 
-Utilizando ``zc.buildout`` con la :term:`recipe` llamado `zc.recipe.egg`_ se puede crear un
-intérprete de Python con los paquetes Egg Python especificados.
+Utilizando ``zc.buildout`` con la :term:`recipe` llamado `zc.recipe.egg`_ se 
+puede crear un intérprete de Python con los paquetes Egg Python especificados.
 
 
 Este comando ejecutará un intérprete de Python que puedes usar para ejecutar
@@ -271,4 +271,3 @@ Referencias
 .. _Plone en entornos de producción: http://plone-spanish-docs.readthedocs.org/es/latest/buildout/plone_esquema_alta_disponibilidad.html
 .. _instalación LAMP: http://docs.pythonpackages.com/en/latest/hosted-configs/wordpress.html
 .. _formato .INI: http://es.wikipedia.org/wiki/INI_%28extensi%C3%B3n_de_archivo%29
-

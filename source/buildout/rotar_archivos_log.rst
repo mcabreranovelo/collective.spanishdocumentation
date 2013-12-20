@@ -8,7 +8,7 @@ Rotar archivos .log de Zope
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -16,7 +16,7 @@ Descripción general
 Este es una configuración básica de :ref:`zc.buildout <python_buildout>` que explica 
 como configurar tarea de `crontab`_  de `rotación de archivos log`_, para esto usará 
 la misma configuración del paquete Zope en Debian GNU/Linux que entenderá el programa 
-``crontab`` para realizar esta tarea.
+:command:`crontab` para realizar esta tarea.
 
 Instalación
 ===========
@@ -27,7 +27,7 @@ Dentro de su directorio de buildout debe crear los la siguiente estructura de ar
 
   $ mkdir ./templates ; mkdir ./etc ; 
 
-Luego creamos una plantilla del archivo de configuración ``crontab``:
+Luego creamos una plantilla del archivo de configuración :command:`crontab`:
 
 .. code-block:: sh
 
@@ -54,7 +54,7 @@ Y debe agrega la siguiente configuración al archivo ``logrotate.conf.tmpl`` :
   }
 
 
-Cree un archivo de configuración ``logrotate.cfg`` y agregue nuevas secciones como se 
+Cree un archivo de configuración :file:`logrotate.cfg` y agregue nuevas secciones como se 
 muestra a continuación:
 
 .. code-block:: cfg
@@ -86,7 +86,7 @@ Luego edite su archivo de configuración ``buildout.cfg`` y agregue en la declar
   extends = 
     logrotate.cfg
 
-Ahora ejecuta el comando ``buildout`` con el argumento ``-v`` (verbose mode), esto 
+Ahora ejecuta el comando :command:`buildout` con el argumento ``-v`` (verbose mode), esto 
 ayudará a que muestre todo los detalles de la construcción del mismo.
 
 .. code-block:: sh
@@ -94,7 +94,7 @@ ayudará a que muestre todo los detalles de la construcción del mismo.
   $ ./bin/buildout -vN
 
 
-Muestre la lista de las tareas del programa ``crontab`` con el siguiente comando:
+Muestre la lista de las tareas del programa :command:`crontab` con el siguiente comando:
 
 .. code-block:: sh
 

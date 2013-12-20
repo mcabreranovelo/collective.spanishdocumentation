@@ -9,7 +9,7 @@ Récipes Buildout
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Python 2.4 o versiones superiores
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -100,8 +100,8 @@ Python/Zope/Plone:
     backup-db = True
     pack-db = True
 
-- `mr.developer`_, es una extensión de :ref:`zc.buildout <python_buildout>` la cual
-  hace fácil trabajar con buildouts que contiene muchos paquetes que
+- `mr.developer`_, es una extensión de :ref:`zc.buildout <python_buildout>` 
+  la cual hace fácil trabajar con buildout que contiene muchos paquetes que
   contienen gran cantidad de paquetes de los cuales sólo desea desarrollar
   algunos, a continuación un ejemplo de configuración: 
 
@@ -125,8 +125,8 @@ Python/Zope/Plone:
 
 
 - `collective.recipe.backup`_, proporciona parámetros por defecto
-  para las tareas de respaldo de datos comunes. El script ``./bin/repozo`` es
-  un script zope para hacer copias de seguridad de ``Data.fs``.
+  para las tareas de respaldo de datos comunes. El script :command:`./bin/repozo` es
+  un script zope para hacer copias de seguridad de :file:`Data.fs`.
 
 - `plone.recipe.apache`_, es un récipe buildout para compilar,
   instalar un `servidor Web Apache`_ desde los archivos fuentes con la

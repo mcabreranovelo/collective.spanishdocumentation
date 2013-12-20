@@ -9,7 +9,7 @@ Hola mundo en zc.buildout
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Python 2.4 o versiones superiores
-:Fecha: 31 de Julio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -42,8 +42,8 @@ Inicializar el proyecto
 
   $ buildout init
 
-Ahora el nuevo directorio ``holamundo`` es un proyecto buildout. El archivo de
-configuración predeterminado de este proyecto es ``buildout.cfg``. Después 
+Ahora el nuevo directorio :file:`holamundo` es un proyecto buildout. El archivo de
+configuración predeterminado de este proyecto es :file:`buildout.cfg`. Después 
 de la inicialización, tendrá el siguiente contenido:
 
 .. code-block:: cfg
@@ -77,14 +77,14 @@ Puedes cambiarlo a:
   command = chmod u+x ${hola-mundo:output}
 
 
-Ahora ejecuta el comando ``buildout`` con el argumento ``-v`` (verbose mode), 
+Ahora ejecuta el comando :command:`buildout` con el argumento ``-v`` `(verbose mode)`, 
 esto ayudará a que muestre todo los detalles de la construcción del mismo. 
 
 .. code-block:: sh
 
   $ ./bin/buildout -v
 
-Esto creará un nuevo programa Bash script dentro del directorio ``bin/hola``. 
+Esto creará un nuevo programa Bash script dentro del directorio :command:`bin/hola`. 
 Ejecute el programa Bash script generado con el siguiente comando:
 
 .. code-block:: sh

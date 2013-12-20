@@ -8,8 +8,8 @@ Buildout y Plone 3
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Compatible con: versiones Plone 3
-:Fecha: 31 de Julio de 2013
+:Compatible con: versiones Plone 3.3.x
+:Fecha: 19 de Diciembre de 2013
     
 .. tag:: [plone3 plone3.3 Plone_3] versiones Plone 3
 
@@ -42,9 +42,13 @@ Existen instrucciones detalladas para la instalación de requisitos, pero en
 general se necesita lo siguiente:
 
 * Python 2.4.x.
+
 * Instalar :ref:`entornos virtuales de Python <creacion_entornos_virtuales>` para aislar a su instalación de la del sistema.
+
 * El Python :ref:`paquete Setuptools <que_es_setuptools>` (:ref:`easy_install <que_es_easyinstall>`).
+
 * Para instalar instancias Zope / sitios Plone, es necesario el paquete :term:`Egg` de :ref:`ZopeSkel <instalacion_zopeskel>`.
+
 * Para Plone, Python Imaging Library (PIL) instalado en ese Python.
 
 Instalando entornos virtuales de Python
@@ -125,7 +129,7 @@ El template hace varias preguntas:
 Activación de un buildout
 =========================
 
-Para activar un buildout hay que ejecutar el script `bootstrap.py` con el
+Para activar un buildout hay que ejecutar el script :file:`bootstrap.py` con el
 mismo python con que se desea trabajar:
 
 .. code-block:: sh
@@ -183,12 +187,12 @@ Directorios creados
         Logs y archivo de ZODB de Zope (buildout nunca sobre escribe estos archivos).
 
     var/filestorage
-        Contiene archivos de ZODB de Zope tales como ``Data.fs``, ``Data.fs.index``, 
-        ``Data.fs.lock`` y ``Data.fs.tmp`` de su sitio web Plone.
+        Contiene archivos de ZODB de Zope tales como :file:`Data.fs`, :file:`Data.fs.index`, 
+        :file:`Data.fs.lock` y :file:`Data.fs.tmp de su sitio web Plone.
 
     var/log
-        Contiene archivos de Logs de Zope tales como ``instance.log`` (archivo de errores) 
-        y ``instance-Z2.log`` (archivo de acceso).
+        Contiene archivos de Logs de Zope tales como :file:`instance.log` (archivo de errores) 
+        y :file:`instance-Z2.log` (archivo de acceso).
 
 Descripción de este ejemplo
 ---------------------------
@@ -319,6 +323,7 @@ Referencias
 ===========
 
 -   `¿Qué es buildout?`_ desde la comunidad Plone México.
+
 -   `Replicación de proyectos Python`_ desde la comunidad Plone Venezuela.
 
 .. _¿Qué es buildout?: http://www.plone.mx/docs/buildout.html
