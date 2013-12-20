@@ -204,11 +204,17 @@ de Plone que se quiera emprender.
    :columns: 2
 
    * :ref:`Replicación de proyectos Python <python_buildout>`.
+
    * :ref:`Hola mundo en zc.buildout <buildout_holamundo>`.
+   
    * :ref:`Récipes Buildout <recipe_buildout>`.
+   
    * :ref:`Programar tareas con crontab <buildout_crontab>`.
+   
    * :ref:`Rotar archivos .log de Zope <buildout_logrotate>`.
+   
    * :ref:`Buildout para instalar de todas las partes de un sitio <plone_esquema_alta_disponibilidad>`.
+   
    * :ref:`Buildout y Plone 3 <buildout_plone3>`.
    
 
@@ -223,16 +229,27 @@ sitio de Plone.
    :columns: 3
 
    * :ref:`Zope Management Interface - ZMI <zmi>`.
+   
    * :ref:`Comando de control de Zope <linea_comando_zope>`.
+   
    * :ref:`Configuraciones generales <configuraciones_generales>`.
+   
    * :ref:`Configurar Zope y Plone como un demonio / servicio <configurar_zope_como_demonio>`.
+   
    * :ref:`Configurar Zope como un servidor FTP <zope_como_ftp>`.
+   
    * :ref:`Configurar Zope como un servidor WebDAV <zope_como_webdav>`.
+   
    * :ref:`Zope Object Database - ZODB <que_es_zodb>`.
+   
    * :ref:`Configurar puntos de montajes para Data.fs separadas <puntos_montaje_zodb>`.
+   
    * :ref:`¿Cómo compactar la ZODB de sitio Plone? <compactar_zodb>`.
+   
    * :ref:`Importar y exportar contenido desde el ZMI <importar_exportar_data>`.
+   
    * :ref:`Creando instancia Zope adicional de depuración <instancia_zope_debug>`.
+   
    * :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
 
 Administración de Plone
