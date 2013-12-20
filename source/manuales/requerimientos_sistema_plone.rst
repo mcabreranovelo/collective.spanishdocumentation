@@ -11,12 +11,12 @@
 :Traductor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Lanzamiento: Plone 3.x, Plone 4.x
-:Fecha: 17 de junio de 2013
+:Fecha: 19 de Diciembre de 2013
 
 En esta es una traducción del articulo llamado `Plone system requirements`_.
 
 ­Este documento busca definir que tipo de requerimientos de ejecución 
-de una instalación Plone necesita tanto en hardware y sistema operativo.
+de una instalación Plone necesita tanto en Hardware y sistema operativo.
 
 
 Requisitos instalar Plone
@@ -26,11 +26,14 @@ Para ejecutar un sitio Web basado en Plone usted necesita:
 
 
 1.  Un computador en modo servidor conectado a Internet (para sitios
-    públicos) o en intranet (para sitios corporativos).
+    públicos) o en Intranet (para sitios corporativos).
+
 2.  Acceso a consola de comando para instalar Plone (acceso por FTP, no
     es suficiente).
+
 3.  Habilidad de ejecutar en procesos como un servicio en el servidor de
     hospedaje.
+
 4.  Habilidad para abrir puertos arbitrariamente. Zope quiere abrir su
     propio puerto para recibir solicitudes.
 
@@ -39,7 +42,7 @@ opciones número 3 ni número 4. Usted necesita tener proveedor de hospedaje
 específico para Plone o un servidor dedicado con acceso administrativo
 exclusivo.
 
--   Para servidores privados virtuales baratos con acceso root ver 
+-   Para servidores privados virtuales baratos con acceso ``root`` ver 
     http://www.lowendbox.com - Los precios comienzan tan bajo como 7 USD / mes.
 
 -   Si no desea mantener su propio servidor y necesitas una solución de un 
@@ -49,8 +52,11 @@ Requisitos del sistema operativo
 --------------------------------
 
 -   MS Windows XP o superior.
+
 -   Apple OSX 10.4.x o superior.
+
 -   GNU/Linux 2.6.x o superior.
+
 -   Python 2.6 (opcionalmente Python 2.7, para Plone 4.2 y superior).
 
 Plone requiere tener las herramientas de desarrollo (como el compilador GCC) 
@@ -58,12 +64,18 @@ y otros dependencias para Mac OS X y GNU/Linux instalado previamente para
 instalar Plone. Estas incluyen las siguientes:
 
 -   libjpeg
+
 -   readline
+
 -   zlib
+
 -   libbz2
+
 -   libxslt
+
 -   libxml2
--   librería de desarrollo python
+
+-   Librería de desarrollo Python
 
 Se recomienda utilizar el administrador de paquetes de su sistema para implementar 
 estas dependencias. Si necesita más instrucciones para instalar estos paquetes 
@@ -87,11 +99,12 @@ Plone con la misma configuración de Software. Esto baja los requerimientos
 cuando hospedas múltiples sitios en el mismo servidor.
 
 
-Requisitos mínimos de hardware
+Requisitos mínimos de Hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -   Mínimo 256 MB RAM y 512 MB de memoria de intercambio por cada sitio
     de Plone.
+
 -   Mínimo 512 MB de espacio de disco duro.
 
 
@@ -99,6 +112,7 @@ Hardware recomendado
 ~~~~~~~~~~~~~~~~~~~~
 
 -   2 GB o más RAM por cada sitio Plone.
+
 -   40 GB o más de espacio de disco duro.
 
 .. note::
@@ -113,7 +127,7 @@ Soluciones de hospedaje
 
 Por favor, consulte con fines comerciales el sitio `plone.net`_ para buscar
 proveedores de hospedaje o elija cualquier solución de servidor o maquina
-virtual de hospedaje cumpliendo con los requerimientos de hardware.
+virtual de hospedaje cumpliendo con los requerimientos de Hardware.
 
 Referencias
 -----------
