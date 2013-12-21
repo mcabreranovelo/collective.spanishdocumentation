@@ -9,7 +9,7 @@ Cambiar el favicon.ico por defecto de Plone
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+:Fecha: 20 de Diciembre de 2013
 
 Como cambiar el `icono`_ (`favicon`_) que muestra por defecto en la pestaña
 del navegador de `Mozilla Firefox`_ o de la barra de dirección `Internet Explorer`_ 
@@ -28,7 +28,7 @@ cunado los usuarios visitan un sitio Plone.
     pestañas de navegación de la *Interfaz de Administración de Zope*,
     seleccione **Image**.
 
-    .. image:: select-add-image.png
+    .. image:: select_add_image.png
         :align: center
         :alt: Seleccionar Imagen para el favicon
 
@@ -40,7 +40,7 @@ cunado los usuarios visitan un sitio Plone.
     una carpeta adecuada de un sistema de archivos basado en skin).
 
 
-    .. image:: add-image-favicon.png
+    .. image:: add_image_favicon.png
         :align: center
         :alt: Ventana para colocar el archivo favicon
 
@@ -50,7 +50,7 @@ antes de poder apreciar los cambios, tenga en cuenta borrar los archivos
 temporales de su navegador y la cache (también tenga en cuenta que algunos navegadores 
 no soportan el comportamiento de favicon).
 
-.. image:: favicon-screenshot.jpg
+.. image:: favicon_screenshot.jpg
     :align: center
     :alt: Screenshot showing custom Favicons for various sites
 

@@ -33,5 +33,5 @@ Tutoriales
 .. toctree::
    :maxdepth: 1
 
-    Cambiar el favicon.ico por defecto de Plone <cambiar_favicon_default>
+    Cambiar el favicon.ico por defecto de Plone <favicon/index>
     
