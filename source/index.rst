@@ -286,11 +286,11 @@ conocer diversas tecnologías provenientes de estos sistemas.
 .. toctree::
    :maxdepth: 1
 
-   zope/zca/zca-es
-   zope/zope_page_templates
-   zope/herramienta_zcatalog
-   zope/flujo_de_trabajo
-   zope/perfiles_genericsetup
+   programacion/zca/zca-es
+   programacion/zope_page_templates
+   programacion/herramienta_zcatalog
+   programacion/flujo_de_trabajo
+   programacion/perfiles_genericsetup
 
 Diversos tutoriales en Plone
 ============================
@@ -314,7 +314,7 @@ Otros recursos
    :maxdepth: 1
 
    glosario
-   links
+   enlaces
    presentaciones/index
 
 
@@ -329,4 +329,3 @@ mantenimiento de esta documentación.
    :maxdepth: 1
 
    escribiendo/index
-
