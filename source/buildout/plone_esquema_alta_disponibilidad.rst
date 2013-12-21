@@ -364,8 +364,8 @@ Secciones de buildout de producción
 ===================================
 Esta configuración de construcción se integra después en una configuración
 base del sitio. La base contiene la mayoría de los servicios y configuraciones
-compartidas entre los demás buildouts. El buildout contiene los siguientes
-servidores:
+compartidas entre las demás configuraciones buildout. El buildout contiene los 
+siguientes servidores:
 
 .. glossary::
 
@@ -401,7 +401,7 @@ servidores:
     un servidor ZEO para la base de datos de Zope común
 
 Se incluye la configuración para rotación de logs con logrotate, excepto para
-Varnish. La configuración queda en el directorio production/logrotate.conf y
+Varnish. La configuración queda en el directorio :file:`production/logrotate.conf` y
 debe integrarse a la configuración general de logrotate usando un symlink.
 
 En la configuración de transformación de Nginx, solo se incluye un servidor
@@ -417,7 +417,7 @@ En http://localhost:9001 puede consultarse el estado de los servicios. Desde
 ahí es posible iniciar o detener cualquiera de ellos.
 
 La configuración esta contenida enteramente en este buildout, con patrones
-para los archivos de configuración en ``production/*.template``. Los nombres de
+para los archivos de configuración en :file:`production/*.template`. Los nombres de
 servidores, puertos y otras opciones comunes pueden cambiarse en las secciones
 que se encuentran al inicio de este archivo. Estos son los valores que se
 utilizan en la sección de construcción definida arriba:
