@@ -72,7 +72,6 @@ today_fmt = '%d de %B de %Y'
 # for source files.
 exclude_trees = [
 #    '_build'
-    'presentaciones'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
