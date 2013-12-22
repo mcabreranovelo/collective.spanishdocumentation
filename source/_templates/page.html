@@ -9,13 +9,13 @@
 <script type="text/javascript" src="{{ pathto('_static/plone.js', 1) }}"></script>
 {% endblock %}
 
-{#
-  Elimina el numero de la versión desde las barras de rutas arriba y bajo
-#}
+{# Elimina el numero de la versión desde las barras de rutas arriba y bajo #}
 {%- block rootrellink %}
     <li><a href="{{ pathto(master_doc) }}">Inicio {{ reldelim1 }}</a></li>
 {%- endblock %}
 
+
+{# Header #}
 {% block header %}
 <div style="display: none" id="dragon-warning">
 
@@ -45,10 +45,36 @@
 {{ super() }}
 {% endblock %}
 
+{% block body %}
+{{ super() }}
 
-{#
-  Agrega una ventana emergente HTML de ayuda al Editor.
-#}
+{# Agrega un foro Disqus. #}
+    <!-- disqus -->
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      // required: replace example with your forum shortname
+      var disqus_shortname = 'plonespanishdocs';
+      // a unique title for each page where Disqus is present
+      var disqus_title = document.getElementsByTagName("title")[0].innerHTML;
+      // a unique URL for each page where Disqus is present
+      var disqus_url = window.location.href;
+      // an article slug as the identifier like /december-2010/the-best-day-of-my-life/.
+      var disqus_identifier = window.location.pathname;
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Por favor, active JavaScript para ver <a href="http://disqus.com/?ref_noscript">los comentarios proporcionados por Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">los comentarios son proporcionados por <span class="logo-disqus">Disqus</span></a>
+
+{# Agrega una ventana emergente HTML de ayuda al Editor. #}
+
+{% endblock %}
+
 
 {% block footer %}
 {{ super() }}
@@ -103,22 +129,31 @@
     
     </div>
 
-{#
-  Habilite seguimiento de Google Analytics en la documentaciones.
-#}
+{# Habilite seguimiento de Google Analytics en la documentaciones. #}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36645888-1']);
+      _gaq.push(['_trackPageview']);
 
-<script type="text/javascript">
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36645888-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+{# Display Disqus comment count. #}
+    <!-- disqus -->
+    <script type="text/javascript">
+      // required: replace example with your forum shortname
+      var disqus_shortname = 'plonespanishdocs';
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
 
 {% endblock %}
