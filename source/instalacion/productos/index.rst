@@ -6,8 +6,8 @@ Agregando módulos y complementos adicionales a Plone
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+:Compatible con: Plone 4
+:Fecha: 23 de Diciembre de 2013
 
 En esta articulo busca explicar la instalación de módulos y complementos adicionales 
 a Plone 3 y Plone 4, además de no ser una guía paso a paso simplemente es una referencias 
@@ -77,18 +77,20 @@ Al momento de buscar que producto a instalar, proceda de la siguiente forma:
     realizados por terceros o miembros de la comunidad, muchos de los
     productos disponibles en esta sección son productos **"al viejo estilo"**
     así que debe configurar la dirección de descarga en la sección
-    **[productdistros]** como previamente se explico. Hasta Febrero de 2001
+    ``[productdistros]`` como previamente se explico. Hasta Febrero de 2001
     hay más de 1503 proyectos de productos de terceros con 4755 publicaciones
     disponibles en el sitio Web de Plone.
+
 -   Si quiere gestionar con su buildout la instalación de los paquetes
     eggs puede usar como referencia el sitio `Python Package Index (PyPI)`_
     seleccionar los nombres de paquetes eggs y agregarlo en la sección
     ``eggs`` y ``zcml`` respectivamente.
+
 -   Si no esta disponible ni `Add-on Product Releases`_ del sitio
     Plone.org ni en el sitio Python Package Index (:term:`PyPI`), consulte el
     `repositorio SVN Collective`_ y debe realizar un ``svn checkout`` al
-    directorio ``trunk/`` o al directorio ``tags/`` del producto de la
-    versión estable que necesita utilizar dentro del directorio ``./src/``
+    directorio :file:`trunk/` o al directorio :file:`tags/` del producto de la
+    versión estable que necesita utilizar dentro del directorio :file:`src/`
     y luego configurarlo como se describe previamente en la sección llamada
     **Agregando un paquete "desarrollo"**.
 
@@ -111,10 +113,11 @@ descritos a continuación:
 #. Entonces ``zc.buildout`` consulta dentro :term:`Python Package Index` 
    para comprobar la existencia del paquetes a descargar.
 
-#. Descarga los :term:`paquetes Egg` (archivos .egg / .tar.gz) y sus dependencias que estén publicados en :term:`PyPI`.
+#. Descarga los :term:`paquetes Egg` (archivos .egg / .tar.gz) y sus dependencias que 
+   estén publicados en :term:`PyPI`.
 
-#. Finalmente se encarga de instalar como producto/paquete disponible para ser habilitar / deshabilitar 
-   en su :term:`Instancia de Zope` en cualquier de sus sitios Plone.
+#. Finalmente se encarga de instalar como producto/paquete disponible para ser 
+   habilitar / deshabilitar en su :term:`Instancia de Zope` en cualquier de sus sitios Plone.
 
 Ejemplo de uso
 ==============
@@ -129,30 +132,38 @@ Para ejemplificar estos conceptos previos, agregue el siguiente producto:
 `heddex.tranquility theme`_, es un tema se empaqueta como un paquete egg Python 
 y en la `página del producto en plone.org`_ tiene buenas instrucciones de instalación. 
 Esta documentación dice añadir el nombre de producto ``heddex.tranquility``
-debajo de la directivas ``eggs`` y ``zcml`` en parte **[buildout]**.
+debajo de la directivas ``eggs`` y ``zcml`` en parte ``[buildout]``.
 
 Antes de seguir seria bueno que entiendas que es buildout y sus hiervas, para
 esto recomiendo leer el manual sobre `Gestión de proyectos con Buildout`_.
 
 Para empezar, es una buena idea hacer una copia de seguridad del archivo
-original ``buildout.cfg``, sólo en caso de que accidentalmente dañe la
+original :file:`buildout.cfg`, sólo en caso de que accidentalmente dañe la
 configuración respectivamente.
 
-1.  Abra el archivo ``buildout.cfg`` en su editor de texto de elección.
-2.  Buscar la sección etiquetada: **[buildout]**.
-3.  Buscar la linea que tenga la directiva: **eggs =**.
-4.  Agregar "**heddex.tranquility**" por debajo de la lista de paquetes
+1.  Abra el archivo :file:`buildout.cfg` en su editor de texto de elección.
+
+2.  Buscar la sección etiquetada: ``[buildout]``.
+
+3.  Buscar la linea que tenga la directiva: ``eggs =``.
+
+4.  Agregar ``heddex.tranquility`` por debajo de la lista de paquetes
     eggs, dejando cuatro espacios en blanco antes del nombre del paquete.
-5.  Buscar la linea que tenga la directiva: **zcml =**.
-6.  Agregar "**heddex.tranquility**" por debajo de esa línea, dejando
+
+5.  Buscar la linea que tenga la directiva: ``zcml =``.
+
+6.  Agregar ``heddex.tranquility`` por debajo de esa línea, dejando
     cuatro espacios en blanco antes del nombre del paquete.
-7.  Guarde su archivo de configuración ``buildout.cfg``.
-8.  Ejecute el script buildout, de la siguiente forma: ``./bin/buildout
-    -vN``
-9.  Inicie de nuevo Plone, de la siguiente forma: ``./bin/instance fg``.
+
+7.  Guarde su archivo de configuración :file:`buildout.cfg`.
+
+8.  Ejecute el script buildout, de la siguiente forma: :command:`./bin/buildout -vN`.
+
+9.  Inicie de nuevo Plone, de la siguiente forma: :command:`./bin/instance fg`.
+
 10. Abra el navegador web de su preferencia, acceda a su dirección del
     sitio Plone, por defecto es `Agregar/Quitar Productos`_ y justo al lado
-    del producto **heddex.tranquility** y luego haga clic en el botón
+    del producto ``heddex.tranquility`` y luego haga clic en el botón
     **Instalar** . Hasta este punto solo debe aparecer en la lista de los
     **Productos instalados**, si hasta este punto no ha cambiado la
     apariencia del sitio de Plone debe ir a la sección `Configuración de Temas`_
@@ -176,14 +187,14 @@ Agregando un producto tradicional Zope 2
 ----------------------------------------
 
 La forma más sencilla de probar un producto tradicional de Zope 2 es para
-extraerlo en dentro de la carpeta ``products/`` de instalación. Si ves
-documentación referente a la carpeta Products/ en una instancia de Zope, esta
+extraerlo en dentro de la carpeta :file:`products/` de instalación. Si ves
+documentación referente a la carpeta :file:`products/` en una instancia de Zope, esta
 es la misma cosa.
 
 Sin embargo, este enfoque hace que sea más difícil para redistribuir su
 proyecto y compartirlo con otros desarrolladores. A menudo es más predecible
 dejar que buildout descargue e instale el paquete por usted. Puede hacer esto
-con la sección **[productdistros]** del archivo ``buildout.cfg``.
+con la sección ``[productdistros]`` del archivo :file:`buildout.cfg`.
 
 .. code-block:: cfg
 
@@ -216,10 +227,10 @@ en ``egg`` ni **al viejo estilo de Zope**, pero estos están disponibles desde
 un repositorio de control de versiones como SVN, Git, o simplemente son
 varios productos locales en desarrollo. Usted puede hacer dos cosas para
 instalar entonces. Lo primero que hay que hacer es construirlo y colocarlo al
-directorio ``./src/`` de su instalación Plone. Esto también es muy útil
+directorio :file:`src/` de su instalación Plone. Esto también es muy útil
 cuando usted modifica un producto existente. Antes de ejecutar el comando
 buildout usted tiene que agregar los productos a las secciones ``eggs`` y
-``zcml`` (si es necesario) de archivo ``buildout.cfg``:
+``zcml`` (si es necesario) de archivo :file:`buildout.cfg`:
 
 .. code-block:: cfg
 
@@ -237,7 +248,7 @@ buildout usted tiene que agregar los productos a las secciones ``eggs`` y
       src/canaima.aponwaotheme
       ...
 
-Luego ejecuta el siguiente comando dentro del directorio ``./src/``:
+Luego ejecuta el siguiente comando dentro del directorio :file:`src/`:
 
 .. code-block:: sh
 
@@ -262,7 +273,7 @@ El paquete `canaima.aponwaotheme`_, es un tema para sitios Plone 3.
   Cabe destacar que ya existente `extensiones de Buildout`_ que gestión
   descargas desde repositorios de control de versiones como
   `mr.developer`_ y `infrae.subversion`_ que con unas simples
-  configuraciones adicionales en tu archivo ``buildout.cfg`` puede automatizar
+  configuraciones adicionales en tu archivo :file:`buildout.cfg` puede automatizar
   la descarga de los códigos fuentes del los respectivos repositorios.
 
 
@@ -270,11 +281,11 @@ Algunos productos adicionales útiles
 ------------------------------------
 
 Una serie de productos útiles que sirven de ejemplo para poner en practica
-las configuraciones en su archivo ``buildout.cfg``
+las configuraciones en su archivo :file:`buildout.cfg`
 
 .. note:: 
 
-  Los tres puntos suspensivos **...** son la indicar que tienes una serie
+  Los tres puntos suspensivos ``...`` son la indicar que tienes una serie
   de configuraciones antes o después de la sección, así que **NO** se copian ;)
 
 
@@ -297,7 +308,7 @@ Editor de texto enriquecido
   :align: center
   :alt: Products.FCKeditor
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -318,7 +329,7 @@ del sitio de Plone y tratarte de integrarlo a su sitio.
   :align: center
   :alt: Foro de discusión con el producto Ploneboard
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -363,7 +374,7 @@ a las características que ofrece Wordpress y el segundo es muy minimalista.
   :align: center
   :alt: Bitácoras/Blogs con el producto Scrawl
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -382,7 +393,7 @@ Altamente recomendada es el producto `Singing and Dancing`_.
   :align: center
   :alt: Sistema de correo de noticias con el producto Singing and Dancing
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -410,7 +421,7 @@ Etiquetas
   :align: center
   :alt: Nube de etiquetas con el producto quintagroup.portlet.cumulus
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -433,7 +444,7 @@ almacenados en Google Video o YouTube dentro de un sitio Plone
   :align: center
   :alt: ATGoogleVideo
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -447,7 +458,7 @@ Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
   :align: center
   :alt: portlet de Galería de imágenes Gallery portlet
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -465,7 +476,7 @@ de imágenes inicialmente generadas cuando usted agrega imágenes en su portal.
   :align: center
   :alt: plone.app.imaging
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
@@ -518,7 +529,7 @@ ves usted tiene que instalarlo.
   :align: center
   :alt: collective.uploadify
 
-Agregue la siguiente configuración del producto al archivo ``buildout.cfg``
+Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 .. code-block:: cfg
 
