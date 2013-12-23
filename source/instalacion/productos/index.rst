@@ -9,62 +9,121 @@ Agregando módulos y complementos adicionales a Plone
 :Compatible con: Plone 4
 :Fecha: 23 de Diciembre de 2013
 
-En esta articulo busca explicar la instalación de módulos y complementos adicionales 
-a Plone 3 y Plone 4, además de no ser una guía paso a paso simplemente es una referencias 
-sobre las diversas formas de hacer esto.
+En esta articulo busca explicar la instalación de módulos y complementos 
+adicionales a Plone 3 y Plone 4, además de no ser una guía paso a paso 
+simplemente es una referencias sobre las diversas formas de hacer esto.
 
-¿Cómo agrego productos específicos al sitio Plone?
-==================================================
+Introducción
+============
+
+Una de las principales características de un Sistema de Gestión de Contenido 
+es la modularización. Es decir, la posibilidad de agregación nueva funcionalidad 
+mediante la instalación de módulos construidos por comunidad de programadores 
+que apoyan estas herramientas libre. 
+
+Plone tiene un gran número de módulos para ampliar aún más sus funcionalidades, 
+éstos se llaman productos.
+
+Con el objetivo de satisfacer las principales demandas de tus usuarios debe aprender 
+a instalar, configurar productos para que estén disponibles para habilitados en sus 
+diversos sitios Plone que hospede en esa instalación.
+
+.. warning:: 
+    sin embargo, son productos de terceros, la fundación Plone no se responsable de 
+    los productos de terceros.
+
+Productos Adicionales
+=====================
 
 Para la mayor comprensión de este manual cada vez que nos refiramos a un
 producto estaremos hablando de plugins para los que usen WordPress o módulos
 para los que usen Joomla o Drupal, también debemos tomar en cuenta que los
 temas o pieles en Plone los tratamos como un producto. dicho esto bienvenidos
-a la magia de personalizar su sitio Plone
+a la magia de personalizar su sitio Plone.
 
 Usted probablemente quiere agregar productos en su sitio Plone, como un
 apariencia visual o temas distinto a la predeterminada, o agregar un foro de
 discusión, integrar con otros servicios como *Bases de Datos*, *LDAP*, *Lista
 de correo*, entre otros.
 
-Terminología
-------------
+.. tip::
+    Para ver la lista de productos disponibles y usted debe ser el usuario 
+    **Administrador del sitio Web** y haber iniciado sesión de usuario. 
 
-Hay que entender varios conceptos antes de continuar tales como :term:`Paquete Python`, 
-:term:`Productos`, :term:`Producto Zope`, :term:`Producto Plone`, :term:`paquetes Egg` 
-y :term:`Collective`.
+Después de, vaya a la `Configuración del Sitio`_, en Plone 4 acceda 
+al menú *Personal en la esquina superior derecha con el nombre real o 
+el nombre de usuario* y luego hace clic en :menuselection:`Configuración del sitio`.
+
+.. figure:: productos_complementos_1.png
+   :align: center
+   :alt: 
+
+En el panel **Configuración del sitio**, haga clic en la sección **Complementos**.
+
+.. figure:: productos_complementos_2.png
+   :align: center
+   :alt: 
+
+Estando en la ruta :menuselection:`Configuración del sitio --> Complementos`, le 
+aparecerá la siguiente pantalla:
+
+.. figure:: productos_complementos_3.png
+   :align: center
+   :alt: 
+
+Desde allí no se puede agregar productos más allá de los que se enumeran en la página.
+
+
+En la sección **Complementos disponibles**, seleccione las casillas de los productos deseados 
+y luego haga clic en el botón **Activar**, que se encuentra al final de los productos disponibles.
+
+Los **productos instalados** se enumeran en la sección ubicada al final de página.
+De forma predeterminada, todos los sitios cuentan con algunos productos ya instalados, 
+como se muestra a continuación:
+
+.. figure:: productos_complementos_4.png
+   :align: center
+   :alt: 
+
+Para remover el producto, seleccione la casillas a la lado de los productos que desea 
+eliminar en la sección **Complementos activos**, y luego haga clic en el botón **Desactivar**.
+
+.. tip::
+    Si necesita instalar la integracion con LDAP por favor, **no instale** el producto 
+    ``LDAP User Folder``. Este producto es estándar para Plone, pero su instalación produce 
+    errores que impiden el acceso a la área administrativa del sitio.
+
+----
+
+¿Cómo agrego productos específicos al sitio Plone?
+==================================================
+
+Hay que entender varios conceptos antes de continuar tales como: 
+
+- :term:`Paquete Python`.
+
+- :term:`Productos`.
+
+- :term:`Producto Zope`.
+
+- :term:`Producto Plone`.
+
+- :term:`paquetes Egg`.
+
+- :term:`Collective`.
 
 Tipos de productos disponibles
 ==============================
 
 Teniendo en cuenta los conceptos previos, entonces existen muchos Productos
-distribuidos como Productos Zope o paquetes Egg, pero ahora hay que saber que
-tipo de producto están disponibles para instalar y ampliar las
-funcionalidades de Zope/Plone, a continuación se describe una lista de
+distribuidos como :term:`Producto Zope` o :term:`paquetes Egg`, pero ahora 
+hay que saber que tipo de producto están disponibles para instalar y ampliar 
+las funcionalidades de Zope/Plone, a continuación se describe una lista de
 estos:
 
-.. glossary::
+- :term:`Temas / Apariencias`.
 
-  Temas / Apariencias
-    Por lo general si un producto de Tema esta bien diseñado y implementado
-    debe aplicarse de una ves al momento de instalarlo. En caso que no se aplique
-    de una puede acceder a la sección `Configuración de Temas`_ y cambiar el
-    **Tema predeterminado** por el de su gusto.
-
-  Tipos de contenidos
-    Los tipos de contenidos son productos que extienden la funcionalidad de
-    **Agregar elemento** que permite agregar nuevos tipos de registros
-    (Contenidos) a tu sitio. Esto quiere decir que si instala un tipo de
-    contenido exitosamente debería poder acceder a usarlo desde el menú de
-    **Agregar elemento** en el sitio Plone. Opcionalmente algunos productos
-    instalan un panel de control del producto que puede acceder a este en la
-    sección `Configuración de Productos Adicionales`_.
-
-  Productos Zope
-    Este tipo de productos esta disponibles desde la interfaz administrativa de
-    Zope (ZMI) de `su instalación`_ donde deben acceder con las credenciales del
-    usuario Administrador de Zope. Muchas veces el producto simplemente no hay
-    que instalarlo por que se agregar automáticamente.
+- :term:`Tipos de contenidos`.
 
 
 Recomendaciones para agregar productos
@@ -72,27 +131,24 @@ Recomendaciones para agregar productos
 
 Al momento de buscar que producto a instalar, proceda de la siguiente forma:
 
--   Consulte la sección llamada `Add-on Product Releases`_ del sitio
-    Plone.org, donde podrá conseguir información de los productos adicionales
-    realizados por terceros o miembros de la comunidad, muchos de los
-    productos disponibles en esta sección son productos **"al viejo estilo"**
-    así que debe configurar la dirección de descarga en la sección
-    ``[productdistros]`` como previamente se explico. Hasta Febrero de 2001
-    hay más de 1503 proyectos de productos de terceros con 4755 publicaciones
-    disponibles en el sitio Web de Plone.
+-   Consulte la sección llamada `Add-on Product Releases`_ del sitio Plone.org, 
+    donde podrá conseguir información de los productos adicionales realizados 
+    por terceros o miembros de la comunidad, muchos de los productos disponibles 
+    en esta sección son productos :ref:`"al viejo estilo" <agregar_producto_zope2>`. 
 
--   Si quiere gestionar con su buildout la instalación de los paquetes
-    eggs puede usar como referencia el sitio `Python Package Index (PyPI)`_
-    seleccionar los nombres de paquetes eggs y agregarlo en la sección
+    .. note:: 
+        Hasta **Diciembre de 2013** hay más de **2188 proyectos** de productos 
+        de terceros con **8030 publicaciones** disponibles en el sitio Web de Plone.
+
+-   Si quiere gestionar con su buildout la instalación de los :term:`paquetes Egg`
+    puede usar como referencia el sitio Python Package Index (:term:`PyPI`)
+    seleccionar los nombres de :term:`paquetes Egg` y agregarlo en la sección
     ``eggs`` y ``zcml`` respectivamente.
 
--   Si no esta disponible ni `Add-on Product Releases`_ del sitio
-    Plone.org ni en el sitio Python Package Index (:term:`PyPI`), consulte el
-    `repositorio SVN Collective`_ y debe realizar un ``svn checkout`` al
-    directorio :file:`trunk/` o al directorio :file:`tags/` del producto de la
-    versión estable que necesita utilizar dentro del directorio :file:`src/`
-    y luego configurarlo como se describe previamente en la sección llamada
-    **Agregando un paquete "desarrollo"**.
+-   Si no esta disponible ni `Add-on Product Releases`_ del sitio Plone.org ni en 
+    el sitio Python Package Index (:term:`PyPI`), consulte los repositorios de código 
+    fuente :term:`Collective` y gestionar la descarga del código fuente manualmente 
+    o automáticamente.
 
 Funcionamiento
 ==============
@@ -108,7 +164,7 @@ descritos a continuación:
 
 #. Las configuraciones se efectúan en el archivo :ref:`buildout.cfg <buildout_cfg>`.
 
-#. Luego de editar sus configuraciones ejecute el comando ``bin/buildout``.
+#. Luego de editar sus configuraciones ejecute el comando :command:`bin/buildout`.
 
 #. Entonces ``zc.buildout`` consulta dentro :term:`Python Package Index` 
    para comprobar la existencia del paquetes a descargar.
@@ -116,7 +172,7 @@ descritos a continuación:
 #. Descarga los :term:`paquetes Egg` (archivos .egg / .tar.gz) y sus dependencias que 
    estén publicados en :term:`PyPI`.
 
-#. Finalmente se encarga de instalar como producto/paquete disponible para ser 
+#. Finalmente se encarga de instalar como producto / paquete disponible para ser 
    habilitar / deshabilitar en su :term:`Instancia de Zope` en cualquier de sus sitios Plone.
 
 Ejemplo de uso
@@ -147,8 +203,8 @@ configuración respectivamente.
 
 3.  Buscar la linea que tenga la directiva: ``eggs =``.
 
-4.  Agregar ``heddex.tranquility`` por debajo de la lista de paquetes
-    eggs, dejando cuatro espacios en blanco antes del nombre del paquete.
+4.  Agregar ``heddex.tranquility`` por debajo de la lista de :term:`paquetes Egg`,
+    dejando cuatro espacios en blanco antes del nombre del paquete.
 
 5.  Buscar la linea que tenga la directiva: ``zcml =``.
 
@@ -182,6 +238,7 @@ configuración respectivamente.
   zcml =
       heddex.tranquility
 
+.. _agregar_producto_zope2:
 
 Agregando un producto tradicional Zope 2
 ----------------------------------------
@@ -192,7 +249,7 @@ documentación referente a la carpeta :file:`products/` en una instancia de Zope
 es la misma cosa.
 
 Sin embargo, este enfoque hace que sea más difícil para redistribuir su
-proyecto y compartirlo con otros desarrolladores. A menudo es más predecible
+proyecto y compartirlo con otros programadores. A menudo es más predecible
 dejar que buildout descargue e instale el paquete por usted. Puede hacer esto
 con la sección ``[productdistros]`` del archivo :file:`buildout.cfg`.
 
@@ -212,24 +269,25 @@ con la sección ``[productdistros]`` del archivo :file:`buildout.cfg`.
 
 Este método también es conocido como **"al viejo estilo de Zope"**  y la
 razón de este mecanismo es por que algunos productos no están aun empaquetado
-como paquetes eggs de Python. Estos productos necesitan ser instalados usando
+como :term:`paquetes Egg` de Python. Estos productos necesitan ser instalados usando
 sus enlaces de descargas como se demostrado previamente. Su usted busca un
-producto que usted quiere usar que no este empaquetado como egg, usted
+producto que usted quiere usar que no este empaquetado como :term:`Egg`, usted
 necesita buscar el enlace de descargas en la página de productos en plone.org
 y coloque la dirección URL.
 
+.. _agregar_producto_desarrollo:
 
 Agregando un paquete "desarrollo"
 ---------------------------------
 
-A veces usted tiene que existen algunos productos que no están empaquetados
-en ``egg`` ni **al viejo estilo de Zope**, pero estos están disponibles desde
-un repositorio de control de versiones como SVN, Git, o simplemente son
-varios productos locales en desarrollo. Usted puede hacer dos cosas para
-instalar entonces. Lo primero que hay que hacer es construirlo y colocarlo al
-directorio :file:`src/` de su instalación Plone. Esto también es muy útil
-cuando usted modifica un producto existente. Antes de ejecutar el comando
-buildout usted tiene que agregar los productos a las secciones ``eggs`` y
+A veces usted tiene que existen algunos productos que no están empaquetados en :term:`Egg` 
+ni **al viejo estilo de Zope**, pero estos están disponibles desde un repositorio de control 
+de versiones como SVN, Git, o simplemente son varios productos locales en desarrollo. 
+
+Usted puede hacer dos cosas para instalar entonces. Lo primero que hay que hacer es 
+construirlo y colocarlo al directorio :file:`src/` de su instalación Plone. Esto también 
+es muy útil cuando usted modifica un producto existente. Antes de ejecutar el comando
+:command:`buildout` usted tiene que agregar los productos a las secciones ``eggs`` y
 ``zcml`` (si es necesario) de archivo :file:`buildout.cfg`:
 
 .. code-block:: cfg
@@ -253,6 +311,13 @@ Luego ejecuta el siguiente comando dentro del directorio :file:`src/`:
 .. code-block:: sh
 
   $ git clone git://gitorious.org/~macagua/canaima-aponwao-plone-theme/canaima-aponwaotheme.git canaima.aponwaotheme
+
+
+.. tip:: 
+    debe realizar un comando :command:`svn checkout` al directorio :file:`trunk/` 
+    o al directorio :file:`tags/` del producto de la versión estable que necesita 
+    utilizar dentro del directorio :file:`src/` y luego configurarlo como se describe 
+    previamente en la sección llamada **Agregando un paquete "desarrollo"**.
 
 Luego reconstruye el el sitio con el siguiente comando: 
 
@@ -557,8 +622,6 @@ Referencias
 .. _Configuración de Productos Adicionales: http://localhost:8080/Plone/prefs_install_products_form
 .. _su instalación: http://localhost:8080/manage
 .. _Add-on Product Releases: http://plone.org/products
-.. _Python Package Index (PyPI): http://pypi.python.org/pypi/
-.. _repositorio SVN Collective: http://svn.plone.org/svn/collective/
 .. _heddex.tranquility theme: http://plone.org/products/heddex.tranquility-theme
 .. _página del producto en plone.org: http://plone.org/products/heddex.tranquility-theme
 .. _Gestión de proyectos con Buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
@@ -587,3 +650,4 @@ Referencias
 .. _Add on product installation fails: http://plone.org/documentation/kb/diagnosing-third-party-product-installation-problems
 .. _Installing a third party product: http://plone.org/documentation/manual/developer-manual/managing-projects-with-buildout/installing-a-third-party-product
 .. _Packages, products and eggs: http://plone.org/documentation/manual/developer-manual/managing-projects-with-buildout/packages-products-and-eggs/
+.. _Configuración del Sitio: http://www.ufrgs.br/tutorial-plone4/dicas-iniciais/configuracao-do-site
