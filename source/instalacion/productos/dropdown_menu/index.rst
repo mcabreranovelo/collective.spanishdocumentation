@@ -33,21 +33,12 @@ Información básica del producto
 
 La instalación de este producto se realiza usando la herramienta 
 :ref:`zc.buildout <que_es_zcbuildout>` para esto usted tiene que agregar 
-el producto a las secciones ``eggs`` y ``zcml`` (si es necesario) de archivo 
-:file:`buildout.cfg` como se muestra a continuación:
+el producto a las sección ``eggs`` del archivo :file:`buildout.cfg` como 
+se muestra a continuación:
 
 .. code-block:: cfg
 
   eggs =
-      webcouturier.dropdownmenu
-      
-
-Indicar al :term:`recipe` `plone.recipe.zope2instance`_ que instale una 
-configuración :term:`ZCML-slug`, como se muestra a continuación:
-
-.. code-block:: cfg
-
-  zcml =
       webcouturier.dropdownmenu
       
 Luego ejecute el script :command:`buildout`, de la siguiente forma:
@@ -70,7 +61,7 @@ Luego de esto ya tiene disponible el producto para ser habilitado en cada sitio
 Plone dentro de su :term:`Instancia de Zope` como se describe a continuación:
 
 Habilitarlo en Plone
---------------------
+====================
 
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
 y marque la casilla llamada **Dropdown menu** y luego presione el botón **Habilitar**.
