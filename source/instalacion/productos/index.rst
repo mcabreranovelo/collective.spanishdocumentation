@@ -55,21 +55,36 @@ al menú *Personal en la esquina superior derecha con el nombre real o
 el nombre de usuario* y luego hace clic en :menuselection:`Configuración del sitio`.
 
 .. figure:: productos_complementos_1.png
-   :align: center
-   :alt: 
+  :alt: Configuración del sitio
+  :align: center
+  :width: 640px
+  :height: 448px
+  :target: ../../_images/productos_complementos_1.png
+
+  **Configuración del sitio**
 
 En el panel **Configuración del sitio**, haga clic en la sección **Complementos**.
 
 .. figure:: productos_complementos_2.png
-   :align: center
-   :alt: 
+  :alt: sección Complementos
+  :align: center
+  :width: 640px
+  :height: 388px
+  :target: ../../_images/productos_complementos_2.png
+
+  **sección Complementos**
 
 Estando en la ruta :menuselection:`Configuración del sitio --> Complementos`, le 
 aparecerá la siguiente pantalla:
 
 .. figure:: productos_complementos_3.png
-   :align: center
-   :alt: 
+  :alt: Complementos disponibles a Activar
+  :align: center
+  :width: 640px
+  :height: 333px
+  :target: ../../_images/productos_complementos_3.png
+
+  **Complementos disponibles a Activar**
 
 Desde allí no se puede agregar productos más allá de los que se enumeran en la página.
 
@@ -82,14 +97,19 @@ De forma predeterminada, todos los sitios cuentan con algunos productos ya insta
 como se muestra a continuación:
 
 .. figure:: productos_complementos_4.png
-   :align: center
-   :alt: 
+  :alt: Complementos disponibles a Desactivar
+  :align: center
+  :width: 640px
+  :height: 434px
+  :target: ../../_images/productos_complementos_3.png
+
+  **Complementos disponibles a Desactivar**
 
 Para remover el producto, seleccione la casillas a la lado de los productos que desea 
 eliminar en la sección **Complementos activos**, y luego haga clic en el botón **Desactivar**.
 
 .. tip::
-    Si necesita instalar la integracion con LDAP por favor, **no instale** el producto 
+    Si necesita instalar la integración con LDAP por favor, **no instale** el producto 
     ``LDAP User Folder``. Este producto es estándar para Plone, pero su instalación produce 
     errores que impiden el acceso a la área administrativa del sitio.
 
@@ -112,14 +132,14 @@ Hay que entender varios conceptos antes de continuar tales como:
 
 - :term:`Collective`.
 
-Tipos de productos disponibles
-==============================
+Tipos de productos
+==================
 
 Teniendo en cuenta los conceptos previos, entonces existen muchos Productos
-distribuidos como :term:`Producto Zope` o :term:`paquetes Egg`, pero ahora 
-hay que saber que tipo de producto están disponibles para instalar y ampliar 
-las funcionalidades de Zope/Plone, a continuación se describe una lista de
-estos:
+distribuidos disponibles como :term:`Producto Zope` o :term:`paquetes Egg`, 
+pero ahora hay que saber que tipo de producto están disponibles para instalar 
+y ampliar las funcionalidades de Zope/Plone, a continuación se describe una 
+lista de estos:
 
 - :term:`Temas / Apariencias`.
 
@@ -158,8 +178,8 @@ descritos a continuación:
 .. image:: ./como_instalar_addons_plone.png
   :alt: Como instalar Add ons en Plone
   :align: center
-  :width: 640pt
-  :height: 454pt
+  :width: 640px
+  :height: 453px
   :target: ../../_images/como_instalar_addons_plone.png
 
 #. Las configuraciones se efectúan en el archivo :ref:`buildout.cfg <buildout_cfg>`.
@@ -604,7 +624,7 @@ Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 
 
 Referencias
-~~~~~~~~~~~
+===========
 
 - `Installing Plone add-ons - quick instructions`_
 - `Using Add-ons`_
