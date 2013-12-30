@@ -20,6 +20,9 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         En la herramienta buildout, es un conjunto de partes que describe como ensamblar 
         una aplicación.
     
+    bundle
+        Ver :term:`Paquete bundle`.
+
     Cheese shop
         Ver :term:`PyPI`.
     
@@ -47,6 +50,8 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         Ver :term:`paquetes Egg`.
 
     Catalog
+        Sinónimo en Ingles del termino :term:`Catálogo`.
+
     Catálogo
         Es un índice interno de los contenidos dentro de Plone para que se pueda buscar. 
         El objetivo del catálogo es que sea accesible a través de la :ref:`ZMI <que_es_zmi>` 
@@ -71,25 +76,32 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         Ver :term:`PyPI`.
     
     PyPI
-        Del Ingles Python Package Index, es el servidor central de :term:`paquetes Egg` Python 
-        ubicado en la dirección http://pypi.python.org/pypi/.
+        Siglas del termino en Ingles :term:`Python Package Index`, es el servidor central 
+        de :term:`paquetes Egg` Python ubicado en la dirección http://pypi.python.org/pypi/.
     
     part
-        En la herramienta buildout, es un conjunto opciones que le permite a usted 
+        En la herramienta :term:`buildout`, es un conjunto opciones que le permite a usted 
         construir una pieza de la aplicación.
     
     recipe
-        En la herramienta buildout, es el software usado para crear una parte basada 
-        en sus opciones.
+        En la herramienta :term:`buildout`, es el software usado para crear partes de 
+        una instalación basada en sus opciones. Mas información consulte el articulo 
+        :ref:`Recipes Buildout <recipe_buildout>`.
     
     paquete
         Ver :term:`Paquete Python`.
+
+    Paquete bundle
+        Este paquete consististe en un archivo comprimido con todos los módulos que son 
+        necesario compilar o instalar en el :term:`PYTHONPATH` de tu interprete ``Python``.
     
     Paquete Python
-    Paquetes Python
         Es un termino generalmente usando para describir un módulo Python. en el
         más básico nivel, un paquete es un directorio que contiene un archivo
         :file:`__init__.py` y algún código Python.
+
+    Paquetes Python
+        Plural del termino :term:`Paquete Python`.
     
     Productos
         Es una terminología usada por la comunidad Zope / Plone asociada a
@@ -102,7 +114,6 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         de Plone. Se puede decir que son productos que su ámbito de uso es solo en el
         desde la interfaz gráfica de Plone.
     
-    Productos Zope
     Producto Zope
         Es un tipo especial de paquete Python usado para extender Zope. En las
         antiguas versiones de Zope, todos los productos eran carpetas que se ubican
@@ -111,17 +122,20 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         Por ejemplo, el núcleo de Plone es un producto llamado ``CMFPlone``, conocido 
         en Python como `Products.CMFPlone`_.
         
-        Este tipo de productos esta disponibles desde la interfaz administrativa de
-        Zope (ZMI) de `su instalación`_ donde deben acceder con las credenciales del
-        usuario Administrador de Zope. Muchas veces el producto simplemente no hay
-        que instalarlo por que se agregar automáticamente.
+        Este tipo de productos esta disponibles desde la :ref:`interfaz administrativa de Zope (ZMI) <que_es_zmi>` 
+        de `su instalación`_ donde deben acceder con las credenciales del usuario 
+        Administrador de Zope. Muchas veces el producto simplemente no hay que 
+        instalarlo por que se agregar automáticamente.
+
+    Productos Zope
+        Plural del termino :term:`Producto Zope`.
     
     paquete Egg
-    paquetes Egg
         Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
         un archivo :file:`setup.py` con metadata (como el nombre del autor y la correo
         electrónico y información sobre el licenciamiento), como las dependencias del
         paquete. 
+        
         La herramienta del :ref:`setuptools <que_es_setuptools>`, es la librería Python que permite
         usar el mecanismo de paquetes egg, esta es capaz de encontrar y descargar
         automáticamente las dependencias de los paquetes Egg que se instale. 
@@ -131,6 +145,9 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         también soportan una función llamada ``entry points``, una especie de
         mecanismo genérico de plug-in. Mucha más detalle sobre este tema se encuentra
         disponible en el `sitio web de PEAK`_.
+
+    paquetes Egg
+        Plural del termino :term:`paquete Egg`.
     
     esqueleto
         Los archivos y carpetas recreados por un usuario el cual los genero ejecutando 
@@ -173,9 +190,12 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         sección `Configuración de Productos Adicionales`_.
     
     var
+        Diminutivo en singular del termino :term:`variable`.
+
     vars
+        Diminutivo en plural del termino :term:`variable`.
+
     variable
-    variables
         1) Una pregunta que debe ser respondida por el usuario cuando esta generando una 
         estructura de esqueleto de proyecto usando el sistema de plantilla ``templer``. En este 
         caso una variable (var) es una descripción de la información requerida, texto de 
@@ -184,11 +204,18 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         2) Una declarativa cuyo valor puede ser variable o constante dentro de un programa 
         Python o en el sistema operativo.
 
+    variables
+        Plural del termino :term:`variable`.
+
     Workflow
+        Ver :term:`Flujo de trabajo`.
+
     Flujo de trabajo
-    Flujo de trabajos
         Es una forma muy poderosa de imitar los procesos de negocio de su organización, es también 
         la forma en se manejan la configuración de seguridad de Plone.
+
+    Flujo de trabajos
+        Plural del termino :term:`Flujo de trabajo`.
 
     ZCatalog
         Ver :term:`Catalog`.
