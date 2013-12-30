@@ -6,27 +6,33 @@
 DropDown Menu
 =============
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 23 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 30 de Diciembre de 2013
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `DropDown Menu — Tutorial Plone 4`_, el cual busca explicar la instalación 
-del producto DropDown Menu.
+del producto :ref:`DropDown Menu <dropdownmenu_what>`.
+
+.. _dropdownmenu_quees:
 
 ¿Qué hace?
 ==========
 Este :term:`Producto Plone` transforma el menú principal (horizontal) en un 
 menú desplegable, exhibiendo las estructuras en sub-niveles.
 
-Información básica del producto
-===============================
+.. _dropdownmenu_info:
 
-* Pagina del proyecto: http://plone.org/products/webcouturier-dropdownmenu
-* Repositorio de código: https://github.com/mishunov/webcouturier.dropdownmenu
-* Programador del producto: `Denys Mishunov`_.
+.. sidebar:: Ficha técnica del producto
 
+    :Pagina del proyecto: http://plone.org/products/webcouturier-dropdownmenu
+    :Repositorio de código: https://github.com/mishunov/webcouturier.dropdownmenu
+    :Programador del producto: `Denys Mishunov`_.
+
+.. _dropdownmenu_instalar:
 
 ¿Cómo instalarlo?
 =================
@@ -70,8 +76,10 @@ En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del
 y marque la casilla llamada **Dropdown menu** y luego presione el botón **Instalar**.
 
 
-Usar del menú desplegable
-=========================
+.. _dropdownmenu_usar:
+
+Usar el menú desplegable
+========================
 
 Al instalar el producto, el menú principal (horizontal) se transforma 
 en toda su estructura en menú desplegable.
