@@ -5,30 +5,35 @@
 Content Well Portlets
 =====================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 4
-:Fecha: 24 de Diciembre de 2013
+
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 4
+    :Fecha: 24 de Diciembre de 2013
+
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `ContentWellPortlets — Tutorial Plone 4`_, el cual busca explicar la instalación 
 del producto ContentWellPortlets.
+
+.. _contentwellportlets_quees:
 
 ¿Qué hace?
 ==========
 
 Permite agregar ``portlets`` encima e abajo de la sección de contenido.
 
+.. _contentwellportlets_info:
 
-Información básica del producto
-===============================
+.. sidebar:: Ficha técnica del producto
 
-* Pagina del proyecto: http://plone.org/products/contentwellportlets
+    :Pagina del proyecto: http://plone.org/products/contentwellportlets
+    :Repositorio de código: http://weblion.psu.edu/
+    :Programador del producto: `WebLion Group`_.
 
-* Repositorio de código: http://weblion.psu.edu/
-
-* Programador del producto: `WebLion Group`_.
-
+.. _contentwellportlets_instalar:
 
 ¿Cómo instalarlo?
 =================
@@ -80,6 +85,8 @@ y marque la casilla llamada **ContentWellPortlets** y luego presione el botón *
 En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Agregar/Quitar Productos` 
 y marque la casilla llamada **ContentWellPortlets** y luego presione el botón **Instalar**.
 
+.. _contentwellportlets_usar:
+
 Configuración del Content Well Portlets
 =======================================
 
@@ -124,7 +131,7 @@ diferentes (A, B y C) y colocar mas de un portlet por columna.
   :target: ../../../_images/contentwellportlets_3.png
 
 
-Resulta en:
+Esto resulta en la siguiente pantalla:
 
 .. figure:: contentwellportlets_4.png
   :align: center
@@ -133,7 +140,7 @@ Resulta en:
   :target: ../../../_images/contentwellportlets_4.png
   :alt: Un portlet de Calendario el contenido de la página
 
-   Un portlet de Calendario el contenido de la página
+  Un portlet de Calendario el contenido de la página
 
 Aplicando estilos a portlets
 ============================
