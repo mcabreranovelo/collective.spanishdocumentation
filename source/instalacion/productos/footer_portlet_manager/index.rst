@@ -5,10 +5,12 @@
 Footer Portlet Manager
 ======================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 4
-:Fecha: 23 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 4
+    :Fecha: 3o de Diciembre de 2013
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `Footer Portlet Manager — Tutorial Plone 4`_, el cual busca explicar la instalación 
@@ -20,17 +22,11 @@ del producto Footer Portlet Manager.
 Permite añadir ``portlet`` de colección o texto estático en la parte inferior
 de la página, debajo de las estructuras previstas por el pie de página de Plone.
 
+.. sidebar:: Ficha técnica del producto
 
-Información básica del producto
-===============================
-
-* Pagina del proyecto: http://plone.org/products/quintagroup.portletmanager.footer
-
-* Repositorio de código: http://projects.quintagroup.com/products/browser/quintagroup.portletmanager.footer
-
-* Programador del producto: `Quintagroup`_.
-
-
+    :Pagina del proyecto: http://plone.org/products/quintagroup.portletmanager.footer
+    :Repositorio de código: http://projects.quintagroup.com/products/browser/quintagroup.portletmanager.footer
+    :Programador del producto: `Quintagroup`_.
 
 ¿Cómo instalarlo?
 =================
@@ -95,14 +91,14 @@ a continuación:
    :alt: 
 
 Al hacer clic en el enlace, la interfaz es básicamente lo mismo que otras 
-páginas de administración de portlets, con la diferencia es que esta solamente 
+páginas **Administrar portlets**, con la diferencia es que esta solamente 
 disponible portlets de **Colección**  y portlet de **Texto estático**.
 
 .. figure:: footer_portlet_manager_2.png
    :align: center
    :alt: 
 
-Ejemplo de portlet de texto estático mediante el Footer Portlet Manager 
+Ejemplo de portlet de texto estático mediante el Footer Portlet Manager
 
 .. figure:: footer_portlet_manager_3.png
    :align: center
