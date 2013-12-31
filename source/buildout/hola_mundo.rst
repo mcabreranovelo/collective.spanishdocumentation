@@ -6,10 +6,12 @@
 Hola mundo en zc.buildout
 =========================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Python 2.4 o versiones superiores
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Python 2.4 o versiones superiores
+    :Fecha: 31 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -61,7 +63,7 @@ Puedes cambiarlo a:
       hola-mundo
       chmod
 
-  # Este récipe ayuda a generar un programa Bash script llamado "hola"
+  # Esta receta ayuda a generar un programa Bash script llamado "hola"
   # dentro del directorio "bin" local a tu entorno de desarrollo
   # Para mayor información consulte http://pypi.python.org/pypi/collective.recipe.template
   [hola-mundo]
@@ -70,7 +72,7 @@ Puedes cambiarlo a:
   input = inline:
     echo 'hola mundo'
 
-  # Este récipe ayuda otorgar permisos de ejecución al programa generado en la sección "hola-mundo"
+  # Esta receta ayuda otorgar permisos de ejecución al programa generado en la sección "hola-mundo"
   # Para mayor información consulte http://pypi.python.org/pypi/plone.recipe.command
   [chmod]
   recipe = plone.recipe.command

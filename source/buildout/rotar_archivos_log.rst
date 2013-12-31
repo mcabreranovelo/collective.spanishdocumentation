@@ -6,9 +6,11 @@
 Rotar archivos .log de Zope
 ===========================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Fecha: 31 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -33,7 +35,7 @@ Luego creamos una plantilla del archivo de configuración :command:`crontab`:
 
   $ vim ./templates/logrotate.conf.tmpl
 
-Y debe agrega la siguiente configuración al archivo ``logrotate.conf.tmpl`` :
+Y debe agrega la siguiente configuración al archivo :file:`logrotate.conf.tmpl`:
 
 .. code-block:: sh
 

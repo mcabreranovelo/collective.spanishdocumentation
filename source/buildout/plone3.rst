@@ -6,12 +6,14 @@
 Buildout y Plone 3
 ==================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: versiones Plone 3.3.x
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: versiones Plone 3.3.x
+    :Fecha: 31 de Diciembre de 2013
     
-.. tag:: [plone3 plone3.3 Plone_3] versiones Plone 3
+    .. tag:: [plone3 plone3.3 Plone_3] versiones Plone 3
 
 Descripción general
 ===================
@@ -21,17 +23,29 @@ declaratoria, las partes y componentes de un desarrollo con Python. Dichas
 partes no están limitadas a componentes o código Python.
 
 La parte más poderosa de buildout es que puede extenderse con el uso de
-"recetas" que pueden instalar componentes más complicados simplemente
-agregando nuevas secciones a la configuración. Buildout puede instalar
-diversos paquetes de Python fácilmente porque está conectado con el índice
-de paquetes de Python (http://www.python.org/pypi).
+":ref:`recetas <que_es_recipes>`" que pueden instalar componentes más complicados 
+simplemente agregando nuevas secciones a la configuración. Buildout puede instalar
+diversos paquetes de Python fácilmente porque está conectado con el índice de 
+paquetes de Python (:term:`PyPI`).
 
 Algunos términos importantes
 ============================
 
-Hay que entender varios conceptos antes de continuar tales como :term:`Paquete Python`, 
-:term:`paquetes Egg`, :term:`Cheese shop`, :term:`Producto Zope`, :term:`Instalación de Zope`,  
-:term:`Instancia de Zope` y :ref:`easy_install <que_es_easyinstall>`.
+Hay que entender varios conceptos antes de continuar tales como: 
+
+- :term:`Paquete Python`.
+
+- :term:`paquetes Egg`.
+
+- :term:`Cheese shop`.
+
+- :term:`Producto Zope`.
+
+- :term:`Instalación de Zope`.
+
+- :term:`Instancia de Zope`.
+
+- :ref:`easy_install <que_es_easyinstall>`.
 
 .. _buildout_plone3_requisitos:
 
@@ -43,11 +57,13 @@ general se necesita lo siguiente:
 
 * Python 2.4.x.
 
-* Instalar :ref:`entornos virtuales de Python <creacion_entornos_virtuales>` para aislar a su instalación de la del sistema.
+* Instalar :ref:`entornos virtuales de Python <creacion_entornos_virtuales>` 
+  para aislar a su instalación de la del sistema.
 
 * El Python :ref:`paquete Setuptools <que_es_setuptools>` (:ref:`easy_install <que_es_easyinstall>`).
 
-* Para instalar instancias Zope / sitios Plone, es necesario el paquete :term:`Egg` de :ref:`ZopeSkel <instalacion_zopeskel>`.
+* Para instalar instancias Zope / sitios Plone, es necesario el paquete :term:`Egg` 
+  de :ref:`ZopeSkel <instalacion_zopeskel>`.
 
 * Para Plone, Python Imaging Library (PIL) instalado en ese Python.
 
@@ -162,14 +178,14 @@ Directorios creados
 
     bin/repozo
         Script de ``repozo``, es una herramienta que puede ser 
-        usado para crear un respaldo completo de la ZODB.
+        usado para crear un respaldo completo de la :ref:`ZODB <que_es_zodb>`.
 
     bin/zopepy
         Script para hacer inmersiones interactivas de Python en 
         el contexto de la instalación Zope / Plone.
 
     eggs/
-        Los eggs obtenidos e instalados de PyPI.
+        Los eggs obtenidos e instalados de :term:`PyPI`.
 
     downloads/
         Software adicional descargado.
@@ -178,21 +194,23 @@ Directorios creados
         Código fuente de nuestros desarrollos.
 
     products/
-        Productos tradicionales de zope.
+        Los tradicionales :term:`Productos Zope`.
 
     parts/
         Todo el código, configuración y datos manejados por buildout.
 
     var/
-        Logs y archivo de ZODB de Zope (buildout nunca sobre escribe estos archivos).
+        Los archivos Logs y archivo de :ref:`ZODB <que_es_zodb>` de Zope 
+        (buildout nunca sobre escribe estos archivos).
 
     var/filestorage
-        Contiene archivos de ZODB de Zope tales como :file:`Data.fs`, :file:`Data.fs.index`, 
-        :file:`Data.fs.lock` y :file:`Data.fs.tmp de su sitio web Plone.
+        Contiene archivos de :ref:`ZODB <que_es_zodb>` de Zope tales como 
+        :file:`Data.fs`, :file:`Data.fs.index`, :file:`Data.fs.lock` 
+        y :file:`Data.fs.tmp` de su sitio web Plone.
 
     var/log
-        Contiene archivos de Logs de Zope tales como :file:`instance.log` (archivo de errores) 
-        y :file:`instance-Z2.log` (archivo de acceso).
+        Contiene archivos de Logs de Zope tales como :file:`instance.log` 
+        (archivo de errores) y :file:`instance-Z2.log` (archivo de acceso).
 
 Descripción de este ejemplo
 ---------------------------

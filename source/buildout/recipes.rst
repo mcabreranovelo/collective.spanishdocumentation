@@ -6,10 +6,12 @@
 Recipes Buildout
 ================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Python 2.4 o versiones superiores
-:Fecha: 30 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Python 2.4 o versiones superiores
+    :Fecha: 31 de Diciembre de 2013
 
 .. _que_es_recipes:
 
