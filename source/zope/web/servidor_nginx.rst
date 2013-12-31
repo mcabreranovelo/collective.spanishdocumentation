@@ -156,7 +156,7 @@ Luego reinicie su servidor Nginx con el siguiente comando:
   -   `Mapping the Virtual Host`_.
 
 Referencias
-===========
+-----------
 
 -   `Integración de Plone con el Servidor Web Nginx de la fundación CENDITEL`_.
 
