@@ -6,10 +6,12 @@
 Esqueletos de proyectos Zope/Plone
 ==================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3 y Plone 4
-:Fecha: 31 de Julio de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3 y Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -22,8 +24,8 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
 - **Esqueletos de proyectos Plone**:
 
   .. note::
-      `Plone`_, Además de ser un sistema de gestión de contenidos, es como un Framework 
-      para desarrollo de aplicaciones, mas NO es de propósito general.
+      :ref:`Plone <que_es_plone>`, Además de ser un sistema de gestión de contenidos, 
+      es como un Framework para desarrollo de aplicaciones, mas NO es de propósito general.
 
   - `ZopeSkel`_, es una colección de esqueletos para crear
     automáticamente paquetes e instancias en Zope.
@@ -34,7 +36,7 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
 - **Esqueletos de proyectos Zope**:
 
   .. note::
-      `Zope`_,  es un entorno de desarrollo para la creación de sitios web 
+      :ref:`Zope <que_es_zope>`,  es un entorno de desarrollo para la creación de sitios web 
       dinámicos y/o aplicaciones web escrito en el lenguaje de programación 
       :ref:`Python <python_index>`.
 
@@ -45,7 +47,7 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
 - **Esqueletos de proyectos Grok**:
 
   .. note::
-      `Grok`_, es un Framework para desarrollo de aplicaciones en Zope 3.
+      :ref:`Grok <grok>`, es un Framework para desarrollo de aplicaciones en Zope 3.
 
   - `grokcore.startup`_,  Soporte a Paster para proyectos Grok.
   
@@ -358,12 +360,9 @@ Referencias
 
 - `Gestión de proyectos con Buildout, instalando Zope/Plone con este mecanismo`_ desde la comunidad Plone Venezuela.
 
-.. _Plone: http://plone.org/
 .. _ZopeSkel: http://pypi.python.org/pypi/ZopeSkel
 .. _zopeskel.dexterity: http://pypi.python.org/pypi/zopeskel.dexterity/
-.. _Zope: http://zope.org/
 .. _zopeproject: http://pypi.python.org/pypi/zopeproject/
-.. _Grok: http://grok.zope.org/
 .. _grokcore.startup: http://pypi.python.org/pypi/grokcore.startup
 .. _grokproject: http://pypi.python.org/pypi/grokproject/
 .. _A collection of skeletons for quickstarting projects with Ingeniweb products: http://pypi.python.org/pypi/IngeniSkel/

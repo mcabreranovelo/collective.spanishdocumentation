@@ -6,10 +6,12 @@
 Esqueletos de proyectos Python
 ==============================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Python 2.4 o versiones superiores
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Python 2.4 o versiones superiores
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -42,8 +44,8 @@ instalar el paquete `PasteScript`_, ejecutando el siguiente comando:
   No olvidar que estos paquetes han sido instalados con el entorno virtual que
   previamente usted activo, eso quiere decir que los paquetes previamente
   instalados con :ref:`easy_install <que_es_easyinstall>` están instalados en el 
-  directorio ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del 
-  directorio de su versión de Python de sistema ``/usr/lib/python2.x/site-packages/``
+  directorio :file:`~/virtualenv/python/lib/python2.x/site-packages/` en ves del 
+  directorio de su versión de Python de sistema :file:`/usr/lib/python2.x/site-packages/`
 
 Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
 tiene disponible para usa, ejecutando el siguiente comando: 
@@ -55,7 +57,7 @@ tiene disponible para usa, ejecutando el siguiente comando:
       basic_package:       A basic setuptools-enabled package
       paste_deploy:        A web application deployed through paste.deploy
 
-Usted puede usar el comando ``paster`` para crear paquetes Python. 
+Usted puede usar el comando :command:`paster` para crear paquetes Python. 
 
 .. code-block:: sh
 
@@ -122,8 +124,8 @@ Escriba un simple código que solicita un valor y luego lo muestra:
   var = raw_input("Introduzca alguna frase: ")
   print "Usted introdujo: ", var
 
-Guarde los cambios en el archivo ``app.py``, luego importe su aplicación 
-``app.py`` en el archivo ``__init__.py`` con el siguiente código fuente: 
+Guarde los cambios en el archivo :file:`app.py`, luego importe su aplicación 
+:file:`app.py` en el archivo :file:`__init__.py` con el siguiente código fuente: 
 
 .. code-block:: python
 

@@ -6,10 +6,12 @@
 Setuptools y EasyInstall
 ========================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: Python 4 o versiones superiores
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Lanzamiento: Python 4 o versiones superiores
+    :Fecha: 31 de Diciembre de 2013
 
 Este articulo explica como instalar paquetes Python con ``setuptools`` y ``EasyInstall``.
 
@@ -53,7 +55,7 @@ Instrucciones de Instalación
 ============================
 
 Siempre existen más de dos formas de instalar :term:`Paquetes Python` con **setuptools** y
-**easy_install** ;)
+**easy_install** ;-)
 
 Instalación manual
 ------------------
@@ -66,7 +68,7 @@ operativo como las que se muestran a continuación:
   # aptitude install build-essential python-dev
 
 La instalación es muy sencilla, solo se necesita bajar de Internet el
-archivo `ez_setup.py`_ y ejecutarlo con el Python que se desea utilizar, 
+archivo :file:`ez_setup.py` y ejecutarlo con el Python que se desea utilizar, 
 con los siguientes comando: 
 
 .. code-block:: sh
@@ -74,7 +76,7 @@ con los siguientes comando:
   # wget http://peak.telecommunity.com/dist/ez_setup.py
   # python ez_setup.py
 
-Esto instalará un programa llamado ``easy_install`` junto a los demás 
+Esto instalará un programa llamado :command:`easy_install` junto a los demás 
 ejecutables de Python.
 
 
@@ -88,7 +90,7 @@ en su sistema operativo como las que se muestran a continuación:
 
   # aptitude install build-essential python-dev python-setuptools
 
-Esto instalará un programa llamado ``easy_install`` junto a los demás 
+Esto instalará un programa llamado :command:`easy_install` junto a los demás 
 ejecutables de Python.
 
 .. _uso_easyinstall:
@@ -96,17 +98,17 @@ ejecutables de Python.
 Ejemplos de uso
 ===============
 
-El programa ``easy_install`` ofrece varias formas de uso, para instalar los paquetes
+El programa :command:`easy_install` ofrece varias formas de uso, para instalar los paquetes
 de diversas fuentes, como se describe a continuación con los siguientes ejemplos:
 
 .. tip::
     
-    Para poder utilizar el ``easy_install``, primero debe instalar ``setuptools``. 
+    Para poder utilizar el :command:`easy_install`, primero debe instalar ``setuptools``. 
     Si utiliza :ref:`virtualenv <que_es_virtualenv>`, una copia del ``easy_install`` 
     será automáticamente instalados en cada entorno virtual que usted crea. 
     
-    ``easy_install`` se puede complementar con ``virtualenv``, y se recomienda que lo 
-    utilice para :ref:`aislar a la instalación <creacion_entornos_virtuales>` de los 
+    :command:`easy_install` se puede complementar con :command:`virtualenv`, y se recomienda 
+    que lo utilice para :ref:`aislar a la instalación <creacion_entornos_virtuales>` de los 
     :term:`paquetes Egg`.
 
 **Ejemplo 1.** Instalar un paquete por nombre, buscando en :term:`PyPI` la versión más
@@ -154,7 +156,7 @@ dirección URL donde encontradas en una "página de descargas":
     $ easy_install --upgrade PyProtocols
 
 
-Para más información consulte la ayuda disponible por que paquete ``easy_install``
+Para más información consulte la ayuda disponible por que paquete :command:`easy_install`
 ejecutando el siguiente comando: 
 
 .. code-block:: sh
@@ -170,12 +172,12 @@ Utilización con Zope/Plone
 
 El mecanismo más moderno para la instalación de distribuciones de Zope y
 Plone, llamado :ref:`buildout <que_es_zcbuildout>`, formalmente 
-:ref:`zc.buildout <que_es_zcbuildout>`, hace uso de ``easy_install`` para 
-obtener e instalar todas las dependencias. 
+:ref:`zc.buildout <que_es_zcbuildout>`, hace uso de :command:`easy_install` 
+para obtener e instalar todas las dependencias. 
 
 Adicionalmente, existe una herramienta llamada ZopeSkel que permite crear 
 fácilmente "esqueletos" de distintos tipos de proyectos de Zope y Plone, 
-mediante una herramienta llamada ``paster`` y un sistema de plantillas. 
+mediante una herramienta llamada :command:`paster` y un sistema de plantillas. 
 Es recomendado instalar esta última herramienta para proyectos nuevos, de 
 la siguiente manera:
 
@@ -187,7 +189,7 @@ Una vez instalado, ofrece una buena variedad de esqueletos para diversos
 tipos de proyectos, como temas visuales, componentes de Plone, buildouts, 
 tipos de contenido con Archetypes o entre otros mas. 
 
-Se utiliza mediante el comando de sistema ``paster``, pasando la opción 
+Se utiliza mediante el comando de sistema :command:`paster`, pasando la opción 
 ``create`` para crear un proyecto y la opción ``--list-templates`` ver 
 las diversas plantillas de proyectos disponibles para crear, como se 
 muestra a continuación:

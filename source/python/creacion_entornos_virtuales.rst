@@ -6,10 +6,12 @@
 Creación de entornos virtuales Python
 =====================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Python 2.4 o versiones superiores
-:Fecha: 01 de Agosto de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Python 2.4 o versiones superiores
+    :Fecha: 31 de Diciembre de 2013
 
 .. _que_es_virtualenv:
 
@@ -32,20 +34,20 @@ del Python de su sistema.
 
 En el caso más simple, su instalación virtual de Python que viven bajo el
 directorio `home` del usuario ~/. Utilice la opción ``--help`` para obtener la
-lista completa de las opciones disponibles la herramienta ``virtualenv``.
+lista completa de las opciones disponibles la herramienta :command:`virtualenv`.
 
 Cuando haya terminado la creación del entorno virtual, tendrá un ejecutable
-de python local al usuario que lo creo (por ejemplo ``~/bin/python``) que está
-vinculado a la instalación del Python de su sistema ``/usr/bin/python`` y hereda todas sus
-librerías actuales, pero además le permite añadir nuevas librerías tanto como
-usted lo desee. 
+de python local al usuario que lo creo (por ejemplo :command:`~/bin/python`) 
+que está vinculado a la instalación del Python de su sistema :command:`/usr/bin/python` 
+y hereda todas sus librerías actuales, pero además le permite añadir nuevas librerías 
+tanto como usted lo desee. 
 
 Sólo tiene que utilizar este nuevo Python en lugar de la instalación Python 
 de su sistema, y puede modificarlo a su gusto sin dañar nada del Python de su 
 sistema operativo. De igual forma usted debe seguir usando las instrucciones de 
 instalación estándar para instalar setuptools y EasyInstall o Distribute y pip, 
-con desde su nueva instalación (``~/bin/python``) Python en lugar del Python 
-de su sistema ``/usr/bin/python``.
+con desde su nueva instalación (:command:`~/bin/python`) Python en lugar del Python 
+de su sistema :command:`/usr/bin/python`.
 
 
 Entornos virtuales de Python locales al usuario
@@ -68,7 +70,7 @@ continuación:
 Modos de Instalación
 ====================
 
-Para instalar paquete ``virtualenv`` en su sistema puede instalarlo con 
+Para instalar paquete :command:`virtualenv` en su sistema puede instalarlo con 
 :ref:`Setuptools <que_es_setuptools>`, :ref:`Distribute <que_es_distribute>` 
 para :term:`paquete Egg` o por sistema paquete Debian
 
@@ -76,8 +78,9 @@ para :term:`paquete Egg` o por sistema paquete Debian
 Instalación con paquete Debian 
 ------------------------------
 
-Para instalar ``virtualenv`` en distribuciones basadas en Debian GNU/Linux como 
-paquete ``Debian``, debe instalar los requisitos previos con el siguiente comando: 
+Para instalar :command:`virtualenv` en distribuciones basadas en Debian GNU/Linux 
+como paquete ``Debian``, debe instalar los requisitos previos con el siguiente 
+comando: 
 
 .. code-block:: sh
 
@@ -85,7 +88,7 @@ paquete ``Debian``, debe instalar los requisitos previos con el siguiente comand
 
 .. note::
 
-  A veces es mejor instalar la versión más reciente del paquete ``virtualenv``
+  A veces es mejor instalar la versión más reciente del paquete :command:`virtualenv`
   desde el repositorio :term:`PyPI`, debido que siempre la versión de Debian no esta 
   actualizada con respecto a la versión publicada en el repositorio :term:`PyPI`. 
 
@@ -93,7 +96,7 @@ paquete ``Debian``, debe instalar los requisitos previos con el siguiente comand
 Instalación con Setuptools
 --------------------------
 
-Para instalar ``virtualenv`` en distribuciones basadas en Debian GNU/Linux 
+Para instalar :command:`virtualenv` en distribuciones basadas en Debian GNU/Linux 
 con :ref:`Setuptools <que_es_setuptools>`, debe instalar los requisitos previos 
 con el siguiente comando: 
 
@@ -101,7 +104,7 @@ con el siguiente comando:
 
     # aptitude install libc6-dev python-dev python-setuptools
 
-Luego debe instalar la versión más reciente del paquete ``virtualenv``
+Luego debe instalar la versión más reciente del paquete :command:`virtualenv`
 desde el repositorio :term:`PyPI`, entonces debe instalar con el siguiente comando: 
 
 .. code-block:: sh
@@ -112,7 +115,7 @@ desde el repositorio :term:`PyPI`, entonces debe instalar con el siguiente coman
 Instalación con Distribute
 --------------------------
 
-Para instalar ``virtualenv`` en distribuciones basadas en Debian GNU/Linux 
+Para instalar :command:`virtualenv` en distribuciones basadas en Debian GNU/Linux 
 con :ref:`Distribute <que_es_distribute>`, debe instalar los requisitos previos 
 con el siguiente comando: 
 
@@ -120,7 +123,7 @@ con el siguiente comando:
 
     # aptitude install libc6-dev python-dev python-distribute python-pip
 
-Luego debe instalar la versión más reciente del paquete ``virtualenv``
+Luego debe instalar la versión más reciente del paquete :command:`virtualenv`
 desde el repositorio :term:`PyPI`, entonces debe instalar con el siguiente comando: 
 
 .. code-block:: sh
@@ -136,7 +139,7 @@ Creando entornos virtuales de Python locales al usuario
 Preparando la estructura de directorios de los Virtualenv en usuario local,
 es una buena practica organizativa más no es un estándar por defecto en la
 comunidad Python para esto muestro una forma de trabajo y se realizan
-ejecutando los siguientes comandos: 
+ejecutando los siguientes comando:
 
 .. code-block:: sh
 
@@ -144,7 +147,7 @@ ejecutando los siguientes comandos:
 
 
 Crear entorno virtual del Python 2.7 de tu sistema al directorio
-``~/virtualenv`` del usuario, ejecutando el siguiente comando: 
+:file:`~/virtualenv` del usuario, ejecutando el siguiente comando: 
 
 .. code-block:: sh
 

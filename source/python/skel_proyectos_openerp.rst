@@ -6,10 +6,12 @@
 Esqueletos de proyectos OpenERP
 ===============================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Probado con Python 2.6 o versiones superiores
-:Fecha: 31 de Julio de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Probado con Python 2.6 o versiones superiores
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -99,7 +101,7 @@ Usted puede verificar el paquete previamente creado con el siguiente comando:
 
 Hasta este punto tiene creado la estructura del nuestro modulo y puede 
 consultar la información del manifiesto de su modulo en el archivo 
-``__openerp__.py``, con el siguiente comando:
+:file:`__openerp__.py`, con el siguiente comando:
 
 .. code-block:: python
 
@@ -234,7 +236,9 @@ Referencias
 ===========
 
 - `How to create an OpenERP module`_.
+
 - http://planet.domsense.com/en/2011/12/quickly-get-and-run-openerp-6-1-trunk/
+
 - http://planet.domsense.com/en/2012/04/how-to-create-an-openerp-module-the-easy-way/trackback/
 
 .. _OpenERP: http://es.wikipedia.org/wiki/OpenERP

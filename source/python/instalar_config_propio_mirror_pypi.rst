@@ -6,10 +6,11 @@
 Instalar y configurar repositorios espejos de PyPI
 ==================================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: no aplica
-:Fecha: 12 de Marzo de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Fecha: 31 de Diciembre de 2013
 
 Este manual intenta ayudar a como implementar un servidor espejo (mirror) 
 de :term:`paquetes Egg` Python del servidor central :term:`PyPI` localmente 
@@ -55,7 +56,7 @@ En el caso de Ubuntu Linux la lista también es larga y abarca países de la let
 -   https://launchpad.net/ubuntu/+archivemirrors
 
 Para gestionar los ``paquetes Deb`` es necesario usar las herramientas 
-``dpkg``, ``apt`` / ``aptitude`` las cuales usan estos repositorio 
+:command:`dpkg`, :command:`apt` / :command:`aptitude` las cuales usan estos repositorio 
 para descargar dichos paquetes.
 
 La lista pública de mirrors de Fedora Linux también es larga y abarca países.
@@ -63,7 +64,7 @@ La lista pública de mirrors de Fedora Linux también es larga y abarca países.
 -   http://mirrors.fedoraproject.org/publiclist
 
 Para gestionar los ``paquetes rpm`` es necesario usar la herramienta 
-``yum`` la cual usan estos repositorio para descargar dichos paquetes.
+:command:`yum` la cual usan estos repositorio para descargar dichos paquetes.
 
 Repositorio de PyPI
 ===================
@@ -96,7 +97,8 @@ continuación:
 
 .. tip::
 
-     Para mas información sobre nuevo repositorios consulte la siguiente dirección http://pypi.python.org/mirrors
+     Para mas información sobre nuevo repositorios consulte la siguiente 
+     dirección http://pypi.python.org/mirrors
 
 Si desea saber el estatus actual de sincronización de los repositorios 
 oficiales puede consultar la siguiente dirección:
@@ -166,7 +168,7 @@ tenemos instalado en el sistema los siguientes requerimientos:
 -   Disponer de un servidor Web como Apache2 o Nginx para hacer publico su 
     repositorio.
 
--   Habilidad de ejecutar un script vía tarea de ``crontab`` en el servidor.
+-   Habilidad de ejecutar un script vía tarea de :command:`crontab` en el servidor.
   
 Dependencias
 ------------
@@ -203,7 +205,7 @@ de forma mas fácil y asistida debido a que automatiza las siguientes tareas por
   
 - Establecer una tarea programada que actualice el repositorio.
 
-Para lograr esta instalación se debe ejecutar con los siguientes ­comandos:
+Para lograr esta instalación se debe ejecutar con los siguientes ­comando:
 
 .. code-block:: sh
 
@@ -216,23 +218,23 @@ Para lograr esta instalación se debe ejecutar con los siguientes ­comandos:
 
 Al finalizar estos comando debería tener los siguientes archivos:
 
-``buildout.cfg``
+:file:`buildout.cfg`
   Archivo de configuración :ref:`buildout <que_es_zcbuildout>` con todas las tareas 
   de construcción del repositorio espejo.
 
-``pypimirror.cfg``
+:file:`pypimirror.cfg`
   Archivo de configuraciones del paquete :ref:`z3c.pypimirror <que_es_z3cpypimirror>`.
 
-``bin/activate``
+:command:`bin/activate`
   Script de activación de la herramienta :ref:`virtualenv <que_es_virtualenv>`.
 
-``bin/buildout``
+:command:`bin/buildout`
   Script :ref:`buildout <que_es_zcbuildout>`.
 
-``bin/pypimirror``
+:command:`bin/pypimirror`
   Script de sincronización del paquete :ref:`z3c.pypimirror <que_es_z3cpypimirror>`.
 
-``packages``
+:file:`packages`
   El directorio que contendrá los :term:`paquetes Egg` que sincronice en su repositorio espejo.
 
 **Iniciar sincronización**
@@ -246,15 +248,15 @@ espejo, ejecutando el siguiente comando:
 
 Al finalizar estos comando debería tener los siguientes archivos:
 
-``pypimirror.log``
+:file:`pypimirror.log`
   Archivo log del paquete :ref:`z3c.pypimirror <que_es_z3cpypimirror>`.
 
-``packages/index.html``
-  El índice de paquetes sincronizado generado dentro del directorio ``packages`` 
+:file:`packages/index.html`
+  El índice de paquetes sincronizado generado dentro del directorio :file:`packages` 
   que a su ves contendrá todos los paquetes sincronizados en su repositorio espejo.
 
 Luego de terminar la sincronización del repositorio, genera en el directorio 
-``packages`` un archivo ``index.html`` como índice del repositorio de software, 
+:file:`packages` un archivo :file:`index.html` como índice del repositorio de software, 
 puede consultarlo localmente en su navegador web de preferencia.
 
 .. code-block:: sh
@@ -263,8 +265,8 @@ puede consultarlo localmente en su navegador web de preferencia.
 
 **Sincronizar repositorio**
 
-Posteriormente una tarea programada con el programa ``crontab`` realizara la 
-sincronización del repositorio para mantener actualizado el repositorio con 
+Posteriormente una tarea programada con el programa :command:`crontab` realizara 
+la sincronización del repositorio para mantener actualizado el repositorio con 
 los nuevos paquetes disponibles, usted puede verificar la tarea definida, con 
 el siguiente comando:
 
@@ -277,8 +279,8 @@ el siguiente comando:
 Manual
 ------
 
-Con la instalación manual del :ref:`paquete Egg <que_es_z3cpypimirror>`, usted requiere 
-hacer manualmente las tareas descritas con la :ref:`configuración buildout <instalacion_asistida_buildout>`.
+Con la instalación manual del :ref:`paquete Egg <que_es_z3cpypimirror>`, usted 
+requiere hacer manualmente las tareas descritas con la :ref:`configuración buildout <instalacion_asistida_buildout>`.
 A continuación se muestra dos formas como puede instalar el paquete:
 
 **Instalan con pip**
@@ -315,8 +317,8 @@ siguiente comando:
 
 Este será el directorio en donde iremos a mantener nuestros paquetes procedentes 
 de :term:`PyPI`, los archivos de registros (\*.log) y temporales podemos mantenerlos 
-en el directorio ``/home/pypimirror``, ahora tenemos que crear el fichero de 
-configuración, lo llamé ``pypimirror.cfg``, tendrá la siguiente configuración:
+en el directorio :file:`/home/pypimirror`, ahora tenemos que crear el fichero de 
+configuración, lo llamé :file:`pypimirror.cfg`, tendrá la siguiente configuración:
 
 .. code-block:: ini
 
@@ -383,12 +385,12 @@ configuración, lo llamé ``pypimirror.cfg``, tendrá la siguiente configuració
   log_filename = /home/pypimirror/pypimirror.log
   
 
-Esta configuración, es una copia del archivo **pypimirror.cfg.sample**
+Esta configuración, es una copia del archivo :file:`pypimirror.cfg.sample`
 localizado por ejemplo en la ruta ``$PYTHON/site-packages/z3c.pypimirror-1.0.14-py2.4.egg/z3c/pypimirror``, 
 un detalle importante durante la configuración es que en la variable
 **package_matches**, se indique para descargar los espacios de nombre de
 paquetes **zope**, **plone**, **Products** y **collective**, de siendo así
-mismo el propio paquete  :ref:`z3c.pypimirror <que_es_z3cpypimirror>` lo 
+mismo el propio paquete :ref:`z3c.pypimirror <que_es_z3cpypimirror>` lo 
 cual de esta forma estaría siendo descartado, a sí que para conseguir 
 cualquier paquete desde :term:`PyPI`, usted puede comentar las lineas y 
 decir como se muestra a continuación:
@@ -411,21 +413,21 @@ iniciar la replicación del repositorio de :term:`PyPI`, ejecute el siguiente co
 
   $ /usr/bin/pypimirror --initial-fetch --follow-external-links --follow-external-index-pages /home/pypimirror/pypimirror.cfg
 
-Puedes supervisar los avances analizando el logfile de z3c.pypimirror:
+Puedes supervisar los avances analizando el logfile de :ref:`z3c.pypimirror <que_es_z3cpypimirror>`:
 
 .. code-block:: sh
 
   $ tail -f /home/pypimirror/pypimirror.log
 
 Cabe resaltar que **NO** es necesario preocuparse en crear la página índice
-como el archivo **index.html**, para el servidor Web, porque en el archivo de
+como el archivo :file:`index.html`, para el servidor Web, porque en el archivo de
 configuración anterior, le estamos indicado que este será creado
 automáticamente **(create_indexes = True)**.
 
 **Sincronizar repositorio**
 
 Usted automatizar la sincronización de los paquetes adicionando una tarea en
-el ``crontab`` del sistema con la siguiente linea:
+el :command:`crontab` del sistema con la siguiente linea:
 
 .. code-block:: sh
 
@@ -440,7 +442,7 @@ y entonces agregue la siguiente linea:
 Publicar repositorio
 ====================
 
-Luego de haber replicado localmente su repositorio PyPI en su servidor, 
+Luego de haber replicado localmente su repositorio :term:`PyPI` en su servidor, 
 usted debe configurar un virtual host en un servidor Web para publicar 
 su repositorio previamente replicado.
 
@@ -466,14 +468,12 @@ y entonces agrega la siguiente configuración:
             }
   }
 
-Realice un enlace simbólico desde el directorio de Nginx ``sites-available/`` 
-al directorio ``sites-enabled/``, para que su configuración previa este disponible:
+Realice un enlace simbólico desde el directorio de Nginx :file:`sites-available/` 
+al directorio :file:`sites-enabled/`, para que su configuración previa este disponible:
 
 .. code-block:: sh
 
   # ln -s /etc/nginx/sites-available/pypimirror /etc/nginx/sites-enabled/pypimirror
-
-
 
 Para finalizar debe carga de la nueva configuración, con el siguiente comando:
 
@@ -494,7 +494,7 @@ siguiente comando:
 
 
 Debe indicarle en su directiva ``DocumentRoot``, que apunte hacia el
-directorio directorio,  y entonces agrega la siguiente configuración:
+directorio directorio, y entonces agrega la siguiente configuración:
 
 .. code-block:: cfg
 
@@ -505,21 +505,21 @@ directorio directorio,  y entonces agrega la siguiente configuración:
   </VirtualHost>
 
 
-Realice un enlace simbólico desde el directorio de Apache2 ``sites-available/`` 
-al directorio ``sites-enabled/``, para que su configuración previa este disponible:
+Realice un enlace simbólico desde el directorio de Apache2 :file:`sites-available/` 
+al directorio :file:`sites-enabled/`, para que su configuración previa este disponible:
 
 .. code-block:: sh
 
   # ln -s /etc/apache2/sites-available/pypimirror /etc/apache2/sites-enabled/pypimirror
 
 
-Luego debe habilitar esta configuración del sitio llamado "pypimirror", con el siguiente comando:
+Luego debe habilitar esta configuración del sitio llamado ``pypimirror``, con el siguiente comando:
 
 .. code-block:: sh
 
   # a2ensite pypimirror
 
-Y por ultimo recargamos la configuración en el servicio de Apache2, con el
+Y por ultimo recargamos la configuración en el servicio de :command:`apache2`, con el
 siguiente comando:
 
 .. code-block:: sh
@@ -561,7 +561,7 @@ Usando buildout
 ---------------
 
 Después de que todo este hecho, usted solo necesita decir en su archivo de
-configuraciones locales buildout ``~/.buildout/default.cfg`` (si no esta creado 
+configuraciones locales buildout :file:`~/.buildout/default.cfg` (si no esta creado 
 créalo o edite un archivo) cual es la dirección HTTP del repositorio por 
 defecto (el que previamente configuro) de donde debería buscar y descargase
 los paquetes y coloque lo siguiente:
@@ -590,16 +590,22 @@ Ver también
 ===========
 
 -   `Buildout de z3c.pypimirror`_.
+
 -   `The PyPI Replication Project`_.
+
 -   `What to do when PyPI goes down`_.
+
 -   `Plone en la Plataforma de Desarrollo de Software Libre de CENDITEL`_.
 
 
 Referencias
 ===========
 
--   El articulo `Instalar y configurar su propio repositorio de PyP­I­`_ desde la comunidad Plone Venezuela.
+-   El articulo `Instalar y configurar su propio repositorio de PyP­I­`_ desde 
+    la comunidad Plone Venezuela.
+
 -   `Criando seu próprio repositório do Pypi`_.
+
 -   `Repositorios de software para Linux`_.
 
 
@@ -607,9 +613,9 @@ Reconocimientos
 ===============
 
 Agradecimientos `Cleber J Santos`_ de la empresa `Simples Consultoria`_ por
-escribir inicialmente este tutorial en Portugues, y a los compañeros `Dhionel Diaz`_ 
+escribir inicialmente este tutorial en Portugués, y a los compañeros `Dhionel Diaz`_ 
 y `Leonardo J. Caballero G.`_ de la `fundación CENDITEL`_, por traducir al Español 
-y poner en practica  :ref:`z3c.pypimirror <que_es_z3cpypimirror>` con el cual
+y poner en practica :ref:`z3c.pypimirror <que_es_z3cpypimirror>` con el cual
 crearon esta completa receta :D
 
 .. _z3c.pypimirror: http://pypi.python.org/pypi/z3c.pypimirror
