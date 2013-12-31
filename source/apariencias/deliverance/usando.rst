@@ -42,14 +42,15 @@ o inferior derecha dependiendo de la versión del navegador.
 
 Para mas información sobre su uso consultar este `tutorial`_.
 
-Como ya se ha mencionado anteriormente Deliverance utiliza selectores ``CSS`` para mapear 
-elementos desde una fuente de contenidos dinámicos que bien pueden ser ``CMS`` como 
-(Plone, Joomla, Django entre otros) o archivos HTML locales / estáticos previamente guardados 
-o como por ejemplo este documento. Se puede hacer uso de las reglas con los identificadores 
-``CSS`` o bien usando expresiones ``Xpath`` en el caso de que el elemento no tenga un 
-identificador ``CSS``.
+Como ya se ha mencionado anteriormente Deliverance utiliza selectores ``CSS`` para 
+mapear elementos desde una fuente de contenidos dinámicos que bien pueden ser ``CMS`` 
+como (Plone, Joomla, Django entre otros) o archivos HTML locales / estáticos previamente 
+guardados o como por ejemplo este documento. Se puede hacer uso de las reglas con los 
+identificadores ``CSS`` o bien usando expresiones ``Xpath`` en el caso de que el elemento 
+no tenga un identificador ``CSS``.
 
  * Los atributos identificados con ``id`` se invocan con el siguiente carácter: ``#``
+
  * Los atributos identificados con una clase ``class`` se invocan con el siguiente carácter: ``.`` 
 
 Usando un Plone como fuente de contenidos
@@ -86,8 +87,8 @@ navegador una con la fuente de contenido http://localhost:8080 y otra con
 el ``tema`` http://localhost:5000
    
 Luego de realizar estos pasos ya se puede empezar a aplicar las reglas para ello 
-debemos modificar el archivo :file:`rules.xml`, se puede hacer modificándolo directamente 
-y para ver los cambios solo se debe actualizar la pagina http://localhost:5000 
+debemos modificar el archivo :file:`rules.xml`, se puede hacer modificándolo 
+directamente y para ver los cambios solo se debe actualizar la pagina http://localhost:5000 
 presionando ``F5`` o dando clic en el navegador, también se pueden ver y aplicar las 
 reglas desde la consola de depuración de deliverance http://localhost:5000/?deliv_log 
 o bien reiniciando el servicio para visualizarlos
@@ -103,7 +104,8 @@ para esto identificaremos el atributo mediante selectores ``CSS`` a través de `
    :align: center
    :alt: identificando selectores CSS
 
-*Identificando atributos mediante selectores CSS a través de firebug el identificador del logo del tema*
+*Identificando atributos mediante selectores CSS a través de firebug el identificador 
+del logo del tema*
 
 .. image:: ./apariencia_ident1.png
    :align: center

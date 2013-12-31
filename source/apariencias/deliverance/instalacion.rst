@@ -93,21 +93,30 @@ anteriormente, con el siguiente comando:
 Este le preguntara algunas preguntas:
 
 ``host``:
-    El host que Deliverance servirá.  Nota ``localhost`` (o 127.0.0.1) significa que usted puede solamente conectarse desde la maquina misma.  Si usted quiere que sea visible externamente use 0.0.0.0.
+    El host que Deliverance servirá.  Nota ``localhost`` (o 127.0.0.1) significa que usted puede solamente 
+    conectarse desde la maquina misma.  Si usted quiere que sea visible externamente use 0.0.0.0.
 
 ``proxy_host``:
-    Esta es la ubicación donde todas las peticiones irán. ``http://localhost:8080`` es el mas común por defecto para los servidores.  Usted puede también dar un host remoto y una ruta, como ``http://mysite.com/blog``.
+    Esta es la ubicación donde todas las peticiones irán. ``http://localhost:8080`` es el mas común por defecto 
+    para los servidores.  Usted puede también dar un host remoto y una ruta, como ``http://mysite.com/blog``.
 
 ``proxy_rewrite_links``:
-    Si usted es el proxy a un sitio que en realidad no esperan que seas proxy a la misma ves, los enlaces probablemente se romperá. Usted puede dar como respuesta Y aquí para activar la reescritura de enlace. No es 100% perfecto (por ejemplo, los enlaces puestos en Javascript), pero puede ser bueno para la experimentación.
+    Si usted es el proxy a un sitio que en realidad no esperan que seas proxy a la misma ves, los enlaces 
+    probablemente se romperá. Usted puede dar como respuesta Y aquí para activar la reescritura de enlace. 
+    No es 100% perfecto (por ejemplo, los enlaces puestos en Javascript), pero puede ser bueno para la 
+    experimentación.
 
 ``password``:
-    La contraseña a acceder a la consola de logging.  El nombre de usuario es siempre ``admin``.  Usted puede agregar o actualizar los inicio de sesiones mas tarde.
+    La contraseña a acceder a la consola de logging.  El nombre de usuario es siempre ``admin``. Usted puede 
+    agregar o actualizar los inicio de sesiones mas tarde.
 
 ``theme_url``:
-    Si usted quiere basar su tema en una pagina existente, usted puede dar la dirección URL de la pagina aquí. Se obtendrá la página y todo el CSS e imágenes de esta página, por lo que a nivel local se pueden editar. De lo contrario un tema sumamente sencilla se otorgara al momento de la instalación.
+    Si usted quiere basar su tema en una pagina existente, usted puede dar la dirección URL de la pagina aquí. 
+    Se obtendrá la página y todo el CSS e imágenes de esta página, por lo que a nivel local se pueden editar. 
+    De lo contrario un tema sumamente sencilla se otorgara al momento de la instalación.
 
-Una ves que usted allá ingresado esos valores, instalara una básica estructura con un archivo :file:`etc/deliverance.xml` para la configuración, y el tema en el archivo :file:`theme/theme.html`.
+Una ves que usted allá ingresado esos valores, instalara una básica estructura con un archivo 
+:file:`etc/deliverance.xml` para la configuración, y el tema en el archivo :file:`theme/theme.html`.
 
 Acceda al directorio creado, con el siguiente comando:
 
@@ -156,7 +165,7 @@ Entonces usted tiene que iniciar su proyecto, con el siguiente comando:
 
     $ python bootstrap.py
 
-Usted debe inicializar su proyecto, con el siguiente comando:
+Usted debe iniciar su proyecto, con el siguiente comando:
 
 .. code-block:: console
 
@@ -280,7 +289,7 @@ Entonces usted tiene que iniciar su proyecto, con el siguiente comando:
 
     $ python bootstrap.py
 
-Usted debe inicializar su proyecto, con el siguiente comando:
+Usted debe iniciar su proyecto, con el siguiente comando:
 
 .. code-block:: console
 

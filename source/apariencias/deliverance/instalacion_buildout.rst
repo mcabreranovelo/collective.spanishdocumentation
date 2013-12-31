@@ -34,11 +34,13 @@ si usted necesita ejecutar manualmente el `servidor proxy`_ Deliverance:
 
 .. note::
     
-    En algunos sistemas operativos, en particular, Mac OS X, la instalación del paquete Python 
-    ``lxml`` puede ser complicada, debido a una falta de coincidencia en las versiones de las 
-    librerías ``lxml`` del sistema operativo con respecto a la ``libxml2`` y ``libxslt``. 
+    En algunos sistemas operativos, en particular, Mac OS X, la instalación del 
+    paquete Python ``lxml`` puede ser complicada, debido a una falta de coincidencia 
+    en las versiones de las librerías ``lxml`` del sistema operativo con respecto a la 
+    ``libxml2`` y ``libxslt``. 
     
-Para resolver esto, se puede compilar un ``lxml`` estáticamente usando la siguiente configuración:
+Para resolver esto, se puede compilar un ``lxml`` estáticamente usando la siguiente 
+configuración:
     
     .. code-block:: cfg
 
@@ -68,9 +70,9 @@ Para resolver esto, se puede compilar un ``lxml`` estáticamente usando la sigui
 
 .. note::
 
-    El paquete ``lxml`` es una dependencia de Deliverance, usted podría necesitar instalar 
-    las librerías de desarrollo de ``libxml2`` y ``libxslt`` para poder construir esta 
-    configuración zc.buildout. 
+    El paquete ``lxml`` es una dependencia de Deliverance, usted podría necesitar 
+    instalar las librerías de desarrollo de ``libxml2`` y ``libxslt`` para poder 
+    construir esta configuración zc.buildout. 
     
 En Debian/Ubuntu Linux usted puede ejecutar el siguiente comando:
 
@@ -85,7 +87,8 @@ Entonces usted tiene que iniciar su proyecto con el siguiente comando:
 
     $ python bootstrap.py
 
-Luego ejecute la construcción de su configuración zc.buildout, con el siguiente comando:
+Luego ejecute la construcción de su configuración zc.buildout, con el siguiente 
+comando:
 
 .. code-block:: console
 
@@ -99,7 +102,8 @@ Usted debería ver algo como esto:
     Generated script '/home/user/deliverancedemo/bin/paster'.
     Generated script '/home/user/deliverancedemo/bin/deliverance-proxy'.
 
-Una ves instalado, usted debería buscar el script :command:`deliverance-proxy` en el directorio :file:`bin`.
+Una ves instalado, usted debería buscar el script :command:`deliverance-proxy` 
+en el directorio :file:`bin`.
 
 
 Creando una configuración
