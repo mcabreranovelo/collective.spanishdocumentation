@@ -6,10 +6,11 @@
 Control de versiones utilizando Subversion
 ==========================================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -67,7 +68,7 @@ Arranque del servidor
 ---------------------
 
 Una vez instalado Subversion, puede iniciarse el servicio utilizando el
-comando `svnserve`, de la siguiente manera::
+comando :command:`svnserve`, de la siguiente manera::
 
     $ svnserve -d
 
@@ -78,7 +79,7 @@ Creación de un repositorio
 ==========================
 
 Por supuesto, el servicio recién iniciado no tiene ninguna utilidad hasta que
-es creado un repositorio para servir. Esto se hace con el comando `svnadmin`,
+es creado un repositorio para servir. Esto se hace con el comando :command:`svnadmin`,
 el cual recibe como parámetro el path dentro del sistema de archivos donde se
 desea crear el repositorio::
 
@@ -219,7 +220,7 @@ respectivamente.
 La estructura inicial de directorios puede crearse paso a paso, pero en
 muchas ocasiones es mejor importarla en un solo paso utilizando ya sea un
 proyecto ya existente o simplemente una estructura de carpetas. El comando de
-Subversion para hacer esto se llama `import`. 
+Subversion para hacer esto se llama :command:`svn import`. 
 
 Para importar una estructura de directorios al repositorio que creamos con
 anterioridad, podemos usar una secuencia de comandos como la que sigue::
@@ -256,7 +257,7 @@ cantidad de documentos modificados en ella.
 
 Para verificar que el import funciono correctamente, podemos pedir un listado
 del contenido de la nueva carpeta en el repositorio, utilizando el comando
-`ls`::
+:command:`svn ls`::
 
     $ svn ls svn://localhost/opt/svn/proyecto_ejemplo
     branches/
@@ -267,7 +268,7 @@ del contenido de la nueva carpeta en el repositorio, utilizando el comando
 --------------------------------------------------
 
 Otra manera de crear la estructura del repositorio es creando las carpetas
-directamente, utilizando el comando `mkdir`::
+directamente, utilizando el comando :command:`svn mkdir`::
 
     $ svn mkdir svn://localhost/opt/svn/otro_ejemplo -m 'nuevo proyecto'
 
@@ -291,7 +292,7 @@ agregado o han sido modificados mientras trabajos en ella.
 --------------------------------------------
 
 El proceso de obtener del repositorio una copia del proyecto se conoce como
-`checkout`. El parámetro que se pasa al comando además del path en el 
+:command:`svn checkout`. El parámetro que se pasa al comando además del path en el 
 repositorio que queremos copiar es el nombre de la carpeta donde colocaremos
 la copia::
 
@@ -312,7 +313,7 @@ comenzar a trabajar.
 Al cambiarnos dentro del directorio de la copia de trabajo, Subversion puede
 reconocer que estamos utilizando un repositorio. En cualquier momento
 podemos obtener los datos del repositorio donde estamos conectados utilizando
-el comando `info`::
+el comando :command:`svn info`::
 
     $ cd proyecto_ejemplo
     $ svn info
@@ -327,9 +328,9 @@ el comando `info`::
     Last Changed Rev: 2
     Last Changed Date: 2010-04-09 00:30:57 -0500 (Fri, 09 Apr 2010)
 
-El comando `info` nos devuelve entre otras cosas el URL de donde se extrajo el
-directorio donde estamos trabajando (`URL`), el URL de la raíz del repositorio
-(`Repository Root`), la revision o versión al momento del checkout
+El comando :command:`svn info` nos devuelve entre otras cosas el URL de donde 
+se extrajo el directorio donde estamos trabajando (`URL`), el URL de la raíz 
+del repositorio (`Repository Root`), la revision o versión al momento del checkout
 (`Revision`), el autor del ultimo cambio (`Last Changed Author`) y la fecha de
 ese cambio (`Last Changed Date`).
 
@@ -346,7 +347,7 @@ cualquier momento podemos consultarlos::
     ?      info.txt
 
 En el ejemplo anterior, creamos un archivo de texto con una sola linea,
-llamado `info.txt`. Una vez creado el archivo, utilizamos el comando `status`
+llamado `info.txt`. Una vez creado el archivo, utilizamos el comando :command:`svn status`
 para mostrar como Subversion ha detectado que existe un nuevo archivo en el
 directorio. El signo de interrogación que aparece antes del nombre, significa
 que el archivo en cuestión no esta bajo control de versiones y Subversion lo
@@ -355,7 +356,7 @@ desconoce.
 `add` - Como agregar documentos al proyecto
 -------------------------------------------
 
-Para agregar ese archivo al proyecto, utilizamos el comando `add`::
+Para agregar ese archivo al proyecto, utilizamos el comando :command:`svn add`::
 
     $ svn add info.txt
     A      info.txt
@@ -365,8 +366,8 @@ de versiones, por lo que el status muestra ahora la letra `A` junto al nombre.
 Es importante hacer notar que este comando únicamente tiene efecto en nuestra
 copia de trabajo y no sube de inmediato el archivo al repositorio.
 
-El comando `add` no esta limitado a agregar un solo archivo, por supuesto. Es
-posible incluir como parámetro cualquier cantidad de archivos. Si se agrega
+El comando :command:`svn add` no esta limitado a agregar un solo archivo, por supuesto. 
+Es posible incluir como parámetro cualquier cantidad de archivos. Si se agrega
 un directorio, todos los archivos contenidos en el serán agregados
 recursivamente al proyecto.
 
@@ -389,8 +390,8 @@ para guardarlos en el repositorio::
     Transmitting file data .
     Committed revision 3.
 
-El comando `commit` guarda todos los cambios realizados desde que inicio la
-sesión. En caso de no querer guardar todo, es posible especificar los
+El comando :command:`svn commit` guarda todos los cambios realizados desde que 
+inicio la sesión. En caso de no querer guardar todo, es posible especificar los
 archivos que deben subirse.
 
 Ciclo de trabajo con Subversion
@@ -411,7 +412,7 @@ trabajo. En esta sección conoceremos algunos de los mas importantes.
 Lo primero que debemos hacer diariamente al iniciar una sesión de trabajo, es
 actualizar nuestra copia de trabajo del repositorio, para asegurarnos de
 trabajar con la versión mas reciente de nuestros documentos. El comando para
-hacer esto se llama `update`::
+hacer esto se llama :command:`svn update`::
 
     $ svn update
     At revision 3.
@@ -435,8 +436,8 @@ documento existente fue modificado.
 ------------------------------------------------
 
 Como el archivo `info.txt` ha sido modificado, quizá deseamos saber quien
-realizo la modificación y cuando. Subversion ofrece el comando `log` para
-poder conocer la historia de commits de un archivo::
+realizo la modificación y cuando. Subversion ofrece el comando :command:`svn log` 
+para poder conocer la historia de commits de un archivo::
 
     $ svn log info.txt
     ------------------------------------------------------------------------
@@ -458,7 +459,7 @@ agrego un titulo a nuestro archivo.
 
 Si además de conocer al autor del cambio y su comentario queremos saber
 exactamente que texto ha cambiado en nuestro archivo, podemos utilizar el
-comando `diff` de Subversion para hacerlo::
+comando :command:`svn diff` de Subversion para hacerlo::
 
     $ svn diff -r3:4 info.txt
     Index: info.txt
@@ -470,7 +471,7 @@ comando `diff` de Subversion para hacerlo::
     +
      La capital de Francia es Tokio
 
-El comando `diff` acepta el parámetro -r para especificar los números de
+El comando :command:`svn diff` acepta el parámetro -r para especificar los números de
 versiones entre los que queremos conocer la diferencia. En este caso
 necesitamos conocer los cambios entre las revisiones 3 y 4, por lo que
 pasamos esos números. Se puede omitir el parámetro -r y entonces Subversion
@@ -487,8 +488,8 @@ su lado izquierdo.
 ------------------------------------------------------------------------
 
 Todavía podemos averiguar mas información sobre la historia de cambios del
-archivo. El comando `blame` nos muestra la ultima revisión en que ha cambiado
-cada linea del archivo, junto con el nombre del autor del cambio::
+archivo. El comando :command:`svn blame` nos muestra la ultima revisión en 
+que ha cambiado cada linea del archivo, junto con el nombre del autor del cambio::
 
     $ svn blame info.txt
     4      pedro Sabia usted que...
@@ -510,9 +511,9 @@ ejemplo, para ver el contenido del archivo `info.txt` en la revisión 3::
 
 En ocasiones, después de haber realizado algunos cambios en un archivo, nos
 damos cuenta de que no queremos conservarlos, sino que deseamos volver a la
-versión original del mismo. El comando `revert` anula cualquier cambio
-realizado a un archivo en la sesión actual, volviendo al estado que tenia
-al momento de actualizar el repositorio por ultima vez::
+versión original del mismo. El comando :command:`svn revert` anula cualquier 
+cambio realizado a un archivo en la sesión actual, volviendo al estado que 
+tenia al momento de actualizar el repositorio por ultima vez::
 
     $ svn revert info.txt
     Reverted info.txt
