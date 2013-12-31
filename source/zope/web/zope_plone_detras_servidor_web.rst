@@ -6,10 +6,12 @@
 Ejecutando Zope y Plone detrás de un Servidor Web
 =================================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 21 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web en frente del servidor Zope/Plone.
@@ -191,7 +193,12 @@ que ya no se Zope le permiten acceder a la interfaz de gestión, puede agregar
 ``_SUPPRESS_ACCESSRULE"`` a la dirección URL para desactivar VirtualHostMonster.
 
 
-.. seealso:: Los artículos sobre `Zope Virtual Hosting Services`_, `Mapping the Virtual Host`_, :ref:`Ejecutando Zope y Plone con Servidor Web Apache <zope_plone_webserver_apache>` y :ref:`Ejecutando Zope y Plone con Servidor Web Nginx <zope_plone_webserver_nginx>`.
+.. seealso:: 
+  
+  -   `Zope Virtual Hosting Services`_.
+  -   `Mapping the Virtual Host`_.
+  -   :ref:`Ejecutando Zope y Plone con Servidor Web Apache <zope_plone_webserver_apache>`.
+  -   :ref:`Ejecutando Zope y Plone con Servidor Web Nginx <zope_plone_webserver_nginx>`.
 
 
 Referencias

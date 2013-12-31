@@ -5,10 +5,12 @@
 Ejecutando Zope y Plone con Servidor Web Nginx
 ==============================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 21 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web `Nginx`_ en frente del servidor Zope/Plone, a través de técnicas de 
@@ -148,7 +150,10 @@ Luego reinicie su servidor Nginx con el siguiente comando:
 
   # /etc/init.d/nginx reload
 
-.. seealso:: Los artículos sobre :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>` y `Mapping the Virtual Host`_.
+.. seealso:: 
+  
+  -   :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
+  -   `Mapping the Virtual Host`_.
 
 Referencias
 ===========
