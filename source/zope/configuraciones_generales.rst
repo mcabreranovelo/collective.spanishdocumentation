@@ -6,10 +6,12 @@
 Configuraciones generales
 =========================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 19 de Diciembre de 2013
 
 
 Algunos de los comportamientos de las instancias de Zope / Plone son controladas con 

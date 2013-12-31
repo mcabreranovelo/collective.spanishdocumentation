@@ -22,26 +22,26 @@ se hace como **servidor proxy reverso** y existentes varias razones para este ti
 de configuración:
 
 * **Seguridad**: el servidor proxy es una capa adicional de defensa y por lo tanto 
-protege los servidores web. Para el servidor Zope permite enmascarar el puerto de 
-publicación del mismo, a través del patrón de diseño "Front-controler" que permite 
-aplicar nuevos direccionamientos a todas las peticiones del puerto 80 aplicando 
-reglas de reescritura de direcciones URLs.
+  protege los servidores web. Para el servidor Zope permite enmascarar el puerto de 
+  publicación del mismo, a través del patrón de diseño "Front-controler" que permite 
+  aplicar nuevos direccionamientos a todas las peticiones del puerto 80 aplicando 
+  reglas de reescritura de direcciones URLs.
 
 * **Configurar un firewall en su servidor Web**, esta configuración tiene la finalidad 
-es reforzar la seguridad de aplicaciones Web.
+  es reforzar la seguridad de aplicaciones Web.
 
 * **Cifrado / Aceleración SSL**, cuando se crea un sitio web seguro, habitualmente el 
-cifrado SSL no lo hace el mismo servidor web, sino que es realizado por el "proxy reverso", 
-el cual está equipado con un hardware de aceleración SSL (Security Sockets Layer).
+  cifrado SSL no lo hace el mismo servidor web, sino que es realizado por el "proxy reverso", 
+  el cual está equipado con un hardware de aceleración SSL (Security Sockets Layer).
 
 * **Distribución de Carga**, con el "proxy reverso" puede distribuir la carga entre 
-varios servidores web. En ese caso, el "proxy reverso" puede necesitar reescribir 
-las direcciones URLs de cada página web (traducción de la dirección URL externa a la 
-dirección URL interna correspondiente, según en qué servidor se encuentre la información 
-solicitada).
+  varios servidores web. En ese caso, el "proxy reverso" puede necesitar reescribir 
+  las direcciones URLs de cada página web (traducción de la dirección URL externa a la 
+  dirección URL interna correspondiente, según en qué servidor se encuentre la información 
+  solicitada).
 
 * **Caché de contenido estático**, con un "proxy reverso" puede descargar los servidores 
-web almacenando contenido estático como imágenes u otro contenido gráfico.
+  web almacenando contenido estático como imágenes u otro contenido gráfico.
 
 
 Servicio de Virtual hosting en Zope
