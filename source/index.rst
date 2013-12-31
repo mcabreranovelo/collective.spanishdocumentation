@@ -103,68 +103,14 @@ En particular, conoceremos:
 
    * :ref:`Tutoriales de Python <python_index>`.
 
+   * :ref:`Tutoriales de Zope <zope_index>`.
+
+   * :ref:`Tutoriales de buildout <buildout_index>`.
+
+   * :ref:`Diversos tutoriales en Plone <mini_tutoriales>`.
+
 ----
-
-Buildout y sus complementos
-===========================
-
-Buildout es un sistema que permite definir ambientes de desarrollo
-que pueden ser replicados, incluyendo dependencias y configuración. Buildout 
-se apoya fuertemente en setuptools, que permite instalar paquetes de Python 
-a través de Internet. Es recomendable utilizar buildout para cualquier proyecto 
-de Plone que se quiera emprender.
-
-.. hlist::
-   :columns: 2
-
-   * :ref:`Replicación de proyectos Python <python_buildout>`.
-
-   * :ref:`Hola mundo en zc.buildout <buildout_holamundo>`.
    
-   * :ref:`Recipes Buildout <recipe_buildout>`.
-   
-   * :ref:`Programar tareas con crontab <buildout_crontab>`.
-   
-   * :ref:`Rotar archivos .log de Zope <buildout_logrotate>`.
-   
-   * :ref:`Buildout para instalar de todas las partes de un sitio <plone_esquema_alta_disponibilidad>`.
-   
-   * :ref:`Buildout y Plone 3 <buildout_plone3>`.
-   
-
-Administración de Zope
-======================
-
-Plone esta basado en el servidor de aplicaciones Zope y este requiere realizar 
-tareas de hospedaje y administrativa para un servidor de aplicación Zope / 
-sitio de Plone.
-
-.. hlist::
-   :columns: 3
-
-   * :ref:`Zope Management Interface - ZMI <zmi>`.
-   
-   * :ref:`Comando de control de Zope <linea_comando_zope>`.
-   
-   * :ref:`Configuraciones generales <configuraciones_generales>`.
-   
-   * :ref:`Configurar Zope y Plone como un demonio / servicio <configurar_zope_como_demonio>`.
-   
-   * :ref:`Configurar Zope como un servidor FTP <zope_como_ftp>`.
-   
-   * :ref:`Configurar Zope como un servidor WebDAV <zope_como_webdav>`.
-   
-   * :ref:`Zope Object Database - ZODB <que_es_zodb>`.
-   
-   * :ref:`Configurar puntos de montajes para Data.fs separadas <puntos_montaje_zodb>`.
-   
-   * :ref:`¿Cómo compactar la ZODB de sitio Plone? <compactar_zodb>`.
-   
-   * :ref:`Importar y exportar contenido desde el ZMI <importar_exportar_data>`.
-   
-   * :ref:`Creando instancia Zope adicional de depuración <instancia_zope_debug>`.
-   
-   * :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
 
 Administración de Plone
 =======================
@@ -205,20 +151,6 @@ conocer diversas tecnologías provenientes de estos sistemas.
    programacion/herramienta_zcatalog
    programacion/flujo_de_trabajo
    programacion/perfiles_genericsetup
-
-Diversos tutoriales en Plone
-============================
-
-En esta sección agrupamos una serie de mini tutoriales acerca de algunas de
-las demostraciones más solicitadas por participantes en cursos de Plone.
-Muchas demuestran el poder de Python o de APIs de Javascript más que el
-manejo de Plone, pero por lo menos permiten conocer como enfocar situaciones
-comunes en aplicaciones web con Plone.
-
-.. toctree::
-   :maxdepth: 2
-   
-   tutoriales/index
 
 
 Otros recursos
