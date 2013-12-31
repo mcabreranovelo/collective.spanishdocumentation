@@ -108,8 +108,8 @@ ha aumentado.
 .. toctree::
    :maxdepth: 1
 
+   Control de versiones utilizando Git <http://git-scm.com/book/es>
    rcs/subversion
-   Control de versiones utilizando Git <http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/index.html>
    Control de versiones utilizando Mercurial <http://mercurial.selenic.com/wiki/SpanishTutorial>
    Control de versiones utilizando Bazaar <http://blog.malev.com.ar/tutorial-de-bazaar/>
 
@@ -207,7 +207,7 @@ de Plone que se quiera emprender.
 
    * :ref:`Hola mundo en zc.buildout <buildout_holamundo>`.
    
-   * :ref:`Récipes Buildout <recipe_buildout>`.
+   * :ref:`Recipes Buildout <recipe_buildout>`.
    
    * :ref:`Programar tareas con crontab <buildout_crontab>`.
    
@@ -261,7 +261,7 @@ este apartado busca aglomerar una serie de artículos útiles sobre estas labore
 .. toctree::
    :maxdepth: 1
 
-   instalacion/productos/index.rst
+   instalacion/productos/index
 
 Desarrollo en Plone
 ===================
