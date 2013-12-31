@@ -58,6 +58,7 @@ agilicen nuestro desarrollo.
    apariencias/index
    Realizando pruebas en Plone 3 <programacion/haciendo_pruebas/index>
 
+----
 
 ==========================
 Mejores Practicas de Plone
@@ -95,101 +96,14 @@ principales tecnologías de Zope y Plone.
 En particular, conoceremos:
 
 
-Tutorial de control de versiones
-================================
+.. hlist::
+   :columns: 2
 
-Para tener un ambiente de desarrollo productivo, en especial cuando se
-trabaje en equipo, es muy importante contar con un sistema de control de
-versiones. ``Subversion`` es el utilizado por plone.org y el plone collective,
-por lo que consideramos necesario conocerlo, aunque recientemente la
-popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar`` 
-ha aumentado.
+   * :ref:`Tutoriales de control de versiones <rcs_index>`.
 
-.. toctree::
-   :maxdepth: 1
+   * :ref:`Tutoriales de Python <python_index>`.
 
-   Control de versiones utilizando Git <http://git-scm.com/book/es>
-   rcs/subversion
-   Control de versiones utilizando Mercurial <http://mercurial.selenic.com/wiki/SpanishTutorial>
-   Control de versiones utilizando Bazaar <http://blog.malev.com.ar/tutorial-de-bazaar/>
-
-Python
-======
-
-Python es el lenguaje con el que están desarrollados tanto Zope como Plone,
-por lo que es muy importante conocerlo para poder tomar máxima ventaja de
-estos sistemas. Es imprescindible programar en Python para poder crear
-productos y tipos de contenido para Plone.
-
-En esta sección tenemos el tutorial oficial de Python, preparado por la
-asociación de Python de Argentina y la fundación de Python.
-
-.. toctree::
-   :maxdepth: 1
-
-   Tutorial de Python <python/tutorial-usla/index>
-
-
-Inmersión al modo interactivo de Python
----------------------------------------
-
-La idea de este tutorial es que alguien que **NUNCA** ha trabajando con el
-interprete de `Python`_ pueda tener un primer acercamiento **SIN
-PROGRAMAR**, solamente con conocer el uso del interprete y sus comandos
-básicos.
-
-.. _Python: http://www.python.org/
-
-.. toctree::
-   :maxdepth: 1
-
-   python/una_pequena_inmersion_python
-
-
-Entornos virtuales en Python
-----------------------------
-
-Python ofrece un mecanismo para poder experimentar con nuevas versiones de 
-librerías Python en formato Egg, sin afectar su sistema, o para crear un 
-entorno de instalación Python aislado al Python de su sistema operativo, por 
-eso está sección que se dedica a explicar sus casos de uso.
-
-.. toctree::
-   :maxdepth: 1
-
-   python/creacion_entornos_virtuales
-
-
-Sistema de paquetes Python
---------------------------
-
-Python ofrece un sistema de paquetes para aplicaciones Python en formato Egg, 
-para la cual posee dos especificaciones de como hacer paquetes Egg y sus respectivas
-utilidades para la gestión de estos paquetes, por eso está sección que se dedica a 
-explicar sus diferencias.
-
-.. toctree::
-   :maxdepth: 1
-
-   python/setuptools
-   python/distribute_pip
-   python/instalar_config_propio_mirror_pypi
-
-
-Esqueletos de proyectos
------------------------
-
-Como parte de la filosofía de desarrollo ágil de aplicaciones, varios proyectos 
-Python ofrecen mecanismo de plantilla de proyectos y tipos de módulos que cumplen 
-con las buenas practicas implementadas en sus proyectos.
-
-.. toctree::
-   :maxdepth: 1
-
-   python/skel_proyectos_python
-   python/skel_proyectos_openerp
-   python/skel_proyectos_plone
-
+----
 
 Buildout y sus complementos
 ===========================
