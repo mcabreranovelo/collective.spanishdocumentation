@@ -7,7 +7,7 @@ Sistema de gestión de contenidos Plone
 
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
-:Fecha: 30 de Diciembre de 2013
+:Fecha: 31 de Diciembre de 2013
 
 .. _ficha_tecnica_plone:
 
@@ -695,7 +695,7 @@ Enlaces externos
 .. _PostgreSQL: http://es.wikipedia.org/wiki/PostgreSQL
 .. _Oracle: http://es.wikipedia.org/wiki/Oracle_Database
 .. _MS SQL: http://es.wikipedia.org/wiki/MS_SQL
-.. _Sybase: http://es.wikipedia.org/wiki/Sybase
+.. _Sybase: http://es.wikipedia.org/wiki/Sybase#Gestores_de_bases_de_datos
 .. _MySQL: http://es.wikipedia.org/wiki/MySQL
 .. _base de datos de objetos: http://es.wikipedia.org/wiki/Base_de_datos_orientada_a_objetos
 .. _base de datos relacional: http://es.wikipedia.org/wiki/RDBMS
