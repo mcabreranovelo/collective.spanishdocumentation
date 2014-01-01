@@ -6,17 +6,19 @@
 Zope Page Templates
 ===================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 ¿Qué es un Page Template de Zope?
 =================================
 
 * Herramienta para generar HTML dinámico.
 
-* Pensado para permitir a diseñadores y desarrolladores trabajar en conjunto.
+* Pensado para permitir a diseñadores y programadores trabajar en conjunto.
 
 * Utiliza etiquetas de HTML con atributos extra.
 
@@ -70,20 +72,20 @@ Primer page template
 Tipos de expresiones
 --------------------
 
-* `Expresiones Path`, que siguen un camino a partir de un objeto inicial hasta
+* Las `expresiones Path`, que siguen un camino a partir de un objeto inicial hasta
   un resultado:
   
 .. code-block:: html
 
        <p tal:content="context/objectValues"></p>
 
-* `Expresiones Python`, que evalúan una expresión en Python:
+* Las `expresiones Python`, que evalúan una expresión en Python:
   
 .. code-block:: html
 
         <p tal:content="python:context.objectValues(['Folder'])"></p>
 
-* `Expresiones String`, que permiten insertar cadenas de texto con iterpolación
+* Las `expresiones String`, que permiten insertar cadenas de texto con iterpolación
   simple:
   
 .. code-block:: html
@@ -105,7 +107,8 @@ etiqueta span para colocar el texto de reemplazo:
 Repetición de estructuras
 =========================
 
-``tal:repeat`` le permite repetir una etiqueta, de manera similar a un ciclo ``for``:
+La sentencia ``tal:repeat`` le permite repetir una etiqueta, de manera similar a un 
+ciclo ``for``:
 
 .. code-block:: html
 
@@ -125,8 +128,8 @@ Repetición de estructuras
 Etiquetas condicionales
 =======================
 
-``tal:condition`` le permite evaluar una condición y mostrar o no un tag dependiendo
-de si es falsa o verdadera:
+La sentencia ``tal:condition`` le permite evaluar una condición y mostrar o no un tag 
+dependiendo de si es falsa o verdadera:
 
 .. code-block:: html
 
@@ -192,7 +195,7 @@ Uso de un macro
 * La etiqueta donde se incluye es completamente reemplazada por el código del
   macro.
 
-* El macro se identifica con una expresión de tipo path:
+* El macro se identifica con una expresión de tipo ``path``:
 
 .. code-block:: html
 

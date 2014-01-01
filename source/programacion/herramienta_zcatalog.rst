@@ -6,10 +6,12 @@
 El motor de búsqueda de Zope
 ============================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Uso del ZCatalog de Zope
 ========================
@@ -84,11 +86,11 @@ Resultados de una búsqueda
 ==========================
 
 Las búsquedas en catálogo no devuelven los objetos buscados, sino un objeto
-especial llamado `brain` por cada objeto encontrado. Este objeto especial
+especial llamado ``brain`` por cada objeto encontrado. Este objeto especial
 contiene el metadata del objeto almacenado en el catálogo. También permite
 utilizar los siguientes métodos:
 
-* ``has_key(llave)``, para determinar si el brain contiene esa llave.
+* ``has_key(llave)``, para determinar si el ``brain`` contiene esa llave.
 
 * ``getPath()``, para obtener la ruta (path) físico del objeto indexado.
 
@@ -97,7 +99,7 @@ utilizar los siguientes métodos:
 
 * ``getObject()``, obtiene el objeto mismo, para poder realizar operaciones con
   él. En Plone se recomienda limitar su uso lo más posible, pues es más lento
-  y ocupa más recursos que el objeto brain.
+  y ocupa más recursos que el objeto ``brain``.
 
 * ``getRID()``, regresa el ID del objeto en el catálogo.
 
@@ -153,6 +155,7 @@ Referencias
 ===========
 
 -   `ZCatalog`_ desde la comunidad Plone México.
+
 -   `Catalogs`_ desde la sección `Queries, search and indexing` del manual de desarrollo de Plone.
 
 .. _ZCatalog: http://www.plone.mx/docs/zcatalog.html

@@ -6,10 +6,12 @@
 ¿Cómo compactar la ZODB de sitio Plone?
 =======================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 ¿En que consta compactar la ZODB?
 =================================

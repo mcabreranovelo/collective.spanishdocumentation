@@ -6,10 +6,12 @@
 Flujo de trabajo
 ================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -82,11 +84,11 @@ de acceso y modificación dependiendo del estado del documento.
 Estados y transiciones
 ======================
 
-Los flujos del motor de :term:`Workflow` están basados en los conceptos de estados y
-transiciones. Un formulario tiene uno o varios estados posibles, entre los
-cuales puede pasar a través de transiciones activadas por los usuarios o por
-el sistema, dependiendo de condiciones específicas asignadas a cada
-transición.
+Los flujos del motor de :term:`Workflow` están basados en los conceptos de 
+estados y transiciones. Un formulario tiene uno o varios estados posibles, 
+entre los cuales puede pasar a través de transiciones activadas por los 
+usuarios o por el sistema, dependiendo de condiciones específicas asignadas 
+a cada transición.
 
 Antes de editar un flujo es aconsejable estar seguros de los diversos estados
 que puede tener el formulario en cuestión. Por ejemplo, una autorización de
@@ -134,8 +136,8 @@ Este tipo de permisos se asigna en la ventana de propiedades por estado. Dicha
 ventana muestra una lista breve de permisos básicos del formulario cruzada con
 la lista de roles del sistema, para seleccionar uno por uno que permisos se
 aplican a cada rol. Por defecto, se toman los permisos establecidos en el
-motor de flujo de trabajo, pero casi siempre es aconsejable modificarlos para tomar en
-cuenta el estado y el flujo específicos que se estén trabajando.
+motor de flujo de trabajo, pero casi siempre es aconsejable modificarlos para 
+tomar en cuenta el estado y el flujo específicos que se estén trabajando.
 
 La lista de permisos especiales requiere mayor explicación:
 
@@ -233,8 +235,6 @@ discuten a continuación.
     de expresión, el cual acepta expresiones de todo tipo en el lenguaje
     Python. Solo cuando la expresión definida sea verdadera se tendrá derecho
     a ejecutar la transición protegida por ella.
-
-
 
 Referencias
 ===========

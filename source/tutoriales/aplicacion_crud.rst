@@ -6,10 +6,12 @@
 Base de datos SQL y Plone
 =========================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Existen muchos mecanismos de conexión a base de datos SQL desde Plone CMS, 
 en este articulo se enfoca en la amplia usada librería `SQLAlchemy`_ y 
@@ -197,25 +199,25 @@ procesamiento del formulario
 
 A continuación los elementos principales del procesamiento del formulario:
 
-self.request
+``self.request``
     objeto que representa la actual solicitud HTTP
     
-self.context
+``self.context``
     Elemento relacionado al formulario según el contexto en el que se invoca;
     
-self.getContent()
+``self.getContent()``
     Los objetos sacados de contexto y que serán manejado por el formulario, a menos ignoreContext se establece en True;
     
-self.status
+``self.status``
     El mensaje se mostrará en la parte superior de la región de Contenido cuando el formulario se representa.
     
-updateWidgets
+``updateWidgets``
     actualizaciones de todos los widgets de acuerdo a los datos enviados.
     
-updateActions
+``updateActions``
     invoca los actions handlers del formulario de acuerdo con el botón presionado
     
-render
+``render``
     invoca la plantilla Padre que genera el formulario HTML y devuelve dicho contenido
 
 
@@ -223,7 +225,7 @@ render
 Creación de la base de datos
 ============================
 
-Para esto se usa la receta zc.buildout llamada ``collective.recipe.pgcreatedb`` 
+Para esto se usa la receta zc.buildout llamada `collective.recipe.pgcreatedb`_ 
 el cual crea una base de datos Postgresql a través de SQLAlchemy, a continuación 
 ejemplo de su configuración:
 
@@ -322,6 +324,7 @@ Artículos relacionados
 
 Referencias
 ===========
+
  * :ref:`Presentar información de una base de datos relacional <mostrar_data_sqlalchemy>`.
 
  * https://github.com/pythonbrasil/apyb.members
@@ -340,3 +343,4 @@ Referencias
 .. _collective.saconnect: http://pypi.python.org/pypi/collective.saconnect
 .. _collective.lead: http://pypi.python.org/pypi/collective.lead
 .. _z3c.saconfig: http://pypi.python.org/pypi/z3c.saconfig
+.. _collective.recipe.pgcreatedb: https://svn.plone.org/svn/collective/collective.recipe.pgcreatedb/trunk/collective/recipe/pgcreatedb/README.txt

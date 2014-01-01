@@ -6,10 +6,12 @@
 Buildout para instalar de todas las partes de un sitio
 ======================================================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Descripción general
 ===================
@@ -59,8 +61,9 @@ básica de instalación de paquetes de Python:
 Configuraciones de Transformaciones visuales
 --------------------------------------------
 
-Las transformaciones del tema visual con Deliverance se realizan configurando
-un servidor adicional de Nginx que ejecuta las reglas de los temas:
+Las transformaciones del tema visual con :ref:`Deliverance <apariencias_deliverance>` 
+se realizan configurando un servidor adicional de Nginx que ejecuta las reglas de los 
+temas:
 
 .. code-block:: ini
 
@@ -73,8 +76,8 @@ un servidor adicional de Nginx que ejecuta las reglas de los temas:
 Zope y ZEO
 ==========
 
-La construcción de ``Zope`` y el servidor de ``ZEO`` utilizan así mismo sus propias
-recetas. Algunas declaraciones es mejor definirlas como variables para poder
+La construcción de ``Zope`` y el servidor de :ref:`ZEO <que_es_zeo>` utilizan así mismo 
+sus propias recetas. Algunas declaraciones es mejor definirlas como variables para poder
 reutilizarlas en otras partes del buildout sin tener que definirlas más de una
 vez. Estas definiciones de variables constan de una cadena encerrada entre
 llaves y precedida por el símbolo ``$``, de esta manera: ``${parte:nombre}``. En esta
@@ -157,9 +160,9 @@ una sección separada:
 Instancia de depuración
 -----------------------
 
-Es recomendable también incluir una instancia de debug que no sea iniciada
-automáticamente para poder conectarse al sitio sin interferir con el cluster
-de producción:
+Es recomendable también incluir una :ref:`instancia de debug <instancia_zope_debug>` 
+que no sea iniciada automáticamente para poder conectarse al sitio sin interferir 
+con el cluster de producción:
 
 .. code-block:: ini
 
@@ -379,26 +382,26 @@ siguientes servidores:
     un servidor web Nginx que realiza transformaciones
 
   balancer
-    un cluster de HAproxy que balancea los clientes ZEO
+    un cluster de HAproxy que balancea los clientes :ref:`ZEO <que_es_zeo>`
 
   instance1
-    Cliente de ZEO 1
+    Cliente de :ref:`ZEO <que_es_zeo>` 1
 
   instance2
-    Cliente de ZEO 2
+    Cliente de :ref:`ZEO <que_es_zeo>` 2
 
   instance3
-    Cliente de ZEO 3
+    Cliente de :ref:`ZEO <que_es_zeo>` 3
 
   instance4
-    Cliente de ZEO 4
+    Cliente de :ref:`ZEO <que_es_zeo>` 4
 
   instance-debug
-    un cliente ZEO que no forma parte del cluster y esta siempre en modo de
+    un cliente :ref:`ZEO <que_es_zeo>` que no forma parte del cluster y esta siempre en modo de
     desarrollo
 
   zeoserver
-    un servidor ZEO para la base de datos de Zope común
+    un servidor :ref:`ZEO <que_es_zeo>` para la base de datos de Zope común
 
 Se incluye la configuración para rotación de logs con logrotate, excepto para
 Varnish. La configuración queda en el directorio :file:`production/logrotate.conf` y

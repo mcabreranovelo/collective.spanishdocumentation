@@ -6,10 +6,12 @@
 Traducir un documento a otro idioma automáticamente
 ===================================================
 
-:Autor(es): Carlos de la Guardia
-:Correo(s): carlos.delaguardia@gmail.com
-:Compatible con: Plone 3.3.x
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia
+    :Correo(s): carlos.delaguardia@gmail.com
+    :Compatible con: Plone 3.3.x
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -70,8 +72,8 @@ utilizando ``goopytrans``.
 Template ZPT
 ============
 
-Por supuesto, el template es igual de sencillo, pues para este ejemplo solo
-nos interesa mostrar el texto traducido.
+Por supuesto, el :ref:`template <zpt_lenguage>` es igual de sencillo, pues para 
+este ejemplo solo nos interesa mostrar el texto traducido.
 
 .. code-block:: html
 

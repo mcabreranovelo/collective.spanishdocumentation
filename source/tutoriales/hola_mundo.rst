@@ -6,10 +6,12 @@
 Hola Mundo en Plone 3
 =====================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3.3.x
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3.3.x
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -176,6 +178,7 @@ Ejemplo de un viewlet básico
       </div>
 
 - Edite la clase y la plantilla asegurándose que cumpla lo que necesita.
+
 - Asegúrese que su viewlet este correctamente registrado en el :file:`browser/configure.zcml`.
 
   .. code-block:: xml

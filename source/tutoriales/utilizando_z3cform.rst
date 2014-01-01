@@ -6,10 +6,12 @@
 Utilizando formularios z3c.form en Plone
 ========================================
 
-:Traductor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Traductor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -80,7 +82,8 @@ Algunas cosas que usted necesita antes de comenzar.
 
 Antes de que podamos crear un formulario z3c.form dentro de Plone necesita
 para crear un `buildout Plone`_ como paquete de dependencias necesarias.
-Asegúrese de que tiene `Python`_, `Setuptools`_, virtualenv y ZopeSkel
+Asegúrese de que tiene `Python`_, :ref:`Setuptools <que_es_setuptools>`, 
+:ref:`virtualenv <que_es_virtualenv>` y ZopeSkel
 instalados. Instrucciones se pueden encontrar en el `tutorial sobre buildout`_.
 También asegúrese de tener la última versión de ZopeSkel
 instalado, con el siguiente comando:
@@ -197,8 +200,8 @@ Creación de paquete Python para un formulario z3c.form
 Ahora cree un nuevo paquete de Python que contiene un simple formulario.
 
 Para crear un nuevo paquete de Python, ir al directorio :file:`src/` de su entorno
-buildout y permita que el script paster haga el trabajo por usted, con los
-siguientes comando:
+buildout y permita que el script :command:`paster` haga el trabajo por usted, con 
+los siguientes comando:
 
 .. code-block:: sh
 
@@ -611,13 +614,12 @@ Referencias
 .. _plone.z3cform: http://pypi.python.org/pypi/plone.z3cform
 .. _documentación: http://docs.zope.org/z3c.form/
 .. _zope.formlib: http://pypi.python.org/pypi/zope.formlib
-.. _Plone Developers Manual: http://plonemanual.twinapex.fi/
-.. _documentación para el z3c.form: http://plonemanual.twinapex.fi/forms/z3c.form.html
+.. _Plone Developers Manual: http://developer.plone.org/
+.. _documentación para el z3c.form: http://developer.plone.org/forms/z3c.form.html
 .. _collective: http://svn.plone.org/svn/collective/example.z3cformtutorial/
 .. _plone.app.discussion: http://plone.org/products/plone.app.discussion
 .. _buildout Plone: http://plone.org/documentation/kb/buildout/
 .. _Python: http://www.python.org/download/releases/
-.. _Setuptools: http://peak.telecommunity.com/DevCenter/setuptools
 .. _tutorial sobre buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
 .. _Known Good Set - (KGS) de plone.autoform: http://good-py.appspot.com/release/plone.autoform/1.0b2
 .. _http://docs.zope.org/z3c.form/browser/README.html: http://docs.zope.org/z3c.form/browser/README.html

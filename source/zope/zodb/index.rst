@@ -8,10 +8,12 @@
 Zope Object Database - ZODB
 ===========================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 La Zope Object Database (ZODB) es una base de datos orientada a objetos 
 para almacenar de forma transparente y persistente objetos en el lenguaje 
@@ -87,7 +89,7 @@ Almacenes de datos basado en conectores
 
 -  `DirectoryStorage <http://dirstorage.sourceforge.net/>`_ - Cada dato
    persistente se almacena como un archivo separado en el sistema de
-   archivos. Al igual que en FSFS en `Subversion <https://es.wikipedia.org/wiki/Subversion>`_.
+   archivos. Al igual que en FSFS en :ref:`Subversion <rcs_subversion>`.
 
 -  `DemoStorage <http://docs.zope.org/zope3/Code/ZODB/DemoStorage/index.html>`_
    - Un fondo en memoria para el almacenamiento persistente. Proporcione

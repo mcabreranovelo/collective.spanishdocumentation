@@ -6,10 +6,12 @@
 Configurar puntos de montajes para Data.fs separadas
 ====================================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 El montaje de un sitio Plone con la base de datos objetos :file:`Data.fs` 
 separadas puede ser muy útil si se están ejecutando varios sitios Plone 
@@ -61,7 +63,7 @@ instalación con un punto de montaje para un :ref:`ZODB <que_es_zodb>`.
 5.  Acceda a este directorio creado en la carpeta :file:`var/filestorage` en su
     instancia de producción.
 
-6.  Utilice el récipe de zc.buildout llamado `collective.recipe.filestorage`_ 
+6.  Utilice la receta de zc.buildout llamado `collective.recipe.filestorage`_ 
     en su configuración buildout para crear los puntos de montaje (donde las piezas 
     se muestra una lista de los identificador de nombres de sitio):
 
@@ -92,7 +94,7 @@ instalación con un punto de montaje para un :ref:`ZODB <que_es_zodb>`.
 Establecer nuevos puntos de montajes
 ------------------------------------
 
-Utilizando el récipe de zc.buildout llamado `collective.recipe.filestorage`_ 
+Utilizando la receta de zc.buildout llamado `collective.recipe.filestorage`_ 
 es muy fácil ya que solo necesita agregar una nueva linea en su configuración 
 buildout, cada linea representa un punto de montaje para cada sitios, a continuación 
 se muestra un ejemplo de esto:
@@ -149,7 +151,7 @@ opción de tamaño **zodb-cache**. Alternativamente, usted puede definir el
 número de objetos de un :file:`Data.fs` particular usando una configuración adicional
 buildout con el prefijo **filestorage_**.
 
-Ver el récipe `collective.recipe.filestorage`_ para más
+Ver la receta `collective.recipe.filestorage`_ para más
 detalles.
 
 En versiones posteriores :ref:`ZODB <que_es_zodb>`, también es posible controlar 
@@ -171,8 +173,9 @@ para arreglar.
 Eso también puede ser un gran dolor, porque el error, probablemente no
 aparecerá hasta que usted compacte su base de datos de origen, que pueden ser
 muy pocos días después de que en realidad se elimino el objeto - y por
-supuesto que usted necesita para hacer un roll back en la base de datos de
-origen (la cual no aparecerá dañada), sino la base de datos de destino.
+supuesto que usted necesita para hacer una operación de **roll back** en la 
+base de datos de origen (la cual no aparecerá dañada), sino la base de datos 
+de destino.
 
 Creo que las versiones posteriores de :ref:`ZODB <que_es_zodb>` tienen algún 
 tipo de bandera o marca "flag" que establezcan para evitar que esto no suceda, 

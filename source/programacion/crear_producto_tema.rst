@@ -6,17 +6,19 @@
 Creación de un paquete de tema
 ==============================
 
-:Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-:Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
+    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
 
-Un tema de Plone es un conjunto de templates, imágenes, estilos y código
-Python que dan la apariencia visual al sitio de Plone. Usualmente se le da
-también el nombre de `skin`.
+Un tema de Plone es un conjunto de :ref:`templates <zpt_lenguage>`, imágenes, 
+estilos y código Python que dan la apariencia visual al sitio de Plone. 
+Usualmente se le da también el nombre de `skin`.
 
 Plone utiliza dos mecanismos generales para definir los elementos de un tema:
 skins de CMF y vistas de Python. 
@@ -46,7 +48,7 @@ restringidos en cuanto a utilización de librerías y acceso al sistema en
 general. Es por eso que cuando se requiere un procesamiento mas complejo de
 datos es mejor utilizar Python directamente y no a través del skin. Plone
 tiene un mecanismo para generar paginas utilizando Python y opcionalmente un
-template de ZPT, mediante vistas y viewlets.
+template de :ref:`ZPT <zpt_lenguage>`, mediante vistas y viewlets.
 
 Una vista es una clase de Python que usualmente se asocia con un template
 para producir una pagina web. Un viewlet es un fragmento de HTML generado por
@@ -86,8 +88,8 @@ este ejemplo el nombre es `plonetheme.cliente1`:
       package:  plonethemecliente1
       project:  plonetheme.cliente1
 
-A continuación, paster realiza algunas preguntas para personalizar la
-generación del paquete. La primera es si deseamos contestar todas las
+A continuación, :command:`paster` realiza algunas preguntas para personalizar 
+la generación del paquete. La primera es si deseamos contestar todas las
 preguntas (all) o solo algunas (easy). Contestemos `all`::
 
     Expert Mode? (What question mode would you like? (easy/expert/all)?) ['easy']: all
@@ -137,12 +139,12 @@ Después, se pide una corta descripción del tema::
 
 Algunos temas requieren además de la apariencia visual modificar la
 configuración del sitio de Plone, para lo que es necesario incluir un perfil
-de generic setup::
+de :ref:`generic setup <perfiles_genericsetup>`::
 
     Register Profile (Should this package register a GS Profile) [True]: 
 
 Las siguientes preguntas son para definir un perfil de registro para subir
-el paquete a un repositorio como el Python Package Index::
+el paquete a un repositorio como el :term:`Python Package Index`::
 
     Long Description (Multi-line description (in ReST)) ['']: 
     Author (Name of author for project) ['']: Juan Perez
@@ -156,7 +158,7 @@ Finalmente, las ultimas dos preguntas siempre ocuparan los valores por defecto::
     Zip-Safe? (Can this project be used as a zipped egg? (true/false)) [False]: 
     Zope2 Product? (Are you creating a product for Zope2/Plone or an Archetypes Product?) [True]:
 
-Luego de responder a estas preguntas el programa ``paster`` creará las estructura inicial del paquete del tema de Plone.
+Luego de responder a estas preguntas el programa :command:`paster` creará las estructura inicial del paquete del tema de Plone.
 
 
 .. seealso:: Artículos sobre la :ref:`Referencias de Temas en Plone <referencias_temas_plone>`, Sistema de plantillas con :ref:`Deliverance <apariencias_deliverance>`.

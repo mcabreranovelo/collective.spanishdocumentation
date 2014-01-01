@@ -6,10 +6,12 @@
 Creando Temas con Diazo
 =======================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 ¿Qué es Diazo?
 ==============
@@ -268,7 +270,7 @@ Agregando los estilos
 
 **Importando el CSS de Plone**:
 
-Usted puede reusar los estilos CSS de Plone con la siguiente sentencia Diazo:
+Usted puede re-usar los estilos CSS de Plone con la siguiente sentencia Diazo:
 
 .. code-block:: xml
 
@@ -373,7 +375,7 @@ Tema mas completo
 
 Usted podrá encontrar un ejemplo de tema mas completo en la siguiente dirección:
 
-http://plone.org/products/beyondskins.responsive
+    http://plone.org/products/beyondskins.responsive
 
 Mas ejemplos consulte el índice de paquetes Python en búsqueda de `temas basados en diazo`_.
 

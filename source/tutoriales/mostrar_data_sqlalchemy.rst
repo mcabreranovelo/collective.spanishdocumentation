@@ -6,10 +6,12 @@
 Presentar información de una base de datos relacional
 =====================================================
 
-:Autor(es): Carlos de la Guardia
-:Correo(s): carlos.delaguardia@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia
+    :Correo(s): carlos.delaguardia@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -103,7 +105,7 @@ Primero definimos una vista que se conectará a ``SQLite``:
 Template ZPT
 ============
 
-En el template de ``ZPT``, simplemente presentamos las filas de datos:
+En el template de :ref:`ZPT <zpt_lenguage>`, simplemente presentamos las filas de datos:
 
 .. code-block:: html
 

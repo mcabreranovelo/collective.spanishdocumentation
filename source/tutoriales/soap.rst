@@ -6,10 +6,12 @@
 Obtener direcciones de manejo con SOAP
 ======================================
 
-:Autor(es): Carlos de la Guardia
-:Correo(s): carlos.delaguardia@gmail.com
-:Compatible con: Plone 3
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia
+    :Correo(s): carlos.delaguardia@gmail.com
+    :Compatible con: Plone 3
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -26,7 +28,8 @@ Requisitos previos
 ==================
 
 Una librería de Python que permite conectarse a servicios web de un manera
-sencilla se llama `suds <http://pypi.python.org/pypi/suds>`_ y esta disponible en :term:`PyPI`.
+sencilla se llama `suds <http://pypi.python.org/pypi/suds>`_ y esta disponible 
+en :term:`PyPI`.
 Utilizaremos esta librería para nuestra pequeña aplicación. Si utilizamos Plone
 con buildout (como debe ser), simplemente debemos agregar ``suds`` a la
 sección de *eggs* del buildout:
@@ -53,7 +56,7 @@ de ``suds``, junto con lo necesario para crear una vista en Plone.
     from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 A continuación podemos definir la vista. El método ``__init__`` y la
-asignación del template se hacen de la manera usual:
+asignación del :ref:`template <zpt_lenguage>` se hacen de la manera usual:
 
 .. code-block:: python
 
@@ -89,7 +92,7 @@ que debe ser un recurso de tipo WSDL. En este caso utilizamos uno que
 devuelve la ruta a seguir entre dos direcciones, pero por supuesto es posible
 conectarse a cualquier otro servicio SOAP si se tiene la dirección correcta.
 
-Para llamar al servicio, creamos una instancia del cliente, pasándole la dirección url
+Para llamar al servicio, creamos una instancia del cliente, pasándole la dirección URL
 como parámetro. Después, llamamos el servicio deseado con los parámetros
 requeridos. En este caso el servicio se llama *GetDirections* y recibe las
 dos direcciones. Lo que nos regresa es una lista de pasos a seguir, con
@@ -109,10 +112,10 @@ Template ZPT
 ============
 
 El template es muy simple. Mostramos primero la forma, incluyendo los valores
-de las direcciones si ya se han envíado. Después verificamos con
+de las direcciones si ya se han envíado. Después verificamos con la sentencia
 ``tal:condition`` si hay instrucciones de manejo presentes en la vista y en
-caso afirmativo las mostramos en una table, utilizando ``tal:repeat``. Los
-atributos ``value`` y ``_distanceToTravel`` están definidos en la especificación
+caso afirmativo las mostramos en una table, utilizando la sentencia ``tal:repeat``. 
+Los atributos ``value`` y ``_distanceToTravel`` están definidos en la especificación
 del servicio.
 
 .. code-block:: html
@@ -175,8 +178,9 @@ valores regresan.
 Plone también puede utilizarse para publicar servicios, utilizando las 
 librerías ``z3c.soap`` y ``Zolera``. Para mayor información:
 
- * `z3c.soap <http://pypi.python.org/pypi/z3c.soap>`_
- * `Zolera <http://pypi.python.org/pypi/ZSI>`_
+ * `z3c.soap <http://pypi.python.org/pypi/z3c.soap>`_.
+
+ * `Zolera <http://pypi.python.org/pypi/ZSI>`_.
 
 
 Referencia

@@ -6,10 +6,12 @@
 Crear gráficas a partir de datos de un tipo de contenido
 ========================================================
 
-:Autor(es): Carlos de la Guardia
-:Correo(s): carlos.delaguardia@gmail.com
-:Compatible con: Plone 3.3.x
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Carlos de la Guardia
+    :Correo(s): carlos.delaguardia@gmail.com
+    :Compatible con: Plone 3.3.x
+    :Fecha: 31 de Diciembre de 2013
 
 Introducción
 ============
@@ -143,8 +145,8 @@ donde mostraremos la gráfica generada.
 Template ZPT
 ============
 
-El template es muy simple, porque únicamente pasamos a una imagen el URL
-generado por la vista.
+El :ref:`template <zpt_lenguage>` es muy simple, porque únicamente pasamos a una 
+imagen el URL generado por la vista.
 
 .. code-block:: html
 
