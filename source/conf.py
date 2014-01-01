@@ -72,6 +72,7 @@ today_fmt = '%d de %B de %Y'
 # for source files.
 exclude_trees = [
 #    '_build'
+    'instalacion/productos/footer_portlet_manager'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
@@ -146,6 +147,8 @@ html_sidebars = {
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
 html_additional_pages = {
+    'index': 'indexplone.html',
+    'index_tutoriales': 'indextutoriales.html',
     'download': 'download.html',
 }
 

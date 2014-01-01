@@ -1,0 +1,65 @@
+{% extends "defindex.html" %}
+
+{% block tables %}
+
+  <p><strong>Artículos:</strong></p>
+  <table class="contentstable" align="center"><tr>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("rcs/index") }}">Control de versiones</a><br/>
+         <span class="linkdescr">Tutoriales de control de versiones como SVN, GIT, Bazaar, Mercurial</span></p>
+    </td>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("python/index") }}">Base de conocimiento de Python</a><br/>
+         <span class="linkdescr">artículos útiles sobre Python</span></p>
+    </td></tr>
+  </table>
+
+  <p><strong>Tutoriales de programación:</strong></p>
+  <table class="contentstable" align="center"><tr>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/hola_mundo") }}">Hola Mundo en Plone 3</a><br/>
+         <span class="linkdescr">acceso rápido de todos los módulos</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/utilizando_z3cform") }}">Utilizando formularios z3c.form en Plone</a><br/>
+         <span class="linkdescr">todas las funciones, clases, términos</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/mostrar_data_sqlalchemy") }}">Mostrar data de una base de datos relacional</a><br/>
+         <span class="linkdescr">los términos mas importantes explicados</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/aplicacion_crud") }}">Base de datos SQL y Plone</a><br/>
+         <span class="linkdescr">buscar en esta documentación</span></p>
+    </td>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/creando_temas_diazo") }}">Creando Temas con Diazo</a><br/>
+         <span class="linkdescr">Crear apariencias con plone.app.theming.</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/google_charts") }}">Gráficas a partir tipo de contenido</a><br/>
+         <span class="linkdescr">Crear gráficas a partir de datos de un tipo de contenido</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/google_translation") }}">Traducir un documento automáticamente</a><br/>
+         <span class="linkdescr">Traducir un documento a otro idioma automáticamente</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/soap") }}">Obtener direcciones de manejo con SOAP</a><br/>
+         <span class="linkdescr">Plone conectándose a servicios web con SOAP</span></p>
+    </td></tr>
+  </table>
+<!--
+  <p><strong>Tutoriales de administración:</strong></p>
+  <table class="contentstable" align="center"><tr>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/hola_mundo") }}">Hola Mundo en Plone 3</a><br/>
+         <span class="linkdescr">acceso rápido de todos los módulos</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/utilizando_z3cform") }}">Utilizando formularios z3c.form en Plone</a><br/>
+         <span class="linkdescr">todas las funciones, clases, términos</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/mostrar_data_sqlalchemy") }}">Mostrar data de una base de datos relacional</a><br/>
+         <span class="linkdescr">los términos mas importantes explicados</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/aplicacion_crud") }}">Base de datos SQL y Plone</a><br/>
+         <span class="linkdescr">buscar en esta documentación</span></p>
+    </td>
+    <td width="50%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/creando_temas_diazo") }}">Creando Temas con Diazo</a><br/>
+         <span class="linkdescr">Crear apariencias con plone.app.theming.</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/google_charts") }}">Gráficas a partir tipo de contenido</a><br/>
+         <span class="linkdescr">Crear gráficas a partir de datos de un tipo de contenido</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/google_translation") }}">Traducir un documento automáticamente</a><br/>
+         <span class="linkdescr">Traducir un documento a otro idioma automáticamente</span></p>
+      <p class="biglink"><a class="biglink" href="{{ pathto("tutoriales/soap") }}">Obtener direcciones de manejo con SOAP</a><br/>
+         <span class="linkdescr">Plone conectándose a servicios web con SOAP</span></p>
+    </td></tr>
+  </table>
+-->
+{% endblock %}
