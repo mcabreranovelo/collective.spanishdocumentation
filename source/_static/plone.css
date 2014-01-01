@@ -21,6 +21,14 @@ div.body h6 {
     font: "Helvetica Neue",Arial,FreeSans,sans-serif;
 }
 
+div.footer {
+    color: Black;
+}
+
+div.footer a {
+    color: #205c90;
+    text-decoration: none;
+}
 
 div.document {
     background-color: White;
