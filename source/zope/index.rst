@@ -6,16 +6,19 @@
 Z Object Publishing Environment
 ===============================
 
-Plone esta basado en el :ref:`servidor de aplicaciones Zope <servidor_aplicaciones_web_oao>` 
-y este requiere realizar tareas de hospedaje y administrativa para un servidor de aplicación 
-Zope / sitio de Plone.
-
 .. figure:: images/zope-logo.png
   :width: 180px
   :alt: Logotipo de Zope
   :align: center
 
   Logotipo de Zope
+
+Plone esta basado en el :ref:`servidor de aplicaciones Zope <servidor_aplicaciones_web_oao>` 
+y este requiere realizar tareas de hospedaje y administrativa para un servidor de aplicación 
+Zope / sitio de Plone.
+
+Primeros pasos en Zope
+======================
 
 .. list-table::
    :header-rows: 1
@@ -61,6 +64,32 @@ Zope / sitio de Plone.
        :ref:`Ejecutando con Servidor Nginx <zope_plone_webserver_nginx>`
 
        :ref:`Instancia de depuración <instancia_zope_debug>`
+
+Programación en Zope
+====================
+
+.. list-table::
+   :header-rows: 1
+   :class: index-table
+
+   * - Desarrollo
+     - Base de datos
+
+   * - :ref:`Arquitectura de Componentes de Zope <zca-es>`
+
+       :ref:`El motor de búsqueda de Zope <herramienta_zcatalog>`
+
+       :ref:`Zope Page Templates <zpt_lenguage>`
+
+       :ref:`Flujos de trabajo <flujo_trabajo>`
+
+     - :ref:`Zope Object Database - ZODB <que_es_zodb>`
+
+       `Programación con la ZODB <http://atmantree.com/go/2013/07/breve-introduccion-a-zodb/>`_
+
+       `Vida y obra de objetos persistidos en ZODB <http://revista.python.org.ar/4/es/html/zodb.html>`_
+
+       `Using the ZODB <http://www.fprimex.com/coding/zodb.html>`_
 
 .. 
   .. toctree::
