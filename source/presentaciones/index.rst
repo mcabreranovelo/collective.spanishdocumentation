@@ -4,9 +4,6 @@
 Presentaciones en PDF
 =====================
 
-.. tag:: Laminas en PDF de charlas/talleres
-    :tag: slideshare slides pdf presentaciones laminas charlas talleres
-
 A lo largo del curso utilizamos diversas presentaciones para apoyar
 visualmente los conceptos explicados. A continuación se describen algunas y
 se presentan ligas al PDF.

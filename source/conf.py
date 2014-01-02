@@ -26,7 +26,6 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.doctest',
               'sphinx.ext.todo',
               'sphinxcontrib.slide',
-              'sphinxcontrib.taglist',
               'sphinxcontrib.recentpages',
               ]
 
@@ -227,7 +226,3 @@ recentpages_sidebar = True
 recentpages_sidebar_pages = 10
 #recentpages_sidebar_fmt = '%d/%m/%Y'
 recentpages_sidebar_fmt = html_last_updated_fmt
-
-taglist_tags = {
-    'bzr': {'background-color': 'green'}
-}
