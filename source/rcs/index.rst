@@ -6,12 +6,13 @@
 Tutorial de control de versiones
 ================================
 
-Para tener un ambiente de desarrollo productivo, en especial cuando se trabaje en equipo, 
-es muy importante contar con un sistema de control de versiones. Históricamente ``Subversion`` 
-ha sido utilizado por `plone.org`_ y el :term:`Collective`, pero recientemente la comunidad 
-a adoptado el esquema distribuido ``Git`` ofrecido por el servicio `github.com`_ por lo que 
-consideramos necesario conocer ambos sistemas de control de versiones, aunque recientemente 
-la popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar`` ha aumentado.
+Para tener un ambiente de desarrollo productivo, en especial cuando se trabaje 
+en equipo, es muy importante contar con un sistema de control de versiones. 
+Históricamente :ref:`Subversion <rcs_subversion>` ha sido utilizado por `plone.org`_ 
+y el :term:`Collective`, pero recientemente la comunidad a adoptado el esquema 
+distribuido ``Git`` ofrecido por el servicio `github.com`_ por lo que consideramos 
+necesario conocer ambos sistemas de control de versiones, aunque recientemente la 
+popularidad de sistemas distribuidos como ``Git``, ``Mercurial`` y ``Bazaar`` ha aumentado.
 
 .. hlist::
    :columns: 1
