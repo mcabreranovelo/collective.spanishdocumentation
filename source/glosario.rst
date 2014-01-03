@@ -22,6 +22,14 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     
     bundle
         Ver :term:`Paquete bundle`.
+        
+    Catalog
+        Sinónimo en Ingles del termino :term:`Catálogo`.
+
+    Catálogo
+        Es un índice interno de los contenidos dentro de Plone para que se pueda buscar. 
+        El objetivo del catálogo es que sea accesible a través de la :ref:`ZMI <que_es_zmi>` 
+        a través de la herramienta :ref:`portal_catalog <zmi_portal_catalog>`.
 
     Cheese shop
         Ver :term:`PyPI`.
@@ -49,13 +57,8 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     Egg
         Ver :term:`paquetes Egg`.
 
-    Catalog
-        Sinónimo en Ingles del termino :term:`Catálogo`.
-
-    Catálogo
-        Es un índice interno de los contenidos dentro de Plone para que se pueda buscar. 
-        El objetivo del catálogo es que sea accesible a través de la :ref:`ZMI <que_es_zmi>` 
-        a través de la herramienta :ref:`portal_catalog <zmi_portal_catalog>`.
+    filesystem
+        Termino ingles File system, referido al sistema de archivo del sistema operativo.
     
     Instalación de Zope
         El software propio del servidor de aplicaciones.
