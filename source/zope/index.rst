@@ -73,7 +73,8 @@ Programación en Zope
    :class: index-table
 
    * - Desarrollo
-     - Base de datos
+     - Base de datos ZODB
+     - Base de datos SQL
 
    * - :ref:`Arquitectura de Componentes de Zope <zca-es>`
 
@@ -90,6 +91,14 @@ Programación en Zope
        `Vida y obra de objetos persistidos en ZODB <http://revista.python.org.ar/4/es/html/zodb.html>`_
 
        `Using the ZODB <http://www.fprimex.com/coding/zodb.html>`_
+
+     - `Relational Database Connectivity <http://docs.zope.org/zope2/zope2book/RelationalDatabases.html>`_
+
+       `Understanding Zope Database Adaptaters <http://www.makina-corpus.org/blog/understanding-zope-database-adaptaters>`_
+
+       `Z SQL Methods User's Guide <http://doc.dvgu.ru/www/zope/zsql/ZSQL.html>`_
+
+       `Connecting to MySQL and Zope ZMySQLDA <http://www.eng.ox.ac.uk/Plone/developing-for-plone/connecting-to-mysql>`_
 
 .. 
   .. toctree::
