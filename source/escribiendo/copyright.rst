@@ -19,7 +19,8 @@ Autores
 
 Todas esta documentación es licencia por:
 
-* Copyright © 2008 iniciativa `traducciones plone`_ de la comunidad `Plone Conosur`_. Todos los derechos reservados.
+* Copyright © 2008 iniciativa `traducciones plone`_ de la comunidad `Plone Conosur`_. 
+  Todos los derechos reservados.
 
   * Roberto Allende <rallende@menttes.com>.
 
@@ -39,11 +40,13 @@ Todas esta documentación es licencia por:
 
   * José Subero <arawako@gmail.com>.
 
-* Copyright © 2010 Mejores Practicas de Plone de la comunidad `Plone Conosur`_. Todos los derechos reservados.
+* Copyright © 2010 Mejores Practicas de Plone de la comunidad `Plone Conosur`_. Todos los 
+  derechos reservados.
 
   * Carlos de la Guardia <carlos.delaguardia@gmail.com>.
 
-* Copyright © 2010-2012 Documentación sobre Plone de la `Fundación Cenditel`_. Todos los derechos reservados.
+* Copyright © 2010-2012 Documentación sobre Plone de la `Fundación Cenditel`_. Todos los 
+  derechos reservados.
 
   * Victor Terán <vteran93@yahoo.es>.
 
@@ -51,14 +54,13 @@ Todas esta documentación es licencia por:
 
   * Leonardo J. Caballero G. <leonardocaballero@gmail.com>.
 
-* Copyright © 2012 - 2013 Documentación oficial de Plone por `Leonardo J. Caballero G. <leonardocaballero@gmail.com>`_. Todos los derechos reservados.
+* Copyright © 2012 - 2013 Documentación oficial de Plone por `Leonardo J. Caballero G. 
+  <leonardocaballero@gmail.com>`_. Todos los derechos reservados.
 
--------
-
-Ver :ref:`historia_licencia` para información completa sobre los términos y licencia.
+.. seealso:: Ver :ref:`licencias` para información completa sobre los términos y licencia.
 
 .. _Fundación Plone: http://plone.org/foundation/
 .. _Plone Foundation: http://plone.org/foundation/
 .. _traducciones plone: http://www.coactivate.org/projects/traducciones-plone/
-.. _Plone Conosur: plone.org/countries/conosur/
-.. _Fundación Cenditel: plataforma.cenditel.gob.ve/wiki/Plone
+.. _Plone Conosur: http://plone.org/countries/conosur/
+.. _Fundación Cenditel: http://www.cenditel.gob.ve/

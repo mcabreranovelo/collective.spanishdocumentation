@@ -6,22 +6,27 @@
 Procesos de documentación
 =========================
 
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Documentación para Plone 3 y Plone 4
+    :Fecha: 02 de Enero de 2014
+
 Obtener y compilar la documentación
 ===================================
 
-El almacenamiento de este material está disponible en un repositorio Git 
-`collective.spanishdocumentation`_ en la cuenta de `collective`_ en GitHub.com. 
-Si usted tiene una credenciales en este servidor y desea convertirse en 
-un colaborador ejecute el siguiente comando:
+El almacenamiento de este material está disponible en un repositorio Git `collective.spanishdocumentation`_ 
+en la cuenta de :term:`Collective` en GitHub.com. Si usted tiene una credenciales en este servidor y desea 
+convertirse en un colaborador ejecute el siguiente comando:
 
 .. code-block:: sh
 
   $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
-Si usted no tiene las credenciales de acceso al repositorio Git 
-`collective.spanishdocumentation`_ en la cuenta de `collective`_ 
-en GitHub.com o simplemente solo desea obtener y compilar esta 
-documentación ejecute el siguiente comando:
+Si usted no tiene las credenciales de acceso al repositorio Git `collective.spanishdocumentation`_ en la 
+cuenta de :term:`Collective` en GitHub.com o simplemente solo desea obtener y compilar esta documentación 
+ejecute el siguiente comando:
 
 .. code-block:: sh
 
@@ -37,7 +42,7 @@ Crear entorno virtual de Python para reconstruir este proyecto:
   $ virtualenv --python=/usr/bin/python sphinx
   $ source virtualenv/sphinx/bin/activate
 
-Ahora puede generar la documentación de HTML, con los siguiente comandos:
+Ahora puede generar la documentación en formato HTML, ejecute los siguientes comando:
 
 .. code-block:: sh
 
@@ -46,19 +51,18 @@ Ahora puede generar la documentación de HTML, con los siguiente comandos:
   (sphinx)$ ./bin/buildout -vN
   (sphinx)$ ./bin/sphinx
 
-Ahora se puede abrir ``collective.spanishdocumentation/build/html/index.html`` desde 
-su navegador Web favorito.
+Ahora se puede abrir :file:`build/html/index.html` desde su navegador Web favorito.
 
-Para obtener la documentación en PDF:
+Para obtener la documentación en formato ``PDF``, ejecute los siguientes comando:
 
 .. code-block:: sh
 
-  (sphinx)$ cd ./collective.spanishdocumentation/build
+  (sphinx)$ cd ./build
   (sphinx)$ make latex
   (sphinx)$ make latexpdf
 
-Ahora se puede abrir ``collective.spanishdocumentation/sphinx/build/latex/DocumentacionEspanolPlone.pdf`` 
-con sus programas de visor de PDF favorito (Evince, Acrobat Reader, ...)
+Ahora se puede abrir :file:`build/latex/DocumentacionEspanolPlone.pdf` con sus programas de visor 
+de PDF favorito (Evince, Acrobat Reader, etc).
 
 
 Reglas de redacción
@@ -77,9 +81,9 @@ Si su editor de texto favorito no reconoce esta codificación
 .. admonition::
    Truco
 
-   Para ``vi``, ``emacs`` y algunos otros editores de texto soportan
-   utf-8 de forma automática al abrir un archivo de Sphinx, el lugar en
-   primera línea de la siguiente marca (como en este archivo)::
+   Para los programas :program:`vi`, :program:`emacs` y algunos otros editores de texto soportan
+   utf-8 de forma automática al abrir un archivo de Sphinx, el lugar en primera línea de la siguiente 
+   marca (como en este archivo)::
 
      .. -*- coding: utf-8 -*-
 
@@ -96,9 +100,9 @@ excusa si es necesario.
 Estilos de subrayado
 ====================
 
-Sphinx y ReStructuredText no imponer estilo de subrayado para
-diferentes niveles de secciones de un documento. Todo se deja a la discreción
-editores. Para mantener la coherencia nosotros adoptamos la siguiente convención: ::
+Sphinx y ReStructuredText no imponer estilo de subrayado para diferentes niveles de 
+secciones de un documento. Todo se deja a la discreción editores. Para mantener la 
+coherencia nosotros adoptamos la siguiente convención: ::
 
   ==============================================
   Titulo de capitulo (uno solo por cada archivo)
@@ -138,10 +142,15 @@ Wow, estás contento con tu excelente trabajo. Y le gustaría compartirlo con
 todo el mundo. Al igual que cuando "contribuidor" de código fuente, las pruebas
 unitarias no deben mostrar ningún error, compruebe en primer lugar:
 
-* Que el comando ``make html`` no genere ningún error o advertencia.
-* Que su redacción no posea ningún error de ortografía.
+* El comando :command:`make html` no genere ningún error o advertencia.
+
+* Su redacción no posea ningún error de ortografía.
+
 * Los enlaces de hipertexto que se ha agregado o cambiado (glosario, enlaces
-  externos explícitos, referencias a las secciones, ...) funcionan correctamente.
+  externos explícitos, referencias a las secciones, etc) funcionan correctamente.
+
+  .. tip:: para comprobar esto puede ejecutar el comando :command:`make linkcheck`, 
+      el cual le ayudara a comprobar que todos los enlaces funcionen correctamente
 
 Imágenes
 ========
@@ -149,12 +158,12 @@ Imágenes
 Aparte de las capturas de pantalla - ¡Uy, lo siento - las capturas de pantalla!, 
 las imágenes Sphinx se inserta en el documento debe ir acompañada de su versión
 "Fuente" en un formato público interoperables, y para que el editor pueda abrir
-el archivo fuente que este disponible. Las imágenes deben estar preferentemente en el formato
-PNG.
+el archivo fuente que este disponible. Las imágenes deben estar preferentemente 
+en el formato PNG.
 
-Además, durante cada inserción o cambio de imagen, usted **debe**
-verificar y ajustar si es necesario la representación PDF, a sabiendas de las limitaciones
-la imagen a tamaño del papel final.
+Además, durante cada inserción o cambio de imagen, usted **debe** verificar y ajustar 
+si es necesario la representación PDF, a sabiendas de las limitaciones la imagen a 
+tamaño del papel final.
 
 **Ejemplo :** ::
 
@@ -177,34 +186,35 @@ Diagramas : `Graphviz`_
 Ejemplos de documentación en Sphinx
 ===================================
 
-* `Python documentation`_
-* `Zope documentation`_
-* `Plone Developer Documentation`_
-* `D:YAML documentation`_
+* `Python documentation`_.
+
+* `Zope documentation`_.
+
+* `Plone Developer Documentation`_.
+
+* `D:YAML documentation`_.
 
 
 Algunas de las herramientas recomendadas
 ========================================
 
-Emacs : usted puede agregar a emacs el módulo `rst.el
-<http://docutils.sourceforge.net/tools/editors/emacs/rst.el>`_
-que añade un par de comandos y la sintaxis de la documentación a los escritores 
-simpatizantes de Sphinx y reStructuredText.
+Emacs : usted puede agregar al programa :program:`emacs` el módulo `rst.el`_ que añade un par 
+de comando y la sintaxis de la documentación a los escritores simpatizantes de Sphinx y 
+reStructuredText.
 
 
 FAQ
 ===
 
-**Pregunta :** He añadido una entrada del índice o un nuevo término en el glosario y
-no se actualiza cuando compilo el documento.
+**Pregunta :** He añadido una entrada del índice o un nuevo término en el glosario y no se actualiza 
+cuando compilo el documento.
 
 **Respuesta :** El índice de Sphinx es a veces es desorientado y la gestión de la dependencia
-a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
-dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
+a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando :command:`make clean` 
+dentro del directorio :file:`build/`.
 
 
 .. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
-.. _collective: https://github.com/collective/
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
 .. _rst.el: http://docutils.sourceforge.net/tools/editors/emacs/rst.el
