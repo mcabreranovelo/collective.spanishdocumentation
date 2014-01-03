@@ -7,7 +7,7 @@ Agregando módulos y complementos adicionales a Plone
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 4
-:Fecha: 23 de Diciembre de 2013
+:Fecha: 02 de Enero de 2014
 
 En esta articulo busca explicar la instalación de módulos y complementos 
 adicionales a Plone 3 y Plone 4, además de no ser una guía paso a paso 
@@ -238,7 +238,7 @@ configuración respectivamente.
 9.  Inicie de nuevo Plone, de la siguiente forma: :command:`./bin/instance fg`.
 
 10. Abra el navegador web de su preferencia, acceda a su dirección del
-    sitio Plone, por defecto es `Agregar/Quitar Productos`_ y justo al lado
+    sitio Plone, por defecto es `Productos Adicionales`_ y justo al lado
     del producto ``heddex.tranquility`` y luego haga clic en el botón
     **Instalar** . Hasta este punto solo debe aparecer en la lista de los
     **Productos instalados**, si hasta este punto no ha cambiado la
@@ -645,7 +645,7 @@ Referencias
 .. _heddex.tranquility theme: http://plone.org/products/heddex.tranquility-theme
 .. _página del producto en plone.org: http://plone.org/products/heddex.tranquility-theme
 .. _Gestión de proyectos con Buildout: http://coactivate.org/projects/ploneve/gestion-de-proyectos-con-buildout
-.. _Agregar/Quitar Productos: http://localhost:8080/Plone/prefs_install_products_form
+.. _Productos Adicionales: http://localhost:8080/Plone/prefs_install_products_form
 .. _canaima.aponwaotheme: http://gitorious.org/%7Emacagua/canaima-aponwao-plone-theme/canaima-aponwaotheme
 .. _extensiones de Buildout: http://pypi.python.org/pypi?:action=search&term=Buildout&submit=search
 .. _infrae.subversion: http://pypi.python.org/pypi/infrae.subversion

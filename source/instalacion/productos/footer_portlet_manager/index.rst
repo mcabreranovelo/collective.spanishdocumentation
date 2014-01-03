@@ -10,7 +10,7 @@ Footer Portlet Manager
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 4
-    :Fecha: 3o de Diciembre de 2013
+    :Fecha: 02 de Enero de 2014
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `Footer Portlet Manager — Tutorial Plone 4`_, el cual busca explicar la instalación 
@@ -75,7 +75,7 @@ Habilitarlo en Plone
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
 y marque la casilla llamada **Footer portlet manager** y luego presione el botón **Habilitar**.
 
-En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Agregar/Quitar Productos` 
+En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Productos Adicionales` 
 y marque la casilla llamada **Footer portlet manager** y luego presione el botón **Instalar**.
 
 

@@ -11,11 +11,11 @@ DropDown Menu
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Diciembre de 2013
+    :Fecha: 02 de Enero de 2014
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `DropDown Menu — Tutorial Plone 4`_, el cual busca explicar la instalación 
-del producto :ref:`DropDown Menu <dropdownmenu_what>`.
+del producto :ref:`DropDown Menu <dropdownmenu_quees>`.
 
 .. _dropdownmenu_quees:
 
@@ -72,7 +72,7 @@ Habilitarlo en Plone
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
 y marque la casilla llamada **Dropdown menu** y luego presione el botón **Habilitar**.
 
-En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Agregar/Quitar Productos` 
+En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Productos Adicionales` 
 y marque la casilla llamada **Dropdown menu** y luego presione el botón **Instalar**.
 
 
@@ -127,7 +127,6 @@ Para ello, por favor acceda a la :menuselection:`Configuración del sitio -->  C
 Reemplace el **numero tres (3)** por el número de niveles que desea mostrar debajo del 
 nivel raíz. Tenga en cuenta que el **número cero (0)** cancela el efecto del menú desplegable 
 ya que no muestra el contenido más allá de la raíz.
-
 
 Productos alternativos
 ======================
