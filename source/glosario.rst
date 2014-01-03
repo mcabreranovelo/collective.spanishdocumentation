@@ -106,12 +106,6 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     Paquetes Python
         Plural del termino :term:`Paquete Python`.
     
-    Productos
-        Es una terminología usada por la comunidad Zope / Plone asociada a
-        cualquier implementación de módulos / complementos y agregados que amplíen la
-        funcionalidad por defecto que ofrece Zope/Plone. También son conocidos como
-        *"Productos de terceros"* del Ingles `Third-Party Products`_.
-    
     Producto Plone
         Es un tipo especial de paquete Zope usado para extender las funcionalidades
         de Plone. Se puede decir que son productos que su ámbito de uso es solo en el
@@ -129,6 +123,15 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         de `su instalación`_ donde deben acceder con las credenciales del usuario 
         Administrador de Zope. Muchas veces el producto simplemente no hay que 
         instalarlo por que se agregar automáticamente.
+    
+    Productos
+        Es una terminología usada por la comunidad Zope / Plone asociada a
+        cualquier implementación de módulos / complementos y agregados que amplíen la
+        funcionalidad por defecto que ofrece Zope/Plone. También son conocidos como
+        *"Productos de terceros"* del Ingles `Third-Party Products`_.
+
+    Productos Plone
+        Plural del termino :term:`Producto Plone`.
 
     Productos Zope
         Plural del termino :term:`Producto Zope`.
@@ -223,12 +226,19 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     ZCatalog
         Ver :term:`Catalog`.
 
+    ZCML
+        Siglas del termino en Ingles :term:`Zope Configuration Mark-up Language`.
+
     ZCML-slug
         Los así llamados "ZCML-slugs", era configuraciones que estaban destinados 
         a enlazar dentro de un directorio una configuración especial en una 
         instalación de Zope, por lo general se ven como ``collective.foo-configure.zcml``. 
         Estas configuraciones ya no están más en uso, pueden ser eliminados agregando 
         las configuraciones del paquete `z3c.autoinclude`_.
+
+    Zope Configuration Mark-up Language
+        Es un lenguaje basado en XML que se utiliza para extender y conectar a los sistemas basados 
+        en la :ref:`arquitectura de componentes de Zope (ZCA) <zca-es>`.
          
 .. _Third-Party Products: http://plone.org/documentation/kb/add-ons/tutorial-all-pages
 .. _Products.CMFPlone: http://pypi.python.org/pypi/Products.CMFPlone
