@@ -23,6 +23,8 @@ una buena práctica para experimentar con código y el estar familiarizado con
 estas herramientas será beneficioso para desarrollar e implantar
 aplicaciones.
 
+.. _buildout_caracteristicas:
+
 Características
 ---------------
 Estas son sus principales características:
