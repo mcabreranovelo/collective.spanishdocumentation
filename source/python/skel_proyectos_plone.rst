@@ -11,7 +11,7 @@ Esqueletos de proyectos Zope/Plone
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3 y Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 05 de Enero de 2014
 
 Introducción
 ============
@@ -169,7 +169,6 @@ paquete básico ha habilitado el setuptools
 
 .. code-block:: sh
 
-  (python)$ tree cliente1-portal.buildout
     cliente1-portal.buildout
     |-- README.txt
     |-- bootstrap.py
@@ -191,8 +190,7 @@ Observe la estructura de directorio creada ejecutando el siguiente comando:
 
 .. code-block:: sh
 
-  (python)$ tree .
-    .
+    cliente1-portal.buildout
     |-- README.txt
     |-- bin
     |   `-- buildout
@@ -304,7 +302,6 @@ Observe la estructura de directorio creada ejecutando el siguiente comando:
     |   `-- README.txt
     `-- var
     `-- README.txt
-
 
 Iniciar la construcción de proyecto Plone:
 
