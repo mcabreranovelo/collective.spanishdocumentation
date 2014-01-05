@@ -124,11 +124,14 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         Administrador de Zope. Muchas veces el producto simplemente no hay que 
         instalarlo por que se agregar automáticamente.
     
-    Productos
+    Producto
         Es una terminología usada por la comunidad Zope / Plone asociada a
         cualquier implementación de módulos / complementos y agregados que amplíen la
-        funcionalidad por defecto que ofrece Zope/Plone. También son conocidos como
+        funcionalidad por defecto que ofrece Zope / Plone. También son conocidos como
         *"Productos de terceros"* del Ingles `Third-Party Products`_.
+
+    Productos
+        Plural del termino :term:`Producto`.
 
     Productos Plone
         Plural del termino :term:`Producto Plone`.
