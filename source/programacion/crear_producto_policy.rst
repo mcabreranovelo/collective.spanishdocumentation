@@ -11,7 +11,7 @@ Creación de un producto de configuración
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
     :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 05 de Enero de 2014
+    :Fecha: 06 de Enero de 2014
 
 En esta articulo busca explicar como crear paquetes de configuración general de 
 un sitio representando las reglas generales de manejo de sitios para Plone 3, 
@@ -225,7 +225,7 @@ el producto. Una vez hecho esto, se debe exportar la configuración modificada d
 herramienta de :ref:`portal_setup <zmi_portal_setup>`, la cual se puede acceder a esta desde 
 la raíz del portal desde la :ref:`administración de Zope (ZMI) <zmi>`:
 
-Al seleccionar los pasos deseados y presionar el botón de **export selected steps**, 
+Al seleccionar los pasos deseados y presionar el botón de **Export selected steps**, 
 se obtiene un archivo comprimido que contiene la configuración expresada en XML para 
 todos los pasos seleccionados. Este archivo debe descomprimirse en el directorio del 
 perfil creado en el paso anterior:
@@ -366,7 +366,7 @@ Plone dentro de su :term:`Instancia de Zope`.
 Habilitarlo en Plone
 ====================
 
-Para instalar de este producto de configuraciones existen varias formas de hacerlo , este 
+Para instalar de este producto de configuraciones existen varias formas de hacerlo, este 
 proceso se hace en la mayoría de los casos manualmente como se describe cada uno a continuación:
 
 .. _producto_policy_creacion_sitio:
@@ -385,18 +385,19 @@ la casilla llamada **cliente1.policy** y luego presione el botón **Crear un Sit
 Posterior la creación del sitio
 -------------------------------
 
-En **Plone 2.5**, **Plone 3** y **Plone 4**  acceda a la  mas detalle consulte la 
-herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` y marque la casilla llamada **cliente1.policy** y luego presione 
-el botón **Install**.
+Si :ref:`durante la creación del sitio <producto_policy_creacion_sitio>` no selecciono en la sección 
+**Complementos** el producto **cliente1.policy**, puede realizar accediendo a la herramienta en 
+:menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` 
+y marque la casilla llamada **cliente1.policy** y luego presione el botón **Install**.
 
 .. _producto_policy_ejecutar_perfil:
 
 Ejecutar perfil de instalación
 ------------------------------
 
-En **Plone 3** y **Plone 4**  acceda a la  mas detalle consulte la herramienta en 
-:menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione la lista desplegable llamada **cliente1.policy** 
-luego desplace al final de la pagina y presione el botón **Import all steps** .
+En **Plone 3** y **Plone 4** acceda a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione 
+la lista desplegable llamada **cliente1.policy** luego desplace al final de la pagina y presione 
+el botón **Import all steps**.
 
 .. _producto_policy_ejecutar_buildout:
 
@@ -444,11 +445,11 @@ Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 
   $ ./bin/instance fg 
 
-De esta forma ya tiene disponible el sitio creado con el nombre ``Plone`` con el su 
+De esta forma ya tiene disponible el sitio creado con el nombre ``Plone`` con su 
 :term:`Producto Plone` de configuraciones aplicado en su :term:`Instancia de Zope` 
 configurada de forma :ref:`standalone (autónoma) <ser-zeo-o-no-ser-zeo>`.
 
-.. tip:: Pata configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las opciones de 
+.. tip:: Para configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las opciones de 
     la `receta`_.
 
 Resumen
