@@ -50,6 +50,8 @@ INFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE.
 
 .. contents::
 
+.. todo::
+    Actualizar la traducción y aplicar corrección ortográfico.
 
 Primeros pasos
 ---------------

@@ -351,12 +351,21 @@ Para instalar de este producto en cada sitio Plone usted debe **Habilitarlo** o
 En **Plone 4** acceda a la :menuselection:`Configuración del sitio --> Complementos` 
 y marque la casilla llamada **Tema de cliente1** y luego presione el botón **Habilitar**.
 
+.. todo::
+    Agregar capturas de pantallas para este procedimiento
+
 En **Plone 3** (versiones anteriores) acceda a la 
 :menuselection:`Configuración del sitio --> Productos Adicionales` y marque la casilla 
 llamada **Tema de cliente1** y luego presione el botón **Instalar**.
 
 De esta forma ya tiene disponible su :term:`Producto Plone` de temas para ser usado en su 
 sitio Plone.
+
+Comando locales de temas
+========================
+
+.. todo::
+    Escribir sobre este punto
 
 Resumen
 =======

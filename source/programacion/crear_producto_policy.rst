@@ -225,10 +225,16 @@ el producto. Una vez hecho esto, se debe exportar la configuración modificada d
 herramienta de :ref:`portal_setup <zmi_portal_setup>`, la cual se puede acceder a esta desde 
 la raíz del portal desde la :ref:`administración de Zope (ZMI) <zmi>`:
 
+.. todo::
+    Agregar capturas de pantallas para este procedimiento
+
 Al seleccionar los pasos deseados y presionar el botón de **Export selected steps**, 
 se obtiene un archivo comprimido que contiene la configuración expresada en XML para 
 todos los pasos seleccionados. Este archivo debe descomprimirse en el directorio del 
 perfil creado en el paso anterior:
+
+.. todo::
+    Agregar capturas de pantallas para este procedimiento
 
 .. code-block:: sh
 
@@ -380,6 +386,9 @@ el sitio y seleccione cualquier complemento que quiera activar de forma inmediat
 durante la creación del sitio en la sección **Complementos** en nuestro caso y marque 
 la casilla llamada **cliente1.policy** y luego presione el botón **Crear un Sitio Plone**.
 
+.. todo::
+    Agregar capturas de pantallas para este procedimiento
+
 .. _producto_policy_post_creacion:
 
 Posterior la creación del sitio
@@ -390,6 +399,9 @@ Si :ref:`durante la creación del sitio <producto_policy_creacion_sitio>` no sel
 :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` 
 y marque la casilla llamada **cliente1.policy** y luego presione el botón **Install**.
 
+.. todo::
+    Agregar capturas de pantallas para este procedimiento
+
 .. _producto_policy_ejecutar_perfil:
 
 Ejecutar perfil de instalación
@@ -398,6 +410,9 @@ Ejecutar perfil de instalación
 En **Plone 3** y **Plone 4** acceda a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione 
 la lista desplegable llamada **cliente1.policy** luego desplace al final de la pagina y presione 
 el botón **Import all steps**.
+
+.. todo::
+    Agregar capturas de pantallas para este procedimiento
 
 .. _producto_policy_ejecutar_buildout:
 
@@ -451,6 +466,12 @@ configurada de forma :ref:`standalone (autónoma) <ser-zeo-o-no-ser-zeo>`.
 
 .. tip:: Para configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las opciones de 
     la `receta`_.
+
+Comando locales del policy
+==========================
+
+.. todo::
+    Escribir sobre este punto
 
 Resumen
 =======

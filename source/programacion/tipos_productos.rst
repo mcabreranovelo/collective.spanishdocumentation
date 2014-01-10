@@ -82,6 +82,9 @@ definen los tipos de contenido que representan la base del sitio web.
 
 * Índices y metadatos del catálogo para cada tipo utilizado.
 
+.. todo::
+    Escribir un articulo sobre este punto
+
 .. _productos_utils_portal:
 
 Productos de apoyo
@@ -95,6 +98,9 @@ Uno o varios productos que realicen funciones no específicamente asociadas al c
 * Vistas y viewlets especiales.
 
 * Funcionalidades que extiendan Plone.
+
+.. todo::
+    Escribir un articulo sobre este punto
 
 .. _productos_policy_plone:
 
