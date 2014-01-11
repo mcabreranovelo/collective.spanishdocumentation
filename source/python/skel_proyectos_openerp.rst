@@ -11,7 +11,7 @@ Esqueletos de proyectos OpenERP
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Probado con Python 2.6 o versiones superiores
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 11 de Enero de 2013
 
 Introducción
 ============
@@ -32,7 +32,7 @@ Se requiere instalar las siguientes dependencias con el siguiente comando:
 
 .. code-block:: sh
 
-  # aptitude install bzr bzr-gtk bzrtools bzr-explorer python-dev python-setuptools tree
+  # aptitude install bzr bzr-gtk bzrtools bzr-explorer python-dev python-setuptools
 
 Instalación
 ===========
@@ -61,10 +61,13 @@ tiene disponible para usa, ejecutando el siguiente comando:
     Available templates:
       basic_package:      A basic setuptools-enabled package
       openerp_newmodule:  Template for creating a basic openerp package skeleton
-      openerp_theme:      Template for creating a basic openerp theme skeleton
+      openerp_webmodule:  Template for creating a basic openerp theme skeleton
       paste_deploy:       A web application deployed through paste.deploy
 
-Usted puede usar el comando ``paster`` para crear paquetes Python. 
+Generación modulo OpenERP
+=========================
+
+Usted puede usar el comando :command:`paster` para crear paquetes Python. 
 
 .. code-block:: sh
 
@@ -90,22 +93,24 @@ Usted puede usar el comando ``paster`` para crear paquetes Python.
       Copying __init__.py to ./openerp_mimodulo/__init__.py
       Copying __openerp__.py_tmpl to ./openerp_mimodulo/__openerp__.py
 
-Usted puede verificar el paquete previamente creado con el siguiente comando:
+Luego de responder a estas preguntas el programa :command:`paster` creará la 
+estructura inicial del paquete del modulo OpenERP llamado :file:`openerp_mimodulo` 
+en el directorio donde ejecuto el comando anterior.
 
-.. code-block:: sh
+::
 
-  (python)$ tree openerp_mimodulo/
     openerp_mimodulo/
     |-- __init__.py
     `-- __openerp__.py
 
-Hasta este punto tiene creado la estructura del nuestro modulo y puede 
-consultar la información del manifiesto de su modulo en el archivo 
-:file:`__openerp__.py`, con el siguiente comando:
+Hasta este punto tiene creado la estructura del su modulo y puede 
+consultar el archivo descriptor de Modulo OpenERP, el cual ofrece 
+la información del manifiesto de su modulo en el archivo en la ruta 
+:file:`openerp_mimodulo/__openerp__.py` que contiene la siguiente 
+información:
 
 .. code-block:: python
 
-  $ cat ./openerp_mimodulo/__openerp__.py
   # -*- coding: utf-8 -*-
   
   {
@@ -124,20 +129,22 @@ consultar la información del manifiesto de su modulo en el archivo
       'installable': True,
   }
 
+Generación Tema OpenERP
+=======================
+
 Ahora proceda a crear un nuevo tema, con el siguiente comando:
 
 .. code-block:: sh
 
-  (python)$ paster create -t openerp_theme
+  (python)$ paster create -t openerp_webmodule openerp_mitema
     Selected and implied templates:
-      openerp-bootstrap#openerp_theme  Template for creating a basic openerp theme skeleton
+      openerp-bootstrap#openerp_webmodule  Template for creating a basic openerp theme skeleton
     
-    Enter project name: openerp_mitema
     Variables:
       egg:      openerp_mitema
       package:  openerp_mitema
       project:  openerp_mitema
-    Enter module_name (Module name (like "My Theme")) ['My Theme']: Mi tema OpenERP
+    Enter module_name (Module name (like "My Web module")) ['My Web module']: Mi tema OpenERP
     Enter description (One-line description of the module) ['']: Mi tema OpenERP de pruebas
     Enter version (Version) ['1.0']: 0.1
     Enter author (Author name) ['']: Leonardo J. Caballero G.
@@ -148,7 +155,7 @@ Ahora proceda a crear un nuevo tema, con el siguiente comando:
     Enter has_css (Needs CSS? [yes/no]) ['yes']: 
     Enter has_js (Needs Javascript? [yes/no]) ['yes']: 
     Enter has_xml (Needs QWeb XML? [yes/no]) ['no']: 
-    Creating template openerp_theme
+    Creating template openerp_webmodule
     Creating directory ./openerp_mitema
       Copying __init__.py to ./openerp_mitema/__init__.py
       Copying __openerp__.py_tmpl to ./openerp_mitema/__openerp__.py
@@ -165,11 +172,13 @@ Ahora proceda a crear un nuevo tema, con el siguiente comando:
           Copying +normalized_name+.xml_tmpl to ./openerp_mitema/static/xml/openerp_mitema.xml
     xml not required, removed dir ./openerp_mitema/static/xml
 
-Usted puede verificar el paquete previamente creado con el siguiente comando:
+Luego de responder a estas preguntas el programa :command:`paster` creará la 
+estructura inicial de un modulo Web con todos los archivos estáticos que usted 
+ya tiene listo para personalizar, con el nombre de :file:`openerp_mitema` en el 
+directorio donde ejecuto el comando anterior.
 
-.. code-block:: sh
+::
 
-  (python)$ tree openerp_mitema/
     openerp_mitema/
     |-- __init__.py
     |-- __openerp__.py
@@ -179,11 +188,11 @@ Usted puede verificar el paquete previamente creado con el siguiente comando:
         `-- js
             `-- openerp_mitema.js
 
-Este creara un modulo Web con todos los archivos estáticos que usted ya tiene listo para personalizar.
+En este modulo esta archivo descriptor de Modulo OpenERP en la ruta 
+:file:`openerp_mitema/__openerp__.py` que contiene la siguiente información:
 
 .. code-block:: python
 
-  $ cat ./openerp_mitema/__openerp__.py
   # -*- coding: utf-8 -*-
   
   {
@@ -225,7 +234,7 @@ Recomendaciones
 ===============
 
 Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas 
-``paster`` y Buildout simplemente seleccione cual esqueleto va a utilizar para su 
+:command:`paster` y Buildout simplemente seleccione cual esqueleto va a utilizar para su 
 desarrollo y proceso a instalarlo con :ref:`easy_install <que_es_easyinstall>` o 
 :ref:`PIP <que_es_pip>` (como se explico anteriormente) y siga sus respectivas 
 instrucciones para lograr con éxito la tarea deseada.
