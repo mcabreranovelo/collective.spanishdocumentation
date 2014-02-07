@@ -4,12 +4,12 @@
 
 .. _inicio_de_sesion:
 
-Iniciar de sesión
+Inicio de sesión
 ======================
 
-Que esperar cuando usted inicia sesión en un sitio Plone
+Qué esperar cuando usted inicia sesión en un sitio Plone
 
-Cuando usted visita un sitio web Plone de forma anónima o se la ha dado la
+Cuando usted visita un sitio web Plone de forma anónima o se le ha dado la
 dirección web para mantenimiento del sitio, aparecerá un botón *Entrar*
 similar al siguiente:
 
@@ -18,16 +18,16 @@ similar al siguiente:
     :align: center
 
 
-Luego de hacer clic en el botón *Entrar*, vera un panel donde debe escribir
-el nombre de usuario y contraseña:
+Luego de hacer clic en el botón *Entrar*, verá un panel donde debe escribir
+su nombre de usuario y contraseña:
 
 .. image:: ../images/loginform.png
     :alt: Panel inicio de sección
     :align: center
 
 
-Luego de iniciar sesión en un sitio web Plone el usuario vera su nombre,
-usualmente en la parte superior de la pantalla debajo del encabezado. Si hace
+Luego de iniciar sesión en un sitio web Plone el usuario verá su nombre,
+usualmente en la parte superior de la pantalla en la esquina superior del encabezado. Si hace
 clic en su nombre usted accederá a sus preferencias personales, texto de
 presentación del usuario, etc.
 
