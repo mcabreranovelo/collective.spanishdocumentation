@@ -5,9 +5,12 @@
 Sistema de gestión de contenidos Plone
 ======================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Fecha: 31 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Python 2.4 o versiones superiores
+    :Fecha: 15 de Enero de 2013
 
 .. _ficha_tecnica_plone:
 
@@ -42,7 +45,7 @@ Plone es un desarrollo basado en `código abierto`_ publicado bajo la `GNU Gener
 (GPL), basado en `Zope`_ y programado en `Python`_. Los principales desarrollos son 
 conducidos periódicamente durante `reuniones especiales`_ llamadas `Plone Sprints`_. 
 Adicionalmente esta diseñado para extender sus funcionalidades por defecto por medio 
-de módulos adicionales llamados :ref:`Products <productos_plone>`. Pone también tiene 
+de módulos adicionales llamados :ref:`Products <productos_plone>`. Plone también tiene 
 respaldo legal del Consejo de la `Software Freedom Law Center`_. Los puntos fuertes de 
 Plone son sus flujo de trabajo `flexibles y adaptables`_, muy buena seguridad, extensibilidad, 
 facilidad de uso y flexibilidad.
