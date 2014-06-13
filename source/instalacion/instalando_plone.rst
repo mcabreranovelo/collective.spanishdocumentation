@@ -175,7 +175,7 @@ Asistente de instalación de Plone
     se inicie automáticamente con el inicio de Windows.
     
     .. note::
-        esto se puede cambiar en cualquier momento ejecutando :command:`bin\instance.exe remove`
+        esto se puede cambiar en cualquier momento ejecutando :command:`bin\\instance.exe remove`
         en su directorio de instalación o si desea ejecutar Plone después de que la
         instalación haya culminado.
 
