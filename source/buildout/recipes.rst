@@ -101,7 +101,7 @@ a continuación un ejemplo de configuración:
   # Get TickingMachine directly from SVN since it's not eggified
   # For options see http://pypi.python.org/pypi/infrae.subversion
   [svnproducts]
-  recipe = plone.recipe.bundlecheckout
+  recipe = infrae.subversion
   urls =
       http://tickingmachine.googlecode.com/svn/trunk TickingMachine
 
