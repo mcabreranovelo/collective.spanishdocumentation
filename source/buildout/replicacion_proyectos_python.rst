@@ -112,7 +112,7 @@ ser distribuidas baja su filosofía de módulos y paquetes. Esto causo que Zope 
 un paquete :term:`bundle` se separa en muchos :term:`paquetes Egg` y fue algo natural 
 que Plone también ;)
 
-    "Buildout, es un :file:`Makefile` con esteroides" -`Francsico Palm`_.
+    "Buildout, es un :file:`Makefile` con esteroides" -`Francisco Palm`_.
 
 Terminología
 ------------
@@ -277,4 +277,4 @@ Referencias
 .. _Plone en entornos de producción: http://plone-spanish-docs.readthedocs.org/es/latest/buildout/plone_esquema_alta_disponibilidad.html
 .. _instalación LAMP: http://docs.pythonpackages.com/en/latest/hosted-configs/wordpress.html
 .. _formato .INI: http://es.wikipedia.org/wiki/INI_%28extensi%C3%B3n_de_archivo%29
-.. _Francsico Palm: https://github.com/fpalm
+.. _Francisco Palm: https://github.com/fpalm
