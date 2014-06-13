@@ -13,6 +13,8 @@ Procesos de documentación
     :Compatible con: Documentación para Plone 3 y Plone 4
     :Fecha: 02 de Enero de 2014
 
+.. _obtener_copia_docs:
+
 Obtener y compilar la documentación
 ===================================
 
