@@ -157,6 +157,12 @@ A continuación se muestran algunos esqueletos útiles:
 
 - :ref:`Esqueletos de proyectos Zope/Plone <skel_plone>`.
 
+- :ref:`Esqueletos de proyectos OpenERP <skel_openerp>`.
+
+  .. note::
+      `OpenERP`_, ees un sistema ERP y CRM programado con Python, 
+      de propósito general.
+
 - **Esqueletos de proyectos Django**:
 
   .. note::
