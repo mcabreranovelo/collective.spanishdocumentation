@@ -132,10 +132,10 @@ visualizar pestañas de color verde con los nombres *Contenidos*, *Vista*,
 Si se hace clic en ellas es posible explorar las diferencias entre una y
 otra, de todas maneras aquí están las descripciones para ayudarlo a empezar:
 
--   *Contenidos* - muestra una lista con los elementos que contenidos en
+-   *Contenidos* - muestra una lista con los elementos que están agrupados en
     la carpeta
 
--   *Vista* - muestra la vista que un usuario anónimo visualizara
+-   *Vista* - muestra la vista que un usuario anónimo visualizará
 
 -   *Editar* - cambia el panel a una vista de edición
 
@@ -144,12 +144,10 @@ otra, de todas maneras aquí están las descripciones para ayudarlo a empezar:
 
 -   *Compartir* - muestra un panel para establecer permisos para que
     otros usuarios puedan ver y editar el contenido
--   *Histórico* - muestra la bitácora de cambios realizados en un
-    elemento
 
 
-Debajo de las pestañas en la parte baja del encabezado verde puede ver varios
-menús *Mostrar, Agregar elemento y Estado*:
+A la derecha en la barra verde del encabezado puede ver varios
+menús *Mostrar, Agregar nuevo y Estado*:
 
 .. image:: ../images/editstripmenus.png
     :alt: Menús
@@ -160,7 +158,7 @@ Explore estos también. Aquí están las descripciones básicas de estos menús:
 -   *Mostrar* - permite seleccionar el tipo de vista (lista de elementos,
     vista de resumen, etc.)
 
--   *Agregar elemento* - muestra un menú con los diferentes elementos de
+-   *Agregar nuevo* - muestra un menú con los diferentes elementos de
     contenidos que se pueden agregar (imágenes, paginas, carpetas, etc.)
 
 -   *Estado* - permite cambiar el estado de publicación del elemento
