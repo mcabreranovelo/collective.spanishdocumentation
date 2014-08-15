@@ -31,8 +31,10 @@ Cuando usted inicia sesión por primera vez, su cuadro de mando estará vacío,
 como lo indica el mensaje. Los Portlets son "vistas" especificas de
 diferentes tipos de contenidos. Usted puede elegir cuales Portlets quiere en
 su cuadro de mando, haciendo clic en la pestaña *Editar*, pero en un segundo
-llegaremos allí. Primero veamos el enlace de *Perfil* y *Preferencias
-Personales* en las esquina superior derecha. Al hacer clic en el enlace
+llegaremos allí. 
+
+Primero veamos el enlace de *Perfil* y *Preferencias*
+en las esquina superior derecha. Al hacer clic en el enlace
 "Perfil" se abre un panel que muestra su fotografía de perfil personal si ha
 subido alguna:
 

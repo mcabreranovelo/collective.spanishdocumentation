@@ -13,7 +13,7 @@ Una explicación de Plone como sistema de gestión de contenidos
 ¿Qué es Plone?
 --------------
 
-Plone es un sistema de gestión de contenidos (del ingles, Content Management
+Plone es un sistema de gestión de contenidos (del inglés, Content Management
 System - CMS) que puede emplearse para construir un sitio web. Empleando
 Plone, las personas sin conocimientos de programación o sin la ayuda un
 experto pueden contribuir al contenido de un sitio web. Plone funciona vía
@@ -44,7 +44,7 @@ puede subirse desde una computadora local, además, Plone le permite crear
 ---------------------------
 
 Si se deseara agregar contenido sobre mariposas, por ejemplo, se puede crear
-una carpeta llamada "Mariposas" y luego agregar texto a una pagina dentro de
+una carpeta llamada "Mariposas" y luego agregar texto a una página dentro de
 la carpeta:
 
 .. image:: ../images/butterflies_folder_text.png
@@ -118,9 +118,9 @@ Luego el software Plone responde:
 
 
 Plone lee su respectiva base de datos para buscar la información almacenada
-en misitio.com. Luego envía de vuelta la pagina web a su computadora en un
+en misitio.com. Luego envía de vuelta la página web a su computadora en un
 código llamado HTML que es un lenguaje de computadora que describe con luce
-una pagina web. Este incluye texto, gráficos, tipos de letras, color del
+una página web. Este incluye texto, gráficos, tipos de letras, color del
 fondo, etc. En Internet existen muchos sitios donde se puede aprender HTML
 detalladamente, pero una de las ventajas de Plone es que no es necesario
 aprender (demasiado) sobre HTML. Esa es una de las razones por la que Plone y
@@ -130,14 +130,14 @@ nuevo lenguaje de computadoras.
 
 Pero regresemos a la interacción entre la computadora del usuario y el
 servidor. El navegador web "suministra" (traduce) este HTML para que pueda
-ver la pagina web resultante:
+ver la página web resultante:
 
 .. image:: ../images/my_site_served.png
     :alt: Mi sitio servido
     :align: center
 
 
-Así que cuando ve su pagina web de mariposas, puede decidir si cambiarla o
+Así que cuando ve su página web de mariposas, puede decidir si cambiarla o
 agregarle contenido. Además en cualquier momento se puede subir fotos,
 documentos, etc:
 
@@ -147,7 +147,7 @@ documentos, etc:
 
 
 Luego que hace sus cambios y hace clic en "Guardar", la nueva versión de la
-pagina web se mostrara a cualquiera que visite el sitio:
+página web se mostrará a cualquiera que visite el sitio:
 
 .. image:: ../images/plone_donut_full.png
     :alt: 
