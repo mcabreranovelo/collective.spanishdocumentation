@@ -165,7 +165,7 @@ Buildout, para esto debe ejecutar los siguientes comando:
 
 .. code-block:: sh
 
-  $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{eggs,downloads,zope}
+  $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{downloads,eggs,extends,zope}
   $ nano $HOME/.buildout/default.cfg
 
 Luego de crear el archivo :file:`default.cfg` defina algunas configuraciones de 
@@ -174,8 +174,9 @@ usuario predeterminadas para cualquier parte de su configuración :term:`buildou
 .. code-block:: cfg
 
   [buildout]
-  eggs-directory = /ruta/absoluta/al/home/del/usuario/.buildout/eggs
   download-cache = /ruta/absoluta/al/home/del/usuario/.buildout/downloads
+  eggs-directory = /ruta/absoluta/al/home/del/usuario/.buildout/eggs
+  extends-cache = /ruta/absoluta/al/home/del/usuario/.buildout/extends
   zope-directory = /ruta/absoluta/al/home/del/usuario/.buildout/zope
 
 .. note::
