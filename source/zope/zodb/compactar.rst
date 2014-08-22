@@ -11,7 +11,7 @@
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 23 de Agosto de 2014
 
 ¿En que consta compactar la ZODB?
 =================================
@@ -31,7 +31,7 @@ Los beneficios son los siguientes:
 - Hay beneficios en el tamaño de la base de datos con respecto al espacio de 
   almacenamiento físico del disco duro.
 
-- Compactar la :ref:`ZODB <que_es_zodb>` es similar a un VACUUM en PostgreSQL.
+- Compactar la :ref:`ZODB <que_es_zodb>` es similar a un `VACUUM`_ en PostgreSQL.
 
 Compactar la ZODB con tareas crontab
 ------------------------------------
@@ -62,7 +62,7 @@ configuración:
   [packups]
   recipe = z3c.recipe.usercrontab
   times = 0 0 1 * * 
-  command = ${buildout:bin-directory}/bin/zodbpack
+  command = ${buildout:bin-directory}/zodbpack
 
 .. tip::
     En el comando :command:`wget` contiene dos parámetros ``--user`` y ``--password`` 
@@ -97,13 +97,13 @@ compactar la :ref:`ZODB <que_es_zodb>`, a continuación un ejemplo de configurac
   [backups]
   recipe = z3c.recipe.usercrontab
   times = 0 0 * * * 
-  command = ${buildout:bin-directory}/bin/backup
+  command = ${buildout:bin-directory}/backup
   
   # Pack once a month
   [packups]
   recipe = z3c.recipe.usercrontab
   times = 0 0 1 * * 
-  command = ${buildout:bin-directory}/bin/zeopack
+  command = ${buildout:bin-directory}/zeopack
 
 .. tip::
     Si le gustaría usar este script para compactar un :ref:`punto de montaje <puntos_montaje_zodb>` 
@@ -116,7 +116,7 @@ Compactando sin crontab
 Existe otra forma de realizar tareas de compactar la :ref:`ZODB <que_es_zodb>` automáticamente 
 sin usar tareas crontab.
 
-Para esto agregue el producto `Products.ClockServer`_ en su sección ``egg`` 
+Para esto agregue el producto `Products.ClockServer`_ en su sección ``eggs``
 en su archivo :file:`buildout.cfg`. 
 
 Además agregue la siguiente configuración en la sección ``instance`` en su 
@@ -184,6 +184,7 @@ Referencias
 - `What is the suggested way to cron-automate ZODB packs for a production Plone instance?`_.
 - `Automatically Pack The ZODB`_.
 
+.. _VACUUM: https://wiki.postgresql.org/wiki/Introduction_to_VACUUM,_ANALYZE,_EXPLAIN,_and_COUNT
 .. _How do I pack the ZODB?: http://plone.org/documentation/faq/how-do-i-pack-the-zodb
 .. _Regular database packing: http://developer.plone.org/hosting/zope.html#regular-database-packing
 .. _What is the suggested way to cron-automate ZODB packs for a production Plone instance?: http://stackoverflow.com/questions/5300886/what-is-the-suggested-way-to-cron-automate-zodb-packs-for-a-production-plone-ins/
