@@ -26,21 +26,23 @@ se ejecutan las importaciones a través de un específico front-end de instancia
 utilizando el acceso directo al puerto.
 
 .. tip::
-
     Si realizo la exportación a través de la instancia llamada ``instance1`` 
     los archivos exportados deben estar en el directorio :file:`/parts/instance1/import`.
 
 Tenga en cuenta que las estructura de carpetas en el directorio :file:`parts` 
 se borra en cada ejecución buildout.
 
-Cuando los archivos se colocan en el servidor en la carpeta correcta, 
-la pestaña Import/Export :ref:`ZMI <que_es_zmi>` los recogerá en la 
-selección de hacia abajo. No es necesario reiniciar Zope.
+Cuando los archivos se colocan en el servidor en la carpeta adecuada, puede ir al final
+de la pagina del `ZMI`_ del contexto donde requiere importar el archivo ``.zexp`` y hace
+clic en el botón ``Import/Export`` los recogerá en la selección de hacia abajo.
 
-Más información
-===============
+.. note::
+    No es necesario reiniciar Zope.
 
--   `http://quintagroup.com/services/support/tutorials/import-export-plone/`_
+Referencias
+===========
 
-.. _http://quintagroup.com/services/support/tutorials/import-export-plone/: http://quintagroup.com/services/support/tutorials/import-export-plone/
+- `How to Import Data into Zope or Plone`_.
+
+.. _How to Import Data into Zope or Plone: http://quintagroup.com/services/support/tutorials/import-export-plone/
 .. _pickle Python: http://mundogeek.net/archivos/2008/05/20/python-serializacion-de-objetos/

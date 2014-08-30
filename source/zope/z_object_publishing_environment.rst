@@ -64,7 +64,7 @@ empleados fueron `Paul Everitt`_ y `Rob Page`_, bastante pronto se sumaría empl
 `Jim Fulton`_.
 
 En 1996, `Jim Fulton`_, ahora el CTO de :ref:`Zope Corporation <zope_corporation>`, fue 
-seleccionado ​​para dar una clase de programación sobre `Common Gateway Interface - CGI`_, 
+seleccionado ​​para dar una clase de programación sobre `Common Gateway Interface (CGI)`_,
 a pesar de no saber mucho sobre el tema. La programación en CGI fue el modelo web de 
 desarrollo de uso común del momento, el cual a los programadores les permitía construir 
 sitios web dinámicos. Entonces el viajar a la clase, Jim estudió toda la documentación 
@@ -384,14 +384,15 @@ Infraestructura de servicios Zope
 
 Este proporciona infraestructura y servicios que agilizan enormemente el desarrollo, que 
 consiste en varios componentes diferentes que trabajan de manera conjunta para ayudarte 
-a construir aplicaciones Web que se describen a continuación:
+a construir aplicaciones Web que se describen a continuación: *(Ver Figura 1.2)*
  
-.. image:: images/infraestructura_servicios_zope.png
+.. figure:: images/infraestructura_servicios_zope.png
   :alt: Infraestructura de servicios Zope
   :align: center
-  :width: 463px
-  :height: 468px
-  :target: ../_images/infraestructura_servicios_zope.png
+  :width: 363px
+  :height: 367px
+
+  Infraestructura de servicios Zope
 
 .. _servidor_aplicaciones_web_oao:
 
@@ -525,7 +526,7 @@ para revisar la estructura interna fundamental del proyecto. Estos cambios inclu
 que muchos componentes también se pueden utilizar fuera de Zope ahora en otros proyectos Python.
 
 Para ofrecer compatibilidad hacia atrás a los componentes hechos para :ref:`Zope 2 <zope2>` 
-desde BlueBream /Zope 3, puede usar el componente llamado :ref:`Five <five>`.
+desde BlueBream / Zope 3, puede usar el componente llamado :ref:`Five <five>`.
 
 .. _grok:
 
@@ -876,7 +877,7 @@ Obtenido de «`http://es.wikipedia.org/w/index.php?title=Zope&oldid=69880666 <ht
 .. _Paul Everitt: http://pauleveritt.wordpress.com/
 .. _Rob Page: http://www.zope.com/about_us/management/rob_page.html
 .. _Jim Fulton: http://www.zope.com/about_us/management/james_fulton.html
-.. _Common Gateway Interface - CGI: http://es.wikipedia.org/wiki/Common_Gateway_Interface
+.. _Common Gateway Interface (CGI): http://es.wikipedia.org/wiki/Common_Gateway_Interface
 .. _Digital Creations: http://www.digicool.com/
 .. _Hadar Pedhazur: http://www.zope.com/about_us/management/hadar_pedhazur.html
 .. _ORB: http://es.wikipedia.org/wiki/Object_Request_Broker

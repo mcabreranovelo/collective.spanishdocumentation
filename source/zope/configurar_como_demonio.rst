@@ -11,7 +11,7 @@ Configurar Zope y Plone como un demonio / servicio
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 Descripción general
 ===================
@@ -49,8 +49,10 @@ Términos básicos
 Paso a paso
 ===========
 
-Para el caso de configuración de Debian Lenny, es necesario seguir los siguientes pasos:
+Para el caso de configuración de Debian GNU/Linux, es necesario seguir los siguientes pasos:
 
+.. note::
+    Se ha probado con Debian Lenny y versiones anteriores.
 
 Realice un enlace simbólico del script de servicio de Zope desde directorio
 de instalación al directorio de arranque de los servicios (demonios) con el siguiente comando: 
@@ -96,10 +98,11 @@ Plone.
 Referencias
 ===========
 
--   `How-To Managing services with update-rc.d`_
--   `Editor de niveles de ejecución en Debian`_
+- `How-To Managing services with update-rc.d`_.
 
-.. _instalaciones unificadas de Plone: http://plone.org/countries/conosur/documentacion/instalando-plone-3-con-el-instalador-unificado
+- `Editor de niveles de ejecución en Debian`_.
+
+.. _instalaciones unificadas de Plone: http://plone-spanish-docs.readthedocs.org/es/latest/instalacion/instalando_plone.html
 .. _Debian GNU/Linux: http://es.wikipedia.org/wiki/Debian
 .. _Ubuntu Linux: http://es.wikipedia.org/wiki/Ubuntu
 .. _Canaima GNU/Linux: http://es.wikipedia.org/wiki/Canaima_%28distribuci%F3n_Linux%29

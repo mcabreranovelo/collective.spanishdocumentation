@@ -11,7 +11,7 @@ Configurar Zope como un servidor FTP
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 28 de Agosto de 2014
 
 Descripción general
 ===================
@@ -71,7 +71,7 @@ siguiente comando:
 
 .. code-block:: sh
 
-  vim /ruta/absoluta/al/directorio/de/instalacion/buildout.cfg
+  vim buildout.cfg
 
 Y luego busque la sección llamada ``[instance]`` dentro de tu configuración
 buildout para asignar la siguiente definición:
@@ -109,7 +109,7 @@ siguiente comando:
 
 Desde aquí, simplemente acceda a conectarse por el cliente FTP que
 disponga, para este caso se demuestra la conexión usando el cliente 
-**gFTP** de la siguiente forma:
+**gFTP** de la siguiente forma:  *(Ver Figura 11.1)*
 
 .. tip::
 
@@ -139,14 +139,13 @@ disponga, para este caso se demuestra la conexión usando el cliente
     Para establecer la conexión presiona la tecla **Enter** o hace clic en 
     el botón ubicado justo al lado izquierdo del campo **Servidor**.
 
-.. image:: ./access_server_ftp4plone.png
+.. figure:: ./access_server_ftp4plone.png
   :alt: Cliente FTP conectado a un sitio Plone
   :align: center
-  :width: 640pt
-  :height: 400pt
-  :target: ../../_images/access_server_ftp4plone.png
+  :width: 680px
+  :height: 425px
 
-**Figura 1: Cliente FTP conectado a un sitio Plone**
+  Cliente FTP conectado a un sitio Plone
 
 De esta forma puede subir archivos de forma masiva usando este protocolo
 de transferencia con Zope / Plone.
@@ -154,8 +153,9 @@ de transferencia con Zope / Plone.
 Referencias
 ===========
 
-- `Authoring Content with WebDAV and FTP`_
-- `Managing Zope Objects Using External Tools`_
+- `Authoring Content with WebDAV and FTP`_.
+
+- `Managing Zope Objects Using External Tools`_.
 
 .. _Authoring Content with WebDAV and FTP: http://www.zope.org/Documentation/Articles/WebDAV%20
 .. _Managing Zope Objects Using External Tools: http://www.zope.org/Documentation/Books/ZopeBook/2_6Edition/ExternalTools.stx

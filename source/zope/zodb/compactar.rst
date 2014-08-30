@@ -2,9 +2,9 @@
 
 .. _compactar_zodb:
 
-=======================================
-¿Cómo compactar la ZODB de sitio Plone?
-=======================================
+================================
+Compactar la ZODB de sitio Plone
+================================
 
 .. sidebar:: Sobre este artículo
 
@@ -56,7 +56,8 @@ configuración:
   output = ${buildout:bin-directory}/zodbpack
   mode = 600
   input = inline:
-      wget -O/dev/null -q --post-data='days:float=10' --user=admin --password=admin http://localhost:8080/Control_Panel/Database/main/manage_pack
+      wget -O/dev/null -q --post-data='days:float=10' --user=admin --password=admin \
+      http://localhost:8080/Control_Panel/Database/main/manage_pack
   
   # Pack once a month
   [packups]
@@ -174,6 +175,17 @@ el funcionamiento del script puede hacer clic en la pestaña **Test** para verif
 su funcionamiento, de igual forma con las configuraciones del producto ``Products.ClockServer`` 
 descrita en la declarativa ``zope-conf-additional`` dentro de su sección ``instance`` 
 se programa la tarea la cual compactara la :ref:`ZODB <que_es_zodb>` cada tres (3) días.
+
+
+Descarga código fuente
+======================
+
+Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
+
+.. code-block:: sh
+
+  $ git clone https://github.com/Covantec/buildout.zodb.plone4.git
+
 
 
 Referencias

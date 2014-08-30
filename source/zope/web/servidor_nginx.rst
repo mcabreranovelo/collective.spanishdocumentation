@@ -10,7 +10,7 @@ Ejecutando Zope y Plone con Servidor Web Nginx
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web `Nginx`_ en frente del servidor Zope/Plone, a través de técnicas de 
@@ -112,13 +112,15 @@ Agregue la siguiente configuración:
 
         # Interfaz Administrativa de Zope
         location /manage {
-                proxy_pass       http://127.0.0.1:8080/VirtualHostBase/http/intranet.cliente1.com:80/manage_main/VirtualHostRoot/;
+                proxy_pass       http://127.0.0.1:8080/VirtualHostBase/http/\
+                intranet.cliente1.com:80/manage_main/VirtualHostRoot/;
                 proxy_set_header Host $host;
             }
 
         # Intranet del cliente1
         location / {
-                proxy_pass       http://127.0.0.1:8080/VirtualHostBase/http/intranet.cliente1.com:80/cliente1_intranet/VirtualHostRoot/;
+                proxy_pass       http://127.0.0.1:8080/VirtualHostBase/http/\
+                intranet.cliente1.com:80/cliente1_intranet/VirtualHostRoot/;
                 proxy_set_header Host $host;
         }
 
@@ -138,7 +140,8 @@ disponible:
 
 .. code-block:: sh
 
-  # ln -s /etc/nginx/sites-available/cliente1-intranet /etc/nginx/sites-enabled/cliente1-intranet
+  # ln -s /etc/nginx/sites-available/cliente1-intranet \
+  /etc/nginx/sites-enabled/cliente1-intranet
 
 
 Reinicie el servidor Web
@@ -152,15 +155,16 @@ Luego reinicie su servidor Nginx con el siguiente comando:
 
 .. seealso:: 
   
-  -   :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
-  -   `Mapping the Virtual Host`_.
+  - :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
+
+  - `Mapping the Virtual Host`_.
 
 Referencias
 -----------
 
--   `Integración de Plone con el Servidor Web Nginx de la fundación CENDITEL`_.
+- `Integración de Plone con el Servidor Web Nginx de la fundación CENDITEL`_.
 
--   `Definir Virtual Host y Reescritura de Servidor Web`_. 
+- `Definir Virtual Host y Reescritura de Servidor Web`_.
 
 .. _Nginx: http://wiki.nginx.org/NginxEs
 .. _Nginx en Wikipedia Español: http://es.wikipedia.org/wiki/Nginx

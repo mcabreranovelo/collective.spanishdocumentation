@@ -11,7 +11,7 @@ Ejecutando Zope y Plone detrás de un Servidor Web
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web en frente del servidor Zope/Plone.
@@ -115,7 +115,7 @@ Hay que entender varios conceptos antes de continuar:
 
 EL objeto `Virtual Host Monster`_ enmascara la dirección URL devuelta por el servidor Zope como 
 response la cual es publicada como **http://www.cliente1.com/** en lugar de **http://127.0.0.1:8080/**. 
-Está instalado previamente en el servidor Zope (este objeto se llama **virtual_hosting** y se encuentra 
+Está instalado previamente en el servidor Zope (este objeto se llama ``virtual_hosting`` y se encuentra
 en el directorio del raíz del servidor Zope y puede ser consultado desde la interfaz administrativa de 
 Zope) y no necesita ninguna configuración en Zope. 
 
@@ -125,7 +125,8 @@ se debe configurar su servidor web como un proxy inverso hacia el servidor Zope.
 La regla de reescritura de la dirección URL de VHM luce algo así: ::
 
     ^/(.*) \ 
-    http://127.0.0.1:8080/VirtualHostBase/http/intranet.cliente1.com:80/cliente1_intranet/VirtualHostRoot/$1
+    http://127.0.0.1:8080/VirtualHostBase/http/intranet.cliente1.com:80/\
+    cliente1_intranet/VirtualHostRoot/$1
 
 Esta dirección URL de VHM previa tiene siete partes:
 
@@ -134,55 +135,75 @@ Esta dirección URL de VHM previa tiene siete partes:
   ^/(.*) \ 
     ¿Qué significa eso? Bueno, esto es una `expresión regular`_, que coincide con casi todo. Voy a explicarlo con calma:
 
-    * El carácter ``^`` significa empezar por el principio, el principio es donde está justo después del nombre de dominio (por ejemplo, después de http://www.cliente1.com).
+    * El carácter ``^`` significa empezar por el principio, el principio es donde está justo después del nombre de dominio
+      (por ejemplo, después de **http://www.cliente1.com**).
 
-    * El carácter ``/`` significa que coincida con el primer ``/`` que venga (después del nombre de dominio, por ejemplo, http://www.cliente1.com/).
+    * El carácter ``/`` significa que coincida con el primer ``/`` que venga (después del nombre de dominio, por ejemplo,
+      **http://www.cliente1.com/**).
 
     * El carácter ``(`` significa recordar todo lo que allá coincidido entre este carácter y ``)`` y lo llaman como \$1
 
-    * El carácter ``.`` significa que coincida con cualquier carácter simple que no sea un espacio en blanco (espacios o tabulaciones).
+    * El carácter ``.`` significa que coincida con cualquier carácter simple que no sea un espacio en blanco (espacios o
+      tabulaciones).
 
-    * El carácter ``*`` significa en realidad el operador de la izquierda puede ser igualado a 0 o más veces - en otras palabras, coinciden con el texto continuo hasta llegar a una línea final o espacio en blanco.
+    * El carácter ``*`` significa en realidad el operador de la izquierda puede ser igualado a 0 o más veces - en otras
+      palabras, coinciden con el texto continuo hasta llegar a una línea final o espacio en blanco.
 
-    * El carácter ``\`` significa salto de linea en la configuración del servidor Web y se utiliza para hacer las configuraciones del servidor Web más legibles por humanos.
+    * El carácter ``\`` significa salto de linea en la configuración del servidor Web y se utiliza para hacer las configuraciones
+      del servidor Web más legibles por humanos.
 
-    En pocas palabras ``^/(.*)`` significa **Coincidir todo lo que empieza con un ``/`` y guardar todos los caracteres después del carácter ``/``,** esto luego es procesado por la variable \$1 que mas adelante se explica que función cumple.
+    En pocas palabras ``^/(.*)`` significa **Coincidir todo lo que empieza con un ``/`` y guardar todos los caracteres
+    después del carácter ``/``,** esto luego es procesado por la variable \$1 que mas adelante se explica que función cumple.
 
   http://127.0.0.1:8080
-    Esto es para el aplicar el proxy reverso en su servidor Web. Esto configura a cual servidor debería acceder, además incluir el protocolo, host y puerto. En este ejemplo el proxy reverso accede al servidor Zope en el puerto 8080 en el mismo host usando el protocolo http. En Apache 2.2 se hace con el módulo `mod_proxy`_ y Nginx con su configuración **por defecto**. 
+    Esto es para el aplicar el proxy reverso en su servidor Web. Esto configura a cual servidor debería acceder, además incluir
+    el protocolo, host y puerto. En este ejemplo el proxy reverso accede al servidor Zope en el puerto 8080 en el mismo host
+    usando el protocolo http. En Apache 2.2 se hace con el módulo `mod_proxy`_ y Nginx con su configuración **por defecto**.
 
   VirtualHostBase
-    Esta es la palabra clave mágica para iniciar el hosting virtual. ¡Usted no debe agregar un objeto llamado VirtualHostBase en el directorio raíz de su Zope!
+    Esta es la palabra clave mágica para iniciar el hosting virtual. ¡Usted no debe agregar un objeto llamado ``VirtualHostBase``
+    en el directorio raíz de su Zope!
 
   http
-    Es el primer segmento de ruta después del VirtualHostBase define el protocolo del la dirección URL del vhost.
+    Es el primer segmento de ruta después del ``VirtualHostBase`` define el protocolo del la dirección URL del vhost.
 
   intranet.cliente1.com:80
-    Es el segundo elemento después del VirtualHostBase y define el servidor y el puerto. Junto con el protocolo es la parte base de la dirección URL, en este ejemplo **http://intranet.cliente1.com:80**. Como el VirtualHostBase el protocolo y servidor no son objetos reales. Ellos son solo colocados dentro de la dirección URL para propósitos de configuración y estos son despojados de la dirección URL después de la configuración del host virtual para cada solicitud.
+    Es el segundo elemento después del ``VirtualHostBase`` y define el servidor y el puerto. Junto con el protocolo es la parte base
+    de la dirección URL, en este ejemplo **http://intranet.cliente1.com:80**. Como el ``VirtualHostBase`` el protocolo y servidor no
+    son objetos reales. Ellos son solo colocados dentro de la dirección URL para propósitos de configuración y estos son despojados
+    de la dirección URL después de la configuración del host virtual para cada solicitud.
 
   cliente1_intranet
-    Ahora el verdadero recorrido a través de servidor Zope es que inicia. Después de configurar la parte de protocolo y el servidor de la nueva dirección URL que esta atravesando a través de Zope a la nueva raíz virtual para el host virtual. Usted puede agregar cero o más objetos aquí.
+    Ahora el verdadero recorrido a través de servidor Zope es que inicia. Después de configurar la parte de protocolo y el servidor
+    de la nueva dirección URL que esta atravesando a través de Zope a la nueva raíz virtual para el host virtual. Usted puede agregar
+    cero o más objetos aquí.
 
   VirtualHostRoot
-    Finalmente la palabra clave mágica con la que se ha llegado al nuevo raíz virtual para el vhost. Cada cosa después del VirtualHostRoot es visible en el navegador Web.
+    Finalmente la palabra clave mágica con la que se ha llegado al nuevo raíz virtual para el vhost. Cada cosa después del
+    ``VirtualHostRoot`` es visible en el navegador Web.
 
   Caso especial _vh_documentos
-    Imagine que usted quiere tener **http://intranet.cliente1.com/documentos/** como la dirección URL de su dirección URL virtual. Entonces usted puede obtener el efecto usando la declaración especial ``_vh_``. Cualquier segmento de ruta iniciando con ``_vh_`` es despojado de la dirección URL para ser recorrido a través de Zope y volver a ser agregado sin ``_vh_`` después de recorrido.
+    Imagine que usted quiere tener **http://intranet.cliente1.com/documentos/** como la dirección URL de su dirección URL virtual.
+    Entonces usted puede obtener el efecto usando la declaración especial ``_vh_``. Cualquier segmento de ruta iniciando con ``_vh_``
+    es despojado de la dirección URL para ser recorrido a través de Zope y volver a ser agregado sin ``_vh_`` después de recorrido.
 
     Un ejemplo: ::
 
       ^/documentos/(.*) \
-      http://127.0.0.1:8080/VirtualHostBase/http/intranet.cliente1.com:80/cliente1_intranet/VirtualHostRoot/_vh_documentos/$1
+      http://127.0.0.1:8080/VirtualHostBase/http/intranet.cliente1.com:80/\
+      cliente1_intranet/VirtualHostRoot/_vh_documentos/$1
 
   \$1
-    Así mismo como el ``^/(.*)`` y el ``\$1`` ambos son tipos de `expresión regular`_ hacia alguna sección especifica de su sitio, un ejemplo, puede ser una sección llamada **documentos**. Entonces el valor obtenido de la expresión ``^/(.*)`` se almacena en la variable \$1".
+    Así mismo como el ``^/(.*)`` y el ``\$1`` ambos son tipos de `expresión regular`_ hacia alguna sección especifica de su sitio,
+    un ejemplo, puede ser una sección llamada **documentos**. Entonces el valor obtenido de la expresión ``^/(.*)`` se almacena en
+    la variable \$1".
 
 
 .. note::
 
-  Usted no puede crear un objeto llamado VirtualHostBase o VirtualHostRoot en su Zope 
-  ni debe agregar un objeto con el mismo ID de su VHM. Es posible que funcione, 
-  pero también puede dañar el sitio.
+  Usted no puede crear un objeto llamado ``VirtualHostBase`` o ``VirtualHostRoot``
+  en su Zope ni debe agregar un objeto con el mismo ID de su VHM. Es posible que
+  funcione, pero también puede dañar el sitio.
 
 
 Suprimiendo Virtual Host Monster
@@ -190,23 +211,26 @@ Suprimiendo Virtual Host Monster
 
 En el caso de que usted ha establecido reglas de virtual hosting de modo 
 que ya no se Zope le permiten acceder a la interfaz de gestión, puede agregar
-``_SUPPRESS_ACCESSRULE"`` a la dirección URL para desactivar VirtualHostMonster.
+``_SUPPRESS_ACCESSRULE"`` a la dirección URL para desactivar ``VirtualHostMonster``.
 
 
 .. seealso:: 
   
-  -   `Zope Virtual Hosting Services`_.
-  -   `Mapping the Virtual Host`_.
-  -   :ref:`Ejecutando Zope y Plone con Servidor Web Apache <zope_plone_webserver_apache>`.
-  -   :ref:`Ejecutando Zope y Plone con Servidor Web Nginx <zope_plone_webserver_nginx>`.
+  - `Zope Virtual Hosting Services`_.
+
+  - `Mapping the Virtual Host`_.
+
+  - :ref:`Ejecutando Zope y Plone con Servidor Web Apache <zope_plone_webserver_apache>`.
+
+  - :ref:`Ejecutando Zope y Plone con Servidor Web Nginx <zope_plone_webserver_nginx>`.
 
 
 Referencias
 ===========
 
--   `Definir Virtual Host y Reescritura de Servidor Web`_. 
+- `Definir Virtual Host y Reescritura de Servidor Web`_.
 
--   `How VHM works`_.
+- `How VHM works`_.
 
 .. _Hosting Virtual: http://httpd.apache.org/docs/2.0/es/vhosts/
 .. _VirtualHostMonster: http://wiki.zope.org/zope2/VirtualHostMonster

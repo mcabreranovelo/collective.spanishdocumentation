@@ -26,7 +26,7 @@ o migrarlo, sin afectar a nadie más. También puede restaurarlo sólo
 este sitio si ocurre algo desastroso.
 
 ¿Qué es un punto de montaje ZODB?
-----------------------------------
+---------------------------------
 
 Es la capacidad de montar diferentes bases de datos de objetos Zope - 
 :ref:`ZODB <que_es_zodb>` separadas, y así poder definir parámetros 
@@ -83,12 +83,14 @@ instalación con un punto de montaje para un :ref:`ZODB <que_es_zodb>`.
     y utilice la lista desplegable en la parte superior derecha y seleccione 
     la opción **Plone site** para crear un sitio Plone nuevo con el mismo 
     **identificador** como su sitio de montaje.
+
     A continuación, elimine este sitio (sí, yo sé que es raro, pero es algo
     que tiene que ver con el nivel superior de carpetas **acl_users**).
 
 9.  Utilice la lista desplegable en la parte superior derecha y seleccione 
     la opción **ZODB mount points** para crear un nuevo punto de montaje 
-    de :ref:`ZODB <que_es_zodb>`. Usted debe ver a sus **puntos de montaje** listo para crearlos.
+    de :ref:`ZODB <que_es_zodb>`. Usted debe ver a sus **puntos de montaje**
+    listo para crearlos.
 
 
 Establecer nuevos puntos de montajes
@@ -110,8 +112,9 @@ se muestra un ejemplo de esto:
       cliente-2-sitio-web/Data
       cliente-3-blog/Data
 
-Luego debe guardar los cambios y ejecutar de nuevo el script buildout, con el 
-siguiente comando:
+Luego debe guardar los cambios y ejecutar de nuevo el script :program:`buildout`,
+con el siguiente comando:
+
 
 .. code-block:: sh
   
@@ -121,10 +124,10 @@ siguiente comando:
 Hacer copias de seguridad con Data.fs separadas
 -----------------------------------------------
 
-Al hacer copias de seguridad es un poco complejo usando las
-herramientas generadas por el buildout del `Instalador Unificado`_ (por
-el hecho de que cada :file:`Data.fs` esta en su propio directorio), pero este
-punto trabaja en su configuración buildout de la siguiente forma:
+Al hacer copias de seguridad es un poco complejo usando las herramientas generadas
+por el buildout del `Instalador Unificado`_ (por el hecho de que cada :file:`Data.fs`
+esta en su propio directorio), pero este punto trabaja en su configuración buildout
+de la siguiente forma:
 
 .. code-block:: cfg
 
@@ -145,14 +148,15 @@ Problemas de memoria
 
 El uso de archivos separados :file:`Data.fs` requiere mucha memoria, en la que cada
 :file:`Data.fs`, en cada cliente, se creará un objeto cache en la memoria RAM. Usted
-puede reducir el número de objetos almacenados para todas las bases de datos
-a la vez en la parte de los puntos de montaje de su buildout, utilizando la
-opción de tamaño **zodb-cache**. Alternativamente, usted puede definir el
-número de objetos de un :file:`Data.fs` particular usando una configuración adicional
-buildout con el prefijo **filestorage_**.
+puede reducir el número de objetos almacenados para todas las bases de datos a la vez
+en la parte de los puntos de montaje de su buildout, utilizando la opción de tamaño
+**zodb-cache**. Alternativamente, usted puede definir el número de objetos de un
+:file:`Data.fs` particular usando una configuración adicional buildout con el prefijo
+**filestorage_**.
 
-Ver la receta `collective.recipe.filestorage`_ para más
-detalles.
+.. tip::
+    Ver la receta `collective.recipe.filestorage`_ para más detalles.
+
 
 En versiones posteriores :ref:`ZODB <que_es_zodb>`, también es posible controlar 
 el tamaño de la memoria, en bytes, en lugar de números de los objetos. Usted 
@@ -185,6 +189,7 @@ Referencias
 ===========
 
 - `How to mount a Plone Site as a separate Data.fs`_.
+
 - `Multiple Plone sites per zope instance - using separate Data.fs files for each one`_.
 
 .. _collective.recipe.filestorage: http://pypi.python.org/pypi/collective.recipe.filestorage

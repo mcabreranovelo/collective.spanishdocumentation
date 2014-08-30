@@ -10,7 +10,7 @@ Comando de control de Zope
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 Descripción general
 -------------------
@@ -72,7 +72,8 @@ contexto de Zope y Plone
 
   Starting debugger (the name "app" is bound to the top-level Zope object)
   >>> dir(app.Plone.acl_users)
-  ['COPY', 'COPY__roles__', 'DELETE', 'DELETE__roles__', 'HEAD', 'HEAD__roles__', 'LOCK', 'LOCK__roles__', 'MKCOL', ...
+  ['COPY', 'COPY__roles__', 'DELETE', 'DELETE__roles__', 'HEAD', 'HEAD__roles__',
+  'LOCK', 'LOCK__roles__', 'MKCOL', ...
 
 Para salir de la consola interactiva ejecute la siguiente instrucción:
 
@@ -129,6 +130,6 @@ usted probablemente quiera agregar un usuario adicional ``admin2``.
 Referencias
 ...........
 
--   `Plone Hosting`_.
+- `Zope control command`_ from Zope Application Server by Plone Documentation.
 
-.. _Plone Hosting: http://developer.plone.org/hosting/
+.. _Zope control command: http://docs.plone.org/manage/deploying/zope.html#zope-control-command

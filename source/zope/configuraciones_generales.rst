@@ -11,7 +11,7 @@ Configuraciones generales
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 19 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 
 Algunos de los comportamientos de las instancias de Zope / Plone son controladas con 
@@ -55,8 +55,9 @@ de las traducciones perdidas (tal ves haga el arranque de la instancia mas lento
 
 ``zope_i18n_allowed_languages``, le permite limitar las traducciones disponibles.
 
-speed up startup - only refresh translation catalog for those languages
-see http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
+.. warning::
+    Esto acelera la puesta en marcha de la instancia Zope - sólo actualiza el catálogo de
+    traducción de los idiomas, mas información: http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
 
 .. code-block:: cfg
 
@@ -77,10 +78,10 @@ crear en el directorio :file:`$HOME/.python-eggs`. Si ejecuta Zope bajo un ident
 de usuario especial y con permisos mínimos (como debería ser), Python no puede ser 
 capaz de crear el directorio de caché.
 
-``PYTHON_EGG_CACHE``, determinas donde los paquetes Egg python comprimidos son 
+``PYTHON_EGG_CACHE``, determinas donde los paquetes Egg Python comprimidos son
 desempacadas para su uso. Sin esta configuración no podemos ejecutar la instancia 
-Zope como root con ``effictive-user`` de Zope y desde zope no puede escribir en 
-:file:`/root/.python-eggs`.
+Zope como root con ``effictive-user`` del servicio y desde la ejecución del servicio
+Zope no puede escribir en :file:`/root/.python-eggs`.
 
 .. code-block:: cfg
 
@@ -94,9 +95,9 @@ Zope como root con ``effictive-user`` de Zope y desde zope no puede escribir en
 PYTHONHASHSEED
 ==============
 
-``PYTHONHASHSEED``, determina la preselección inicial para los hashes. "random" provoca 
-un valor pseudo-aleatoria se utiliza para preseleccionar los objetos de hashes de str, 
-bytes y datetime.
+``PYTHONHASHSEED``, determina la preselección inicial para los hashes. El valor
+"random" provoca un valor pseudo-aleatoria se utiliza para preseleccionar los
+objetos de hashes de ``str``, ``bytes`` y ``datetime``.
 
 .. code-block:: cfg
 
@@ -110,3 +111,19 @@ bytes y datetime.
     - http://docs.python.org/2.7/using/cmdline.html#envvar-PYTHONHASHSEED
     - http://www.marshut.com/phqqz/random-setup-profiles-missing-on-plone-4-3-installs.html
     - https://dev.plone.org/ticket/12850
+
+Referencias
+===========
+
+- `Timezone`_ from Zope Application Server by Plone Documentation.
+
+- `Restrict the loaded languages`_ from *Internationalization in Plone 3.3 and 4.0* by Maurits van Rees.
+
+- `Compiled translation files`_ from *Internationalization in Plone 3.3 and 4.0* by Maurits van Rees.
+
+- `python egg cache - Specify a custom PYTHON_EGG_CACHE dir with zc.buildout`_.
+
+.. _Timezone: http://docs.plone.org/manage/deploying/zope.html#timezone
+.. _Restrict the loaded languages: http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4#restrict-the-loaded-languages
+.. _Compiled translation files: http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4#compiled-translation-files
+.. _python egg cache - Specify a custom PYTHON_EGG_CACHE dir with zc.buildout: http://stackoverflow.com/questions/4025412/specify-a-custom-python-egg-cache-dir-with-zc-buildout

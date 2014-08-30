@@ -10,7 +10,7 @@ Ejecutando Zope y Plone con Servidor Web Apache
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web `Apache 2`_ en frente del servidor Zope/Plone, a través de técnicas de 
@@ -145,8 +145,9 @@ Agregue la siguiente configuración:
       <IfModule mod_rewrite.c>
         RewriteEngine On
 
-        # uso RewriteLog para la depuración de problemas con sus reglas de reescritura 
-        # debe desactivar después de encontrar el error, ya que el disco duro se llenaría *muy rápido*
+        # uso RewriteLog para la depuración de problemas con sus reglas
+        # de reescritura debe desactivar después de encontrar el error,
+        # ya que el disco duro se llenaría *muy rápido*.
         # RewriteLog "/var/log/apache2/rewrite_log"
         # RewriteLogLevel 2
 
@@ -155,22 +156,27 @@ Agregue la siguiente configuración:
 
         # reescribir cualquier acceso al ZMI en un servidor seguro
         # RewriteRule ^/(.*)/manage(.*) \
-        # https://secure.cliente1.com/Zope/cliente1_instance/cliente1_com/$1/manage$2 [NC,R=301,L]
+        # https://secure.cliente1.com/Zope/cliente1_instance/cliente1_com/$1/manage$2 \
+        #[NC,R=301,L]
         # RewriteRule ^/manage(.*) \
-        # https://secure.cliente1.com/Zope/cliente1_instance/cliente1_com/manage$1  [NC,R=301,L]
+        # https://secure.cliente1.com/Zope/cliente1_instance/cliente1_com/manage$1 \
+        #[NC,R=301,L]
 
 
        # reescribir cualquier otro acceso al servidor Zope usando un proxy [P] 
        # y añadir las palabras claves mágicas del VMH. 
        # usar la variable de servidor %{SERVER_NAME} en lugar de cliente1.com 
        # para evitar que se desborde la directiva ServerAlias​​, 
-       # usar la variable de servidor %{HTTP_HOST} no es recomendable ya que puede contener el puerto
+       # usar la variable de servidor %{HTTP_HOST} no es recomendable ya que puede
+       # contener el puerto
 
        RewriteRule ^/manage/(.*) \
-           http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/manage_main/VirtualHostRoot/$1 [L,P]
+           http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/\
+           manage_main/VirtualHostRoot/$1 [L,P]
 
        RewriteRule ^/(.*) \
-           http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/cliente1_intranet/VirtualHostRoot/$1 [L,P]
+           http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/\
+           cliente1_intranet/VirtualHostRoot/$1 [L,P]
 
       </IfModule>
 
@@ -184,7 +190,8 @@ Agregue la siguiente configuración:
       </IfModule>
 
       # almacenamiento en caché (inhabilitado)
-      # esto cacheará todos los archivos con la información correcta de caché a partir /
+      # esto cacheará todos los archivos con
+      # la información correcta de caché a partir /
       <IfModule mod_mem_cache.c>
       # CacheEnable mem /
       </IfModule>
@@ -201,7 +208,8 @@ al directorio :file:`sites-enabled/`, para que su configuración previa este dis
 
 .. code-block:: sh
 
-  # ln -s /etc/apache2/sites-available/cliente1-intranet /etc/apache2/sites-enabled/cliente1-intranet
+  # ln -s /etc/apache2/sites-available/cliente1-intranet \
+  /etc/apache2/sites-enabled/cliente1-intranet
 
 
 Reinicie el servidor
@@ -224,14 +232,15 @@ Plone como un domino completo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tener un nombre de host completo (es decir, todo bajo "/") que es servido por
-un único sitio Plone, añade esto a su configuración de VirtualHost de Apache
+un único sitio Plone, añade esto a su configuración de ``VirtualHost`` de Apache
 la siguiente configuración: 
 
 .. code-block:: sh
 
   RewriteEngine On
   RewriteRule ^/(.*)$
-    http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/cliente1_intranet/VirtualHostRoot/$1 [L,P]
+    http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/cliente1_intranet\
+    /VirtualHostRoot/$1 [L,P]
 
 Plone como una porción de su sitio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -247,25 +256,27 @@ ejemplo, si desea que la dirección URL de su sitio Plone sea así: ::
 
 Entonces debería crear su sitio Plone con el identificador **cliente1_intranet**. 
 Para aparejar eso a este sitio que se muestra cuando usted navega a la dirección 
-`http://cliente1.com/cliente1_intranet`_, debe especificar la reescritura de 
+``http://cliente1.com/cliente1_intranet``, debe especificar la reescritura de
 la siguiente forma: 
 
 .. code-block:: sh
 
   RewriteEngine On
-  RewriteRule ^/cliente1_intranet($|/.*) http://127.0.0.1:8080/VirtualHostBase/http/%{SERVER_NAME}:80/VirtualHostRoot/cliente1_intranet$1 [L,P]
+  RewriteRule ^/cliente1_intranet($|/.*) http://127.0.0.1:8080/VirtualHostBase\
+  /http/%{SERVER_NAME}:80/VirtualHostRoot/cliente1_intranet$1 [L,P]
 
 Soporte HTTPS
 ~~~~~~~~~~~~~
 
 Si usted quiere soportar acceso seguro HTTPS a su sitio Plone, es algo
-parecida la regla de reescritura anterior para su VirtualHost. Cambie ``http``
-a ``https`` y cambiar los números de puerto de "80" a "443", de esta forma: 
+parecida la regla de reescritura anterior para su ``VirtualHost``. Cambie ``http``
+a ``https`` y cambiar los números de puerto de ``80`` a ``443``, de esta forma:
 
 .. code-block:: sh
 
   RewriteRule ^/(.*)$ \
-   http://127.0.0.1:8080/VirtualHostBase/https/%{SERVER_NAME}:443/VirtualHostRoot/$1 [L,P]
+   http://127.0.0.1:8080/VirtualHostBase/https/%{SERVER_NAME}:443/VirtualHostRoot/$1 \
+   [L,P]
 
 .. tip:: Más información http://plone.org/documentation/kb/apache-ssl
 
@@ -274,7 +285,7 @@ Reglas más elegantes
 
 Si usted tiene necesidades mas exóticas, tome un tiempo y lea la página de
 `Virtual Host Monster`_, y considere tener a la mano el `RewriteRule Witch`_,
-el cual es un generador de directivas RewriteRule de Apache para Virtual Host
+el cual es un generador de directivas ``RewriteRule`` de Apache para Virtual Host
 en Zope.
 
 Recomendaciones
@@ -286,7 +297,7 @@ Recomendaciones
 
 
 Suprimiendo virtual host monster
-================================
+--------------------------------
 
 En el caso de que usted ha establecido reglas de virtual hosting de modo 
 que ya no se Zope le permiten acceder a la interfaz de gestión, puede agregar
@@ -294,18 +305,20 @@ que ya no se Zope le permiten acceder a la interfaz de gestión, puede agregar
 
 .. seealso:: 
   
-  -   :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
-  -   `Running Plone and Zope behind an Apache 2 web server`_.
-  -   `Mapping the Virtual Host`_.
+  - :ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>`.
+
+  - `Running Plone and Zope behind an Apache 2 web server`_.
+
+  - `Mapping the Virtual Host`_.
 
 Referencias
-===========
+-----------
 
--   `Definir Virtual Host y Reescritura de Servidor Web`_. 
+- `Definir Virtual Host y Reescritura de Servidor Web`_.
 
--   `Proxy Apache a Zope`_.
+- `Proxy Apache a Zope`_.
 
--   `How VHM works`_.
+- `How VHM works`_.
 
 .. _Apache 2: http://httpd.apache.org/
 .. _módulos Apache 2: http://httpd.apache.org/docs/2.2/es/mod/
@@ -315,7 +328,6 @@ Referencias
 .. _mod_ssl: http://httpd.apache.org/docs/2.2/mod/mod_ssl.html
 .. _Proxy inverso: http://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso
 .. _Servidor HTTP Apache: http://es.wikipedia.org/wiki/Servidor_HTTP_Apache
-.. _http://cliente1.com/cliente1_intranet: http://cliente1.com/cliente1_intranet
 .. _Virtual Host Monster: https://weblion.psu.edu/trac/weblion/wiki/VirtualHostMonster
 .. _VirtualHostMonster: https://weblion.psu.edu/trac/weblion/wiki/VirtualHostMonster
 .. _RewriteRule Witch: http://betabug.ch/zope/witch

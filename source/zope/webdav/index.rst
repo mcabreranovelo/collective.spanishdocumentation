@@ -11,7 +11,7 @@ Configurar Zope como un servidor WebDAV
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 Descripción general
 ===================
@@ -73,7 +73,7 @@ siguiente comando:
 
 .. code-block:: sh
 
-  vim /ruta/absoluta/al/directorio/de/instalacion/buildout.cfg
+  vim buildout.cfg
 
 Y luego busque la sección llamada ``[instance]`` dentro de tu configuración
 buildout para asignar la siguiente definición:
@@ -118,25 +118,25 @@ Desde aquí, simplemente acceda a conectarse por el cliente WebDAV que
 dispone el Navegador Nautilius de GNOME de la siguiente forma:
 
 Acceda desde el menú principal llamado "Lugares" :menuselection:`Lugares --> Carpeta personal`. 
-Luego haga clic en  el menú principal llamado :menuselection:`Archivo --> Conectar con el servidor...`.
+Luego haga clic en  el menú principal llamado :menuselection:`Archivo --> Conectar con el servidor...` *(Ver Figura 12.1)*.
 
-.. image:: ./access_server_webdav_from_gnome0.png
+.. figure:: ./access_server_webdav_from_gnome0.png
   :alt: Conectar con el servidor WebDAV
   :align: center
   :width: 350px
   :height: 342px
 
-**Figura 1: Conectar con el servidor WebDAV**
+  Conectar con el servidor WebDAV
 
-Seguidamente le mostrara una ventana de configuración de conexión.
+Seguidamente le mostrara una ventana de configuración de conexión, *(Ver Figura 12.2)*.
 
-.. image:: ./access_server_webdav_from_gnome1.png
+.. figure:: ./access_server_webdav_from_gnome1.png
   :alt: Definir parámetros de conexión al WebDAV
   :align: center
   :width: 561px
   :height: 345px
 
-**Figura 2: Definir parámetros de conexión al WebDAV**
+  Definir parámetros de conexión al WebDAV
 
 Definir parámetros de conexión al WebDAV
 
@@ -163,47 +163,53 @@ Definir parámetros de conexión al WebDAV
   escritorio y sistema de archivos de GNOME, en nuestro caso es **Mi Sitio
   Plone 3**.
 
-Luego haga clic en el icono de acceso al WebDAV llamado **Mi Sitio Plone 3**.
+Luego haga clic en el icono de acceso al WebDAV llamado **Mi Sitio Plone 3**,
+ilustra en la siguiente figura, *(Ver Figura 12.3)*.
 
-.. image:: ./access_server_webdav_from_gnome2.png
+.. figure:: ./access_server_webdav_from_gnome2.png
   :alt: Icono de acceso al WebDAV
   :align: center
   :width: 244px
   :height: 86px
 
-**Figura 3: Icono de acceso al WebDAV**
+  Icono de acceso al WebDAV
 
-Ahora tiene que colocar contraseña de conexión
+Ahora tiene que colocar contraseña de conexión como se ilustra en la siguiente
+figura: *(Ver Figura 12.4)*.
 
-.. image:: ./access_server_webdav_from_gnome3.png
+.. figure:: ./access_server_webdav_from_gnome3.png
   :alt: Colocar contraseña de conexión
   :align: center
   :width: 533px
   :height: 315px
 
-**Figura 4: Colocar contraseña de conexión**
+  Colocar contraseña de conexión
 
-Y así de esta forma puede usar WebDAV con Plone a través de GNOME.
+Y así de esta forma puede usar WebDAV con Plone a través de GNOME, *(Ver Figura 12.5)*.
 
-.. image:: ./access_server_webdav_from_gnome4.png
+.. figure:: ./access_server_webdav_from_gnome4.png
   :alt: WebDAV con Plone a través de GNOME
   :align: center
-  :width: 800pt
-  :height: 471pt
-  :target: ../../_images/access_server_webdav_from_gnome4.png
+  :width: 800px
+  :height: 471px
   
-**Figura 5: WebDAV con Plone a través de GNOME**
+  WebDAV con Plone a través de GNOME
+
+De esta estable la conexión WebDAV con Plone a través de GNOME de forma exitosa.
 
 Referencias
 ===========
 
-- `Authoring Content with WebDAV and FTP`_.
+- `FTP and WebDAV`_.
+
 - `Managing Zope Objects Using External Tools`_.
+
 - `Using WebDAV`_.
+
 - `More WebDAV`_.
 
 .. _WebDAV: http://es.wikipedia.org/wiki/WebDAV
-.. _Authoring Content with WebDAV and FTP: http://www.zope.org/Documentation/Articles/WebDAV%20
-.. _Managing Zope Objects Using External Tools: http://www.zope.org/Documentation/Books/ZopeBook/2_6Edition/ExternalTools.stx
+.. _FTP and WebDAV: http://docs.zope.org/zope2/zope2book/ExternalTools.html#ftp-and-webdav
+.. _Managing Zope Objects Using External Tools: http://docs.zope.org/zope2/zope2book/ExternalTools.html
 .. _Using WebDAV: http://plone.org/documentation/kb/webdav/
 .. _More WebDAV : http://plone.org/documentation/kb/more-webdav/
