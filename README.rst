@@ -199,7 +199,7 @@ no se actualiza cuando compilo el documento.
 
 **Respuesta :** El índice de Sphinx es a veces es desorientado y la gestión de la dependencia
 a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
-dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
+dentro del directorio ``collective.spanishdocumentation/build/``.
 
 Estatus de Calidad
 ==================
@@ -208,6 +208,11 @@ Estatus de Calidad
    :target: http://travis-ci.org/collective/collective.spanishdocumentation
    :align: left
    :alt: collective.spanishdocumentation travis-ci build status
+
+.. image:: https://readthedocs.org/projects/plone-spanish-docs/badge/?version=latest
+   :target: http://plone-spanish-docs.rtfd.org/
+   :align: left
+   :alt: collective.spanishdocumentation ReadTheDocs build status
 
 ¿Tiene alguna idea?, ¿Encontró un error? Por favor, hágalo saber registrando un `ticket de soporte`_.
 
