@@ -163,6 +163,8 @@ limitaciones la imagen a tamaño del papel final.
       :align:   center
       :alt: Captura de pantalla del programa de mapa mental
 
+      Captura de pantalla del programa de mapa mental
+
 **Aplicaciones gráficas recomendadas**
 
 Diagramas : `Graphviz`_
@@ -171,25 +173,32 @@ Diagramas : `Graphviz`_
 Algunas de las herramientas recomendadas
 ========================================
 
-Emacs : usted puede agregar a emacs el módulo `rst.el`_ que añade un par 
-de comandos y la sintaxis de la documentación a los escritores simpatizantes 
-de Sphinx y reStructuredText.
+Editor ``emacs``: usted puede agregar a ``emacs`` el módulo `rst.el`_ que añade un par de comandos
+y la sintaxis de la documentación a los escritores simpatizantes de Sphinx y reStructuredText.
 
 
 Ejemplos de documentación en Sphinx
 ===================================
 
-* `Python documentation`_
-* `Zope documentation`_
-* `Process for Plone core's development`_
-* `Plone Developer Documentation`_
-* `Plone 4 User Manual`_
-* `Plone Italian Documentation`_
-* `Plone: worfklow e sicurezza`_
-* `Plone User German Manual`_
-* `UPCnet Gestió de Continguts Docs`_
-* `@lpmayos documentation`_
-* `Web and Mobile documentation`_
+* `Python documentation`_.
+
+* `Zope documentation`_.
+
+* `Process for Plone core's development`_.
+
+* `Plone Developer Documentation`_.
+
+* `Plone 4 User Manual`_.
+
+* `Plone Italian Documentation`_.
+
+* `Plone: worfklow e sicurezza`_.
+
+* `Plone User German Manual`_.
+
+* `UPCnet Gestió de Continguts Docs`_.
+
+* `Web and Mobile documentation`_.
 
 FAQ
 ===
@@ -219,7 +228,7 @@ Estatus de Calidad
 .. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
-.. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
+.. _rst.el: http://docutils.sourceforge.net/tools/editors/emacs/rst.el
 .. _Python documentation: http://docs.python.org/
 .. _Zope documentation: http://docs.zope.org/
 .. _Process for Plone core's development: https://buildoutcoredev.readthedocs.org/
@@ -230,6 +239,5 @@ Estatus de Calidad
 .. _Plone User German Manual: http://plone-4-benutzerhandbuch.rtfd.org/
 .. _Chinese documentation: https://github.com/jianaijun/collective.chinesedocumentation
 .. _UPCnet Gestió de Continguts Docs: http://documentacio.readthedocs.org/
-.. _@lpmayos documentation: https://documentation.readthedocs.org/
 .. _Web and Mobile documentation: https://web-and-mobile.readthedocs.org/
 .. _ticket de soporte: https://github.com/collective/collective.spanishdocumentation/issues
