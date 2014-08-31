@@ -10,7 +10,7 @@ Actualizar el ZCatalog
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Agosto de 2014
+    :Fecha: 31 de Agosto de 2014
 
 El ZCatalog
 -----------
@@ -67,12 +67,13 @@ actualizar el inventario objeto agregando, actualización de los objetos, o borr
 Para mas detalle consulte la herramienta en 
 :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_catalog`.
 
-.. image:: ./zmi_portal_catalog.png
+.. figure:: ./zmi_portal_catalog.png
   :alt: portal_catalog - ZMI
   :align: center
   :width: 742px
   :height: 288px
-  :target: ../../_images/zmi_portal_catalog.png
+
+  portal_catalog - ZMI
 
 .. _actualizar_indice:
 
@@ -84,12 +85,13 @@ avanzado para actualizar el índice de objetos de la ZODB, acceda a la ZMI de tu
 :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_catalog --> Advanced`,
 allí encontrara las siguientes opciones:
 
-.. image:: ./zmi_portal_catalog_Advanced.png
+.. figure:: ./zmi_portal_catalog_Advanced.png
   :alt: portal_catalog - Advanced - ZMI
   :align: center
   :width: 742px
   :height: 288px
-  :target: ../../_images/zmi_portal_catalog_Advanced.png
+
+  portal_catalog - Advanced - ZMI
 
 .. warning::
 
@@ -129,9 +131,9 @@ razones:
 Referencias
 -----------
 
--   `Using the Zope Management Interface`_.
+- `Using the Zope Management Interface`_.
 
--   `Searching and Categorizing Content`_.
+- `Searching and Categorizing Content`_.
 
 .. _ZMI (Zope Management Interface): http://wiki.zope.org/zope2/ZMIZopeManagementInterface
 .. _Zope Management Interface: https://weblion.psu.edu/trac/weblion/wiki/ZopeManagementInterface
