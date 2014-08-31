@@ -11,7 +11,7 @@ Configurar Zope como un servidor FTP
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 28 de Agosto de 2014
+    :Fecha: 30 de Agosto de 2014
 
 Descripción general
 ===================

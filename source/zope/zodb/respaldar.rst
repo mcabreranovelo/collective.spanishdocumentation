@@ -10,45 +10,48 @@ Backup de la ZODB
     :Traductor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 25 de Agosto de 2014
+    :Fecha: 30 de Agosto de 2014
 
 .. note::
-    En esta es una traducción del articulo llamado `Backup der ZODB`_ donde 
-    se ofrece la información de como reparar una ZODB.
+    En esta es una traducción del articulo llamado `Backup der ZODB`_
+    donde se ofrece la información de como reparar una ZODB.
 
-Zope viene con :program:`repozo.py` con un script que le permite realizar 
-copias de seguridad de la ZODB durante la operación. 
+Zope provee un script :program:`repozo.py` que le permite realizar
+copias de seguridad de la ZODB durante su funcionamiento.
 
-Es como ya se tiene :program:`zeopack.py` en ``parts/zope2/utilities/ZODBTools/``. 
-Además, se puede personalizar con :program:`repozo.py` para crear copias de seguridad
-incrementales. 
+Es como ya se tiene :program:`zeopack.py` en ``parts/zope2/utilities/ZODBTools/``.
+Además, se puede personalizar con :program:`repozo.py` para crear copias de
+seguridad incrementales.
 
-La receta ``plone.recipe.zope2instance`` es creado como una envoltura a :program:`bin/repozo`.
+La receta `plone.recipe.zope2instance`_ crea una envoltura del script
+:program:`repozo.py` que genera con el nombre :program:`repozo` en el
+directorio :file:`bin`.
 
-Para generar una copia de seguridad incremental, primero que debe crear el 
-directorio :file:`backups`, que corresponden antes de que el script :program:`repozo` 
-con los siguientes parámetros:
+Para generar una copia de seguridad incremental, primero que debe crear el directorio
+:file:`backups`, que corresponden antes de que el script :program:`repozo` con los
+siguientes comando:
 
 ::
 
     $ mkdir backups
     $ ./bin/repozo -BvzQ -r backups -f var/filestorage/Data.fs
 
-Si se restaura una copia de seguridad una vez más, se debe detener la instancia
-Zope en primer lugar, se crea una copia de los posibles ``Data.fs`` corruptos 
-y sólo entonces ejecute ``repozo`` con el siguiente comando:
+Si se restaura una copia de seguridad una vez más, se debe detener la instancia Zope
+en primer lugar, se crea una copia de los posibles ``Data.fs`` corruptos y sólo entonces
+ejecute ``repozo`` con el siguiente comando:
 
 ::
 
     $ ./bin/repozo -Rv -r backups -o Data.fs
 
-.. note::
-    Ejecutar :program:`repozo` después de cada :ref:`compactación de ZODB <compactar_zodb>`, 
-    sólo se puede realizar una copia de seguridad completa de nuevo, la compactación se recomienda
-    significativamente con menos frecuencia que la copia de seguridad. 
+.. warning::
+    Ejecutar :program:`repozo` después de cada :ref:`compactación de ZODB <compactar_zodb>`,
+    sólo se puede realizar una copia de seguridad completa de nuevo, la compactación se
+    recomienda realizar con significativamente menos frecuencia que la copia de seguridad.
 
-Este listado también se puede crear de forma automática con la receta ``z3c.recipe.usercrontab``. 
-Para este propósito, inscrita en el archivo :file:`deploy.cfg` siguiente:
+También se puede crear de forma automática una tarea de este comando de respaldo de datos
+con la receta `z3c.recipe.usercrontab`_. Para este propósito, inscrita en el archivo
+:file:`buildout.cfg` la siguiente configuración:
 
 ::
 
@@ -67,9 +70,8 @@ Para este propósito, inscrita en el archivo :file:`deploy.cfg` siguiente:
 Copia de seguridad de múltiples de ZODBs en una instancia
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Con la receta `collective.recipe.backup <http://pypi.python.org/pypi/collective.recipe.backup>`_
-puede crear un script que puede crear copias de seguridad de múltiples ZODBs, por ejemplo, 
-Además del `catálogo en su catálogo en su propia ZODB <http://www.plone-entwicklerhandbuch.de/plone-entwicklerhandbuch/produktivserver/performance/zcatalog/katalog-in-eigener-zodb>`_
+Con la receta `collective.recipe.backup`_ puede crear un script que puede crear copias
+de seguridad de múltiples ZODBs. Además crear `catálogo separado para su propia ZODB`_.
 
 ::
 
@@ -84,15 +86,14 @@ Además del `catálogo en su catálogo en su propia ZODB <http://www.plone-entwi
         Extra
         Super
 
-Para aplicar múltiples puntos de montaje se utilizó la receta
-``collective.recipe.filestorage``, en la sección ``[backup]`` 
-también se puede simplificar:
+Para aplicar múltiples puntos de montaje se utilizó la receta :ref:`collective.recipe.filestorage <puntos_montaje_zodb>`,
+en la sección ``[backup]`` también se puede simplificar:
 
 ::
 
     [backup]
     recipe = collective.recipe.backup
-    additional_filestorages = ${filestorage:parts}
+    additional_filestorages = ${mountpoints:parts}
 
 Las siguientes opciones adicionales proporciona la receta ``collective.recipe.backup``:
 
@@ -109,17 +110,17 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
 
         location = ${buildout:directory}/backups
 
-    hay en la carpeta de proyectos buildout las subcarpetas generadas
+    hay en la carpeta de proyectos buildout las sub-carpetas generadas
     ``backups_Catalog`` y ``backups_Extra``. Este contendrá la copia de 
     seguridad de cada base de datos.
 
 ``keep``
     Número de copias de seguridad completas que se conservan.
 
-    El valor por defecto es ``2``. 
+    El valor por defecto es ``2``.
 
-    Todas las copias de seguridad anteriores, incluyendo sus copias de 
-    seguridad incrementales se eliminan automáticamente. 
+    Todas las copias de seguridad anteriores, incluyendo sus copias de
+    seguridad incrementales se eliminan automáticamente.
 
     Si el valor se establece en ``0``, todas las copias de seguridad se
     mantienen.
@@ -133,12 +134,11 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
     aquí definido es ``true``, cada copia de seguridad full sera creada.
 
 ``debug``
-    En casos raros, si en el archivo de log esta en el nivel ``debug``
-    ser escrito. Entonces usted debe aquí debe hacer énfasis en establecer
-    ``True``.
+    En casos raros, si en el archivo de log esta en el nivel ``debug`` ser escrito.
+    Entonces usted debe aquí debe hacer énfasis en establecer ``True``.
 
 ``snapshotlocation``
-    Lugar donde se guardan los respaldos de datos snapshot. 
+    Lugar donde se guardan los respaldos de datos snapshot.
 
     El valor por defecto es :file:`var/snapshotbackups` dentro del 
     directorio Buildout. En definición explícita se aplicarán respecto 
@@ -146,7 +146,7 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
     ``location``.
 
 ``gzip``
-    El valor por defecto es ``true``. 
+    El valor por defecto es ``true``.
 
     El final está comprimido las ZODB en formato ``*.fsz`` y no ``*.fs.gz``.
 
@@ -155,7 +155,7 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
     externalizado su catálogo separado en una ZODB o participado más puntos 
     de montajes de ZODBs.
 
-Al usar la receta ``collective.recipe.backup`` este patrón cambia 
+Al usar la receta ``collective.recipe.backup`` este patrón cambia
 en la directiva ``command`` bajo la sección ``[backup-crontab]``:
 
 ::
@@ -167,8 +167,8 @@ en la directiva ``command`` bajo la sección ``[backup-crontab]``:
 Eliminación de copias de seguridad antiguas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Las copias de seguridad antiguas se deben eliminar después de un cierto tiempo. 
-En nuestro ejemplo, las siguientes copias de seguridad incrementales después de dos 
+Las copias de seguridad antiguas se deben eliminar después de un cierto tiempo.
+En nuestro ejemplo, las siguientes copias de seguridad incrementales después de dos
 semanas y copias de seguridad completas después de cinco semanas se eliminan:
 
 ::
@@ -198,10 +198,12 @@ Con la receta ``collective.recipe.backup`` partir de la versión 2.0
 también puede ser crear copias de seguridad del almacenamiento
 Blob. Desde la versión 4.0 en Plone normalmente todas las imágenes
 y los archivos (*Binary large objects - Blob*) se almacenan en el
-sistema de archivos. Por lo tanto también necesita copias de seguridad
-de este almacenamiento blob. Si no se especifica la ubicación del
-almacenamiento de blob en la receta ``plone.recipe.zope2instance`` también
-puede hacerlo con ``blob_storage`` especificar explícitamente la ruta:
+sistema de archivos.
+
+Por lo tanto también necesita copias de seguridad de este almacenamiento blob.
+Si no se especifica la ubicación del almacenamiento de blob en la receta
+``plone.recipe.zope2instance`` también puede hacerlo con ``blob_storage``
+especificar explícitamente la ruta:
 
 ::
 
@@ -243,61 +245,63 @@ Los siguientes atributos se añadieron nuevos:
 ``blob-storage``
     Directorio donde se guardan los blob-storage.
 
-    Esta opción se ignora si ``backup_blobs = false``. 
+    Esta opción se ignora si ``backup_blobs = false``.
 
-    Si nada es especificado para ``blob-storage``, se intenta 
-    para determinar un valor de una sección que utilice en las 
+    Si nada es especificado para ``blob-storage``, se intenta
+    para determinar un valor de una sección que utilice en las
     siguientes recetas:
 
-    -  ``plone.recipe.zeoserver``
-    -  ``plone.recipe.zope2instance``
-    -  ``plone.recipe.zope2zeoserver``
+    - `plone.recipe.zeoserver`_.
+    
+    - `plone.recipe.zope2instance`_.
+    
+    - `plone.recipe.zope2zeoserver`_.
 
 ``blob_storage``
     Notación alternativa para ``blob_storage`` desde la receta
-    ``plone.recipe.zope2instance`` también se utiliza esta variable, 
-    en pero ``collective.recipe.backup`` sin embargo, se utilizan 
+    ``plone.recipe.zope2instance`` también se utiliza esta variable,
+    en pero ``collective.recipe.backup`` sin embargo, se utilizan
     guiones bajos.
 
 
 ``backup_blobs``
-    Si se especifica o determina un valor para ``blob-storage`` 
+    Si se especifica o determina un valor para ``blob-storage``
     por lo general las copias de seguridad de los blobstorage serán
     creado. Puede esto prevenirse usando ``backup_blobs = false``.
 
 ``blobbackuplocation``
-    Directorio donde se almacenan los archivos de copia de seguridad. 
+    Directorio donde se almacenan los archivos de copia de seguridad.
 
-    El valor por defecto es :file:`var/blobstoragebackups` dentro del 
+    El valor por defecto es :file:`var/blobstoragebackups` dentro del
     directorio Buildout.
 
 ``blobsnapshotlocation``
     Directorio donde se crean las copias de seguridad snapshots.
 
-    El valor por defecto es :file:`var/blobstoragesnapshots` en 
+    El valor por defecto es :file:`var/blobstoragesnapshots` en
     Directorio Buildout.
 
 ``only_blobs``
-    Esto sólo creara una copia de seguridad de los Blob-Storages, no 
+    Esto sólo creara una copia de seguridad de los Blob-Storages, no
     los ZODBs.
 
     El valor por defecto es ``false``.
 
 ``use_rsync``
-    Use el programa :program:`rsync` con *Hard Links* para crear las 
+    Use el programa :program:`rsync` con *Hard Links* para crear las
     copias de seguridad de blob.
 
     El valor por defecto es ``true``.
 
-    Si el programa :program:`rsync` no está instalado, o debido a que los *Hard Links* 
-    no funcionan (*Windows*), en este caso el atributo debe establecerse 
-    en ``false``. Entonces se crea una copia simple con ``shutil.copytree``
-    de Python.
+    Si el programa :program:`rsync` no está instalado, o debido a que los
+    *Hard Links* no funcionan (*Windows*), en este caso el atributo debe
+    establecerse en ``false``. Entonces se crea una copia simple con
+    ``shutil.copytree`` de Python.
 
 Varios Blob-Storages
 ~~~~~~~~~~~~~~~~~~~~
 
-Actualmente los tipos soportados por la receta ``collective.recipe.backup`` 
+Actualmente los tipos soportados por la receta ``collective.recipe.backup``
 no Blob-Storages adicionales. Para esto posiblemente tendría que ser creado
 su propia sección Buildout, lo que crea un segundo conjunto de scripts de
 copia de seguridad, por ejemplo:
@@ -319,16 +323,16 @@ ahorrar espacio en disco y crear copias de seguridad incrementales. Sin embargo,
 para esto se requiere de Linux / Unix o Mac OS X.
 
 Con el programa :program:`rsync` ahora también puede ser usado para crear copias
-de seguridad en servidores remotos: usando el script `rsync-backup.sh`_
+de seguridad en servidores remotos: usando el script `rsync-backup.sh`_.
 
-Para el sistema operativo Windows, debería ejecutarse usando el programa `Cygwin`_. 
+Para el sistema operativo Windows, debería ejecutarse usando el programa `Cygwin`_.
 Si no, puede establecerse esto ``use_rsync = false`` y el directorio de almacenamiento 
 de blob se copia a continuación de la copia de seguridad.
 
 collective.recipe.rsync
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Alternativamente, se utiliza la receta `collective.recipe.rsync <http://pypi.python.org/pypi/collective.recipe.rsync>`_. Para este propósito, 
+Alternativamente, se utiliza la receta `collective.recipe.rsync`_. Para este propósito, 
 por ejemplo, cree el archivo :file:`rsync.cfg` con la siguiente contenido:
 
 ::
@@ -346,18 +350,18 @@ por ejemplo, cree el archivo :file:`rsync.cfg` con la siguiente contenido:
     script = true
 
 ``script``
-    Por lo general, ``collective.recipe.rsync`` llama a :program:`rsync` durante
-    la instalación de la receta. Si un script adecuado (con el nombre de 
-    la sección) se crea, este mismo más adelante a de ser llamado como una
-    tarea de :program:`cron` para ejecutar el programa :program:`rsync`. Esto es sólo para
-    asegurarse de que el script ``rsync-file`` este ejecutado antes de ejecutar
-    el script ``rsync-blob``.
+    Por lo general, ``collective.recipe.rsync`` llama a :program:`rsync`
+    durante la instalación de la receta. Si un script adecuado (con el
+    nombre de la sección) se crea, este mismo más adelante a de ser llamado
+    como una tarea de :program:`cron` para ejecutar el programa :program:`rsync`.
+    Esto es sólo para asegurarse de que el script ``rsync-file`` este ejecutado
+    antes de ejecutar el script ``rsync-blob``.
 
 ``port``
     Opcionalmente, puede especificar un puerto alternativo para :program:`rsync`.
 
 .. tip::
-    Para obtener más información sobre el comando :program:`rsync` consulte el el artículo 
+    Para obtener más información sobre el comando :program:`rsync` consulte el artículo
     de Mike Rubel: `Easy Automated Snapshot-Style Backups with Linux and Rsync`_.
 
 Referencias
@@ -369,3 +373,10 @@ Referencias
 .. _rsync-backup.sh: https://gist.github.com/macagua/a20c3fd337c33395b507
 .. _Easy Automated Snapshot-Style Backups with Linux and Rsync: http://www.mikerubel.org/computers/rsync_snapshots/
 .. _Cygwin: https://www.cygwin.com/
+.. _catálogo separado para su propia ZODB: http://www.plone-entwicklerhandbuch.de/plone-entwicklerhandbuch/produktivserver/performance/zcatalog/katalog-in-eigener-zodb
+.. _collective.recipe.backup: http://pypi.python.org/pypi/collective.recipe.backup
+.. _collective.recipe.rsync: http://pypi.python.org/pypi/collective.recipe.rsync
+.. _z3c.recipe.usercrontab: http://pypi.python.org/pypi/z3c.recipe.usercrontab
+.. _plone.recipe.zope2instance: http://pypi.python.org/pypi/plone.recipe.zope2instance
+.. _plone.recipe.zeoserver: http://pypi.python.org/pypi/plone.recipe.zeoserver
+.. _plone.recipe.zope2zeoserver: http://pypi.python.org/pypi/plone.recipe.zope2zeoserver

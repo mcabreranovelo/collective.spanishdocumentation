@@ -11,7 +11,7 @@ Importar y exportar contenido desde el ZMI
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 El servidor de aplicaciones Zope ofrece copia las partes de la estructura 
 de árbol a través de de importación / exportación. El archivo exportado es 

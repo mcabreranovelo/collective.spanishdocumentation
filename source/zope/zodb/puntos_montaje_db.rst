@@ -11,7 +11,7 @@ Configurar puntos de montajes para Data.fs separadas
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 30 de Agosto de 2014
 
 El montaje de un sitio Plone con la base de datos objetos :file:`Data.fs` 
 separadas puede ser muy útil si se están ejecutando varios sitios Plone 
@@ -96,9 +96,9 @@ instalación con un punto de montaje para un :ref:`ZODB <que_es_zodb>`.
 Establecer nuevos puntos de montajes
 ------------------------------------
 
-Utilizando la receta de zc.buildout llamado `collective.recipe.filestorage`_ 
-es muy fácil ya que solo necesita agregar una nueva linea en su configuración 
-buildout, cada linea representa un punto de montaje para cada sitios, a continuación 
+Utilizando la receta de zc.buildout llamado `collective.recipe.filestorage`_,
+es muy fácil ya que solo necesita agregar una nueva linea en su configuración
+buildout, cada linea representa un punto de montaje para cada sitios, a continuación
 se muestra un ejemplo de esto:
 
 .. code-block:: cfg
@@ -193,6 +193,6 @@ Referencias
 - `Multiple Plone sites per zope instance - using separate Data.fs files for each one`_.
 
 .. _collective.recipe.filestorage: http://pypi.python.org/pypi/collective.recipe.filestorage
-.. _Instalador Unificado: http://plone.org/countries/conosur/documentacion/instalando-plone-3-con-el-instalador-unificado
-.. _How to mount a Plone Site as a separate Data.fs: http://webteam.medsci.ox.ac.uk/integrators-developers/separatedatafs
+.. _Instalador Unificado: http://plone-spanish-docs.readthedocs.org/es/latest/instalacion/instalando_plone.html
+.. _How to mount a Plone Site as a separate Data.fs: http://oxfordplone.medsci.ox.ac.uk/integrators-developers/deployment/separatedatafs
 .. _Multiple Plone sites per zope instance - using separate Data.fs files for each one: http://plone.org/documentation/kb/multiple-plone-sites-per-zope-instance-using-separate-data-fs-files-for-each-one
