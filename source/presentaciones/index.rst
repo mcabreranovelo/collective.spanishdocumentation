@@ -66,4 +66,4 @@ se presentan ligas al PDF.
 
 .. seealso:: 
     Toda la documentación de Plone en Español de este sitio esta disponible en formato 
-    PDF, HTML, epub `aquí <../download.html>`_.
+    PDF, HTML, epub `aquí <http://plone-spanish-docs.readthedocs.org/es/latest/download.html>`_.
