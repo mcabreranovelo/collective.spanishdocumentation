@@ -7,7 +7,7 @@ Agregando módulos y complementos adicionales a Plone
 :Autor(es): Leonardo J. Caballero G.
 :Correo(s): leonardocaballero@gmail.com
 :Compatible con: Plone 4
-:Fecha: 02 de Enero de 2014
+:Fecha: 31 de Agosto de 2014
 
 En esta articulo busca explicar la instalación de módulos y complementos 
 adicionales a Plone 3 y Plone 4, además de no ser una guía paso a paso 
@@ -59,7 +59,6 @@ el nombre de usuario* y luego hace clic en :menuselection:`Configuración del si
   :align: center
   :width: 640px
   :height: 448px
-  :target: ../../_images/productos_complementos_1.png
 
   **Configuración del sitio**
 
@@ -70,7 +69,6 @@ En el panel **Configuración del sitio**, haga clic en la sección **Complemento
   :align: center
   :width: 640px
   :height: 388px
-  :target: ../../_images/productos_complementos_2.png
 
   **sección Complementos**
 
@@ -82,7 +80,6 @@ aparecerá la siguiente pantalla:
   :align: center
   :width: 640px
   :height: 333px
-  :target: ../../_images/productos_complementos_3.png
 
   **Complementos disponibles a Activar**
 
@@ -101,7 +98,6 @@ como se muestra a continuación:
   :align: center
   :width: 640px
   :height: 434px
-  :target: ../../_images/productos_complementos_3.png
 
   **Complementos disponibles a Desactivar**
 
@@ -180,7 +176,6 @@ descritos a continuación:
   :align: center
   :width: 640px
   :height: 453px
-  :target: ../../_images/como_instalar_addons_plone.png
 
 #. Las configuraciones se efectúan en el archivo :ref:`buildout.cfg <buildout_cfg>`.
 
@@ -626,11 +621,15 @@ Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
 Referencias
 ===========
 
-- `Installing Plone add-ons - quick instructions`_
-- `Using Add-ons`_
-- `Add on product installation fails`_
-- `Installing a third party product`_
-- `Packages, products and eggs`_
+- `Installing Plone add-ons - quick instructions`_.
+
+- `Using Add-ons`_.
+
+- `Add on product installation fails`_.
+
+- `Installing a third party product`_.
+
+- `Packages, products and eggs`_.
 
 .. _Third-Party Products: http://plone.org/documentation/kb/add-ons/tutorial-all-pages
 .. _Products.CMFPlone: http://pypi.python.org/pypi/Products.CMFPlone
