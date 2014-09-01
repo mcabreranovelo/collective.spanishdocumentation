@@ -159,7 +159,7 @@ html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['indexsidebar.html', 'localtoc.html', 'searchbox.html', 'recentpages.html', 'plone.html'],
+   '**': ['descargar.html', 'localtoc.html', 'buscar.html', 'recentpages.html', 'acerca_plone.html'],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
