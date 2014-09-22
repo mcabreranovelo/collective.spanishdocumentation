@@ -11,7 +11,7 @@ Creando Temas con diazo
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Agosto de 2014
+    :Fecha: 22 de Septiembre de 2014
 
 ¿Qué es diazo?
 ==============
@@ -30,17 +30,18 @@ Creando Temas con diazo
 
 * Este concepto se basa en la técnica de programación `Screen scraping`_.
 
-* Se implementa de forma sencilla en Plone usando el motor de temas `diazo`_ y el
-  producto `plone.app.theming`_.
+* Se implementa de forma sencilla en Plone usando el motor de temas `diazo`_ y
+  el producto `plone.app.theming`_.
 
 Instalación
 ===========
 
-El paquete ``plone.app.theming`` esta incorporado por defecto desde versiones Plone 4.2 o superior.
+El paquete ``plone.app.theming`` esta incorporado por defecto desde versiones
+Plone 4.2 o superior.
 
-Para instalar ``plone.app.theming`` dentro de su sitio Plone, entonces valla al panel de control de
-los **Complementos** en :menuselection:`Configuración de sitio --> Complementos` como un usuario
-Administrador Plone, y marque la casilla del producto ``Soporte de temas Diazo`` y haga clic en el botón
+Para instalar ``plone.app.theming`` dentro de su sitio Plone, entonces valla al
+panel de control de los **Complementos** en :menuselection:`Configuración de sitio --> Complementos`
+como un usuario Administrador Plone, y marque la casilla del producto ``Soporte de temas Diazo`` y haga clic en el botón
 ``Habilitar``.
 
 Usted notara que ahora tiene un nuevo elemento dentro del panel de control llamado "Temas".
@@ -53,7 +54,7 @@ Estructura básica del paquete
     .. code-block:: sh
 
         tema-diazo/
-        |-- index.hyml
+        |-- index.html
         `-- rules.xml
 
 * Normalmente, el paquete es más complejo.
@@ -98,11 +99,13 @@ Debe tener la siguiente sintaxis:
 Creando el archivo index.html
 .............................
 
-Puede crear el archivo :file:`index.html` con los siguientes comando:
+Puede crear el archivo :file:`index.html`, este debe agregarse en el
+mismo directorio del archivo :file:`manifest.cfg` con los siguientes
+comando:
 
 .. code-block:: sh
 
-    $ cd NOMBRE-TEMA ; nano index.html 
+    $ nano index.html
 
 Debe al menos tener la estructura HTML siguiente:
 
@@ -123,7 +126,9 @@ Debe al menos tener la estructura HTML siguiente:
 Creando el archivo rules.xml
 ............................
 
-Puede crear el archivo :file:`rules.xml` con los siguientes comando:
+Puede crear el archivo :file:`rules.xml`, este debe agregarse en el
+mismo directorio del archivo :file:`index.html` con los siguientes
+comando:
 
 .. code-block:: sh
 
@@ -136,13 +141,13 @@ Debe crear al menos la siguiente estructura HTML:
     <?xml version="1.0" encoding="UTF-8"?>
 
     <rules
-    xmlns="http://namespaces.plone.org/diazo"
-    xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        xmlns="http://namespaces.plone.org/diazo"
+        xmlns:css="http://namespaces.plone.org/diazo/css"
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
-    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
-    <replace css:content="#portal-globalnav" css:theme="#menu" />
-    <replace css:content="#portal-columns" css:theme="#contenido" />
+        <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+        <replace css:content="#portal-globalnav" css:theme="#menu" />
+        <replace css:content="#portal-columns" css:theme="#contenido" />
     
     </rules>
 
@@ -153,7 +158,7 @@ siguiente sentencia ``diazo``:
 
 .. code-block:: xml
 
-    <theme href=“index.html" css:if-content="#visual-portal-wrapper" />
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
 
 **Adiciona la navegación de Plone**:
 
@@ -176,10 +181,10 @@ siguiente sentencia ``diazo``:
 Colocando en práctica
 =====================
 
-Para probar el paquete de tema ``diazo`` que lleva hecho hasta ahora puede 
+Para probar el paquete tema ``diazo`` que lleva hecho hasta ahora puede
 seguir los siguientes pasos:
 
-#. Crear un archivo ZIP con su carpeta del tema.
+#. Crear un archivo ZIP con su carpeta del nivel superior del tema.
 
 #. Agregue al sitio Plone
 
@@ -197,8 +202,24 @@ seguir los siguientes pasos:
     mostrara un mensaje emergente para agregar un *Título* y *Descripción*
     diferente al que cargo previamente y hace clic en el botón **Crear**.
 
+.. figure:: ./theming-controlpanel-mapper.png
+  :alt: Modificar tema creado
+  :align: center
+  :width: 647px
+  :height: 264px
+
+  Modificar tema creado
+
 Después de aplicar el tema, usted debe tener el código HTML, con el menú y el
 contenido de Plone, sin embargo, los estilos no se aplican Plone.
+
+.. figure:: ./tema-diazo-plone0.png
+  :alt: Tema aplicado al Plone sin estilos
+  :align: center
+  :width: 268px
+  :height: 412px
+
+  Tema aplicado al Plone sin estilos
 
 Agregando los estilos
 =====================
@@ -211,7 +232,15 @@ Usted puede re-usar los estilos CSS de Plone con la siguiente sentencia ``diazo`
 
     <replace css:content="head" css:theme="head" />
 
-Esta llamada substituye todo el HEAD de su HTML por el HEAD de Plone
+Esta llamada substituye todo el elemento HEAD de su HTML por el elemento HEAD de Plone
+
+.. figure:: ./tema-diazo-plone1.png
+  :alt: Importando el CSS de Plone
+  :align: center
+  :width: 466px
+  :height: 221px
+
+  Importando el CSS de Plone
 
 Reglas diazo
 ============
@@ -230,6 +259,14 @@ A continuación el siguiente ejemplo:
 El resultado aquí es que el elemento ``<title />`` en el tema será substituido 
 por el elemento ``<title />`` del  contenido (dinámico).
 
+.. figure:: ./tema-diazo-plone2.png
+  :alt: Remplaza el <title /> del tema por el <title /> del contenido
+  :align: center
+  :width: 442px
+  :height: 298px
+
+  Remplaza el <title /> del tema por el <title /> del contenido
+
 La regla <before /> y <after />
 -------------------------------
 
@@ -240,6 +277,14 @@ A continuación el siguiente ejemplo:
     <after css:content="#portal-searchbox" css:theme="#contenido" />
 
 Este ejemplo colocara la búsqueda de Plone al final de la página.
+
+.. figure:: ./tema-diazo-plone3.png
+  :alt: Agregar el cuadro de búsqueda de Plone al final de la página
+  :align: center
+  :width: 527px
+  :height: 167px
+
+  Agregar el cuadro de búsqueda de Plone al final de la página.
 
 La regla <drop />
 -----------------
@@ -287,23 +332,45 @@ combinar las clases CSS.
         <body class="alpha beta delta gamma">
 
 
-Orden de ejecución
-------------------
+Orden de ejecución de reglas
+----------------------------
 
-El motor ``diazo`` ejecutará las reglas según un orden propio y no necesariamente 
-en el orden escrito. No hay necesidad de decorar, pero es bueno que sea señalado:
+En la mayoría de los casos, usted no debe preocuparse demasiado sobre el funcionamiento
+interno del compilador ``diazo``. Sin embargo, a veces puede ser útil para entender el
+orden en que se aplican las reglas, en este caso el compilador ``diazo`` ejecutará las
+reglas según un orden propio y no necesariamente en el orden escrito. No hay necesidad
+de decorar, pero es bueno que sea señalado:
 
-  1º lugar: ``<before>``.
+#. En **primer lugar** siempre se ejecutan las reglas ``<before>`` usando el atributo ``theme``
+   (pero no usando el atributo ``theme-children``).
 
-  2º lugar: ``<drop />``.
+#. En **segundo lugar** seguidamente se ejecutan las reglas ``<drop />``.
 
-  3º lugar: ``<replace>``.
+#. En **tercer lugar** seguidamente se ejecutan las reglas ``<replace />`` usando el atributo
+   ``theme`` (pero no usando el atributo ``theme-children``), siempre que regla ``<drop />``
+   no se aplica al mismo nodo del tema o se utilizó el ``method="raw"``.
 
-  4º lugar: Reglas que usan ``attributes``.
+#. En **cuarto lugar** seguidamente se ejecutan las reglas ``<strip />``. Tenga en cuenta que las
+   reglas ``<strip />`` no impiden que otras reglas se ponga en marcha, incluso si el nodo de
+   contenido o el tema va a ser quitado.
 
-  5º lugar: Reglas usando ``"theme-children"``.
+#. En **quinto lugar** seguidamente se ejecutan las reglas que usan los ``attributes``.
 
-  6º y último lugar: ``<after />``.
+#. En **sexto lugar** se ejecutara próximamente las reglas ``<before />``, ``<replace />`` y
+   ``<after />`` usando el atributo ``theme-children``, siempre no allá reglas ``<replace />``
+   usando en el tema que fue se aplicó al mismo nodo previamente del tema.
+
+#. En **séptimo lugar** se ejecutara por último las reglas ``<before />`` usando el atributo
+   ``theme`` (pero no usando el atributo ``theme-children``).
+
+Descarga código fuente
+======================
+
+Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
+
+.. code-block:: sh
+
+  $ git clone https://github.com/Covantec/tema-diazo.git
 
 Tema mas completo
 =================
