@@ -267,6 +267,10 @@ por el elemento ``<title />`` del  contenido (dinámico).
 
   Remplaza el <title /> del tema por el <title /> del contenido
 
+.. seealso::
+
+  - Referencia completa de la directiva de la regla `<replace /> <http://docs.diazo.org/en/latest/basic.html#replace>`_.
+
 La regla <before /> y <after />
 -------------------------------
 
@@ -286,6 +290,10 @@ Este ejemplo colocara la búsqueda de Plone al final de la página.
 
   Agregar el cuadro de búsqueda de Plone al final de la página.
 
+.. seealso::
+
+  - Referencia completa de la directiva de las reglas `<before /> y <after /> <http://docs.diazo.org/en/latest/basic.html#before-and-after>`_.
+
 La regla <drop />
 -----------------
 
@@ -300,6 +308,10 @@ que no se utilizan.
 
 El ejemplo anterior se eliminará el mensaje *"Sólo en esta sección"* que 
 viene con la búsqueda de Plone.
+
+.. seealso::
+
+  - Referencia completa de la directiva de las reglas `<drop /> <http://docs.diazo.org/en/latest/basic.html#drop>`_.
 
 La regla <merge />
 ------------------
@@ -330,6 +342,10 @@ combinar las clases CSS.
   .. code-block:: xml
 
         <body class="alpha beta delta gamma">
+
+.. seealso::
+
+  - Referencia completa de la directiva de las reglas `<merge /> <http://docs.diazo.org/en/latest/basic.html#merge>`_.
 
 
 Orden de ejecución de reglas
@@ -366,7 +382,7 @@ de decorar, pero es bueno que sea señalado:
 Descarga código fuente
 ======================
 
-Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
+Usted puede obtener el código fuente de este ejemplo, para esto ejecute el siguiente comando:
 
 .. code-block:: sh
 
