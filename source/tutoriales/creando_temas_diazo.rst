@@ -25,6 +25,14 @@ Creando Temas con diazo
 ¿Como funciona?
 ===============
 
+.. figure:: ./diazo-concepto.png
+  :alt: Funcionamiento de Diazo
+  :align: center
+  :width: 320px
+  :height: 400px
+
+  Funcionamiento de Diazo
+
 * Con un simple XML usted substituye elementos de su ``template`` o ``plantilla``
   html por contenido generado por el Plone.
 
@@ -32,6 +40,7 @@ Creando Temas con diazo
 
 * Se implementa de forma sencilla en Plone usando el motor de temas `diazo`_ y
   el producto `plone.app.theming`_.
+
 
 Instalación
 ===========
@@ -46,20 +55,18 @@ como un usuario Administrador Plone, y marque la casilla del producto ``Soporte 
 
 Usted notara que ahora tiene un nuevo elemento dentro del panel de control llamado "Temas".
 
-Estructura básica del paquete
-=============================
+Estructura básica de un tema
+============================
 
-* Un tema es un simple archivo .zip conteniendo una carpeta con al menos dos archivos:
+* Un tema es un simple archivo **.zip** conteniendo una carpeta con al menos dos archivos:
 
-    .. code-block:: sh
+  .. code-block:: sh
 
-        tema-diazo/
-        |-- index.html
-        `-- rules.xml
+      tema-diazo/
+      |-- index.html
+      `-- rules.xml
 
-* Normalmente, el paquete es más complejo.
-
-* Contiene los archivos CSS, Javascripts y imágenes.
+* Normalmente, el paquete es más complejo, conteniendo los archivos CSS, Javascripts y imágenes.
 
 Crear una carpeta
 -----------------
@@ -154,29 +161,41 @@ Debe crear al menos la siguiente estructura HTML:
 **Define a cual template va a utilizar**:
 
 Usted puede establecer cual plantilla HTML usara para este tema con la 
-siguiente sentencia ``diazo``:
+siguiente directiva ``diazo``:
 
 .. code-block:: xml
 
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
 
+.. seealso::
+
+  - Referencia completa de la directiva de la regla `<theme /> <http://docs.diazo.org/en/latest/basic.html#theme>`_.
+
 **Adiciona la navegación de Plone**:
 
 Usted puede importar estructura de la navegación de Plone con la 
-siguiente sentencia ``diazo``:
+siguiente directiva ``diazo``:
 
 .. code-block:: xml
 
     <replace css:content="#portal-globalnav" css:theme="#menu" />
 
+.. seealso::
+
+  - Referencia completa de la directiva de la regla `<replace /> <http://docs.diazo.org/en/latest/basic.html#replace>`_.
+
 **Adiciona el Contenido**:
 
 Usted puede agregar el contenido del sitio Plone con la 
-siguiente sentencia ``diazo``:
+siguiente directiva ``diazo``:
 
 .. code-block:: xml
 
     <replace css:content="#portal-columns" css:theme="#contenido" />
+
+.. seealso::
+
+  - Referencia completa de la directiva de la regla `<replace /> <http://docs.diazo.org/en/latest/basic.html#replace>`_.
 
 Colocando en práctica
 =====================
@@ -226,7 +245,7 @@ Agregando los estilos
 
 **Importando el CSS de Plone**:
 
-Usted puede re-usar los estilos CSS de Plone con la siguiente sentencia ``diazo``:
+Usted puede re-usar los estilos CSS de Plone con la siguiente directiva ``diazo``:
 
 .. code-block:: xml
 
@@ -405,7 +424,7 @@ Referencias
 - `Construindo temas para Plone com Diazo`_ por la empresa `Simples Consultoria`_.
 
 
-.. _diazo: http://pypi.python.org/pypi/diazo/1.0.5
+.. _diazo: http://pypi.python.org/pypi/diazo
 .. _Screen scraping: http://es.wikipedia.org/wiki/Screen_scraping
 .. _plone.app.theming: http://pypi.python.org/pypi/plone.app.theming
 .. _temas basados en diazo: http://pypi.python.org/pypi?%3Aaction=search&term=diazo+theme&submit=search
