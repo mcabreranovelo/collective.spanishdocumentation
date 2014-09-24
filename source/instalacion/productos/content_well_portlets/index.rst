@@ -2,21 +2,14 @@
 
 .. _contentwellportlets:
 
+=====================
 Content Well Portlets
 =====================
 
 
-.. sidebar:: Sobre este artículo
-
-    :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 4
-    :Fecha: 02 de Enero de 2014
-
-
-En esta articulo es una traducción actualizada del articulo en Portugués 
-`ContentWellPortlets — Tutorial Plone 4`_, el cual busca explicar la instalación 
-del producto ContentWellPortlets.
+En esta articulo es una traducción actualizada del articulo en 
+Portugués `ContentWellPortlets — Tutorial Plone 4`_, el cual 
+busca explicar la instalación del producto ContentWellPortlets.
 
 .. _contentwellportlets_quees:
 
@@ -39,9 +32,9 @@ Permite agregar ``portlets`` encima e abajo de la sección de contenido.
 =================
 
 La instalación de este producto se realiza usando la herramienta 
-:ref:`zc.buildout <que_es_zcbuildout>` para esto usted tiene que agregar 
-el producto a las secciones ``eggs`` y ``zcml`` (si es necesario) de archivo 
-:file:`buildout.cfg` como se muestra a continuación:
+:ref:`zc.buildout <que_es_zcbuildout>` para esto usted tiene que 
+agregar el producto a las secciones ``eggs`` y ``zcml`` (si es 
+necesario) de archivo :file:`buildout.cfg` como se muestra a continuación:
 
 .. code-block:: cfg
 
@@ -49,8 +42,8 @@ el producto a las secciones ``eggs`` y ``zcml`` (si es necesario) de archivo
       Products.ContentWellPortlets
       
 
-Indicar al :term:`recipe` `plone.recipe.zope2instance`_ que instale una 
-configuración :term:`ZCML-slug`, como se muestra a continuación:
+Indicar al :term:`recipe` `plone.recipe.zope2instance`_ que instale 
+una configuración :term:`ZCML-slug`, como se muestra a continuación:
 
 .. code-block:: cfg
 
@@ -63,8 +56,9 @@ Luego ejecute el script :command:`buildout`, de la siguiente forma:
 
   $ ./bin/buildout -vN
 
-Con este comando busca el paquete en el repositorio :term:`PyPI`, descarga e 
-instala el producto en su instancia Zope para sus sitios Plone allí hospedados.
+Con este comando busca el paquete en el repositorio :term:`PyPI`, 
+descarga e instala el producto en su instancia Zope para sus sitios
+Plone allí hospedados.
 
 Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 
@@ -80,10 +74,11 @@ Habilitarlo en Plone
 --------------------
 
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
-y marque la casilla llamada **ContentWellPortlets** y luego presione el botón **Habilitar**.
+y marque la casilla llamada **ContentWellPortlets** y luego presione el botón 
+**Habilitar**.
 
-En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Productos Adicionales` 
-y marque la casilla llamada **ContentWellPortlets** y luego presione el botón **Instalar**.
+En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Productos Adicionales` y marque la casilla llamada **ContentWellPortlets** y luego presione 
+el botón **Instalar**.
 
 .. _contentwellportlets_usar:
 
@@ -94,42 +89,42 @@ Después de haber realizado la instalación del producto, todas las páginas pre
 dos o tres nuevos enlaces, como se muestra a continuación:
 
 .. figure:: contentwellportlets_1.png
-  :alt: Arriba del contenido
   :align: center
   :width: 640px
   :height: 323px
-  :target: ../../../_images/contentwellportlets_1.png
+  :alt: Arriba del contenido
 
   Arriba del contenido
 
-El enlace **Agregar, editar o eliminar un portlet encima del contenido** conduce a 
-la página **Administrar portlets** situados sobre el contenido de la página.
+El enlace **Agregar, editar o eliminar un portlet encima del contenido**
+conduce a la página **Administrar portlets** situados sobre el contenido
+de la página.
 
 ----
 
 .. figure:: contentwellportlets_2.png
-  :alt: Abajo del contenido
   :align: center
   :width: 640px
   :height: 324px
-  :target: ../../../_images/contentwellportlets_2.png
+  :alt: Abajo del contenido
 
   Abajo del contenido
 
-El enlace **Agregar, editar o eliminar un portlet a continuación del contenido** lleva 
-a la página de **Administrar portlets** situados por debajo del contenido y el enlace 
-**Añadir, editar o eliminar un portlet en el pie de página** conduce la página de 
-**Administrar portlets** situados en la parte inferior de la página. 
+El enlace **Agregar, editar o eliminar un portlet a continuación del contenido**
+lleva a la página de **Administrar portlets** situados por debajo del contenido
+y el enlace **Añadir, editar o eliminar un portlet en el pie de página** conduce
+la página de **Administrar portlets** situados en la parte inferior de la página. 
 
-La interfaz estos casos es la misma, es posible disponer los portlets en tres columnas 
-diferentes (A, B y C) y colocar mas de un portlet por columna.
+La interfaz estos casos es la misma, es posible disponer los portlets en tres
+columnas diferentes (A, B y C) y colocar mas de un portlet por columna.
 
 .. figure:: contentwellportlets_3.png
   :align: center
   :width: 640px
   :height: 401px
-  :target: ../../../_images/contentwellportlets_3.png
+  :alt: Agregar Portlet de Calendario en Caja para portlet B encima del contenido
 
+  Agregar Portlet de Calendario en Caja para portlet B encima del contenido.
 
 Esto resulta en la siguiente pantalla:
 
@@ -137,7 +132,6 @@ Esto resulta en la siguiente pantalla:
   :align: center
   :width: 640px
   :height: 364px
-  :target: ../../../_images/contentwellportlets_4.png
   :alt: Un portlet de Calendario el contenido de la página
 
   Un portlet de Calendario el contenido de la página
@@ -145,40 +139,51 @@ Esto resulta en la siguiente pantalla:
 Aplicando estilos a portlets
 ============================
 
-Las columnas permiten una mayor libertad para la manipulación visual de loa portlets 
-usando estilos CSS, ya que cada columna corresponde a un div class diferente.
+Las columnas permiten una mayor libertad para la manipulación visual de
+los portlets usando estilos CSS, ya que cada columna corresponde a un
+``div`` y ``class`` diferente.
 
-* Los viewlets están contenidas dentro de un ``div`` que tiene un atributo ``id`` de CSS.
+* Los viewlets están contenidas dentro de un ``div`` que tiene un atributo
+  ``id`` de CSS.
 
-* Para cada portlet manager en el viewlet se encuentra en un ``div`` que tiene un atributo 
-  ``class`` de CSS, ya que pueden ser utilizados para ser estilizado.
+* Para cada portlet manager en el viewlet se encuentra en un ``div`` que
+  tiene un atributo ``class`` de CSS, ya que pueden ser utilizados para
+  ser estilizado.
 
-A continuación se muestra algunos ejemplos de CSS muestra que le permitirá trabajar 
-para generar diferentes diseños (aunque le toca a usted probar que funcione en todos los 
-navegadores que son importantes para sus usuarios).
+A continuación se muestra algunos ejemplos de CSS muestra que le permitirá
+trabajar para generar diferentes diseños (aunque le toca a usted probar que
+funcione en todos los navegadores que son importantes para sus usuarios).
 
-Simplemente copie y pegue el código css para el tipo de presentación que estés buscando 
-en tu propia hoja de estilo del producto del tema, o en el directorio 
-:ref:`portal_skins/ <zmi_portal_skins>`:file:`ploneCustom.css` en el :ref:`ZMI <que_es_zmi>`.
+Simplemente copie y pegue el código css para el tipo de presentación que estés
+buscando en tu propia hoja de estilo del producto del tema, o en el directorio 
+:ref:`portal_skins/ <zmi_portal_skins>`:file:`ploneCustom.css` en el
+:ref:`ZMI <que_es_zmi>`.
 
-Si experimenta problemas con una de las áreas de portlets (generalmente el derecho más alejado) 
-que caen por debajo de la otra(s), intente definir ``margin:0`` y ``padding:0`` sobre las clases
-``.AbovePortletManager1``, ``.portletAboveContentB``, etc.
+Si experimenta problemas con una de las áreas de portlets (generalmente el derecho
+más alejado) que caen por debajo de la otra(s), intente definir ``margin:0`` y 
+``padding:0`` sobre las clases ``.AbovePortletManager1``, ``.portletAboveContentB``,
+etc.
 
-Todos los ejemplos están escritos para los **portlets por encima del contenido**. Para los 
-**portlets por debajo del contenido** situados y **portlets en el pie de página** simplemente 
-debe sustituir el identificador de clase adecuada. Por lo tanto, ``.AbovePortletManager1`` 
-llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
+Todos los ejemplos están escritos para los **portlets por encima del contenido**.
+Para los **portlets por debajo del contenido** situados y **portlets en el pie de
+página** simplemente debe sustituir el identificador de clase adecuada. Por lo tanto, 
+``.AbovePortletManager1`` llegaría a ser ``.portletsBelowContentManager1`` o 
+``.FooterPortletManager1``.
+
+.. tip::
+    Los siguientes ejemplos muestran portlets para arriba (AbovePortletManager),
+    para los portlets debajo y portlets de pie de página son similares.
+
+Los estilos CSS para portlets tengan la misma anchura. Tenga en cuenta que no hay
+``margins`` o ``paddings`` establecidos en estos ejemplos.
+
+Seis columnas arriba del contenido
+----------------------------------
+
+A continuación, un ejemplo de estilos CSS para mostrar *6 portlets*, ubicados a 
+la izquierda con **16.6% del ancho** cada uno:
 
 .. code-block:: css
-
-  /* **** 
-
-    Los CSS para portlets tengan la misma anchura. Tenga en cuenta que no hay margins o paddings 
-    establecidos en estos ejemplos. Los siguientes ejemplos muestran portlets para arriba, para 
-    los portlets debajo y portlets de pie de página son similares.
-
-  **** */
 
   /* --- Six Column Above Layout ---- */
   .cell .AbovePortletManager1, 
@@ -191,6 +196,14 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
   	width: 16.6%;
   }
 
+Cinco columnas arriba del contenido
+-----------------------------------
+
+A continuación, un ejemplo de estilos CSS para mostrar *5 portlets*, ubicados a
+la izquierda con **20% del ancho** cada uno:
+
+.. code-block:: css
+
   /* --- Five Column Above Layout ---- */
   .cell .AbovePortletManager1,
   .cell .AbovePortletManager2,
@@ -201,6 +214,14 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
   	width: 20%;
   }
 
+Cuatro columnas arriba del contenido
+------------------------------------
+
+A continuación, un ejemplo de estilos CSS para mostrar *4 portlets*, ubicados a la
+izquierda con **25% del ancho** cada uno:
+
+.. code-block:: css
+
   /* --- Four Column Above Layout ---- */
   .cell .AbovePortletManager1,
   .cell .AbovePortletManager2,
@@ -210,6 +231,14 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
   	width: 25%;
   }
 
+Tres columnas arriba del contenido
+----------------------------------
+
+A continuación, un ejemplo de estilos CSS para mostrar *3 portlets*, ubicados a la
+izquierda con **33% del ancho** cada uno:
+
+.. code-block:: css
+
   /* --- Three Column Above Layout ---- */
   .cell .AbovePortletManager1,
   .cell .AbovePortletManager2,
@@ -218,6 +247,14 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
   	width: 33%;
   }
 
+Dos columnas arriba del contenido
+---------------------------------
+
+A continuación, un ejemplo de estilos CSS para mostrar *2 portlets*, ubicados a la
+izquierda con **50% del ancho** cada uno:
+
+.. code-block:: css
+
   /* --- Two Column Above Layout ---- */
   .cell .AbovePortletManager1,
   .cell .AbovePortletManager2 {
@@ -225,12 +262,14 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
   	width:50%;
   }
 
-  /* **** 
+Ejemplos de tres columnas con anchos variantes
+----------------------------------------------
 
-    A continuación se muestra 3 portlets, uno portlet mitad del ancho de la página 
-    con 2 portlets de la derecha que se dividen el resto.
+A continuación, un ejemplo de estilos CSS para mostrar *3 portlets*, *uno portlet* 
+con la **mitad del ancho (50%)** de la página y *2 portlets* de la derecha que
+**se dividen el resto del ancho (25%)**:
 
-  **** */
+.. code-block:: css
 
   .cell .AbovePortletManager1 {
    	float: left;
@@ -243,12 +282,11 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
    	width: 25%;
   }
 
-  /* **** 
+A continuación, un ejemplo de estilos CSS para mostrar *3 portlets*, *uno portlet*
+de *40% de ancho* a la izquierda de la página y con *2 portlets* a la derecha de
+*60% de ancho* cada uno:
 
-    A continuación se muestra 3 portlets, uno portlet con el ancho de 40% de la página 
-    con 2 portlets de la derecha un poco más amplio.
-
-  **** */
+.. code-block:: css
 
   .cell .AbovePortletManager1 {
    	float: left;
@@ -261,12 +299,14 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
    	width: 60%;
   }
 
-  /* **** 
+Ejemplos de cuatro columnas con anchos variantes
+------------------------------------------------
 
-    A continuación se muestra 4 portlets, uno portlet 40% de la anchura de la página 
-    con otro portlet de 60% y 2 portlet más abajo que una que son 30% cada uno de ancho.
+A continuación, un ejemplo de estilos CSS para mostrar *4 portlets*, *uno portlet* de **40%
+de ancho** de la página con el *segundo portlet* de **60% de ancho** y *2 portlet* más abajo
+que son de **30% de ancho cada uno**:
 
-  **** */
+.. code-block:: css
 
   .cell .AbovePortletManager1 {
     float: left;
@@ -284,12 +324,11 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
     width: 30%;
   }
 
-  /* **** 
+A continuación, un ejemplo de estilos CSS para mostrar *4 portlets* con diferentes anchos,
+*2 portlet* a la izquierda con **15% de ancho**, el *tercer portlet* es de **40% de ancho**,
+el *cuarto portlet* es **30% de ancho**:
 
-    A continuación se muestra 4 portlets con diferentes anchos, 2 portlet a la izquierda 
-    con 15% de ancho, el tercer portlet es de 40% de ancho, el cuarto portlet es 30% de ancho.
-
-  **** */
+.. code-block:: css
 
   .cell .AbovePortletManager1,
   .cell .AbovePortletManager2 {
@@ -306,6 +345,18 @@ llegaría a ser ``.portletsBelowContentManager1`` o ``.FooterPortletManager1``.
    	float: left;
    	width: 30%;
   }
+
+Referencias
+===========
+
+- `ContentWellPortlets — Tutorial Plone 4`_.
+
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 4
+    :Fecha: 23 de Septiembre de 2014
 
 .. _ContentWellPortlets — Tutorial Plone 4: http://www.ufrgs.br/tutorial-plone4/produtos-adicionais/contentwellportlets
 .. _WebLion Group: http://plone.org/author/weblion
