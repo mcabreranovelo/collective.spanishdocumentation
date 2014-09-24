@@ -6,13 +6,6 @@
 DropDown Menu
 =============
 
-.. sidebar:: Sobre este artículo
-
-    :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 02 de Enero de 2014
-
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `DropDown Menu — Tutorial Plone 4`_, el cual busca explicar la instalación 
 del producto :ref:`DropDown Menu <dropdownmenu_quees>`.
@@ -86,43 +79,47 @@ en toda su estructura en menú desplegable.
 
 Por ejemplo, la siguiente estructura:
 
-.. image:: dropdown_imagen_1.png
-  :alt: Estructura de navegación como menú desplegable.
+.. figure:: dropdown_imagen_1.png
   :align: center
   :width: 640px
   :height: 258px
-  :target: ../../../_images/dropdown_imagen_1.png
+  :alt: Estructura de navegación como menú desplegable.
+
+  Estructura de navegación como menú desplegable.
   
 
 Al seleccionar la carpeta "Imágenes", encontrará un menú vertical con 
 los archivos correspondientes de la lista desplegable:
 
-.. image:: dropdown_imagen_2.png
+.. figure:: dropdown_imagen_2.png
   :align: center
-  :alt: Portlet de navegación con los archivos correspondientes.
   :width: 640px
   :height: 213px
-  :target: ../../../_images/dropdown_imagen_2.png
+  :alt: Portlet de navegación con los archivos correspondientes.
+
+  Portlet de navegación con los archivos correspondientes.
 
 Tenga en cuenta que la página no aparece al nivel cuatro, ya que esta cuatro 
 niveles por debajo del nivel raíz del sitio. Para verlo usted tendrá que cambiar 
 la configuración del menú desplegable.
 
-.. image:: dropdown_imagen_3.png
+.. figure:: dropdown_imagen_3.png
   :align: center
-  :alt: Estructura de 3 niveles de contenidos en el menú.
   :width: 640px
   :height: 324px
-  :target: ../../../_images/dropdown_imagen_3.png
+  :alt: Estructura de 3 niveles de contenidos en el menú.
+
+  Estructura de 3 niveles de contenidos en el menú.
 
 Para ello, por favor acceda a la :menuselection:`Configuración del sitio -->  Configuración de Complementos --> Configuración de menú desplegable`, como la siguiente pantalla:
 
-.. image:: dropdown_imagen_4.png
+.. figure:: dropdown_imagen_4.png
   :align: center
-  :alt: Configuración del Dropdown menu.
   :width: 640px
   :height: 368px
-  :target: ../../../_images/dropdown_imagen_4.png
+  :alt: Configuración del Dropdown menu.
+
+  Configuración del Dropdown menu.
 
 Reemplace el **numero tres (3)** por el número de niveles que desea mostrar debajo del 
 nivel raíz. Tenga en cuenta que el **número cero (0)** cancela el efecto del menú desplegable 
@@ -146,6 +143,13 @@ Referencias
 ===========
 
 * `DropDown Menu — Tutorial Plone 4`_.
+
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 23 de Septiembre de 2014
 
 .. _Denys Mishunov: http://mishunov.me/
 .. _Quintagroup Plone Drop Down Menu: http://plone.org/products/plone-drop-down-menu
