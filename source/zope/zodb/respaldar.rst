@@ -27,6 +27,8 @@ interfaz de Plone pueden encontrarse como BLOBs in :file:`var/blobstorage`.
     Para mas detalle sobre estos archivos y directorios consulte
     :ref:`Directorios de ZODB <directorios_zodb>`.
 
+.. _backup:
+
 Generando copias de seguridad
 -----------------------------
 
@@ -47,6 +49,8 @@ se encuentra en el directorio:
     El procedimiento de compactación se recomienda realizar con significativamente menos
     frecuencia que la copia de seguridad.
 
+.. _backup_quick:
+
 Copias de seguridad incremental
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -56,6 +60,8 @@ con los siguientes comando: ::
 
     $ mkdir backups
     $ ./bin/repozo -BvzQ -r backups -f var/filestorage/Data.fs
+
+.. _backup_full:
 
 Copias de seguridad completa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,11 +76,15 @@ siguientes pasos:
 
     $ ./bin/repozo -BvzF -r backups -f var/filestorage/Data.fs
 
+.. _restore:
+
 Restaurar copias de seguridad
 -----------------------------
 
 Zope provee un script :program:`repozo.py` que le permite no solo realizar
 copias de seguridad de la ZODB sino también restaurarlas.
+
+.. _restore_full:
 
 Restaurar copias de seguridad completa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -82,7 +92,8 @@ Restaurar copias de seguridad completa
 Para restaurar una copia de seguridad completa, se debe realizar los
 siguientes pasos:
 
-#. En primer lugar *detener* la instancia Zope (standalone o Zeo).
+#. En primer lugar **detener** el servivio del servidor Zope (*Zeo* y sus clientes o
+   la instancia Zope *standalone*).
 
 #. Localiza la ruta donde se hicieron las copias de seguridad incrementales.
    Para en este articulo usamos :file:`backups`.
@@ -105,9 +116,25 @@ siguientes pasos:
 
     $ ./bin/repozo -Rv -r backups -o var/filestorage/Data.fs
 
-Esto comando creará un archivo :file:`Data.fs` en la ubicación especificada con
-el parámetro ``-o`` en base a las copias de seguridad realizadas por :program:`repozo`
-del repositorio llamado :file:`backups` especificado con el parámetro ``-r``.
+    El resultado de la ejecucion de comando deberia ser algo asi: ::
+
+        looking for files between last full backup and 2006-06-23-19-39-20...
+        files needed to recover state as of 2006-06-23-19-39-20:
+               /srv/plone/instance/backups/2006-06-23-18-49-47.fs
+               /srv/plone/instance/backups/2006-06-23-18-55-56.deltafs
+        Recovering file to /srv/plone/instance/var/filestorage/Data.fs
+        Recovered 6435866 bytes, md5: 4470d48dfeae1f6201cc594142408bfe
+
+    Esto comando examina las copias de seguridad disponibles, busca el mas reciente y
+    mezcla cualquier copia de seguridad incremental (si esta presente). Ademas este
+    creará un archivo :file:`Data.fs` en la ubicación especificada con el parámetro
+    ``-o`` en base a las copias de seguridad realizadas por :program:`repozo`
+    del repositorio llamado :file:`backups` especificado con el parámetro ``-r``.
+
+#. Por ultimo, asegúrese de **iniciar** el servidor Zope (*Zeo* y al menos un cliente o
+   la instancia Zope *standalone*.
+
+.. _restore_date:
 
 Restaurar copias de seguridad a partir de una fecha determinada
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -136,7 +163,7 @@ fecha especifica *2014-07-02* usando el parámetro ``--date``.
     El detalle del parámetro ``--date`` se puede consultar en la referencia
     de recuperar de copia de seguridad de :ref:`repozo <repozo_recover>`.
 
-
+.. _repozo_buildout:
 
 repozo usando buildout
 ----------------------
@@ -476,9 +503,12 @@ Referencias
 
 - `Recovering a ZODB Data.fs file using repozo`_.
 
+- `Restoring Backups`_.
+
 .. _ZODB Database: http://docs.plone.org/develop/plone/persistency/database.html
 .. _Backup der ZODB: http://www.plone-entwicklerhandbuch.de/plone-entwicklerhandbuch/produktivserver/backup-der-zodb
 .. _Recovering a ZODB Data.fs file using repozo: http://www.coactivate.org/projects/opencore/recovering-the-production-database
+.. _Restoring Backups: http://www.enfoldsystems.com/software/server/docs/4.0/restoring.html
 .. _rsync-backup.sh: https://gist.github.com/macagua/a20c3fd337c33395b507
 .. _Easy Automated Snapshot-Style Backups with Linux and Rsync: http://www.mikerubel.org/computers/rsync_snapshots/
 .. _Cygwin: https://www.cygwin.com/
