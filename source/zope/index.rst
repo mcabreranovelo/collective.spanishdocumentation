@@ -75,6 +75,8 @@ Primeros pasos en Zope
 
        :ref:`Ejecutando con Servidor Nginx <zope_plone_webserver_nginx>`
 
+       :ref:`El programa repozo.py <repozo_py>`
+
 Programación en Zope
 ====================
 
