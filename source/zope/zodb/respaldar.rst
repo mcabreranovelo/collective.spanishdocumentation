@@ -2,56 +2,155 @@
 
 .. _backup_zodb:
 
-Backup de la ZODB
-=================
+Respaldo de la ZODB
+===================
 
 .. sidebar:: Sobre este artículo
 
     :Traductor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Agosto de 2014
+    :Fecha: 28 de Septiembre de 2014
 
 .. note::
     En esta es una traducción del articulo llamado `Backup der ZODB`_
     donde se ofrece la información de como reparar una ZODB.
 
+Archivos de base de datos
+-------------------------
+
+Usualmente la base de datos de Plone esta configurado en el archivo
+:file:`var/filestorage/Data.fs` y los archivos cargados desde la
+interfaz de Plone pueden encontrarse como BLOBs in :file:`var/blobstorage`.
+
+.. tip:: 
+    Para mas detalle sobre estos archivos y directorios consulte
+    :ref:`Directorios de ZODB <directorios_zodb>`.
+
+Generando copias de seguridad
+-----------------------------
+
 Zope provee un script :program:`repozo.py` que le permite realizar
 copias de seguridad de la ZODB durante su funcionamiento.
 
-Es como ya se tiene :program:`zeopack.py` en ``parts/zope2/utilities/ZODBTools/``.
-Además, se puede personalizar con :program:`repozo.py` para crear copias de
-seguridad incrementales.
+Para instalaciones Plone 4.3 usando configuraciones buildout bajo Linux
+se encuentra en el directorio:
 
-La receta `plone.recipe.zope2instance`_ crea una envoltura del script
-:program:`repozo.py` que genera con el nombre :program:`repozo` en el
-directorio :file:`bin`.
+- :file:`eggs/ZODB3-3.10.5-py2.7-linux-i686.egg/ZODB/scripts/repozo.py`.
 
-Para generar una copia de seguridad incremental, primero que debe crear el directorio
-:file:`backups`, que corresponden antes de que el script :program:`repozo` con los
-siguientes comando:
+.. note::
+    Esto puede variar entre versiones de Plone y Zope.
 
-::
+.. warning::
+    Ejecutar :program:`repozo` sólo se puede realizar una copia de seguridad
+    completa de nuevo después de cada :ref:`compactación de ZODB <compactar_zodb>`.
+    El procedimiento de compactación se recomienda realizar con significativamente menos
+    frecuencia que la copia de seguridad.
+
+Copias de seguridad incremental
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para generar una copia de seguridad incremental, primero que debe crear el
+directorio :file:`backups`, el cual se usara con el programa :program:`repozo`
+con los siguientes comando: ::
 
     $ mkdir backups
     $ ./bin/repozo -BvzQ -r backups -f var/filestorage/Data.fs
 
-Si se restaura una copia de seguridad una vez más, se debe detener la instancia Zope
-en primer lugar, se crea una copia de los posibles ``Data.fs`` corruptos y sólo entonces
-ejecute ``repozo`` con el siguiente comando:
+Copias de seguridad completa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+Para generar una copia de seguridad completa, se debe realizar los
+siguientes pasos:
 
-    $ ./bin/repozo -Rv -r backups -o Data.fs
+#. En primer lugar, debe crear el directorio :file:`backups`
+   con el comando :command:`mkdir backups`.
 
-.. warning::
-    Ejecutar :program:`repozo` después de cada :ref:`compactación de ZODB <compactar_zodb>`,
-    sólo se puede realizar una copia de seguridad completa de nuevo, la compactación se
-    recomienda realizar con significativamente menos frecuencia que la copia de seguridad.
+#. Entonces ejecute el programa :program:`repozo`, con el siguiente comando: ::
 
-También se puede crear de forma automática una tarea de este comando de respaldo de datos
-con la receta `z3c.recipe.usercrontab`_. Para este propósito, inscrita en el archivo
-:file:`buildout.cfg` la siguiente configuración:
+    $ ./bin/repozo -BvzF -r backups -f var/filestorage/Data.fs
+
+Restaurar copias de seguridad
+-----------------------------
+
+Zope provee un script :program:`repozo.py` que le permite no solo realizar
+copias de seguridad de la ZODB sino también restaurarlas.
+
+Restaurar copias de seguridad completa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para restaurar una copia de seguridad completa, se debe realizar los
+siguientes pasos:
+
+#. En primer lugar *detener* la instancia Zope (standalone o Zeo).
+
+#. Localiza la ruta donde se hicieron las copias de seguridad incrementales.
+   Para en este articulo usamos :file:`backups`.
+
+#. Compruebe que los archivos de copia de seguridad incrementales se encuentran
+   dentro de este directorio. Las secuencias de comandos de copia de seguridad
+   escriben de forma automática la base de datos en el directorio de copia de seguridad
+   en uno de los dos formatos, una copia incremental y una copia de seguridad completa.
+   Puede detectar la diferencia al ver las extensiones de archivo: 
+
+   - El archivo con extensión ``.fs``, es una copia de seguridad completa.
+
+   - El archivo con extensión ``.deltafs``, es una copia de seguridad incremental.
+
+   .. tip::
+       Cree una copia del archivo :file:`Data.fs` con los posibles objetos corruptos,
+       por previsión.
+
+#. Entonces ejecute el programa :program:`repozo` con el siguiente comando: ::
+
+    $ ./bin/repozo -Rv -r backups -o var/filestorage/Data.fs
+
+Esto comando creará un archivo :file:`Data.fs` en la ubicación especificada con
+el parámetro ``-o`` en base a las copias de seguridad realizadas por :program:`repozo`
+del repositorio llamado :file:`backups` especificado con el parámetro ``-r``.
+
+Restaurar copias de seguridad a partir de una fecha determinada
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A veces, es necesario retroceder en el tiempo y recuperar datos perdidos,
+o crear una base de datos de pruebas de las copias de seguridad de los
+datos de producción.
+
+Para recrear el archivo de datos para una fecha en particular utilice
+el programa :program:`repozo`, primero que debe tener acceso al repositorio
+de copias de seguridad (en este articulo usamos :file:`backups`), el cual
+se usara con el programa :program:`repozo` con el siguiente comando: ::
+
+    $ ./bin/repozo -R --r backups --date='2014-07-02' -o var/filestorage/Data.fs
+
+Esto comando creará un archivo :file:`Data.fs` en la ubicación especificada con
+el parámetro ``-o`` en base a las copias de seguridad realizadas por :program:`repozo`
+del repositorio llamado :file:`backups` especificado con el parámetro ``-r`` y con la
+fecha especifica *2014-07-02* usando el parámetro ``--date``.
+
+.. tip::
+    Yo siempre uso la fecha de mañana para --date='yyyy-mm-dd' fin de obtener
+    todos los cambios del día de hoy.
+
+.. note::
+    El detalle del parámetro ``--date`` se puede consultar en la referencia
+    de recuperar de copia de seguridad de :ref:`repozo <repozo_recover>`.
+
+
+
+repozo usando buildout
+----------------------
+
+Además, se puede personalizar con programa :program:`repozo.py` para
+crear copias de seguridad incrementales y completas, usando la receta
+`plone.recipe.zope2instance`_ crea una envoltura del script
+:program:`repozo.py` que genera con el nombre :program:`repozo` en el
+directorio :file:`bin`.
+
+También se puede crear de forma automática una tarea de este comando
+de respaldo de datos con la receta `z3c.recipe.usercrontab`_. Para
+este propósito, inscrita en el archivo :file:`buildout.cfg` la siguiente
+configuración:
 
 ::
 
@@ -64,7 +163,7 @@ con la receta `z3c.recipe.usercrontab`_. Para este propósito, inscrita en el ar
     recipe = z3c.recipe.usercrontab
     times = 15 0 * * *
     command =
-        ${buildout:bin-directory}/repozo  -BvzQ -r ${buildout:directory}/backups \
+        ${buildout:bin-directory}/repozo -BvzQ -r ${buildout:directory}/backups \
         -f ${buildout:directory}/var/filestorage/Data.fs
 
 Copia de seguridad de múltiples de ZODBs en una instancia
@@ -110,8 +209,8 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
 
         location = ${buildout:directory}/backups
 
-    hay en la carpeta de proyectos buildout las sub-carpetas generadas
-    ``backups_Catalog`` y ``backups_Extra``. Este contendrá la copia de 
+    Allí en la carpeta de proyectos buildout las sub-carpetas generadas
+    :file:`backups_Catalog` y :file:`backups_Extra`. Este contendrá la copia de 
     seguridad de cada base de datos.
 
 ``keep``
@@ -155,8 +254,8 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
     externalizado su catálogo separado en una ZODB o participado más puntos 
     de montajes de ZODBs.
 
-Al usar la receta ``collective.recipe.backup`` este patrón cambia
-en la directiva ``command`` bajo la sección ``[backup-crontab]``:
+Al usar la receta ``collective.recipe.backup`` este patrón cambia en la directiva
+``command`` bajo la sección ``[backup-crontab]`` como se muestra a continuación:
 
 ::
 
@@ -168,7 +267,7 @@ Eliminación de copias de seguridad antiguas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Las copias de seguridad antiguas se deben eliminar después de un cierto tiempo.
-En nuestro ejemplo, las siguientes copias de seguridad incrementales después de dos
+En este ejemplo, las siguientes copias de seguridad incrementales después de dos
 semanas y copias de seguridad completas después de cinco semanas se eliminan:
 
 ::
@@ -189,21 +288,26 @@ semanas y copias de seguridad completas después de cinco semanas se eliminan:
     times = 8 0 * * *
     command = find ${buildout:directory}/backups -name \*dat -ctime +35 -delete
 
+Puede comprobar la definición de las tareas crontab ejecutando el siguiente comando: ::
+
+    $ crontab -l
+
 .. _blob_storage:
 
-Blob-Storages
-~~~~~~~~~~~~~
+Blob Storages
+-------------
 
-Con la receta ``collective.recipe.backup`` partir de la versión 2.0
-también puede ser crear copias de seguridad del almacenamiento
-Blob. Desde la versión 4.0 en Plone normalmente todas las imágenes
-y los archivos (*Binary large objects - Blob*) se almacenan en el
-sistema de archivos.
+Nosotros podemos realizar copias de seguridad de blob storage. Desde la versión 4.0
+en Plone normalmente todas las imágenes y los archivos (*Binary large objects - Blob*)
+se almacenan en el sistema de archivos. En Plone 3 es opcional. Por lo tanto también
+necesita copias de seguridad de este almacenamiento ``blob``. 
 
-Por lo tanto también necesita copias de seguridad de este almacenamiento blob.
-Si no se especifica la ubicación del almacenamiento de blob en la receta
-``plone.recipe.zope2instance`` también puede hacerlo con ``blob_storage``
-especificar explícitamente la ruta:
+Con la receta ``collective.recipe.backup`` partir de la versión 2.0 también puede ser
+crear copias de seguridad del almacenamiento Blob. 
+
+Si no se especifica el directorio donde Plone (o Zope) almacena sus ``blobs`` en la receta
+``plone.recipe.zope2instance`` también puede especificar explícitamente la ruta del directorio
+con la declarativa ``blob_storage`` de la receta ``collective.recipe.backup``:
 
 ::
 
@@ -243,7 +347,7 @@ copia de seguridad para los ZODBs y los almacenamientos blob:
 Los siguientes atributos se añadieron nuevos:
 
 ``blob-storage``
-    Directorio donde se guardan los blob-storage.
+    Directorio donde se guardan los ``blob-storage``.
 
     Esta opción se ignora si ``backup_blobs = false``.
 
@@ -306,7 +410,6 @@ no Blob-Storages adicionales. Para esto posiblemente tendría que ser creado
 su propia sección Buildout, lo que crea un segundo conjunto de scripts de
 copia de seguridad, por ejemplo:
 
-
 ::
 
     [extrablobbackup]
@@ -339,13 +442,13 @@ por ejemplo, cree el archivo :file:`rsync.cfg` con la siguiente contenido:
 
     [rsync-file]
     recipe = collective.recipe.rsync
-    source = veit-schiele.de:/srv/www.veit-schiele.de/var/filestorage/Data.fs
+    source = TUSITIO.COM:/srv/www.TUSITIO.COM/var/filestorage/Data.fs
     target = var/filestorage/Data.fs
     script = true
 
     [rsync-blob]
     recipe = collective.recipe.rsync
-    source = veit-schiele.de:/srv/www.veit-schiele.de/var/blobstorage/
+    source = TUSITIO.COM:/srv/www.TUSITIO.COM/var/blobstorage/
     target = var/blobstorage/
     script = true
 
@@ -367,9 +470,15 @@ por ejemplo, cree el archivo :file:`rsync.cfg` con la siguiente contenido:
 Referencias
 ~~~~~~~~~~~
 
+- `ZODB Database`_.
+
 - `Backup der ZODB`_.
 
+- `Recovering a ZODB Data.fs file using repozo`_.
+
+.. _ZODB Database: http://docs.plone.org/develop/plone/persistency/database.html
 .. _Backup der ZODB: http://www.plone-entwicklerhandbuch.de/plone-entwicklerhandbuch/produktivserver/backup-der-zodb
+.. _Recovering a ZODB Data.fs file using repozo: http://www.coactivate.org/projects/opencore/recovering-the-production-database
 .. _rsync-backup.sh: https://gist.github.com/macagua/a20c3fd337c33395b507
 .. _Easy Automated Snapshot-Style Backups with Linux and Rsync: http://www.mikerubel.org/computers/rsync_snapshots/
 .. _Cygwin: https://www.cygwin.com/
