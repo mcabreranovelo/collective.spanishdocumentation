@@ -13,30 +13,63 @@ Compactar la ZODB de sitio Plone
     :Compatible con: Plone 3, Plone 4
     :Fecha: 30 de Agosto de 2014
 
+Tamaño de base de datos
+=======================
+
+Sólo la naturaleza de la agregación de la :ref:`ZODB <que_es_zodb>`
+hace que la base de datos crezca continuamente, incluso si sólo
+editar la información existente y no añade ningún nuevo contenido.
+Para asegurarse de que el disco duro de su servidor no se llene
+rápidamente, usted necesita compactar la :ref:`ZODB <que_es_zodb>`
+automática y regularmente.
+
+La ZODB almacena cada copia de todos los objetos modificados en una
+transacción. Esto puede causar que la base de datos crezca bastante
+grande. En realidad no hay ninguna reducción al tamaño de una base
+de datos grande aparte de tener un archivo grande de manejar. Tiene
+poca o ninguna influencia en el rendimiento del sitio. No hay límite
+para el tamaño de este archivo, sólo lo que el sistema de archivos
+puede manejar. Los tamaños aproximados a *10gb* no son infrecuentes.
+
+Como administrador del sistema tendrá que gestionar que un archivo
+para asegurarse de que cosas como las copias de seguridad o copias
+del sistema no se vuelvan difíciles de manejar como el archivo creciente.
+
+Por esta razón se recomienda hacer una compactar (``pack``) de la base
+de datos normalmente. Esto elimina todas las copias antiguas en la
+base de datos. Si está ejecutando una copia de seguridad de forma
+regularmente (ver :ref:`copias de seguridad <backup>`), entonces usted
+debe tener todos los registros de cada cambio.
+
 ¿En que consta compactar la ZODB?
 =================================
 
-Sólo la naturaleza de la agregación de la :ref:`ZODB <que_es_zodb>` hace que la base de datos 
-crezca continuamente, incluso si sólo editar la información existente y no añade ningún nuevo 
-contenido. Para asegurarse de que el disco duro de su servidor no se llene rápidamente, usted 
-necesita compactar la :ref:`ZODB <que_es_zodb>` automática y regularmente.
-
 Los beneficios son los siguientes:
 
-- Compactando la :ref:`ZODB <que_es_zodb>` remueve las versiones de objetos viejos, así que una 
-  vez que se hace, ya no se puede deshacer.
+- Compactando la :ref:`ZODB <que_es_zodb>` remueve las versiones
+  de objetos viejos, así que una vez que se hace, ya no se puede
+  deshacer.
   
 - Puede haber un poco de ventaja en el rendimiento.
 
-- Hay beneficios en el tamaño de la base de datos con respecto al espacio de 
-  almacenamiento físico del disco duro.
+- Hay beneficios en el tamaño de la base de datos con respecto al
+  espacio de almacenamiento físico del disco duro.
 
-- Compactar la :ref:`ZODB <que_es_zodb>` es similar a un `VACUUM`_ en PostgreSQL.
+- Compactar la :ref:`ZODB <que_es_zodb>` es similar a un `VACUUM`_
+  en PostgreSQL.
 
 Compactar la ZODB con tareas crontab
 ------------------------------------
-Para esto utilizaremos configuraciones para :ref:`programar tareas con crontab <buildout_crontab>` 
-para el compactación de la :ref:`ZODB <que_es_zodb>`.
+
+Las tareas programadas de compactar (``pack``) la base de datos se
+pueden configurar de forma predeterminada, eliminando de los datos
+históricos no versionados en el sistema. Si usted está usando la
+función de control de versiones de Plone (nuevo en Plone 3.x), a
+continuación, el compactar (``pack``) será sin eliminar el contenido
+versionado.
+
+Para esto utilizaremos configuraciones para :ref:`programar tareas
+con crontab <buildout_crontab>`  para el compactación de la :ref:`ZODB <que_es_zodb>`.
 
 A continuación se describen dos ejemplos útiles:
 
@@ -82,6 +115,14 @@ Si tu instalación es un :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` y usando
 :ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado :command:`zeopack` 
 que ofrece esta instalación para que cada cierto tiempo realice tareas de 
 compactar la :ref:`ZODB <que_es_zodb>`, a continuación un ejemplo de configuración:
+
+Para instalaciones Plone 4.3 usando configuraciones buildout bajo Linux
+se encuentra el programa :program:`zeopack.py` en el directorio:
+
+- :file:`eggs/ZODB3-3.10.5-py2.7-linux-i686.egg/ZEO/scripts/zeopack.py`.
+
+.. note::
+    Esto puede variar entre versiones de Plone y Zope.
 
 .. tip::
     Un script :command:`zeopack` sera generado para usted en el directorio bin del 
@@ -139,22 +180,24 @@ al raíz de Zope desde la :ref:`ZMI <que_es_zmi>`, del lado derecha elija de la
 lista de selección la opción **Script (Python)** y haga clic en el botón **Add**, 
 como se ilustra a continuación:
 
-.. image:: ./zmi_select_to_add_script_python.jpg
+.. figure:: ./zmi_select_to_add_script_python.jpg
   :alt: Agregar "Script (Python)" desde la Zope Management Interface - ZMI
   :align: center
   :width: 314px
   :height: 310px
-  :target: ../../_images/zmi_select_to_add_script_python.jpg
+
+  Agregar "Script (Python)" desde la Zope Management Interface - ZMI
 
 Entonces en el campo **Id** coloque ``pack_it_all``, luego haga clic en el botón 
 **Add and Edit**, como se ilustra a continuación: 
 
-.. image:: ./zmi_add_script_python.jpg
+.. figure:: ./zmi_add_script_python.jpg
   :alt: Detalle del "Script (Python)" desde la Zope Management Interface - ZMI
   :align: center
   :width: 431px
   :height: 195px
-  :target: ../../_images/zmi_add_script_python.jpg
+
+  Detalle del "Script (Python)" desde la Zope Management Interface - ZMI
 
 Seguidamente agregue el siguiente contenido al script:
 
