@@ -11,7 +11,7 @@ Compactar la ZODB de sitio Plone
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Agosto de 2014
+    :Fecha: 28 de Septiembre de 2014
 
 Tamaño de base de datos
 =======================
@@ -42,7 +42,7 @@ regularmente (ver :ref:`copias de seguridad <backup>`), entonces usted
 debe tener todos los registros de cada cambio.
 
 ¿En que consta compactar la ZODB?
-=================================
+---------------------------------
 
 Los beneficios son los siguientes:
 
@@ -58,8 +58,8 @@ Los beneficios son los siguientes:
 - Compactar la :ref:`ZODB <que_es_zodb>` es similar a un `VACUUM`_
   en PostgreSQL.
 
-Compactar la ZODB con tareas crontab
-------------------------------------
+Compactar con tareas crontab
+============================
 
 Las tareas programadas de compactar (``pack``) la base de datos se
 pueden configurar de forma predeterminada, eliminando de los datos
@@ -73,8 +73,8 @@ con crontab <buildout_crontab>`  para el compactación de la :ref:`ZODB <que_es_
 
 A continuación se describen dos ejemplos útiles:
 
-Usando Zope standalone y zc.buildout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Usando Zope standalone y buildout
+---------------------------------
 
 Si tu instalación es una :ref:`Zope standalone <ser-zeo-o-no-ser-zeo>` y estas usando 
 :ref:`zc.buildout <que_es_zcbuildout>` debes crearte un script que cada cierto tiempo 
@@ -103,13 +103,14 @@ configuración:
     deben tener asignado el nombre del usuario y contraseña Administrador Zope 
     de su instalación.
     
-    El parámetro ``--post-data`` define los días para el cual compactara la :ref:`ZODB <que_es_zodb>` 
+    El parámetro ``--post-data`` define los días para el cual compactara la
+    :ref:`ZODB <que_es_zodb>`.
     
     En el caso de que use :ref:`puntos de montajes <puntos_montaje_zodb>` debe 
     indicar la ruta en la dirección URL del comando :command:`wget`.
 
-Usando ZEO y zc.buildout
-~~~~~~~~~~~~~~~~~~~~~~~~
+Usando servidor ZEO y buildout
+------------------------------
 
 Si tu instalación es un :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` y usando 
 :ref:`zc.buildout <que_es_zcbuildout>` puede usar el script llamado :command:`zeopack` 
@@ -125,7 +126,7 @@ se encuentra el programa :program:`zeopack.py` en el directorio:
     Esto puede variar entre versiones de Plone y Zope.
 
 .. tip::
-    Un script :command:`zeopack` sera generado para usted en el directorio bin del 
+    Un script :command:`zeopack` sera generado para usted en el directorio :file:`bin` del
     proyecto buildout, a menos que usted cambien eso con la opción 
     ``zeopack-script-name``, en este caso el script sera llamado como el 
     nombre que usted especifique en este parámetro. 
@@ -153,7 +154,7 @@ se encuentra el programa :program:`zeopack.py` en el directorio:
     Usted puede especificar la opción ``-B`` para no usar el directorio por defecto :file:`blob`.
 
 Compactando sin crontab
------------------------
+=======================
 
 Existe otra forma de realizar tareas de compactar la :ref:`ZODB <que_es_zodb>` automáticamente 
 sin usar tareas crontab.
@@ -218,7 +219,6 @@ el funcionamiento del script puede hacer clic en la pestaña **Test** para verif
 su funcionamiento, de igual forma con las configuraciones del producto ``Products.ClockServer`` 
 descrita en la declarativa ``zope-conf-additional`` dentro de su sección ``instance`` 
 se programa la tarea la cual compactara la :ref:`ZODB <que_es_zodb>` cada tres (3) días.
-
 
 Descarga código fuente
 ======================
