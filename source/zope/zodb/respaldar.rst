@@ -114,22 +114,22 @@ siguientes pasos:
 
 #. Entonces ejecute el programa :program:`repozo` con el siguiente comando: ::
 
-    $ ./bin/repozo -Rv -r backups -o var/filestorage/Data.fs
+       $ ./bin/repozo -Rv -r backups -o var/filestorage/Data.fs
 
-    El resultado de la ejecucion de comando deberia ser algo asi: ::
+   El resultado de la ejecucion de comando deberia ser algo asi: ::
 
-        looking for files between last full backup and 2006-06-23-19-39-20...
-        files needed to recover state as of 2006-06-23-19-39-20:
-               /srv/plone/instance/backups/2006-06-23-18-49-47.fs
-               /srv/plone/instance/backups/2006-06-23-18-55-56.deltafs
-        Recovering file to /srv/plone/instance/var/filestorage/Data.fs
-        Recovered 6435866 bytes, md5: 4470d48dfeae1f6201cc594142408bfe
+       looking for files between last full backup and 2006-06-23-19-39-20...
+       files needed to recover state as of 2006-06-23-19-39-20:
+              /srv/plone/instance/backups/2006-06-23-18-49-47.fs
+              /srv/plone/instance/backups/2006-06-23-18-55-56.deltafs
+       Recovering file to /srv/plone/instance/var/filestorage/Data.fs
+       Recovered 6435866 bytes, md5: 4470d48dfeae1f6201cc594142408bfe
 
-    Esto comando examina las copias de seguridad disponibles, busca el mas reciente y
-    mezcla cualquier copia de seguridad incremental (si esta presente). Ademas este
-    creará un archivo :file:`Data.fs` en la ubicación especificada con el parámetro
-    ``-o`` en base a las copias de seguridad realizadas por :program:`repozo`
-    del repositorio llamado :file:`backups` especificado con el parámetro ``-r``.
+   Esto comando examina las copias de seguridad disponibles, busca el mas reciente y
+   mezcla cualquier copia de seguridad incremental (si esta presente). Ademas este
+   creará un archivo :file:`Data.fs` en la ubicación especificada con el parámetro
+   ``-o`` en base a las copias de seguridad realizadas por :program:`repozo`
+   del repositorio llamado :file:`backups` especificado con el parámetro ``-r``.
 
 #. Por ultimo, asegúrese de **iniciar** el servidor Zope (*Zeo* y al menos un cliente o
    la instancia Zope *standalone*.
