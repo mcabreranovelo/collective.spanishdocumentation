@@ -8,15 +8,17 @@
 ­­Requerimientos de sistema de Plone
 ====================================
 
-:Traductor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Lanzamiento: Plone 3.x, Plone 4.x
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este artículo
+
+    :Traductor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Lanzamiento: Plone 3.x, Plone 4.x
+    :Fecha: 29 de septiembre de 2014
 
 En esta es una traducción del articulo llamado `Plone system requirements`_.
 
 ­Este documento busca definir que tipo de requerimientos de ejecución 
-de una instalación Plone necesita tanto en Hardware y sistema operativo.
+de una instalación Plone necesita tanto en hardware y sistema operativo.
 
 
 Requisitos instalar Plone
@@ -25,16 +27,16 @@ Requisitos instalar Plone
 Para ejecutar un sitio Web basado en Plone usted necesita:
 
 
-1.  Un computador en modo servidor conectado a Internet (para sitios
+#.  Un computador en modo servidor conectado a Internet (para sitios
     públicos) o en Intranet (para sitios corporativos).
 
-2.  Acceso a consola de comando para instalar Plone (acceso por FTP, no
+#.  Acceso a consola de comando para instalar Plone (acceso por FTP, no
     es suficiente).
 
-3.  Habilidad de ejecutar en procesos como un servicio en el servidor de
+#.  Habilidad de ejecutar en procesos como un servicio en el servidor de
     hospedaje.
 
-4.  Habilidad para abrir puertos arbitrariamente. Zope quiere abrir su
+#.  Habilidad para abrir puertos arbitrariamente. Zope quiere abrir su
     propio puerto para recibir solicitudes.
 
 Los proveedores de hospedaje de gama baja no le ofrecen por lo general las
@@ -82,13 +84,14 @@ estas dependencias. Si necesita más instrucciones para instalar estos paquetes
 favor de referencia: :ref:`Instalación de Plone <instalando_plone>`.
 
 .. note::
-    Plone requiere Python 2.6 o 2.7. Las herramientas de Desarrollo son requerida para Linux (GCC).
+    Plone requiere Python 2.6 o 2.7. Las herramientas de Desarrollo son requerida
+    para Linux (GCC).
 
-Requisitos del Hardware
+Requisitos del hardware
 -----------------------
 
-Los requerimientos de Hardware a continuación dar una estimación aproximada
-de qué tipo de configuración mínimas de Hardware se necesita para un servidor
+Los requerimientos de hardware a continuación dar una estimación aproximada
+de qué tipo de configuración mínimas de hardware se necesita para un servidor
 de Plone.
 
 Los productos adicionales y soluciones de caching puede incrementar los
@@ -99,7 +102,7 @@ Plone con la misma configuración de Software. Esto baja los requerimientos
 cuando hospedas múltiples sitios en el mismo servidor.
 
 
-Requisitos mínimos de Hardware
+Requisitos mínimos de hardware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -   Mínimo 256 MB RAM y 512 MB de memoria de intercambio por cada sitio
@@ -125,19 +128,20 @@ Hardware recomendado
 Soluciones de hospedaje
 -----------------------
 
-Por favor, consulte con fines comerciales el sitio `plone.net`_ para buscar
+Por favor, consulte con fines comerciales el sitio `plone.org`_ para buscar
 proveedores de hospedaje o elija cualquier solución de servidor o maquina
-virtual de hospedaje cumpliendo con los requerimientos de Hardware.
+virtual de hospedaje cumpliendo con los requerimientos de hardware.
 
 Referencias
 -----------
 
--   `Requerimientos de sistema de Plone`_ desde la comunidad de Plone Venezuela.
--   `Plone system requirements`_.
+- `Plone system requirements`_.
 
-.. _Requerimientos de sistema de Plone: http://www.coactivate.org/projects/ploneve/~xad~xadrequerimientos-de-sistema-de-plone
-.. _plone.net: http://plone.net/hosting-providers
+- `Requerimientos de sistema de Plone`_ desde la comunidad de Plone Venezuela.
+
 .. _Plone system requirements: http://plone.org/documentation/kb/plone-system-requirements
+.. _plone.org: http://plone.org/providers
 .. _Hosting providers from plone.net website: http://plone.org/support/hosting-providers
 .. _escala: http://plone.org/documentation/faq/scalability
 .. _servidor ZEO: http://plone.org/documentation/glossary/zeo-server
+.. _Requerimientos de sistema de Plone: http://www.coactivate.org/projects/ploneve/~xad~xadrequerimientos-de-sistema-de-plone

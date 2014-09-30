@@ -4,10 +4,12 @@
 Agregando módulos y complementos adicionales a Plone
 ====================================================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 4
-:Fecha: 31 de Agosto de 2014
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 4
+    :Fecha: 29 de septiembre de 2014
 
 En esta articulo busca explicar la instalación de módulos y complementos 
 adicionales a Plone 3 y Plone 4, además de no ser una guía paso a paso 
@@ -55,20 +57,20 @@ al menú *Personal en la esquina superior derecha con el nombre real o
 el nombre de usuario* y luego hace clic en :menuselection:`Configuración del sitio`.
 
 .. figure:: productos_complementos_1.png
-  :alt: Configuración del sitio
   :align: center
   :width: 640px
   :height: 448px
+  :alt: Configuración del sitio
 
   **Configuración del sitio**
 
 En el panel **Configuración del sitio**, haga clic en la sección **Complementos**.
 
 .. figure:: productos_complementos_2.png
-  :alt: sección Complementos
   :align: center
   :width: 640px
   :height: 388px
+  :alt: sección Complementos
 
   **sección Complementos**
 
@@ -76,10 +78,10 @@ Estando en la ruta :menuselection:`Configuración del sitio --> Complementos`, l
 aparecerá la siguiente pantalla:
 
 .. figure:: productos_complementos_3.png
-  :alt: Complementos disponibles a Activar
   :align: center
   :width: 640px
   :height: 333px
+  :alt: Complementos disponibles a Activar
 
   **Complementos disponibles a Activar**
 
@@ -94,10 +96,10 @@ De forma predeterminada, todos los sitios cuentan con algunos productos ya insta
 como se muestra a continuación:
 
 .. figure:: productos_complementos_4.png
-  :alt: Complementos disponibles a Desactivar
   :align: center
   :width: 640px
   :height: 434px
+  :alt: Complementos disponibles a Desactivar
 
   **Complementos disponibles a Desactivar**
 
@@ -170,12 +172,14 @@ Funcionamiento
 ==============
 La herramienta ``zc.buildout`` funciona en base a los siguientes pasos ilustrados e 
 descritos a continuación:
- 
-.. image:: ./como_instalar_addons_plone.png
-  :alt: Como instalar Add ons en Plone
+
+.. figure:: ./como_instalar_addons_plone.png
   :align: center
   :width: 640px
   :height: 453px
+  :alt: Como instalar Add ons en Plone
+
+  **Como instalar Add ons en Plone**
 
 #. Las configuraciones se efectúan en el archivo :ref:`buildout.cfg <buildout_cfg>`.
 
@@ -195,10 +199,11 @@ Ejemplo de uso
 
 Para ejemplificar estos conceptos previos, agregue el siguiente producto:
 
-.. image:: ./screenshot_007.png
+.. figure:: ./screenshot_007.png
   :align: center
   :alt: El producto heddex.tranquility-theme
 
+  **El producto heddex.tranquility-theme**
 
 `heddex.tranquility theme`_, es un tema se empaqueta como un paquete egg Python 
 y en la `página del producto en plone.org`_ tiene buenas instrucciones de instalación. 
