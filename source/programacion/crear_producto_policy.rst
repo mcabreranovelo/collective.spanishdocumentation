@@ -450,9 +450,9 @@ entonces a continuación se detalla donde y la utilidad contextual de cada uno:
 
 #. Paso 2: el archivo :ref:`import_steps.xml <policy_archivo_importsteps_xml>`.
 
-#. Paso 3: el archivo :ref:`setuphandlers.py <policy_archivo_setuphandlers_py>`.
+#. Paso 3: el archivo :ref:`cliente1.policy_various.txt <policy_archivo_various_txt>`.
 
-#. Paso 4: el archivo :ref:`cliente1.policy_various.txt <policy_archivo_various_txt>`.
+#. Paso 4: el archivo :ref:`setuphandlers.py <policy_archivo_setuphandlers_py>`.
 
 .. _policy_archivo_config_py:
 
@@ -687,6 +687,9 @@ A continuación un ejemplo que muestra como eliminar contenidos desde la método
         # aquí va el código particular
         remove_defaults_nav(portal)
 
+De esta manera se estable el mecanismo de ejecución de código Python
+de los :term:`pasos de importación` de ``GenericSetup``.
+
 .. seealso:: 
   
   -   Articulo sobre :ref:`Generic Setup <perfiles_genericsetup>`.
@@ -696,10 +699,11 @@ A continuación un ejemplo que muestra como eliminar contenidos desde la método
 ¿Cómo instalarlo?
 =================
 
-Luego de generar el producto de configuración debe agregar este a la configuración buildout 
-para completar la instalación de este producto. Esto se realiza usando la herramienta 
-:ref:`zc.buildout <que_es_zcbuildout>` para esto usted tiene que agregar el producto a las 
-sección ``eggs`` del archivo :file:`buildout.cfg` como se muestra a continuación:
+Luego de generar el producto de configuración debe agregar este a la
+configuración buildout para completar la instalación de este producto.
+Esto se realiza usando la herramienta :ref:`zc.buildout <que_es_zcbuildout>`
+para esto usted tiene que agregar el producto a las sección ``eggs``
+del archivo :file:`buildout.cfg` como se muestra a continuación:
 
 .. code-block:: cfg
 
@@ -707,32 +711,34 @@ sección ``eggs`` del archivo :file:`buildout.cfg` como se muestra a continuaci�
       cliente1.policy
       
 .. note::
-    Debe tener habilitado la extensión :ref:`mr.developer <mrdeveloper>` para gestionar localmente
-    el producto en desarrollo, y posterior publicación en un sistema de control de versiones.
+    Debe tener habilitado la extensión :ref:`mr.developer <mrdeveloper>`
+    para gestionar localmente el producto en desarrollo, y posterior
+    publicación en un sistema de control de versiones.
 
-Quizás dependiendo su configuración en la variable declarativa de ``auto-checkout`` de 
-:ref:`mr.developer <mrdeveloper>` tiene que agregar la siguiente linea:
+Quizás dependiendo su configuración en la variable declarativa de ``auto-checkout``
+de :ref:`mr.developer <mrdeveloper>` tiene que agregar la siguiente linea:
 
 .. code-block:: cfg
 
   auto-checkout =
       cliente1.policy
 
-.. tip:: Usted puede usar el comodín ``*`` en ves de cada linea con los paquetes en desarrollo, 
-    lo cual le indicara a la extensión :ref:`mr.developer <mrdeveloper>` que compruebe local desde 
-    el :term:`filesystem` o remotamente desde un :ref:`control de versiones <rcs_index>` todos los 
-    paquetes de descritos en la sección ``sources``.
+.. tip:: Usted puede usar el comodín ``*`` en ves de cada linea con los paquetes
+    en desarrollo, lo cual le indicara a la extensión :ref:`mr.developer <mrdeveloper>`
+    que compruebe local desde el :term:`filesystem` o remotamente desde un
+    :ref:`control de versiones <rcs_index>` todos los paquetes de descritos en la
+    sección ``sources``.
 
-En la su sección declarativa ``sources`` del archivo :file:`buildout.cfg` tiene que agregar 
-la siguiente linea:
+En la su sección declarativa ``sources`` del archivo :file:`buildout.cfg`
+tiene que agregar la siguiente linea:
 
 .. code-block:: cfg
 
   [sources]
   cliente1.policy = fs cliente1.policy
 
-.. tip:: la opción ``fs`` le indica a la extensión :ref:`mr.developer <mrdeveloper>` que 
-    gestione el paquete localmente desde el :term:`filesystem` o sistema de archivo.
+.. tip:: la opción ``fs`` le indica a la extensión :ref:`mr.developer <mrdeveloper>`
+    que gestione el paquete localmente desde el :term:`filesystem` o sistema de archivo.
 
 Luego ejecute el script :command:`buildout`, de la siguiente forma:
 
@@ -740,8 +746,9 @@ Luego ejecute el script :command:`buildout`, de la siguiente forma:
 
   $ ./bin/buildout -vN
 
-Con este comando busca el paquete o sus dependencias en el repositorio :term:`PyPI`, 
-descarga e instala el producto en su instancia Zope para sus sitios Plone allí hospedados.
+Con este comando busca el paquete o sus dependencias en el repositorio :term:`PyPI`,
+descarga e instala el producto en su instancia Zope para sus sitios Plone allí
+hospedados.
 
 .. note::
     Hasta este punto usted **NO** ha publicado *producto de configuración* en el
@@ -762,19 +769,21 @@ Plone dentro de su :term:`Instancia de Zope`.
 Habilitarlo en Plone
 ====================
 
-Para instalar de este producto de configuraciones existen varias formas de hacerlo, este 
-proceso se hace en la mayoría de los casos manualmente como se describe cada uno a continuación:
+Para instalar de este producto de configuraciones existen varias formas de hacerlo,
+este proceso se hace en la mayoría de los casos manualmente como se describe cada
+uno a continuación:
 
 .. _producto_policy_creacion_sitio:
 
 Durante la creación del sitio
 -----------------------------
 
-Acceda al asistente `Crear un sitio Plone`_ allí indique el **id del sitio**, 
-el **título corto** para el sitio,  seleccione el **idioma por defecto** para 
-el sitio y seleccione cualquier complemento que quiera activar de forma inmediata 
-durante la creación del sitio en la sección **Complementos** en nuestro caso y marque 
-la casilla llamada **cliente1.policy** y luego presione el botón **Crear un Sitio Plone**.
+Acceda al asistente `Crear un sitio Plone`_ allí indique el **id del sitio**,
+el **título corto** para el sitio,  seleccione el **idioma por defecto** para
+el sitio y seleccione cualquier complemento que quiera activar de forma inmediata
+durante la creación del sitio en la sección **Complementos** en nuestro caso y marque
+la casilla llamada **cliente1.policy** y luego presione el botón
+**Crear un Sitio Plone**.
 
 .. todo::
     Agregar capturas de pantallas para este procedimiento
@@ -784,10 +793,10 @@ la casilla llamada **cliente1.policy** y luego presione el botón **Crear un Sit
 Posterior la creación del sitio
 -------------------------------
 
-Si :ref:`durante la creación del sitio <producto_policy_creacion_sitio>` no selecciono en la sección 
-**Complementos** el producto **cliente1.policy**, puede realizar accediendo a la herramienta en 
-:menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` 
-y marque la casilla llamada **cliente1.policy** y luego presione el botón **Install**.
+Si :ref:`durante la creación del sitio <producto_policy_creacion_sitio>` no selecciono
+en la sección **Complementos** el producto **cliente1.policy**, puede realizar accediendo
+a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` y marque la casilla llamada **cliente1.policy** y luego presione
+el botón **Install**.
 
 .. todo::
     Agregar capturas de pantallas para este procedimiento
@@ -797,9 +806,8 @@ y marque la casilla llamada **cliente1.policy** y luego presione el botón **Ins
 Ejecutar perfil de instalación
 ------------------------------
 
-En **Plone 3** y **Plone 4** acceda a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione 
-la lista desplegable llamada **cliente1.policy** luego desplace al final de la pagina y presione 
-el botón **Import all steps**.
+En **Plone 3** y **Plone 4** acceda a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione la lista desplegable llamada **cliente1.policy** luego desplace al final de la pagina
+y presione el botón **Import all steps**.
 
 .. todo::
     Agregar capturas de pantallas para este procedimiento
@@ -810,16 +818,17 @@ Durante la ejecución Buildout
 -----------------------------
 
 Existe una receta Buildout :ref:`collective.recipe.plonesite <collective_recipe_plonesite>` 
-que le permite automatizar la creación del sitio Plone ejecutando el perfiles de instalación 
-que aplica las personalizaciones creadas e instala las dependencias descritas en el. 
+que le permite automatizar la creación del sitio Plone ejecutando el perfiles de
+instalación que aplica las personalizaciones creadas e instala las dependencias
+descritas en el.
 
-Este procedimiento ofrece aprovechar las :ref:`ventajas de Buildout <buildout_caracteristicas>` 
-para automatizar los procesos :ref:`Durante la creación del sitio <producto_policy_creacion_sitio>`, 
+Este procedimiento ofrece aprovechar las :ref:`ventajas de Buildout <buildout_caracteristicas>`
+para automatizar los procesos :ref:`Durante la creación del sitio <producto_policy_creacion_sitio>`,
 :ref:`Posterior la creación del sitio <producto_policy_post_creacion>` y :ref:`Ejecutar perfil de instalación <producto_policy_ejecutar_perfil>`, ya que el mismo es muy útil para entornos de pruebas o 
 configuraciones de despliegue en ambientes de producción.
 
-Para esto usted tiene que agregar una nueva sección en la declarativa ``parts`` del archivo 
-:file:`buildout.cfg` como se muestra a continuación:
+Para esto usted tiene que agregar una nueva sección en la declarativa ``parts``
+del archivo :file:`buildout.cfg` como se muestra a continuación:
 
 .. code-block:: cfg
 
@@ -833,8 +842,7 @@ Para esto usted tiene que agregar una nueva sección en la declarativa ``parts``
   recipe = collective.recipe.plonesite
   site-id = Plone
   instance = instance
-  profiles =
-      cliente1.policy:default
+  profiles = cliente1.policy:default
 
 Luego ejecute el script :command:`buildout`, de la siguiente forma:
 
@@ -855,8 +863,8 @@ De esta forma ya tiene disponible el sitio creado con el nombre ``Plone`` con su
 :term:`Producto Plone` de configuraciones aplicado en su :term:`Instancia de Zope` 
 configurada de forma :ref:`standalone (autónoma) <ser-zeo-o-no-ser-zeo>`.
 
-.. tip:: Para configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las opciones de 
-    la `receta`_.
+.. tip:: Para configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las
+    opciones de la `receta`_.
 
 Comando locales del policy
 ==========================
