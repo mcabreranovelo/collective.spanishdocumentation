@@ -6,10 +6,12 @@
 Glosario
 ========
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 19 de Diciembre de 2013
+.. sidebar:: Sobre este glosario
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardocaballero@gmail.com
+    :Compatible con: Plone 3, Plone 4
+    :Fecha: 29 de Septiembre de 2014
 
 A continuación una serie de términos usados en las tecnologías Python / Zope / Plone
 
