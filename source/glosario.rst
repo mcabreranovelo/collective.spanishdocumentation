@@ -17,8 +17,8 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     :sorted:
     
     buildout
-        En la herramienta buildout, es un conjunto de partes que describe como ensamblar 
-        una aplicación.
+        En la herramienta :ref:`buildout <que_es_zcbuildout>`, es un conjunto de partes
+        que describe como ensamblar una aplicación.
     
     bundle
         Ver :term:`Paquete bundle`.
@@ -46,20 +46,43 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         en **Git** y otro **Subversion**.
         
         Si usted quiere publicar un nuevo producto en el repositorio *Git de Collective* 
-        de Plone necesita `obtener acceso de escritura`_ y `seguir las reglas en github/collective`_, 
-        también puede consultarlo en la cuenta en `github.com`_.
+        de Plone necesita `obtener acceso de escritura`_ y seguir las reglas en
+        github/collective, también puede consultarlo en la cuenta en `github.com`_.
         
         Si usted quiere publicar un nuevo producto en el repositorio *Subversion de 
         Collective* de Plone necesita `obtener acceso de escritura al repositorio`_ 
         y `crear su estructura básica de repositorio`_ para su producto, también 
         puede consultarlo vía Web consulte el siguiente `enlace`_.
-    
+
+    Declaración ZCML
+        El uso concreto de una :term:`Directiva ZCML` dentro de un archivo :term:`ZCML`.
+
+    Directiva ZCML
+        Una "etiqueta" :term:`ZCML` como ``<include />`` o ``<utility />``.
+
     Egg
         Ver :term:`paquetes Egg`.
+
+    esqueleto
+        Los archivos y carpetas recreados por un usuario el cual los genero ejecutando
+        alguna plantilla ``templer`` (``PasteScript``).
+
+    estructura
+        1) Una clase Python la cual controla la generación de un árbol de carpetas
+        que contiene archivos.
+
+        2) Una unidad de carpetas y archivos proveídos por el sistema ``templer`` para ser
+        usado en una plantilla o plantillas. Las estructuras proporcionan recursos
+        estáticos compartidos, que pueden ser utilizados por cualquier paquete en
+        el sistema de ``templer``.
+
+        Las estructuras diferencian de las plantillas en que no proporcionan las :term:`vars`.
 
     filesystem
         Termino ingles File system, referido al sistema de archivo del sistema operativo.
     
+    grok
+        Ver la documentacion del proyecto `grok <http://grok.zope.org/>`_.
     Instalación de Zope
         El software propio del servidor de aplicaciones.
     
@@ -71,6 +94,16 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         Una clase `Paste`_ la cual provee funcionalidad adicional a una estructura 
         de esqueleto de proyecto que ha sido generada.
     
+    modulo
+        Del Ingles ``module``, es un archivo fuente Python; un archivo en el sistema
+        de archivo que típicamente finaliza con la extensión ``.py`` o ``.pyc``. Los modules
+        son parte de un :term:`paquete`.
+
+    Nombre de puntos Python
+        Es la representación Python del "camino" para un determinado objeto / módulo / función,
+        por ejemplo, ``Products.GenericSetup.tool.exportToolset``. A menudo se utiliza como
+        referencia en configuraciones ``Paste`` y ``setuptools`` a cosas en Python.
+
     PYTHONPATH
         Una lista de nombre de directorios, que contiene librerías Python, con la misma 
         sintaxis como la declarativa ``PATH`` del shell del sistema operativo.
@@ -94,6 +127,25 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     paquete
         Ver :term:`Paquete Python`.
 
+    paquete Egg
+        Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
+        un archivo :file:`setup.py` con metadata (como el nombre del autor y la correo
+        electrónico y información sobre el licenciamiento), como las dependencias del
+        paquete.
+
+        La herramienta del :ref:`setuptools <que_es_setuptools>`, es la librería Python que permite
+        usar el mecanismo de paquetes egg, esta es capaz de encontrar y descargar
+        automáticamente las dependencias de los paquetes Egg que se instale.
+
+        Incluso es posible que dos paquetes Egg diferentes necesiten utilizar simultáneamente
+        diferentes versiones de la misma dependencia. El formato de paquetes Eggs
+        también soportan una función llamada ``entry points``, una especie de
+        mecanismo genérico de plug-in. Mucha más detalle sobre este tema se encuentra
+        disponible en el `sitio web de PEAK`_.
+
+    paquetes Egg
+        Plural del termino :term:`paquete Egg`.
+
     Paquete bundle
         Este paquete consististe en un archivo comprimido con todos los módulos que son 
         necesario compilar o instalar en el :term:`PYTHONPATH` de tu interprete ``Python``.
@@ -106,6 +158,16 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     Paquetes Python
         Plural del termino :term:`Paquete Python`.
     
+    plantilla
+        1) Una clase Python la cual controla la generación de un esqueleto. Las
+        plantillas contiene una lista de variables para obtener la respuesta de un
+        usuario. Las plantillas son ejecutadas con el comando ``templer`` suministrando
+        el nombre de la plantilla como un argumento ``templer basic_namespace my.package``.
+
+        2) Los archivos y carpetas proveídas un paquete ``templer`` como contenido a ser
+        generado. Las respuestas proporcionadas por un usuario en respuesta a las variables
+        se utilizan para rellenar los marcadores de posición en este contenido.
+
     Producto Plone
         Es un tipo especial de paquete Zope usado para extender las funcionalidades
         de Plone. Se puede decir que son productos que su ámbito de uso es solo en el
@@ -139,49 +201,24 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     Productos Zope
         Plural del termino :term:`Producto Zope`.
     
-    paquete Egg
-        Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
-        un archivo :file:`setup.py` con metadata (como el nombre del autor y la correo
-        electrónico y información sobre el licenciamiento), como las dependencias del
-        paquete. 
-        
-        La herramienta del :ref:`setuptools <que_es_setuptools>`, es la librería Python que permite
-        usar el mecanismo de paquetes egg, esta es capaz de encontrar y descargar
-        automáticamente las dependencias de los paquetes Egg que se instale. 
+    profile
+        Una configuración "predeterminada" de un sitio, que se define en el sistema de
+        archivos o en un archivo tar.
 
-        Incluso es posible que dos paquetes Egg diferentes necesiten utilizar simultáneamente
-        diferentes versiones de la misma dependencia. El formato de paquetes Eggs
-        también soportan una función llamada ``entry points``, una especie de
-        mecanismo genérico de plug-in. Mucha más detalle sobre este tema se encuentra
-        disponible en el `sitio web de PEAK`_.
+    setup.py
+        El archivo :file:`setup.py` es un modulo de Python, que por lo general indica que
+        el módulo / paquete que está a punto de instalar ha sido empacado y distribuidos
+        con ``Distutils``, que es el estándar para la distribución de módulos de Python.
+        
+        Con esto le permite instalar fácilmente paquetes de Python, a menudo es suficiente
+        para escribir: ::
 
-    paquetes Egg
-        Plural del termino :term:`paquete Egg`.
-    
-    esqueleto
-        Los archivos y carpetas recreados por un usuario el cual los genero ejecutando 
-        alguna plantilla ``templer`` (``PasteScript``).
-    
-    estructura
-        1) Una clase Python la cual controla la generación de un árbol de carpetas 
-        que contiene archivos.
-        
-        2) Una unidad de carpetas y archivos proveídos por el sistema ``templer`` para ser 
-        usado en una plantilla o plantillas. Las estructuras proporcionan recursos 
-        estáticos compartidos, que pueden ser utilizados por cualquier paquete en 
-        el sistema de ``templer``.
-        
-        Las estructuras diferencian de las plantillas en que no proporcionan las :term:`vars`.
-    
-    plantilla
-        1) Una clase Python la cual controla la generación de un esqueleto. Las 
-        plantillas contiene una lista de variables para obtener la respuesta de un 
-        usuario. Las plantillas son ejecutadas con el comando ``templer`` suministrando 
-        el nombre de la plantilla como un argumento ``templer basic_namespace my.package``.
-        
-        2) Los archivos y carpetas proveídas un paquete ``templer`` como contenido a ser 
-        generado. Las respuestas proporcionadas por un usuario en respuesta a las variables 
-        se utilizan para rellenar los marcadores de posición en este contenido.
+            python setup.py install
+
+        Entonces el módulo Python se instalará.
+
+        .. seealso::
+            - http://docs.python.org/install/index.html
     
     Temas / Apariencias
         Por lo general si un producto de Tema esta bien diseñado y implementado
@@ -239,18 +276,41 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         Estas configuraciones ya no están más en uso, pueden ser eliminados agregando 
         las configuraciones del paquete `z3c.autoinclude`_.
 
+    ZCA
+    Zope Component Architecture
+        La :ref:`arquitectura de componentes de Zope (alias ZCA) <zca-es>`, es un
+        sistema que permite la aplicación y la expedición enchufabilidad complejo
+        basado en objetos que implementan una interfaz.
+
     Zope Configuration Mark-up Language
-        Es un lenguaje basado en XML que se utiliza para extender y conectar a los sistemas basados 
-        en la :ref:`arquitectura de componentes de Zope (ZCA) <zca-es>`.
-         
+        Es un dialecto XML utilizado por Zope para las tareas de configuración. ZCML
+        es capaz de realizar diferentes tipos de declaración de configuración. Es utilizado
+        para extender y conectar a los sistemas basados en la :term:`Zope Component Architecture`.
+
+        ``Zope 3`` tiene la política de separar el código actial y moverlo a los
+        archivos de configuración independientes, típicamente un archivo
+        :file:`configure.zcml` en un buildout. Este archivo configura la instancia Zope.
+        El concepto 'Configuración' podría ser un poco engañoso aquí y debe ser pensado
+        o tomarse más cableado.
+
+        ``ZCML``, el lenguaje de configuración basado en ``XML`` que se utiliza para esto,
+        se adapta a hacer el registro de componentes y declaraciones de seguridad, en su
+        mayor parte. Al habilitar o deshabilitar ciertos componentes en ZCML, puede configurar
+        ciertas políticas de la aplicación general. En ``Zope 2``, habilitar y deshabilitar
+        componentes significa eliminar o remover un determinado producto ``Zope 2``. Cuando está
+        ahí, se importa y se carga automáticamente. Este no es el caso en ``Zope 3`` Si no
+        habilita explícitamente, no va a ser encontrado.
+
+        El :term:`grok` proyecto ha adoptado un enfoque diferente para el mismo problema, y permite el registro de componentes, etc haciendo declarativa de código Python. Ambos enfoques son posibles en Plone.
+
 .. _Third-Party Products: http://plone.org/documentation/kb/add-ons/tutorial-all-pages
 .. _Products.CMFPlone: http://pypi.python.org/pypi/Products.CMFPlone
 .. _sitio web de PEAK: http://peak.telecommunity.com/DevCenter/setuptools
 .. _obtener acceso de escritura al repositorio: http://plone.org/countries/conosur/documentacion/obtener-acceso-de-escritura-al-repositorio-svn-de-plone
 .. _crear su estructura básica de repositorio: http://plone.org/countries/conosur/documentacion/crear-un-nuevo-proyecto-en-el-repositorio-collective-de-plone
 .. _enlace: http://svn.plone.org/svn/collective/
-.. _obtener acceso de escritura: http://collective.github.com/#how-to-get-access
-.. _seguir las reglas en github/collective: http://collective.github.com/#rules-on-github-collective
+.. _obtener acceso de escritura: http://collective.github.io/
+.. _seguir las reglas en github/collective: http://collective.github.io/
 .. _github.com: http://github.com/collective
 .. _Configuración de Temas: http://localhost:8080/Plone/@@skins-controlpanel
 .. _Configuración de Productos Adicionales: http://localhost:8080/Plone/prefs_install_products_form
