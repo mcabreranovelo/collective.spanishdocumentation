@@ -1,67 +1,76 @@
+
 .. -*- coding: utf-8 -*-
 
 .. _perfiles_genericsetup:
 
-=======================
-GenericSetup y Perfiles
-=======================
+==============================================================
+Framework de instalación y exportación de Add-on: GenericSetup
+==============================================================
 
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
     :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 05 de Enero de 2014
+    :Fecha: 29 de Septiembre de 2014
+
+.. _genericsetup_intro:
 
 Introducción
 ============
 
-GenericSetup es un mecanismo basado en XML para importar y exportar configuraciones 
-de sitios Plone.
+El `GenericSetup`_, es un mecanismo basado en XML para importar y exportar
+configuraciones de sitios Plone.
 
-Se utiliza principalmente para modificar la configuración de un sitio al momento de 
-instalar un producto. Entre otras cosas permite:
+Se utiliza principalmente para modificar la configuración de un sitio
+al momento de instalar un producto. Entre otras cosas permite:
 
-* Registrar los archivos CSS en el :ref:`portal_css <zmi_portal_css>`.
+* Registrar los archivos **CSS** en el :ref:`portal_css <zmi_portal_css>`.
 
-* Registrar los archivos Javascript en el :ref:`portal_javascript <zmi_portal_javascripts>`.
+* Registrar los archivos **Javascript** en el :ref:`portal_javascript <zmi_portal_javascripts>`.
 
-* Modificar los valores de diversas propiedades del sitio en el ``portal_properties``.
+* Modificar los valores de diversas **propiedades** del sitio en el ``portal_properties``.
 
-* Registrar portlets.
+* Registrar de asignación de **portlets**.
 
 * Registrar índices de búsqueda del :ref:`portal_catalog <zmi_portal_catalog>`.
 
 * Y mas...
 
-Usualmente los archivos de configuración para GenericSetup se guardan bajo la carpeta 
-:file:`profiles/default` dentro del producto.
+Perfiles de instalación
+=======================
 
-Toda la configuración que puede realizarse a través del panel de control de Plone y del 
-:ref:`ZMI <que_es_zmi>`, como por ejemplo el orden de los viewlets elegido en ``/@@manage-viewlets``, 
-puede guardarse y ser reutilizada mediante un perfil de GenericSetup.
+Usualmente los archivos de configuración para ``GenericSetup`` se guardan
+bajo la carpeta :file:`profiles/default` dentro del producto.
 
-No es necesario editar manualmente los archivos XML del perfil de ``GenericSetup``, pues 
-siempre es posible modificar la configuración de Plone desde el sitio y después exportarla 
-completa o en partes a XML. La herramienta :ref:`portal_setup <zmi_portal_setup>` en el 
-:ref:`ZMI <que_es_zmi>` permite exportar, importar y generar copias de las configuraciones.
+Toda la configuración que puede realizarse a través del panel de control
+de Plone y del :ref:`ZMI <que_es_zmi>`, como por ejemplo el orden de los
+viewlets elegido en ``/@@manage-viewlets``, puede guardarse y ser reutilizada
+mediante un perfil de ``GenericSetup``.
 
-Modificar los archivos de configuración en XML de un producto no ocasiona cambios inmediatos 
-en el sitio de Plone, aun reiniciando el servidor. La configuración `real` del portal se almacena 
-en la ZODB, por lo que es necesario reimportar los perfiles desde :ref:`portal_setup <zmi_portal_setup>` 
-o reinstalar el producto en cuestión desde el panel de control de Plone. Solo en ese momento
-sera modificada la configuración.
+No es necesario editar manualmente los archivos XML del perfil de
+``GenericSetup``, pues siempre es posible modificar la configuración
+de Plone desde el sitio y después exportarla completa o en partes a XML.
+La herramienta :ref:`portal_setup <zmi_portal_setup>` en el :ref:`ZMI <que_es_zmi>`
+permite exportar, importar y generar copias de las configuraciones.
+
+Modificar los archivos de configuración en XML de un producto no ocasiona
+cambios inmediatos en el sitio de Plone, aun reiniciando el servidor. La
+configuración `real` del portal se almacena en la ZODB, por lo que es
+necesario reimportar los perfiles desde :ref:`portal_setup <zmi_portal_setup>`
+o reinstalar el producto en cuestión desde el panel de control de Plone.
+Solo en ese momento sera modificada la configuración.
 
 .. note::
 
-    Diferencias entre ZCML y GenericSetup
+    Diferencias entre :term:`ZCML` y `GenericSetup`_
 
-    Cambios realizados mediante configuración de ``ZCML`` afectan el código
+    Cambios realizados mediante configuración de :term:`ZCML` afectan el código
     Python de todos los sitios presentes en una instancia de ``Zope``, mientras
     que los cambios en perfiles de ``GenericSetup`` solo afectan el sitio de
-    Plone en que se hacen. Al importar un perfil de ``GenericSetup``, se
+    Plone en que se hacen. Al importar un perfil de `GenericSetup`_, se
     realizan cambios directamente en la base de datos del sitio, mientras que
-    al cargar archivos de configuración de ``ZCML`` solo se modifica el código
+    al cargar archivos de configuración de :term:`ZCML` solo se modifica el código
     cargado en memoria.
 
 * `GenericSetup tutorial <http://plone.org/documentation/tutorial/genericsetup>`_
@@ -73,50 +82,61 @@ sera modificada la configuración.
 Términos importantes
 ====================
 
-**perfil base**
-  El perfil base es el perfil que todos los otros perfiles extenderá. 
-  Para usuarios de Plone este es el perfil ``plone`` desde el producto ``CMFPlone``.
+.. glossary::
 
-**perfil de extensión**
-  Un perfil extensión es un conjunto de información de configuración 
-  que extiende el perfil base. Las mayoría de los productos define al 
-  menos un perfil de extensión para definir sus producto.
+    perfil base
+        Del Ingles ``base profile``, es el perfil que todos los otros perfiles extenderá.
+        Para usuarios de Plone este es el perfil ``plone`` desde el producto ``CMFPlone``.
 
-**perfil de versión**
-  El perfil de versión puede definirse en el archivo :file:`metadata.xml`. 
-  Este le dice al programa ``GenericSetup`` cual es la versión actual del perfil.
+    perfil de extensión
+        Del Ingles ``extension profile``, es un conjunto de información de configuración
+        que extiende el :term:`perfil base`. Las mayoría de los productos define al
+        menos un :term:`perfil de extensión` para definir sus producto.
 
-**pasos de importar**
-  Del Ingles ``import steps``, son los pasos de importar que le dice al 
-  programa GenericSetup como leer la configuración exportada para un perfil 
-  dado y aplicarlo en su sitio.
+    perfil de versión
+        El perfil de versión puede definirse en el archivo :file:`metadata.xml`.
+        Este le dice al programa ``GenericSetup`` cual es la versión actual del perfil.
 
-**pasos de exportar**
-  Del Ingles ``export steps``, son los pasos de exportar que le dice al 
-  programa ``GenericSetup`` como exportar la actual configuración de su 
-  sitio.
+    pasos de importar
+        Ver :term:`pasos de importación`.
 
-**manipulador de instalación**
-  Del Ingles ``setup handler``, un manipulador de instalación es un termino 
-  dado a un paso de importar que ejecuta algún código de personalización Python. 
-  Este es otra forma de crear un paso de importar.
+    pasos de importación
+        Del Ingles ``import steps``, son los pasos de importar que le dice al programa
+        ``GenericSetup`` como leer la configuración exportada para un perfil dado y aplicarlo
+        en su sitio.
 
-**pasos de actualizar**
-  Del Ingles ``upgrade step``, un paso de actualizar da a usted la habilidad 
-  para actualizar el código desde una versión del perfil a otro. Esto es útil 
-  para uno cambios de tiempo que necesitan ser hecho entre las versiones.
-  Mas información viste `Upgrade steps`_.
+    pasos de exportar
+        Del Ingles ``export steps``, son los pasos de exportar que le dice al programa
+        ``GenericSetup`` como exportar la actual configuración de su sitio.
 
-**snapshot**
-  Un ``snapshot`` puede tomar la configuración actual en el :ref:`portal_setup <zmi_portal_setup>`.
-  Este puede después ser usada para comparar a otro ``snapshot`` o perfil. 
-  Esto puede ser útil cuando usted hace cambios a su sitio y quiere saber 
-  como afecta a su perfil.
+    manipulador de instalación
+        Del Ingles ``setup handler``, un manipulador de instalación es un termino
+        dado a un paso de importar que ejecuta algún código de personalización Python
+        se estila definir con el nombre :file:`setuphandler.py`. Este es otra forma de
+        crear un paso de importar.
+
+    pasos de actualizar
+        Del Ingles ``upgrade step``, un paso de actualizar da a usted la habilidad
+        para actualizar el código desde una versión del perfil a otro. Esto es útil
+        para uno cambios de tiempo que necesitan ser hecho entre las versiones.
+        Mas información viste `Upgrade steps`_.
+
+    instantánea
+        Del Ingles ``snapshot``, es un perfil que captura el estado de la configuración
+        del sitio en un punto en el tiempo (por ejemplo, inmediatamente después de la
+        creación del sitio, o después de la importación de un :term:`perfil de extensión`.
+
+        El caso de uso del ``snapshot``, es tomar la configuración actual en el
+        :ref:`portal_setup <zmi_portal_setup>`. Este puede después ser usada para comparar
+        a otro ``snapshot`` o perfil. Esto puede ser útil cuando usted hace cambios a su
+        sitio y quiere saber como afecta a su perfil.
+
+.. _gs_referencia_perfiles:
 
 Referenciando a Perfiles
 ========================
 
-GenericSetup referencia a los perfiles con el siguiente formato:
+``GenericSetup`` referencia a los perfiles con el siguiente formato:
 
 .. code-block:: text
 
@@ -132,15 +152,17 @@ Esta es la sintaxis que es usada para dependencias en el archivo :file:`metadata
 Por ejemplo, si usted siempre quiere ejecutar por defecto la dependencia 'my.dependency' 
 antes de su perfil, usted podría usar:
 
-.. code-block:: text
+.. code-block:: xml
 
-  <?xml version=”1.0”?>
+  <?xml version="1.0"?>
   <metadata>
      <version>VERSION_NUMBER</version>
      <dependencies>
         <dependency>profile-my.dependency:default</dependency>
      </dependencies>
   </metadata>
+
+.. _gs_creando_perfiles:
 
 Creación de un perfil
 =====================
@@ -174,13 +196,15 @@ dentro del producto.
 También es posible registrar un ``Import various step`` que ejecute código
 Python cada vez que se instale el perfil de un producto.
 
-Mas información sobre ejecutar steps:
+Mas información sobre ejecutar ``steps``:
 
-* http://n2.nabble.com/indexing-of-content-created-by-Generic-Setup-tp4454703p4454703.html
+* http://plone.293351.n2.nabble.com/indexing-of-content-created-by-Generic-Setup-td4454703.html
 
+.. _gs_structure:
 
-Generación de Contenido
-=======================
+Generación de Contenido manualmente
+===================================
+
 El programa ``GenericSetup`` le permite a usted importar y exportar contenido 
 por la forma llamada ``structure``. Allí puede haber muchos archivos que controlan 
 como este trabaja:
@@ -195,7 +219,8 @@ como este trabaja:
     todos los elementos listados serán removido y se agregaran 
     de nuevo.
 
-    Ejemplo de un archivo :file:`.objects` que toma desde el perfil ``Products.CMFPlone:plone``:
+    Ejemplo de un archivo :file:`.objects` que toma desde el perfil
+    ``Products.CMFPlone:plone``:
 
       .. code-block:: ini
 
@@ -208,8 +233,8 @@ como este trabaja:
     si usted conoce el perfil que puede ser ejecutado otra ves 
     y posiblemente remover su contenido.
 
-    El archivo :file:`.preserve` típicamente contiene información que ``GenericSetup``
-    usará para cuidar dos objetos existentes:
+    El archivo :file:`.preserve` típicamente contiene información que
+    ``GenericSetup`` usará para cuidar dos objetos existentes:
 
       .. code-block:: ini
 
@@ -220,8 +245,9 @@ como este trabaja:
     El archivo :file:`.delete` es una lista de IDs que puede ser 
     borrado desde el sitio.
 
-    Al igual que el archivo :file:`.preserve`, el archivo :file:`.delete` usan la misma 
-    sintaxis. El siguiente podría ser valido para borrar dos objetos:
+    Al igual que el archivo :file:`.preserve`, el archivo :file:`.delete`
+    usan la misma sintaxis. El siguiente podría ser valido para borrar
+    dos objetos:
 
       .. code-block:: ini
 
@@ -229,18 +255,21 @@ como este trabaja:
         Members
 
   .properties
-    El archivo :file:`.properties` típicamente contiene información que ``GenericSetup`` 
-    utilizará para crear la carpeta en la que reside. Esto le permite la exportación a estar 
-    representados en una jerarquía como lo es en el sitio.
+    El archivo :file:`.properties` típicamente contiene información que
+    ``GenericSetup`` utilizará para crear la carpeta en la que reside.
+    Esto le permite la exportación a estar representados en una jerarquía
+    como lo es en el sitio.
 
-    Ejemplo de un archivo :file:`.properties` tomada desde el perfil de ``Products.CMFPlone:plone`` 
-    para la carpeta ``Members``:
+    Ejemplo de un archivo :file:`.properties` tomada desde el perfil de
+    ``Products.CMFPlone:plone`` para la carpeta :file:`Members`:
 
       .. code-block:: ini
 
         [DEFAULT]
         description = Site Users
         title = Users
+
+.. _gs_listado_perfiles:
 
 Obtener el listado de perfiles disponibles
 ==========================================
@@ -265,6 +294,8 @@ Resultados:
   {'product': 'Products.Archetypes', 'description': u'Extension profile for default Archetypes setup.', 'for': None, 'title': u'Archetypes', 'version': u'1.5.7', 'path': u'/home/moo/sits/parts/plone/Archetypes/profiles/default', 'type': 2, 'id': u'Products.Archetypes:Archetypes'}
     ...
 
+.. _gs_instalar_perfil_python:
+
 Instalación un perfil desde Python
 ==================================
 
@@ -276,6 +307,8 @@ Ejemplo:
 .. code-block:: python
 
   setup_tool.runAllImportStepsFromProfile('profile-miproducto.miperfil')
+
+.. _gs_instalar_dependencias:
 
 Dependencias
 ============
@@ -301,17 +334,21 @@ Otros Consejos
 
 .. seealso:: 
   
-  -   `Add-on installation and export framework: GenericSetup <http://developer.plone.org/components/genericsetup.html>`_.
+    - `Add-on installation and export framework - GenericSetup`_.
 
-  -   `Generic Setup Quick Reference <http://www.sixfeetup.com/company/technologies/plone-content-management/swag/swag-images-files/generic_setup.pdf>`_.
+    - `Generic Setup Quick Reference`_.
 
 Referencias
 ===========
+
+- `Add-on installation and export framework - GenericSetup`_.
 
 - `GenericSetup y Perfiles`_ desde la comunidad Plone México.
 
 - `Generic Setup Quick Reference`_.
 
-.. _Upgrade steps: http://developer.plone.org/components/genericsetup.html#id1
+.. _GenericSetup: http://docs.plone.org/develop/addons/components/genericsetup.html
+.. _Upgrade steps: http://docs.plone.org/develop/addons/components/genericsetup.html#upgrade-steps
+.. _Add-on installation and export framework - GenericSetup: http://docs.plone.org/develop/addons/components/genericsetup.html
 .. _GenericSetup y Perfiles: http://www.plone.mx/docs/gs.html
 .. _Generic Setup Quick Reference: http://www.sixfeetup.com/company/technologies/plone-content-management/swag/swag-images-files/generic_setup.pdf
