@@ -341,12 +341,15 @@ Otros Consejos
 Referencias
 ===========
 
+- `Products.GenericSetup documentation`_.
+
 - `Add-on installation and export framework - GenericSetup`_.
 
 - `GenericSetup y Perfiles`_ desde la comunidad Plone México.
 
 - `Generic Setup Quick Reference`_.
 
+.. _Products.GenericSetup documentation: https://pythonhosted.org/Products.GenericSetup/index.html
 .. _GenericSetup: http://docs.plone.org/develop/addons/components/genericsetup.html
 .. _Upgrade steps: http://docs.plone.org/develop/addons/components/genericsetup.html#upgrade-steps
 .. _Add-on installation and export framework - GenericSetup: http://docs.plone.org/develop/addons/components/genericsetup.html

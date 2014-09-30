@@ -9,7 +9,6 @@ Enlaces importantes
 A continuación se presentan una serie de enlaces en la Web donde podrá conseguir 
 información más detallada sobre las tecnologías expuestas en esta documentación:
 
-
 Python
 ======
 
@@ -147,4 +146,3 @@ http://sphinx.pocoo.org/
 
 http://docutils.sourceforge.net/rst.html
     reStructuredText es un formato de texto plano para generar documentos estructurados.
-

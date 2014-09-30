@@ -702,12 +702,58 @@ de los :term:`pasos de importación` de ``GenericSetup``.
 Luego de generar el producto de configuración debe agregar este a la
 configuración buildout para completar la instalación de este producto.
 Esto se realiza usando la herramienta :ref:`zc.buildout <que_es_zcbuildout>`
-para esto usted tiene que agregar el producto a las sección ``eggs``
-del archivo :file:`buildout.cfg` como se muestra a continuación:
+para esto hay dos enfoques realizar esto, a continuación se describe:
+
+Sitio en desarrollo
+-------------------
+
+Este paquete en entornos desarrollo debe ofrece un archivo ``buildout.cfg`` adecuado,
+como buena practica en desarrollo de software, y su sentido es ofrecer un mecanismo
+de pruebas de integración este producto en un sitio Plone aislado, sin afectar las
+configuraciones de producción de su proyecto.
+
+Para recrear estas configuraciones debe ejecutar los siguientes pasos:
+
+#. Descargar el archivo :file:`bootstrap.py` desde el sitio de buildout.org, con el
+   siguiente comando:
+
+   .. code-block:: sh
+
+       $ wget http://downloads.buildout.org/2/bootstrap.py
+
+#. Cree el archivo :file:`buildout.cfg` en el mismo directorio donde esta el
+   archivo :file:`bootstrap.py`.  y agregue la siguiente configuración:
+
+   .. code-block:: cfg
+
+       [buildout]
+       extends = https://raw.githubusercontent.com/collective/buildout.plonetest/master/plone-4.3.x.cfg
+       package-name = cliente1.policy
+
+   .. tip::
+       Esta configuraciones se basa para la versión **mas reciente de Plone 4.3**.
+       Si necesita una version distinta a esta por favor consulte el repositorio
+       `buildout.plonetest <https://www.github.com/collective/buildout.plonetest/>`_
+       para obtener la configuraciones de pruebas de buildout.
+
+#. Entonces ejecute los comandos habituales son ``python bootstrap.py`` + ``bin/buildout``.
+
+Más tarde se puede ejecutar la instancia de Zope y crear un nuevo sitio Plone para activar
+este paquete para su uso.
+
+Sitio en producción
+-------------------
+
+Este paquete en entornos producción (instalación existen o otras configuraciones buildout) 
+debe configurarse por lo generar un archivo ``buildout.cfg`` o basado en configuraciones
+de este tipo, el objeto es agregar este paquete ``cliente1.policy`` a la sección ``eggs``
+del archivo :file:`buildout.cfg`. Para recrear estas configuraciones debe ejecutar los
+siguientes pasos:
 
 .. code-block:: cfg
 
   eggs =
+      ...
       cliente1.policy
       
 .. note::
@@ -752,8 +798,8 @@ hospedados.
 
 .. note::
     Hasta este punto usted **NO** ha publicado *producto de configuración* en el
-    repositorio :term:`PyPI`, mas si este tiene dependencias de instalación se
-    descargaran e instalaran por usted.
+    repositorio :term:`PyPI`, o repositorio de control de versiones como SVN o Git
+    mas si este tiene dependencias de instalación se descargaran e instalaran por usted.
 
 Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 
@@ -778,15 +824,30 @@ uno a continuación:
 Durante la creación del sitio
 -----------------------------
 
-Acceda al asistente `Crear un sitio Plone`_ allí indique el **id del sitio**,
-el **título corto** para el sitio,  seleccione el **idioma por defecto** para
-el sitio y seleccione cualquier complemento que quiera activar de forma inmediata
-durante la creación del sitio en la sección **Complementos** en nuestro caso y marque
-la casilla llamada **cliente1.policy** y luego presione el botón
+Acceda al asistente `Crear un sitio Plone`_ y haga clic en el botón **Crear un nuevo
+sitio Plone**, como se muestra en la grafica:
+
+.. figure:: ./crear_plone_site00.png
+  :alt: Crear un Sitio Plone
+  :align: center
+  :width: 313px
+  :height: 179px
+
+  Crear un Sitio Plone
+
+Luego allí indique el **id del sitio**, el **título corto** para el sitio, seleccione
+el **idioma por defecto** para el sitio y seleccione cualquier complemento que quiera
+activar de forma inmediata durante la creación del sitio en la sección **Complementos**
+en nuestro caso y marque la casilla llamada **cliente1.policy** y luego presione el botón
 **Crear un Sitio Plone**.
 
-.. todo::
-    Agregar capturas de pantallas para este procedimiento
+.. figure:: ./crear_plone_site01.png
+  :alt: Habilitar el complemento cliente1.policy
+  :align: center
+  :width: 323px
+  :height: 406px
+
+  Habilitar el complemento cliente1.policy
 
 .. _producto_policy_post_creacion:
 
@@ -798,19 +859,38 @@ en la sección **Complementos** el producto **cliente1.policy**, puede realizar 
 a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` y marque la casilla llamada **cliente1.policy** y luego presione
 el botón **Install**.
 
-.. todo::
-    Agregar capturas de pantallas para este procedimiento
+.. figure:: ./portal_quickinstaller00.png
+  :alt: Habilitar el complemento cliente1.policy desde la ZMI
+  :align: center
+  :width: 373px
+  :height: 399px
+
+  Habilitar el complemento cliente1.policy desde la ZMI
 
 .. _producto_policy_ejecutar_perfil:
 
 Ejecutar perfil de instalación
 ------------------------------
 
-En **Plone 3** y **Plone 4** acceda a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione la lista desplegable llamada **cliente1.policy** luego desplace al final de la pagina
-y presione el botón **Import all steps**.
+En **Plone 3** y **Plone 4** acceda a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_setup --> Import --> Select Profile or Snapshot` seleccione la lista desplegable llamada **cliente1.policy** como se muestra en la siguiente figura:
 
-.. todo::
-    Agregar capturas de pantallas para este procedimiento
+.. figure:: ./portalsetup_importsteps00.png
+  :alt: Administración de configuración y Add-on desde la ZMI
+  :align: center
+  :width: 420px
+  :height: 381px
+
+  Administración de configuración y Add-on desde la ZMI
+
+Luego desplace al final de la pagina y presione el botón **Import all steps**
+
+.. figure:: ./portalsetup_importsteps01.png
+  :alt: El botón de "Export selected steps" en portal_setup
+  :align: center
+  :width: 538px
+  :height: 74px
+
+  El botón de "Export selected steps" en portal_setup
 
 .. _producto_policy_ejecutar_buildout:
 
@@ -881,11 +961,14 @@ En este artículo has aprendido a:
 
 - ¿:ref:`Cómo generar <producto_policy_generar>` el producto?.
 
+- Analizar el :ref:`esqueleto generado <producto_policy_generado>` del producto.
+
+- El mecanismo de :ref:`resolución de dependencias <manipulando_dependencias>` del producto.
+
+- Entender la :ref:`manipulación de la instalación <manipulando_instalacion>` del producto.
+
 - ¿Cómo :ref:`instalar <producto_policy_instalar>` y :ref:`habilitar <producto_policy_habilitar>` 
   el producto creado en un sitio Plone.
-
-.. todo::
-    Terminar de actualizar este resumen!
 
 ----
 
