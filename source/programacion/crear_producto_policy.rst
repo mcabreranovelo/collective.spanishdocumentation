@@ -727,8 +727,35 @@ Para recrear estas configuraciones debe ejecutar los siguientes pasos:
    .. code-block:: cfg
 
        [buildout]
-       extends = https://raw.githubusercontent.com/collective/buildout.plonetest/master/plone-4.3.x.cfg
+       extends = http://dist.plone.org/release/4.3-latest/versions.cfg
+       find-links =
+           http://dist.plone.org/release/4.3-latest/
+           http://dist.plone.org/thirdparty/
+
+       develop = .
+       eggs =
+       unzip = true
+       versions = versions
+
+       parts = instance
+
        package-name = cliente1.policy
+
+       [versions]
+
+       [instance]
+       recipe = plone.recipe.zope2instance
+       user = admin:admin
+       http-address = 8080
+       eggs =
+           Plone
+           plone.app.upgrade
+           ${buildout:package-name}
+           ${buildout:eggs}
+       zcml =
+           ${buildout:package-name}
+       environment-vars = zope_i18n_compile_mo_files true
+
 
    .. tip::
        Esta configuraciones se basa para la versión **mas reciente de Plone 4.3**.
