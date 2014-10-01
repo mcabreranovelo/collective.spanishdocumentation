@@ -594,7 +594,7 @@ instalación, que puede hacer cualquier cosa que se necesite dentro del portal.
 **Crear enlace**
 
 A continuación un ejemplo que muestra como crear tipo de contenido de **Enlace**,
-*a la vieja ultranza*:
+*a la vieja usanza*:
 
 .. code-block:: python
 
@@ -614,7 +614,7 @@ A continuación un ejemplo que muestra como crear tipo de contenido de **Enlace*
 **Crear carpetas**
 
 A continuación un ejemplo que muestra como crear tipo de contenido de **Carpeta**,
-*a la vieja ultranza*:
+*a la vieja usanza*:
 
 .. code-block:: python
 
@@ -648,7 +648,7 @@ A continuación un ejemplo que muestra como crear tipo de contenido de **Carpeta
 **Cambiar el flujo de trabajo**
 
 A continuación un ejemplo que muestra como cambiar el Flujo de trabajo del
-objeto utilizando CMFPlacefulWorkflow, *a la vieja ultranza*:
+objeto utilizando CMFPlacefulWorkflow, *a la vieja usanza*:
 
 .. code-block:: python
 
