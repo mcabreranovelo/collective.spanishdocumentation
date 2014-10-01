@@ -570,6 +570,8 @@ siguiente código:
 
 .. code-block:: python
 
+    # -*- coding: utf-8 -*-
+
     import logging
     from plone import api
     from cliente1.policy.config import PROJECTNAME
@@ -672,6 +674,8 @@ A continuación un ejemplo que muestra como eliminar contenidos desde la método
 ``setupVarious`` en el modulo :ref:`setuphandlers.py <policy_archivo_setuphandlers_py>`:
 
 .. code-block:: python
+
+    # -*- coding: utf-8 -*-
 
     import logging
     from plone import api
