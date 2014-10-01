@@ -11,7 +11,7 @@ Creación de un producto de configuración
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
     :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 29 de Septiembre de 2014
+    :Fecha: 30 de Septiembre de 2014
 
 En esta articulo busca explicar como crear paquetes de configuración general de 
 un sitio representando las reglas generales de manejo de sitios para Plone 3, 
@@ -303,6 +303,12 @@ esqueleto de módulo para :file:`tests.py`:
       $ cd profiles/default
       $ tar xzf setuptool_20080630134421.tar.gz
 
+Comando locales del policy
+--------------------------
+
+.. todo::
+    Escribir sobre este punto
+
 .. _manipulando_dependencias:
 
 Manipulando dependencias
@@ -427,8 +433,15 @@ de este paquete.
     perfil de instalación ``GenericSetup``. Por esta razón librería ``plone.api``
     no se define esta sección.
 
-De esta forma se resuelven dependencias al contexto Python para el :term:`PYTHONPATH`
-y perfiles de instalación ``GenericSetup``.
+Para comprobar el correcto funcionamiento de este procedimiento debe configurar
+este producto en un :ref:`entorno de desarrollo <policy_instalar_desarrollo>` o
+:ref:`sitio de producción <policy_instalar_produccion>` y :ref:`habilitar el producto <producto_policy_habilitar>` en su sitio Web Plone.
+
+Luego de ejecutar ``buildout`` y habilitar su producto podrá notar que no solo
+el producto ``cliente1.policy`` sino ademas el producto ``Products.PloneFormGen``,
+esto se debe a que estas configuraciones definen el mecanismo para resolver las
+dependencias al contexto Python para el :term:`PYTHONPATH` y perfiles de instalación
+``GenericSetup``.
 
 .. _manipulando_instalacion:
 
@@ -687,8 +700,14 @@ A continuación un ejemplo que muestra como eliminar contenidos desde la método
         # aquí va el código particular
         remove_defaults_nav(portal)
 
-De esta manera se estable el mecanismo de ejecución de código Python
-de los :term:`pasos de importación` de ``GenericSetup``.
+Para comprobar el correcto funcionamiento de este procedimiento debe configurar
+este producto en un :ref:`entorno de desarrollo <policy_instalar_desarrollo>` o
+:ref:`sitio de producción <policy_instalar_produccion>` y :ref:`habilitar el producto <producto_policy_habilitar>` en su sitio Web Plone.
+
+Luego de ejecutar ``buildout`` y habilitar su producto (se recomienda en un sitio
+Web Plone nuevo) podrá notar que no solo el producto ``cliente1.policy`` sino
+ademas veras el resultado de la ejecución de código Python de los
+:term:`pasos de importación` de ``GenericSetup``.
 
 .. seealso:: 
   
@@ -703,6 +722,8 @@ Luego de generar el producto de configuración debe agregar este a la
 configuración buildout para completar la instalación de este producto.
 Esto se realiza usando la herramienta :ref:`zc.buildout <que_es_zcbuildout>`
 para esto hay dos enfoques realizar esto, a continuación se describe:
+
+.. _policy_instalar_desarrollo:
 
 Sitio en desarrollo
 -------------------
@@ -759,14 +780,17 @@ Para recrear estas configuraciones debe ejecutar los siguientes pasos:
 
    .. tip::
        Esta configuraciones se basa para la versión **mas reciente de Plone 4.3**.
-       Si necesita una version distinta a esta por favor consulte el repositorio
+       Si necesita una versión distinta a esta por favor consulte el repositorio
        `buildout.plonetest <https://www.github.com/collective/buildout.plonetest/>`_
        para obtener la configuraciones de pruebas de buildout.
 
 #. Entonces ejecute los comandos habituales son ``python bootstrap.py`` + ``bin/buildout``.
 
-Más tarde se puede ejecutar la instancia de Zope y crear un nuevo sitio Plone para activar
-este paquete para su uso.
+Para comprobar el correcto funcionamiento de este procedimiento debe iniciar
+la :term:`Instancia de Zope` y :ref:`crear un nuevo sitio Plone <policy_creacion_sitio>`,
+así de esta forma se puede comprobar que se instalo y creo todo correctamente.
+
+.. _policy_instalar_produccion:
 
 Sitio en producción
 -------------------
@@ -846,7 +870,7 @@ Para instalar de este producto de configuraciones existen varias formas de hacer
 este proceso se hace en la mayoría de los casos manualmente como se describe cada
 uno a continuación:
 
-.. _producto_policy_creacion_sitio:
+.. _policy_creacion_sitio:
 
 Durante la creación del sitio
 -----------------------------
@@ -881,7 +905,7 @@ en nuestro caso y marque la casilla llamada **cliente1.policy** y luego presione
 Posterior la creación del sitio
 -------------------------------
 
-Si :ref:`durante la creación del sitio <producto_policy_creacion_sitio>` no selecciono
+Si :ref:`durante la creación del sitio <policy_creacion_sitio>` no selecciono
 en la sección **Complementos** el producto **cliente1.policy**, puede realizar accediendo
 a la herramienta en :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_quickinstaller` y marque la casilla llamada **cliente1.policy** y luego presione
 el botón **Install**.
@@ -927,12 +951,12 @@ Durante la ejecución Buildout
 Existe una receta Buildout :ref:`collective.recipe.plonesite <collective_recipe_plonesite>` 
 que le permite automatizar la creación del sitio Plone ejecutando el perfiles de
 instalación que aplica las personalizaciones creadas e instala las dependencias
-descritas en el.
+descritas en el producto.
 
 Este procedimiento ofrece aprovechar las :ref:`ventajas de Buildout <buildout_caracteristicas>`
-para automatizar los procesos :ref:`Durante la creación del sitio <producto_policy_creacion_sitio>`,
-:ref:`Posterior la creación del sitio <producto_policy_post_creacion>` y :ref:`Ejecutar perfil de instalación <producto_policy_ejecutar_perfil>`, ya que el mismo es muy útil para entornos de pruebas o 
-configuraciones de despliegue en ambientes de producción.
+para automatizar los procesos :ref:`Durante la creación del sitio <policy_creacion_sitio>`,
+:ref:`Posterior la creación del sitio <producto_policy_post_creacion>` y :ref:`Ejecutar perfil de instalación <producto_policy_ejecutar_perfil>`, ya que el mismo es muy útil para entornos de
+pruebas o configuraciones de despliegue en ambientes de producción.
 
 Para esto usted tiene que agregar una nueva sección en la declarativa ``parts``
 del archivo :file:`buildout.cfg` como se muestra a continuación:
@@ -972,12 +996,6 @@ configurada de forma :ref:`standalone (autónoma) <ser-zeo-o-no-ser-zeo>`.
 
 .. tip:: Para configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las
     opciones de la `receta`_.
-
-Comando locales del policy
-==========================
-
-.. todo::
-    Escribir sobre este punto
 
 Resumen
 =======
