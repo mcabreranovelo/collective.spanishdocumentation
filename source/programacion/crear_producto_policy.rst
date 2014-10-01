@@ -654,6 +654,10 @@ objeto utilizando CMFPlacefulWorkflow, *a la vieja usanza*:
 
 .. code-block:: python
 
+    from Products.CMFPlacefulWorkflow.PlacefulWorkflowTool import WorkflowPolicyConfig_id
+
+    ...
+
     def set_workflow_policy(obj):
         """
         Cambiar el workflow del objeto utilizando CMFPlacefulWorkflow.
