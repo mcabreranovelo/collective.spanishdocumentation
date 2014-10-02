@@ -13,8 +13,8 @@ Creación de un producto de configuración
     :Compatible con: Plone 4, Plone 3.
     :Fecha: 02 de Octubre de 2014
 
-En esta articulo busca explicar como crear paquetes de configuración general de 
-un sitio representando las reglas generales de manejo de sitios para Plone 3, 
+En esta articulo busca explicar como crear paquetes de configuración general de
+un sitio representando las reglas generales de manejo de sitios para Plone 3,
 Plone 4 y Plone 5.
 
 .. _producto_policy_intro:
@@ -62,8 +62,8 @@ de paquete para Plone proporcionado por :command:`paster`:
     usar el comando :command:`paster`.
 
 .. note:: 
-    Debe estar dentro el directorio :file:`src/` de su instalación el cual 
-    fungirá como directorio que contendrá los paquetes en desarrollo.
+    Debe estar dentro el directorio :file:`src/` de su instalación el cual
+    será el directorio que contendrá los paquetes en desarrollo.
 
 .. warning::
     Evite usar textos con caracteres especiales en al momento de responder
@@ -86,22 +86,22 @@ de paquete para Plone proporcionado por :command:`paster`:
       project:  cliente1.policy
     Expert Mode? (What question mode would you like? (easy/expert/all)?) ['easy']:
 
-A continuación, :command:`paster` realiza algunas preguntas para personalizar 
-la generación del paquete. La primera es si desea contestar todas las preguntas 
+A continuación, :command:`paster` realiza algunas preguntas para personalizar
+la generación del paquete. La primera es si desea contestar todas las preguntas
 (``all``) o solo algunas (``easy``). Usted debe contestar ``all``.
 
-Después le pregunta los nombres del paquete ``Namespace`` (primera parte del 
+Después le pregunta los nombres del paquete ``Namespace`` (primera parte del
 nombre pasado al template) y el nombre del paquete (segunda parte). Como los
-valores por omisión son los mismos que le paso como parámetros en el comando 
+valores por omisión son los mismos que le paso como parámetros en el comando
 anterior, basta presiona la tecla ``Enter`` en las siguientes dos preguntas.
 
 .. code-block:: sh
 
     Namespace Package Name (Name of outer namespace package) ['cliente1']:
-    Package Name (Name of the inner namespace package) ['policy']: 
+    Package Name (Name of the inner namespace package) ['policy']:
 
 .. tip::
-    #. el espacio de nombres se usa para poder agrupar varios paquetes bajo 
+    #. el espacio de nombres se usa para poder agrupar varios paquetes bajo
        un mismo nombre.
 
     #. el nombre del paquete en sí.
@@ -113,11 +113,11 @@ para mostrar al usuario la versión instalada del producto.
 
     Version (Version number for project) ['1.0']: 0.1
 
-Después, se pide una corta descripción del paquete; este y los datos que siguen 
+Después, se pide una corta descripción del paquete; este y los datos que siguen
 son para los metadatos del proyecto en el :term:`PyPI`:.
 
 .. tip::
-    los metadatos del paquete es para definir un perfil de registro para subir 
+    los metadatos del paquete es para definir un perfil de registro para subir
     el paquete a un repositorio como el :term:`Python Package Index`.
 
 .. code-block:: sh
@@ -136,14 +136,14 @@ en Zope 2.
 
 .. code-block:: sh
 
-    Zip-Safe? (Can this project be used as a zipped egg? (true/false)) [False]: 
+    Zip-Safe? (Can this project be used as a zipped egg? (true/false)) [False]:
     
 Finalmente, esta ultima pregunta siempre debe ser ``True`` para funcionar
 en Zope 2.
 
 .. code-block:: sh
 
-    Zope2 Product? (Are you creating a product for Zope2/Plone or an Archetypes Product?) [True]: 
+    Zope2 Product? (Are you creating a product for Zope2/Plone or an Archetypes Product?) [True]:
     Creating template basic_namespace
     Creating directory ./cliente1.policy
     ...
@@ -311,22 +311,42 @@ esqueleto de módulo para :file:`tests.py`:
       $ cd profiles/default
       $ tar xzf setuptool_20080630134421.tar.gz
 
+.. _comando_paster_locales:
+
 Comando locales del policy
 --------------------------
 
+El proyecto que acaba de crear tiene :term:`local command`. Estos pueden ser usados desde el
+propio producto. Usando el comando: :command:`paster COMMAND`.
+
+Los comandos permitidos:
+
+  ``add``  Permite añadir nuevas plantillas a un paquete existente.
+
+Para más información ejecute el comando: :command:`paster help COMMAND`.
+
+Su nuevo paquete es compatible con los comandos locales. Para acceder a ellos, cambiando de
+directorio dentro del :term:`Namespace` de su nuevo paquete.
+
+A partir de ahí, usted será capaz de ejecutar el la orden de comando ``paster add --list`` para
+ver los comandos locales disponibles para este paquete.
+
 .. todo::
-    Escribir sobre este punto
+    Terminar de explicar estos concepto.
+
+.. todo::
+    Escribir un ejemplo sobre este punto.
 
 .. _manipulando_dependencias:
 
 Manipulando dependencias
 ========================
 
-En Plone la resolución de dependencias de :term:`paquetes Egg`, es de
-gran utilidad para garantizar la instalación de todas lo necesario para
-el funcionamiento de su sitio Plone. Las dependencias de los :term:`paquetes Egg`
-se definen en 2 o 3 lugares (contextos) distintos, entonces a continuación
-se detalla donde y la utilidad contextual de cada uno:
+En Plone la resolución de dependencias de :term:`paquetes Egg`, es de gran utilidad
+para garantizar la instalación de todas lo necesario para el funcionamiento de su
+sitio Plone. Las dependencias de los :term:`paquetes Egg` se definen en 2 o 3 lugares
+(contextos) distintos, entonces a continuación se detalla donde y la utilidad
+contextual de cada uno:
 
 .. tip:: Al menos debe realizar el *paso 1* y el *paso 2*.
 
@@ -443,7 +463,8 @@ de este paquete.
 
 Para comprobar el correcto funcionamiento de este procedimiento debe configurar
 este producto en un :ref:`entorno de desarrollo <policy_instalar_desarrollo>` o
-:ref:`sitio de producción <policy_instalar_produccion>` y :ref:`habilitar el producto <producto_policy_habilitar>` en su sitio Web Plone.
+:ref:`sitio de producción <policy_instalar_produccion>` y :ref:`habilitar el
+producto <producto_policy_habilitar>` en su sitio Web Plone.
 
 Luego de ejecutar ``buildout`` y habilitar su producto podrá notar que no solo
 el producto ``cliente1.policy`` sino ademas el producto ``Products.PloneFormGen``,
@@ -718,7 +739,8 @@ A continuación un ejemplo que muestra como eliminar contenidos desde la método
 
 Para comprobar el correcto funcionamiento de este procedimiento debe configurar
 este producto en un :ref:`entorno de desarrollo <policy_instalar_desarrollo>` o
-:ref:`sitio de producción <policy_instalar_produccion>` y :ref:`habilitar el producto <producto_policy_habilitar>` en su sitio Web Plone.
+:ref:`sitio de producción <policy_instalar_produccion>` y :ref:`habilitar el
+producto <producto_policy_habilitar>` en su sitio Web Plone.
 
 Luego de ejecutar ``buildout`` y habilitar su producto (se recomienda en un sitio
 Web Plone nuevo) podrá notar que no solo el producto ``cliente1.policy`` sino
@@ -734,10 +756,10 @@ ademas veras el resultado de la ejecución de código Python de los
 ¿Cómo instalarlo?
 =================
 
-Luego de generar el producto de configuración debe agregar este a la
-configuración buildout para completar la instalación de este producto.
-Esto se realiza usando la herramienta :ref:`zc.buildout <que_es_zcbuildout>`
-para esto hay dos enfoques realizar esto, a continuación se describe:
+Luego de generar el producto de configuración debe agregar este a la configuración
+buildout para completar la instalación de este producto. Esto se realiza usando la
+herramienta :ref:`zc.buildout <que_es_zcbuildout>` para esto hay dos enfoques
+realizar esto, a continuación se describe:
 
 .. _policy_instalar_desarrollo:
 
@@ -811,7 +833,7 @@ así de esta forma se puede comprobar que se instalo y creo todo correctamente.
 Sitio en producción
 -------------------
 
-Este paquete en entornos producción (instalación existen o otras configuraciones buildout) 
+Este paquete en entornos producción (instalación existen o otras configuraciones buildout)
 debe configurarse por lo generar un archivo ``buildout.cfg`` o basado en configuraciones
 de este tipo, el objeto es agregar este paquete ``cliente1.policy`` a la sección ``eggs``
 del archivo :file:`buildout.cfg`. Para recrear estas configuraciones debe ejecutar los
@@ -874,7 +896,7 @@ Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 
   $ ./bin/instance fg 
 
-Luego de esto ya tiene disponible el producto para ser habilitado en cada sitio 
+Luego de esto ya tiene disponible el producto para ser habilitado en cada sitio
 Plone dentro de su :term:`Instancia de Zope`.
 
 .. _producto_policy_habilitar:
@@ -971,8 +993,9 @@ descritas en el producto.
 
 Este procedimiento ofrece aprovechar las :ref:`ventajas de Buildout <buildout_caracteristicas>`
 para automatizar los procesos :ref:`Durante la creación del sitio <policy_creacion_sitio>`,
-:ref:`Posterior la creación del sitio <producto_policy_post_creacion>` y :ref:`Ejecutar perfil de instalación <producto_policy_ejecutar_perfil>`, ya que el mismo es muy útil para entornos de
-pruebas o configuraciones de despliegue en ambientes de producción.
+:ref:`Posterior la creación del sitio <producto_policy_post_creacion>` y
+:ref:`Ejecutar perfil de instalación <producto_policy_ejecutar_perfil>`, ya que el mismo es muy
+útil para entornos de pruebas o configuraciones de despliegue en ambientes de producción.
 
 Para esto usted tiene que agregar una nueva sección en la declarativa ``parts``
 del archivo :file:`buildout.cfg` como se muestra a continuación:
@@ -997,7 +1020,7 @@ Luego ejecute el script :command:`buildout`, de la siguiente forma:
 
   $ ./bin/buildout -vN
 
-Con este comando busca el paquete o sus dependencias en el repositorio :term:`PyPI`, 
+Con este comando busca el paquete o sus dependencias en el repositorio :term:`PyPI`,
 descarga e instala el producto en su instancia Zope para sus sitios Plone allí hospedados.
 
 Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
@@ -1006,8 +1029,8 @@ Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 
   $ ./bin/instance fg 
 
-De esta forma ya tiene disponible el sitio creado con el nombre ``Plone`` con su 
-:term:`Producto Plone` de configuraciones aplicado en su :term:`Instancia de Zope` 
+De esta forma ya tiene disponible el sitio creado con el nombre ``Plone`` con su
+:term:`Producto Plone` de configuraciones aplicado en su :term:`Instancia de Zope`
 configurada de forma :ref:`standalone (autónoma) <ser-zeo-o-no-ser-zeo>`.
 
 .. tip:: Para configuraciones en :ref:`ZEO <ser-zeo-o-no-ser-zeo>` consulte las
@@ -1028,7 +1051,7 @@ En este artículo has aprendido a:
 
 - Entender la :ref:`manipulación de la instalación <manipulando_instalacion>` del producto.
 
-- ¿Cómo :ref:`instalar <producto_policy_instalar>` y :ref:`habilitar <producto_policy_habilitar>` 
+- ¿Cómo :ref:`instalar <producto_policy_instalar>` y :ref:`habilitar <producto_policy_habilitar>`
   el producto creado en un sitio Plone.
 
 ----
