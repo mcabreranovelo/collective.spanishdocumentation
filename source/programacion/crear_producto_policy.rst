@@ -10,8 +10,8 @@ Creación de un producto de configuración
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
     :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Septiembre de 2014
+    :Compatible con: Plone 4, Plone 3.
+    :Fecha: 02 de Octubre de 2014
 
 En esta articulo busca explicar como crear paquetes de configuración general de 
 un sitio representando las reglas generales de manejo de sitios para Plone 3, 
@@ -64,6 +64,14 @@ de paquete para Plone proporcionado por :command:`paster`:
 .. note:: 
     Debe estar dentro el directorio :file:`src/` de su instalación el cual 
     fungirá como directorio que contendrá los paquetes en desarrollo.
+
+.. warning::
+    Evite usar textos con caracteres especiales en al momento de responder
+    a las preguntar que le realice el programa :program:`paster`, ya que
+    esta el momento no soporta caracteres especiales y acentuaciones.
+
+    Posteriormente puede hacer las correcciones ortográficas debidas en la
+    ``metadata`` del :term:`paquete Egg` si así lo a merita o requiere.
 
 .. code-block:: sh
 
