@@ -417,7 +417,7 @@ siguiente código a continuación:
 
     <configure
         xmlns="http://namespaces.zope.org/zope"
-        i18n_domain="ploneconf2014.policy">
+        i18n_domain="cliente1.policy">
 
       <include package="Products.PloneFormGen" />
 
