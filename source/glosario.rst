@@ -101,6 +101,12 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
         de archivo que típicamente finaliza con la extensión ``.py`` o ``.pyc``. Los modules
         son parte de un :term:`paquete`.
 
+    Namespace
+        Ver :term:`Paquete de espacio de nombres`.
+
+    Namespace package
+        Ver :term:`Paquete de espacio de nombres`.
+
     Nombre de puntos Python
         Es la representación Python del "camino" para un determinado objeto / módulo / función,
         por ejemplo, ``Products.GenericSetup.tool.exportToolset``. A menudo se utiliza como
@@ -129,6 +135,21 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
     paquete
         Ver :term:`Paquete Python`.
 
+    Paquete bundle
+        Este paquete consististe en un archivo comprimido con todos los módulos que son
+        necesario compilar o instalar en el :term:`PYTHONPATH` de tu interprete ``Python``.
+
+    Paquete de espacio de nombres
+        Una característica de setuptools que hace posible la distribución múltiple, paquetes
+        independientes que comparten un único espacio de nombres de nivel superior. Por ejemplo,
+        los paquetes ``plone.theme`` y ``plone.portlets`` ambos comparten el espacio de nombres
+        ``plone`` de nivel superior, sino que se distribuyen en forma de huevos separados.
+        Una vez instalado, el código fuente de cada huevo tiene su propio directorio (o, posiblemente,
+        un archivo comprimido de ese directorio).
+
+        Los paquetes de espacio de nombres eliminan la necesidad de distribuir un paquete Plone enorme,
+        con un directorio de nivel superior ``plone`` que contiene todos los directorios hijos posibles.
+
     paquete Egg
         Es una forma de empaquetar y distribuir paquetes Python. Cada Egg contiene
         un archivo :file:`setup.py` con metadata (como el nombre del autor y la correo
@@ -147,10 +168,6 @@ A continuación una serie de términos usados en las tecnologías Python / Zope 
 
     paquetes Egg
         Plural del termino :term:`paquete Egg`.
-
-    Paquete bundle
-        Este paquete consististe en un archivo comprimido con todos los módulos que son 
-        necesario compilar o instalar en el :term:`PYTHONPATH` de tu interprete ``Python``.
     
     Paquete Python
         Es un termino generalmente usando para describir un módulo Python. en el
