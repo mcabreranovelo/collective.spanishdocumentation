@@ -11,24 +11,24 @@ Desarrollar diversos productos con Plone
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
     :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 05 de Enero de 2014
+    :Fecha: 02 de Octubre de 2014
 
-En esta articulo busca explicar los tipos desarrollos de productos / módulos 
+En esta articulo busca explicar los tipos desarrollos de productos / módulos
 disponibles para Plone.
 
 Introducción
 ============
 
-Un sitio basado en :ref:`Plone <que_es_plone>` es muy complejo y se compone de una 
-colección de elementos como contenido, configuración y recursos de presentación. 
-La tendencia desde Plone 3 hasta la actualidad en Plone 4 y Plone 5 es separar lo más 
-posible todas estas áreas, para permitir un desarrollo organizado y estructurado. 
+Un sitio basado en :ref:`Plone <que_es_plone>` es muy complejo y se compone de
+una colección de elementos como contenido, configuración y recursos de presentación.
+La tendencia desde Plone 3 hasta la actualidad en Plone 4 y Plone 5 es separar lo más
+posible todas estas áreas, para permitir un desarrollo organizado y estructurado.
 
-En la base de datos :ref:`ZODB <que_es_zodb>`, debe en lo posible almacenar 
-únicamente el contenido generado por los usuarios. Todo el código y configuración 
-del sitio deben estar en el :term:`filesystem`, de manera que puedan editarse y 
-generar versiones con las herramientas comunes de desarrollo y no queden encerrados 
-en la :ref:`ZODB <que_es_zodb>`. Esto también permite una distribución e instalación 
+En la base de datos :ref:`ZODB <que_es_zodb>`, debe en lo posible almacenar
+únicamente el contenido generado por los usuarios. Todo el código y configuración
+del sitio deben estar en el :term:`filesystem`, de manera que puedan editarse y
+generar versiones con las herramientas comunes de desarrollo y no queden encerrados
+en la :ref:`ZODB <que_es_zodb>`. Esto también permite una distribución e instalación
 más sencillas.
 
 .. todo::
@@ -45,9 +45,10 @@ La estructura del código que se recomienda incluye las siguientes partes:
 
 Producto de tema
 ----------------
-Conocido en Ingles como **plone theme product**, este producto incluye uno o más productos 
-que definan un "skin" de Plone que especifique la presentación visual del sitio. Cada uno 
-puede incluir:
+
+Conocido en Ingles como **plone theme product**, este producto incluye uno o más
+productos que definan un "skin" de Plone que especifique la presentación visual
+del sitio. Cada uno puede incluir:
 
 * Estilos de CSS.
 
@@ -67,7 +68,8 @@ puede incluir:
 
 Productos de contenido
 ----------------------
-Conocido en Ingles como **content types product**, este es uno o varios productos que 
+
+Conocido en Ingles como **content types product**, este es uno o varios productos que
 definen los tipos de contenido que representan la base del sitio web.
 
 * Definición de tipos y campos.
@@ -85,30 +87,13 @@ definen los tipos de contenido que representan la base del sitio web.
 .. todo::
     Escribir un articulo sobre este punto
 
-.. _productos_utils_portal:
-
-Productos de apoyo
--------------------
-Uno o varios productos que realicen funciones no específicamente asociadas al contenido.
-
-* Utilerías (herramientas tipo *portal_xxx*).
-
-* Portlets generales.
-
-* Vistas y viewlets especiales.
-
-* Funcionalidades que extiendan Plone.
-
-.. todo::
-    Escribir un articulo sobre este punto
-
 .. _productos_policy_plone:
 
 Producto de configuración
 -------------------------
 
-Conocido en Ingles como **policy product**, este producto incluye toda la configuración 
-general del sitio. Representa las reglas generales de manejo de sitios Plone de una 
+Conocido en Ingles como **policy product**, este producto incluye toda la configuración
+general del sitio. Representa las reglas generales de manejo de sitios Plone de una
 organización y puede incluir:
 
 * Configuraciones del sitio y propiedades de navegación.
@@ -126,8 +111,26 @@ organización y puede incluir:
 
 * Flujo de trabajos generales de la organización.
       
-.. seealso:: Para crear este producto consulte el articulo :ref:`Creación de un producto 
+.. seealso:: Para crear este producto consulte el articulo :ref:`Creación de un producto
     de configuración <producto_policy>`.
+
+.. _productos_utils_portal:
+
+Productos de apoyo
+------------------
+
+Uno o varios productos que realicen funciones no específicamente asociadas al contenido.
+
+* Utilerías (herramientas tipo *portal_xxx*).
+
+* Portlets generales.
+
+* Vistas y viewlets especiales.
+
+* Funcionalidades que extiendan Plone.
+
+.. todo::
+    Escribir un articulo sobre este punto
 
 Referencia
 ==========
