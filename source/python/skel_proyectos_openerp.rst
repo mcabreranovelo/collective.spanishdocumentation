@@ -11,7 +11,7 @@ Esqueletos de proyectos OpenERP
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Probado con Python 2.6 o versiones superiores
-    :Fecha: 11 de Enero de 2013
+    :Fecha: 03 de Octubre de 2014
 
 Introducción
 ============
@@ -22,13 +22,15 @@ como sistema manejador de bases de datos y ha sido programado con Python, lo
 cual permite que su adecuación e implantación sea limpia y pueda tener una 
 curva de adopción bastante menor que otras soluciones ERP existentes. 
 
-Entonces para su desarrollo existen una serie de colecciones de plantillas 
-*esqueletos* de módulos y temas basados en :ref:`Paster <skel_python>`, para 
-proyectos que permiten iniciar rápidamente el desarrollo en OpenERP.
+Entonces para su desarrollo existen una serie de colecciones de
+:ref:`plantillas esqueletos <scaffolding_python>` de módulos y temas basados
+en ``Paster``, para proyectos que permiten iniciar rápidamente el desarrollo
+en OpenERP.
 
 Requerimientos previos
 ======================
-Se requiere instalar las siguientes dependencias con el siguiente comando: 
+
+Se requiere instalar las siguientes dependencias con el siguiente comando:
 
 .. code-block:: sh
 
@@ -37,8 +39,8 @@ Se requiere instalar las siguientes dependencias con el siguiente comando:
 Instalación
 ===========
 
-Dentro de su entorno virtual activado debe instalar el paquete `openerp_bootstrap`_, 
-ejecutando el siguiente comando: 
+Dentro de su entorno virtual activado debe instalar el paquete `openerp_bootstrap`_,
+ejecutando el siguiente comando:
 
 .. code-block:: sh
 
@@ -46,14 +48,14 @@ ejecutando el siguiente comando:
 
 .. note::
 
-  No olvidar que estos paquetes han sido instalados con el :ref:`entorno virtual <por_que_virtualenv>` 
-  que previamente usted activo, eso quiere decir que los paquetes previamente instalados con 
-  :ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` están instalados en el directorio 
-  ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de su versión de Python 
-  del sistema ``/usr/lib/python2.x/site-packages/``
+  No olvidar que estos paquetes han sido instalados con el :ref:`entorno virtual <por_que_virtualenv>`
+  que previamente usted activo, eso quiere decir que los paquetes previamente instalados con
+  :ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` están instalados en el directorio
+  ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de su versión de Python
+  del sistema ``/usr/lib/python2.x/site-packages/``.
 
-Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
-tiene disponible para usa, ejecutando el siguiente comando: 
+Al finalizar la instalación podrá opcionalmente consultar cuales plantillas tiene disponible
+para usar, ejecutando el siguiente comando:
 
 .. code-block:: sh
 
@@ -67,7 +69,7 @@ tiene disponible para usa, ejecutando el siguiente comando:
 Generación modulo OpenERP
 =========================
 
-Usted puede usar el comando :command:`paster` para crear paquetes Python. 
+Usted puede usar el comando :command:`paster` para crear paquetes Python.
 
 .. code-block:: sh
 
@@ -93,9 +95,9 @@ Usted puede usar el comando :command:`paster` para crear paquetes Python.
       Copying __init__.py to ./openerp_mimodulo/__init__.py
       Copying __openerp__.py_tmpl to ./openerp_mimodulo/__openerp__.py
 
-Luego de responder a estas preguntas el programa :command:`paster` creará la 
-estructura inicial del paquete del modulo OpenERP llamado :file:`openerp_mimodulo` 
-en el directorio donde ejecuto el comando anterior.
+Luego de responder a estas preguntas el programa :command:`paster` creará la estructura
+inicial del paquete del modulo OpenERP llamado :file:`openerp_mimodulo` en el directorio
+donde ejecuto el comando anterior.
 
 ::
 
@@ -103,10 +105,10 @@ en el directorio donde ejecuto el comando anterior.
     |-- __init__.py
     `-- __openerp__.py
 
-Hasta este punto tiene creado la estructura del su modulo y puede 
-consultar el archivo descriptor de Modulo OpenERP, el cual ofrece 
-la información del manifiesto de su modulo en el archivo en la ruta 
-:file:`openerp_mimodulo/__openerp__.py` que contiene la siguiente 
+Hasta este punto tiene creado la estructura del su modulo y puede
+consultar el archivo descriptor de Modulo OpenERP, el cual ofrece
+la información del manifiesto de su modulo en el archivo en la ruta
+:file:`openerp_mimodulo/__openerp__.py` que contiene la siguiente
 información:
 
 .. code-block:: python
@@ -172,9 +174,9 @@ Ahora proceda a crear un nuevo tema, con el siguiente comando:
           Copying +normalized_name+.xml_tmpl to ./openerp_mitema/static/xml/openerp_mitema.xml
     xml not required, removed dir ./openerp_mitema/static/xml
 
-Luego de responder a estas preguntas el programa :command:`paster` creará la 
-estructura inicial de un modulo Web con todos los archivos estáticos que usted 
-ya tiene listo para personalizar, con el nombre de :file:`openerp_mitema` en el 
+Luego de responder a estas preguntas el programa :command:`paster` creará la
+estructura inicial de un modulo Web con todos los archivos estáticos que usted
+ya tiene listo para personalizar, con el nombre de :file:`openerp_mitema` en el
 directorio donde ejecuto el comando anterior.
 
 ::
@@ -233,13 +235,16 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 Recomendaciones
 ===============
 
-Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas 
-:command:`paster` y Buildout simplemente seleccione cual esqueleto va a utilizar para su 
-desarrollo y proceso a instalarlo con :ref:`easy_install <que_es_easyinstall>` o 
-:ref:`PIP <que_es_pip>` (como se explico anteriormente) y siga sus respectivas 
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas
+:command:`paster` y Buildout simplemente seleccione cual esqueleto va a utilizar para su
+desarrollo y proceso a instalarlo con :ref:`easy_install <que_es_easyinstall>` o
+:ref:`PIP <que_es_pip>` (como se explico anteriormente) y siga sus respectivas
 instrucciones para lograr con éxito la tarea deseada.
 
-.. seealso:: Artículos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
+.. seealso::
+    Artículos sobre:
+
+   - :ref:`Esqueletos de proyectos Python <skel_python>`.
 
 Referencias
 ===========

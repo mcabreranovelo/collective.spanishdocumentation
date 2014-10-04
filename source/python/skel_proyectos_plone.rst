@@ -11,37 +11,37 @@ Esqueletos de proyectos Zope/Plone
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3 y Plone 4
-    :Fecha: 05 de Enero de 2014
+    :Fecha: 03 de Octubre de 2014
 
 Introducción
 ============
 
-Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
-rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
-desarrollos específicos, a continuación se muestran algunos esqueletos
-útiles:
+Son una serie de colecciones de :ref:`plantillas esqueletos <scaffolding_python>` que
+permiten iniciar rápidamente proyectos, existente diversos *esqueletos* orientados a
+tipos de desarrollos específicos, a continuación se muestran algunos esqueletos útiles:
 
 - **Esqueletos de proyectos Plone**:
 
   .. note::
-      :ref:`Plone <que_es_plone>`, Además de ser un sistema de gestión de contenidos, 
-      es como un Framework para desarrollo de aplicaciones, mas NO es de propósito general.
+      :ref:`Plone <que_es_plone>`, Además de ser un sistema de gestión de contenidos,
+      es como un Framework para desarrollo de aplicaciones, mas NO es de propósito
+      general.
 
-  - `ZopeSkel`_, es una colección de esqueletos para crear
-    automáticamente paquetes e instancias en Zope.
+  - `ZopeSkel`_, es una colección de esqueletos para crear automáticamente paquetes e
+    instancias en Zope.
 
-  - `zopeskel.dexterity`_, es una plantilla Paster para la 
-    herramienta de desarrollo de tipos de contenidos Dexterity para Plone.
+  - `zopeskel.dexterity`_, es una plantilla Paster para la herramienta de desarrollo de
+    tipos de contenidos Dexterity para Plone.
 
 - **Esqueletos de proyectos Zope**:
 
   .. note::
-      :ref:`Zope <que_es_zope>`,  es un entorno de desarrollo para la creación de sitios web 
-      dinámicos y/o aplicaciones web escrito en el lenguaje de programación 
+      :ref:`Zope <que_es_zope>`,  es un entorno de desarrollo para la creación de sitios
+      web dinámicos y/o aplicaciones web escrito en el lenguaje de programación
       :ref:`Python <python_index>`.
 
-  - `zopeproject`_, Herramientas y scripts para la creación de entornos de 
-    pruebas de desarrollo para aplicaciones Web que usen principalmente Zope.
+  - `zopeproject`_, Herramientas y scripts para la creación de entornos de pruebas de
+    desarrollo para aplicaciones Web que usen principalmente Zope.
 
 
 - **Esqueletos de proyectos Grok**:
@@ -51,17 +51,16 @@ desarrollos específicos, a continuación se muestran algunos esqueletos
 
   - `grokcore.startup`_,  Soporte a Paster para proyectos Grok.
   
-  - `grokproject`_, Script que instala un directorio de proyecto instalando 
-    ``Zope 3`` con el framework ``grok``, además creando un plantilla para una 
-    aplicación ``grok``.
-  
+  - `grokproject`_, Script que instala un directorio de proyecto instalando ``Zope 3``
+    con el framework ``grok``, además creando un plantilla para una aplicación ``grok``.
   
 .. _instalacion_zopeskel:
 
 Instalación
 ===========
 
-Para realizar este paso debe tener creado previamente y activado un entorno virtual creado, ejecutando el siguiente comando: 
+Para realizar este paso debe tener creado previamente y activado un entorno virtual creado,
+ejecutando el siguiente comando:
 
 .. code-block:: sh
 
@@ -69,17 +68,17 @@ Para realizar este paso debe tener creado previamente y activado un entorno virt
 
 .. note::
 
-  No olvidar que estos paquetes han sido instalados con el :ref:`entorno virtual <por_que_virtualenv>` 
-  que previamente usted activo, eso quiere decir que los paquetes previamente instalados con 
-  :ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` están instalados en el directorio 
-  ``~/virtualenv/python/lib/python2.x/site-packages/`` en ves del directorio de su versión de Python 
-  del sistema ``/usr/lib/python2.x/site-packages/``
+  No olvidar que estos paquetes han sido instalados con el :ref:`entorno virtual <por_que_virtualenv>`
+  que previamente usted activo, eso quiere decir que los paquetes previamente instalados con
+  :ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` están instalados en el
+  directorio :file:`~/virtualenv/python/lib/python2.x/site-packages/` en ves del directorio
+  de su versión de Python del sistema :file:`/usr/lib/python2.x/site-packages/`.
 
 Uso de ZopeSkel
 ===============
 
-Al finalizar la instalación podrá opcionalmente consultar cuales plantillas
-tiene disponible para usa, ejecutando el siguiente comando: 
+Al finalizar la instalación podrá opcionalmente consultar cuales plantillas tiene disponible
+para usa, ejecutando el siguiente comando:
 
 .. code-block:: sh
 
@@ -112,7 +111,7 @@ tiene disponible para usa, ejecutando el siguiente comando:
 Creando un proyecto Buildout de Plone 4
 ---------------------------------------
 
-Usted debe usar el comando paster para crear el proyecto Buildout. 
+Usted debe usar el comando :command:`paster` para crear el proyecto Buildout.
 
 .. code-block:: sh
 
@@ -164,8 +163,8 @@ Usted debe usar el comando paster para crear el proyecto Buildout.
     
     **************************************************************************
 
-Usted puede verificar el paquete previamente creado y observará como este
-paquete básico ha habilitado el setuptools 
+Usted puede verificar el paquete previamente creado y observará como este paquete básico
+ha habilitado el setuptools.
 
 .. code-block:: sh
 
@@ -186,7 +185,7 @@ Para iniciar el proyecto Plone ejecute los siguientes comandos:
   (python)$ cd cliente1-portal.buildout/
   (python)$ python bootstrap.py
 
-Observe la estructura de directorio creada ejecutando el siguiente comando: 
+Observe la estructura de directorio creada ejecutando el siguiente comando:
 
 .. code-block:: sh
 
@@ -198,104 +197,6 @@ Observe la estructura de directorio creada ejecutando el siguiente comando:
     |-- buildout.cfg
     |-- develop-eggs
     |-- eggs
-    |   |-- distribute-0.6.19-py2.4.egg
-    |   |   |-- EGG-INFO
-    |   |   |   |-- PKG-INFO
-    |   |   |   |-- SOURCES.txt
-    |   |   |   |-- dependency_links.txt
-    |   |   |   |-- entry_points.txt
-    |   |   |   |-- entry_points2.txt
-    |   |   |   |-- not-zip-safe
-    |   |   |   `-- top_level.txt
-    |   |   |-- easy_install.py
-    |   |   |-- pkg_resources.py
-    |   |   |-- setuptools
-    |   |   |   |-- __init__.py
-    |   |   |   |-- archive_util.py
-    |   |   |   |-- cli.exe
-    |   |   |   |-- command
-    |   |   |   |   |-- __init__.py
-    |   |   |   |   |-- alias.py
-    |   |   |   |   |-- bdist_egg.py
-    |   |   |   |   |-- bdist_rpm.py
-    |   |   |   |   |-- bdist_wininst.py
-    |   |   |   |   |-- build_ext.py
-    |   |   |   |   |-- build_py.py
-    |   |   |   |   |-- develop.py
-    |   |   |   |   |-- easy_install.py
-    |   |   |   |   |-- egg_info.py
-    |   |   |   |   |-- install.py
-    |   |   |   |   |-- install_egg_info.py
-    |   |   |   |   |-- install_lib.py
-    |   |   |   |   |-- install_scripts.py
-    |   |   |   |   |-- register.py
-    |   |   |   |   |-- rotate.py
-    |   |   |   |   |-- saveopts.py
-    |   |   |   |   |-- sdist.py
-    |   |   |   |   |-- setopt.py
-    |   |   |   |   |-- test.py
-    |   |   |   |   |-- upload.py
-    |   |   |   |   |-- upload_docs.py
-    |   |   |   |-- depends.py
-    |   |   |   |-- dist.py
-    |   |   |   |-- extension.py
-    |   |   |   |-- gui.exe
-    |   |   |   |-- package_index.py
-    |   |   |   |-- sandbox.py
-    |   |   |   `-- tests
-    |   |   |       |-- __init__.py
-    |   |   |       |-- doctest.py
-    |   |   |       |-- server.py
-    |   |   |       |-- test_build_ext.py
-    |   |   |       |-- test_develop.py
-    |   |   |       |-- test_easy_install.py
-    |   |   |       |-- test_packageindex.py
-    |   |   |       |-- test_resources.py
-    |   |   |       |-- test_sandbox.py
-    |   |   |       |-- test_upload_docs.py
-    |   |   |-- site.py
-    |   `-- zc.buildout-1.4.4-py2.4.egg
-    |       |-- EGG-INFO
-    |       |   |-- PKG-INFO
-    |       |   |-- SOURCES.txt
-    |       |   |-- dependency_links.txt
-    |       |   |-- entry_points.txt
-    |       |   |-- namespace_packages.txt
-    |       |   |-- not-zip-safe
-    |       |   |-- requires.txt
-    |       |   `-- top_level.txt
-    |       |-- README.txt
-    |       `-- zc
-    |           |-- __init__.py
-    |           `-- buildout
-    |               |-- __init__.py
-    |               |-- allowhosts.txt
-    |               |-- bootstrap.txt
-    |               |-- buildout.py
-    |               |-- buildout.txt
-    |               |-- debugging.txt
-    |               |-- dependencylinks.txt
-    |               |-- distribute.txt
-    |               |-- download.py
-    |               |-- download.txt
-    |               |-- downloadcache.txt
-    |               |-- easy_install.py
-    |               |-- easy_install.txt
-    |               |-- extends-cache.txt
-    |               |-- repeatable.txt
-    |               |-- rmtree.py
-    |               |-- runsetup.txt
-    |               |-- setup.txt
-    |               |-- testing.py
-    |               |-- testing.txt
-    |               |-- testing_bugfix.txt
-    |               |-- testrecipes.py
-    |               |-- tests.py
-    |               |-- testselectingpython.py
-    |               |-- unzip.txt
-    |               |-- update.txt
-    |               |-- upgrading_distribute.txt
-    |               `-- windows.txt
     |-- parts
     |   `-- buildout
     |-- src
@@ -315,9 +216,14 @@ De esta forma se inicia la construcción de proyecto Plone 4.
 Esqueletos y estilos de trabajo
 ===============================
 
-Una de las características interesante de los esqueletos es que usted puede crear sus propias plantillas de proyecto que apliquen sus propias estilos de desarrollo y configuraciones en sus proyectos de desarrollo. 
+Una de las características interesante de los esqueletos es que usted puede crear
+sus propias plantillas de proyecto que apliquen sus propias estilos de desarrollo
+y configuraciones en sus proyectos de desarrollo.
 
-Esto es muy útil cuando requieres trabajar con un equipo de desarrolladores a los cuales debes definir pautas sobre estilos de desarrollos, de sintaxis de código y otras más, a continuación muestro una lista de diversos esqueletos hecho por diversas compañías: 
+Esto es muy útil cuando requieres trabajar con un equipo de desarrolladores a los
+cuales debes definir pautas sobre estilos de desarrollos, de sintaxis de código y
+otras más, a continuación muestro una lista de diversos esqueletos hecho por
+diversas compañías:
 
 - `A collection of skeletons for quickstarting projects with Ingeniweb products`_.
 
@@ -343,14 +249,17 @@ Esto es muy útil cuando requieres trabajar con un equipo de desarrolladores a l
 Recomendaciones
 ===============
 
-Si desea trabajar con algún proyecto de desarrollo basado en esqueletos 
-(plantillas ``paster``) y Buildout simplemente seleccione cual esqueleto 
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos
+(plantillas ``paster``) y Buildout simplemente seleccione cual esqueleto
 va a utilizar para su desarrollo y proceso a instalarlo con 
-:ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>` 
-(como se explico anteriormente) y siga sus respectivas instrucciones para 
+:ref:`Easy Install <que_es_easyinstall>` o :ref:`PIP <que_es_pip>`
+(como se explico anteriormente) y siga sus respectivas instrucciones para
 lograr con éxito la tarea deseada.
 
-.. seealso:: Artículos sobre :ref:`Esqueletos de proyectos Python <skel_python>`.
+.. seealso::
+    Artículos sobre:
+
+   - :ref:`Esqueletos de proyectos Python <skel_python>`.
 
 Referencias
 ===========

@@ -2,23 +2,29 @@
 
 .. _skel_python:
 
-==============================
-Esqueletos de proyectos Python
-==============================
+===============================
+Scaffolding en proyectos Python
+===============================
 
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Python 2.4 o versiones superiores
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 03 de Octubre de 2014
 
-Introducción
-============
+.. _scaffolding_python:
 
-Son una serie de colecciones de plantillas *esqueletos* que permiten iniciar
-rápidamente proyectos, existente diversos *esqueletos* orientados a tipos de
-desarrollos específicos.
+Scaffolding en Python
+=====================
+
+La estructura del :term:`paquete Egg` Python es poco compleja. Por lo cual para empezar
+con su primer proyecto y diversos módulos, puede usar el concepto **Scaffolding** para
+crear un esqueleto de código usando las plantillas adecuadas para :term:`paquetes Python`.
+
+Este concepto *scaffolding*, es muy útil para del arranque de su desarrollo, ofreciendo una
+serie de colecciones de plantillas *esqueletos* que permiten iniciar rápidamente proyectos,
+existente diversos *esqueletos* orientados a tipos de desarrollos específicos.
 
 .. _que_es_pastescript:
 
@@ -57,7 +63,7 @@ tiene disponible para usa, ejecutando el siguiente comando:
       basic_package:       A basic setuptools-enabled package
       paste_deploy:        A web application deployed through paste.deploy
 
-Usted puede usar el comando :command:`paster` para crear paquetes Python. 
+Usted puede usar el comando :command:`paster` para crear paquetes Python.
 
 .. code-block:: sh
 
@@ -89,7 +95,6 @@ Usted puede usar el comando :command:`paster` para crear paquetes Python.
       Copying setup.cfg to ./mipaquetepython/setup.cfg
       Copying setup.py_tmpl to ./mipaquetepython/setup.py
     Running /home/macagua/virtualenv/python/bin/python setup.py egg_info
-
 
 Usted puede verificar el paquete previamente creado y observará como este
 paquete básico ha habilitado el :ref:`Setuptools <que_es_setuptools>` 
@@ -147,8 +152,7 @@ el siguiente comando:
   Usted introdujo:  Esta cadena
   >>> exit()
 
-De esta forma tienes creado un :term:`paquete Egg` Python
-
+De esta forma tienes creado un :term:`paquete Egg` Python.
 
 Esqueletos en diversos proyectos Python
 =======================================
@@ -160,7 +164,7 @@ A continuación se muestran algunos esqueletos útiles:
 - :ref:`Esqueletos de proyectos OpenERP <skel_openerp>`.
 
   .. note::
-      `OpenERP`_, ees un sistema ERP y CRM programado con Python, 
+      `OpenERP`_, es un sistema ERP y CRM programado con Python,
       de propósito general.
 
 - **Esqueletos de proyectos Django**:
@@ -219,15 +223,21 @@ A continuación se muestran algunos esqueletos útiles:
 
   - `trac_project`_, Plantilla de proyecto Trac de software de código abierto.
 
-
 Recomendaciones
 ===============
 
-Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o 
-plantillas paster y Buildout simplemente seleccione cual esqueleto va a 
-utilizar para su desarrollo y proceso a instalarlo con :ref:`easy_install <que_es_easyinstall>` 
-o :ref:`PIP <que_es_pip>` (como se explico anteriormente) y siga sus 
-respectivas instrucciones para lograr con éxito la tarea deseada.
+Si desea trabajar con algún proyecto de desarrollo basado en esqueletos o plantillas
+``paster`` y Buildout simplemente seleccione cual esqueleto va a utilizar para su
+desarrollo y proceso a instalarlo con :ref:`easy_install <que_es_easyinstall>` o
+:ref:`PIP <que_es_pip>` (como se explico anteriormente) y siga sus respectivas
+instrucciones para lograr con éxito la tarea deseada.
+
+.. seealso::
+    Artículos sobre:
+
+   - :ref:`Esqueletos de proyectos Plone <skel_plone>`.
+
+   - :ref:`Esqueletos de proyectos OpenERP <skel_openerp>`.
 
 Descarga código fuente
 ======================
@@ -247,6 +257,7 @@ Referencias
 
 .. _PasteScript: http://pypi.python.org/pypi/PasteScript
 .. _paste.deploy: http://pypi.python.org/pypi/PasteDeploy
+.. _OpenERP: https://www.openerp.com/
 .. _Django: https://www.djangoproject.com/
 .. _django-project-templates: http://pypi.python.org/pypi/django-project-templates
 .. _fez.djangoskel: http://pypi.python.org/pypi/fez.djangoskel
