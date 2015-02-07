@@ -37,7 +37,7 @@ directorio `home` del usuario ~/. Utilice la opción ``--help`` para obtener la
 lista completa de las opciones disponibles la herramienta :command:`virtualenv`.
 
 Cuando haya terminado la creación del entorno virtual, tendrá un ejecutable
-de python local al usuario que lo creo (por ejemplo :command:`~/bin/python`) 
+de python local al usuario que lo creó (por ejemplo :command:`~/bin/python`) 
 que está vinculado a la instalación del Python de su sistema :command:`/usr/bin/python` 
 y hereda todas sus librerías actuales, pero además le permite añadir nuevas librerías 
 tanto como usted lo desee. 
@@ -46,7 +46,7 @@ Sólo tiene que utilizar este nuevo Python en lugar de la instalación Python
 de su sistema, y puede modificarlo a su gusto sin dañar nada del Python de su 
 sistema operativo. De igual forma usted debe seguir usando las instrucciones de 
 instalación estándar para instalar setuptools y EasyInstall o Distribute y pip, 
-con desde su nueva instalación (:command:`~/bin/python`) Python en lugar del Python 
+desde su nueva instalación (:command:`~/bin/python`) Python en lugar del Python 
 de su sistema :command:`/usr/bin/python`.
 
 
