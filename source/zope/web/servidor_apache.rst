@@ -10,7 +10,7 @@ Ejecutando Zope y Plone con Servidor Web Apache
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardocaballero@gmail.com
     :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Agosto de 2014
+    :Fecha: 14 de Febrero de 2015
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web `Apache 2`_ en frente del servidor Zope/Plone, a través de técnicas de 
@@ -211,6 +211,16 @@ al directorio :file:`sites-enabled/`, para que su configuración previa este dis
   # ln -s /etc/apache2/sites-available/cliente1-intranet \
   /etc/apache2/sites-enabled/cliente1-intranet
 
+
+Habilite el virtual host
+------------------------
+
+Debe habilitar la configuración de ``VirtualHost`` definida en el archivo ``cliente1-intranet``,
+con el siguiente comando:
+
+.. code-block:: sh
+
+  # a2ensite cliente1-intranet 
 
 Reinicie el servidor
 --------------------
