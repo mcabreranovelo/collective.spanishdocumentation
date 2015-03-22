@@ -8,8 +8,8 @@ Ejecutando Zope y Plone con Servidor Web Apache
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
     :Fecha: 14 de Febrero de 2015
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 

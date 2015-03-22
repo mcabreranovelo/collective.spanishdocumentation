@@ -9,9 +9,9 @@ Creando Temas con diazo
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 22 de Septiembre de 2014
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 ¿Qué es diazo?
 ==============

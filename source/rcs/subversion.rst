@@ -9,8 +9,8 @@ Control de versiones utilizando Subversion
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Fecha: 31 de Diciembre de 2013
+    :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

@@ -9,8 +9,8 @@ Creación de un paquete de tema
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
+    :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
     :Fecha: 05 de Enero de 2014
 
 .. _producto_tema_intro:

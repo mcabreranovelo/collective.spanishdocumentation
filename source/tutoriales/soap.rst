@@ -11,7 +11,7 @@ Obtener direcciones de manejo con SOAP
     :Autor(es): Carlos de la Guardia
     :Correo(s): carlos.delaguardia@gmail.com
     :Compatible con: Plone 3
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

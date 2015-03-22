@@ -9,8 +9,8 @@ Rotar archivos .log de Zope
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Fecha: 31 de Diciembre de 2013
+    :Correo(s): leonardoc@plone.org
+    :Fecha: 21 de Marzo de 2015
 
 Descripción general
 ===================

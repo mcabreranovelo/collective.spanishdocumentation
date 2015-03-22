@@ -9,9 +9,9 @@ Esqueletos de proyectos Zope/Plone
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3 y Plone 4
-    :Fecha: 03 de Octubre de 2014
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

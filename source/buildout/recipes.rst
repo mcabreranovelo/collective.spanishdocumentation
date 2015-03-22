@@ -9,9 +9,9 @@ Recipes Buildout
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Python 2.4 o versiones superiores
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 21 de Marzo de 2015
 
 .. _que_es_recipes:
 

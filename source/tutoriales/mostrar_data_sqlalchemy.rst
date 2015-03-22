@@ -10,8 +10,8 @@ Presentar información de una base de datos relacional
 
     :Autor(es): Carlos de la Guardia
     :Correo(s): carlos.delaguardia@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

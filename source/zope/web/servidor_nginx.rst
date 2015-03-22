@@ -8,9 +8,9 @@ Ejecutando Zope y Plone con Servidor Web Nginx
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 30 de Agosto de 2014
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 Este documento busca explicar los conceptos intrínsecos para instalar y configurar 
 un servidor Web `Nginx`_ en frente del servidor Zope/Plone, a través de técnicas de 

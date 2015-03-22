@@ -9,9 +9,9 @@ Traducciones de contenidos
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Documentación para Plone 3 y Plone 4
-    :Fecha: 02 de Enero de 2014
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 Términos básicos
 ================

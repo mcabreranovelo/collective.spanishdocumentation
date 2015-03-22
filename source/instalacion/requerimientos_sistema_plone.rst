@@ -11,9 +11,9 @@
 .. sidebar:: Sobre este artículo
 
     :Traductor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Lanzamiento: Plone 3.x, Plone 4.x
-    :Fecha: 29 de septiembre de 2014
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 En esta es una traducción del articulo llamado `Plone system requirements`_.
 

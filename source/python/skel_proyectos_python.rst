@@ -9,9 +9,9 @@ Scaffolding en proyectos Python
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Python 2.4 o versiones superiores
-    :Fecha: 03 de Octubre de 2014
+    :Fecha: 21 de Marzo de 2015
 
 .. _scaffolding_python:
 

@@ -6,10 +6,12 @@
 Apariencias, temas, pieles en Plone
 ===================================
 
-:Autor(es): Luis Sumoza, Mario Picca Montilla, Leonardo J. Caballero G.
-:Correo(s): lsumoza@gmail.com, mariopicca@gmail.com, leonardocaballero@gmail.com
-:Compatible con: Plone 3, Plone 4
-:Fecha: 29 de Agosto de 2014
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Luis Sumoza, Mario Picca Montilla, Leonardo J. Caballero G.
+    :Correo(s): lsumoza@gmail.com, mariopicca@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

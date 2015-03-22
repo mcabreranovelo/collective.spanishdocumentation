@@ -9,9 +9,9 @@ Instalación de Plone
 .. sidebar:: Sobre este artículo
 
     :Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
-    :Correo(s): lsumoza@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 29 de septiembre de 2014
+    :Correo(s): lsumoza@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 En esta es una traducción del articulo llamado `Installing Plone`_ donde se ofrece 
 la información básica para la instalación de Plone en Windows, OS X, Linux, BSD

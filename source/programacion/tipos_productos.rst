@@ -9,9 +9,9 @@ Desarrollar diversos productos con Plone
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 02 de Octubre de 2014
+    :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 En esta articulo busca explicar los tipos desarrollos de productos / módulos
 disponibles para Plone.

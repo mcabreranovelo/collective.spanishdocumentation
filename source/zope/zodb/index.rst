@@ -11,9 +11,9 @@ Zope Object Database - ZODB
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 La Zope Object Database (ZODB) es una base de datos orientada a objetos 
 para almacenar de forma transparente y persistente objetos en el lenguaje 

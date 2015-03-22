@@ -8,9 +8,9 @@ Programa repozo.py
 .. sidebar:: Sobre esta referencia
 
     :Traductor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 28 de Septiembre de 2014
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 El programa ``repozo.py`` le permite realizar copias de seguridad incrementales
 y completas de un archivo :file:`Data.fs` e índice de la ZODB.

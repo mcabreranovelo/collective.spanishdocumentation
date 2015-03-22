@@ -9,9 +9,9 @@ Creación de un producto de configuración
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 4, Plone 3.
-    :Fecha: 02 de Octubre de 2014
+    :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 En esta articulo busca explicar como crear paquetes de configuración general de
 un sitio representando las reglas generales de manejo de sitios para Plone 3,

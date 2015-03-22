@@ -9,9 +9,9 @@ Base de datos SQL y Plone
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 Existen muchos mecanismos de conexión a base de datos SQL desde Plone CMS, 
 en este articulo se enfoca en la amplia usada librería `SQLAlchemy`_ y 

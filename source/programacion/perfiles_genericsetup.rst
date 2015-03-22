@@ -10,9 +10,9 @@ Framework de instalación y exportación de Add-on: GenericSetup
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 29 de Septiembre de 2014
+    :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 21 de Marzo de 2015
 
 .. _genericsetup_intro:
 

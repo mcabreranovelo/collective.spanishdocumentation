@@ -9,9 +9,9 @@ Buildout y Plone 3
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: versiones Plone 3.3.x
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 21 de Marzo de 2015
     
     .. tag:: [plone3 plone3.3 Plone_3] versiones Plone 3
 

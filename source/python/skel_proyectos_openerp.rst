@@ -9,9 +9,9 @@ Esqueletos de proyectos OpenERP
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Probado con Python 2.6 o versiones superiores
-    :Fecha: 03 de Octubre de 2014
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

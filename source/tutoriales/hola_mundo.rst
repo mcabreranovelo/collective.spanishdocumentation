@@ -9,9 +9,9 @@ Hola Mundo en Plone 3
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.3.x
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============

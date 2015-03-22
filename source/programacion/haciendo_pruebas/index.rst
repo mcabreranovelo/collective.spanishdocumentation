@@ -7,7 +7,7 @@ Pruebas en Plone 3
 ==================
 
 :Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
-:Correo(s): lsumoza@gmail.com, leonardocaballero@gmail.com
+:Correo(s): lsumoza@gmail.com, leonardoc@plone.org
 :Lanzamiento: |version|
 :Fecha: |today|
 

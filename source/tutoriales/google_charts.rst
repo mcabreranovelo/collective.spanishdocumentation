@@ -11,7 +11,7 @@ Crear gráficas a partir de datos de un tipo de contenido
     :Autor(es): Carlos de la Guardia
     :Correo(s): carlos.delaguardia@gmail.com
     :Compatible con: Plone 3.3.x
-    :Fecha: 31 de Diciembre de 2013
+    :Fecha: 21 de Marzo de 2015
 
 Introducción
 ============
