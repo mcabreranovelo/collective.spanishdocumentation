@@ -9,9 +9,9 @@ Buildout para instalar de todas las partes de un sitio
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
-    :Correo(s): carlos.delaguardia@gmail.com, leonardocaballero@gmail.com
-    :Compatible con: Plone 3, Plone 4
-    :Fecha: 31 de Diciembre de 2013
+    :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
+    :Compatible con: Plone 4
+    :Fecha: 14 de Marzo de 2015
 
 Descripción general
 ===================
@@ -99,13 +99,26 @@ dentro de esa sección:
     url = ${downloads:zope}
 
     [zeoserver]
-    recipe = plone.recipe.zope2zeoserver
-    zope2-location = ${zope2:location}
-    zeo-address = ${ports:zeo-server}
-    effective-user = ${users:zope}
+    recipe         = plone.recipe.zeoserver
+    zeo-address    = ${hosts:zeoserver}:${ports:zeoserver}
+    # Packing
+    pack-days      = 0
+    # Customization
+    eggs =
+        ZODB3
+        mailinglogger
+    # If we try to start as root, Zope will switch to the user below
+    effective-user = ${buildout:effective-user}
+    # Process
     zeo-var = ${buildout:directory}/var
-    blob-storage = ${zeoserver:zeo-var}/blobstorage
-    eggs = plone.app.blob
+    # Set storage
+    blob-storage   = ${buildout:var-dir}/blobstorage
+    shared-blob    = on
+    # Logging
+    # Put the log, pid and socket files in var/zeoserver
+    zeo-log        = ${zeoserver:zeo-var}/${:_buildout_section_name_}/zeoserver.log
+    pid-file       = ${zeoserver:zeo-var}/${:_buildout_section_name_}/zeoserver.pid
+    socket-name    = ${zeoserver:zeo-var}/${:_buildout_section_name_}/zeo.zdsock
 
 Clientes ZEO
 ------------
@@ -121,40 +134,40 @@ una sección separada:
 
 .. code-block:: ini
 
-    [instance1]
+    [client1]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
-    http-address = ${hosts:instance1}:${ports:instance1}
+    http-address = ${hosts:client1}:${ports:client1}
     zope-conf-additional =
        <icp-server>
-          address ${ports:instance1-icp}
+          address ${ports:client1-icp}
        </icp-server>
 
-    [instance2]
+    [client2]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
-    http-address = ${hosts:instance2}:${ports:instance2}
+    http-address = ${hosts:client2}:${ports:client2}
     zope-conf-additional =
        <icp-server>
-          address ${ports:instance2-icp}
+          address ${ports:client2-icp}
        </icp-server>
 
-    [instance3]
+    [client3]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
-    http-address = ${hosts:instance3}:${ports:instance3}
+    http-address = ${hosts:client3}:${ports:client3}
     zope-conf-additional =
        <icp-server>
-          address ${ports:instance3-icp}
+          address ${ports:client3-icp}
        </icp-server>
 
-    [instance4]
+    [client4]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
-    http-address = ${hosts:instance4}:${ports:instance4}
+    http-address = ${hosts:client4}:${ports:client4}
     zope-conf-additional =
        <icp-server>
-          address ${ports:instance4-icp}
+          address ${ports:client4-icp}
        </icp-server>
 
 Instancia de depuración
@@ -166,10 +179,10 @@ con el cluster de producción:
 
 .. code-block:: ini
 
-    [instance-debug]
+    [client-debug]
     recipe = collective.recipe.zope2cluster
     instance-clone = instance-settings
-    http-address = ${hosts:instance-debug}:${ports:instance-debug}
+    http-address = ${hosts:client-debug}:${ports:client-debug}
     debug-mode = on
     verbose-security = on
 
@@ -304,10 +317,10 @@ para iniciar y detener los servicios, así como consultar su status y logs:
     programs =
     #  Prio Name      Program                                      Params
        10   zeo     ${zeoserver:location}/bin/runzeo true ${users:zope}
-       20   instance1 ${buildout:directory}/parts/instance1/bin/runzope true ${users:zope}
-       20   instance2 ${buildout:directory}/parts/instance2/bin/runzope true ${users:zope}
-       20   instance3 ${buildout:directory}/parts/instance3/bin/runzope true ${users:zope}
-       20   instance4 ${buildout:directory}/parts/instance4/bin/runzope true ${users:zope}
+       20   client1 ${buildout:directory}/parts/client1/bin/runzope true ${users:zope}
+       20   client2 ${buildout:directory}/parts/client2/bin/runzope true ${users:zope}
+       20   client3 ${buildout:directory}/parts/client3/bin/runzope true ${users:zope}
+       20   client4 ${buildout:directory}/parts/client4/bin/runzope true ${users:zope}
        30   balancer ${buildout:directory}/bin/haproxy [-f ${buildout:directory}/production/balancer.conf -db] true ${users:balancer}
        40   transform ${nginx-build:location}/sbin/nginx [-c ${buildout:directory}/production/transform.conf] true ${users:transform}
        50   cache ${buildout:directory}/bin/cache true ${users:cache}
@@ -315,12 +328,12 @@ para iniciar y detener los servicios, así como consultar su status y logs:
     
     eventlisteners =
     # Check every 60 seconds that no child process has exceeded. it's like a RSS memory quota
-    MemoryMonitor TICK_60 ${buildout:bin-directory}/memmon [-p instance1=200MB -p instance2=200MB -p instance3=200MB -p instance4=200MB -m macagua+leonardocaballero@gmail.com]
+    MemoryMonitor TICK_60 ${buildout:bin-directory}/memmon [-p client1=200MB -p client2=200MB -p client3=200MB -p client4=200MB -m macagua+leonardocaballero@gmail.com]
     # Check every 60 seconds whether the plone instance is alive
-    HttpOk1 TICK_60 ${buildout:bin-directory}/httpok [-p instance1 -t 20 http://127.0.0.1:${ports:instance1}/${plone-sites:main}]
-    HttpOk2 TICK_60 ${buildout:bin-directory}/httpok [-p instance2 -t 20 http://127.0.0.1:${ports:instance2}/${plone-sites:main}]
-    HttpOk3 TICK_60 ${buildout:bin-directory}/httpok [-p instance3 -t 20 http://127.0.0.1:${ports:instance3}/${plone-sites:main}]
-    HttpOk4 TICK_60 ${buildout:bin-directory}/httpok [-p instance4 -t 20 http://127.0.0.1:${ports:instance4}/${plone-sites:main}]
+    HttpOk1 TICK_60 ${buildout:bin-directory}/httpok [-p client1 -t 20 http://127.0.0.1:${ports:client1}/${plone-sites:main}]
+    HttpOk2 TICK_60 ${buildout:bin-directory}/httpok [-p client2 -t 20 http://127.0.0.1:${ports:client2}/${plone-sites:main}]
+    HttpOk3 TICK_60 ${buildout:bin-directory}/httpok [-p client3 -t 20 http://127.0.0.1:${ports:client3}/${plone-sites:main}]
+    HttpOk4 TICK_60 ${buildout:bin-directory}/httpok [-p client4 -t 20 http://127.0.0.1:${ports:client4}/${plone-sites:main}]
 
 Rotar archivos con logrotate
 ============================
@@ -384,21 +397,21 @@ siguientes servidores:
   balancer
     un cluster de HAproxy que balancea los clientes :ref:`ZEO <que_es_zeo>`
 
-  instance1
+  client1
     Cliente de :ref:`ZEO <que_es_zeo>` 1
 
-  instance2
+  client2
     Cliente de :ref:`ZEO <que_es_zeo>` 2
 
-  instance3
+  client3
     Cliente de :ref:`ZEO <que_es_zeo>` 3
 
-  instance4
+  client4
     Cliente de :ref:`ZEO <que_es_zeo>` 4
 
-  instance-debug
-    un cliente :ref:`ZEO <que_es_zeo>` que no forma parte del cluster y esta siempre en modo de
-    desarrollo
+  client-debug
+    un cliente :ref:`ZEO <que_es_zeo>` que no forma parte del cluster y 
+    esta siempre en modo de desarrollo.
 
   zeoserver
     un servidor :ref:`ZEO <que_es_zeo>` para la base de datos de Zope común
@@ -449,11 +462,11 @@ utilizan en la sección de construcción definida arriba:
      diazo
      zope2
      zeoserver
-     instance1
-     instance2
-     instance3
-     instance4
-     instance-debug
+     client1
+     client2
+     client3
+     client4
+     client-debug
      nginx-build
      varnish-build
      haproxy-build
@@ -532,11 +545,11 @@ utilizan en la sección de construcción definida arriba:
   supervisor = 127.0.0.1
   balancer = 127.0.0.1
   transform = 127.0.0.1
-  instance1 = 127.0.0.1
-  instance2 = 127.0.0.1
-  instance3 = 127.0.0.1
-  instance4 = 127.0.0.1
-  instance-debug = 127.0.0.1
+  client1 = 127.0.0.1
+  client2 = 127.0.0.1
+  client3 = 127.0.0.1
+  client4 = 127.0.0.1
+  client-debug = 127.0.0.1
   diazo = 127.0.0.1
   syslog = 127.0.0.1
 
@@ -546,15 +559,15 @@ utilizan en la sección de construcción definida arriba:
   cache = 8101
   balancer = 8201
   transform = 8301
-  instance1 = 8401
-  instance2 = 8402
-  instance3 = 8403
-  instance4 = 8404
-  instance1-icp = 8401
-  instance2-icp = 8402
-  instance3-icp = 8403
-  instance4-icp = 8404
-  instance-debug = 8499
+  client1 = 8401
+  client2 = 8402
+  client3 = 8403
+  client4 = 8404
+  client1-icp = 8401
+  client2-icp = 8402
+  client3-icp = 8403
+  client4-icp = 8404
+  client-debug = 8499
   zeo-server = 8501
   supervisor = 9001
   diazo = 5000
