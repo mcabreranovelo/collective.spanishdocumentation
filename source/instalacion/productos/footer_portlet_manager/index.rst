@@ -8,9 +8,9 @@ Footer Portlet Manager
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 4
-    :Fecha: 02 de Enero de 2014
+    :Fecha: 21 de Marzo de 2015
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `Footer Portlet Manager — Tutorial Plone 4`_, el cual busca explicar la instalación 

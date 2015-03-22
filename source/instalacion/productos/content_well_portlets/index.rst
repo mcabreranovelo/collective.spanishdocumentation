@@ -217,8 +217,8 @@ la izquierda con **20% del ancho** cada uno:
 Cuatro columnas arriba del contenido
 ------------------------------------
 
-A continuación, un ejemplo de estilos CSS para mostrar *4 portlets*, ubicados a la
-izquierda con **25% del ancho** cada uno:
+A continuación, un ejemplo de estilos CSS para mostrar *4 portlets*, ubicados a 
+la izquierda con **25% del ancho** cada uno:
 
 .. code-block:: css
 
@@ -234,8 +234,8 @@ izquierda con **25% del ancho** cada uno:
 Tres columnas arriba del contenido
 ----------------------------------
 
-A continuación, un ejemplo de estilos CSS para mostrar *3 portlets*, ubicados a la
-izquierda con **33% del ancho** cada uno:
+A continuación, un ejemplo de estilos CSS para mostrar *3 portlets*, ubicados a 
+la izquierda con **33% del ancho** cada uno:
 
 .. code-block:: css
 
@@ -250,8 +250,8 @@ izquierda con **33% del ancho** cada uno:
 Dos columnas arriba del contenido
 ---------------------------------
 
-A continuación, un ejemplo de estilos CSS para mostrar *2 portlets*, ubicados a la
-izquierda con **50% del ancho** cada uno:
+A continuación, un ejemplo de estilos CSS para mostrar *2 portlets*, ubicados a
+la izquierda con **50% del ancho** cada uno:
 
 .. code-block:: css
 
@@ -302,9 +302,9 @@ de *40% de ancho* a la izquierda de la página y con *2 portlets* a la derecha d
 Ejemplos de cuatro columnas con anchos variantes
 ------------------------------------------------
 
-A continuación, un ejemplo de estilos CSS para mostrar *4 portlets*, *uno portlet* de **40%
-de ancho** de la página con el *segundo portlet* de **60% de ancho** y *2 portlet* más abajo
-que son de **30% de ancho cada uno**:
+A continuación, un ejemplo de estilos CSS para mostrar *4 portlets*, *uno portlet* 
+de **40% de ancho** de la página con el *segundo portlet* de **60% de ancho** y 
+*2 portlet* más abajo que son de **30% de ancho cada uno**:
 
 .. code-block:: css
 
@@ -324,9 +324,9 @@ que son de **30% de ancho cada uno**:
     width: 30%;
   }
 
-A continuación, un ejemplo de estilos CSS para mostrar *4 portlets* con diferentes anchos,
-*2 portlet* a la izquierda con **15% de ancho**, el *tercer portlet* es de **40% de ancho**,
-el *cuarto portlet* es **30% de ancho**:
+A continuación, un ejemplo de estilos CSS para mostrar *4 portlets* con diferentes
+anchos, *2 portlet* a la izquierda con **15% de ancho**, el *tercer portlet* es de
+**40% de ancho**, el *cuarto portlet* es **30% de ancho**:
 
 .. code-block:: css
 
@@ -346,6 +346,19 @@ el *cuarto portlet* es **30% de ancho**:
    	width: 30%;
   }
 
+Descarga código fuente
+======================
+
+Usted puede obtener el código fuente usado en estas configuraciones buildout para
+este ejemplo, ejecutando el siguiente comando:
+
+.. code-block:: sh
+
+  $ git clone https://github.com/plone-ve/plonethemes.suite.git
+
+Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
+y siga las instrucciones descrita en ese archivo.
+
 Referencias
 ===========
 
@@ -354,9 +367,9 @@ Referencias
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardocaballero@gmail.com
+    :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 4
-    :Fecha: 23 de Septiembre de 2014
+    :Fecha: 21 de Marzo de 2015
 
 .. _ContentWellPortlets — Tutorial Plone 4: http://www.ufrgs.br/tutorial-plone4/produtos-adicionais/contentwellportlets
 .. _WebLion Group: http://plone.org/author/weblion
