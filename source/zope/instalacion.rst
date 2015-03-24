@@ -11,7 +11,7 @@ Instalación del servidor Zope
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 Descripción general
 ===================
@@ -30,8 +30,9 @@ Requerimientos
 Estos son los requerimientos mínimos de instalación: ::
 
   # aptitude install gcc g++ make tar unzip bzip2 libssl-dev libxml2-dev \
-  libxslt1-dev zlib1g-dev libjpeg62-dev libreadline6-dev readline-common \
-  wv xpdf-utils python2.7-dev python-pip git-core
+                     libxslt1-dev zlib1g-dev libjpeg62-dev libreadline6-dev \
+                     readline-common wv xpdf-utils python2.7-dev python-pip \
+                     git-core
   # pip install virtualenv==1.9.1 ; exit
 
 Descargue configuración
@@ -53,11 +54,11 @@ Para la inicialización del proyecto Buildout, ejecute el siguiente comando: ::
 
 .. tip:: 
 
+    * Si es una instalación de Plone entre las versiones 4.0 y 4.2 debe crear el
+      entorno virtual con la versión Python 2.6.x.
+
     * Si es una instalación de Plone 3.x o inferior debe crear el entorno virtual
       con la versión Python 2.4.x.
-
-    * Si es una instalación de Plone entre las versiones 4.0 y 4.2 debe crear el
-      entorno virtual con la versión Python 2.4.x.
 
 Inicialización del proyecto
 ===========================
@@ -89,10 +90,10 @@ Cuando en la consola de comando indique el mensaje **INFO Zope Ready to handle r
 entonces abra en el navegador Web la dirección URL http://localhost:8080/ *(Ver Figura 2.1)*
 
 .. figure:: ./zmi_zope2.png
-  :alt: El Zope Management Interface - ZMI
   :align: center
   :width: 650px
   :height: 330px
+  :alt: El Zope Management Interface - ZMI
 
   El Zope Management Interface - ZMI
 
@@ -104,10 +105,10 @@ URL http://localhost:8080/manage *(Ver Figura 2.2)*
     por defecto, entonces ingrese el nombre de usuario **admin** y la contraseña **admin**.
 
 .. figure:: ./zmi_zope2_manage.png
-  :alt: Zope en http://localhost:8080/manage
   :align: center
   :width: 650px
   :height: 369px
+  :alt: Zope en http://localhost:8080/manage
 
   Zope en http://localhost:8080/manage
 
@@ -196,7 +197,6 @@ Para descargar el código fuente de este ejemplo ejecute el siguiente comando:
 
   $ git clone https://github.com/Covantec/buildout.zope2.git
 
-
 Referencias
 ===========
 
@@ -205,7 +205,6 @@ Para mas información consulte los siguientes enlaces:
 - `Special Users - Zope 2 v2.x documentation`_.
 
 - `Installing and Zope with zc.buildout — Zope 2 v2.x documentation`_.
-
 
 .. _buildout: http://plone-spanish-docs.readthedocs.org/es/latest/buildout/index.html
 .. _standalone y ZEO: http://plone-spanish-docs.readthedocs.org/es/latest/instalacion/instalando_plone.html#ser-zeo-o-no-ser-zeo

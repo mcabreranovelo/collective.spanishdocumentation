@@ -10,7 +10,7 @@ Comando de control de Zope
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 Descripción general
 -------------------
@@ -39,7 +39,6 @@ Para mostrar la lista de comando disponible ejecute el siguiente comando:
       With options, this substitutes 'options' for the
       command line, except that if no -C option is given,
       the last configuration file is used.
-
 
 Para instalaciones antiguas de Plone, el comando es :command:`zopectl`.
 
@@ -82,7 +81,6 @@ Para salir de la consola interactiva ejecute la siguiente instrucción:
   >>> quit
   Use quit() or Ctrl-D (i.e. EOF) to exit
 
-
 Iniciar la instancia Zope en modo servicio / demonio
 ----------------------------------------------------
 
@@ -94,7 +92,6 @@ entornos de producción, ejecute con el siguiente comando:
   ./bin/instance start
   . daemon process started, pid=14643
 
-
 Detener la instancia Zope en modo servicio / demonio
 ----------------------------------------------------
 
@@ -104,7 +101,6 @@ Para esto debió previamente iniciado el servidor Zope *en modo servicio / demon
 
   ./bin/instance stop
   . daemon process stopped
-
 
 Agregando usuarios desde la linea de comando
 --------------------------------------------
@@ -120,12 +116,10 @@ Agregar usuario con permisos de Administración en Zope:
   ./bin/instance adduser <nombre_usuario> <contraseña_usuario>
   ./bin/instance start
 
-
 Usted necesita detener primero su instancia de Zope.
 
 Usted no puede sobre escribir el usuario ``admin`` existente, pero 
 usted probablemente quiera agregar un usuario adicional ``admin2``.
-
 
 Referencias
 ...........

@@ -10,7 +10,7 @@ Respaldo de la ZODB
     :Traductor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 .. note::
     En esta es una traducción del articulo llamado `Backup der ZODB`_
@@ -72,7 +72,9 @@ siguientes pasos:
 #. En primer lugar, debe crear el directorio :file:`backups`
    con el comando :command:`mkdir backups`.
 
-#. Entonces ejecute el programa :program:`repozo`, con el siguiente comando: ::
+#. Entonces ejecute el programa :program:`repozo`, con el siguiente comando:
+
+.. code-block:: sh
 
     $ ./bin/repozo -BvzF -r backups -f var/filestorage/Data.fs
 
@@ -112,18 +114,22 @@ siguientes pasos:
        Cree una copia del archivo :file:`Data.fs` con los posibles objetos corruptos,
        por previsión.
 
-#. Entonces ejecute el programa :program:`repozo` con el siguiente comando: ::
+#. Entonces ejecute el programa :program:`repozo` con el siguiente comando:
 
-       $ ./bin/repozo -Rv -r backups -o var/filestorage/Data.fs
+    .. code-block:: sh
 
-   El resultado de la ejecucion de comando deberia ser algo asi: ::
+           $ ./bin/repozo -Rv -r backups -o var/filestorage/Data.fs
 
-       looking for files between last full backup and 2006-06-23-19-39-20...
-       files needed to recover state as of 2006-06-23-19-39-20:
-              /srv/plone/instance/backups/2006-06-23-18-49-47.fs
-              /srv/plone/instance/backups/2006-06-23-18-55-56.deltafs
-       Recovering file to /srv/plone/instance/var/filestorage/Data.fs
-       Recovered 6435866 bytes, md5: 4470d48dfeae1f6201cc594142408bfe
+   El resultado de la ejecución de comando debería ser algo así:
+
+    .. code-block:: sh
+
+           looking for files between last full backup and 2006-06-23-19-39-20...
+           files needed to recover state as of 2006-06-23-19-39-20:
+                  /srv/plone/instance/backups/2006-06-23-18-49-47.fs
+                  /srv/plone/instance/backups/2006-06-23-18-55-56.deltafs
+           Recovering file to /srv/plone/instance/var/filestorage/Data.fs
+           Recovered 6435866 bytes, md5: 4470d48dfeae1f6201cc594142408bfe
 
    Esto comando examina las copias de seguridad disponibles, busca el mas reciente y
    mezcla cualquier copia de seguridad incremental (si esta presente). Ademas este
@@ -179,13 +185,13 @@ de respaldo de datos con la receta `z3c.recipe.usercrontab`_. Para
 este propósito, inscrita en el archivo :file:`buildout.cfg` la siguiente
 configuración:
 
-::
+.. code-block:: cfg
 
     [buildout]
     parts =
         ...
         backup-crontab
-    ...
+    
     [backup-crontab]
     recipe = z3c.recipe.usercrontab
     times = 15 0 * * *
@@ -199,23 +205,24 @@ Copia de seguridad de múltiples de ZODBs en una instancia
 Con la receta `collective.recipe.backup`_ puede crear un script que puede crear copias
 de seguridad de múltiples ZODBs. Además crear `catálogo separado para su propia ZODB`_.
 
-::
+.. code-block:: cfg
 
     [buildout]
     parts =
         ...
         backup
-    ...
+    
     [backup]
     recipe = collective.recipe.backup
     additional_filestorages =
         Extra
         Super
 
-Para aplicar múltiples puntos de montaje se utilizó la receta :ref:`collective.recipe.filestorage <puntos_montaje_zodb>`,
-en la sección ``[backup]`` también se puede simplificar:
+Para realizar copias de seguridad a múltiples puntos de montaje se utiliza la receta 
+:ref:`collective.recipe.filestorage <puntos_montaje_zodb>`, en la sección ``[backup]`` 
+también se puede simplificar:
 
-::
+.. code-block:: cfg
 
     [backup]
     recipe = collective.recipe.backup
@@ -284,10 +291,10 @@ Las siguientes opciones adicionales proporciona la receta ``collective.recipe.ba
 Al usar la receta ``collective.recipe.backup`` este patrón cambia en la directiva
 ``command`` bajo la sección ``[backup-crontab]`` como se muestra a continuación:
 
-::
+.. code-block:: cfg
 
     [backup-crontab]
-    ...
+    
     command = ${buildout:bin-directory}/backup -q
 
 Eliminación de copias de seguridad antiguas
@@ -297,14 +304,14 @@ Las copias de seguridad antiguas se deben eliminar después de un cierto tiempo.
 En este ejemplo, las siguientes copias de seguridad incrementales después de dos
 semanas y copias de seguridad completas después de cinco semanas se eliminan:
 
-::
+.. code-block:: cfg
 
     [buildout]
     parts =
         ...
         remove-incremental-backups
         remove-full-backups
-    ...
+    
     [remove-incremental-backups]
     recipe = z3c.recipe.usercrontab
     times = 8 0 * * *
@@ -315,7 +322,9 @@ semanas y copias de seguridad completas después de cinco semanas se eliminan:
     times = 8 0 * * *
     command = find ${buildout:directory}/backups -name \*dat -ctime +35 -delete
 
-Puede comprobar la definición de las tareas crontab ejecutando el siguiente comando: ::
+Puede comprobar la definición de las tareas crontab ejecutando el siguiente comando:
+
+.. code-block:: sh
 
     $ crontab -l
 
@@ -336,7 +345,7 @@ Si no se especifica el directorio donde Plone (o Zope) almacena sus ``blobs`` en
 ``plone.recipe.zope2instance`` también puede especificar explícitamente la ruta del directorio
 con la declarativa ``blob_storage`` de la receta ``collective.recipe.backup``:
 
-::
+.. code-block:: cfg
 
     [buildout]
     parts =
@@ -354,7 +363,7 @@ con la declarativa ``blob_storage`` de la receta ``collective.recipe.backup``:
 Si es necesario, buildout puede crear varios scripts para crear los archivos de
 copia de seguridad para los ZODBs y los almacenamientos blob:
 
-::
+.. code-block:: cfg
 
     [buildout]
     parts =
@@ -393,7 +402,6 @@ Los siguientes atributos se añadieron nuevos:
     ``plone.recipe.zope2instance`` también se utiliza esta variable,
     en pero ``collective.recipe.backup`` sin embargo, se utilizan
     guiones bajos.
-
 
 ``backup_blobs``
     Si se especifica o determina un valor para ``blob-storage``
@@ -437,7 +445,7 @@ no Blob-Storages adicionales. Para esto posiblemente tendría que ser creado
 su propia sección Buildout, lo que crea un segundo conjunto de scripts de
 copia de seguridad, por ejemplo:
 
-::
+.. code-block:: cfg
 
     [extrablobbackup]
     recipe = collective.recipe.backup
@@ -465,7 +473,7 @@ collective.recipe.rsync
 Alternativamente, se utiliza la receta `collective.recipe.rsync`_. Para este propósito, 
 por ejemplo, cree el archivo :file:`rsync.cfg` con la siguiente contenido:
 
-::
+.. code-block:: cfg
 
     [rsync-file]
     recipe = collective.recipe.rsync

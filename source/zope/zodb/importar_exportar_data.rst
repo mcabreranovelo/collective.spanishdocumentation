@@ -11,15 +11,16 @@ Importar y exportar contenido desde el ZMI
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
-El servidor de aplicaciones Zope ofrece copia las partes de la estructura 
-de árbol a través de de importación / exportación. El archivo exportado es 
-básicamente un `pickle Python`_ que contiene el nodo seleccionado y todos 
-los nodos secundarios.
+El servidor de aplicaciones `Zope`_ ofrece hacer copia de las partes de la estructura
+de árbol de contenidos (objetos) a través de de importación / exportación que ofrece
+la ZMI. El archivo exportado es básicamente un `pickle Python`_ que contiene el nodo
+seleccionado y todos los nodos secundarios.
 
-Los archivos ``.zexp`` importables debe ser colocado en el directorio 
-:file:`/parts/instance/import` de su carpeta buildout en el servidor. 
+Los archivos exportados contienen la extensión ``.zexp`` y SOLO son importables de nuevo
+a la ZMI si es colocado en el directorio :file:`/parts/instance/import` de su carpeta
+buildout en el servidor.
 
 Si está utilizando :ref:`ZEO Cluster <ser-zeo-o-no-ser-zeo>` definido, siempre 
 se ejecutan las importaciones a través de un específico front-end de instancia, 
@@ -46,3 +47,4 @@ Referencias
 
 .. _How to Import Data into Zope or Plone: http://quintagroup.com/services/support/tutorials/import-export-plone/
 .. _pickle Python: http://mundogeek.net/archivos/2008/05/20/python-serializacion-de-objetos/
+.. _Zope: http://plone-spanish-docs.readthedocs.org/es/latest/zope/index.html

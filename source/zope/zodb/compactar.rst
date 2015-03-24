@@ -11,7 +11,7 @@ Compactar la ZODB de sitio Plone
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 Tamaño de base de datos
 =======================
@@ -182,23 +182,23 @@ lista de selección la opción **Script (Python)** y haga clic en el botón **Ad
 como se ilustra a continuación:
 
 .. figure:: ./zmi_select_to_add_script_python.jpg
-  :alt: Agregar "Script (Python)" desde la Zope Management Interface - ZMI
   :align: center
   :width: 314px
   :height: 310px
+  :alt: Agregar "Script (Python)" desde la ZMI
 
-  Agregar "Script (Python)" desde la Zope Management Interface - ZMI
+  Agregar "Script (Python)" desde la ZMI.
 
 Entonces en el campo **Id** coloque ``pack_it_all``, luego haga clic en el botón 
 **Add and Edit**, como se ilustra a continuación: 
 
 .. figure:: ./zmi_add_script_python.jpg
-  :alt: Detalle del "Script (Python)" desde la Zope Management Interface - ZMI
   :align: center
   :width: 431px
   :height: 195px
+  :alt: Detalle del "Script (Python)" desde la ZMI
 
-  Detalle del "Script (Python)" desde la Zope Management Interface - ZMI
+  Detalle del "Script (Python)" desde la ZMI.
 
 Seguidamente agregue el siguiente contenido al script:
 

@@ -11,7 +11,7 @@ Creando instancia Zope adicional de depuración
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 Es posible que desee mantener su :file:`buildout.cfg` para producción 
 y sincronizar la configuración de desarrollo de forma automática 
@@ -40,8 +40,7 @@ su vez crear **Instancias Zope adicionales** con la siguiente configuración:
   parts =
       ...
       instance
-      instance-debug
-  ...
+  
   [instance]
   recipe = plone.recipe.zope2instance
   zope2-location = ${zope2:location}
@@ -55,6 +54,10 @@ Y crea su nueva instancia ``debug`` Zope, seguidamente de la sección ``instance
 con la siguiente configuración:
 
 .. code-block:: cfg
+
+  parts =
+      ...
+      instance-debug
 
   # Crear un script lanzado el cual iniciará una 
   # instancia Zope en modo debug
@@ -74,7 +77,9 @@ Guarde los cambios en el :file:`buildout.cfg`.
 Construcción del proyecto
 =========================
 
-Para la construcción del proyecto Buildout, ejecute el siguiente comando: ::
+Para la construcción del proyecto Buildout, ejecute el siguiente comando:
+
+.. code-block:: sh
 
   ./bin/buildout
 

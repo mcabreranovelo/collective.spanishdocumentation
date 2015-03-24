@@ -10,7 +10,7 @@ Actualizar el ZCatalog
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 El ZCatalog
 -----------
@@ -67,13 +67,13 @@ actualizar el inventario objeto agregando, actualización de los objetos, o borr
 Para mas detalle consulte la herramienta en 
 :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_catalog`.
 
-.. figure:: ./zmi_portal_catalog.png
-  :alt: portal_catalog - ZMI
+.. figure:: zmi_portal_catalog.png
   :align: center
   :width: 742px
   :height: 288px
+  :alt: portal_catalog - ZMI
 
-  portal_catalog - ZMI
+  portal_catalog - ZMI.
 
 .. _actualizar_indice:
 
@@ -85,13 +85,13 @@ avanzado para actualizar el índice de objetos de la ZODB, acceda a la ZMI de tu
 :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope --> portal_catalog --> Advanced`,
 allí encontrara las siguientes opciones:
 
-.. figure:: ./zmi_portal_catalog_Advanced.png
-  :alt: portal_catalog - Advanced - ZMI
+.. figure:: zmi_portal_catalog_Advanced.png
   :align: center
   :width: 742px
   :height: 288px
+  :alt: portal_catalog - Advanced - ZMI
 
-  portal_catalog - Advanced - ZMI
+  portal_catalog - Advanced - ZMI.
 
 .. warning::
 

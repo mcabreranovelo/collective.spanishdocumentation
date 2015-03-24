@@ -10,7 +10,7 @@ Reparación de ZODB
     :Traductor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
 .. note::
     En esta es una traducción del articulo llamado `ZODB reparieren`_ donde 
@@ -35,7 +35,7 @@ adecuado sino más bien recomendado para *CorruptedErrors*. Además, también pu
 conducir a más *POSKeyErrors* cuando se retira una mala operación, dejando de ese 
 modo la referencia a un objeto ya no existente:
 
-::
+.. code-block:: sh
 
     $ ./bin/zopepy eggs/ZODB3-3.10.2-py2.6-linux-x86_64.egg/ZODB/fsrecover.py \
     -P 0 var/filestorage/Data.fs var/filestorage/Data.fs.recovered &> logrecover.txt
@@ -43,7 +43,7 @@ modo la referencia a un objeto ya no existente:
 A continuación en el archivo :file:`logrecover.txt`, puede comprobar cuántos datos se
 han perdido, incluyendo:
 
-::
+.. code-block:: sh
 
     Recovering var/filestorage/Data.fs into var/filestorage/Data.fs.recovered
     . 1 . 2 . 3 . 4 . 5 . 6 . 7 . 8 . 9 . 0
@@ -55,8 +55,14 @@ han perdido, incluyendo:
 POSKeyError
 ~~~~~~~~~~~
 
-Para entender este error, es importante saber que cada objeto de la base de datos tiene
-un identificador único (``OID``) que se le ha asignado. Este ``OID`` es un número binario, como ``0x40A90L`` que hace referencia a un objeto serializado. En un *POSKeyError* ahora se puede encontrar por un ``OID`` no objeto adecuado. Así, por ejemplo, almacene una carpeta que se deriva de ``OFS.ObjectManager``, los objetos como valores de atributos ``_objects``. El listado resultante se compilará cuando se guarda en una lista de OID. Ahora se puede cargar el método ``objectValues()`` de un OID ya no puede asignar a un objeto serializado, entonces se emite un *POSKeyError*.
+Para entender este error, es importante saber que cada objeto de la base de datos 
+tiene un identificador único (``OID``) que se le ha asignado. Este ``OID`` es un 
+número binario, como ``0x40A90L`` que hace referencia a un objeto serializado. En 
+un *POSKeyError* ahora se puede encontrar por un ``OID`` no objeto adecuado. Así, 
+por ejemplo, almacene una carpeta que se deriva de ``OFS.ObjectManager``, los 
+objetos como valores de atributos ``_objects``. El listado resultante se compilará 
+cuando se guarda en una lista de OID. Ahora se puede cargar el método ``objectValues()`` 
+de un OID ya no puede asignar a un objeto serializado, entonces se emite un *POSKeyError*.
 
 
 #. Con el paquete `zc.zodbdgc <http://pypi.python.org/pypi/zc.zodbdgc>`_ 
@@ -69,54 +75,52 @@ un identificador único (``OID``) que se le ha asignado. Este ``OID`` es un núm
 #. Para instalar el paquete ``zc.zodbdgc`` en un entorno
    virtual con ``virtualenv`` debe ejecutar los siguientes comandos:
 
-   ::
+  .. code-block:: sh
 
-       $ easy_install-2.6 virtualenv
-       $ virtualenv --no-site-packages zeo_check
-
+      $ easy_install-2.6 virtualenv
+      $ virtualenv --no-site-packages zeo_check
 
 #. Entonces una ves creado en este entorno instale ``zc.zodbdgc``:
 
-   ::
+  .. code-block:: sh
 
-       $ cd zeo_check
-       $ ./bin/easy_install zc.zodbdgc
-
+      $ cd zeo_check
+      $ ./bin/easy_install zc.zodbdgc
 
 #. Compacte su ZODB y luego copiarlos en el entorno ``virtuelenv``.
 
 #. Crear un archivo de configuración :file:`storages.cfg` con el siguiente 
    contenido:
 
-   ::
+  .. code-block:: cfg
 
-       <zodb>
+      <zodb>
          <filestorage my>
             path var/filestorage/my.fs
             blob-dir var/blobstorage-my
          </filestorage>
-       </zodb>
+      </zodb>
 
 #. A continuación, el script :program:`multi-zodb-check-refs` puede ser 
    ejecutado con el siguiente comando:
 
-   ::
+    .. code-block:: sh
 
-       $ ./bin/multi-zodb-check-refs storages.cfg
+        $ ./bin/multi-zodb-check-refs storages.cfg
 
    ¿Son todas las referencias a su base de datos es válida?, recibirá 
-   ninguna salida. En POSKeyErrors la salida se ve como el siguiente ejemplo:
+   ninguna salida. En ``POSKeyErrors`` la salida se ve como el siguiente ejemplo:
 
-   ::
+    .. code-block:: sh
 
-       !!! main 26798 ?
-       POSKeyError: 0x68ae
+        !!! main 26798 ?
+        POSKeyError: 0x68ae
 
 Examen periódico y notificación por correo electrónico
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Este script debe ejecutarse regularmente como un tarea de :program:`cron`:
 
-::
+.. code-block:: sh
 
     # Check ZEO Storages
     0 6 * * * cd /home/veit/zeo_check; ./bin/multi-zodb-check-refs \
@@ -131,108 +135,108 @@ Restaurar
 #. Con la opción ``-r`` obtendrá una base de datos con referencias
    opuestas, lo que puede descubrir en su caso, qué objetos faltan:
 
-   ::
+  .. code-block:: sh
 
-       $ ./bin/multi-zodb-check-refs -r var/filestorage/refdb.fs storages.cfg
-       !!! main 26798 main 16717
-       POSKeyError: 0x68ae
+      $ ./bin/multi-zodb-check-refs -r var/filestorage/refdb.fs storages.cfg
+      !!! main 26798 main 16717
+      POSKeyError: 0x68ae
 
 #. Ahora escribe un archivo :file:`refdb.cfg` con el siguiente contenido:
 
-   ::
+  .. code-block:: sh
 
-       <zodb main>
-           <filestorage 1>
-                 path /home/veit/zeo_check/var/filestorage/refdb.fs
-           </filestorage>
-       </zodb>
+      <zodb main>
+          <filestorage 1>
+                path /home/veit/zeo_check/var/filestorage/refdb.fs
+          </filestorage>
+      </zodb>
 
 #. A continuación, puede abrir la base de datos:
 
-   ::
+    .. code-block:: python
 
-       $ ../myproject/bin/zopepy
-       >>> import ZODB.config
-       >>> db = ZODB.config.databaseFromFile(open('./refdb.cfg'))
-       >>> conn = db.open()
-       >>> refs = conn.root()['references']
+        $ ../myproject/bin/zopepy
+        >>> import ZODB.config
+        >>> db = ZODB.config.databaseFromFile(open('./refdb.cfg'))
+        >>> conn = db.open()
+        >>> refs = conn.root()['references']
 
    Ahora debería obtener un mensaje de error como este:
 
-   ::
+    .. code-block:: sh
 
-       !!! main 13184375 ?
-       POSKeyError: 0xc92d77
+        !!! main 13184375 ?
+        POSKeyError: 0xc92d77
 
 #. Ahora usted puede averiguar el OID del objeto referenciado por el de:
 
-   ::
+  .. code-block:: python
 
-       >>> parent = list(refs['main'][13184375])
-       >>> parent
-       [13178389]
+      >>> parent = list(refs['main'][13184375])
+      >>> parent
+      [13178389]
 
 #. Ahora bien, si se carga este objeto, usted debe obtener un POSKeyError:
 
-   ::
+  .. code-block:: python
 
-       >>> app._p_jar.get('13178389')
-       2010-07-16 15:30:18 ERROR ZODB.Connection Couldn't load state for 0xc91615
-       Traceback (most recent call last):
-       …
-       ZODB.POSException.POSKeyError: 0xc92d77
+      >>> app._p_jar.get('13178389')
+      2010-07-16 15:30:18 ERROR ZODB.Connection Couldn't load state for 0xc91615
+      Traceback (most recent call last):
+      …
+      ZODB.POSException.POSKeyError: 0xc92d77
 
 #. Podemos, sin embargo, los datos reales de la carga objeto padre para
    obtener una idea acerca de este objeto:
 
-   ::
+  .. code-block:: python
 
-       >>> app._p_jar.db()._storage.load('\x00\x00\x00\x00\x00\xc9\x16\x15', '')
-       ('cBTrees.IOBTree
-       IOBucket
-       q\x01.((J$KT\x02ccopy_reg
-       _reconstructor
-       q\x02(cfive.intid.keyreference
-       KeyReferenceToPersistent
-       …
+      >>> app._p_jar.db()._storage.load('\x00\x00\x00\x00\x00\xc9\x16\x15', '')
+      ('cBTrees.IOBTree
+      IOBucket
+      q\x01.((J$KT\x02ccopy_reg
+      _reconstructor
+      q\x02(cfive.intid.keyreference
+      KeyReferenceToPersistent
+      …
 
 #. Ahora vamos a crear un objeto falso que tiene el mismo OID (``13184375``) como
    el objeto que falta por medio de:
 
-   ::
+  .. code-block:: python
 
-       $ ./bin/instance-debug debug
-       Starting debugger (the name "app" is bound to the top-level Zope object)
-       …
-       >>> import transaction
-       >>> transaction.begin()
-       >>> from ZODB.utils import p64
-       >>> p64(26798)
-       '\x00\x00\x00\x00\x00\x00h\xae'
-       >>> from persistent import Persistent
-       >>> a = Persistent()
-       >>> a._p_oid = '\x00\x00\x00\x00\x00\x00h\xae'
-       >>> a._p_jar = app._p_jar
-       >>> app._p_jar._register(a)
-       >>> app._p_jar._added[a._p_oid] = a
-       >>> transaction.commit()
+      $ ./bin/instance-debug debug
+      Starting debugger (the name "app" is bound to the top-level Zope object)
+      …
+      >>> import transaction
+      >>> transaction.begin()
+      >>> from ZODB.utils import p64
+      >>> p64(26798)
+      '\x00\x00\x00\x00\x00\x00h\xae'
+      >>> from persistent import Persistent
+      >>> a = Persistent()
+      >>> a._p_oid = '\x00\x00\x00\x00\x00\x00h\xae'
+      >>> a._p_jar = app._p_jar
+      >>> app._p_jar._register(a)
+      >>> app._p_jar._added[a._p_oid] = a
+      >>> transaction.commit()
 
 #. Ahora debería de nuevo puede llamar al objeto en sí mismo, así como
    el objeto principal:
 
-   ::
+  .. code-block:: python
 
-       >>> app._p_jar.get('\x00\x00\x00\x00\x00\x00h\xae')
-       <persistent.Persistent object at 0xab7f9cc>
-       >>> app._p_jar.get('\x00\x00\x00\x00\x00\xc9\x16\x15')
-       BTrees.IOBTree.IOBucket([(39078692, <five.intid.keyreference…
+      >>> app._p_jar.get('\x00\x00\x00\x00\x00\x00h\xae')
+      <persistent.Persistent object at 0xab7f9cc>
+      >>> app._p_jar.get('\x00\x00\x00\x00\x00\xc9\x16\x15')
+      BTrees.IOBTree.IOBucket([(39078692, <five.intid.keyreference…
 
 #. Por último, aún debe cerrar la conexión con la base de datos:
 
-   ::
+  .. code-block:: python
 
-       >>> conn.close()
-       >>> db.close()
+      >>> conn.close()
+      >>> db.close()
 
 Faltan archivos BLOB
 ^^^^^^^^^^^^^^^^^^^^
@@ -240,11 +244,12 @@ Faltan archivos BLOB
 Si recibe el mensaje de error ``POSKeyError: 'No blob file'``, 
 Mikko Ohtamaa escribió un script `fixblobs.py`_, con el puede
 eliminar el contenido de la ZODB, para el contenido que no está
-más disponible como BLOB. Consulte el articulo `Fixing POSKeyError: ‘No blob file’ content in Plone <http://opensourcehacker.com/2012/01/05/fixing-poskeyerror-no-blob-file-content-in-plone/>`_.
+más disponible como BLOB. 
+
+.. tip:: Consulte el articulo `Fixing POSKeyError\: \'No blob file\' content in Plone`_.
 
 Otras herramientas útiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 :program:`analyze.py`
     Muestra información como OID, tamaño, etc, de los objetos
@@ -282,3 +287,4 @@ Más información
 .. _Packing and copying Data.fs from production server for local development: http://opensourcehacker.com/2009/09/01/packing-and-copying-data-fs-from-production-server-for-local-development/
 .. _ZODB repair PosKeyErrors in Plone and Zope: http://www.derstappen-it.de/tech-blog/zodb-repair
 .. _fixblobs.py: https://gist.github.com/macagua/4fa954022a0145da9afd
+.. _Fixing POSKeyError\: \'No blob file\' content in Plone: http://opensourcehacker.com/2012/01/05/fixing-poskeyerror-no-blob-file-content-in-plone/

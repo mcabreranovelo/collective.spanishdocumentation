@@ -6,9 +6,11 @@
 Z Object Publishing Environment
 ===============================
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): leonardoc@plone.org
-:Fecha: 21 de Marzo de 2015
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardoc@plone.org
+    :Fecha: 23 de Marzo de 2015
 
 .. _ficha_tecnica_zope:
 
@@ -37,10 +39,10 @@ de `código abierto`_ publicado bajo la licencia `Zope Public License`_.
 
 .. figure:: images/zope-logo.png
   :width: 180px
-  :alt: Logotipo de Zope
   :align: center
+  :alt: Logotipo de Zope
 
-  Logotipo de Zope
+  Logotipo de Zope.
 
 Aunque el nombre **Zope** viene del `acrónimo`_ inglés *"Z Object Publishing 
 Environment – Zope"*, su origen se debe a un tipo de pez `Cyprinus ballerus`_ 
@@ -387,12 +389,12 @@ consiste en varios componentes diferentes que trabajan de manera conjunta para a
 a construir aplicaciones Web que se describen a continuación: *(Ver Figura 1.2)*
  
 .. figure:: images/infraestructura_servicios_zope.png
-  :alt: Infraestructura de servicios Zope
   :align: center
   :width: 363px
   :height: 367px
+  :alt: Infraestructura de servicios Zope
 
-  Infraestructura de servicios Zope
+  Infraestructura de servicios Zope.
 
 .. _servidor_aplicaciones_web_oao:
 
