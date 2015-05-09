@@ -5,36 +5,126 @@
 Primeros pasos
 ==============
 
-Luego de realizar la instalación del CMS Plone es recomendado realizar 
-los siguientes pasos con el sitio web creado.
+Luego de realizar la :ref:`instalación del Plone <instalando_plone>` es 
+recomendado realizar ciertos pasos adicionales para crear sitio Web y 
+personalizar las configuraciones de sus elementos predeterminados del 
+sitio Web creado.
+
+.. _1eros_pasos_zope:
 
 Primeros pasos en Zope
 ----------------------
 
-.. todo::
-     POR HACER.
+Luego de :ref:`iniciar la instancia del servidor Zope <para_iniciar_plone>` 
+abra el navegador Web y escriba la siguiente dirección http://localhost:8080 
+y le mostrara la pantalla de inicio del servidor Zope / Plone.
+
+.. figure:: ./plone_esta_operativo.png
+   :align: center
+   :alt: Plone (Zope) está operativo
+
+   Plone (Zope) está operativo.
+
+En esta página puede ver sus diversos sitios Plone creados en la instancia 
+del servidor Zope, ademas puede acceder a la 
+:ref:`Interfaz de Administración de Zope - ZMI <zmi>`, realizar la 
+configuración técnica de bajo nivel.
+
+.. _crear_sitio_plone:
 
 Crear sitio Plone
 ~~~~~~~~~~~~~~~~~
 
+Para esto debes luego de iniciar la instancia de Zope y acceder a la 
+página de inicio del servicio en http://localhost:8080, usted puede 
+crear sitios para Plone haciendo clic en el botón **Crear un nuevo 
+sitio Plone**.
+
+Lo próximo es iniciar sesión con el usuario Zope. El nombre de usuario 
+por defecto de Zope **admin** y la contraseña de este usuario.
+
+.. _contrasena_usr_admin:
+
+.. warning:: **Sobre la contraseña del usuario Zope**
+    
+    * En algunas configuraciones de buildout para Plone usan por defecto 
+      la contraseña **admin**.
+
+    * En el :ref:`instalador unificado de Plone <21_que_instalador_unificado>` 
+      por defecto la contraseña generada por el instalador Plone y descrita 
+      en el la contraseña en el archivo de texto llamado :file:`adminPassword.txt` 
+      (el cual se puede encontrar en la carpeta :file:`zinstance` o :file:`zeoserver` 
+      de la instalación de Plone, dependiendo de con que opción usted allá 
+      ejecutado el instalador unificado :ref:`"standalone" o "zeo" <ser-zeo-o-no-ser-zeo>`).
+
+Luego de iniciar sesión con el usuario Zope, lo dirige a la página 
+*"Crear un sitio Plone"* en esta otorgué a su sitio la siguiente información: 
+
+* Un **Identificador de ruta** como **Plone**.
+
+  .. note::
+      El id del sitio. No se permiten caracteres especiales. Este 
+      termina formando parte del URL, por ejemplo, en la dirección 
+      URL http://localhost:8080/Plone, donde **Plone** es el id del 
+      sitio, este id es usado internamente por Zope para diferenciar 
+      entre los diversos sitios Plone que puede hospedar en él.
+
+* Un **Título** como "Mi sitio Plone".
+
+  .. note::
+      Un título corto para el sitio. Se mostrará para cada página en 
+      la barra de título de la ventana del navegador.
+
+* Seleccione el **Idioma** por defecto para el sitio Web.
+
+* Active **Complementos** adicionales para el sitio Web.
+
+  .. tip::
+      Seleccionar cualquier complemento (marcando la respectiva casilla 
+      de comprobación al lado izquierdo del complemento) que quiera 
+      activar de forma inmediata. También puede activar los complementos 
+      una vez el sitio ha sido creado utilizando el panel de control para 
+      **Complementos**.
+
 .. todo::
-     POR HACER.
+     Agregar captura de pantalla de la página *"Crear un sitio Plone"*. 
+
+Luego haga clic en el botón *"Crear un Sitio Plone"* cerca del final de la 
+página. Tomara unos segundos crear su sitio Plone.
+
+Después de que el sitio está creado usted será redirigido al sitio en la 
+dirección URL http://localhost:8080/Plone, usted puede utilizar esta la 
+próxima ves que usted quiera visitar su sitio.
+
+Más adelante puede requerir configurar tu sitio Web Plone detrás de un servidor 
+Web como *Apache* o *Nginx*, para esto le invito a consultar el articulo 
+:ref:`Ejecutando Zope y Plone detrás de un Servidor Web <zope_plone_webserver>` 
+para entender este tipo de configuraciones adicionales.
+
+.. _1eros_pasos_plone:
 
 Primeros pasos en Plone
 -----------------------
 
-.. todo::
-     POR TERMINAR.
+Una vez que usted a creado un nuevo sitio Plone, usted puede encontrar su 
+sitio en la http://localhost:8080/*NombreSitio*, donde **NombreSitio** es la 
+identificación con la que se creo de su sitio Plone.
+
+  .. versionadded:: 4.x
+     Desde la versiones 4.x en adelante de Plone, no crea por defecto un sitio 
+     Web Plone para el uso del mismo luego de realizar la instalación y arranque 
+     de la instancia de Zope.
+
+Con la dirección URL usted accede a la página de inicio de Plone.
+
+.. _plone_front_page:
 
 Página de inicio
 ~~~~~~~~~~~~~~~~
 
-Una vez que usted a creado un nuevo sitio Plone, le facilitará por correo electrónico la dirección del mismo, así como su
-nombre de usuario y contraseña provisional.
-
 Al entrar en la dirección indicada, podrá ver su sitio recién instalado:
 
-.. figure:: ./plone_instalado.gif
+.. figure:: ./plone_instalado.png
    :align: center
    :alt: Plone 4 recién instalado
 
@@ -43,23 +133,156 @@ Al entrar en la dirección indicada, podrá ver su sitio recién instalado:
 Si es la primera vez que tiene un sitio Plone, le recomendamos seguir
 los pasos indicados a continuación.
 
+.. _plone_login:
+
+Accesos de administración del sitio
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hasta este punto el único usuario creado es el usuario Zope *admin*, el cual 
+dispone muchos privilegios en todo el servicio de Zope que hospeda al sitio 
+Plone.
+
+Para restringir estos niveles de acceso tan elevados debe crear un nuevo 
+usuario con el rol *Administrador* dentro del sitio Plone creado, para 
+delegar la administración de este sitio a este nuevo usuario y usar *SOLAMENTE* 
+el usuario *admin* por defecto de Zope, para labores meramente administrativa 
+del servicio Zope.
+
+#. Haga clic al enlace *Entrar* ubicado en la *esquina superior derecha*:
+
+    .. figure:: ./login_link.gif
+       :align: center
+       :alt: Enlace "Entrar"
+
+#. Inicie sesión con el usuario Zope, ingresando el nombre de usuario *admin* 
+   y :ref:`la contraseña <contrasena_usr_admin>`, seguidamente haga clic al 
+   botón *Entrar*:
+
+    .. figure:: ./login_as_admin.png
+       :align: center
+       :alt: Formulario de inicio de sesión como usuario admin
+
+       Formulario de inicio de sesión como usuario **admin**.
+
+.. _plone_usuario_administrador:
+
+Crear usuario administrador del sitio
+.....................................
+
+Haga clic al enlace **admin** ubicado en la *esquina superior derecha* y,
+en el menú desplegable que aparecerá, haga clic en :menuselection:`Configuración del Sitio`:
+
+.. figure:: ./overview_controlpanel_admin.png
+   :align: center
+   :alt: Menú del usuario admin - Configuración del Sitio
+
+   Menú del usuario *admin* - Configuración del Sitio.
+
+En la **Configuración del Sitio**, haga clic en el panel de control **Usuarios y Grupos**.
+
+.. figure:: ./configuracion_plone.gif
+   :align: center
+   :alt: La Configuración del Sitio
+
+   La Configuración del Sitio.
+
+Estando en la ruta :menuselection:`admin --> Configuración del Sitio --> Usuarios y Grupos` 
+esta el página *Visión Global de Usuarios* haga clic en el botón :menuselection:`Agregar Nuevo Usuario`, este mostrara el formulario de *Agregar Nuevo Usuario* como se muestra a continuación:
+
+.. figure:: ./agregar_nuevo_usuario_plone.png
+   :align: center
+   :alt: Formulario para Agregar Nuevo Usuario "Administrador del sitio"
+
+   Formulario para *Agregar Nuevo Usuario* "Administrador del sitio".
+
+En este formulario otorgué al usuario a crear la siguiente información: 
+
+* Un **Nombre Completo** como **Administrador del sitio**.
+
+  .. note::
+      Introduzca su nombre completo, por ejemplo Administrador del sitio.
+
+* Un **Nombre del Usuario** como "administrador".
+
+  .. note::
+      Introduzca el nombre de usuario que desee utilizar. Generalmente 
+      algo como "administrador" o "jose_perez". No están permitidos caracteres 
+      especiales o espacios en el nombre de usuario. Los nombres de usuario 
+      y las contraseñas son sensibles a mayúsculas y minúsculas, asegúrese 
+      que la tecla de bloqueo de mayúsculas no está activada ('caps lock'). 
+      Este es el nombre que utilizará para identificarse.
+
+* Un **Correo** como "admintrador@cliente.com".
+
+  .. tip::
+      Introduzca su dirección de correo. Esto es necesario en caso de 
+      pérdida de su contraseña. Respetaremos su privacidad y no 
+      divulgaremos su dirección a terceros ni la expondremos en este sitio.
+
+* Una **Contraseña** para el usuario "administrador".
+
+  .. tip::
+      Introduzca su nueva contraseña. Mínimo 5 caracteres.
+
+* **Confirmar contraseña** ingresada para el usuario "administrador".
+
+  .. tip::
+      Introduzca de nuevo la contraseña. Asegúrese de que las contraseñas 
+      son idénticas.
+
+* Marcar la casilla "Site Administrators" en la sección **Agregar en los siguientes grupos**.
+
+  .. tip::
+      Al marcar esta casilla agrega al usuario "administrador" en el grupo "Site Administrators".
+
+Para finalizar haga clic en botón *Registrar* así de esta forma se crea el 
+usuario *administrador* con parte del grupo de usuario *Site Administrators* 
+el cual le otorga permisos de **Administrador del Sitio**.
+
+.. figure:: ./usergroup_userprefs_administrador.png
+   :align: center
+   :alt: Visión Global de Usuarios para el usuario "administrador"
+
+   Visión Global de Usuarios para el usuario "administrador".
+
+Por ultimo debe cerrar sesión con usuario Zope *admin* siguiendo 
+la ruta :menuselection:`admin --> Salir`.
+
+.. figure:: ./logout_as_admin.png
+   :align: center
+   :alt: Menú del usuario admin > Salir
+
+   Menú del usuario admin > Salir.
+
+Esta acción le dirige a la página de inicio mostrando un mensaje **Ha salido 
+del sistema** y al mismo tiempo mostrando el formulario de iniciar sección 
+de usuario si desea volver a entrar al sitio.
+
+De esta forma ya a delegado permisos de **Administrador del Sitio** a un 
+usuario especifico del sitio Web Plone recién creado.
+
+.. _plone_login:
+
 Inicio de sesión
 ~~~~~~~~~~~~~~~~
 
-Antes de nada, inicie sesión con las claves que le hemos enviado:
+Luego de haber creado el usuario 
+:ref:`Administrador del sitio Plone <plone_usuario_administrador>`, debe 
+iniciar sesión con el usuario Plone ejecutando los siguiente pasos:
 
-#. Haga clic al enlace *Entrar* *(esquina superior derecha)*:
+#. Haga clic al enlace *Entrar* ubicado en la *esquina superior derecha*:
 
-    .. figure:: ./1eros_pasos_enlace_entrar.gif
+    .. figure:: ./login_link.gif
        :align: center
        :alt: Enlace "Entrar"
 
        Enlace "Entrar".
 
-#. Escriba su nombre de usuario/a y su contraseña. Y haga clic al 
-   botón *Entrar*:
+#. Inicie sesión con el Administrador del sitio Plone, ingresando el *nombre 
+   de usuario* y :ref:`la contraseña <contrasena_admin_plone>`, seguidamente 
+   haga clic al botón *Entrar*:
 
-    .. figure:: ./1eros_pasos_formulario_inicio_sesion.gif
+    .. figure:: ./login_as_administrador.png
        :align: center
        :alt: Formulario de inicio de sesión
 
@@ -69,13 +292,14 @@ Una vez dentro, al tener usted permisos totales de administración de su
 sitio Plone, podrá ver las barras, enlaces, botones, pestañas,... de
 administración:
 
-
-.. figure:: ./1eros_pasos_sesion_administrador.gif
+.. figure:: ./login_as_administrador_inside.png
    :align: center
    :alt: Dentro (sesión iniciada como usuario administrador)
 
    Dentro (sesión iniciada como usuario administrador).
 
+
+.. _plone_preferencias_usuario:
 
 Preferencias
 ~~~~~~~~~~~~
@@ -106,6 +330,8 @@ Información personal
 Pulse en la pestaña *Información Personal*, modifique y complete los
 distintos campos a su gusto, y pulse el botón *Guardar*.
 
+.. _contrasena_admin_plone:
+
 Contraseña
 ..........
 
@@ -113,7 +339,7 @@ Pulse en la pestaña *Contraseña*, escriba (una vez) la contraseña
 provisional que le hemos facilitado y (dos veces) la nueva contraseña
 deseada por usted. A continuación, pulse el botón *Cambiar Contraseña*:
 
-.. figure:: ./1eros_pasos_cambiar_contrasena.gif
+.. figure:: ./change_password_link.gif
    :align: center
    :alt: Restablecer la contraseña del usuario
 
@@ -147,31 +373,27 @@ Para cerrar la sesión, pulse en su nombre, marca o denominación (esquina
 superior derecha) y, en el menú desplegable que aparecerá, pulse en
 *Salir*:
 
-.. figure:: ./menu_usuario_salir.gif
+.. figure:: ./logout_as_administrador.gif
    :align: center
    :alt: Menú del usuario - Salir
 
    Menú del usuario - Salir.
  
 
-Configuración general de su sitio
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuración general del sitio
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A continuación, configuraremos los elementos comunes de todos los sitios
-Plone (la sección *Complementos* la dejaremos para más adelante, ya que
-los elementos disponibles en la misma, variarán según la `Oferta
-Plone <http://acentoweb.com/es/ayuda/aplicaciones/plones/guias/resolveuid/749d2ceeeaba3ce2da7503b4cdbf021a>`_
-contratada).
+Plone (la sección *Complementos* la dejaremos para más adelante.
 
 Pulse en su nombre, marca o denominación (esquina superior derecha) y,
-en el menú desplegable que aparecerá, pulse en *Configuración del
-sitio*:
+en el menú desplegable que aparecerá, pulse en *Configuración del Sitio*:
 
-.. figure:: ./menu_usuario_config_sitio.gif
+.. figure:: ./overview_controlpanel_administrador.png
    :align: center
-   :alt: Menú del usuario - Configuración del sitio
+   :alt: Menú del usuario - Configuración del Sitio
 
-   Menú del usuario - Configuración del sitio.
+   Menú del usuario - Configuración del Sitio.
 
 Ahora estará en la página de inicio de configuración de su sitio Plone:
 
@@ -185,7 +407,7 @@ Como puede ver, podemos configurar muchas cosas, aunque algunas las
 dejaremos como vienen por defecto y otras (los complementos) las
 abordaremos más adelante.
 
-Nota: el menú de arriba es el que encontrará en la página de inicio de
+**Nota:** El menú de arriba es el que encontrará en la página de inicio de
 configuración de su sitio Plone. Cuando esté dentro de una de las
 secciones enlazadas, verá dicho menú en una sola columna a la izquierda:
 
