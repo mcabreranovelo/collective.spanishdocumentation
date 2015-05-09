@@ -119,12 +119,11 @@ Para iniciar Plone:
     en su navegador web. Si usted estableció otro puerto, use ese en vez del
     *8080*.
 
-#.  Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
-    introduzca su información de inicio de sesión para comenzar a usar Plone.
-    Introduzca la información requerida y luego envíe el formulario para
-    finalizar la creación de su sitio. Usted puede encontrar su sitio en
-    http://localhost:8080/*SiteName*, donde **SiteName** es la identificación
-    de su sitio Plone.
+#.  Haga clic en "Crear un nuevo sitio Plone" e introduzca su información 
+    de inicio de sesión para comenzar a usar Plone. Introduzca la información 
+    requerida y luego envíe el formulario para finalizar la creación de su sitio.
+    Usted puede encontrar su sitio en http://localhost:8080/*NombreSitio*, donde 
+    **NombreSitio** es la identificación de su sitio Plone.
 
 Para detener el proceso Plone ejecute :command:`./bin/plonectl stop`. ¡Diviértase
 usando Plone!
@@ -214,11 +213,11 @@ Una vez que usted haya iniciado una instancia de Plone, la puede ver
 visitando http://localhost:8080/ en su navegador web. Si no se carga,
 asegúrese de que su Firewall no ha bloqueado el puerto TCP 8080.
 
-Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
-introduzca su información de inicio de sesión para comenzar a usar Plone.
+Haga clic en "Crear un nuevo sitio Plone" e introduzca su información de 
+inicio de sesión para comenzar a usar Plone.
 Ingrese la información solicitada y luego envíe el formulario para finalizar
 la creación de su sitio. Puede encontrar su sitio en
-http://localhost:8080/*SiteName*, donde **SiteName** es la identificación de su
+http://localhost:8080/*NombreSitio*, donde **NombreSitio** es la identificación de su
 sitio Plone. ¡Diviértase con Plone!
 
 
@@ -1085,14 +1084,14 @@ Accediendo a Plone
   puerto TCP 8080, antes de que pueda acceder a la interfaz web de Plone.
 
 #.  Abra un navegador web y vaya a http://localhost:8080/ y haga clic en
-    el botón "Create a new Plone site".
+    el botón "Crear un nuevo sitio Plone".
 
 #.  Lo próximo es iniciar sesión de usuario. El nombre de usuario por
     defecto de Zope "admin" y la contraseña es también "admin" (sin las
     comillas dobles).
 
-#.  En la página "Create a Plone site" desplace hacia abajo y clic el
-    botón "Create Plone Site".
+#.  En la página "Crear un sitio Plone" desplace hacia abajo y clic el
+    botón "Crear un Sitio Plone".
 
 #.  Después de que el sitio está creado usted será redirigido al sitio en
     la dirección http://localhost:8080/Plone. Usted puede utilizar esta
@@ -1353,9 +1352,8 @@ Quizás tenga que transmitirle a su Firewall (cortafuegos) que abra el puerto
 8080, antes de que pueda acceder a la interfaz web de Plone.
 
 Abra un navegador web y vaya a http://localhost:8080/. Haga clic en el botón
-que contiene el texto "Create a new Plone site" (Crear un nuevo sitio Plone)
-Se le pedirá que introduzca el nombre de usuario y contraseña: aquellos que
-escribió anteriormente.
+que contiene el texto "Crear un nuevo sitio Plone" se le pedirá que introduzca 
+el nombre de usuario y contraseña: aquellos que escribió anteriormente.
 
 Otórguele a su sitio una identificación como "Plone", y un titulo como "Mi
 sitio Plone". Además puede seleccionar el idioma del sitio y algunos
