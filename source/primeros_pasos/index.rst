@@ -84,7 +84,7 @@ Luego de iniciar sesión con el usuario Zope, lo dirige a la página
       de comprobación al lado izquierdo del complemento) que quiera 
       activar de forma inmediata. También puede activar los complementos 
       una vez el sitio ha sido creado utilizando el panel de control para 
-      **Complementos**.
+      :ref:`Complementos <prefs_install_products_plone>`.
 
 .. todo::
      Agregar captura de pantalla de la página *"Crear un sitio Plone"*. 
@@ -180,7 +180,7 @@ en el menú desplegable que aparecerá, haga clic en :menuselection:`Configuraci
 
 En la **Configuración del Sitio**, haga clic en el panel de control **Usuarios y Grupos**.
 
-.. figure:: ./configuracion_plone.gif
+.. figure:: ./overview_controlpanel_horizontal.gif
    :align: center
    :alt: La Configuración del Sitio
 
@@ -384,7 +384,8 @@ Configuración general del sitio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A continuación, puede configurar los elementos comunes de todos los sitios
-Plone (la sección *Complementos* la dejaremos para más adelante).
+Plone (la sección :ref:`Complementos <prefs_install_products_plone>` la 
+dejaremos para más adelante).
 
 Haga clic en su nombre, marca o denominación (esquina superior derecha) y,
 en el menú desplegable que aparecerá, haga clic en *Configuración del Sitio*:
@@ -397,26 +398,27 @@ en el menú desplegable que aparecerá, haga clic en *Configuración del Sitio*:
 
 Ahora estará en la página de inicio de configuración de su sitio Plone:
 
-.. figure:: ./configuracion_plone.gif
+.. figure:: ./overview_controlpanel_horizontal.gif
    :align: center
    :alt: Configuración de Plone
 
    Configuración de Plone.
 
 Como puede ver, podemos configurar muchas cosas, aunque algunas las
-dejaremos como vienen por defecto y otras (los complementos) las
-abordaremos más adelante.
+dejaremos como vienen por defecto y otras (los :ref:`complementos <prefs_install_products_plone>`) 
+las abordaremos más adelante.
 
 **Nota:** El menú de arriba es el que encontrará en la página de inicio de
 configuración de su sitio Plone. Cuando esté dentro de una de las
 secciones enlazadas, verá dicho menú en una sola columna a la izquierda:
 
-.. figure:: ./config_plone_menu_vertical.gif
+.. figure:: ./overview_controlpanel_vertical.gif
    :align: center
    :alt: Menú vertical de Configuración de Plone
 
    Menú vertical de Configuración de Plone.
- 
+
+.. _search_controlpanel_plone:
 
 Búsqueda
 ........
@@ -434,6 +436,7 @@ aparezcan en los resultados de las búsquedas.
 En este caso, haga clic en *Búsqueda*, marque la casilla *Comentarios* y
 haga clic en el botón *Guardar*.
 
+.. _calendar_controlpanel_plone:
  
 Calendario
 ..........
@@ -453,12 +456,13 @@ Pero si usted cambia la configuración de flujo de trabajo a
 *Publicado* en esta sección, marcar la casilla *Visible externamente* y
 guardar los cambios (haga clic en el botón *Guardar*).
 
- 
-Colecciones
-...........
+..
+  Colecciones
+  ...........
 
-En principio, no es necesario que cambie nada.
+  En principio, no es necesario que cambie nada.
 
+.. _prefs_install_products_plone:
 
 Complementos
 ............
@@ -473,11 +477,13 @@ Para que los nuevos complementos aparezcan aquí, agréguelos a su configuració
 de :term:`buildout`, ejecute el comando ``buildout``, y reinicie el proceso servidor. Para instrucciones detalladas, vea :ref:`Instalando complementos de Plone <agregar_complementos_adicionales>`.
 
 ..
-  .. figure:: ./calendar_controlpanel.png
+  .. figure:: ./prefs_install_products_plone.png
      :align: center
      :alt: Panel de control Complementos
 
      Panel de control Complementos para este sitio.
+
+.. _mail_controlpanel_plone:
 
 Correo
 ......
@@ -558,6 +564,8 @@ minutos en llegarle):
    sin llegarle el correo de prueba, póngase en contacto con el administrador 
    de su red, o proveedor de servicio de Internet.
 
+.. _discussion_settings_plone:
+
 Discusión
 .........
 
@@ -570,6 +578,8 @@ principio no añadiremos nada aquí.
 
    Ajustes de discusión para este sitio.
 
+.. _editing_controlpanel_plone:
+
 Edición
 .......
 
@@ -581,6 +591,8 @@ en el botón *Guardar*.
    :alt: Opciones de edición
 
    Opciones de edición para este sitio.
+
+.. _tinymce_controlpanel_plone:
 
 Editor Visual TinyMCE
 .....................
@@ -606,6 +618,7 @@ Veamos cada una de las sub-secciones:
 
    Configuración para el editor WYSIWYG TinyMCE para este sitio.
 
+.. _prefs_error_log_plone:
 
 Errores
 .......
@@ -626,6 +639,8 @@ copiadas al/a los archivo(s) de eventos de Zope.
 
 .. warning:: Usted puede dejarlo todo como está.
 
+.. _markup_controlpanel_plone:
+
 Etiquetado
 ..........
 
@@ -638,6 +653,8 @@ Le permite controlar el tipo de etiquetado disponible para editar contenido.
    Configuración de etiquetado para este sitio.
 
 .. warning:: Usted puede dejarlo todo como está.
+
+.. _filter_controlpanel_plone:
 
 Filtrado HTML
 .............
@@ -662,6 +679,8 @@ el botón 'Guardar'.
 
 .. warning:: Usted puede dejarlo todo como está.
 
+.. _language_controlpanel_plone:
+
 Idioma
 ......
 
@@ -677,6 +696,8 @@ de usuario y las traducciones de contenido.
 .. warning:: 
     Usted Puede dejarlo todo como está, salvo que quiera cambiar el 
     idioma de su sitio Web.
+
+.. _manage_plone:
 
 Interfaz de Administración de Zope
 ..................................
@@ -700,6 +721,8 @@ Interfaz de Administración de Zope
     que rompa nada, se recomienda que no toque nada dentro de la ZMI de su sitio 
     Plone sino sabe lo que esta haciendo.
 
+.. _imaging_controlpanel_plone:
+
 Manejo de Imágenes
 ..................
 
@@ -712,6 +735,8 @@ Las opciones para configurar el manejo de imágenes en Plone.
    Configuración de manejo de imágenes para este sitio.
 
 .. warning:: Usted puede dejarlo todo como está.
+
+.. _maintenance_controlpanel_plone:
 
 Mantenimiento
 .............
@@ -739,6 +764,8 @@ Si eres usuario Zope usted puede ver el panel del *Mantenimiento* de la siguient
 
    Mantenimiento de Zope / Plone.
 
+.. _navigation_controlpanel_plone:
+
 Navegación
 ..........
 
@@ -764,6 +791,8 @@ En este caso, marque la casilla *Comentarios* y haga clic en el botón
     Normalmente es más recomendable que los comentarios NO aparezcan
     en los citados elementos.
 
+.. _portal_registry_plone:
+
 Registro de Configuración
 .........................
 
@@ -777,6 +806,8 @@ registro de configuración. Haga clic en un registro para editarlo.
    Registro de configuración para este sitio.
 
 .. warning:: Usted puede dejarlo todo como está.
+
+.. _rules_controlpanel_plone:
 
 Reglas de Contenido
 ...................
@@ -800,6 +831,8 @@ automática de acciones de contenidos, puede consultar la referencia
 del manual de usuario de Plone.
 
 .. warning:: Hasta entonces, no hace falta que toque nada aquí.
+
+.. _security_controlpanel_plone:
 
 Seguridad
 .........
@@ -840,6 +873,8 @@ La configuración de seguridad para este sitio.
 -  **Usar dirección de correo como nombre de inicio de sesión**: a su
    gusto.
 
+.. _syndication_settings_plone:
+
 Sindicación
 ...........
 
@@ -850,6 +885,8 @@ Las opciones de sindicación por defecto del sitio Web Plone.
    :alt: Configuración de Sindicación
 
    Configuración de Sindicación para este sitio.
+
+.. _site_controlpanel_plone:
 
 Sitio
 .....
@@ -902,6 +939,8 @@ La configuración global del sitio, por favor ingrese la siguiente información:
 
    Configuración global del sitio.
 
+.. _skins_controlpanel_plone:
+
 Temas
 .....
 
@@ -921,6 +960,8 @@ caso de marcar o cambiar algo, haga clic en después el botón *Guardar*).
 El resto puede dejarlo de momento como está: más adelante dedicaremos un
 manual completo a la personalización estética de su sitio Web Plone.
 
+.. _types_controlpanel_plone:
+
 Tipos
 .....
 
@@ -938,6 +979,8 @@ tipos de contenido.
 ..
   más adelante dedicaremos un manual completo a los flujos de trabajo (*Workflow*) 
   de su sitio Web Plone.
+
+.. _usergroup_userprefs_plone:
 
 Usuarios y Grupos
 .................
@@ -970,6 +1013,7 @@ Personalizaciones visuales del sitio
 A continuación, puede realizar personalizaciones visuales a los elementos 
 comunes de todos los sitios Plone.
 
+.. _logo_image_plone:
 
 Logotipo
 ........
@@ -1006,6 +1050,8 @@ misma).
 Si su logotipo queda demasiado grande o pequeño para su gusto, repita
 los pasos 4 y 5 cuantas veces sea necesario con distintas versiones de
 tamaño de su logotipo, hasta que logre los resultados deseados.
+
+.. _colophon_view_plone:
 
 Colofón
 .......
