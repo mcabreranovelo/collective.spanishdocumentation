@@ -2,87 +2,132 @@
 
 {% block tables %}
             <p><strong>Partes de la documentación:</strong></p>
-            <table class="contentstable" align="center"><tr>
-              <td width="50%">
-                <p class="biglink"><a class="biglink" href="{{ pathto("plone/index") }}">¿Que es Plone?</a><br/>
-                  <span class="linkdescr">Introducción al proyecto Plone como software y como comunidad.</span></p>
+            <table class="contentstable" align="center">
+              <tr>
+                <td width="50%">
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("plone/index") }}">¿Que es Plone?</a><br/>
+                    <span class="linkdescr">Introducción al proyecto Plone como software y como comunidad.</span>
+                  </p>
 
-                <p class="biglink"><a class="biglink" href="{{ pathto("novedades/4") }}">¿Que hay de nuevo en Plone {{ version }}?</a><br/>
-                  <span class="linkdescr">o <a href="{{ pathto("novedades/index") }}">todos los documentos "Novedades en Plone"</a> desde la versión 0.1.</span></p>
-                  
-                <p class="biglink"><a class="biglink" href="{{ pathto("instalacion/instalando_plone") }}">Instalando Plone</a><br/>
-                  <span class="linkdescr"><a href="{{ pathto("instalacion/requerimientos_sistema_plone") }}">requerimientos</a><!--, <a href="{{ pathto("instalacion/diversas_plataformas_plone") }}">diversas plataformas</a>--> y <a href="{{ pathto("instalacion/productos/index") }}">habilitando módulos</a>.</span></p>
-<!--
-                <p class="biglink"><a class="biglink" href="{{ pathto("instalacion/requerimientos_sistema_plone") }}">Requerimientos de sistema</a><br/>
-                  <span class="linkdescr">tipos de requerimientos de ejecución de una instalación Plone.</span></p>
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("novedades/4") }}">¿Que hay de nuevo en Plone {{ version }}?</a><br/>
+                    <span class="linkdescr">o <a href="{{ pathto("novedades/index") }}">todos los documentos "Novedades en Plone"</a> desde la versión 0.1.</span>
+                  </p>
 
-                <p class="biglink"><a class="biglink" href="{{ pathto("instalacion/instalando_plone") }}">Instalando Plone</a><br/>
-                  <span class="linkdescr">en Windows, Mac OS X, Linux, BSD y otras plataformas.</span></p><br/>
--->
-                <p class="biglink">
-                  <a class="biglink" href="{{ pathto("primeros_pasos/index") }}" target="_blank">Primeros pasos en Plone</a><br/>
-                  <span class="linkdescr">Primeros pasos con su sitio web CMS Plone.</span></p>
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("instalacion/instalando_plone") }}">Instalando Plone</a><br/>
+                    <span class="linkdescr"><a href="{{ pathto("instalacion/requerimientos_sistema_plone") }}">requerimientos</a><!--, <a href="{{ pathto("instalacion/diversas_plataformas_plone") }}">diversas plataformas</a>--> y <a href="{{ pathto("instalacion/productos/index") }}">habilitando módulos</a>.</span>
+                  </p>
 
-                <!--<p class="biglink"><a class="biglink" href="{{ pathto("manuales/usando_plone4/index") }}">Usando Plone 4</a><br/>-->
-                <p class="biglink"><a class="biglink" href="https://plone.org/countries/ve/publicaciones/plone-para-usuarios-principiantes" target="_blank">Usando Plone 4</a><br/>
-                  <span class="linkdescr">Crear y gestionar contenido, usando flujos de trabajo y colecciones.</span></p>
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("primeros_pasos/index") }}">Primeros pasos en Plone</a><br/>
+                    <span class="linkdescr">Primeros pasos con su sitio web CMS Plone.</span>
+                  </p>
 
-                <p class="biglink"><a class="biglink" href="http://plone.org/documentation/faq" target="_blank">Frequently Asked Questions</a><br/>
-                  <span class="linkdescr">Es probable que su pregunta ya ha sido respondida por alguien más.</span></p>
-              </td>
-              <td width="50%">
-                <!--
-                <p class="biglink"><a class="biglink" href="{{ pathto("instalacion/productos/index") }}">Instalando módulos a Plone</a><br/>
-                  <span class="linkdescr">Mejorar o modificar el comportamiento de su sitio.</span></p>
-                  -->
-                <p class="biglink"><a class="biglink" href="{{ pathto("zope/index") }}">Z Object Publishing Environment - Zope</a><br/>
-                  <span class="linkdescr">artículos sobre la configuración del servicio Zope.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("programacion/tipos_productos") }}">Desarrollar diversos productos con Plone</a><br/>
-                  <span class="linkdescr">artículo sobre los tipos de desarrollo en Plone.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("programacion/haciendo_pruebas/index") }}">Pruebas en Plone</a><br/>
-                  <span class="linkdescr">la traducción al Español del articulo Testing in Plone.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("apariencias/referencias_temas/index") }}">Referencias de Temas en Plone</a><br/>
-                  <span class="linkdescr">la traducción al Español del Plone Theme Reference.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("index_tutoriales") }}">Base de conocimiento</a><br/>
-                  <span class="linkdescr">Tutoriales, Artículos de gran utilidad.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("glosario") }}">Glosario</a><br/>
-                  <span class="linkdescr">los términos más importantes explicados.</span></p>
-              </td></tr>
+                  <!--<p class="biglink"><a class="biglink" href="{{ pathto("manuales/usando_plone4/index") }}">Usando Plone 4</a><br/>-->
+                  <p class="biglink">
+                    <a class="biglink" href="https://plone.org/countries/ve/publicaciones/plone-para-usuarios-principiantes" target="_blank">Usando Plone 4</a><br/>
+                    <span class="linkdescr">Crear y gestionar contenido, usando flujos de trabajo y colecciones.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="http://plone.org/documentation/faq" target="_blank">Frequently Asked Questions</a><br/>
+                    <span class="linkdescr">Es probable que su pregunta ya ha sido respondida por alguien más.</span>
+                  </p>
+                </td>
+
+                <td width="50%">
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("zope/index") }}">Z Object Publishing Environment - Zope</a><br/>
+                    <span class="linkdescr">artículos sobre la configuración del servicio Zope.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("programacion/tipos_productos") }}">Desarrollar diversos productos con Plone</a><br/>
+                    <span class="linkdescr">artículo sobre los tipos de desarrollo en Plone.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("programacion/haciendo_pruebas/index") }}">Pruebas en Plone</a><br/>
+                    <span class="linkdescr">la traducción al Español del articulo Testing in Plone.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("apariencias/referencias_temas/index") }}">Referencias de Temas en Plone</a><br/>
+                    <span class="linkdescr">la traducción al Español del Plone Theme Reference.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("index_tutoriales") }}">Base de conocimiento</a><br/>
+                    <span class="linkdescr">Tutoriales, Artículos de gran utilidad.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("glosario") }}">Glosario</a><br/>
+                    <span class="linkdescr">los términos más importantes explicados.</span>
+                  </p>
+                </td>
+              </tr>
             </table>
 
             <p><strong>Índices y tablas:</strong></p>
-            <table class="contentstable" align="center"><tr>
-              <td width="50%">
-                <p class="biglink"><a class="biglink" href="{{ pathto("enlaces") }}">Enlaces a recursos</a><br/>
-                  <span class="linkdescr">listas de ciertos recursos en linea de complemento a esta documentación.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("presentaciones/index") }}">Laminas de charlas/talleres</a><br/>
-                  <span class="linkdescr">listas de laminas útiles de charlas/talleres.</span></p>
-                <!--
-                <p class="biglink"><a class="biglink" href="{{ pathto("contents") }}">Tabla completa de contenidos</a><br/>
-                  <span class="linkdescr">listas todas las secciones y sub-secciones.</span></p>
-                -->
-              </td>
-              <td width="50%">
-                <p class="biglink"><a class="biglink" href="{{ pathto("search") }}">Pagina de búsqueda</a><br/>
-                  <span class="linkdescr">buscar en esta documentación.</span></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("genindex") }}">Índice general</a><br/>
-                  <span class="linkdescr">todas las funciones, clases, términos.</span></p>
-                <!--
-                <p class="biglink"><a class="biglink" href="{{ pathto("modindex") }}">Índice de módulos globales</a><br/>
-                  <span class="linkdescr">acceso rápido de todos los módulos.</span></p>
-                -->
-              </td></tr>
+            <table class="contentstable" align="center">
+              <tr>
+                <td width="50%">
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("enlaces") }}">Enlaces a recursos</a><br/>
+                    <span class="linkdescr">listas de ciertos recursos en linea de complemento a esta documentación.</span>
+                  </p>
+
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("presentaciones/index") }}">Laminas de charlas/talleres</a><br/>
+                    <span class="linkdescr">listas de laminas útiles de charlas/talleres.</span>
+                  </p>
+                  <!--
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("contents") }}">Tabla completa de contenidos</a><br/>
+                    <span class="linkdescr">listas todas las secciones y sub-secciones.</span>
+                  </p>
+                  -->
+                </td>
+
+                <td width="50%">
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("search") }}">Pagina de búsqueda</a><br/>
+                    <span class="linkdescr">buscar en esta documentación.</span>
+                  </p>
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("genindex") }}">Índice general</a><br/>
+                    <span class="linkdescr">todas las funciones, clases, términos.</span>
+                  </p>
+                  <!--
+                  <p class="biglink"><a class="biglink" href="{{ pathto("modindex") }}">Índice de módulos globales</a><br/>
+                    <span class="linkdescr">acceso rápido de todos los módulos.</span></p>
+                  -->
+                </td>
+              </tr>
             </table>
 
             <p><strong>Meta información:</strong></p>
-            <table class="contentstable" align="center"><tr>
-              <td width="50%">
-                <p class="biglink"><a class="biglink" href="{{ pathto("escribiendo/acerca") }}">Acerca la documentación</a></p>
-                <p class="biglink"><a class="biglink" href="https://github.com/collective/collective.spanishdocumentation/issues" target="_blank">Reportando errores</a></p>
-              </td>
-              <td width="50%">
-                <p class="biglink"><a class="biglink" href="{{ pathto("escribiendo/licencia") }}">Licencia de esta documentación</a></p>
-                <p class="biglink"><a class="biglink" href="{{ pathto("escribiendo/copyright") }}">Copyright</a></p>
-              </td></tr>
+            <table class="contentstable" align="center">
+              <tr>
+                <td width="50%">
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("escribiendo/acerca") }}">Acerca la documentación</a>
+                  </p>
+                  <p class="biglink">
+                    <a class="biglink" href="https://github.com/collective/collective.spanishdocumentation/issues" target="_blank">Reportando errores</a>
+                  </p>
+                </td>
+                <td width="50%">
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("escribiendo/licencia") }}">Licencia de esta documentación</a>
+                  </p>
+                  <p class="biglink">
+                    <a class="biglink" href="{{ pathto("escribiendo/copyright") }}">Copyright</a>
+                  </p>
+                </td>
+              </tr>
             </table>
 {% endblock %}
