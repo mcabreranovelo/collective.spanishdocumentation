@@ -306,11 +306,11 @@ Preferencias
 
 A continuación, terminaremos de configurar su cuenta de usuario.
 
-Pulse en su nombre, marca o denominación (esquina superior derecha
+Haga clic en su nombre, marca o denominación (esquina superior derecha
 -donde antes ponía *Entrar*-) y, en el menú desplegable que aparecerá,
-pulse en *Preferencias*:
+haga clic en *Preferencias*:
 
-.. figure:: ./1eros_pasos_preferencias_menu_usuario.gif
+.. figure:: ./personal_preferences_menu.gif
    :align: center
    :alt: Menú del usuario - Preferencias
 
@@ -319,7 +319,7 @@ pulse en *Preferencias*:
 Nombres cortos
 ..............
 
-Marque la casilla *Permite la edición de Nombres Cortos* y pulse el
+Marque la casilla *Permite la edición de Nombres Cortos* y haga clic el
 botón *Guardar* (el "nombre corto" de un elemento es la porción de la
 URL que corresponde al mismo: en determinadas ocasiones le resultará
 útil poder modificarlo).
@@ -327,17 +327,17 @@ URL que corresponde al mismo: en determinadas ocasiones le resultará
 Información personal
 ....................
 
-Pulse en la pestaña *Información Personal*, modifique y complete los
-distintos campos a su gusto, y pulse el botón *Guardar*.
+Haga clic en la pestaña *Información Personal*, modifique y complete los
+distintos campos a su gusto, y haga clic en el botón *Guardar*.
 
 .. _contrasena_admin_plone:
 
 Contraseña
 ..........
 
-Pulse en la pestaña *Contraseña*, escriba (una vez) la contraseña
+Haga clic en la pestaña *Contraseña*, escriba (una vez) la contraseña
 provisional que le hemos facilitado y (dos veces) la nueva contraseña
-deseada por usted. A continuación, pulse el botón *Cambiar Contraseña*:
+deseada por usted. A continuación, haga clic en el botón *Cambiar Contraseña*:
 
 .. figure:: ./change_password_link.gif
    :align: center
@@ -369,9 +369,8 @@ Antes de seguir, cierre esta sesión (salga de su cuenta) y abra una
 nueva sesión (vuelva a entrar), para comprobar que su contraseña ha sido
 correctamente actualizada.
 
-Para cerrar la sesión, pulse en su nombre, marca o denominación (esquina
-superior derecha) y, en el menú desplegable que aparecerá, pulse en
-*Salir*:
+Para cerrar la sesión, haga clic en su nombre, marca o denominación (esquina
+superior derecha) y, en el menú desplegable que aparecerá, haga clic en *Salir*:
 
 .. figure:: ./logout_as_administrador.gif
    :align: center
@@ -386,8 +385,8 @@ Configuración general del sitio
 A continuación, configuraremos los elementos comunes de todos los sitios
 Plone (la sección *Complementos* la dejaremos para más adelante.
 
-Pulse en su nombre, marca o denominación (esquina superior derecha) y,
-en el menú desplegable que aparecerá, pulse en *Configuración del Sitio*:
+Haga clic en su nombre, marca o denominación (esquina superior derecha) y,
+en el menú desplegable que aparecerá, haga clic en *Configuración del Sitio*:
 
 .. figure:: ./overview_controlpanel_administrador.png
    :align: center
@@ -425,8 +424,14 @@ En principio, podemos dejar la configuración por defecto, salvo que
 usted desee activar los comentarios en su sitio Plone y que éstos
 aparezcan en los resultados de las búsquedas.
 
-En este caso, pulse en *Búsqueda*, marque la casilla *Comentarios* y
-pulse el botón *Guardar*.
+.. figure:: ./search_controlpanel.png
+   :align: center
+   :alt: Configuración de búsqueda
+
+   Configuración de búsqueda para este sitio.
+
+En este caso, haga clic en *Búsqueda*, marque la casilla *Comentarios* y
+haga clic en el botón *Guardar*.
 
  
 Calendario
@@ -436,10 +441,16 @@ Si usted va a conservar la configuración de flujo de trabajo de
 *Publicación Simple* que trae Plone por defecto (ver abajo), no es
 necesario que cambie nada.
 
+.. figure:: ./calendar_controlpanel.png
+   :align: center
+   :alt: Configuración de calendario
+
+   Configuración de calendario para este sitio.
+
 Pero si usted cambia la configuración de flujo de trabajo a
 *Intranet/Extranet* (ver abajo), tendrá que desmarcar la casilla
 *Publicado* en esta sección, marcar la casilla *Visible externamente* y
-guardar los cambios (pulsar el botón *Guardar*).
+guardar los cambios (haga clic en el botón *Guardar*).
 
  
 Colecciones
@@ -451,42 +462,85 @@ En principio, no es necesario que cambie nada.
 Complementos
 ............
 
-Los abordaremos más adelante.
+Esta es la sección de configuración de Complementos, donde puede activar 
+y desactivar los complementos de las siguientes listas.
+
+.. todo::
+    Agregar captura de pantalla del Panel de control Complementos para este sitio.
+
+Para que los nuevos complementos aparezcan aquí, agréguelos a su configuración 
+de :term:`buildout`, ejecute el comando ``buildout``, y reinicie el proceso servidor. Para instrucciones detalladas, vea :ref:`Instalando complementos de Plone <agregar_complementos_adicionales>`.
+
+..
+  .. figure:: ./calendar_controlpanel.png
+     :align: center
+     :alt: Panel de control Complementos
+
+     Panel de control Complementos para este sitio.
 
 Correo
 ......
 
-Pulse en el enlace *Correo*, cumplimente los siguientes campos como se
-indica y pulse el botón *Guardar*:
+Luego de creado el sitio Plone al acceder a la ruta 
+:menuselection:`admin --> Configuración del Sitio`, muestra el siguiente mensaje: 
+
+.. figure:: ./mail_portal_message_warning.png
+   :align: center
+   :alt: Aviso de configuración de servidor de correo
+
+   Aviso de configuración de servidor de correo.
+
+Acceda a la ruta :menuselection:`Configuración del Sitio --> Correo`, ingrese los 
+datos en los siguientes campos como se indica y haga clic en el botón *Guardar*:
 
 -  Servidor SMTP: localhost
+   
+   .. note::
+       Por defecto los sistemas UNIX/Linux usan un servidor de correo instalado 
+       por defecto en su sistema o opcionalmente instalar Posix, SendMail, etc.
 
 -  Puerto SMTP: 25
+   
+   .. note::
+       El puerto SMTP por defecto es 25.
 
--  Nombre del remitente del sitio: su nombre, marca, denominación
-   social,...
+-  Nombre del remitente del sitio: *Administrador del sitio*.
+   
+   .. note::
+       Su nombre, marca, denominación social, etc.
 
--  Dirección del remitente del sitio: su dirección de correo (la
-   dirección que indique aquí será la usada por Plone para enviar
-   correos y será la destinataria por defecto de los formularios de
-   correo de su sitio Plone).
+-  Dirección del remitente del sitio: la dirección de correo.
+   
+   .. note::
+       La dirección que indique aquí será la usada por Plone para enviar
+       correos y será la destinataria por defecto de los formularios de
+       correo de su sitio Plone.
 
-.. figure:: ./config_correo.gif
+.. figure:: ./mail_controlpanel.png
    :align: center
    :alt: Configuración de correo
 
-   Configuración de correo.
+   Configuración de correo para este sitio.
 
-Para comprobar que todo va bien, vamos a enviar un mensaje de prueba con
-el formulario de correo que trae por defecto su sitio Plone. Si la
-configuración es correcta, recibirá el formulario enviado en la
-dirección de correo arriba indicada.
+Para comprobar que todo va bien, puede a enviar un mensaje de prueba 
+haciendo clic en el botón *Guardar y enviar correo de prueba* si la prueba 
+fue exitosa le mostrara el siguiente mensaje:
 
-Vaya al pie de página de su sitio Plone (abajo del todo) y pulse en el
+.. figure:: ./mail_portal_message_info.png
+   :align: center
+   :alt: Aviso de ¡Prueba exitosa! al enviar el mensaje
+
+   Aviso de ¡Prueba exitosa! al enviar el mensaje.
+
+También puede enviar un mensaje de prueba desde el formulario de correo 
+que trae por defecto su sitio Plone. Si la configuración es correcta, 
+recibirá el formulario enviado en la dirección de correo arriba indicada.
+
+Vaya al pie de página de su sitio Plone (abajo del todo) y haga clic en el
 enlace *Contacto*. En la ventana emergente, cumplimente los campos del
-formulario y pulse el botón *Enviar*:
+formulario y haga clic en el botón *Enviar*:
 
-.. figure:: ./formulario_contacto.gif
+.. figure:: ./contact_info.png
    :align: center
    :alt: Formulario de contacto
 
@@ -500,8 +554,8 @@ minutos en llegarle):
 
 -  Si al cabo de unos minutos no le ha llegado, lo más probable es que
    la configuración sea incorrecta. Repásela y vuelva a probar. Si sigue
-   sin llegarle el correo de prueba, póngase en contacto con nuestro
-   servicio de atención al cliente (clientes@AW).
+   sin llegarle el correo de prueba, póngase en contacto con el administrador 
+   de su red, o proveedor de servicio de Internet.
 
 Discusión
 .........
@@ -509,14 +563,23 @@ Discusión
 Las opciones de esta sección están muy bien explicadas, por lo que en
 principio no añadiremos nada aquí.
 
-No obstante ello, si tuviera alguna duda, póngase en contacto con
-nuestro servicio de atención al cliente (clientes@AW).
+.. figure:: ./discussion_settings.png
+   :align: center
+   :alt: Ajustes de discusión
+
+   Ajustes de discusión para este sitio.
 
 Edición
 .......
 
-Marque la casilla *¿Mostrar 'Nombre Corto' en el contenido?* y pulse el
-botón *Guardar*.
+Marque la casilla *¿Mostrar 'Nombre Corto' en el contenido?* y haga clic 
+en el botón *Guardar*.
+
+.. figure:: ./editing_controlpanel.png
+   :align: center
+   :alt: Opciones de edición
+
+   Opciones de edición para este sitio.
 
 Editor Visual TinyMCE
 .....................
@@ -527,91 +590,207 @@ Veamos cada una de las sub-secciones:
 
 -  **Barra de herramientas**: marque las casillas correspondientes a los
    botones que quiera añadir a la barra de herramientas del editor
-   visual de su sitio Plone y pulse el botón *Guardar* (puede marcarlas
+   visual de su sitio Plone y haga clic en el botón *Guardar* (puede marcarlas
    todas, aunque cuantas más marque, más tardará en cargar la página
    cuando acceda a ella en modo *Edición*).
 
 -  **Tipos de recursos**: marque la casilla *Enlazar empleando UIDs* y
-   pulse el botón *Guardar*.
+   haga clic en el botón *Guardar*.
 
 -  **Librerías**: puede dejarla como viene por defecto.
+
+.. figure:: ./tinymce_controlpanel.png
+   :align: center
+   :alt: Configuración para el editor WYSIWYG TinyMCE
+
+   Configuración para el editor WYSIWYG TinyMCE para este sitio.
 
 
 Errores
 .......
 
-Puede dejarlo todo como está.
+Esta página lista las excepciones que han ocurrido en este sitio recientemente. 
+Puede configurar cuántas excepciones deberían guardarse y cuáles deberían ser 
+copiadas al/a los archivo(s) de eventos de Zope.
+
+.. tip::
+    Consulte la `referencia de errores en plone.org <http://plone.org/documentation/error>`_ 
+    para más información sobre estas excepciones.
+
+.. figure:: ./prefs_error_log_form.png
+   :align: center
+   :alt: Registro de errores
+
+   Registro de errores para este sitio.
+
+.. warning:: Usted puede dejarlo todo como está.
 
 Etiquetado
 ..........
 
-Puede dejarlo todo como está.
+Le permite controlar el tipo de etiquetado disponible para editar contenido.
+
+.. figure:: ./markup_controlpanel.png
+   :align: center
+   :alt: Configuración de etiquetado
+
+   Configuración de etiquetado para este sitio.
+
+.. warning:: Usted puede dejarlo todo como está.
 
 Filtrado HTML
 .............
 
-Puede dejarlo todo como está.
+Plone filtra las etiquetas de HTML que son consideradas como un riesgo 
+de seguridad. Sea consciente de las implicaciones antes de realizar 
+cambios a continuación. 
+
+.. figure:: ./filter_controlpanel.png
+   :align: center
+   :alt: Configuración del Filtro HTML
+
+   Configuración del Filtro HTML para este sitio.
+
+Por defecto, sólo están permitidas las etiquetas definidas en XHTML. 
+En particular, para permitir 'embed' como etiqueta debe de eliminarla 
+de 'Etiquetas no deseadas' y agregarla como 'Etiquetas personalizadas'. 
+
+Aunque el formulario se actualizará de forma inmediata para reflejar 
+los cambios realizados, sus cambios no se guardarán hasta que presione 
+el botón 'Guardar'.
+
+.. warning:: Usted puede dejarlo todo como está.
 
 Idioma
 ......
 
-Puede dejarlo todo como está, salvo que quiera cambiar el idioma de su
-sitio.
+La configuración relacionada con el idioma utilizado para el interfaz 
+de usuario y las traducciones de contenido.
+
+.. figure:: ./language_controlpanel.png
+   :align: center
+   :alt: Configuración de Idioma
+
+   Configuración de Idioma para este sitio.
+
+.. warning:: 
+    Usted Puede dejarlo todo como está, salvo que quiera cambiar el 
+    idioma de su sitio Web.
 
 Interfaz de Administración de Zope
 ..................................
 
-Ésta es la famosa ZMI (*Zope Management Interface*).
+Ésta es la famosa :ref:`Interfaz de Administración de Zope - ZMI <zmi>`.
 
-**¡¡¡PELIGRO!!!** **Si usted no es un administrador experto de Plone, no
-toque nada dentro de la ZMI**. Si hace algo mal, puede estropear parcial
-o totalmente su sitio Plone y la reparación de este tipo de averías no
-está incluida en el mantenimiento técnico contratado con su Oferta Plone
-(tendría que pagarla aparte).
+.. figure:: ./zmi.png
+   :align: center
+   :alt: Interfaz de Administración de Zope para este sitio
 
-Más adelante le indicaremos cómo cambiar algunas cosas de su sitio Plone
-a través de la ZMI (guiándole paso a paso, para que no haya peligro de
-que rompa nada). Aparte de estos cambios, le recomendamos que no toque
-nada más dentro de la ZMI de su sitio Plone.
+   Interfaz de Administración de Zope para este sitio.
+
+.. warning:: 
+    **¡¡¡PELIGRO!!!** **Si usted no es un administrador experto de Plone, no
+    toque nada dentro de la ZMI**. Si hace algo mal, puede estropear parcial
+    o totalmente su sitio Plone y la reparación de este tipo de averías requiere 
+    experiencia.
+
+.. tip:: 
+    Debe tener cuidado al trabajar desde la ZMI, para que no haya peligro de
+    que rompa nada, se recomienda que no toque nada dentro de la ZMI de su sitio 
+    Plone sino sabe lo que esta haciendo.
 
 Manejo de Imágenes
 ..................
 
-Puede dejarlo todo como está.
+Las opciones para configurar el manejo de imágenes en Plone.
+
+.. figure:: ./imaging_controlpanel.png
+   :align: center
+   :alt: Configuración de manejo de imágenes
+
+   Configuración de manejo de imágenes para este sitio.
+
+.. warning:: Usted puede dejarlo todo como está.
 
 Mantenimiento
 .............
 
-Aquí no podrá hacer nada (al carecer de permisos de administración del
-servidor Zope).
+.. warning::
+    Aquí no podrá hacer nada (al carecer de permisos de administración 
+    del servidor Zope).
 
 Navegación
 ..........
+
+Le permite controlar cómo se construye la navegación en su sitio. Tenga 
+en cuenta que para controlar cómo se muestra el árbol de navegación debe 
+ir a 'Administrar portlets', en la raíz del sitio (o allí donde un portlet 
+de árbol de navegación haya sido agregado), y cambiar esta opción directamente.
+
+.. figure:: ./navigation_controlpanel.png
+   :align: center
+   :alt: Configuración de la navegación
+
+   Configuración de la navegación para este sitio.
 
 En principio, podemos dejar la configuración por defecto, salvo que
 usted haya activado los comentarios y quiera que éstos aparezcan en los
 menús de navegación y en el mapa del sitio.
 
-En este caso, marque la casilla *Comentarios* y pulse el botón
+En este caso, marque la casilla *Comentarios* y haga clic en el botón
 *Guardar*.
 
-Nota: normalmente es más recomendable que los comentarios NO aparezcan
-en los citados elementos.
+.. note:: 
+    Normalmente es más recomendable que los comentarios NO aparezcan
+    en los citados elementos.
 
 Registro de Configuración
 .........................
 
-Puede dejarlo todo como está.
+La siguiente tabla muestra los registros actualmente gestionados por el 
+registro de configuración. Haga clic en un registro para editarlo.
+
+.. figure:: ./portal_registry.png
+   :align: center
+   :alt: Registro de configuración
+
+   Registro de configuración para este sitio.
+
+.. warning:: Usted puede dejarlo todo como está.
 
 Reglas de Contenido
 ...................
 
-Más adelante le enseñaremos a crear reglas de contenido para la
-realización automática de acciones. Hasta entonces, no hace falta que
-toque nada aquí.
+Utilice el siguiente formulario para definir, cambiar o quitar reglas de 
+contenido. Las reglas realizarán acciones en el contenido de forma automática 
+al dispararse ciertos eventos.
+
+.. figure:: ./rules_controlpanel.png
+   :align: center
+   :alt: Reglas de contenido
+
+   Reglas de contenido para este sitio.
+
+Tras definir las reglas, es posible que desee ir a una carpeta para asignarlas, 
+utilizando el elemento "reglas" en el menú de acciones.
+
+Para más información sobre *Agregar regla de contenido* para la realización 
+automática de acciones de contenidos, puede consultar la referencia 
+`Using Content Rules <http://docs.plone.org/working-with-content/managing-content/contentrules.html>`_ 
+del manual de usuario de Plone.
+
+.. warning:: Hasta entonces, no hace falta que toque nada aquí.
 
 Seguridad
 .........
+
+La configuración de seguridad para este sitio.
+
+.. figure:: ./security_controlpanel.png
+   :align: center
+   :alt: Configuración de seguridad
+
+   Configuración de seguridad para este sitio.
 
 -  **Habilitar autoregistro**: marque esta casilla sólo si quiere que
    cualquier persona pueda crearse una cuenta en su sitio. Si lo hace,
@@ -626,14 +805,14 @@ Seguridad
    hará tras entrar en la URL enlazada en el correo que se envía
    automáticamente a la citada dirección. De esta forma (manteniendo
    esta casilla DESmarcada), evitamos suplantaciones de identidad y se
-   lo ponemos un poco más difícil a los spammers web y demás piratas de
+   lo ponemos un poco más difícil a los spammers Web y demás piratas de
    Internet.
 
 -  **Habilitar Carpetas de Usuario**: si marca esta casilla, cada
    usuario podrá crear todo tipo de contenido en su propia carpeta, lo
-   cual multiplicará el consumo de espacio y tráfico de su sitio web (y
+   cual multiplicará el consumo de espacio y tráfico de su sitio Web (y
    esto, probablemente, le obligará, más pronto o más tarde, a tener que
-   contratar un plan de alojamiento web mayor).
+   contratar un plan de alojamiento Web mayor).
 
 -  **Permite que cualquiera vea la información 'acerca de'**: a su
    gusto.
@@ -641,84 +820,159 @@ Seguridad
 -  **Usar dirección de correo como nombre de inicio de sesión**: a su
    gusto.
 
+Sindicación
+...........
+
+Las opciones de sindicación por defecto del sitio Web Plone.
+
+.. figure:: ./syndication_settings.png
+   :align: center
+   :alt: Configuración de Sindicación
+
+   Configuración de Sindicación para este sitio.
+
 Sitio
 .....
 
--  **Título del sitio (Obligatorio)**: le recomendamos que incluya,
-   además, las palabras clave por las que más le interese que su sitio
-   Plone sea localizado.
+La configuración global del sitio, por favor ingrese la siguiente información:
 
--  **Descripción del sitio**: mismo consejo.
+-  **Título del sitio**: Esto aparece en la barra de título de los navegadores 
+   así como en las sindicaciones de fuentes RSS.
 
--  **Exponer metadatos de Dublin Core**: en general, no es necesario
-   activarlo.
+   .. note::
+       Es obligatorio.
 
--  **Exponer sitemap.xml.gz**: márquelo, es muy importante desde el
-   punto de vista del posicionamiento web.
+-  **Descripción del sitio**: La descripción del sitio está disponible en los 
+   contenidos sindicados y en los motores de búsqueda. Manténgala breve.
 
--  **Soporte JavaScript para estadísticas web**: si usted desea usar un
-   sistema externo de estadísticas web basado en Javascript (como Google
-   Analytics y otros), pegue en este campo el código facilitado por
-   dicho sistema para su cuenta y dominio. Aprovechamos la ocasión para
-   recordarle que nuestros clientes tienen a su disposición, sin coste
-   añadido, dos de los mejores sistemas libres de estadísticas web del
-   lado del servidor: `AWStats <http://awstats.sourceforge.net/>`_ y
-   `Webalizer <http://www.webalizer.org/>`_.
+   .. note::
+       Se recomienda que incluya, además, las palabras clave por las que más le 
+       interese que su sitio Plone sea localizado.
 
+-  **Exponer metadatos de Dublin Core**: Expone las propiedades Dublin Core como 
+   metaetiquetas.
+
+   .. note::
+       En general, no es necesario activarlo.
+
+-  **Mostrar fecha de publicación en la información 'acerca de'**: Muestra la 
+   fecha de publicación del contenido en las páginas del sitio.
+
+-  **Exponer sitemap.xml.gz**: Expone su contenido como un archivo según los 
+   estándares de sitemaps.org. Puede enviarlo a motores de búsqueda que soporten 
+   este estándar como Google, Yahoo y Microsoft. Permite a estos motores de 
+   búsqueda examinar su sitio de forma más inteligente.
+
+   .. note::
+       Márquelo, es muy importante desde el punto de vista del posicionamiento Web.
+
+-  **Soporte JavaScript para estadísticas Web**: Para habilitar el soporte de 
+   estadísticas web de proveedores externos (por ejemplo, Google Analytics). 
+   Pegue los trozos de código suministrados. Serán incluidos en el HTML generado, 
+   tal y como se han introducido, al final de la página.
+
+   .. tip::
+       Si usted desea usar un sistema externo de estadísticas Web basado en Javascript 
+       (como Google Analytics y otros), pegue en este campo el código facilitado por 
+       dicho sistema para su cuenta y dominio.
+
+.. figure:: ./site_controlpanel.png
+   :align: center
+   :alt: Configuración global del sitio
+
+   Configuración global del sitio.
 
 Temas
 .....
 
+Las opciones que afectan la apariencia visual del sitio.
+
+.. figure:: ./skins_controlpanel.png
+   :align: center
+   :alt: Configuración de Temas
+
+   Configuración de Temas para este sitio.
+
 Si lo desea, puede marcar las casillas *Marcar enlaces externos* y *Los
 enlaces externos se abren en una nueva ventana*, o cambiar la
 configuración de visualización de los *iconos de tipo de contenido* (en
-caso de marcar o cambiar algo, pulse después el botón Guardar).
+caso de marcar o cambiar algo, haga clic en después el botón *Guardar*).
 
 El resto puede dejarlo de momento como está: más adelante dedicaremos un
-manual completo a la personalización estética de su sitio web Plone.
+manual completo a la personalización estética de su sitio Web Plone.
 
 Tipos
 .....
 
-De momento, puede dejarlo como está: más adelante dedicaremos un manual
-completo a los flujos de trabajo (*Workflow*) de su sitio web Plone.
+La configuración de flujo de trabajo, visibilidad y versionado para sus 
+tipos de contenido.
+
+.. figure:: ./types_controlpanel.png
+   :align: center
+   :alt: Configuración de Tipos
+
+   Configuración de Tipos para este sitio.
+
+.. warning:: De momento, Usted puede dejarlo como está.
+
+..
+  más adelante dedicaremos un manual completo a los flujos de trabajo (*Workflow*) 
+  de su sitio Web Plone.
 
 Usuarios y Grupos
 .................
 
-De momento, puede dejarlo como está: más adelante dedicaremos un manual
-completo a los usuarios, roles y grupos en Plone.
+Haga clic en el nombre de usuario para ver y cambiar los detalles de un 
+usuario específico. También puede agregar y quitar usuarios.
+
+Tenga en cuenta que los roles aquí establecidos se aplican directamente 
+a un usuario. El símbolo del logotipo de Plone, indica un rol heredado 
+por la pertenencia a un grupo.
+
+.. figure:: ./usergroup_userprefs_administrador.png
+   :align: center
+   :alt: Visión Global de Usuarios
+
+   Visión Global de Usuarios para este sitio.
+
+.. warning:: De momento, Usted puede dejarlo como está.
+
+..
+  más adelante dedicaremos un manual completo a los usuarios, roles y grupos en Plone.
+
+----
 
 Logotipo
 ~~~~~~~~
 
 A continuación vamos a ver cómo cambiar el logotipo que trae por defecto
-su sitio web Plone por uno de su elección (siga con cuidado estas
+su sitio Web Plone por uno de su elección (siga con cuidado estas
 instrucciones, pues requiere entrar en la ZMI y hacer cambios en la
 misma).
 
-#. Entre en la ZMI de su sitio Plone: *Configuración del Sitio* ->
-   *Interfaz de Administración de Zope*.
+#. Entre en la ZMI de su sitio Plone:
+   :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope`.
 
-#. Vaya a la imagen del logotipo por defecto de Plone: *portal\_skins*
-   -> *plone\_images* -> *logo.png*.
+#. Vaya a la imagen del logotipo por defecto de Plone: 
+   :menuselection:`portal\_skins --> plone\_images --> logo.png`.
 
 #. Cree una versión personalizada de dicha imagen en la carpeta
-   *custom*: pulse el botón *Customize* (si se fija, en el menú
+   :menuselection:`custom`: haga clic en el botón *Customize* (si se fija, en el menú
    despegable que hay a su izquierda, está seleccionada la carpeta
-   *custom* como carpeta de destino de la personalización).
+   :menuselection:`custom` como carpeta de destino de la personalización).
 
 #. Cambie el logotipo por defecto que trae Plone por su propio logotipo:
-   pulse el botón *Examinar...*, seleccione su logotipo y pulse el botón
+   haga clic en el botón *Examinar...*, seleccione su logotipo y haga clic en el botón
    *Upload* (subir, cargar).
 
-#. Abra la página principal de su sitio web Plone en otra pestaña o
+#. Abra la página principal de su sitio Web Plone en otra pestaña o
    ventana de su navegador y actualice la página para ver cómo su
    logotipo ha sustituido al que trae Plone por defecto (tanto en la
-   cabecera del sitio, como en el pie de página). En algunos
-   navegadores, será necesario recargar la página un par de veces o,
-   incluso, vaciar la memoria caché del navegador, para que se vea el
-   nuevo logotipo.
+   cabecera del sitio, como en el pie de página). 
+
+   En algunos navegadores, será necesario recargar la página un par de 
+   veces o, incluso, vaciar la memoria caché del navegador, para que se 
+   vea el nuevo logotipo.
 
 Si su logotipo queda demasiado grande o pequeño para su gusto, repita
 los pasos 4 y 5 cuantas veces sea necesario con distintas versiones de
@@ -728,37 +982,37 @@ Colofón
 ~~~~~~~
 
 A continuación vamos a ver cómo cambiar los textos del colofón que trae
-por defecto el pie de página de su sitio web Plone (siga con cuidado
+por defecto el pie de página de su sitio Web Plone (siga con cuidado
 estas instrucciones, pues requiere entrar en la ZMI y hacer cambios en
 la misma).
 
-#. Entre en la ZMI de su sitio Plone: *Configuración del Sitio* ->
-   *Interfaz de Administración de Zope*.
+#. Entre en la ZMI de su sitio Plone:
+   :menuselection:`Configuración del Sitio --> Interfaz de Administración de Zope`.
 
-#. Vaya al fichero de la vista del colofón de su sitio Plone:
-   *portal\_view\_customizations* -> *plone.colophon*.
+#. Vaya al fichero de la vista del colofón de su sitio Plone: 
+   :menuselection:`portal\_view\_customizations --> plone.colophon`.
 
-#. Cree una versión personalizada de dicho fichero: pulse el botón
+#. Cree una versión personalizada de dicho fichero: haga clic en el botón
    *Customize*.
 
-#. Personalice el siguiente código con sus propios textos y pulse el
-   botón *Save Changes* (guardar cambios): 
+#. Personalice el siguiente código con sus propios textos y para guardar cambios 
+   haga clic en el botón *Save Changes*: 
    
-   ::
+   .. code-block:: html
 
-     <br />
-      <ul>
-        <li>
-          <strong>Nombre o denominación social. NIF: A00000000</strong>
-          <br />
-          Domicilio social de la empresa o negocio<br />
-          <a href="/contact-info">Formulario de contacto</a> - Tlf.: 000 000 000<br /><br />
-          <a href="/" title="Nombre o denominación social">
-            <img src="/logo.png" title="Nombre o denominación social" 
-                 alt="Nombre o denominación social" />
-          </a>
-        </li>
-      </ul>
+       <br />
+       <ul>
+         <li>
+           <strong>Nombre o denominación social. NIF: A00000000</strong>
+           <br />
+           Domicilio social de la empresa o negocio<br />
+           <a href="/contact-info">Formulario de contacto</a> - Tlf.: 000 000 000<br /><br />
+           <a href="/" title="Nombre o denominación social">
+             <img src="/logo.png" title="Nombre o denominación social" 
+                  alt="Nombre o denominación social" />
+           </a>
+         </li>
+       </ul>
    
    Si usted NO tiene conocimientos HTML, cambie únicamente los textos
    resaltados con color azul. Si usted SÍ tiene conocimientos HTML, no
@@ -766,7 +1020,7 @@ la misma).
    conocimientos TAL, no hace falta que le digamos que puede cambiar
    cualquier cosa de este fichero...
 
-#. Abra la página principal de su sitio web Plone en otra pestaña o
+#. Abra la página principal de su sitio Web Plone en otra pestaña o
    ventana de su navegador y actualice la página para ver cómo el
    colofón del pie de página de su sitio Plone muestra ahora sus textos
    personalizados.
@@ -779,7 +1033,7 @@ versiones de texto o código, hasta que logre los resultados deseados.
 Con esto, terminamos de dar nuestros primeros pasos en Plone.
 
 A continuación, le recomendamos seguir el manual de `Personalización
-estética de su sitio web CMS Plone <http://acentoweb.com/es/ayuda/aplicaciones/plones/guias/resolveuid/f2d62cd877c16811d26a0cdda48e109c>`_.
+estética de su sitio Web CMS Plone <http://acentoweb.com/es/ayuda/aplicaciones/plones/guias/resolveuid/f2d62cd877c16811d26a0cdda48e109c>`_.
 
 Referencia
 ==========
