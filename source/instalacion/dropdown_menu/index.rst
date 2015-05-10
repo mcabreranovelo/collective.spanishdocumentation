@@ -8,7 +8,7 @@ DropDown Menu
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `DropDown Menu — Tutorial Plone 4`_, el cual busca explicar la instalación 
-del producto :ref:`DropDown Menu <dropdownmenu_quees>`.
+del producto `DropDown Menu`_.
 
 .. _dropdownmenu_quees:
 
@@ -59,14 +59,11 @@ Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 Luego de esto ya tiene disponible el producto para ser habilitado en cada sitio 
 Plone dentro de su :term:`Instancia de Zope` como se describe a continuación:
 
-Habilitarlo en Plone
+Activarlo en Plone
 ====================
 
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
-y marque la casilla llamada **Dropdown menu** y luego presione el botón **Habilitar**.
-
-En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Productos Adicionales` 
-y marque la casilla llamada **Dropdown menu** y luego presione el botón **Instalar**.
+y marque la casilla llamada **Dropdown menu** y luego presione el botón **Activar**.
 
 
 .. _dropdownmenu_usar:
@@ -111,7 +108,7 @@ la configuración del menú desplegable.
 
   Estructura de 3 niveles de contenidos en el menú.
 
-Para ello, por favor acceda a la :menuselection:`Configuración del sitio -->  Configuración de Complementos --> Configuración de menú desplegable`, como la siguiente pantalla:
+Para ello, por favor acceda a la :menuselection:`Configuración del sitio -->  Configuración de Complementos --> Configuración de menú desplegable`, como la siguiente pantalla, (Ver Figura 7.4):
 
 .. figure:: dropdown_imagen_4.png
   :align: center
@@ -139,6 +136,19 @@ Existen productos alternativos al explicado anteriormente y a continuación se l
 
 * `ftw.dropdownmenu`_.
 
+Descarga código fuente
+======================
+
+Usted puede obtener el código fuente usado en estas configuraciones buildout para
+este ejemplo, ejecutando el siguiente comando:
+
+.. code-block:: sh
+
+  $ git clone https://github.com/plone-ve/plonethemes.suite.git
+
+Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
+y siga las instrucciones descrita en ese archivo.
+
 Referencias
 ===========
 
@@ -149,8 +159,9 @@ Referencias
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 23 de Marzo de 2015
 
+.. _DropDown Menu: http://plone.org/products/webcouturier-dropdownmenu
 .. _Denys Mishunov: http://mishunov.me/
 .. _Quintagroup Plone Drop Down Menu: http://plone.org/products/plone-drop-down-menu
 .. _DropDown Menu — Tutorial Plone 4: http://www.ufrgs.br/tutorial-plone4/produtos-adicionais/dropdown-menu

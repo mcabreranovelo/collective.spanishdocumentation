@@ -8,10 +8,10 @@ Agregando complementos adicionales a Plone
 
 .. sidebar:: Sobre este artículo
 
-    :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardoc@plone.org
-    :Compatible con: Plone 4
-    :Fecha: 21 de Marzo de 2015
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): leonardoc@plone.org
+   :Compatible con: Plone 4.x
+   :Fecha: 23 de Marzo de 2015
 
 En esta articulo busca explicar la instalación de módulos y complementos 
 adicionales a Plone 3.x, Plone 4.x y versiones superiores, además de no 
