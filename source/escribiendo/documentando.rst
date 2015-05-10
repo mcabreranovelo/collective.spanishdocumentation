@@ -183,6 +183,9 @@ Ejemplos de uso de mensajes destacados
 .. attention::
     MENSAJE DE ATENCIÓN.
 
+.. versionadded:: 0.1
+   MENSAJE DE VERSION 0.1.
+
 Imágenes
 ========
 

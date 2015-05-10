@@ -5,7 +5,7 @@ if (document.location.protocol == 'http:') {
 }
 
 /**
- * Make sure we get redirected to developer.ploen.org
+ * Make sure we get redirected to developer.plone.org
  *
  */
 function preferPrimaryDomain() {
