@@ -268,7 +268,7 @@ Permite automáticamente:
 
 -  Mezcla los archivos cargados en los requests de usuario.
 
--  Determine cuales archivos son incluidos en cual pagina HTML.
+-  Determine cuales archivos son incluidos en cual página HTML.
 
 -  Soporte a comentario adicionales pata el navegador Internet Explorer.
 

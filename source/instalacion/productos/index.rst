@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _agregar_complementos_adicionales:
+
 ==========================================
 Agregando complementos adicionales a Plone
 ==========================================

@@ -1,17 +1,15 @@
 .. -*- coding: utf-8 -*-
 
-.. _instalando_plone:
+.. _diversas_plataformas_plone:
 
-====================
-Instalación de Plone
-====================
+==========================
+Diversas plataformas Plone
+==========================
 
-.. sidebar:: Sobre este artículo
-
-    :Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
-    :Correo(s): lsumoza@gmail.com, leonardoc@plone.org
-    :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+:Traductor(es): Leonardo J. Caballero G.
+:Correo(s): leonardoc@plone.org
+:Compatible con: Plone 3.x, Plone 4.x
+:Fecha: 21 de Marzo de 2015
 
 En esta es una traducción del articulo llamado `Installing Plone`_ donde se ofrece 
 la información básica para la instalación de Plone en Windows, OS X, Linux, BSD
@@ -20,8 +18,8 @@ plataforma.
 
 .. _1_guia_instalacion:
 
-Guía rápida de Instalación
-==========================
+1. Guía rápida de Instalación
+=============================
 
 Como instalar Plone, paso a paso. Versión corta
 
@@ -62,20 +60,20 @@ Obtener el instalador de Plone
 El instalador para Linux/BSD/Unix, denominado Unified Installer (Instalador
 Unificado), se puede descargar de `esta página`_ en el sitio web de Plone.
 
-#.  Haga clic en *Download Plone* (descargar Plone), y este le llevará a
+1.  Haga clic en *Download Plone* (descargar Plone), y este le llevará a
     la página que contiene los distintos instaladores de Plone.
 
-#.  Haga clic en el enlace Unified Installer para comenzar la descarga de
+2.  Haga clic en el enlace Unified Installer para comenzar la descarga de
     Plone.
 
-#.  Después que la descarga haya finalizado, abra la Terminal y cambie
+3.  Después que la descarga haya finalizado, abra la Terminal y cambie
     los directorios donde el archivo del instalador que usted descargó está
     localizado.
 
-#.  Descomprima el instalador escribiendo :command:`tar xzf InstallerName`, 
+4.  Descomprima el instalador escribiendo :command:`tar xzf InstallerName`, 
     donde ``InstallerName`` es el nombre del instalador de Plone que usted descargó.
 
-#.  En su Terminal de comandos introduzca el directorio de la carpeta que
+5.  En su Terminal de comandos introduzca el directorio de la carpeta que
     usted acaba de extraer.
 
 
@@ -95,6 +93,7 @@ escriba :command:`sudo ./install.sh method` o ejecute el script de instalación
 como root de alguna otra manera. Una lista completa de opciones de líneas de
 comando la puede encontrar `aquí`_.
 
+
 Últimos pasos
 .............
 
@@ -105,26 +104,25 @@ texto llamado :file:`adminPassword.txt` (el cual se puede encontrar en la carpet
 :file:`zinstance` o :file:`zeoserver` de la instalación de Plone, dependiendo de con 
 que opción usted allá ejecutado el instalador unificado "standalone" o "zeo").
 
-.. _para_iniciar_plone:
-
 Para iniciar Plone:
 
-#.  Haga un :command:`cd` al directorio de su instalación Plone.
+1.  Haga un :command:`cd` al directorio de su instalación Plone.
 
-#.  Entre en su carpeta :file:`zinstance` o :file:`zeoserver`.
+2.  Entre en su carpeta :file:`zinstance` o :file:`zeoserver`.
 
-#.  Ejecute :command:`./bin/plonectl start`. (El puerto que usa Plone se puede
+3.  Ejecute :command:`./bin/plonectl start`. (El puerto que usa Plone se puede
     ajustar en el archivo  :file:`buildout.cfg` para luego ejecutar :command:`./bin/buildout`).
 
-#.  Navegue a su instancia visitando `http://localhost:8080/ <http://localhost:8080/>`_
+4.  Navegue a su instancia visitando `http://localhost:8080/ <http://localhost:8080/>`_ 
     en su navegador web. Si usted estableció otro puerto, use ese en vez del
     *8080*.
 
-#.  Haga clic en "Crear un nuevo sitio Plone" e introduzca su información 
-    de inicio de sesión para comenzar a usar Plone. Introduzca la información 
-    requerida y luego envíe el formulario para finalizar la creación de su sitio.
-    Usted puede encontrar su sitio en http://localhost:8080/*NombreSitio*, donde 
-    **NombreSitio** es la identificación de su sitio Plone.
+5.  Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
+    introduzca su información de inicio de sesión para comenzar a usar Plone.
+    Introduzca la información requerida y luego envíe el formulario para
+    finalizar la creación de su sitio. Usted puede encontrar su sitio en
+    http://localhost:8080/*SiteName*, donde **SiteName** es la identificación
+    de su sitio Plone.
 
 Para detener el proceso Plone ejecute :command:`./bin/plonectl stop`. ¡Diviértase
 usando Plone!
@@ -150,34 +148,34 @@ Obtener Plone
 
 Puede descargar Plone para Windows de `esta página`_.
 
-#.  Haga clic en el botón **Download Plone** (Descargar Plone).
+1.  Haga clic en el botón **Download Plone** (Descargar Plone).
 
-#.  Haga clic en el enlace para el instalador de Windows y guárdelo en
+2.  Haga clic en el enlace para el instalador de Windows y guárdelo en
     una locación que sea fácil de recordar tal como su Escritorio.
 
-#.  Haga doble clic en el instalador para iniciar el proceso de
+3.  Haga doble clic en el instalador para iniciar el proceso de
     instalación.
 
 
 Asistente de instalación de Plone
 .................................
 
-#.  Introduzca el directorio donde le gustaría instalar Plone. La mayoría
+1.  Introduzca el directorio donde le gustaría instalar Plone. La mayoría
     de personas están de acuerdo con la ubicación predeterminada. (Haga clic
     en "Next" (Siguiente) al finalizar cada paso para continuar)
 
-#.  Introduzca el nombre de usuario y contraseña que desee para la cuenta
+2.  Introduzca el nombre de usuario y contraseña que desee para la cuenta
     del administrador.
 
-#.  Revise las opciones de configuración actual.
+3.  Revise las opciones de configuración actual.
 
-#.  Durante el proceso de instalación una barra mostrará que tan cerca
+4.  Durante el proceso de instalación una barra mostrará que tan cerca
     está la instalación de completarse.  Marque las casillas de confirmación
     para determinar si usted quiere agregar Plone como un servicio para que
     se inicie automáticamente con el inicio de Windows.
     
     .. note::
-        esto se puede cambiar en cualquier momento ejecutando :command:`bin\\instance.exe remove`
+        esto se puede cambiar en cualquier momento ejecutando :command:`bin\instance.exe remove`
         en su directorio de instalación o si desea ejecutar Plone después de que la
         instalación haya culminado.
 
@@ -214,18 +212,18 @@ Una vez que usted haya iniciado una instancia de Plone, la puede ver
 visitando http://localhost:8080/ en su navegador web. Si no se carga,
 asegúrese de que su Firewall no ha bloqueado el puerto TCP 8080.
 
-Haga clic en "Crear un nuevo sitio Plone" e introduzca su información de 
-inicio de sesión para comenzar a usar Plone.
+Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
+introduzca su información de inicio de sesión para comenzar a usar Plone.
 Ingrese la información solicitada y luego envíe el formulario para finalizar
 la creación de su sitio. Puede encontrar su sitio en
-http://localhost:8080/*NombreSitio*, donde **NombreSitio** es la identificación de su
+http://localhost:8080/*SiteName*, donde **SiteName** es la identificación de su
 sitio Plone. ¡Diviértase con Plone!
 
 
 .. _2_instalando_linux_unix_bsd:
 
-Instalando en Linux / Unix / BSD
-================================
+2. Instalando en Linux / Unix / BSD
+===================================
 
 El instalador Unificado en un kit de código fuente-distribución que incluye
 prácticamente todo lo necesario para construir Plone en Linux, OS X, BSD y la
@@ -233,8 +231,8 @@ mayoría de sistemas Unix.
 
 .. _21_que_instalador_unificado:
 
-¿Qué es el instalador Unificado?
---------------------------------
+2.1. ¿Qué es el instalador Unificado?
+-------------------------------------
 
 Breve introducción al instalador, el caso para utilizarlo, sus opciones y
 cambios recientes.
@@ -276,7 +274,7 @@ todos los paquetes juntos, y puede que le resulte útil leer el escrito de la
 interfaz de usuario :command:`install.sh` para ideas sobre la construcción de 
 componente particulares.
 
-    *Yo prefiero usar mi mecanismo de plataformas de puertos / paquetes.*
+    *Yo prefiero usar mi mecanismo de plataformas de puertos/paquetes.*
 
 La historia de paquetes de plataforma para Zope y Plone es una problemática.
 Paquetes de plataforma han sido de calidad desigual y han utilizado árboles
@@ -378,8 +376,8 @@ adicionales:
 
 .. _22_instalacion_root_normal:
 
-¿Instalación como root o usuario normal?
------------------------------------------
+2.2. ¿Instalación como root o usuario normal?
+---------------------------------------------
 
 Casos donde se recomienda o no la instalación como usuario root.
 
@@ -392,9 +390,9 @@ diferencias claves son:
 
 -   Instala por defecto en :file:`/usr/local/Plone`;
 
--   Crea un usuario ``plone`` y establece este usuario como propietario de
+-   Crea un usuario "plone" y establece este usuario como propietario de
     los archivos de datos (:file:`Data.fs`). Configura Zope para correr como el
-    usuario efectivo ``plone``.
+    usuario efectivo "plone".
 
 -   Los archivos de programa y configuración son propiedad del usuario
     root, y no deberían modificarse por los procesos de Zope.
@@ -434,8 +432,8 @@ preocuparse por los derechos o identidades de los usuarios.
 
 .. _ser-zeo-o-no-ser-zeo:
 
-¿Ser ZEO o no ser ZEO?
-----------------------
+2.3. ¿Ser ZEO o no ser ZEO?
+============================
 
 El instalador Unificado instalará Zope ya sea para ejecutarse en una
 configuración Cliente/Servidor o en una configuración autónoma. Aquí están
@@ -481,8 +479,8 @@ ventajas para el uso de producción y también desarrollo.
 
 .. _24_ejecutando_instalacion:
 
-Ejecutando el instalador Unificado
-----------------------------------
+2.4. Ejecutando el instalador Unificado
+---------------------------------------
 
 Preparar la ejecución y ejecutar el instalador Unificado.
 
@@ -605,8 +603,8 @@ si tal vez un cortafuegos (firewall) está emplazado y bloqueando la conexión.
 
 .. _25_creando_nuevas_instancias:
 
-Creando nuevas instancias
--------------------------
+2.5. Creando nuevas instancias
+------------------------------
 
 El instalador Unificado puede usarse para crear instancias adicionales de
 Zope/Plone.
@@ -701,8 +699,8 @@ Ahora ya está listo para correr la nueva instancia.
 
 .. _26_opciones_cli_instalador:
 
-Opciones de líneas de Comando
------------------------------
+2.6. Opciones de líneas de Comando
+----------------------------------
 
 Algunas opciones poco frecuentes del instalador Unificado, pero de igual
 manera siguen siendo útiles para usted.
@@ -710,9 +708,8 @@ manera siguen siendo útiles para usted.
 Puede agregar la siguientes opciones a su línea de comando :command:`install.sh` para un
 control más refinado de su instalación:
 
-..
-  .. versionadded:: 4.3.1
-     The *spam* parameter.
+.. versionadded:: 4.3.1
+   The *spam* parameter.
 
 
 ``--with-python=/full/path/to/python-2.7``
@@ -840,8 +837,8 @@ ajustar este comportamiento.
 
 .. _27_paquete_instalador_ubuntu_debian:
 
-Paquetes de instalación Ubuntu / Debian
----------------------------------------
+2.7. Paquetes de instalación Ubuntu / Debian
+--------------------------------------------
 
 ¿Cómo instalar los paquetes requeridos en los estilos de sistemas
 Debian/Ubuntu?
@@ -876,8 +873,8 @@ Y si usted quiere habilitar la anexión de documentos de Word y PDF:
 
 .. _28_notas_plataforma:
 
-Notas de Plataformas
---------------------
+2.8. Notas de Plataformas
+-------------------------
 
 Notas de contribución de usuarios que usan el instalador Unificado en
 plataformas particulares
@@ -1032,8 +1029,8 @@ En el script ``install.sh`` en la línea 81
 
 .. _3_instlando_windows:
 
-Instalando en Windows
-=====================
+3. Instalando en Windows
+========================
 
 ¿Cómo preparar y ejecutar Plone en Windows?; no para desarrollo considerable.
 
@@ -1054,21 +1051,21 @@ Lo Básico
 Descargue e instale Plone
 -------------------------
 
-#.  Descargue el instalador desde esta página en plone.org:
+1.  Descargue el instalador desde esta página en plone.org:
     `http://plone.org/download`_.
 
-#.  Guárdelo en un sitio que pueda recordar, tal como su Escritorio.
+2.  Guárdelo en un sitio que pueda recordar, tal como su Escritorio.
 
-#.  Después que la descarga haya finalizado, haga doble clic en archivo
+3.  Después que la descarga haya finalizado, haga doble clic en archivo
     del instalador para ejecutarlo.
 
-#.  Encamínese por el asistente de instalación. El instalador crea una
+4.  Encamínese por el asistente de instalación. El instalador crea una
     carpeta en :file:`C:\\Plone41` e instala allí el Plone.
 
-#.  Aguarde mientras el instalador extrae los archivos y crea su
+5.  Aguarde mientras el instalador extrae los archivos y crea su
     instancia de Plone.
 
-#.  El instalador más nuevo automáticamente instala servicios de Windows
+6.  El instalador más nuevo automáticamente instala servicios de Windows
     para Plone y empieza los servicios de tal manera no allá ninguna
     necesidad de iniciar el servicio de Plone manualmente. Si usted necesita
     iniciar o parar los nuevos servicios ellos son llamados "Plone 4.1" y
@@ -1084,17 +1081,17 @@ Accediendo a Plone
   Quizás tenga que indicarle a su Firewall (cortafuegos) que abra el
   puerto TCP 8080, antes de que pueda acceder a la interfaz web de Plone.
 
-#.  Abra un navegador web y vaya a http://localhost:8080/ y haga clic en
-    el botón "Crear un nuevo sitio Plone".
+1.  Abra un navegador web y vaya a http://localhost:8080/ y haga clic en
+    el botón "Create a new Plone site".
 
-#.  Lo próximo es iniciar sesión de usuario. El nombre de usuario por
+2.  Lo próximo es iniciar sesión de usuario. El nombre de usuario por
     defecto de Zope "admin" y la contraseña es también "admin" (sin las
     comillas dobles).
 
-#.  En la página "Crear un sitio Plone" desplace hacia abajo y clic el
-    botón "Crear un Sitio Plone".
+3.  En la página "Create a Plone site" desplace hacia abajo y clic el
+    botón "Create Plone Site".
 
-#.  Después de que el sitio está creado usted será redirigido al sitio en
+4.  Después de que el sitio está creado usted será redirigido al sitio en
     la dirección http://localhost:8080/Plone. Usted puede utilizar esta
     dirección URL la próxima ves que usted quiera visitar su sitio.
 
@@ -1353,14 +1350,15 @@ Quizás tenga que transmitirle a su Firewall (cortafuegos) que abra el puerto
 8080, antes de que pueda acceder a la interfaz web de Plone.
 
 Abra un navegador web y vaya a http://localhost:8080/. Haga clic en el botón
-que contiene el texto "Crear un nuevo sitio Plone" se le pedirá que introduzca 
-el nombre de usuario y contraseña: aquellos que escribió anteriormente.
+que contiene el texto "Create a new Plone site" (Crear un nuevo sitio Plone)
+Se le pedirá que introduzca el nombre de usuario y contraseña: aquellos que
+escribió anteriormente.
 
-Otórguele a su sitio una identificación como "Plone", y un título como "Mi
+Otórguele a su sitio una identificación como "Plone", y un titulo como "Mi
 sitio Plone". Además puede seleccionar el idioma del sitio y algunos
-productos adicionales para su instalación. Luego haga clic en el botón "Crear 
-un Sitio Plone" cerca del final de la página. Tomara unos segundos crear su sitio 
-Plone.
+productos adicionales para su instalación. Luego haga clic en el botón "Add
+Plone Site" (Agregar nuevo sitio Plone) cerca del final de la pagina. Tomara
+unos segundos crear su sitio Plone
 
 Después de que su sitio se haya creado puede acceder a el mediante esta URL:
 http://localhost:8080/Plone, donde "Plone" es la identificación de su
@@ -1370,9 +1368,7 @@ Referencias
 ===========
 
 - `Instalando Plone con el Instalador Unificado`_.
-
 - `Installing Plone`_.
-
 - `Sitio Web de Buildout`_.
 
 .. _esta página: http://plone.org/products
