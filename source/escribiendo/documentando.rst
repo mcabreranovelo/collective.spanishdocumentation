@@ -154,6 +154,35 @@ unitarias no deben mostrar ningún error, compruebe en primer lugar:
   .. tip:: para comprobar esto puede ejecutar el comando :command:`make linkcheck`, 
       el cual le ayudara a comprobar que todos los enlaces funcionen correctamente
 
+Mensajes destacados
+===================
+
+Ejemplos de uso de mensajes destacados
+
+.. note::
+    MENSAJE DE NOTA.
+
+.. tip::
+    MENSAJE DE TRUCO/TIP.
+
+.. warning::
+    MENSAJE DE ADVERTENCIA.
+
+.. important::
+    MENSAJE DE IMPORTANTE.
+
+.. error::
+    MENSAJE DE ERROR.
+
+.. caution::
+    MENSAJE DE PRECAUCIÓN.
+
+.. danger::
+    MENSAJE DE PELIGRO.
+
+.. attention::
+    MENSAJE DE ATENCIÓN.
+
 Imágenes
 ========
 
