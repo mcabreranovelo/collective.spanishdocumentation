@@ -377,13 +377,14 @@ superior derecha) y, en el menú desplegable que aparecerá, haga clic en *Salir
    :alt: Menú del usuario - Salir
 
    Menú del usuario - Salir.
- 
+
+----
 
 Configuración general del sitio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A continuación, configuraremos los elementos comunes de todos los sitios
-Plone (la sección *Complementos* la dejaremos para más adelante.
+A continuación, puede configurar los elementos comunes de todos los sitios
+Plone (la sección *Complementos* la dejaremos para más adelante).
 
 Haga clic en su nombre, marca o denominación (esquina superior derecha) y,
 en el menú desplegable que aparecerá, haga clic en *Configuración del Sitio*:
@@ -715,9 +716,28 @@ Las opciones para configurar el manejo de imágenes en Plone.
 Mantenimiento
 .............
 
+Las opciones de mantenimiento del sitio y del :ref:`servidor Zope <zope_index>`.
+
+.. note::
+    Solo los usuarios Zope puede tener acceso a este panel de configuración.
+
+.. figure:: ./maintenance_controlpanel_administrador.png
+   :align: center
+   :alt: Mantenimiento del sitio y de Zope como Administrador de Plone
+
+   Mantenimiento del sitio y de Zope como Administrador de Plone.
+
 .. warning::
     Aquí no podrá hacer nada (al carecer de permisos de administración 
     del servidor Zope).
+
+Si eres usuario Zope usted puede ver el panel del *Mantenimiento* de la siguiente forma:
+
+.. figure:: ./maintenance_controlpanel.png
+   :align: center
+   :alt: Mantenimiento de Zope / Plone
+
+   Mantenimiento de Zope / Plone.
 
 Navegación
 ..........
@@ -940,10 +960,19 @@ por la pertenencia a un grupo.
 ..
   más adelante dedicaremos un manual completo a los usuarios, roles y grupos en Plone.
 
+
 ----
 
+
+Personalizaciones visuales del sitio
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A continuación, puede realizar personalizaciones visuales a los elementos 
+comunes de todos los sitios Plone.
+
+
 Logotipo
-~~~~~~~~
+........
 
 A continuación vamos a ver cómo cambiar el logotipo que trae por defecto
 su sitio Web Plone por uno de su elección (siga con cuidado estas
@@ -979,7 +1008,7 @@ los pasos 4 y 5 cuantas veces sea necesario con distintas versiones de
 tamaño de su logotipo, hasta que logre los resultados deseados.
 
 Colofón
-~~~~~~~
+.......
 
 A continuación vamos a ver cómo cambiar los textos del colofón que trae
 por defecto el pie de página de su sitio Web Plone (siga con cuidado
@@ -1030,10 +1059,11 @@ versiones de texto o código, hasta que logre los resultados deseados.
 
 ----
 
-Con esto, terminamos de dar nuestros primeros pasos en Plone.
+Con esto, terminamos de dar nuestros primeros pasos de configuración en Plone.
 
-A continuación, le recomendamos seguir el manual de `Personalización
-estética de su sitio Web CMS Plone <http://acentoweb.com/es/ayuda/aplicaciones/plones/guias/resolveuid/f2d62cd877c16811d26a0cdda48e109c>`_.
+..
+  A continuación, le recomendamos seguir el manual de `Personalización
+  estética de su sitio Web CMS Plone <http://acentoweb.com/es/ayuda/aplicaciones/plones/guias/resolveuid/f2d62cd877c16811d26a0cdda48e109c>`_.
 
 Referencia
 ==========
