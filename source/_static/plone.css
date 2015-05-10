@@ -171,9 +171,16 @@ a:visited:hover {
 /* -- admonitions ----------------------------------------------------------- */
 
 div.admonition {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 7px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: no-repeat scroll 10px 8px #DDDDDD;
+    border-color: #CCCCCC;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 20px;
 }
 
 div.admonition dt {
@@ -192,4 +199,174 @@ p.admonition-title {
 div.body p.centered {
     text-align: center;
     margin-top: 25px;
+}
+
+div.note {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("note-icon.png") no-repeat scroll 10px 8px #D9FFFF;
+    border-color: #BCE8F1;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.note * {
+    color: #31709F;
+}
+
+div.seealso {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("seealso-icon.png") no-repeat scroll 10px 8px #DFF0D8;
+    border-color: #D6E9C6;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.seealso * {
+    color: #3C763D;
+}
+
+div.warning {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("warning-icon.png") no-repeat scroll 10px 8px #FCF8E3;
+    border-color: #FAEBCC;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.warning * {
+    color: #8A6D3B;
+}
+
+div.admonition-por-hacer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("todo-icon.png") no-repeat scroll 10px 8px #DFF0D8;
+    border-color: #D6E9C6;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.admonition-por-hacer * {
+    color: #3C763D;
+}
+
+div.tip {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("tip-icon.png") no-repeat scroll 10px 8px #FCF8E3;
+    border-color: #FAEBCC;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.tip * {
+    color: #3C763D;
+}
+
+div.important {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("important-icon.png") no-repeat scroll 10px 8px #ffb710;
+    border-color: #ff9410;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.important * {
+    color: #000000;
+}
+
+div.error {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("error-icon.png") no-repeat scroll 10px 8px #ff5927;
+    border-color: #ff1027;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.error * {
+    color: #FFFFFF;
+}
+
+div.caution {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("caution-icon.png") no-repeat scroll 10px 8px #FFE4E4;
+    border-color: #FF6666;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.caution * {
+    color: #3C763D;
+}
+
+div.danger {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("danger-icon.png") no-repeat scroll 10px 8px #e4e819;
+    border-color: #f8fc01;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.danger * {
+    color: #000000;
+}
+
+div.attention {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("attention-icon.png") no-repeat scroll 10px 8px #d4695d;
+    border-color: #c52413;
+    border-image: none;
+    border-style: solid none;
+    border-width: 2px;
+    padding: 10px 20px 10px 60px;
+}
+
+div.attention * {
+    color: #FFFFFF;
 }
