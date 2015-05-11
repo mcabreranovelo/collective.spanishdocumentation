@@ -6,6 +6,13 @@
 Blogs / Bitácoras
 =================
 
+.. sidebar:: Sobre este artículo
+
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): leonardoc@plone.org
+   :Compatible con: Plone 4 o versiones superiores
+   :Fecha: 10 de Mayo de 2015
+
 Existe varios productos para Bitácoras / Blogs entre ellos los mas destacados están:
 
 .. _blogstar_quees:
@@ -13,7 +20,7 @@ Existe varios productos para Bitácoras / Blogs entre ellos los mas destacados e
 Producto blog.star
 ==================
 
-El producto `blog.star`_, es una suite de Blog para Plone, (Ver Figura D.1).
+El producto `blog.star`_, es una suite de Blog para Plone.
 
 ¿Qué hace?
 ----------
@@ -74,7 +81,7 @@ Activarlo en Plone
 
 Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
 :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-superior derecha en el nombre del usuario, (Ver Figura D.2).
+superior derecha en el nombre del usuario, como se muestra a continuación:
 
 .. figure:: ../productos/productos_complementos_1.png
   :align: center
@@ -82,7 +89,7 @@ superior derecha en el nombre del usuario, (Ver Figura D.2).
 
   Acceder a la Configuración del sitio
 
-Después haga clic en panel de control **Complementos**, (Ver Figura D.3).
+Después haga clic en panel de control **Complementos**, como se muestra a continuación:
 
 .. figure:: ../productos/productos_complementos_2.png
   :align: center
@@ -122,7 +129,7 @@ Producto Quills
 ===============
 
 El producto `Quills`_ es muy parecido a las características funcionales que 
-ofrece Wordpress, (Ver Figura D.4).
+ofrece Wordpress.
 
 ¿Qué hace?
 ----------
@@ -183,9 +190,9 @@ Activarlo en Plone
 
 #. Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
    :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-   superior derecha en el nombre del usuario, (Ver Figura D.2).
+   superior derecha en el nombre del usuario.
 
-#. Después haga clic en panel de control **Complementos**, (Ver Figura D.3).
+#. Después haga clic en panel de control **Complementos**.
 
 #. Entonces marque la casilla llamada **Products.Quills** y luego presione el botón 
    **Activar**.
@@ -207,8 +214,7 @@ de entradas del blog y la organización del mismo.
 Producto Scrawl
 ===============
 
-`Scrawl`_, es una suite de Blogging con un enfoque extremadamente simple para Plone, 
-(Ver Figura D.5).
+`Scrawl`_, es una suite de Blogging con un enfoque extremadamente simple para Plone.
 
 ¿Qué hace?
 ----------
@@ -274,9 +280,9 @@ Activarlo en Plone
 
 #. Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
    :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-   superior derecha en el nombre del usuario, (Ver Figura D.2).
+   superior derecha en el nombre del usuario.
 
-#. Después haga clic en panel de control **Complementos**, (Ver Figura D.3).
+#. Después haga clic en panel de control **Complementos**.
 
 #. Entonces marque la casilla llamada **Scrawl** y luego presione el botón
    **Activar**.
@@ -301,15 +307,8 @@ ejemplo, ejecutando el siguiente comando:
 
   $ git clone https://github.com/plone-ve/plonedemos.suite.git
 
-Luego de descargar este codigo fuente, es recomendable leer el archivo :file:`README.rst` 
+Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
 y siga las instrucciones descrita en ese archivo.
-
-.. sidebar:: Sobre este artículo
-
-   :Autor(es): Leonardo J. Caballero G.
-   :Correo(s): leonardoc@plone.org
-   :Compatible con: Plone 4 o versiones superiores
-   :Fecha: 21 de Marzo de 2015
 
 .. _blog.star: https://pypi.python.org/pypi/collective.blog.star
 .. _collective.flowplayer: https://pypi.python.org/pypi/collective.flowplayer

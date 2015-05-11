@@ -6,6 +6,12 @@
 Content Well Portlets
 =====================
 
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 4.x
+    :Fecha: 10 de Mayo de 2015
 
 En esta articulo es una traducción actualizada del articulo en 
 Portugués `ContentWellPortlets — Tutorial Plone 4`_, el cual 
@@ -363,13 +369,6 @@ Referencias
 ===========
 
 - `ContentWellPortlets — Tutorial Plone 4`_.
-
-.. sidebar:: Sobre este artículo
-
-    :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardoc@plone.org
-    :Compatible con: Plone 4.x
-    :Fecha: 23 de Marzo de 2015
 
 .. _ContentWellPortlets — Tutorial Plone 4: http://www.ufrgs.br/tutorial-plone4/produtos-adicionais/contentwellportlets
 .. _WebLion Group: http://plone.org/author/weblion

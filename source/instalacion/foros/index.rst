@@ -6,27 +6,34 @@
 Foros de discusión
 ==================
 
-En este articulo busca explicar la instalación del producto ``Ploneboard``, ademas 
-del Panel Discusión y del producto ``disqus`` para establecer foros de discusión 
-en Plone.
+.. sidebar:: Sobre este artículo
+
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): leonardoc@plone.org
+   :Compatible con: Plone 4 o versiones superiores
+   :Fecha: 10 de Mayo de 2015
+
+En este articulo busca explicar la instalación del producto ``Ploneboard``, 
+ademas del Panel Discusión y del producto ``disqus`` para establecer foros 
+de discusión en Plone.
 
 .. _ploneboard_quees:
 
 Producto Ploneboard
 ===================
 
-Existe el producto `Ploneboard`_, es uno de los más usados en la mayoría de sitios Plone, 
-dispone tipos de contenidos para gestión dentro de Plone los foros de discusión, ademas que 
-ofrece la funcionalidad típica de los foros tradicionales en Internet (Ver Figura B.1). 
-Ademas ofrece una serie de complementos que extiende la `funcionalidad por defecto`_,  de 
-Ploneboard como notificaciones vía correo electrónico, flujo de trabajo para los comentarios, 
-etc.
+Existe el producto `Ploneboard`_, es uno de los más usados en la mayoría de 
+sitios Plone, dispone tipos de contenidos para gestión dentro de Plone los 
+foros de discusión, ademas que ofrece la funcionalidad típica de los foros 
+tradicionales en Internet. Ademas ofrece una serie de complementos que extiende 
+la `funcionalidad por defecto`_, de Ploneboard como notificaciones vía correo 
+electrónico, flujo de trabajo para los comentarios, etc.
 
 ¿Qué hace?
 ----------
 
-Este :term:`Producto Plone` ofrece la funcionalidad típica de los foros tradicionales en 
-Internet en su sitio Plone.
+Este :term:`Producto Plone` ofrece la funcionalidad típica de los foros 
+tradicionales en Internet en su sitio Plone.
 
 .. figure:: ploneboard.png
   :align: center
@@ -81,7 +88,7 @@ Activarlo en Plone
 
 Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
 :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-superior derecha en el nombre del usuario, (Ver Figura B.2).
+superior derecha en el nombre del usuario, como se muestra a continuación:.
 
 .. figure:: ../productos/productos_complementos_1.png
   :align: center
@@ -89,7 +96,7 @@ superior derecha en el nombre del usuario, (Ver Figura B.2).
 
   Acceder a la Configuración del sitio
 
-Después haga clic en panel de control **Complementos**, (Ver Figura B.3).
+Después haga clic en panel de control **Complementos**, como se muestra a continuación:.
 
 .. figure:: ../productos/productos_complementos_2.png
   :align: center
@@ -117,9 +124,13 @@ como contener los diversos fotos catergorizados y las conversaciones del mismo.
 Panel Discusión
 ===============
 
-Plone por defecto ofrece soporte a comentarios y discusiones que son habilitados al pie de pagina de cada tipo de contenido que tiene habilitado el comportamiento *Permitir comentarios*.
+Plone por defecto ofrece soporte a comentarios y discusiones que son habilitados 
+al pie de pagina de cada tipo de contenido que tiene habilitado el comportamiento 
+*Permitir comentarios*.
 
-Este panel esta en :menuselection:`Configuración del sitio --> Discusión`, allí puede marcar la casilla *Activar comentarios de forma global* y de esta forma activar dicho comportamiento.
+Este panel esta en :menuselection:`Configuración del sitio --> Discusión`, allí 
+puede marcar la casilla *Activar comentarios de forma global* y de esta forma 
+activar dicho comportamiento.
 
 Ademas de ofrecer toda una serie de configuraciones como:
 
@@ -138,7 +149,7 @@ Producto DISQUS
 
 Si usted necesita realmente un foro avanzado puede usar el servicio 
 `DISQUS.com <http://www.disqus.com>`_ que se integra con el sitio de 
-Plone a través del producto `collective.disqus`_ (Ver Figura B.4).
+Plone a través del producto `collective.disqus`_.
 
 Este se integra con el sistema de comentarios y discusión que ofrece 
 Plone por defecto. 
@@ -202,9 +213,9 @@ Activarlo en Plone
 
 #. Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
    :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-   superior derecha en el nombre del usuario, (Ver Figura B.2).
+   superior derecha en el nombre del usuario.
 
-#. Después haga clic en panel de control **Complementos**, (Ver Figura B.3).
+#. Después haga clic en panel de control **Complementos**.
 
 #. Entonces marque la casilla llamada **collective.disqus** y luego presione el botón
    **Activar**.
@@ -241,15 +252,8 @@ ejemplo, ejecutando el siguiente comando:
 
   $ git clone https://github.com/plone-ve/plonedemos.suite.git
 
-Luego de descargar este codigo fuente, es recomendable leer el archivo :file:`README.rst` 
+Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
 y siga las instrucciones descrita en ese archivo.
-
-.. sidebar:: Sobre este artículo
-
-   :Autor(es): Leonardo J. Caballero G.
-   :Correo(s): leonardoc@plone.org
-   :Compatible con: Plone 4 o versiones superiores
-   :Fecha: 21 de Marzo de 2015
 
 .. _Ploneboard: http://plone.org/products/ploneboard
 .. _funcionalidad por defecto: http://pypi.python.org/pypi?:action=search&term=Ploneboard&submit=search

@@ -6,6 +6,13 @@
 DropDown Menu
 =============
 
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 10 de Mayo de 2015
+
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `DropDown Menu — Tutorial Plone 4`_, el cual busca explicar la instalación 
 del producto `DropDown Menu`_.
@@ -110,7 +117,7 @@ la configuración del menú desplegable.
 
 Para ello, por favor acceda a la 
 :menuselection:`Configuración del sitio -->  Configuración de Complementos --> Configuración de menú desplegable`, 
-como la siguiente pantalla, (Ver Figura 7.4):
+como la siguiente pantalla, como se muestra a continuación:
 
 .. figure:: dropdown_imagen_4.png
   :align: center
@@ -155,13 +162,6 @@ Referencias
 ===========
 
 * `DropDown Menu — Tutorial Plone 4`_.
-
-.. sidebar:: Sobre este artículo
-
-    :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardoc@plone.org
-    :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 10 de Mayo de 2015
 
 .. _DropDown Menu: http://plone.org/products/webcouturier-dropdownmenu
 .. _Denys Mishunov: http://mishunov.me/

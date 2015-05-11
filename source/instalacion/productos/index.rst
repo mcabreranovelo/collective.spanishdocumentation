@@ -11,7 +11,7 @@ Agregando complementos adicionales a Plone
    :Autor(es): Leonardo J. Caballero G.
    :Correo(s): leonardoc@plone.org
    :Compatible con: Plone 4.x
-   :Fecha: 23 de Marzo de 2015
+   :Fecha: 10 de Mayo de 2015
 
 En esta articulo busca explicar la instalación de módulos y complementos 
 adicionales a Plone 3.x, Plone 4.x y versiones superiores, además de no 
@@ -389,187 +389,32 @@ producto que usted quiere usar que no este empaquetado como :term:`Egg`, usted
 necesita buscar el enlace de descargas en la página de productos en plone.org
 y coloque la dirección URL.
 
+Algunos productos adicionales útiles
+------------------------------------
+
+Una serie de productos útiles que sirven de ejemplo para poner en practica
+las configuraciones en su archivo :file:`buildout.cfg`
+
+.. seealso:: 
+
+  - :ref:`Instalación de blogs / bitácoras en Plone <blogs>`.
+
+  - :ref:`Instalación de foros de discusión en Plone <forosdiscusion>`.
+
+  - :ref:`Instalación de sistema de calificaciones en Plone <calificaciones>`.
+
+  - :ref:`Instalación de editores de texto enriquecido en Plone <editores>`.
+
+  - :ref:`Instalación de menú desplegable en Plone <dropdown_menu>`.
+
+  - :ref:`Instalación de portlet encima e abajo de la sección de contenido <contentwellportlets>`.
+
+  - :ref:`Instalación de portlet en la parte inferior en Plone <quintagroup_portletmanager_footer>`.
+
 ..
-  Algunos productos adicionales útiles
-  ------------------------------------
+  - :ref:`Instalación de  en Plone <>`.
 
-  Una serie de productos útiles que sirven de ejemplo para poner en practica
-  las configuraciones en su archivo :file:`buildout.cfg`
-
-  .. note:: 
-
-    Los tres puntos suspensivos ``...`` son la indicar que tienes una serie
-    de configuraciones antes o después de la sección, así que **NO** se copian ;)
-
-
-  ----
-
-  Sistema de noticias
-  ~~~~~~~~~~~~~~~~~~~
-
-  Altamente recomendada para sistemas de boletín de noticias vía correo electrónico 
-  esta el producto `Singing and Dancing`_.
-
-  .. figure:: ./screenshot_003.png
-    :align: center
-    :alt: El producto Singing and Dancing, para Sistema de correo de noticias
-
-    **El producto Singing and Dancing, para Sistema de correo de noticias**
-
-  Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
-
-  .. code-block:: cfg
-
-    extends =
-        ...
-        https://svn.plone.org/svn/collective/collective.dancing/buildout-extends/0.9.0.cfg
-        ...
-    [instance]
-     ...
-     eggs =
-         ...
-         collective.dancing
-         ...
-     zcml =
-         ...
-          collective.dancing
-         ...
-
-  Etiquetas
-  ~~~~~~~~~
-
-  `quintagroup.portlet.cumulus`_, es un portlet de nubes de etiquetas que rotan usando una animación de Flash 3D.
-
-  .. figure:: ./screenshot_002.jpeg
-    :align: center
-    :alt: El producto quintagroup.portlet.cumulus, para Nube de etiquetas
-
-    **El producto quintagroup.portlet.cumulus, para Nube de etiquetas**
-
-  Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        quintagroup.portlet.cumulus
-        ...
-    zcml =
-        ...
-        quintagroup.portlet.cumulus
-        ...
-
-  Media
-  ~~~~~
-
-  `ATGoogleVideo`_, agrega un tipo de contenido que hace referencias a vídeos
-  almacenados en Google Video o YouTube dentro de un sitio Plone
-
-  .. figure:: ./screenshot.png
-    :align: center
-    :alt: El producto ATGoogleVideo, para visualizar vídeos en YouTube
-
-    **El producto ATGoogleVideo, para visualizar vídeos en YouTube**
-
-  Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        Products.ATGoogleVideo
-
-  `Gallery portlet`_, un portlet para presentar galerías fotográficas.
-
-  .. figure:: ./screenshot_002.png
-    :align: center
-    :alt: El producto Gallery portlet, para visualizar un portlet de Galería de imágenes
-
-    **El producto Gallery portlet, para visualizar un portlet de Galería de imágenes**
-
-  Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        se.portlet.gallery
-    zcml =
-        ...
-        se.portlet.gallery
-
-  `plone.app.imaging`_, le habilita declarativamente definir adicionales tamaños
-  de imágenes inicialmente generadas cuando usted agrega imágenes en su portal.
-
-
-  .. figure:: ./screenshot_006.png
-    :align: center
-    :alt: El producto plone.app.imaging
-
-    **El producto plone.app.imaging**
-
-  Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        plone.app.imaging
-        ...
-    zcml =
-        ...
-        plone.app.imaging
-        ...
-
-  Seguridad
-  ~~~~~~~~~
-
-  `Plone Captchas`_, agrega mecanismos de captcha para si sitio Plone.
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        quintagroup.plonecaptchas
-        ...
-    zcml =
-        ...
-        quintagroup.plonecaptchas
-        ...
-
-  Administración
-  ~~~~~~~~~~~~~~
-
-  `Anonymous view`_, es bastante útil porque le permite a usted mostrar ciertas
-  páginas que estarán disponibles a usuarios anónimos.
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        collective.anonymousview
-        ...
-    zcml =
-        ...
-        collective.anonymousview
-        ...
-
-  `collective.uploadify`_, si usted le gustaría subir varios archivos de una
-  ves usted tiene que instalarlo.
-
-  .. figure:: ./screenshot_003.jpeg
-    :align: center
-    :alt: El producto collective.uploadify
-
-    **El producto collective.uploadify**
-
-  Agregue la siguiente configuración del producto al archivo :file:`buildout.cfg`
-
-  .. code-block:: cfg
-
-    eggs =
-        ...
-        collective.uploadify
+  - :ref:`Instalación de  en Plone <>`.
 
 Descarga código fuente
 ======================
@@ -581,7 +426,7 @@ ejemplo, ejecutando el siguiente comando:
 
   $ git clone https://github.com/plone-ve/plonedemos.suite.git
 
-Luego de descargar este codigo fuente, es recomendable leer el archivo :file:`README.rst` 
+Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
 y siga las instrucciones descrita en ese archivo.
 
 

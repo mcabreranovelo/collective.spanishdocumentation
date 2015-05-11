@@ -6,6 +6,13 @@
 Calificaciones
 ==============
 
+.. sidebar:: Sobre este artículo
+
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): leonardoc@plone.org
+   :Compatible con: Plone 4 o versiones superiores
+   :Fecha: 10 de Mayo de 2015
+
 En este articulo busca explicar la habilitar el comportamiento 
 de *calificaciones* con estrellas o +1 a los contenidos como 
 integración con redes sociales como Facebook, Google Plus entre 
@@ -18,8 +25,7 @@ Producto plone.contentratings
 
 El producto `plone.contentratings`_, es un producto que permite 
 definir categorías de calificaciones, tipo de calificación y 
-aplicarla a los diversos tipos de contenidos de tu sitio Plone, 
-(Ver Figura E.1).
+aplicarla a los diversos tipos de contenidos de tu sitio Plone.
 
 ¿Qué hace?
 ----------
@@ -89,7 +95,7 @@ Activarlo en Plone
 
 Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
 :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-superior derecha en el nombre del usuario, (Ver Figura E.2).
+superior derecha en el nombre del usuario, como se muestra a continuación:
 
 .. figure:: ../productos/productos_complementos_1.png
   :align: center
@@ -97,7 +103,7 @@ superior derecha en el nombre del usuario, (Ver Figura E.2).
 
   Acceder a la Configuración del sitio
 
-Después haga clic en panel de control **Complementos**, (Ver Figura E.3).
+Después haga clic en panel de control **Complementos**, como se muestra a continuación:
 
 .. figure:: ../productos/productos_complementos_2.png
   :align: center
@@ -115,7 +121,7 @@ Usar plone.contentratings
 Valla al panel :menuselection:`Configuración del sitio --> Calificaciones`. Este panel 
 provee dos secciones de configuración. Una para asociar un tipo de contenido particular 
 con las categorías de calificaciones, y la otra sección para agregar y administrar 
-nuevas categorías de calificaciones, (Ver Figura E.4).
+nuevas categorías de calificaciones, como se muestra a continuación:
 
 .. figure:: contentratings_panel.png
   :align: center
@@ -224,13 +230,6 @@ este ejemplo, ejecutando el siguiente comando:
 
 Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
 y siga las instrucciones descrita en ese archivo.
-
-.. sidebar:: Sobre este artículo
-
-   :Autor(es): Leonardo J. Caballero G.
-   :Correo(s): leonardoc@plone.org
-   :Compatible con: Plone 4 o versiones superiores
-   :Fecha: 21 de Marzo de 2015
 
 .. _plone.contentratings: http://plone.org/products/plone-contentratings/
 .. _sitio : http://www.contentmanagementsoftware.info/plone/plone-contentratings

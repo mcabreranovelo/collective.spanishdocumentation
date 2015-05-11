@@ -6,6 +6,13 @@
 Editores de texto enriquecido
 =============================
 
+.. sidebar:: Sobre este artículo
+
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): leonardoc@plone.org
+   :Compatible con: Plone 4 o versiones superiores
+   :Fecha: 10 de Mayo de 2015
+
 En este articulo busca explicar la instalación de varios editores de texto 
 enriquecido como `Kupu`_ y `CKeditor`_, adicionalmente al editor por defecto 
 que ofrece Plone como es `TinyMCE`_.
@@ -15,8 +22,7 @@ que ofrece Plone como es `TinyMCE`_.
 Producto Kupu
 =============
 
-Este producto integra el editor de texto enriquecido Kupu en el sitio Plone 
-(Ver Figura C.1). 
+Este producto integra el editor de texto enriquecido Kupu en el sitio Plone.
 
 ¿Qué hace?
 ----------
@@ -82,7 +88,7 @@ Activarlo en Plone
 
 Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
 :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-superior derecha en el nombre del usuario, (Ver Figura C.2).
+superior derecha en el nombre del usuario, como se muestra a continuación:
 
 .. figure:: ../productos/productos_complementos_1.png
   :align: center
@@ -90,7 +96,7 @@ superior derecha en el nombre del usuario, (Ver Figura C.2).
 
   Acceder a la Configuración del sitio
 
-Después haga clic en panel de control **Complementos**, (Ver Figura C.3).
+Después haga clic en panel de control **Complementos**, como se muestra a continuación:
 
 .. figure:: ../productos/productos_complementos_2.png
   :align: center
@@ -110,25 +116,25 @@ Usar el editor Kupu
    en el botón **Guardar**.
 
 #. Luego edite cualquier tipo de contenido en Plone que disponga contenido enriquecido, 
-   por ej. con formato HTML y tendrá habilitado el editor, (Ver Figura C.3).
+   por ej. con formato HTML y tendrá habilitado el editor.
 
-.. note:: 
-    Opcionalmente puede acceder al panel del editor Kupu y cambiar sus configuraciones en 
-    :menuselection:`Configuración del sitio --> Kupu visual editor`, (Ver Figura C.4).
+    .. note:: 
+        Opcionalmente puede acceder al panel del editor Kupu y cambiar sus configuraciones en 
+        :menuselection:`Configuración del sitio --> Kupu visual editor`, como se muestra a 
+        continuación:
 
-.. figure:: kupu_config.png
-  :align: center
-  :alt: Panel del Editor Kupu
+    .. figure:: kupu_config.png
+      :align: center
+      :alt: Panel del Editor Kupu
 
-  Panel del Editor **Kupu**.
+      Panel del Editor **Kupu**.
 
 .. _ckeditor_quees:
 
 Producto CKeditor
 =================
 
-Este producto integra el editor de texto enriquecido CKeditor en el sitio Plone, 
-(Ver Figura C.5).
+Este producto integra el editor de texto enriquecido CKeditor en el sitio Plone.
 
 ¿Qué hace?
 ----------
@@ -189,9 +195,9 @@ Activarlo en Plone
 
 #. Para activar este producto en un sitio Web Plone 4 usted debe acceder a la sección 
    :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
-   superior derecha en el nombre del usuario, (Ver Figura C.2).
+   superior derecha en el nombre del usuario.
 
-#. Después haga clic en panel de control **Complementos**, (Ver Figura C.3).
+#. Después haga clic en panel de control **Complementos**.
 
 #. Entonces marque la casilla llamada **CKeditor for Plone** y luego presione el botón
    **Activar**.
@@ -210,18 +216,18 @@ Usar el editor CKeditor
    en el botón **Guardar**.
 
 #. Luego edite cualquier tipo de contenido en Plone que disponga contenido enriquecido, 
-   por ej. con formato HTML y tendrá habilitado el editor, (Ver Figura C.4).
+   por ej. con formato HTML y tendrá habilitado el editor.
 
-.. note:: 
-    Opcionalmente puede acceder al panel del editor CKEditor y cambiar sus configuraciones en 
-    :menuselection:`Configuración del sitio --> Configuración de Complementos --> CKEditor`,
-    (Ver Figura C.6).
+    .. note:: 
+        Opcionalmente puede acceder al panel del editor CKEditor y cambiar sus configuraciones en 
+        :menuselection:`Configuración del sitio --> Configuración de Complementos --> CKEditor`, 
+        como se muestra a continuación:
 
-.. figure:: ckeditor_panel.png
-  :align: center
-  :alt: Panel del Editor CKEditor
+    .. figure:: ckeditor_panel.png
+      :align: center
+      :alt: Panel del Editor CKEditor
 
-  Panel del Editor **CKEditor**.
+      Panel del Editor **CKEditor**.
 
 Productos adicionales
 ---------------------
@@ -231,8 +237,8 @@ y a continuación se listan:
 * `collective.ckeditortemplates`_, le permite agregar plantillas y fragmentos de texto 
   con el editor CKeditor.
 
-* `z3c.formwidget.ckeditor`_, le permite proveer un widget CKEditor para la libreria 
-  `z3c.form`. Este tambien dispone un campo esquema `RichText`, el cual usa el editor
+* `z3c.formwidget.ckeditor`_, le permite proveer un widget CKEditor para la librería 
+  `z3c.form`. Este también dispone un campo esquema `RichText`, el cual usa el editor
   CKEditor completamente transparente.
 
 .. _tinymceeditor_panel:
@@ -241,8 +247,7 @@ Panel Editor TinyMCE
 ====================
 
 Plone por defecto ofrece soporte al editor TinyMCE, para acceder a sus configuraciones 
-ir a al panel :menuselection:`Configuración del sitio --> Editor Visual TinyMCE`, 
-(Ver Figura C.7).
+ir a al panel :menuselection:`Configuración del sitio --> Editor Visual TinyMCE`, como se muestra a continuación:
 
 .. figure:: tinymceeditor_panel.png
   :align: center
@@ -273,15 +278,8 @@ ejemplo, ejecutando el siguiente comando:
 
   $ git clone https://github.com/plone-ve/plonedemos.suite.git
 
-Luego de descargar este codigo fuente, es recomendable leer el archivo :file:`README.rst` 
+Luego de descargar este código fuente, es recomendable leer el archivo :file:`README.rst` 
 y siga las instrucciones descrita en ese archivo.
-
-.. sidebar:: Sobre este artículo
-
-   :Autor(es): Leonardo J. Caballero G.
-   :Correo(s): leonardoc@plone.org
-   :Compatible con: Plone 4 o versiones superiores
-   :Fecha: 21 de Marzo de 2015
 
 .. _Kupu: http://kupu.oscom.org
 .. _Products.kupu: https://pypi.python.org/pypi/Products.kupu
@@ -293,4 +291,3 @@ y siga las instrucciones descrita en ese archivo.
 .. _collective.tinymceplugins.embedly: http://pypi.python.org/pypi/collective.tinymceplugins.embedly
 .. _collective.ckeditortemplates: http://pypi.python.org/pypi/collective.ckeditortemplates
 .. _z3c.formwidget.ckeditor: http://pypi.python.org/pypi/z3c.formwidget.ckeditor
-
