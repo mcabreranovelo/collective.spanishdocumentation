@@ -6,6 +6,13 @@
 Plone True Gallery
 ==================
 
+.. sidebar:: Sobre este artículo
+
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): leonardoc@plone.org
+   :Compatible con: Plone 3.x, Plone 4.x
+   :Fecha: 10 de Mayo de 2015
+
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `Plone True Gallery — Tutorial Plone 4`_, el cual busca explicar la instalación 
 del producto Plone True Gallery.
@@ -260,13 +267,6 @@ Referencias
 ===========
 
 - `Plone True Gallery — Tutorial Plone 4`_.
-
-.. sidebar:: Sobre este artículo
-
-   :Autor(es): Leonardo J. Caballero G.
-   :Correo(s): leonardoc@plone.org
-   :Compatible con: Plone 3.x, Plone 4.x
-   :Fecha: 21 de Marzo de 2015
 
 .. _Plone True Gallery — Tutorial Plone 4: http://www.ufrgs.br/tutorial-plone4/produtos-adicionais/plone-gallery-view
 .. _Derstappen IT Consulting: http://www.derstappen-it.de/

@@ -6,6 +6,13 @@
 Carousel
 ========
 
+.. sidebar:: Sobre este artículo
+
+    :Autor(es): Leonardo J. Caballero G.
+    :Correo(s): leonardoc@plone.org
+    :Compatible con: Plone 3.x, Plone 4.x
+    :Fecha: 10 de Mayo de 2015
+
 En este articulo busca explicar la habilitar el comportamiento de 
 *Carousel* con banner de imágenes y vínculos a recursos.
 
@@ -139,13 +146,6 @@ Referencias
 ===========
 
 * `Carousel — Tutorial Plone 4`_.
-
-.. sidebar:: Sobre este artículo
-
-    :Autor(es): Leonardo J. Caballero G.
-    :Correo(s): leonardoc@plone.org
-    :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 10 de Mayo de 2015
 
 .. _Carousel — Tutorial Plone 4: http://www.ufrgs.br/tutorial-plone4/produtos-adicionais/carousel
 .. _collective.carousel: http://pypi.python.org/pypi/collective.carousel
