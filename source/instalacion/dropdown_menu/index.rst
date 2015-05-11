@@ -2,16 +2,16 @@
 
 .. _dropdown_menu:
 
-=============
-DropDown Menu
-=============
+=================
+Menús desplegable
+=================
 
 .. sidebar:: Sobre este artículo
 
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 10 de Mayo de 2015
+    :Fecha: 11 de Mayo de 2015
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `DropDown Menu — Tutorial Plone 4`_, el cual busca explicar la instalación 
