@@ -2,8 +2,8 @@
 
 .. _primeros_pasos:
 
-Primeros pasos
-==============
+Primeros pasos en Zope / Plone
+==============================
 
 Luego de realizar la :ref:`instalación del Plone <instalando_plone>` es 
 recomendado realizar ciertos pasos adicionales para crear sitio Web y 
@@ -1003,9 +1003,7 @@ por la pertenencia a un grupo.
 ..
   más adelante dedicaremos un manual completo a los usuarios, roles y grupos en Plone.
 
-
 ----
-
 
 Personalizaciones visuales del sitio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1107,9 +1105,6 @@ versiones de texto o código, hasta que logre los resultados deseados.
 
 Con esto, terminamos de dar nuestros primeros pasos de configuración en Plone.
 
-..
-  A continuación, le recomendamos seguir el manual de `Personalización
-  estética de su sitio Web CMS Plone <http://acentoweb.com/es/ayuda/aplicaciones/plones/guias/resolveuid/f2d62cd877c16811d26a0cdda48e109c>`_.
 
 Referencia
 ==========
