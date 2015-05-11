@@ -11,7 +11,7 @@ Plone True Gallery
    :Autor(es): Leonardo J. Caballero G.
    :Correo(s): leonardoc@plone.org
    :Compatible con: Plone 3.x, Plone 4.x
-   :Fecha: 10 de Mayo de 2015
+   :Fecha: 11 de Mayo de 2015
 
 En esta articulo es una traducción actualizada del articulo en Portugués 
 `Plone True Gallery — Tutorial Plone 4`_, el cual busca explicar la instalación 
@@ -74,18 +74,20 @@ Entonces inicie la :term:`Instancia de Zope`, de la siguiente forma:
 Luego de esto ya tiene disponible el producto para ser habilitado en cada sitio 
 Plone dentro de su :term:`Instancia de Zope` como se describe a continuación:
 
-Habilitarlo en Plone
-====================
+Activarlo en Plone
+==================
 
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
-y marque la casilla llamada **Plone True Gallery** y luego presione el botón **Habilitar**.
+y marque la casilla llamada **Plone True Gallery** y luego presione el botón **Activar**.
 
-En Plone 3 (versiones anteriores) acceda a la :menuselection:`Configuración del sitio --> Productos Adicionales`
-y marque la casilla llamada **Plone True Gallery** y luego presione el botón **Instalar**.
+.. tip::
+    En Plone 3 (versiones anteriores) acceda a la 
+    :menuselection:`Configuración del sitio --> Productos Adicionales` y marque 
+    la casilla llamada **Plone True Gallery** y luego presione el botón **Instalar**.
 
 Valla a *Configuración del sitio*:
 
-.. figure:: plone_true_gallery_1.png
+.. figure:: ../productos/productos_complementos_1.png
   :align: center
   :alt: Acceder a la Configuración del sitio
 
@@ -93,37 +95,59 @@ Valla a *Configuración del sitio*:
 
 Después haga clic en panel de control **Complementos**
 
-.. figure:: plone_true_gallery_2.png
+.. figure:: ../productos/productos_complementos_2.png
   :align: center
   :alt: Acceder al panel de control Complementos
 
   Acceder al panel de control Complementos
 
-Marque la casilla llamada **Plone True Gallery** y luego presione el botón **Habilitar**.
+Marque la casilla llamada **Plone True Gallery** y luego presione el botón **Activar**.
 
 .. figure:: plone_true_gallery_3.png
   :align: center
-  :alt: Habilitar el producto Plone True Gallery
+  :alt: Activar el producto Plone True Gallery
 
-  Habilitar el producto Plone True Gallery
+  Activar el producto Plone True Gallery
 
 .. _plonegalleryview_usar:
 
 Usar el Plone Galery View
 =========================
 
-Al instalar el producto, el menú principal (horizontal) se transforma 
-en toda su estructura en menú desplegable 
+Al instalar el producto, este agrega un panel de configuración para las galerías 
+de fotos, vista personalizadas para carpetas que pueden ser configuradas desde 
+un panel de configuración local para cada carpeta de imágenes.
+
+Panel de Plone True Gallery
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Usted puede cambiar la configuración por defecto de todas las nuevas 
+galerías del sitio, desde el panel de configuración por defecto de 
+PloneTruegallery, como se muestra a continuación:
+
+.. figure:: plonetruegallery_controlpanel.png
+  :align: center
+  :alt: Configuración por defecto de PloneTruegallery
+
+  Configuración por defecto de PloneTruegallery.
+
 
 Agregando fotos para su Plone Galery View
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Antes de mais nada certifique-se que você está na pasta onde pretende
-criar a galeria. Neste exemplo a galeria será criada logo abaixo da
-Página Inicial.
+Antes que nada verifique que usted tiene creada la carpeta creada para 
+la galería. Este ejemplo de galería será creado abajo .
 
-Assim, dentro da Página Inicial cria-se uma pasta onde as fotos serão
-inseridas. Vá em Adicionar Item e escolha Pasta.
+Así, valla a la página inicial y cree una carpeta donde las fotografías 
+serán insertadas. Valla al menú :menuselection:`Agregar nuevo... --> Carpeta`.
+
+..
+  Antes de mais nada certifique-se que você está na pasta onde pretende
+  criar a galeria. Neste exemplo a galeria será criada logo abaixo da
+  Página Inicial.
+
+  Assim, dentro da Página Inicial cria-se uma pasta onde as fotos serão
+  inseridas. Vá em Adicionar Item e escolha Pasta.
 
 .. figure:: plone_true_gallery_4.png
   :align: center
@@ -131,7 +155,7 @@ inseridas. Vá em Adicionar Item e escolha Pasta.
 
   Agregar una carpeta que contendrá las fotografías de su galería
 
-Dê um nome e uma descrição à pasta (somente o nome é obrigatório).
+De un nombre una descripción a una carpeta (solamente el nombre es requerido).
 
 .. figure:: plone_true_gallery_22.png
   :align: center
@@ -139,11 +163,11 @@ Dê um nome e uma descrição à pasta (somente o nome é obrigatório).
 
   Agregar titulo y descripción de la carpeta de su galería.
 
-Clique em Salvar. A Pasta será criada!
+Haga clic en **Guardar**. ¡Una Carpeta será creada!
 
-Agora, estando dentro da pasta insira as imagens desejadas.
+Ahora, valla dentro de la carpeta e inserte las imágenes deseadas.
 
-Vá em Adicionar Item e escolha Imagem.
+Valla al menú :menuselection:`Agregar nuevo... --> Imagen`.
 
 .. figure:: plone_true_gallery_6.png
   :align: center
@@ -151,8 +175,8 @@ Vá em Adicionar Item e escolha Imagem.
 
   Agregar fotografía como tipo de contenido Imagen.
 
-Dê um nome e uma descrição para cada imagem inserida. Nesta mesma tela
-de upload do arquivo da foto.
+De un nombre una descripción para cada imagen insertada. Esta misma se 
+carga el archivo de la fotografía.
 
 .. figure:: plone_true_gallery_7.png
   :align: center
@@ -160,11 +184,16 @@ de upload do arquivo da foto.
 
   Agregar titulo y descripción de la imagen que describan su fotografía.
 
-Antes de salvar, não esqueça de clicar em Configurações e selecionar o
-item Excluir da Navegação.
+Antes de guardar, haga clic en valla al menú 
+:menuselection:`Agregar Imagen... --> Configuración --> Excluir de la navegación`.
 
-**Se você não efetuar essa ação, o título da sua foto se transformará em
-mais um item de menu.**
+.. note::
+    Si usted no hace esta acción, el titulo de su fotografía se transformara en un 
+    elemento mas de la navegación.
+
+    ..
+      **Se você não efetuar essa ação, o título da sua foto se transformará em mais 
+      um item de menu.**
 
 .. figure:: plone_true_gallery_8.png
   :align: center
@@ -172,8 +201,10 @@ mais um item de menu.**
 
   Excluir de la navegación la imagen cargada.
 
-Repita essa operação com quantas fotos forem desejadas. No final a
-visualização da sua pasta estará como a tela abaixo:
+Repita esta operación por cuantas fotografías sean deseadas. 
+..
+  Repita essa operação com quantas fotos forem desejadas. No final a
+  visualização da sua pasta estará como a tela abaixo:
 
 .. figure:: plone_true_gallery_9.png
   :align: center
@@ -184,10 +215,11 @@ visualização da sua pasta estará como a tela abaixo:
 Configurando su vista Plone Galery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Para configurar a sua Plone True Gallery, estando dentro da pasta clique
-em Exibição.
+Para configurar su Plone True Gallery, valla dentro de la carpeta y haga clic 
+en ``Mostrar``.
 
-Já estará disponível as 6 opções de visualização:
+De esta forma tendrá disponible como 6 opciones de visualización de 
+las fotografías:
 
 .. figure:: plone_true_gallery_10.png
   :align: center
@@ -195,8 +227,8 @@ Já estará disponível as 6 opções de visualização:
 
   Cambiar visualización por defecto a Vista de Galería.
 
-Para editar o modo de visualização das imagens em modo de Gallery View,
-clique em Gallery Settings.
+Para editar el modo de visualización de las imágenes en modo de la vista 
+**Vista de galería**, haga clic a la **Configuración de galería**.
 
 .. figure:: plone_true_gallery_11.png
   :align: center
@@ -204,8 +236,8 @@ clique em Gallery Settings.
 
   Cambiar las configuraciones de visualización de la Vista de Galería.
 
-Em Gallery Display Type, existem 4 opções de estilos: Fancy Box,
-Galleriffic, Highslide e Slideshow 
+En Gallery Display Type, existen 4 opciones de estilos: Fancy Box,
+Galleriffic, Highslide y Slideshow.
 
 .. figure:: plone_true_gallery_12.png
   :align: center
