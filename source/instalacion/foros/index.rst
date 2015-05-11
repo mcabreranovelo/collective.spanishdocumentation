@@ -2,16 +2,16 @@
 
 .. _forosdiscusion:
 
-==================
-Foros de discusión
-==================
+================================
+Comentarios y foros de discusión
+================================
 
 .. sidebar:: Sobre este artículo
 
    :Autor(es): Leonardo J. Caballero G.
    :Correo(s): leonardoc@plone.org
    :Compatible con: Plone 4 o versiones superiores
-   :Fecha: 10 de Mayo de 2015
+   :Fecha: 11 de Mayo de 2015
 
 En este articulo busca explicar la instalación del producto ``Ploneboard``, 
 ademas del Panel Discusión y del producto ``disqus`` para establecer foros 
@@ -132,6 +132,12 @@ Este panel esta en :menuselection:`Configuración del sitio --> Discusión`, all
 puede marcar la casilla *Activar comentarios de forma global* y de esta forma 
 activar dicho comportamiento.
 
+.. figure:: ./discussion_settings.png
+   :align: center
+   :alt: Ajustes de discusión
+
+   Ajustes de discusión para este sitio.
+
 Ademas de ofrecer toda una serie de configuraciones como:
 
 * Moderación de comentarios.
@@ -238,6 +244,8 @@ Para habilitar los comentarios DISQUS en su sitio es necesario:
    como comentario sistema para Plone". "Activate Disqus as system comment for Plone"
 
 #. Introduzca el nombre corto de su sitio web como el dispuesto por Disqus.
+
+.. todo:: Agregar captura del panel de Configuración de comentarios DISQUS
 
 Ahora, un cuadro de comentarios DISQUS se debe mostrar para cada tipo de contenido creado el 
 cual tenga los comentarios habilitados.
