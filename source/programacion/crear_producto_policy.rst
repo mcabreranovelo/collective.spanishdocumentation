@@ -11,7 +11,7 @@ Creación de un producto de configuración
     :Autor(es): Carlos de la Guardia, Leonardo J. Caballero G.
     :Correo(s): carlos.delaguardia@gmail.com, leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 21 de Marzo de 2015
+    :Fecha: 11 de Mayo de 2015
 
 En esta articulo busca explicar como crear paquetes de configuración general de
 un sitio representando las reglas generales de manejo de sitios para Plone 3,
@@ -165,42 +165,50 @@ Posibles errores
 
 **IOError: No egg-info directory found**
   Este error se debe a que el directorio :file:`egg-info` fue generado para esto
-  acceda al directorio :file:`cliente1.policy` y ejecute el siguiente comando: ::
+  acceda al directorio :file:`cliente1.policy` y ejecute el siguiente comando:
 
-    $ cd cliente1.policy
-    $ python setup.py egg_info
-    Traceback (most recent call last):
-      File "setup.py", line 10, in <module>
-        open(os.path.join("docs", "HISTORY.txt")).read(),
-    IOError: [Errno 2] No such file or directory: 'docs/HISTORY.txt'
+  .. code-block:: sh
+
+      $ cd cliente1.policy
+      $ python setup.py egg_info
+      Traceback (most recent call last):
+        File "setup.py", line 10, in <module>
+          open(os.path.join("docs", "HISTORY.txt")).read(),
+      IOError: [Errno 2] No such file or directory: 'docs/HISTORY.txt'
 
   La solución a este error es mover el :file:`CHANGES.txt` dentro del directorio
   :file:`docs/` con el nuevo nombre :file:`HISTORY.txt`, ejecutando el siguiente
-  comando: ::
+  comando:
 
-    $ mv CHANGES.txt docs/HISTORY.txt
+  .. code-block:: sh
+
+      $ mv CHANGES.txt docs/HISTORY.txt
 
   Luego genere la información del :file:`egg-info`, ejecutando el siguiente
-  comando: ::
+  comando:
 
-    $ python setup.py egg_info
-    running egg_info
-    creating src/cliente1.policy.egg-info
-    writing requirements to src/cliente1.policy.egg-info/requires.txt
-    writing src/cliente1.policy.egg-info/PKG-INFO
-    writing namespace_packages to src/cliente1.policy.egg-info/namespace_packages.txt
-    writing top-level names to src/cliente1.policy.egg-info/top_level.txt
-    writing dependency_links to src/cliente1.policy.egg-info/dependency_links.txt
-    writing entry points to src/cliente1.policy.egg-info/entry_points.txt
-    writing paster_plugins to src/cliente1.policy.egg-info/paster_plugins.txt
-    writing manifest file 'src/cliente1.policy.egg-info/SOURCES.txt'
-    reading manifest file 'src/cliente1.policy.egg-info/SOURCES.txt'
-    writing manifest file 'src/cliente1.policy.egg-info/SOURCES.txt'
+  .. code-block:: sh
+
+      $ python setup.py egg_info
+      running egg_info
+      creating src/cliente1.policy.egg-info
+      writing requirements to src/cliente1.policy.egg-info/requires.txt
+      writing src/cliente1.policy.egg-info/PKG-INFO
+      writing namespace_packages to src/cliente1.policy.egg-info/namespace_packages.txt
+      writing top-level names to src/cliente1.policy.egg-info/top_level.txt
+      writing dependency_links to src/cliente1.policy.egg-info/dependency_links.txt
+      writing entry points to src/cliente1.policy.egg-info/entry_points.txt
+      writing paster_plugins to src/cliente1.policy.egg-info/paster_plugins.txt
+      writing manifest file 'src/cliente1.policy.egg-info/SOURCES.txt'
+      reading manifest file 'src/cliente1.policy.egg-info/SOURCES.txt'
+      writing manifest file 'src/cliente1.policy.egg-info/SOURCES.txt'
 
 **Distribution contains no modules or packages for namespace package 'cliente1'**
   Este error se debe a que el archivo :file:`setup.py` no tiene bien definida
   desde donde comenzara la búsqueda de los directorio del paquete, entonces
-  corrijalo editando el archivo :file:`setup.py` y agregue las siguientes lineas: ::
+  corrijalo editando el archivo :file:`setup.py` y agregue las siguientes lineas:
+
+  .. code-block:: python
 
       packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'': 'src'},
@@ -218,41 +226,41 @@ con el espacio de nombres general (en este ejemplo sería :file:`cliente1`)
 y dentro de ese último el verdadero directorio del producto para Zope
 (en este :file:`cliente1`, :file:`policy`).
 
-::
+  .. code-block:: sh
 
-    ./cliente1.policy/
-    |-- cliente1
-    |   `-- policy
-    |       |-- configure.zcml
-    |       |-- __init__.py
-    |       |-- profiles
-    |       |   `-- default
-    |       |       `-- metadata.xml
-    |       `-- tests.py
-    |-- CONTRIBUTORS.txt
-    |-- docs
-    |   |-- HISTORY.txt
-    |   |-- INSTALL.txt
-    |   |-- LICENSE.GPL
-    |   `-- LICENSE.txt
-    |-- README.txt
-    |-- setup.cfg
-    |-- setup.py
-    `-- src
-        |-- cliente1
-        |   |-- __init__.py
-        |   `-- policy
-        |       `-- __init__.py
-        `-- cliente1.policy.egg-info
-            |-- dependency_links.txt
-            |-- entry_points.txt
-            |-- namespace_packages.txt
-            |-- not-zip-safe
-            |-- paster_plugins.txt
-            |-- PKG-INFO
-            |-- requires.txt
-            |-- SOURCES.txt
-            `-- top_level.txt
+      ./cliente1.policy/
+      |-- cliente1
+      |   `-- policy
+      |       |-- configure.zcml
+      |       |-- __init__.py
+      |       |-- profiles
+      |       |   `-- default
+      |       |       `-- metadata.xml
+      |       `-- tests.py
+      |-- CONTRIBUTORS.txt
+      |-- docs
+      |   |-- HISTORY.txt
+      |   |-- INSTALL.txt
+      |   |-- LICENSE.GPL
+      |   `-- LICENSE.txt
+      |-- README.txt
+      |-- setup.cfg
+      |-- setup.py
+      `-- src
+          |-- cliente1
+          |   |-- __init__.py
+          |   `-- policy
+          |       `-- __init__.py
+          `-- cliente1.policy.egg-info
+              |-- dependency_links.txt
+              |-- entry_points.txt
+              |-- namespace_packages.txt
+              |-- not-zip-safe
+              |-- paster_plugins.txt
+              |-- PKG-INFO
+              |-- requires.txt
+              |-- SOURCES.txt
+              `-- top_level.txt
 
 Dentro del directorio del producto se encuentran los dos archivos
 imprescindibles para crear un producto para Zope 2, junto con un
@@ -576,7 +584,7 @@ Para prevenir la ejecución de este código durante la instalación de otros
 productos, se agrega un archivo de texto, llamado :file:`cliente1.policy_various.txt`,
 dentro del directorio :file:`profiles/default` con el siguiente contenido:
 
-.. code-block:: txt
+::
 
     This file is used as a marker in setuphandlers.py.
 
