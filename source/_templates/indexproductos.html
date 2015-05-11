@@ -1,0 +1,85 @@
+{% extends "defindex.html" %}
+
+{% block tables %}
+
+  <p><strong>Complementos (Productos) en Zope / Plone</strong></p>
+  <table class="contentstable" align="center">
+    <tr>
+      <td width="50%">
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/productos/index") }}">Habilitando módulos</a><br/>
+          <span class="linkdescr">artículo sobre como habilitando módulos en Plone</span>
+        </p>
+      </td>
+<!--
+      <td width="50%">
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/productos/index") }}">Habilitando módulos</a><br/>
+          <span class="linkdescr">artículo sobre como habilitando módulos en Plone</span>
+        </p>
+      </td>
+-->
+    </tr>
+  </table>
+
+  <p><strong>Comportamientos adicionales</strong></p>
+  <table class="contentstable" align="center">
+    <tr>
+      <td width="50%">
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/blogs/index") }}">Blogs / bitácoras en Plone</a><br/>
+          <span class="linkdescr">Instalación de suite para blogs / bitácoras en Plone</span>
+        </p>
+
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/editores/index") }}">Editores de texto enriquecido en Plone</a><br/>
+          <span class="linkdescr">Instalación de editores de texto enriquecido como Kupu, CKeditor y TinyMCE en Plone</span>
+        </p>
+
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/foros/index") }}#producto-ploneboard">Foros de discusión en Plone</a><br/>
+          <span class="linkdescr">Instalación de foros de discusión tradicionales en Plone</span>
+        </p>
+
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/foros/index") }}#panel-discusion">Sistema de comentarios en Plone</a><br/>
+          <span class="linkdescr">Instalación de sistema de comentarios por defecto en Plone y con la integración del servicio DISQUS.com</span>
+        </p>
+
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/calificaciones/index") }}">Sistema de calificaciones en Plone</a><br/>
+          <span class="linkdescr">Instalación de sistema de calificaciones en Plone</span>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <p><strong>Diseños / Temas / Pieles</strong></p>
+  <table class="contentstable" align="center">
+    <tr>
+      <td width="50%">
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/dropdown_menu/index") }}">Menús desplegable en Plone</a><br/>
+          <span class="linkdescr">Instalación de menú desplegable en Plone</span>
+        </p>
+
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/plone_true_gallery/index") }}">Galerías de fotos en Plone</a><br/>
+          <span class="linkdescr">Instalación de galerías de fotos en Plone</span>
+        </p>
+
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/content_well_portlets/index") }}">Portlets en áreas del contenido en Plone</a><br/>
+          <span class="linkdescr">Instalación de portlets encima e abajo de la sección de contenido en Plone</span>
+        </p>
+<!--
+        <p class="biglink">
+          <a class="biglink" href="{{ pathto("instalacion/footer_portlet_manager/index") }}">Portlets en la parte inferior en Plone</a><br/>
+          <span class="linkdescr">Instalación de portlets en la parte inferior en Plone</span>
+        </p>
+-->
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}

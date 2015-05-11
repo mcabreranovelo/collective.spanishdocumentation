@@ -167,6 +167,7 @@ html_sidebars = {
 html_additional_pages = {
     'index': 'indexplone.html',
     'index_tutoriales': 'indextutoriales.html',
+    'index_productos': 'indexproductos.html',
     'download': 'download.html',
 }
 
