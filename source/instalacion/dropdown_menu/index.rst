@@ -60,7 +60,7 @@ Luego de esto ya tiene disponible el producto para ser habilitado en cada sitio
 Plone dentro de su :term:`Instancia de Zope` como se describe a continuación:
 
 Activarlo en Plone
-====================
+==================
 
 En Plone 4 acceda a la :menuselection:`Configuración del sitio --> Complementos` 
 y marque la casilla llamada **Dropdown menu** y luego presione el botón **Activar**.
@@ -108,7 +108,9 @@ la configuración del menú desplegable.
 
   Estructura de 3 niveles de contenidos en el menú.
 
-Para ello, por favor acceda a la :menuselection:`Configuración del sitio -->  Configuración de Complementos --> Configuración de menú desplegable`, como la siguiente pantalla, (Ver Figura 7.4):
+Para ello, por favor acceda a la 
+:menuselection:`Configuración del sitio -->  Configuración de Complementos --> Configuración de menú desplegable`, 
+como la siguiente pantalla, (Ver Figura 7.4):
 
 .. figure:: dropdown_imagen_4.png
   :align: center
@@ -159,7 +161,7 @@ Referencias
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 23 de Marzo de 2015
+    :Fecha: 10 de Mayo de 2015
 
 .. _DropDown Menu: http://plone.org/products/webcouturier-dropdownmenu
 .. _Denys Mishunov: http://mishunov.me/
