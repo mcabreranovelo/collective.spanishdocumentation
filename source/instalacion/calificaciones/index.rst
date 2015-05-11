@@ -91,7 +91,7 @@ Para activar este producto en un sitio Web Plone 4 usted debe acceder a la secci
 :menuselection:`Configuración del sitio --> Complementos`, ubicada en la esquina 
 superior derecha en el nombre del usuario, (Ver Figura E.2).
 
-.. figure:: ../_static/productos_complementos_1.png
+.. figure:: ../productos/productos_complementos_1.png
   :align: center
   :alt: Acceder a la Configuración del sitio
 
@@ -99,7 +99,7 @@ superior derecha en el nombre del usuario, (Ver Figura E.2).
 
 Después haga clic en panel de control **Complementos**, (Ver Figura E.3).
 
-.. figure:: ../_static/productos_complementos_2.png
+.. figure:: ../productos/productos_complementos_2.png
   :align: center
   :alt: Acceder al panel de control Complementos
 
