@@ -121,22 +121,55 @@ como contener los diversos fotos catergorizados y las conversaciones del mismo.
 
 .. _plonediscusion:
 
-Panel Discusión
-===============
+Comentarios y discusión
+=======================
 
-Plone por defecto ofrece soporte a comentarios y discusiones que son habilitados 
-al pie de pagina de cada tipo de contenido que tiene habilitado el comportamiento 
-*Permitir comentarios*.
+Plone por defecto, a traves del producto `plone.app.discussion`_, incorpora soporte a 
+comentarios y discusiones para tipos de contenido.
 
-Este panel esta en :menuselection:`Configuración del sitio --> Discusión`, allí 
+¿Qué hace?
+----------
+
+El :term:`Producto Plone` integra sistema de comentarios y discusiónpara Plone.
+
+.. figure:: ./discussion_settings_00.png
+   :align: center
+   :alt: Comentarios al final del tipo de contenido
+
+   Comentarios al final del tipo de contenido.
+
+.. _plonediscusion_info:
+
+.. sidebar:: Ficha técnica del producto
+
+   :Pagina del proyecto: http://pypi.python.org/pypi/plone.app.discussion
+   :Repositorio de código: https://github.com/plone/plone.app.discussion
+   :Programador del producto: Timo Stollenwerk - Plone Foundation.
+
+.. _plonediscusion_instalar:
+
+¿Cómo instalarlo?
+-----------------
+
+No requiere instalación, el producto `plone.app.discussion` esta incorporado 
+en Plone por defecto.
+
+.. _plonediscusion_usar:
+
+Usar sistema de discusión
+-------------------------
+
+Para usar el sistema de comentarios y discusión de Plone debe activarlo, desde 
+el panel de control **Discusión**, valla al panel en  
+:menuselection:`Configuración del sitio --> Discusión`, allí 
 puede marcar la casilla *Activar comentarios de forma global* y de esta forma 
 activar dicho comportamiento.
 
-.. figure:: ./discussion_settings.png
+.. figure:: ./discussion_settings_01.png
    :align: center
-   :alt: Ajustes de discusión
+   :alt: Configuración de discusión
 
-   Ajustes de discusión para este sitio.
+   Configuración de discusión para este sitio.
 
 Ademas de ofrecer toda una serie de configuraciones como:
 
@@ -145,6 +178,24 @@ Ademas de ofrecer toda una serie de configuraciones como:
 * Notificaciones vía correo electrónico.
 
 * Soporte a CAPTCHA, etc.
+
+
+Permitir comentarios
+--------------------
+
+Plone por defecto ofrece soporte a comentarios y discusiones que son habilitados 
+al pie de pagina de cada tipo de contenido que tiene habilitado el comportamiento 
+*Permitir comentarios*.
+
+.. figure:: ./discussion_settings_02.png
+   :align: center
+   :alt: Permitir comentarios al tipo de contenido
+
+   Permitir comentarios al tipo de contenido.
+
+.. tip::
+    Para habilitar los comentarios haga clic en 
+    :menuselection:`Su tipo de contenido --> Editar --> Configuración --> Permitir comentarios`.
 
 ----
 
@@ -266,3 +317,4 @@ y siga las instrucciones descrita en ese archivo.
 .. _Ploneboard: http://plone.org/products/ploneboard
 .. _funcionalidad por defecto: http://pypi.python.org/pypi?:action=search&term=Ploneboard&submit=search
 .. _collective.disqus: https://pypi.python.org/pypi/collective.disqus
+.. _plone.app.discussion: http://pypi.python.org/pypi/plone.app.discussion
