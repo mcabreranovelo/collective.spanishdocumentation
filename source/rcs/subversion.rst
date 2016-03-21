@@ -133,7 +133,7 @@ declaración correspondiente debe cambiarse por la siguiente:
 
 .. code-block:: ini
 
-    anon-access = write
+    anon-access = none
 
 Generalmente este es el único cambio que tiene sentido en los valores de
 acceso.
